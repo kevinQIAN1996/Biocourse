@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f6f5">
+<title>核酸训练实验室 · 生命的信息，由你组装</title>
+<style>
+:root{--ink:#152f3b;--muted:#687f87;--teal:#087f80;--teal2:#dff3ed;--paper:#f3f6f5;--line:#dce5e3;--orange:#ef9855;--a:#e7a433;--t:#17aaa5;--g:#876de1;--c:#e87d91;--shadow:0 14px 40px #254a4110}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.6}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid #efa662;outline-offset:4px}button{border:0}button:disabled{cursor:default;opacity:.42}a{color:var(--teal);text-underline-offset:4px}svg{display:block}button svg{pointer-events:none}button.secondary,.ghost{background:transparent}.app-header{height:84px;border-bottom:1px solid var(--line);background:#ffffffb8;display:flex;align-items:center;justify-content:space-between;padding:0 max(32px,calc((100vw - 1380px)/2));gap:24px}.brand{display:flex;gap:12px;align-items:center}.brand-symbol{width:40px;height:44px;background:var(--ink);border-radius:12px;display:grid;place-items:center;color:#b5f4d7}.brand-title{font-size:18px;font-weight:750;letter-spacing:1px}.brand-sub{font-size:10px;color:var(--muted);letter-spacing:3px}.head-middle{font-size:12px;color:var(--muted);display:flex;gap:12px;align-items:center}.tiny-dot{width:6px;height:6px;border-radius:50%;display:inline-block;background:#40a989}.head-actions{display:flex;gap:10px;align-items:center}.plain-button{display:flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:white;font-size:12px}.plain-button:hover{border-color:#7ea8a2;background:#edf8f3}.page{max-width:1380px;margin:auto;padding:34px 32px 24px}.intro{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:26px}.eyebrow{font-size:11px;letter-spacing:2.8px;color:var(--teal);font-weight:700;text-transform:uppercase}.intro h1{font-size:32px;letter-spacing:1px;margin:7px 0 4px;font-weight:720;line-height:1.4}.intro p{margin:0;color:var(--muted);font-size:13px}.team-pill{display:flex;align-items:center;gap:13px;border:1px solid var(--line);background:white;padding:10px 14px;border-radius:13px;min-width:240px;text-align:left}.avatars{display:flex;padding-left:4px}.avatar{width:29px;height:29px;display:grid;place-items:center;border:2px solid white;border-radius:50%;margin-left:-4px;font-size:10px;background:#dceae5;color:#276360}.avatar:nth-child(2){background:#f9dfc7;color:#9a5b27}.team-main{font-weight:650;font-size:12px}.team-sub{font-size:10px;color:var(--muted)}.team-pill .arrow{margin-left:auto;color:var(--muted)}.navigation{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}.mission-tab{display:flex;gap:13px;align-items:center;border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 17px;text-align:left;transition:background .2s,border-color .2s,transform .2s}.mission-tab:hover{border-color:#7dafa4;transform:translateY(-2px)}.mission-tab.active{background:var(--ink);color:white;border-color:var(--ink)}.step-number{font-size:22px;color:#9badae;font-weight:350;line-height:1}.active .step-number{color:#95c9b8}.step-name{font-size:14px;font-weight:650}.step-sub{font-size:10px;color:var(--muted);margin-top:1px;letter-spacing:.4px}.active .step-sub{color:#c0d2d3}.step-check{margin-left:auto;color:#279c7c;font-size:17px}.active .step-check{color:#b7f1cc}.workspace{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}[hidden]{display:none!important}.overview{display:grid;grid-template-columns:43% 57%;min-height:490px}.welcome{padding:42px 36px 32px;display:flex;flex-direction:column;align-items:flex-start;position:relative;z-index:1}.section-tag{display:inline-flex;align-items:center;gap:7px;background:#e9f5ef;color:#187d67;padding:4px 9px;border-radius:5px;font-size:10px;letter-spacing:.6px}.welcome h2{font-size:36px;line-height:1.48;letter-spacing:1px;margin:19px 0 12px;font-weight:650}.welcome h2 em{font-style:normal;color:var(--teal)}.welcome>p{color:var(--muted);max-width:350px;font-size:13px;line-height:1.95;margin:0 0 25px}.button-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.primary{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:12px 19px;border-radius:9px;background:var(--teal);color:white;font-weight:650;font-size:13px;box-shadow:0 5px 12px #087f8016}.primary:hover{background:#07686b}.secondary{padding:11px 14px;border:1px solid var(--line);border-radius:9px;background:white;font-size:12px}.secondary:hover{background:#edf7f2}.welcome-bottom{margin-top:auto;padding-top:26px;display:flex;gap:25px}.mini-stat strong{font-size:21px;font-weight:600}.mini-stat span{display:block;color:var(--muted);font-size:10px;letter-spacing:.5px}.model-stage{position:relative;overflow:hidden;min-height:490px;background:radial-gradient(ellipse at 55% 42%,#fff 0%,#f1f7f5 60%,#eaf2ee 100%)}.model-stage:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#799f9124 .8px,transparent .8px);background-size:20px 20px;pointer-events:none}.model-caption{position:absolute;top:24px;left:26px;z-index:2;pointer-events:none}.model-caption strong{font-size:11px;letter-spacing:2px;font-weight:600}.model-caption span{display:block;font-size:10px;color:var(--muted);margin-top:2px}.model-live{position:absolute;top:24px;right:25px;display:flex;align-items:center;gap:6px;color:var(--teal);font-size:9px;letter-spacing:1.7px;z-index:2}.model-mount{position:absolute;inset:0}.model-mount canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}.model-mount canvas:active{cursor:grabbing}.float-label{position:absolute;pointer-events:none;z-index:1;border:1px solid #d9e6df;background:#ffffffdb;border-radius:8px;padding:8px 11px;font-size:11px;box-shadow:0 4px 12px #56796b08}.label-one{left:28px;top:154px}.label-two{right:20px;bottom:122px}.label-line{width:35px;height:1px;background:#88b6a6;position:absolute;top:50%}.label-one .label-line{left:100%}.label-two .label-line{right:100%}.label-en{font-size:8px;letter-spacing:1.2px;color:var(--muted);display:block}.model-bottom{position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;pointer-events:none;z-index:3}.model-instruction{font-size:10px;color:var(--muted);line-height:1.9}.model-tools{display:flex;gap:6px;pointer-events:auto}.icon-button{border:1px solid #d6e4dc;border-radius:8px;background:#ffffffdd;width:34px;height:34px;display:grid;place-items:center}.icon-button:hover{background:#daf0e4}.under-workspace{display:flex;align-items:center;justify-content:space-between;margin:18px 2px 26px;gap:20px}.progress-info{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--muted)}.progress-track{height:4px;width:130px;border-radius:4px;background:#dfe8e4;overflow:hidden}.progress-fill{height:100%;width:0;background:var(--teal);transition:width .3s}.xp-tag{font-size:11px;color:var(--teal);font-weight:650}.note{font-size:10px;color:var(--muted)}.bottom-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.bottom-card{display:flex;align-items:flex-start;gap:14px;border-top:1px solid var(--line);padding:18px 3px 4px}.card-icon{width:34px;height:34px;border:1px solid #d3e3dc;background:#eaf1ec;color:var(--teal);border-radius:10px;display:grid;place-items:center;flex:none}.bottom-card strong{font-size:12px;font-weight:650}.bottom-card p{font-size:11px;color:var(--muted);margin:4px 0 0;line-height:1.8}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#8b9c9e;font-size:10px;margin-top:30px}.footer button{font-size:10px;color:var(--muted);background:none;padding:0}.footer button:hover{color:var(--teal)}.experiment-header{display:flex;justify-content:space-between;gap:20px;align-items:center;border-bottom:1px solid var(--line);padding:20px 26px}.experiment-heading{display:flex;gap:12px;align-items:center}.small-number{color:var(--teal);font-size:11px;font-weight:650;letter-spacing:2px}.experiment-heading h2{font-size:19px;margin:0;font-weight:650}.small-tag{color:var(--muted);border:1px solid var(--line);border-radius:4px;font-size:9px;padding:3px 7px}.experiment-body{display:grid;grid-template-columns:minmax(0,1fr) 296px;min-height:415px}.bench{padding:25px 28px;min-width:0;position:relative}.guide{border-left:1px solid var(--line);background:#f7faf8;padding:25px 23px;display:flex;flex-direction:column;align-items:flex-start}.guide-kicker{color:var(--teal);font-size:10px;letter-spacing:1.5px;font-weight:600}.guide h3{margin:7px 0 12px;font-size:19px;line-height:1.6}.guide p,.guide li{color:var(--muted);font-size:12px;line-height:1.9}.guide p{margin:0 0 15px}.guide ul{margin:0 0 15px;padding-left:16px}.helper-note{border-left:2px solid #97c6b1;padding:0 0 0 12px;font-size:11px;color:var(--muted);line-height:1.9;margin-top:10px}.guide .next-button{margin-top:auto;width:100%;padding-top:24px}.guide .next-button button{width:100%;gap:10px}.cooperation{font-size:10px;color:#6d8179;background:#e9f1eb;border:1px solid #d9e5db;padding:8px 11px;border-radius:6px;margin:18px 0 0;line-height:1.8}.segmented{display:inline-flex;padding:3px;background:#edf3ef;border-radius:8px;gap:3px}.segmented button{padding:7px 15px;background:none;border-radius:6px;font-size:11px;color:var(--muted)}.segmented button.selected{background:white;box-shadow:0 1px 5px #243d3012;color:var(--teal);font-weight:650}.bench-top{display:flex;justify-content:space-between;align-items:center;gap:14px}.bench-label{font-size:11px;color:var(--muted)}.nucleotide-diagram{margin:25px auto 12px;max-width:650px;position:relative;min-height:157px;display:flex;align-items:center;justify-content:center;gap:43px}.molecule-slot{position:relative;width:125px;height:125px;display:flex;align-items:center;justify-content:center;flex-direction:column;border:1.5px dashed #a8bfb7;border-radius:12px;background:#f8fbf9;transition:background .15s}.molecule-slot:after{content:"";width:44px;height:2px;position:absolute;background:#b6cbc2;right:-45px;top:50%;pointer-events:none}.molecule-slot:last-child:after{display:none}.molecule-slot:hover,.molecule-slot.drag-over{background:#e3f1e9;border-color:var(--teal)}.slot-prompt{font-size:11px;color:#83988e}.slot-order{font-size:9px;position:absolute;top:7px;left:9px;color:#8fa29a}.slot-name{font-size:11px;position:absolute;bottom:10px;text-align:center;line-height:1.3;padding:0 3px}.molecule-circle{width:49px;height:49px;border-radius:50%;background:#c7dedb;display:grid;place-items:center;color:#32666b;font-size:20px;font-weight:600}.molecule-pentagon{width:61px;height:56px;clip-path:polygon(50% 0,98% 36%,80% 100%,20% 100%,2% 36%);display:grid;place-items:center;background:#e4d9bb;font-size:11px;color:#6a603e;padding-top:5px}.molecule-base{width:50px;height:49px;border-radius:8px;display:grid;place-items:center;color:white;font-size:23px;font-weight:650;background:var(--a)}.diagram-note{text-align:center;font-size:9px;color:#8b9f95;margin-bottom:22px}.parts-label{font-size:10px;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between;gap:10px}.parts-tray{display:flex;gap:7px;flex-wrap:wrap}.part{border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px 13px;min-width:55px;font-size:11px;display:flex;align-items:center;gap:7px}.part:hover{border-color:var(--teal);background:#f0f9f3}.part i{width:8px;height:8px;border-radius:50%;background:#91b9b0}.part[data-kind=base]{font-size:16px;font-weight:650;padding:7px 13px}.part[data-kind=base] small{font-size:10px;font-weight:400}.feedback{margin-top:17px;border-radius:8px;padding:10px 13px;background:#edf4f1;color:#4e6c62;font-size:11px;line-height:1.8;min-height:40px}.feedback.success{background:#e4f4e9;color:#23754c}.feedback.error{background:#fff1e5;color:#9c5e27}.bench-actions{display:flex;gap:10px;margin-top:16px;align-items:center;flex-wrap:wrap}.round-status{font-size:10px;color:var(--muted);margin-left:auto}.round-done{color:var(--teal)}.rule-chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.rule-chip{border-radius:5px;background:#edf4ef;color:#54786d;padding:4px 8px;font-size:10px}.dna-grid{overflow:auto;padding:7px 4px 10px;scrollbar-width:thin}.strand{display:flex;gap:7px;align-items:center;min-width:max-content;justify-content:center}.end-tag{font-size:10px;color:var(--muted);width:20px;flex:none}.base-cell{width:41px;height:48px;display:grid;place-items:center;color:white;font-size:19px;font-weight:650;border-radius:7px;background:var(--a);position:relative;flex:none}.base-cell[data-base=T]{background:var(--t)}.base-cell[data-base=G]{background:var(--g)}.base-cell[data-base=C]{background:var(--c)}.base-cell.empty{background:#f5f9f6;color:#94a99e;border:1px dashed #a9beb2;font-size:16px}.base-cell.current{outline:2px solid var(--ink);outline-offset:3px}.base-cell.wrong{outline:2px solid #d76b39;outline-offset:3px}.bond-row{display:flex;gap:7px;justify-content:center;padding:7px 0;min-width:max-content}.bond-row span{width:41px;text-align:center;font-size:11px;color:#a2b6a9;line-height:1}.bond-row .end-spacer{width:20px}.strand-label{font-size:9px;color:var(--muted);margin:7px 0 12px;text-align:center;letter-spacing:1px}.base-bank{display:flex;justify-content:center;gap:10px;margin:20px 0 0}.base-choice{width:76px;border-radius:9px;background:#fff;border:1px solid var(--line);padding:10px 4px 7px;display:flex;flex-direction:column;align-items:center;gap:3px}.base-choice strong{font-size:22px;font-weight:650}.base-choice small{font-size:9px;color:var(--muted)}.base-choice:hover{transform:translateY(-2px);border-color:currentColor}.pair-status{font-size:10px;color:var(--muted);text-align:center;margin-top:12px}.helix-bench{min-height:440px;padding:0;background:#f1f7f3;position:relative}.helix-mount{position:absolute;inset:0}.helix-bottom{position:absolute;bottom:16px;left:20px;right:20px;z-index:3;display:flex;justify-content:space-between;gap:12px;align-items:flex-end;pointer-events:none}.selected-pair{position:absolute;left:20px;top:16px;padding:8px 11px;background:#ffffffdf;border:1px solid #dae6dd;border-radius:8px;font-size:11px;z-index:2;pointer-events:none}.selected-pair b{color:var(--teal)}.legend{display:flex;gap:11px;flex-wrap:wrap;font-size:9px;color:var(--muted);margin:12px 0}.legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px}.control-label{font-size:11px;font-weight:600;display:flex;justify-content:space-between;width:100%;margin:7px 0}.control-label output{color:var(--teal);font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--teal);margin:5px 0 14px}.filter-controls{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%;margin:8px 0 13px}.filter-controls button{padding:7px 3px;background:white;border:1px solid var(--line);border-radius:6px;font-size:10px}.filter-controls button.selected{background:#e2f1e9;border-color:#78ab94;color:var(--teal)}.observation{background:white;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:11px;width:100%;line-height:1.85;margin-top:4px}.observation label{display:flex;gap:9px;align-items:flex-start;margin-top:6px;font-size:10px;color:var(--muted)}.observation input{accent-color:var(--teal);margin-top:4px}.quiz-card{max-width:750px;margin:auto}.quiz-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-bottom:14px}.quiz-card h3{font-size:20px;line-height:1.7;margin:10px 0 21px;font-weight:600}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quiz-option{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:9px;padding:13px;background:#fff;font-size:12px;min-height:62px}.quiz-option .option-letter{border:1px solid var(--line);border-radius:5px;width:24px;height:24px;display:grid;place-items:center;flex:none;font-size:11px;color:var(--muted)}.quiz-option:hover{border-color:#6da38f}.quiz-option.chosen{border-color:var(--teal);background:#edf7f0}.quiz-option.correct{border-color:#6aaf80;background:#eaf7ed}.quiz-option.incorrect{border-color:#dfa17b;background:#fff2e8}.sequence-demo{font-size:14px;letter-spacing:7px;padding:13px;background:#eef4ef;border-radius:8px;margin:0 0 17px;text-align:center;color:var(--teal);font-weight:650}.quiz-guide-table{border-collapse:collapse;font-size:10px;width:100%;margin-top:12px}.quiz-guide-table td,.quiz-guide-table th{padding:7px 3px;border-bottom:1px solid var(--line);text-align:left;font-weight:400}.quiz-guide-table th{color:var(--teal)}.result-panel{text-align:center;padding:32px 10px}.result-seal{width:75px;height:75px;display:grid;place-items:center;background:#e5f5e9;color:var(--teal);border:1px solid #bedfc9;border-radius:50%;margin:auto;font-size:32px}.result-panel h3{font-size:25px;margin:15px 0 8px}.result-panel p{font-size:12px;color:var(--muted);line-height:2;max-width:410px;margin:0 auto 19px}.result-stats{display:flex;justify-content:center;gap:32px;margin:18px 0 25px}.result-stats strong{font-size:25px;display:block;color:var(--teal)}.result-stats span{font-size:10px;color:var(--muted)}dialog{max-width:720px;width:calc(100vw - 36px);padding:0;border:1px solid var(--line);border-radius:18px;box-shadow:0 25px 100px #163b3940;color:var(--ink);background:#fff;max-height:86vh}dialog::backdrop{background:#153b3d65;backdrop-filter:blur(4px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:21px 26px;border-bottom:1px solid var(--line)}.dialog-head h2{font-size:18px;margin:0}.close-button{background:#eef4f0;width:29px;height:29px;border-radius:50%;font-size:18px}.dialog-body{padding:23px 26px;overflow:auto;max-height:calc(86vh - 75px)}.dialog-body h3{font-size:13px;color:var(--teal);margin:20px 0 9px}.dialog-body h3:first-child{margin-top:0}.dialog-body p,.dialog-body li{font-size:12px;color:var(--muted);line-height:1.95}.dialog-body ol,.dialog-body ul{padding-left:20px}.dialog-body a{overflow-wrap:anywhere}.form-field{display:block;margin:15px 0;font-size:12px}.form-field input{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:11px;margin-top:7px;background:#f8fbf8;color:var(--ink)}.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.role-card{padding:17px;border:1px solid var(--line);border-radius:10px;background:#f3f8f4}.role-card strong{font-size:13px}.role-card p{margin:5px 0 0;font-size:11px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:12px 20px;border:1px solid #bcd4c5;border-radius:10px;background:#143d36;color:#fff;font-size:12px;z-index:20;box-shadow:var(--shadow);max-width:90vw}.compare-table{border-collapse:collapse;width:100%;font-size:11px}.compare-table td,.compare-table th{padding:10px 6px;border-bottom:1px solid var(--line);text-align:left}.compare-table th{color:var(--teal);font-weight:600}.print-only{display:none}@media(min-width:1500px){.page{padding-top:40px}.overview,.model-stage{min-height:520px}.welcome{padding-top:48px}.welcome h2{font-size:40px}}@media(max-width:1100px){.page{padding:25px 24px}.app-header{padding:0 24px}.head-middle{display:none}.welcome{padding:30px 25px}.welcome h2{font-size:30px}.experiment-body{grid-template-columns:minmax(0,1fr) 265px}.bench{padding:23px 20px}.base-cell{width:34px}.strand,.bond-row{gap:5px}.bond-row span{width:34px}.label-one{left:14px;top:138px}.label-two{right:12px}.molecule-slot{width:110px;height:120px}.nucleotide-diagram{gap:25px}.molecule-slot:after{width:26px;right:-27px}}@media(max-width:800px){.app-header{height:72px;padding:0 18px}.brand-title{font-size:15px}.brand-sub{font-size:8px;letter-spacing:2px}.brand-symbol{width:34px;height:38px}.head-actions .button-label{display:none}.head-actions{gap:6px}.plain-button{padding:9px}.page{padding:23px 16px}.intro{align-items:flex-start;margin-bottom:22px}.intro h1{font-size:25px}.intro p{font-size:10px}.team-pill{min-width:0;gap:5px;padding:8px}.team-pill .avatars,.team-pill .arrow,.team-sub{display:none}.team-main{font-size:10px}.navigation{gap:6px}.mission-tab{padding:11px 8px;gap:6px}.step-number{font-size:15px}.step-name{font-size:11px}.step-sub{font-size:8px}.step-check{display:none}.overview{grid-template-columns:1fr 1fr;min-height:410px}.welcome{padding:28px 22px}.welcome h2{font-size:26px}.welcome>p{font-size:11px}.model-stage{min-height:410px}.float-label{display:none}.welcome-bottom{gap:20px}.mini-stat strong{font-size:17px}.model-caption{left:14px;top:16px}.model-caption strong{font-size:9px}.model-live{right:14px;top:18px;font-size:8px}.model-bottom{left:14px;right:14px;bottom:14px}.model-instruction{font-size:8px}.experiment-body{grid-template-columns:1fr}.guide{border-left:0;border-top:1px solid var(--line);padding:20px 24px}.guide .next-button{margin-top:0;padding-top:12px}.guide h3{font-size:16px}.experiment-header{padding:17px 20px}.experiment-heading h2{font-size:16px}.guide p{font-size:11px}.guide ul{display:none}.guide .helper-note{display:none}.helix-bench{min-height:430px}.control-label{max-width:500px}input[type=range]{max-width:500px}.filter-controls{max-width:500px}.bottom-cards{gap:15px}.bottom-card{gap:10px}.card-icon{width:28px;height:28px}.bottom-card p{font-size:10px}.bottom-card strong{font-size:11px}.under-workspace{margin-bottom:20px}.note{font-size:9px}.cooperation{margin:10px 0}.round-status{font-size:9px}.footer{font-size:9px}.guide-kicker{font-size:9px}}@media(max-width:540px){.intro h1{font-size:22px;letter-spacing:0}.eyebrow{font-size:9px;letter-spacing:1.7px}.intro{gap:10px}.team-pill{margin-top:4px}.team-main{font-size:9px}.intro p{max-width:220px}.navigation{grid-template-columns:1fr 1fr}.mission-tab{padding:10px 12px}.step-number{font-size:19px}.step-name{font-size:12px}.step-sub{font-size:9px}.overview{grid-template-columns:1fr}.welcome{padding:27px 25px}.welcome h2{font-size:29px;margin:15px 0 9px}.welcome>p{max-width:100%;font-size:12px;margin-bottom:20px}.welcome-bottom{display:none}.model-stage{min-height:360px}.model-caption{left:19px}.model-live{right:19px}.model-bottom{left:18px;right:18px}.bottom-cards{grid-template-columns:1fr}.bottom-card{padding-top:14px}.bottom-card p{font-size:11px}.bottom-card strong{font-size:12px}.under-workspace{align-items:flex-start;gap:10px}.under-workspace .note{max-width:130px;text-align:right}.progress-info{font-size:10px;gap:8px;flex-wrap:wrap}.progress-track{width:72px}.xp-tag{font-size:10px}.footer{align-items:flex-start;line-height:1.8}.footer>span{max-width:210px}.experiment-header{gap:7px;padding:15px}.experiment-heading{gap:8px}.experiment-heading h2{font-size:15px}.small-number{font-size:9px}.small-tag{font-size:8px}.bench{padding:21px 16px}.molecule-slot{width:88px;height:106px}.nucleotide-diagram{gap:18px;margin-top:22px;min-height:130px}.molecule-slot:after{width:19px;right:-20px}.slot-name{font-size:9px;bottom:6px}.molecule-circle{width:40px;height:40px;font-size:17px}.molecule-pentagon{width:48px;height:45px;font-size:9px}.molecule-base{width:40px;height:40px;font-size:19px}.part{padding:9px 10px;font-size:10px}.part[data-kind=base]{padding:7px 10px;min-width:48px}.part[data-kind=base] small{display:none}.diagram-note{font-size:8px;margin-bottom:17px}.parts-label{font-size:9px}.quiz-options{grid-template-columns:1fr}.quiz-card h3{font-size:18px}.quiz-option{font-size:11px;padding:10px;min-height:48px}.quiz-meta{font-size:9px}.bottom-cards{gap:0}.helix-bench{min-height:385px}.selected-pair{left:13px;top:14px;font-size:10px}.guide{padding:21px}.base-bank{gap:8px}.base-choice{width:65px}.base-cell{width:35px;height:43px;font-size:17px}.bond-row span{width:35px}.round-status{width:100%;margin-left:0}.role-cards{grid-template-columns:1fr}.dialog-body{padding:22px}.dialog-head{padding:18px 22px}.bench-label{font-size:10px}.section-tag{font-size:9px}.mini-stat span{font-size:9px}.primary{padding:11px 16px}.step-sub{letter-spacing:0}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media print{body{background:#fff}.app-header,.navigation,.intro,.workspace,.under-workspace,.bottom-cards,.footer,.toast,dialog{display:none!important}.print-only{display:block;padding:25px}.print-only h1{font-size:24px}.print-only p{font-size:14px}}
+.sequence-demo{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;letter-spacing:5px}.sequence-cards{display:flex;gap:6px}.sequence-card{width:34px;height:36px;border-radius:6px;background:#fff;border:1px solid #ccdbd1;font-size:16px;font-weight:650;letter-spacing:0}.sequence-card.picked{outline:2px solid var(--teal);outline-offset:2px}.sequence-hint{font-size:10px;letter-spacing:0;width:100%;font-weight:400;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="app-header">
+ <div class="brand"><div class="brand-symbol" aria-hidden="true"><svg width="23" height="29" viewBox="0 0 23 29" fill="none"><path d="M5 2C5 9 18 7 18 14S5 20 5 27M18 2C18 9 5 7 5 14S18 20 18 27" stroke="currentColor" stroke-width="1.7"/><path d="M6 5H17M7 10H16M6 18H17M7 23H16" stroke="currentColor" stroke-width="1.3"/></svg></div><div><div class="brand-title">核酸训练实验室</div><div class="brand-sub">NUCLEIC ACID LAB</div></div></div>
+ <div class="head-middle"><span>高中生物学 · 必修 1</span><span style="color:#ccd8d2">/</span><span>分子与细胞</span></div>
+ <div class="head-actions"><button class="plain-button" id="teacherButton"><span aria-hidden="true">▤</span><span class="button-label">教师手册</span></button><button class="plain-button" id="fullscreenButton" aria-label="切换全屏"><span aria-hidden="true">⛶</span><span class="button-label">全屏实验</span></button></div>
+</header>
+<main class="page">
+ <div class="intro"><div><div class="eyebrow">EXPLORE · BUILD · DISCOVER</div><h1>生命的信息，由你组装。</h1><p>第 2 章 · 第 5 节　核酸是遗传信息的携带者</p></div><button class="team-pill" id="teamButton" aria-label="设置研究组与合作分工"><div class="avatars" aria-hidden="true"><span class="avatar">A</span><span class="avatar">B</span></div><div><div class="team-main" id="teamNameLabel">第 01 研究组</div><div class="team-sub">双人协作 · 构建员 + 校验员</div></div><span class="arrow">↗</span></button></div>
+ <nav class="navigation" aria-label="实验任务">
+  <button class="mission-tab" data-stage="1"><span class="step-number">01</span><span><span class="step-name">组装核苷酸</span><span class="step-sub" style="display:block">认识基本单位</span></span><span class="step-check" id="check1">↗</span></button>
+  <button class="mission-tab" data-stage="2"><span class="step-number">02</span><span><span class="step-name">碱基配对挑战</span><span class="step-sub" style="display:block">发现互补规则 · 拓展</span></span><span class="step-check" id="check2">↗</span></button>
+  <button class="mission-tab" data-stage="3"><span class="step-number">03</span><span><span class="step-name">构建双螺旋</span><span class="step-sub" style="display:block">探索三维结构 · 拓展</span></span><span class="step-check" id="check3">↗</span></button>
+  <button class="mission-tab" data-stage="4"><span class="step-number">04</span><span><span class="step-name">遗传信息解码</span><span class="step-sub" style="display:block">完成知识迁移</span></span><span class="step-check" id="check4">↗</span></button>
+ </nav>
+ <div class="workspace">
+  <section id="stage0" class="overview" aria-label="实验总览">
+   <div class="welcome"><span class="section-tag"><span class="tiny-dot"></span>实验任务 001 · 搭建生命的信息载体</span><h2>从一个核苷酸，<br>到一条<em>双螺旋</em>。</h2><p>选择分子零件，配对 A、T、G、C，<br>亲手把平面结构变成可以旋转的 DNA。<br>和搭档一起，找到遗传信息藏在哪里。</p><div class="button-row"><button class="primary" data-stage="1">开始训练 <span>→</span></button><button class="secondary" data-stage="3">自由探索 3D ↗</button></div><div class="welcome-bottom"><div class="mini-stat"><strong>04</strong><span>递进实验任务</span></div><div class="mini-stat"><strong>2 人</strong><span>同屏合作研究</span></div><div class="mini-stat"><strong>15 min</strong><span>建议体验时长</span></div></div></div>
+   <div class="model-stage"><div class="model-caption"><strong>DNA DOUBLE HELIX</strong><span>右手双螺旋 · 概念模型</span></div><div class="model-live"><span class="tiny-dot"></span>LIVE MODEL</div><div id="heroCanvasMount" class="model-mount"><canvas id="helixCanvas" tabindex="0" role="img" aria-label="可交互 DNA 三维概念模型。拖动旋转，滚轮缩放，方向键旋转，加减键缩放；点击碱基对查看组成。">DNA 双螺旋模型：糖磷酸骨架在外侧，碱基对在内侧；A与T配对，G与C配对。</canvas></div><div class="float-label label-one">糖—磷酸骨架<span class="label-en">SUGAR–PHOSPHATE</span><span class="label-line"></span></div><div class="float-label label-two">互补碱基对<span class="label-en">A—T / G—C</span><span class="label-line"></span></div><div class="model-bottom"><span class="model-instruction">拖动旋转 · 滚轮缩放 · 点击碱基对<br>示意模型，非原子比例</span><div class="model-tools"><button class="icon-button auto-button" aria-label="暂停自动旋转">Ⅱ</button><button class="icon-button reset-view" aria-label="重置模型视角">↺</button></div></div></div>
+  </section>
+  <section id="stage1" hidden aria-label="任务一 组装核苷酸">
+   <div class="experiment-header"><div class="experiment-heading"><span class="small-number">MISSION 01</span><h2>组装一个核苷酸</h2></div><span class="small-tag">教材核心</span></div>
+   <div class="experiment-body"><div class="bench"><div class="bench-top"><span class="bench-label">选择零件，放入对应位置</span><div class="segmented" aria-label="选择核酸种类"><button class="selected" data-molecule="DNA">DNA</button><button data-molecule="RNA">RNA</button></div></div>
+    <div class="nucleotide-diagram"><button class="molecule-slot" data-slot="phosphate" aria-label="磷酸位置，点击移除"><span class="slot-order">01</span><span class="slot-prompt">放入磷酸</span></button><button class="molecule-slot" data-slot="sugar" aria-label="五碳糖位置，点击移除"><span class="slot-order">02</span><span class="slot-prompt">放入五碳糖</span></button><button class="molecule-slot" data-slot="base" aria-label="碱基位置，点击移除"><span class="slot-order">03</span><span class="slot-prompt">放入含氮碱基</span></button></div>
+    <div class="diagram-note">连接关系示意 · 不显示原子、化学键细节和具体连接位点</div>
+    <div class="parts-label"><span>零件库</span><span>点选或拖入 · 点击已放置零件可移除</span></div>
+    <div class="parts-tray" id="partsTray"><button class="part" draggable="true" data-part="phosphate" data-kind="phosphate"><i></i>磷酸基团</button><button class="part" draggable="true" data-part="deoxyribose" data-kind="sugar"><i style="background:#cab98d"></i>脱氧核糖</button><button class="part" draggable="true" data-part="ribose" data-kind="sugar"><i style="background:#b5b786"></i>核糖</button><button class="part" draggable="true" data-part="A" data-kind="base" style="color:var(--a)">A <small>腺嘌呤</small></button><button class="part" draggable="true" data-part="T" data-kind="base" style="color:var(--t)">T <small>胸腺嘧啶</small></button><button class="part" draggable="true" data-part="G" data-kind="base" style="color:var(--g)">G <small>鸟嘌呤</small></button><button class="part" draggable="true" data-part="C" data-kind="base" style="color:var(--c)">C <small>胞嘧啶</small></button><button class="part" draggable="true" data-part="U" data-kind="base" style="color:#859d4a">U <small>尿嘧啶</small></button></div>
+    <div id="assemblyFeedback" class="feedback" role="status" aria-live="polite">先组装 DNA 的基本单位，再切换 RNA。两种都完成，就点亮本关。</div><div class="bench-actions"><button class="primary" id="checkAssembly">校验结构 <span>✓</span></button><button class="secondary" id="clearAssembly">重新组装</button><span class="round-status" id="assemblyRounds">DNA ○　RNA ○</span></div>
+   </div><aside class="guide"><span class="guide-kicker">LAB ASSISTANT · 规则反馈</span><h3>小单位，大信息。</h3><p>核酸的基本组成单位是<strong>核苷酸</strong>。每个核苷酸由一分子磷酸、一分子五碳糖和一分子含氮碱基组成。许多核苷酸连接成核酸长链：核苷酸是单体，核酸是多聚体。核酸等生物大分子以碳链为基本骨架。</p><div class="helper-note">DNA：脱氧核糖 + A / T / G / C<br>RNA：核糖 + A / U / G / C<br><br>两类各有 4 种核苷酸，共有 8 种；含氮碱基共 5 种。</div><div class="cooperation">A 构建员：选择零件。<br>B 校验员：先说出糖和碱基的依据。<br>切换到 RNA 时交换分工。</div><div class="next-button"><button class="primary" data-stage="2">前往碱基配对 <span>→</span></button></div></aside></div>
+  </section>
+  <section id="stage2" hidden aria-label="任务二 碱基配对挑战">
+   <div class="experiment-header"><div class="experiment-heading"><span class="small-number">MISSION 02</span><h2>为 DNA 找到另一半</h2></div><span class="small-tag">必修 2 衔接拓展</span></div>
+   <div class="experiment-body"><div class="bench"><div class="rule-chips"><span class="rule-chip">A ↔ T</span><span class="rule-chip">G ↔ C</span><span class="rule-chip">两条链方向相反</span><span class="rule-chip">每放置 4 个，交换分工</span></div><div class="dna-grid"><div id="templateStrand" class="strand"></div><div id="pairBonds" class="bond-row" aria-hidden="true"></div><div id="answerStrand" class="strand"></div></div><div class="strand-label">上：给定链　/　下：你的互补链（从左到右填写）</div><div class="base-bank" id="baseBank"><button class="base-choice" data-choice="A" style="color:var(--a)"><strong>A</strong><small>腺嘌呤</small></button><button class="base-choice" data-choice="T" style="color:var(--t)"><strong>T</strong><small>胸腺嘧啶</small></button><button class="base-choice" data-choice="G" style="color:var(--g)"><strong>G</strong><small>鸟嘌呤</small></button><button class="base-choice" data-choice="C" style="color:var(--c)"><strong>C</strong><small>胞嘧啶</small></button></div><div class="pair-status" id="pairStatus">已放置 0 / 12 · 点选空格，再点击碱基；也可按键盘 A / T / G / C</div><div id="pairFeedback" class="feedback" role="status" aria-live="polite">先预测，再放置。校验员负责解释：为什么 A 不能与 G 配对？</div><div class="bench-actions"><button class="primary" id="checkPairs">校验配对 <span>✓</span></button><button class="secondary" id="clearPairs">清空本链</button><button class="secondary" id="newSequence">换一条序列 ↻</button></div></div><aside class="guide"><span class="guide-kicker">MATCH THE CODE</span><h3>配对有规则，<br>序列有可能。</h3><p>DNA 中，A 与 T 配对，G 与 C 配对。两条链的碱基通过氢键连接。</p><div class="helper-note">A—T：2 个氢键<br>G—C：3 个氢键<br><br>5′ 和 3′ 表示链的方向。本图上下两链<strong>反向平行</strong>；下链从左向右是 3′→5′。</div><div class="cooperation" id="roleStatus">当前建议：A 构建，B 校验。<br>完成第 4、8 个位置后交换分工。</div><div class="next-button"><button class="primary" data-stage="3">把这条链变成 3D <span>→</span></button></div></aside></div>
+  </section>
+  <section id="stage3" hidden aria-label="任务三 构建双螺旋">
+   <div class="experiment-header"><div class="experiment-heading"><span class="small-number">MISSION 03</span><h2>从平面，走向双螺旋</h2></div><span class="small-tag">必修 2 衔接拓展</span></div>
+   <div class="experiment-body"><div class="helix-bench"><div id="helixMount" class="model-mount"></div><div class="selected-pair" id="selectedPair">点击模型中的一对碱基，查看它们的连接。</div><div class="helix-bottom"><span class="model-instruction" id="modelSequenceNote">拖动旋转 · 滚轮缩放 · 方向键旋转 / + − 缩放<br>右手 DNA 概念模型 · 非原子比例</span><div class="model-tools"><button class="icon-button auto-button" aria-label="暂停自动旋转">Ⅱ</button><button class="icon-button reset-view" aria-label="重置模型视角">↺</button></div></div></div><aside class="guide"><span class="guide-kicker">YOUR MOLECULE · IN 3D</span><h3>亲手扭出双螺旋。</h3><p id="sequenceOrigin">当前模型来自示例序列。完成上一关，可带着自己配好的 DNA 来观察。</p><label class="control-label" for="twistSlider">扭转程度 <output id="twistOutput">100%</output></label><input type="range" id="twistSlider" min="0" max="100" value="100" aria-label="DNA扭转程度，从平面梯状模型到双螺旋"><div class="control-label" style="font-size:10px;color:var(--muted);margin-top:-9px"><span>平面梯状模型</span><span>双螺旋</span></div><div class="filter-controls" aria-label="高亮模型组成"><button class="selected" data-highlight="all">完整模型</button><button data-highlight="backbone">糖—磷酸骨架</button><button data-highlight="bases">含氮碱基</button><button data-highlight="bonds">氢键</button></div><div class="legend"><span><i style="background:var(--a)"></i>A</span><span><i style="background:var(--t)"></i>T</span><span><i style="background:var(--g)"></i>G</span><span><i style="background:var(--c)"></i>C</span></div><div class="observation">观察后，由校验员确认：<label><input id="observedOutside" type="checkbox">糖—磷酸骨架位于外侧</label><label><input id="observedInside" type="checkbox">碱基位于内侧，互补配对</label></div><div id="helixFeedback" class="feedback" role="status" style="font-size:10px;width:100%">先把滑条拉到 0，再拉到 100，观察结构变化。</div><div class="next-button"><button class="primary" id="finishHelix">完成观察 <span>✓</span></button></div></aside></div>
+  </section>
+  <section id="stage4" hidden aria-label="任务四 遗传信息解码">
+   <div class="experiment-header"><div class="experiment-heading"><span class="small-number">MISSION 04</span><h2>信息，藏在哪里？</h2></div><span class="small-tag">教材核心 · 出口任务</span></div>
+   <div class="experiment-body"><div class="bench" id="quizBench"></div><aside class="guide"><span class="guide-kicker">THINK · EXPLAIN · CHECK</span><h3>先讨论，再提交。</h3><p>由一位同学作答，另一位同学说明理由。答错可立即修改；理解比速度更重要。</p><table class="quiz-guide-table"><tr><th></th><th>DNA</th><th>RNA</th></tr><tr><td>五碳糖</td><td>脱氧核糖</td><td>核糖</td></tr><tr><td>碱基</td><td>A T G C</td><td>A U G C</td></tr><tr><td>核苷酸种类</td><td>4 种</td><td>4 种</td></tr><tr><td>通常结构</td><td>两条链</td><td>一条链</td></tr></table><div class="helper-note">细胞生物的遗传物质是 DNA。某些病毒以 RNA 为遗传物质。<br><br>真核细胞中，DNA 主要分布在细胞核，也存在于线粒体和叶绿体；RNA 主要分布在细胞质。</div><div class="cooperation">每题更换发言人。<br>最后一起回答：什么在变化，才能让遗传信息多种多样？</div><div class="next-button"><button class="secondary" id="compareButton" style="width:100%">查看知识对照表 ↗</button></div></aside></div>
+  </section>
+ </div>
+ <div class="under-workspace"><div class="progress-info"><span id="progressLabel">训练进度 0 / 4</span><div class="progress-track" role="progressbar" aria-label="训练完成进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div><span class="xp-tag" id="xpLabel">0 XP</span></div><span class="note">自由探索所有任务 · 进度仅保存在本机浏览器</span></div>
+ <div class="bottom-cards"><div class="bottom-card"><div class="card-icon" aria-hidden="true">◇</div><div><strong>亲手构建，理解组成</strong><p>从磷酸、五碳糖和碱基出发，<br>区分 DNA 与 RNA 的基本单位。</p></div></div><div class="bottom-card"><div class="card-icon" aria-hidden="true">⇄</div><div><strong>双人协作，轮换角色</strong><p>一人构建，一人预测与校验，<br>每位同学都有参与和解释的机会。</p></div></div><div class="bottom-card"><div class="card-icon" aria-hidden="true">⌘</div><div><strong>可视化探索，发现规律</strong><p>从二维拼接走向三维旋转，<br>让抽象的分子结构变得可以观察。</p></div></div></div>
+ <footer class="footer"><span>NUCLEIC ACID LAB / 课堂原型 V1.0 · 离线运行，无需登录</span><div><button id="homeButton">返回总览</button><span>　·　</span><button id="sourcesButton">科学依据与设计参考</button><span>　·　</span><button id="resetProgress">重置进度</button></div></footer>
+</main>
+<dialog id="teacherDialog" aria-labelledby="teacherTitle"><div class="dialog-head"><h2 id="teacherTitle">教师手册</h2><button class="close-button" data-close aria-label="关闭">×</button></div><div class="dialog-body"><h3>建议课堂流程 · 约 15 分钟</h3><ol><li>1 分钟：两人一组，分配构建员和校验员。</li><li>3 分钟：分别拼出 DNA、RNA 的一个核苷酸，并解释五碳糖的区别。</li><li>4 分钟：完成 12 个碱基的互补链。每放置 4 个交换分工，提交前由校验员解释规则。</li><li>3 分钟：拖动扭转滑条，观察平面梯状模型如何成为螺旋；旋转模型，确认骨架与碱基的位置。</li><li>4 分钟：完成 5 道出口题，讨论“为什么组成相同的核酸仍能储存不同信息”。</li></ol><h3>教材边界</h3><p>按人教版《生物学 必修 1 分子与细胞》第 2 章第 5 节设计。核酸种类、核苷酸组成、DNA/RNA 比较和序列储存遗传信息是本节核心；碱基互补配对、氢键、反向平行和双螺旋细节是衔接必修 2 的拓展，可按教学进度跳过。</p><h3>同屏协作与投屏</h3><p>这是可离线打开的单机课件，同桌共用一台设备。教师投屏时，可先请全班用 A/T/G/C 手势或纸卡预测，再请代表点击。本版不包含联网组队、实时投票、真实 AI 对话或班级成绩收集。“训练助手”为固定科学规则反馈。</p><h3>模型说明</h3><p>模型展示右手 DNA 双螺旋的空间关系；扭转滑条是教学变形，不表示 DNA 在细胞中这样被合成。颜色为教学编码，分子大小、键长和原子结构均被简化。平面示意与 3D 模型都不用于原子级结构判断。</p><h3>积分规则</h3><p>两类核苷酸组装各 15 XP；配对正确 30 XP；完成模型观察 20 XP；出口题各 4 XP。总计 100 XP，不限时，不因纠错扣分。进度保存在本机浏览器，适合课堂探索，不作为正式测评。</p></div></dialog>
+<dialog id="teamDialog" aria-labelledby="teamTitle"><div class="dialog-head"><h2 id="teamTitle">组建你的研究小组</h2><button class="close-button" data-close aria-label="关闭">×</button></div><div class="dialog-body"><label class="form-field">研究组名称<input id="teamNameInput" maxlength="20" value="第 01 研究组" autocomplete="off"></label><div class="role-cards"><div class="role-card"><strong>A · 构建员</strong><p>操作零件、放置碱基，描述自己的选择。</p></div><div class="role-card"><strong>B · 校验员</strong><p>先作预测，再解释规则，一起校验结果。</p></div></div><p>组装 RNA 时交换角色；配对任务每完成 4 个位置再次交换。角色是合作建议，同一台设备上的两位同学都可以操作。</p><button class="primary" id="saveTeam">开始合作 <span>→</span></button></div></dialog>
+<dialog id="sourcesDialog" aria-labelledby="sourcesTitle"><div class="dialog-head"><h2 id="sourcesTitle">科学依据与设计参考</h2><button class="close-button" data-close aria-label="关闭">×</button></div><div class="dialog-body"><h3>教材与科学依据</h3><p>教材核对：人教版《生物学 必修 1 分子与细胞》，第 2 章第 5 节，印刷页 34–36。已对照本地教材 PDF 的正文；笔记批注未作为科学依据。不同印次页码可能略有差异。</p><ul><li><a href="https://www.genome.gov/genetics-glossary/Nucleic-Acid" target="_blank" rel="noopener noreferrer">NHGRI · Nucleic Acid</a>：核酸的类型与功能。</li><li><a href="https://www.genome.gov/genetics-glossary/Nucleotide" target="_blank" rel="noopener noreferrer">NHGRI · Nucleotide</a>：核苷酸的三种组分。</li><li><a href="https://www.genome.gov/genetics-glossary/Double-Helix" target="_blank" rel="noopener noreferrer">NHGRI · Double Helix</a>：双螺旋、骨架与互补配对。</li><li><a href="https://openstax.org/books/biology-2e/pages/3-5-nucleic-acids" target="_blank" rel="noopener noreferrer">OpenStax Biology 2e · Nucleic Acids</a>：DNA/RNA、核苷酸、方向性与序列。</li></ul><h3>交互设计参考</h3><ul><li><a href="https://teach.genetics.utah.edu/content/evolution/biochemistry/" target="_blank" rel="noopener noreferrer">University of Utah · Build a DNA Molecule 教师说明</a>：通过构建探索配对规则。</li><li><a href="https://www.labxchange.org/library/items/lb:LabXchange:feb8ec5b:lx_simulation:1" target="_blank" rel="noopener noreferrer">LabXchange · The Structure of DNA</a>：逐层探索结构与双螺旋。</li><li><a href="https://www.biointeractive.org/classroom-resources/modeling-structure-dna" target="_blank" rel="noopener noreferrer">HHMI BioInteractive · Modeling the Structure of DNA</a>：由单链、互补链走向空间模型。</li></ul><p>本课件为原创界面与概念图形，借鉴任务式构建和分层反馈的交互方法。所有操作均在本地运行；点击外部参考链接才需要联网。</p></div></dialog>
+<dialog id="compareDialog" aria-labelledby="compareTitle"><div class="dialog-head"><h2 id="compareTitle">DNA 与 RNA · 知识对照</h2><button class="close-button" data-close aria-label="关闭">×</button></div><div class="dialog-body"><table class="compare-table"><tr><th>比较项</th><th>DNA</th><th>RNA</th></tr><tr><td>中文名称</td><td>脱氧核糖核酸</td><td>核糖核酸</td></tr><tr><td>基本单位</td><td>脱氧核苷酸</td><td>核糖核苷酸</td></tr><tr><td>五碳糖</td><td>脱氧核糖</td><td>核糖</td></tr><tr><td>含氮碱基</td><td>A、T、G、C</td><td>A、U、G、C</td></tr><tr><td>核苷酸种类</td><td>4 种</td><td>4 种</td></tr><tr><td>通常链数</td><td>两条链</td><td>一条链</td></tr><tr><td>真核细胞中分布</td><td>主要在细胞核，也在<br>线粒体、叶绿体中</td><td>主要在细胞质中</td></tr></table><p>两类核酸都含 C、H、O、N、P。核酸是遗传信息的携带者。细胞生物以 DNA 为遗传物质；某些病毒以 RNA 为遗传物质。遗传信息与核苷酸的排列顺序有关。核苷酸是单体，核酸是多聚体；核酸等生物大分子以碳链为基本骨架。</p></div></dialog>
+<dialog id="resetDialog" aria-labelledby="resetTitle"><div class="dialog-head"><h2 id="resetTitle">重新开始训练</h2><button class="close-button" data-close aria-label="关闭">×</button></div><div class="dialog-body"><p>这会清除本课件在本机浏览器中保存的积分和任务进度。研究组名称将保留。</p><div class="button-row"><button class="primary" id="confirmReset">清除并重新开始</button><button class="secondary" data-close>保留进度</button></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<div class="print-only"><h1>核酸训练实验室 · 学习记录</h1><p id="printSummary"></p><p>核酸的基本组成单位是核苷酸，由磷酸、五碳糖和含氮碱基组成。</p><p>DNA：脱氧核糖，A/T/G/C；RNA：核糖，A/U/G/C。遗传信息与核苷酸排列顺序有关。</p></div>
+<script>
+/*
+ * HelixLab — dependency-free Canvas 2D rendering of a rotatable 3D DNA model.
+ * Educational schematic: beads, rods, colours, distances and hydrogen-bond
+ * placement are symbolic; this is not an atomically accurate molecular model.
+ * The geometry is a right-handed double helix, with antiparallel strand ends.
+ */
+(function (global) {
+  'use strict';
+
+  const BASE_COLORS = Object.freeze({
+    A: '#e7a433', T: '#17aaa5', G: '#876de1', C: '#e87d91'
+  });
+  const COMPLEMENT = Object.freeze({ A: 'T', T: 'A', G: 'C', C: 'G' });
+  const TAU = Math.PI * 2;
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const rgbCache = new Map();
+
+  function rgb(hex) {
+    if (!rgbCache.has(hex)) {
+      const n = parseInt(hex.slice(1), 16);
+      rgbCache.set(hex, [(n >> 16) & 255, (n >> 8) & 255, n & 255]);
+    }
+    return rgbCache.get(hex);
+  }
+  function tone(hex, amount) {
+    const c = rgb(hex);
+    const to = amount > 0 ? 255 : 0;
+    return 'rgb(' + c.map(n => Math.round(lerp(n, to, Math.abs(amount)))).join(',') + ')';
+  }
+  function pointSegmentDistance(px, py, a, b) {
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const t = clamp(((px - a.x) * dx + (py - a.y) * dy) / (dx * dx + dy * dy || 1), 0, 1);
+    return Math.hypot(px - a.x - dx * t, py - a.y - dy * t);
+  }
+  function roundRect(ctx, x, y, w, h, r) {
+    r = Math.min(r, w / 2, h / 2);
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  class HelixLab {
+    constructor(canvas, options = {}) {
+      if (!canvas || typeof canvas.getContext !== 'function') {
+        throw new TypeError('HelixLab requires a canvas element.');
+      }
+      this.canvas = canvas;
+      this.ctx = canvas.getContext('2d', { alpha: true });
+      if (!this.ctx) throw new Error('This browser does not support Canvas 2D.');
+      this.options = options;
+      this.onSelect = typeof options.onSelect === 'function' ? options.onSelect : null;
+      this._background = options.background === false ? null : (options.background || '#f5f8f8');
+      this.sequence = 'ATGCCGTAATGC';
+      this.twist = 1;
+      this.highlight = 'all';
+      this.selectedIndex = -1;
+      this._yaw = -0.34;
+      this._pitch = -0.10;
+      this._roll = -0.10;
+      this._zoom = 1;
+      this._autoRotate = options.autoRotate !== false;
+      this._reducedMotion = typeof global.matchMedia === 'function' &&
+        global.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      this._visible = true;
+      this._destroyed = false;
+      this._dirty = true;
+      this._raf = 0;
+      this._timer = 0;
+      this._lastTime = 0;
+      this._drag = null;
+      this._hitTargets = [];
+      this._primitives = [];
+      this._labels = [];
+      this._oldStyle = { cursor: canvas.style.cursor, touchAction: canvas.style.touchAction };
+      this._oldTabIndex = canvas.getAttribute('tabindex');
+      this._oldAriaLabel = canvas.getAttribute('aria-label');
+      if (!canvas.hasAttribute('tabindex')) canvas.setAttribute('tabindex', '0');
+      if (!canvas.hasAttribute('aria-label')) {
+        canvas.setAttribute('aria-label', '可旋转的 DNA 双螺旋模型。拖动旋转，滚轮或加减键缩放，方向键旋转，点击碱基对查看。');
+      }
+      canvas.style.cursor = 'grab';
+      canvas.style.touchAction = 'none';
+
+      this._handlers = {
+        pointerdown: e => this._pointerDown(e),
+        pointermove: e => this._pointerMove(e),
+        pointerup: e => this._pointerUp(e),
+        pointercancel: () => this._cancelDrag(),
+        lostpointercapture: () => this._cancelDrag(),
+        wheel: e => this._wheel(e),
+        keydown: e => this._keyDown(e)
+      };
+      for (const [name, handler] of Object.entries(this._handlers)) {
+        canvas.addEventListener(name, handler, name === 'wheel' ? { passive: false } : false);
+      }
+      this._resizeHandler = () => this.resize();
+      global.addEventListener('resize', this._resizeHandler, { passive: true });
+      if (typeof global.ResizeObserver === 'function') {
+        this._resizeObserver = new global.ResizeObserver(() => this.resize());
+        this._resizeObserver.observe(canvas);
+      }
+      if (typeof global.IntersectionObserver === 'function') {
+        this._intersectionObserver = new global.IntersectionObserver(entries => {
+          const entry = entries[entries.length - 1];
+          this._visible = entry.isIntersecting;
+          if (!this._visible) {
+            if (this._raf) global.cancelAnimationFrame(this._raf);
+            if (this._timer) global.clearTimeout(this._timer);
+            this._raf = this._timer = 0;
+          } else {
+            this._lastTime = 0;
+            this._invalidate();
+          }
+        }, { rootMargin: '80px' });
+        this._intersectionObserver.observe(canvas);
+      }
+      this._tick = this._tick.bind(this);
+      this._buildGeometry();
+      this.resize();
+    }
+
+    setSequence(value) {
+      const sequence = String(value).toUpperCase().replace(/\s/g, '');
+      if (!/^[ATGC]{1,40}$/.test(sequence)) {
+        throw new RangeError('DNA sequence must contain 1–40 A, T, G or C letters.');
+      }
+      this.sequence = sequence;
+      this.selectedIndex = -1;
+      this._buildGeometry();
+      this._invalidate();
+      return this;
+    }
+
+    setTwist(value) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return this;
+      this.twist = clamp(number, 0, 1);
+      this._buildGeometry();
+      this._invalidate();
+      return this;
+    }
+
+    setAutoRotate(enabled) {
+      this._autoRotate = Boolean(enabled);
+      this._lastTime = 0;
+      this._invalidate();
+      return this;
+    }
+
+    setHighlight(mode) {
+      this.highlight = ['all', 'backbone', 'bases', 'bonds'].includes(mode) ? mode : 'all';
+      this._invalidate();
+      return this;
+    }
+
+    resetView() {
+      this._yaw = -0.34;
+      this._pitch = -0.10;
+      this._roll = -0.10;
+      this._zoom = 1;
+      this.selectedIndex = -1;
+      this._invalidate();
+      return this;
+    }
+
+    resize() {
+      if (this._destroyed) return this;
+      const rect = this.canvas.getBoundingClientRect();
+      this._width = Math.max(1, rect.width);
+      this._height = Math.max(1, rect.height);
+      this._dpr = Math.min(global.devicePixelRatio || 1, 2.5);
+      const width = Math.round(this._width * this._dpr);
+      const height = Math.round(this._height * this._dpr);
+      if (this.canvas.width !== width) this.canvas.width = width;
+      if (this.canvas.height !== height) this.canvas.height = height;
+      this._invalidate();
+      return this;
+    }
+
+    destroy() {
+      if (this._destroyed) return;
+      this._destroyed = true;
+      if (this._raf) global.cancelAnimationFrame(this._raf);
+      if (this._timer) global.clearTimeout(this._timer);
+      this._resizeObserver?.disconnect();
+      this._intersectionObserver?.disconnect();
+      global.removeEventListener('resize', this._resizeHandler);
+      for (const [name, handler] of Object.entries(this._handlers)) {
+        this.canvas.removeEventListener(name, handler);
+      }
+      Object.assign(this.canvas.style, this._oldStyle);
+      if (this._oldTabIndex === null) this.canvas.removeAttribute('tabindex');
+      else this.canvas.setAttribute('tabindex', this._oldTabIndex);
+      if (this._oldAriaLabel === null) this.canvas.removeAttribute('aria-label');
+      else this.canvas.setAttribute('aria-label', this._oldAriaLabel);
+    }
+
+    _invalidate() {
+      this._dirty = true;
+      if (!this._destroyed && this._visible && !this._raf && !this._timer) {
+        this._raf = global.requestAnimationFrame(this._tick);
+      }
+    }
+
+    _tick(time) {
+      this._raf = 0;
+      if (this._destroyed || !this._visible) return;
+      // No rendering while the browser tab is hidden; polling also recovers on return.
+      if (global.document && global.document.hidden) {
+        this._lastTime = 0;
+        this._timer = global.setTimeout(() => {
+          this._timer = 0;
+          this._invalidate();
+        }, 500);
+        return;
+      }
+      const animate = this._autoRotate && !this._reducedMotion && !this._drag;
+      if (animate && this._lastTime) {
+        this._yaw += Math.min(time - this._lastTime, 45) * 0.00012;
+        this._dirty = true;
+      }
+      this._lastTime = time;
+      if (this._dirty && this._width > 1 && this._height > 1) {
+        this._draw();
+        this._dirty = false;
+      }
+      if (animate) this._raf = global.requestAnimationFrame(this._tick);
+    }
+
+    _pointerDown(e) {
+      if (e.button !== undefined && e.button !== 0) return;
+      if (this._drag) return;
+      this.canvas.focus({ preventScroll: true });
+      this._drag = {
+        id: e.pointerId, startX: e.clientX, startY: e.clientY,
+        lastX: e.clientX, lastY: e.clientY, moved: false
+      };
+      try { this.canvas.setPointerCapture(e.pointerId); } catch (_) { /* synthetic event */ }
+      this.canvas.style.cursor = 'grabbing';
+      this._lastTime = 0;
+    }
+
+    _pointerMove(e) {
+      const drag = this._drag;
+      if (!drag || drag.id !== e.pointerId) return;
+      const dx = e.clientX - drag.lastX, dy = e.clientY - drag.lastY;
+      if (Math.hypot(e.clientX - drag.startX, e.clientY - drag.startY) > 5) drag.moved = true;
+      this._yaw += dx * 0.009;
+      this._pitch = clamp(this._pitch + dy * 0.006, -0.88, 0.88);
+      drag.lastX = e.clientX;
+      drag.lastY = e.clientY;
+      this._invalidate();
+    }
+
+    _pointerUp(e) {
+      const drag = this._drag;
+      if (!drag || drag.id !== e.pointerId) return;
+      if (!drag.moved) {
+        const rect = this.canvas.getBoundingClientRect();
+        this._selectAt(e.clientX - rect.left, e.clientY - rect.top, e.pointerType === 'touch' ? 25 : 17);
+      }
+      this._cancelDrag();
+      try { this.canvas.releasePointerCapture(e.pointerId); } catch (_) { /* already released */ }
+    }
+
+    _cancelDrag() {
+      if (!this._drag) return;
+      this._drag = null;
+      this.canvas.style.cursor = 'grab';
+      this._lastTime = 0;
+      this._invalidate();
+    }
+
+    _wheel(e) {
+      e.preventDefault();
+      this._zoom = clamp(this._zoom * Math.exp(-e.deltaY * 0.001), 0.62, 1.85);
+      this._invalidate();
+    }
+
+    _keyDown(e) {
+      let handled = true;
+      switch (e.key) {
+        case 'ArrowLeft': this._yaw -= 0.13; break;
+        case 'ArrowRight': this._yaw += 0.13; break;
+        case 'ArrowUp': this._pitch = clamp(this._pitch - 0.09, -0.88, 0.88); break;
+        case 'ArrowDown': this._pitch = clamp(this._pitch + 0.09, -0.88, 0.88); break;
+        case '+': case '=': this._zoom = clamp(this._zoom * 1.09, 0.62, 1.85); break;
+        case '-': case '_': this._zoom = clamp(this._zoom / 1.09, 0.62, 1.85); break;
+        case 'Home': case '0': this.resetView(); break;
+        // Enter/Space lets keyboard users inspect the sequence one pair at a time.
+        case 'Enter': case ' ': this._selectIndex((this.selectedIndex + 1) % this.sequence.length); break;
+        default: handled = false;
+      }
+      if (handled) {
+        e.preventDefault();
+        this._invalidate();
+      }
+    }
+
+    _selectAt(x, y, radius) {
+      let best = null, score = Infinity;
+      for (const hit of this._hitTargets) {
+        const distance = pointSegmentDistance(x, y, hit.a, hit.b);
+        if (distance > radius) continue;
+        const candidate = distance - hit.z * 0.15;
+        if (candidate < score) { best = hit; score = candidate; }
+      }
+      if (best) this._selectIndex(best.index);
+    }
+
+    _selectIndex(index) {
+      this.selectedIndex = index;
+      this._invalidate();
+      if (this.onSelect) {
+        this.onSelect({ index, left: this.sequence[index], right: COMPLEMENT[this.sequence[index]] });
+      }
+    }
+
+    _buildGeometry() {
+      this._primitives = [];
+      this._labels = [];
+      this._pairs = [];
+      const count = this.sequence.length;
+      const mid = (count - 1) / 2;
+      const radius = 1.65, rise = 0.49;
+      // 10.5 pairs/turn is a rounded B-DNA illustration parameter, not curriculum
+      // content to memorise; flattening only demonstrates the structural relationship.
+      const angleStep = TAU / 10.5 * this.twist;
+      this._worldHeight = Math.max(2.5, (count - 1) * rise);
+      const at = (i, side, fraction = 1, dy = 0) => {
+        const t = (mid - i) * angleStep;
+        return {
+          x: side * radius * fraction * Math.cos(t),
+          y: (mid - i) * rise + dy,
+          z: -side * radius * fraction * Math.sin(t)
+        };
+      };
+      const rod = (a, b, color, radius, group, index = -1) => {
+        this._primitives.push({ type: 'rod', a, b, color, radius, group, index });
+      };
+      const bead = (p, color, radius, sugar, index) => {
+        this._primitives.push({ type: 'bead', p, color, radius, sugar, group: 'backbone', index });
+      };
+      for (let i = 0; i < count; i++) {
+        const left = this.sequence[i], right = COMPLEMENT[left];
+        this._pairs.push({ index: i, a: at(i, 1, 0.89), b: at(i, -1, 0.89) });
+        for (const side of [1, -1]) {
+          const base = side === 1 ? left : right;
+          // Sugar-to-base attachments and bases are separate symbolic components.
+          rod(at(i, side, 1), at(i, side, 0.84), '#a9c9cb', 0.038, 'backbone', i);
+          for (let j = 0; j < 4; j++) {
+            rod(at(i, side, lerp(0.84, 0.17, j / 4)),
+              at(i, side, lerp(0.84, 0.17, (j + 1) / 4)),
+              BASE_COLORS[base], 0.071, 'bases', i);
+          }
+          bead(at(i, side), '#a6d3d4', 0.104, true, i);
+          this._labels.push({ p: at(i, side, 0.53), text: base, color: BASE_COLORS[base], index: i, terminal: false });
+          if (i === 0 || i === count - 1) {
+            const atTop = i === 0;
+            const text = (side === 1 ? atTop : !atTop) ? '5′' : '3′';
+            this._labels.push({ p: at(i, side, 1.02, atTop ? 0.34 : -0.34), text, terminal: true, index: -1 });
+          }
+          if (i < count - 1) {
+            for (let j = 0; j < 6; j++) {
+              rod(at(i + j / 6, side), at(i + (j + 1) / 6, side), '#4e9fa6', 0.043, 'backbone');
+            }
+            bead(at(i + 0.5, side), '#428e99', 0.077, false, -1);
+          }
+        }
+        const bondCount = left === 'A' || left === 'T' ? 2 : 3;
+        for (let j = 0; j < bondCount; j++) {
+          const dy = (j - (bondCount - 1) / 2) * 0.083;
+          this._primitives.push({
+            type: 'bond', a: at(i, 1, 0.145, dy), b: at(i, -1, 0.145, dy),
+            group: 'bonds', index: i, color: '#7c9399'
+          });
+        }
+      }
+    }
+
+    _transform(p) {
+      const cy = Math.cos(this._yaw), sy = Math.sin(this._yaw);
+      const cp = Math.cos(this._pitch), sp = Math.sin(this._pitch);
+      const cr = Math.cos(this._roll), sr = Math.sin(this._roll);
+      const x1 = p.x * cy + p.z * sy;
+      const z1 = -p.x * sy + p.z * cy;
+      const y2 = p.y * cp - z1 * sp;
+      const z2 = p.y * sp + z1 * cp;
+      return { x: x1 * cr - y2 * sr, y: x1 * sr + y2 * cr, z: z2 };
+    }
+
+    _project(p) {
+      const v = this._transform(p);
+      const perspective = 12 / (12 - v.z);
+      return {
+        x: this._width * 0.5 + v.x * this._scale * perspective,
+        y: this._height * 0.485 - v.y * this._scale * perspective,
+        z: v.z, scale: this._scale * perspective
+      };
+    }
+
+    _opacity(group, index) {
+      if (this.highlight === 'all' || group === this.highlight) return 1;
+      if (index === this.selectedIndex) return 0.72;
+      return this.highlight === 'bonds' ? 0.24 : 0.17;
+    }
+
+    _draw() {
+      const ctx = this.ctx, w = this._width, h = this._height;
+      ctx.setTransform(this._dpr, 0, 0, this._dpr, 0, 0);
+      ctx.clearRect(0, 0, w, h);
+      if (this._background) { ctx.fillStyle = this._background; ctx.fillRect(0, 0, w, h); }
+      this._scale = Math.min(w / 5.3, h / (this._worldHeight + 2.1)) * this._zoom;
+
+      // A quiet stage light and floor shadow give the small model spatial context.
+      const glow = ctx.createRadialGradient(w * 0.5, h * 0.45, 0, w * 0.5, h * 0.45, Math.min(w, h) * 0.55);
+      glow.addColorStop(0, 'rgba(204,235,232,0.22)');
+      glow.addColorStop(1, 'rgba(204,235,232,0)');
+      ctx.fillStyle = glow;
+      ctx.fillRect(0, 0, w, h);
+      const shadowY = Math.min(h - 16, h * 0.485 + this._worldHeight * this._scale * 0.52 + 30);
+      ctx.save();
+      ctx.translate(w / 2, shadowY);
+      ctx.scale(1, 0.12);
+      const shadow = ctx.createRadialGradient(0, 0, 0, 0, 0, this._scale * 1.55);
+      shadow.addColorStop(0, 'rgba(53,103,111,0.13)');
+      shadow.addColorStop(1, 'rgba(53,103,111,0)');
+      ctx.fillStyle = shadow;
+      ctx.beginPath();
+      ctx.arc(0, 0, this._scale * 1.55, 0, TAU);
+      ctx.fill();
+      ctx.restore();
+
+      const projected = this._primitives.map(p => {
+        if (p.p) { const position = this._project(p.p); return { ...p, position, depth: position.z }; }
+        const a = this._project(p.a), b = this._project(p.b);
+        return { ...p, a2: a, b2: b, depth: (a.z + b.z) / 2 };
+      });
+      projected.sort((a, b) => a.depth - b.depth);
+      this._hitTargets = this._pairs.map(pair => {
+        const a = this._project(pair.a), b = this._project(pair.b);
+        return { index: pair.index, a, b, z: (a.z + b.z) / 2 };
+      });
+
+      const selected = this._hitTargets.find(pair => pair.index === this.selectedIndex);
+      if (selected) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(selected.a.x, selected.a.y);
+        ctx.lineTo(selected.b.x, selected.b.y);
+        ctx.lineCap = 'round';
+        ctx.lineWidth = clamp(this._scale * 0.30, 18, 36);
+        ctx.strokeStyle = 'rgba(37,174,171,0.10)';
+        ctx.shadowColor = 'rgba(36,172,174,0.24)';
+        ctx.shadowBlur = 18;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      for (const p of projected) {
+        const alpha = this._opacity(p.group, p.index);
+        if (p.type === 'rod') this._drawRod(p, alpha);
+        else if (p.type === 'bead') this._drawBead(p, alpha);
+        else this._drawBond(p, alpha);
+      }
+      this._drawLabels();
+    }
+
+    _drawRod(p, alpha) {
+      const ctx = this.ctx, a = p.a2, b = p.b2;
+      const width = Math.max(1.25, p.radius * (a.scale + b.scale));
+      const dx = b.x - a.x, dy = b.y - a.y, length = Math.hypot(dx, dy) || 1;
+      const nx = -dy / length, ny = dx / length;
+      const midX = (a.x + b.x) / 2, midY = (a.y + b.y) / 2;
+      const gradient = ctx.createLinearGradient(midX - nx * width / 2, midY - ny * width / 2,
+        midX + nx * width / 2, midY + ny * width / 2);
+      gradient.addColorStop(0, tone(p.color, -0.19));
+      gradient.addColorStop(0.32, tone(p.color, 0.28));
+      gradient.addColorStop(0.52, tone(p.color, 0.12));
+      gradient.addColorStop(1, tone(p.color, -0.24));
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.lineCap = 'round';
+      ctx.lineWidth = width;
+      ctx.strokeStyle = gradient;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    _drawBead(p, alpha) {
+      const ctx = this.ctx, v = p.position;
+      const r = Math.max(2, p.radius * v.scale);
+      const gradient = ctx.createRadialGradient(v.x - r * 0.35, v.y - r * 0.35, r * 0.05, v.x, v.y, r);
+      gradient.addColorStop(0, tone(p.color, 0.83));
+      gradient.addColorStop(0.32, tone(p.color, 0.34));
+      gradient.addColorStop(0.76, p.color);
+      gradient.addColorStop(1, tone(p.color, -0.26));
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = gradient;
+      ctx.shadowColor = 'rgba(27,65,73,0.12)';
+      ctx.shadowBlur = r * 0.4;
+      ctx.shadowOffsetY = r * 0.15;
+      ctx.beginPath();
+      ctx.arc(v.x, v.y, r, 0, TAU);
+      ctx.fill();
+      ctx.shadowBlur = ctx.shadowOffsetY = 0;
+      if (p.sugar && r > 4) {
+        // Pentagon motif identifies the pentose sugar without implying atomic detail.
+        ctx.strokeStyle = 'rgba(255,255,255,0.72)';
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let i = 0; i < 5; i++) {
+          const angle = -Math.PI / 2 + i * TAU / 5;
+          const x = v.x + Math.cos(angle) * r * 0.53;
+          const y = v.y + Math.sin(angle) * r * 0.53;
+          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    _drawBond(p, alpha) {
+      const ctx = this.ctx, a = p.a2, b = p.b2;
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.strokeStyle = this.highlight === 'bonds' || p.index === this.selectedIndex ? '#1d9f9e' : p.color;
+      ctx.lineWidth = this.highlight === 'bonds' ? 1.7 : 1.15;
+      ctx.lineCap = 'round';
+      ctx.setLineDash([2.2, 2.8]);
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    _drawLabels() {
+      const ctx = this.ctx;
+      const occupied = [];
+      const labels = this._labels.map(label => ({ ...label, v: this._project(label.p) }));
+      // Keep terminal directions first, then selected bases, then front-facing bases.
+      labels.sort((a, b) => (Number(b.terminal) - Number(a.terminal)) ||
+        (Number(b.index === this.selectedIndex) - Number(a.index === this.selectedIndex)) || b.v.z - a.v.z);
+      for (const label of labels) {
+        const v = label.v;
+        const size = label.terminal ? 11 : clamp(v.scale * 0.145, 10, 13);
+        const width = label.terminal ? 27 : size + 9;
+        const height = label.terminal ? 22 : size + 8;
+        const rect = { x: v.x - width / 2, y: v.y - height / 2, w: width, h: height };
+        if (rect.x < 5 || rect.y < 5 || rect.x + rect.w > this._width - 5 || rect.y + rect.h > this._height - 5) continue;
+        if (occupied.some(r => rect.x < r.x + r.w + 3 && rect.x + rect.w + 3 > r.x &&
+          rect.y < r.y + r.h + 3 && rect.y + rect.h + 3 > r.y)) continue;
+        occupied.push(rect);
+        ctx.save();
+        ctx.globalAlpha = label.terminal ? 0.85 : this._opacity('bases', label.index);
+        ctx.font = '700 ' + size + 'px system-ui, -apple-system, "Segoe UI", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        if (label.terminal) {
+          ctx.fillStyle = 'rgba(255,255,255,0.86)';
+          roundRect(ctx, rect.x, rect.y, rect.w, rect.h, 6);
+          ctx.fill();
+          ctx.fillStyle = '#577781';
+        } else {
+          ctx.fillStyle = 'rgba(255,255,255,0.93)';
+          ctx.shadowColor = 'rgba(39,73,77,0.12)';
+          ctx.shadowBlur = 5;
+          ctx.shadowOffsetY = 1;
+          ctx.beginPath();
+          ctx.arc(v.x, v.y, width / 2, 0, TAU);
+          ctx.fill();
+          ctx.shadowBlur = ctx.shadowOffsetY = 0;
+          ctx.strokeStyle = label.index === this.selectedIndex ? '#2bafae' : 'rgba(255,255,255,0.9)';
+          ctx.lineWidth = label.index === this.selectedIndex ? 1.7 : 0.6;
+          ctx.stroke();
+          ctx.fillStyle = tone(label.color, -0.25);
+        }
+        ctx.fillText(label.text, v.x, v.y + 0.4);
+        ctx.restore();
+      }
+    }
+  }
+
+  HelixLab.BASE_COLORS = BASE_COLORS;
+  HelixLab.COMPLEMENT = COMPLEMENT;
+  global.HelixLab = HelixLab;
+})(window);
+
+</script>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id),all=s=>Array.from(document.querySelectorAll(s));
+const complement={A:'T',T:'A',G:'C',C:'G'},colors={A:'#e7a433',T:'#17aaa5',G:'#876de1',C:'#e87d91',U:'#859d4a'},names={A:'腺嘌呤',T:'胸腺嘧啶',G:'鸟嘌呤',C:'胞嘧啶',U:'尿嘧啶'};
+const STORAGE='nucleic-acid-lab-v1';
+function fresh(){return {version:1,team:'第 01 研究组',built:{DNA:false,RNA:false},paired:false,observed:false,quiz:[false,false,false,false,false],sequence:'ATGCGTACGACT',modelSequence:null};}
+let state=fresh();try{const saved=JSON.parse(localStorage.getItem(STORAGE));if(saved&&saved.version===1){state.team=typeof saved.team==='string'?saved.team.slice(0,20):state.team;state.built.DNA=!!saved.built?.DNA;state.built.RNA=!!saved.built?.RNA;state.paired=!!saved.paired;state.observed=!!saved.observed;state.quiz=state.quiz.map((_,i)=>!!saved.quiz?.[i]);if(/^[ATGC]{12}$/.test(saved.sequence))state.sequence=saved.sequence;if(/^[ATGC]{12}$/.test(saved.modelSequence))state.modelSequence=saved.modelSequence;else if(state.paired)state.modelSequence=state.sequence;}}catch(e){}
+let stage=0,molecule='DNA',assembly={phosphate:null,sugar:null,base:null},pairIndex=0,pairs=Array(12).fill(''),pairErrors=[],roundNotices=new Set(),quizIndex=0,quizSelected=null,quizRevealed=false,autoRotate=!matchMedia('(prefers-reduced-motion: reduce)').matches,twistVisitedFlat=false,twistVisitedFull=false,toastTimer,exploreSequence=['A','T','G','C'],swapPick=-1;
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(state));}catch(e){}updateProgress();}
+function toast(s){$('toast').textContent=s;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4200);}
+function feedback(id,s,type=''){const el=$(id);el.textContent=s;el.className='feedback'+(type?' '+type:'');}
+function score(){return (state.built.DNA?15:0)+(state.built.RNA?15:0)+(state.paired?30:0)+(state.observed?20:0)+state.quiz.filter(Boolean).length*4;}
+function updateProgress(){const done=[state.built.DNA&&state.built.RNA,state.paired,state.observed,state.quiz.every(Boolean)],n=done.filter(Boolean).length;done.forEach((v,i)=>$('check'+(i+1)).textContent=v?'✓':'↗');$('progressLabel').textContent=`训练进度 ${n} / 4`;$('progressFill').style.width=n*25+'%';$('progressTrack').setAttribute('aria-valuenow',n);$('xpLabel').textContent=score()+' XP';$('assemblyRounds').innerHTML=`<span class="${state.built.DNA?'round-done':''}">DNA ${state.built.DNA?'✓':'○'}</span>　<span class="${state.built.RNA?'round-done':''}">RNA ${state.built.RNA?'✓':'○'}</span>`;$('teamNameLabel').textContent=state.team;$('teamNameInput').value=state.team;}
+function openDialog(id){$(id).showModal();}
+all('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
+all('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
+$('teacherButton').onclick=()=>openDialog('teacherDialog');$('teamButton').onclick=()=>openDialog('teamDialog');$('sourcesButton').onclick=()=>openDialog('sourcesDialog');$('compareButton').onclick=()=>openDialog('compareDialog');
+$('saveTeam').onclick=()=>{state.team=$('teamNameInput').value.trim()||'第 01 研究组';save();$('teamDialog').close();toast('研究组已就位。先预测，再构建，一起校验。');};
+$('fullscreenButton').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch(e){toast('当前窗口暂不支持全屏，可按 F11 或放大浏览器窗口。');}};
+let helix;
+try{helix=new HelixLab($('helixCanvas'),{onSelect:p=>{const count=p.left==='A'||p.left==='T'?2:3;$('selectedPair').innerHTML=`第 <b>${p.index+1}</b> 对：<b>${p.left} — ${p.right}</b> · ${count} 个氢键`;if(stage===0)toast(`第 ${p.index+1} 对：${names[p.left]} ${p.left} 与 ${names[p.right]} ${p.right}，${count} 个氢键。`);}});helix.setSequence(state.modelSequence||state.sequence);helix.setAutoRotate(autoRotate);}catch(e){$('helixCanvas').replaceWith(Object.assign(document.createElement('p'),{textContent:'模型初始化失败，请使用较新的 Edge / Chrome 浏览器打开本 HTML。'}));}
+function syncAutoButtons(){all('.auto-button').forEach(b=>{b.textContent=autoRotate?'Ⅱ':'▷';b.setAttribute('aria-label',autoRotate?'暂停自动旋转':'开启自动旋转');b.setAttribute('aria-pressed',String(autoRotate));});}
+all('.auto-button').forEach(b=>b.onclick=()=>{autoRotate=!autoRotate;helix?.setAutoRotate(autoRotate);syncAutoButtons();});all('.reset-view').forEach(b=>b.onclick=()=>helix?.resetView());
+function goStage(n){stage=n;for(let i=0;i<=4;i++)$('stage'+i).hidden=i!==n;all('.mission-tab').forEach(b=>{const active=+b.dataset.stage===n;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});if(n===0||n===3){const canvas=$('helixCanvas');if(canvas)$(n===0?'heroCanvasMount':'helixMount').append(canvas);helix?.setSequence(state.modelSequence||state.sequence);helix?.setTwist(n===0?1:+$('twistSlider').value/100);if(n===0)helix?.setHighlight('all');else helix?.setHighlight(document.querySelector('[data-highlight].selected').dataset.highlight);requestAnimationFrame(()=>helix?.resize());if(n===3){$('sequenceOrigin').textContent=state.modelSequence?'当前模型来自你最近完成配对的 12 对碱基。转动它，寻找内外结构。':'当前模型为 12 对碱基的示例。也可先去配对关卡，亲手完成它。';$('selectedPair').textContent='点击模型中的一对碱基，查看它们的连接。';}}if(n===4)renderQuiz();}
+all('[data-stage]').forEach(b=>b.addEventListener('click',()=>goStage(+b.dataset.stage)));$('homeButton').onclick=()=>goStage(0);
+function renderAssembly(){all('[data-molecule]').forEach(b=>{b.classList.toggle('selected',b.dataset.molecule===molecule);b.setAttribute('aria-pressed',String(b.dataset.molecule===molecule));});all('[data-slot]').forEach(slot=>{const kind=slot.dataset.slot,value=assembly[kind],num={phosphate:'01',sugar:'02',base:'03'}[kind];let html=`<span class="slot-order">${num}</span>`;if(!value)html+=`<span class="slot-prompt">${{phosphate:'放入磷酸',sugar:'放入五碳糖',base:'放入含氮碱基'}[kind]}</span>`;else if(kind==='phosphate')html+='<span class="molecule-circle">P</span><span class="slot-name">磷酸基团</span>';else if(kind==='sugar')html+=`<span class="molecule-pentagon">${value==='ribose'?'核糖':'脱氧核糖'}</span><span class="slot-name">${value==='ribose'?'核糖':'脱氧核糖'}</span>`;else html+=`<span class="molecule-base" style="background:${colors[value]}">${value}</span><span class="slot-name">${names[value]}</span>`;slot.innerHTML=html;slot.setAttribute('aria-label',value?`已放置${kind==='base'?names[value]:kind==='sugar'?(value==='ribose'?'核糖':'脱氧核糖'):'磷酸基团'}，点击移除`:`${{phosphate:'磷酸',sugar:'五碳糖',base:'含氮碱基'}[kind]}位置，等待放置`);});}
+function putPart(part,kind){assembly[kind]=part;renderAssembly();feedback('assemblyFeedback',`已选择${kind==='base'?names[part]:part==='ribose'?'核糖':part==='deoxyribose'?'脱氧核糖':'磷酸基团'}。请继续放置，或点击“校验结构”。`);}
+all('[data-part]').forEach(b=>{b.onclick=()=>putPart(b.dataset.part,b.dataset.kind);b.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',JSON.stringify({part:b.dataset.part,kind:b.dataset.kind}));e.dataTransfer.effectAllowed='copy';});});
+all('[data-slot]').forEach(b=>{b.onclick=()=>{assembly[b.dataset.slot]=null;renderAssembly();};b.addEventListener('dragover',e=>{e.preventDefault();b.classList.add('drag-over');});b.addEventListener('dragleave',()=>b.classList.remove('drag-over'));b.addEventListener('drop',e=>{e.preventDefault();b.classList.remove('drag-over');try{const p=JSON.parse(e.dataTransfer.getData('text/plain'));const source=all('[data-part]').find(x=>x.dataset.part===p.part&&x.dataset.kind===p.kind);if(!source)return;if(p.kind!==b.dataset.slot){feedback('assemblyFeedback','位置还不对。把磷酸、五碳糖和碱基放到各自对应的位置。','error');return;}putPart(p.part,p.kind);}catch(err){}});});
+all('[data-molecule]').forEach(b=>b.onclick=()=>{molecule=b.dataset.molecule;assembly={phosphate:null,sugar:null,base:null};renderAssembly();feedback('assemblyFeedback',`现在组装 ${molecule} 的基本单位。请先和搭档交换分工，再选择正确的糖和碱基。`);});
+$('clearAssembly').onclick=()=>{assembly={phosphate:null,sugar:null,base:null};renderAssembly();feedback('assemblyFeedback','零件已归位。先说出三种组分，再重新选择。');};
+$('checkAssembly').onclick=()=>{if(Object.values(assembly).some(v=>!v)){feedback('assemblyFeedback','还少一些零件：一个核苷酸需要磷酸、五碳糖、含氮碱基，三者缺一不可。','error');return;}const sugar=molecule==='DNA'?'deoxyribose':'ribose';if(assembly.sugar!==sugar){feedback('assemblyFeedback',`${molecule} 的糖应是${sugar==='ribose'?'核糖':'脱氧核糖'}。这也是两类核酸名称不同的原因。请更换五碳糖。`,'error');return;}if(molecule==='DNA'&&assembly.base==='U'||molecule==='RNA'&&assembly.base==='T'){feedback('assemblyFeedback',molecule==='DNA'?'U 是 RNA 中的碱基。DNA 通常含 A、T、G、C，请更换。':'T 是 DNA 中的碱基。RNA 通常含 A、U、G、C，请更换。','error');return;}const first=!state.built[molecule];state.built[molecule]=true;save();feedback('assemblyFeedback',`组装成功！这是${names[assembly.base]}${molecule==='DNA'?'脱氧核苷酸':'核糖核苷酸'}。${state.built.DNA&&state.built.RNA?'两种都完成了：同一种碱基，也能因糖不同而构成不同核苷酸。':'切换到另一类核酸，再组装一次。'}${first?' +15 XP':''}`,'success');};
+function renderPairs(){const s=state.sequence.split('');$('templateStrand').innerHTML='<span class="end-tag">5′</span>'+s.map(b=>`<span class="base-cell" data-base="${b}">${b}</span>`).join('')+'<span class="end-tag">3′</span>';$('pairBonds').innerHTML='<span class="end-spacer"></span>'+s.map((b,i)=>`<span>${pairs[i]===complement[b]?(b==='A'||b==='T'?'Ⅱ':'Ⅲ'):'·'}</span>`).join('')+'<span class="end-spacer"></span>';$('answerStrand').innerHTML='<span class="end-tag">3′</span>'+pairs.map((b,i)=>`<button class="base-cell ${b?'':'empty'} ${i===pairIndex?'current':''} ${pairErrors.includes(i)?'wrong':''}" ${b?`data-base="${b}"`:''} data-position="${i}" aria-label="互补链第${i+1}位，${b||'空位'}${i===pairIndex?'，当前选中':''}">${b||'+'}</button>`).join('')+'<span class="end-tag">5′</span>';all('[data-position]').forEach(b=>b.onclick=()=>{pairIndex=+b.dataset.position;renderPairs();});const count=pairs.filter(Boolean).length;$('pairStatus').textContent=`已放置 ${count} / 12 · 当前第 ${pairIndex+1} 位 · 点选空格或按键盘 A / T / G / C`;const swapped=count>=4&&count<8;$('roleStatus').textContent=`当前建议：${swapped?'B 构建，A 校验':'A 构建，B 校验'}。每放置 4 个交换分工，提交前由校验员解释。`;}
+function chooseBase(b){pairs[pairIndex]=b;pairErrors=pairErrors.filter(i=>i!==pairIndex);const count=pairs.filter(Boolean).length;let next=pairs.findIndex((x,i)=>!x&&i>pairIndex);if(next<0)next=pairs.findIndex(x=>!x);if(next>=0)pairIndex=next;renderPairs();if((count===4||count===8)&&!roundNotices.has(count)){roundNotices.add(count);feedback('pairFeedback',`已放置 ${count} 个位置。请两位同学交换构建与校验角色，再继续。`);toast('换你来构建，让搭档解释配对依据。');}}
+all('[data-choice]').forEach(b=>b.onclick=()=>chooseBase(b.dataset.choice));
+document.addEventListener('keydown',e=>{if(stage===2&&!document.querySelector('dialog[open]')&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&/^[atgc]$/i.test(e.key)){e.preventDefault();chooseBase(e.key.toUpperCase());}});
+function clearPairs(){pairs=Array(12).fill('');pairIndex=0;pairErrors=[];roundNotices.clear();renderPairs();feedback('pairFeedback','先预测，再放置。下链从左到右是 3′→5′，与上链方向相反。');}
+$('clearPairs').onclick=clearPairs;$('newSequence').onclick=()=>{const sequences=['GCTATGACCGTA','TACGGCATAGCT','ATGCGTACGACT','CGATTACGGCAT'];state.sequence=sequences[(sequences.indexOf(state.sequence)+1)%sequences.length];save();clearPairs();toast('已换用新序列。已获得的关卡积分保留。');};
+$('checkPairs').onclick=()=>{if(pairs.some(x=>!x)){feedback('pairFeedback',`还有 ${pairs.filter(x=>!x).length} 个位置未放置。点击空位选择 A、T、G 或 C。`,'error');return;}pairErrors=pairs.map((b,i)=>b===complement[state.sequence[i]]?-1:i).filter(i=>i>=0);renderPairs();if(pairErrors.length){pairIndex=pairErrors[0];renderPairs();feedback('pairFeedback',`找到 ${pairErrors.length} 处需要修正。第 ${pairIndex+1} 位上链为 ${state.sequence[pairIndex]}，请运用 A—T、G—C 规则重新判断。橙色描边标出了待修正处。`,'error');return;}const first=!state.paired;state.paired=true;state.modelSequence=state.sequence;save();feedback('pairFeedback',`12 对碱基全部匹配！你完成的序列将进入 3D 模型。请校验员解释：互补配对限制了另一条链的序列。${first?' +30 XP':''}`,'success');toast('配对完成。带着你构建的 DNA 去观察双螺旋。');};
+$('twistSlider').addEventListener('input',e=>{const v=+e.target.value;$('twistOutput').textContent=v+'%';helix?.setTwist(v/100);if(v<=5)twistVisitedFlat=true;if(v>=95&&twistVisitedFlat)twistVisitedFull=true;if(twistVisitedFull)feedback('helixFeedback','已观察从平面到双螺旋的连续变化。再旋转模型，确认内外位置。');});
+all('[data-highlight]').forEach(b=>b.onclick=()=>{all('[data-highlight]').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',String(x===b));});helix?.setHighlight(b.dataset.highlight);});
+$('finishHelix').onclick=()=>{if(!twistVisitedFull){feedback('helixFeedback','请先把扭转程度拉到 0，再拉到 100，观察从梯状模型到螺旋的变化。','error');return;}if(!$('observedOutside').checked||!$('observedInside').checked){feedback('helixFeedback','请与搭档观察并确认两项结构特征，再完成任务。','error');return;}const first=!state.observed;state.observed=true;save();feedback('helixFeedback',`观察完成：两条骨架在外，互补碱基在内。变形只用于教学，不表示细胞内的合成过程。${first?' +20 XP':''}`,'success');toast('观察记录已保存。前往第 04 关，找到遗传信息的关键。');};
+const questions=[
+ {q:'一个核苷酸由哪三种组分构成？',options:['磷酸、五碳糖、含氮碱基','磷酸、六碳糖、氨基酸','甘油、脂肪酸、含氮碱基','核糖、脱氧核糖、磷酸'],correct:0,explain:'核苷酸由一分子磷酸、一分子五碳糖和一分子含氮碱基组成。五碳糖可以是核糖或脱氧核糖。'},
+ {q:'一个既含 DNA 又含 RNA 的细胞，共有几种含氮碱基、几种核苷酸？',options:['4 种碱基，4 种核苷酸','5 种碱基，8 种核苷酸','8 种碱基，8 种核苷酸','5 种碱基，5 种核苷酸'],correct:1,explain:'碱基合计 A、T、G、C、U 五种。DNA、RNA 的糖不同，所以两类各四种核苷酸，合计八种。'},
+ {q:'两段 DNA 的长度和碱基组成相同，却可能携带不同信息。关键原因是什么？',sequence:'ATGC ≠ AGTC',options:['磷酸的颜色不同','脱氧核糖变成了核糖','核苷酸的排列顺序不同','DNA 都变成了单链'],correct:2,explain:'遗传信息与核苷酸（碱基）的排列顺序有关。即使种类和数量相同，不同顺序仍可对应不同的信息。'},
+ {q:'关于核酸的分布，下列哪一项最准确？',options:['所有细胞的 DNA 都在细胞核','RNA 只存在于病毒中','真核细胞的 DNA 主要在细胞核，RNA 主要在细胞质','线粒体、叶绿体中没有 DNA'],correct:2,explain:'真核细胞的 DNA 主要在细胞核，线粒体和叶绿体也含少量 DNA；RNA 主要分布在细胞质。“主要”不等于“仅在”。'},
+ {q:'关于遗传信息的携带者，下列哪一项正确？',options:['所有生物都以 RNA 为遗传物质','只有 DNA 属于核酸','RNA 不能携带遗传信息','细胞生物以 DNA 为遗传物质，某些病毒以 RNA 为遗传物质'],correct:3,explain:'核酸包括 DNA 和 RNA。细胞生物的遗传物质是 DNA，某些病毒的遗传物质是 RNA。不要把“细胞中的 RNA”直接说成细胞生物的遗传物质。'}
+];
+function renderQuiz(){const root=$('quizBench');if(quizIndex>=questions.length){root.innerHTML=`<div class="result-panel"><div class="result-seal" aria-hidden="true">✓</div><span class="eyebrow" style="display:block;margin-top:16px">${state.quiz.every(Boolean)?'MISSION ACCOMPLISHED':'KEEP EXPLORING'}</span><h3>${state.quiz.every(Boolean)?'你已找到信息的线索。':'继续探索，补齐你的发现。'}</h3><p>组成单位是核苷酸，信息与排列顺序有关。<br>让搭档用自己的话，再讲一遍这个发现。</p><div class="result-stats"><div><strong>${score()}</strong><span>累计 XP / 100</span></div><div><strong>${state.quiz.filter(Boolean).length} / 5</strong><span>已掌握的出口题</span></div></div><div class="button-row" style="justify-content:center"><button class="primary" id="reviewQuiz">再挑战一次 ↻</button><button class="secondary" id="printResult">打印学习记录 ↗</button></div></div>`;$('reviewQuiz').onclick=()=>{quizIndex=0;quizSelected=null;quizRevealed=false;renderQuiz();};$('printResult').onclick=()=>{$('printSummary').textContent=`${state.team} · 积分 ${score()} / 100 XP · 出口题 ${state.quiz.filter(Boolean).length} / 5` ;window.print();};return;}const q=questions[quizIndex];root.innerHTML=`<div class="quiz-card"><div class="quiz-meta"><span>知识校验 ${String(quizIndex+1).padStart(2,'0')} / 05</span><span>建议发言：${quizIndex%2?'B 同学':'A 同学'}</span></div><h3>${q.q}</h3>${q.sequence?`<div class="sequence-demo"><span>ATGC →</span><div class="sequence-cards">${exploreSequence.map((b,i)=>`<button class="sequence-card ${swapPick===i?'picked':''}" data-swap="${i}" style="color:${colors[b]}" aria-label="交换序列第${i+1}位 ${b}" aria-pressed="${swapPick===i}">${b}</button>`).join('')}</div><span class="sequence-hint">点选两张卡片交换位置：种类与数量不变，排列顺序可以改变。</span></div>`:''}<div class="quiz-options">${q.options.map((o,i)=>`<button class="quiz-option ${quizSelected===i?'chosen':''} ${quizRevealed?(i===q.correct?'correct':quizSelected===i?'incorrect':''):''}" data-answer="${i}" aria-pressed="${quizSelected===i}"><span class="option-letter">${'ABCD'[i]}</span><span>${o}</span></button>`).join('')}</div><div id="quizFeedback" class="feedback" role="status" aria-live="polite">${quizRevealed?q.explain:'请先选择，再让搭档解释你的依据。'}</div><div class="bench-actions"><button class="primary" id="submitQuiz">${quizRevealed?'下一题 →':'提交答案 ✓'}</button><button class="secondary" id="skipQuiz">${quizIndex===4?'结束本轮':'暂时跳过 →'}</button><span class="round-status">答对获得 4 XP · 纠错不扣分</span></div></div>`;all('[data-swap]').forEach(b=>b.onclick=()=>{const i=+b.dataset.swap;if(swapPick<0)swapPick=i;else{[exploreSequence[swapPick],exploreSequence[i]]=[exploreSequence[i],exploreSequence[swapPick]];swapPick=-1;}renderQuiz();});all('[data-answer]').forEach(b=>b.onclick=()=>{quizSelected=+b.dataset.answer;quizRevealed=false;renderQuiz();});$('submitQuiz').onclick=()=>{if(quizRevealed){quizIndex++;quizSelected=null;quizRevealed=false;renderQuiz();return;}if(quizSelected===null){feedback('quizFeedback','先选一个答案，再和搭档核对。','error');return;}if(quizSelected!==q.correct){feedback('quizFeedback','再想一想：'+q.explain,'error');all('[data-answer]').forEach(b=>b.classList.toggle('incorrect',+b.dataset.answer===quizSelected));return;}state.quiz[quizIndex]=true;save();quizRevealed=true;renderQuiz();feedback('quizFeedback','回答正确。'+q.explain,'success');};$('skipQuiz').onclick=()=>{quizIndex++;quizSelected=null;quizRevealed=false;renderQuiz();};}
+$('resetProgress').onclick=()=>openDialog('resetDialog');$('confirmReset').onclick=()=>{const team=state.team;state=fresh();state.team=team;assembly={phosphate:null,sugar:null,base:null};molecule='DNA';quizIndex=0;quizSelected=null;quizRevealed=false;twistVisitedFlat=false;twistVisitedFull=false;$('twistSlider').value=100;$('twistOutput').textContent='100%';$('observedOutside').checked=false;$('observedInside').checked=false;feedback('assemblyFeedback','先组装 DNA 的基本单位，再切换 RNA。');feedback('helixFeedback','先把滑条拉到 0，再拉到 100，观察结构变化。');clearPairs();renderAssembly();save();goStage(0);$('resetDialog').close();toast('新的训练已开始。');};
+renderAssembly();renderPairs();updateProgress();syncAutoButtons();goStage(0);
+})();
+</script>
+</body>
+</html>
