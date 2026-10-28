@@ -28,7 +28,21 @@
         "bytes": 182665,
         "contentSha256": "e2060804751dbdf58688a8ee6b76cfb04fa23d7ced0250766cf418e7ec09d894"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 2,
+      "chapterTitle": "组成细胞的分子",
+      "sections": [
+        {
+          "number": 4,
+          "title": "蛋白质是生命活动的主要承担者"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第4节"
+    }
   },
   {
     "id": "nucleic",
@@ -59,7 +73,21 @@
         "bytes": 93973,
         "contentSha256": "480007a2f3f50a39ff454c034b07edef7cdf17f734d749706e6aa8083236a743"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 2,
+      "chapterTitle": "组成细胞的分子",
+      "sections": [
+        {
+          "number": 5,
+          "title": "核酸是遗传信息的携带者"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第5节"
+    }
   },
   {
     "id": "membrane",
@@ -90,7 +118,21 @@
         "bytes": 91877,
         "contentSha256": "b334daded1c941098e515c0d7e93e79a12c13d771744e894e1285805628d86cc"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞膜的结构和功能"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第1节"
+    }
   },
   {
     "id": "organelles",
@@ -145,7 +187,21 @@
         "bytes": 70052,
         "contentSha256": "fd32066c5a7ae644820ffdd20b7a7c0da637027b2b4b405794a6fda1df01e5c7"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞器之间的分工合作"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
+    }
   },
   {
     "id": "cell-stem",
@@ -176,7 +232,29 @@
         "bytes": 4471529,
         "contentSha256": "a65c359b96dae2eacbaa0fd6ee588ce25183a5c4d87ecde04dc24e4197961410"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞膜的结构和功能"
+        },
+        {
+          "number": 2,
+          "title": "细胞器之间的分工合作"
+        },
+        {
+          "number": 3,
+          "title": "细胞核的结构和功能"
+        }
+      ],
+      "integrated": true,
+      "label": "第3章 · 第1—3节综合"
+    }
   },
   {
     "id": "textbook-atlas",
@@ -207,7 +285,29 @@
         "bytes": 38576134,
         "contentSha256": "135814c9e576b61abd9073a6ff504a117ef196674bb3359bb87831590e3a09fc"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞膜的结构和功能"
+        },
+        {
+          "number": 2,
+          "title": "细胞器之间的分工合作"
+        },
+        {
+          "number": 3,
+          "title": "细胞核的结构和功能"
+        }
+      ],
+      "integrated": true,
+      "label": "第3章 · 第1—3节综合"
+    }
   },
   {
     "id": "secretion",
@@ -260,7 +360,21 @@
         "bytes": 47359,
         "contentSha256": "f94a36ab1bd61359da153670dcfe300e54f7ef1ba5582a94af9291fe6a5261b5"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞器之间的分工合作"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
+    }
   },
   {
     "id": "active",
@@ -315,7 +429,21 @@
         "bytes": 86460,
         "contentSha256": "7aed332de029fe5f415a6086900cb328dbe84d5598bce51ed60d9dd6947daafa"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 4,
+      "chapterTitle": "细胞的物质输入和输出",
+      "sections": [
+        {
+          "number": 2,
+          "title": "主动运输与胞吞胞吐"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第2节"
+    }
   },
   {
     "id": "enzyme",
@@ -370,7 +498,21 @@
         "bytes": 249248,
         "contentSha256": "5793cad69cceccce1831f4615b348dee4c88669f7f50e0a72cbc4059fef72e22"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 5,
+      "chapterTitle": "细胞的能量供应和利用",
+      "sections": [
+        {
+          "number": 1,
+          "title": "降低化学反应活化能的酶"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第1节"
+    }
   },
   {
     "id": "atp",
@@ -426,7 +568,21 @@
         "bytes": 228297,
         "contentSha256": "b01031743baf54451e85d90469fe8fe31f1fcfc8d74ca9d360565847b6cea2a3"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 5,
+      "chapterTitle": "细胞的能量供应和利用",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞的能量“货币”ATP"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第2节"
+    }
   },
   {
     "id": "respiration",
@@ -481,7 +637,21 @@
         "bytes": 79203,
         "contentSha256": "cb2cc8ed45a8d616ae0d1db5c5353a4b63f8e193351758fd5ee3db3b16267456"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 5,
+      "chapterTitle": "细胞的能量供应和利用",
+      "sections": [
+        {
+          "number": 3,
+          "title": "细胞呼吸的原理和应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第3节"
+    }
   },
   {
     "id": "photosynthesis",
@@ -512,7 +682,21 @@
         "bytes": 75593,
         "contentSha256": "5251b886f98ec27a06bc81db8e6ba0b9044ce4b28763ebd8cec7d889acd4c9e9"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 5,
+      "chapterTitle": "细胞的能量供应和利用",
+      "sections": [
+        {
+          "number": 4,
+          "title": "光合作用与能量转化"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第4节"
+    }
   },
   {
     "id": "division",
@@ -543,7 +727,21 @@
         "bytes": 95979,
         "contentSha256": "5a4b0c1fdfab4cada914ad6853c250b63066ede7f7ba8fa553315424482db43d"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 6,
+      "chapterTitle": "细胞的生命历程",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞的增殖"
+        }
+      ],
+      "integrated": false,
+      "label": "第6章 · 第1节"
+    }
   },
   {
     "id": "differentiation",
@@ -574,7 +772,21 @@
         "bytes": 91911,
         "contentSha256": "41d2b325522d9f8c0e63ef0875025c2c4a6c59035536b73edf2fcfd300971e06"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 6,
+      "chapterTitle": "细胞的生命历程",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞的分化"
+        }
+      ],
+      "integrated": false,
+      "label": "第6章 · 第2节"
+    }
   },
   {
     "id": "aging",
@@ -605,7 +817,21 @@
         "bytes": 80487,
         "contentSha256": "37029b2185746c4b91d61d22a0c45f40883b5f8a5a82f2d65e8bd2360d904572"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 6,
+      "chapterTitle": "细胞的生命历程",
+      "sections": [
+        {
+          "number": 3,
+          "title": "细胞的衰老和死亡"
+        }
+      ],
+      "integrated": false,
+      "label": "第6章 · 第3节"
+    }
   },
   {
     "id": "mendel",
@@ -636,7 +862,25 @@
         "bytes": 95718,
         "contentSha256": "db1e6d6c904293bafbcc5d4bd3e5042cafc535a85f243c3095c9586783cf0597"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 1,
+      "chapterTitle": "遗传因子的发现",
+      "sections": [
+        {
+          "number": 1,
+          "title": "孟德尔的豌豆杂交实验（一）"
+        },
+        {
+          "number": 2,
+          "title": "孟德尔的豌豆杂交实验（二）"
+        }
+      ],
+      "integrated": true,
+      "label": "第1章 · 第1—2节综合"
+    }
   },
   {
     "id": "chromosome",
@@ -667,7 +911,21 @@
         "bytes": 96735,
         "contentSha256": "addf3552ce2895a62d1ab1d639df9fa08a9e6fa0ac4acc40df592a9c8ca4184e"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 2,
+      "chapterTitle": "基因和染色体的关系",
+      "sections": [
+        {
+          "number": 2,
+          "title": "基因在染色体上"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第2节"
+    }
   },
   {
     "id": "dna-evidence",
@@ -720,7 +978,21 @@
         "bytes": 95366,
         "contentSha256": "20b7265f65f74c6582707346a850958bad09cedb0ee695b1e585a7c365436aa8"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 3,
+      "chapterTitle": "基因的本质",
+      "sections": [
+        {
+          "number": 1,
+          "title": "DNA是主要的遗传物质"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第1节"
+    }
   },
   {
     "id": "replication",
@@ -751,7 +1023,21 @@
         "bytes": 87565,
         "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 3,
+      "chapterTitle": "基因的本质",
+      "sections": [
+        {
+          "number": 3,
+          "title": "DNA的复制"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第3节"
+    }
   },
   {
     "id": "population",
@@ -782,7 +1068,29 @@
         "bytes": 92583,
         "contentSha256": "231395781bf882234bf2151e20f4f9c34089e4dae8d63981fc9fb1d5d8068a89"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 1,
+      "chapterTitle": "种群及其动态",
+      "sections": [
+        {
+          "number": 1,
+          "title": "种群的数量特征"
+        },
+        {
+          "number": 2,
+          "title": "种群数量的变化"
+        },
+        {
+          "number": 3,
+          "title": "影响种群数量变化的因素"
+        }
+      ],
+      "integrated": true,
+      "label": "第1章 · 第1—3节综合"
+    }
   },
   {
     "id": "nucleus",
@@ -814,7 +1122,21 @@
         "bytes": 53849,
         "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 3,
+          "title": "细胞核的结构和功能"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第3节"
+    }
   },
   {
     "id": "passive",
@@ -846,6 +1168,20 @@
         "bytes": 53533,
         "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3"
       }
-    ]
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 4,
+      "chapterTitle": "细胞的物质输入和输出",
+      "sections": [
+        {
+          "number": 1,
+          "title": "被动运输"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第1节"
+    }
   }
 ]

@@ -37,3 +37,11 @@ GitHub Pages 从 main 根目录发布。只提交要公开的文件。维护时�
 ATP 表述校订参考：
 - https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate
 - https://journals.asm.org/doi/10.1128/jmbe.00279-25
+
+## v4.1 · 教材章节与版本 UV/PV
+
+按人教版教材的模块—章—节组织已上线课件，定位菜单支持大章和小节。跨小节或全章课件显式列出覆盖范围。目录数据见 curriculum.json；主题映射见 catalog.json 的 curriculum 字段。仅列出已有资源，不表示完整教材已全部制作。
+
+课程卡片、独立版本页和历史版本栏同时显示打开人数（UV 估算）和打开次数（PV）。UV 不是精确自然人数或在线人数，不能简单跨版本相加；目录 GET 查询不增加次数。POST 载入事件同时同步 UV、PV，保留原有统计键及累计数据。
+
+目录核对参考：已有配套教材图片及国家智慧教育平台人教版课程章节目录 https://v1.ykt.cbern.com.cn/65/document/1e3b7fe7535a4cb4a8ab1f903f802247/pdf.pdf ，教育部精品课目录 https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A06/202203/W020220318610109798820.pdf 。
