@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.2 细胞器之间的分工合作 · 互动课件</title>
+<style>
+:root{
+  --bg:#0b1437; --bg2:#131f4d; --panel:rgba(255,255,255,.06);
+  --panel-border:rgba(255,255,255,.14);
+  --text:#eef2ff; --muted:#9fb0d8;
+  --accent:#5eead4; --accent2:#818cf8; --gold:#fbbf24; --pink:#f472b6;
+  --mito:#fb7185; --chlo:#4ade80; --er:#60a5fa; --golgi:#fbbf24;
+  --ribo:#c084fc; --lyso:#f97316; --vacu:#38bdf8; --cent:#e879f9; --nucl:#a78bfa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;
+  background:radial-gradient(1200px 800px at 80% -10%, #1e2a63 0%, var(--bg) 55%) fixed;
+  color:var(--text); min-height:100vh; overflow-x:hidden;
+}
+/* ===== 顶部导航 ===== */
+header{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(11,20,55,.82);border-bottom:1px solid var(--panel-border);
+  padding:10px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.logo{font-size:22px;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.nav{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.nav button{
+  background:transparent;border:1px solid transparent;color:var(--muted);
+  padding:7px 13px;border-radius:999px;cursor:pointer;font-size:14px;transition:.25s;
+  font-family:inherit;
+}
+.nav button:hover{color:var(--text);background:var(--panel)}
+.nav button.active{background:linear-gradient(90deg,rgba(94,234,212,.18),rgba(129,140,248,.18));
+  color:var(--accent);border-color:rgba(94,234,212,.4)}
+.nav button.done::after{content:" ✓";color:var(--accent)}
+#progressWrap{width:100%;height:5px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}
+#progressBar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--pink));
+  border-radius:99px;transition:width .6s ease;box-shadow:0 0 12px rgba(94,234,212,.6)}
+/* ===== 页面区块 ===== */
+section{display:none;max-width:1180px;margin:0 auto;padding:34px 22px 80px;animation:fadeUp .55s ease}
+section.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(28px,4.4vw,46px);line-height:1.25;font-weight:800}
+h2{font-size:clamp(22px,3vw,32px);margin-bottom:8px}
+h2 .tag{font-size:13px;vertical-align:middle;background:linear-gradient(90deg,var(--accent2),var(--pink));
+  padding:3px 12px;border-radius:99px;color:#fff;margin-right:10px;letter-spacing:1px}
+.sub{color:var(--muted);margin-bottom:26px;font-size:16px}
+.card{
+  background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;
+  padding:24px;margin:18px 0;box-shadow:0 8px 32px rgba(0,0,0,.25);
+}
+.card.light{background:linear-gradient(135deg,rgba(94,234,212,.08),rgba(129,140,248,.08))}
+.btn{
+  display:inline-block;border:none;cursor:pointer;font-family:inherit;font-size:16px;font-weight:700;
+  padding:13px 30px;border-radius:14px;color:#06112e;
+  background:linear-gradient(90deg,var(--accent),#34d399);transition:.25s;
+  box-shadow:0 6px 20px rgba(94,234,212,.35);
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(94,234,212,.5)}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(94,234,212,.5);box-shadow:none}
+.btn.purple{background:linear-gradient(90deg,var(--accent2),var(--pink));color:#fff;box-shadow:0 6px 20px rgba(129,140,248,.4)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.center{text-align:center}
+.flow-nav{display:flex;justify-content:space-between;margin-top:36px;gap:12px}
+/* ===== 封面 ===== */
+#cover{min-height:88vh;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#cover.show{display:flex}
+#cover .badge{font-size:14px;letter-spacing:3px;color:var(--accent);border:1px solid rgba(94,234,212,.4);
+  padding:6px 20px;border-radius:99px;margin-bottom:22px;background:rgba(94,234,212,.08)}
+#cover p.lead{color:var(--muted);font-size:18px;max-width:640px;margin:18px auto 34px;line-height:1.8}
+.cell-hero{width:min(560px,90vw);margin:6px auto 10px;filter:drop-shadow(0 20px 50px rgba(94,234,212,.18))}
+/* ===== 细胞器卡片网格 ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
+.org-card{
+  position:relative;border-radius:20px;padding:20px;cursor:pointer;overflow:hidden;
+  background:var(--panel);border:1px solid var(--panel-border);transition:.3s;
+}
+.org-card:hover{transform:translateY(-6px) scale(1.02);border-color:var(--oc,#5eead4);
+  box-shadow:0 16px 40px rgba(0,0,0,.4),0 0 0 1px var(--oc,#5eead4)}
+.org-card .svgbox{height:158px;display:flex;align-items:center;justify-content:center}
+.org-card svg{max-height:154px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3));border-radius:12px}
+.org-card h3{font-size:19px;margin:10px 0 2px}
+.org-card .alias{font-size:13px;color:var(--oc,#5eead4);font-weight:700;margin-bottom:8px}
+.org-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+.org-card .hint{position:absolute;top:12px;right:14px;font-size:11px;color:var(--muted);
+  border:1px dashed rgba(255,255,255,.25);padding:2px 9px;border-radius:99px}
+/* ===== 详情弹层 ===== */
+#modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  background:rgba(4,8,26,.75);backdrop-filter:blur(8px);padding:20px}
+#modal.open{display:flex;animation:fadeUp .3s ease}
+#modal .box{max-width:760px;width:100%;background:linear-gradient(160deg,#182456,#0d173f);
+  border:1px solid var(--panel-border);border-radius:24px;padding:32px;max-height:88vh;overflow:auto;
+  box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#modal .close{float:right;background:var(--panel);border:1px solid var(--panel-border);color:var(--text);
+  width:38px;height:38px;border-radius:12px;font-size:18px;cursor:pointer}
+#modal .close:hover{background:rgba(244,114,182,.2)}
+#modalBody .bigsvg{display:flex;justify-content:center;padding:10px 0 6px}
+#modalBody .bigsvg svg{max-width:560px;width:100%;border-radius:16px;box-shadow:0 10px 34px rgba(0,0,0,.4)}
+.kv{display:grid;grid-template-columns:86px 1fr;gap:8px 14px;margin-top:14px;font-size:15px;line-height:1.75}
+.kv b{color:var(--accent)}
+/* ===== 离心机动画 ===== */
+.lab{display:flex;gap:30px;flex-wrap:wrap;align-items:center;justify-content:center}
+.tube-stage{display:flex;gap:26px;align-items:flex-end}
+.tube{width:70px;height:190px;border:3px solid rgba(255,255,255,.5);border-top-width:2px;
+  border-radius:12px 12px 34px 34px;position:relative;overflow:hidden;background:rgba(255,255,255,.04)}
+.tube .layer{position:absolute;left:0;width:100%;bottom:0;transition:height 1.4s cubic-bezier(.34,1.4,.5,1)}
+.tube .lbl{position:absolute;width:100%;text-align:center;font-size:10px;color:#06112e;font-weight:800;bottom:4px}
+.spin{animation:spinTube 1.1s linear infinite}
+@keyframes spinTube{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+.speed-ctrl{display:flex;flex-direction:column;gap:10px;min-width:230px}
+.speed-btn{padding:12px 18px;border-radius:14px;border:1px solid var(--panel-border);cursor:pointer;
+  background:var(--panel);color:var(--text);font-size:15px;font-family:inherit;text-align:left;transition:.25s}
+.speed-btn:hover:not(:disabled){border-color:var(--accent)}
+.speed-btn.done{border-color:var(--accent);background:rgba(94,234,212,.12)}
+.speed-btn.done::after{content:" ✓";color:var(--accent)}
+/* ===== 分泌蛋白动画舞台 ===== */
+.stage{position:relative;background:linear-gradient(180deg,#0f1a48,#0a1334);border:1px solid var(--panel-border);
+  border-radius:24px;padding:8px;overflow:hidden}
+.stage svg{width:100%;height:auto;display:block}
+#cargo{filter:drop-shadow(0 0 8px #fde047) drop-shadow(0 0 18px rgba(253,224,71,.7))}
+.narrate{display:flex;align-items:flex-start;gap:14px;background:rgba(129,140,248,.12);
+  border:1px solid rgba(129,140,248,.35);border-radius:16px;padding:16px 20px;margin-top:16px;min-height:76px}
+.narrate .step-no{flex:none;width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-weight:800;background:linear-gradient(135deg,var(--accent2),var(--pink));color:#fff}
+.narrate p{font-size:16px;line-height:1.75}
+.ctrl-row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+/* ===== 图表 ===== */
+.chart-card canvas{width:100%}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.two-col{grid-template-columns:1fr}}
+/* ===== 记忆口诀 ===== */
+.verse{font-size:clamp(18px,2.6vw,26px);text-align:center;line-height:2.1;font-weight:700;
+  background:linear-gradient(90deg,var(--gold),var(--pink),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;padding:8px 0}
+/* ===== 测验 ===== */
+.quiz-q{background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;padding:24px;margin:18px 0}
+.quiz-q .src{font-size:12.5px;color:var(--gold);margin-bottom:10px;letter-spacing:.5px}
+.quiz-q h4{font-size:16.5px;line-height:1.8;margin-bottom:16px;font-weight:600}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-radius:12px;cursor:pointer;
+  border:1px solid transparent;margin-bottom:8px;background:rgba(255,255,255,.04);transition:.2s;font-size:15px;line-height:1.7}
+.opt:hover{background:rgba(129,140,248,.14)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.opt.correct{background:rgba(74,222,128,.18);border-color:#4ade80}
+.opt.wrong{background:rgba(251,113,133,.15);border-color:var(--mito)}
+.explain{display:none;margin-top:12px;padding:14px 18px;border-left:4px solid var(--accent);
+  background:rgba(94,234,212,.08);border-radius:0 12px 12px 0;font-size:14.5px;line-height:1.8;color:var(--text)}
+.explain.show{display:block;animation:fadeUp .4s ease}
+.score-board{text-align:center;padding:34px}
+.score-num{font-size:56px;font-weight:800;background:linear-gradient(90deg,var(--gold),var(--pink));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+/* ===== 思维导图小结 ===== */
+.mindmap{display:flex;flex-direction:column;align-items:center;gap:0}
+.mm-node{border-radius:16px;padding:12px 26px;font-weight:700;text-align:center;font-size:15px;
+  border:1px solid var(--panel-border);background:var(--panel)}
+.mm-root{background:linear-gradient(90deg,var(--accent2),var(--pink));color:#fff;font-size:18px;border:none}
+.mm-row{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.mm-col{display:flex;flex-direction:column;gap:10px;align-items:center}
+.mm-line{width:2px;height:16px;background:rgba(255,255,255,.3)}
+.mm-leaf{font-size:13.5px;font-weight:500;color:var(--muted);padding:8px 16px}
+/* 浮动装饰 */
+.float-anim{animation:floaty 4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.pulse{animation:pulseGlow 2.4s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{filter:drop-shadow(0 0 4px rgba(94,234,212,.4))}50%{filter:drop-shadow(0 0 16px rgba(94,234,212,.9))}}
+.footer-tip{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+@keyframes dashMove{to{stroke-dashoffset:-40}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🔬 细胞工厂探秘</div>
+  <nav class="nav">
+    <button data-s="cover" class="active">🏠 导入</button>
+    <button data-s="s1">① 分工·细胞器图鉴</button>
+    <button data-s="s2">② 实验·差速离心</button>
+    <button data-s="s3">③ 合作·分泌蛋白之旅</button>
+    <button data-s="s4">④ 生物膜系统</button>
+    <button data-s="s5">⑤ 高考闯关</button>
+    <button data-s="s6">⑥ 课堂小结</button>
+  </nav>
+  <div id="progressWrap"><div id="progressBar"></div></div>
+</header>
+
+<!-- ================= 封面 / 导入 ================= -->
+<section id="cover" class="show">
+  <div class="badge">人教版 · 高中生物必修1《分子与细胞》 · 第3章 第2节</div>
+  <h1>细胞器之间的<span style="background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent">分工合作</span></h1>
+  <p class="lead">一个细胞，就是一座24小时不停工的「微型工厂」。<br>发电站、生产车间、质检打包中心、物流快递……一应俱全。<br>今天，让我们化身<b style="color:var(--accent)">细胞质检员</b>，进厂考察！</p>
+
+  <div class="cell-hero">
+    <!-- 3D风格细胞主图 -->
+    <svg viewBox="0 0 560 330" id="heroCell">
+      <defs>
+        <radialGradient id="cytoG" cx="42%" cy="38%" r="75%">
+          <stop offset="0%" stop-color="#2b3f8f"/><stop offset="70%" stop-color="#1a2a66"/><stop offset="100%" stop-color="#101c4a"/>
+        </radialGradient>
+        <radialGradient id="nuclG" cx="40%" cy="35%" r="70%">
+          <stop offset="0%" stop-color="#d8ccff"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6d4fc2"/>
+        </radialGradient>
+        <linearGradient id="mitoG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fda4af"/><stop offset="100%" stop-color="#e11d48"/>
+        </linearGradient>
+        <linearGradient id="erG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/>
+        </linearGradient>
+        <linearGradient id="golgiG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#d97706"/>
+        </linearGradient>
+      </defs>
+      <!-- 细胞膜 -->
+      <ellipse cx="280" cy="168" rx="255" ry="148" fill="url(#cytoG)" stroke="rgba(94,234,212,.7)" stroke-width="4"/>
+      <ellipse cx="280" cy="168" rx="246" ry="139" fill="none" stroke="rgba(94,234,212,.28)" stroke-width="3"/>
+      <!-- 内质网（环绕细胞核） -->
+      <g class="float-anim">
+        <path d="M205 120 q-40 -18 -78 2 q-30 15 -60 2" stroke="url(#erG)" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M208 145 q-42 12 -82 -2 q-32 -11 -58 6" stroke="url(#erG)" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <circle cx="150" cy="116" r="4" fill="#c084fc"/><circle cx="120" cy="132" r="4" fill="#c084fc"/>
+        <circle cx="95" cy="120" r="4" fill="#c084fc"/><circle cx="135" cy="150" r="4" fill="#c084fc"/>
+      </g>
+      <!-- 细胞核 -->
+      <g class="pulse">
+        <circle cx="265" cy="150" r="62" fill="url(#nuclG)" stroke="#efe9ff" stroke-width="2.5"/>
+        <circle cx="250" cy="138" r="17" fill="#5b3aa8"/>
+        <circle cx="285" cy="160" r="6" fill="#5b3aa8" opacity=".7"/>
+        <circle cx="238" cy="168" r="5" fill="#5b3aa8" opacity=".6"/>
+        <g fill="#efe9ff"><circle cx="212" cy="126" r="3"/><circle cx="318" cy="138" r="3"/><circle cx="230" cy="196" r="3"/><circle cx="304" cy="190" r="3"/></g>
+      </g>
+      <!-- 线粒体 ×2 -->
+      <g class="float-anim" style="animation-delay:.6s">
+        <g transform="translate(385,225) rotate(18)">
+          <ellipse rx="52" ry="26" fill="url(#mitoG)" stroke="#ffe4e6" stroke-width="2"/>
+          <ellipse rx="44" ry="19" fill="none" stroke="#ffd6d0" stroke-width="1.6"/>
+          <path d="M-36 1 q9 -12 18 0 q9 12 18 0 q9 -12 17 0" stroke="#ffe4e6" stroke-width="3.2" fill="none"/>
+        </g>
+        <g transform="translate(150,235) rotate(-14)">
+          <ellipse rx="46" ry="22" fill="url(#mitoG)" stroke="#ffe4e6" stroke-width="2"/>
+          <ellipse rx="38" ry="16" fill="none" stroke="#ffd6d0" stroke-width="1.4"/>
+          <path d="M-31 1 q8 -11 16 0 q8 11 16 0 q8 -11 15 0" stroke="#ffe4e6" stroke-width="2.8" fill="none"/>
+        </g>
+      </g>
+      <!-- 高尔基体 -->
+      <g class="float-anim" style="animation-delay:1.1s" transform="translate(420,105)">
+        <path d="M-58 -16 q58 -20 116 0" stroke="url(#golgiG)" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M-52 0 q52 -16 104 0" stroke="url(#golgiG)" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M-44 16 q44 -13 88 0" stroke="url(#golgiG)" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <circle cx="-62" cy="-22" r="7" fill="#fde68a"/><circle cx="66" cy="-8" r="7" fill="#fde68a"/><circle cx="50" cy="24" r="6" fill="#fde68a"/>
+      </g>
+      <!-- 溶酶体 + 核糖体散布 -->
+      <circle cx="340" cy="90" r="15" fill="url(#mitoG)" opacity=".9" stroke="#ffd8a8" stroke-width="2"/>
+      <g fill="#c084fc"><circle cx="90" cy="200" r="4"/><circle cx="470" cy="180" r="4"/><circle cx="210" cy="250" r="4"/><circle cx="330" cy="262" r="4"/><circle cx="70" cy="150" r="4"/></g>
+      <!-- 标注线 -->
+      <g font-size="13" fill="#dfe6ff" font-weight="700">
+        <text x="243" y="58">细胞核</text><line x1="262" y1="63" x2="265" y2="92" stroke="#dfe6ff" stroke-width="1.2"/>
+        <text x="30" y="100">内质网</text><line x1="62" y1="105" x2="90" y2="120" stroke="#dfe6ff" stroke-width="1.2"/>
+        <text x="448" y="62">高尔基体</text><line x1="470" y1="68" x2="445" y2="88" stroke="#dfe6ff" stroke-width="1.2"/>
+        <text x="368" y="290">线粒体</text><line x1="398" y1="284" x2="398" y2="256" stroke="#dfe6ff" stroke-width="1.2"/>
+      </g>
+    </svg>
+  </div>
+
+  <button class="btn" onclick="go('s1')">🚀 开始探秘之旅</button>
+  <p class="footer-tip">建议全屏（F11）投影使用 · 全程点击互动，无需任何技术基础</p>
+</section>
+
+<!-- ================= 环节一：细胞器图鉴 ================= -->
+<section id="s1">
+  <h2><span class="tag">环节一</span>「工厂部门」大盘点 —— 细胞器的分工</h2>
+  <p class="sub">细胞质 ≠ 一锅粥！细胞质 = <b style="color:var(--accent)">细胞质基质</b>（胶质"车间地面"）+ <b style="color:var(--accent)">细胞器</b>（各部门）。点击卡片，查看每个部门的「3D 证件照」和岗位说明 👇</p>
+
+  <div class="grid" id="orgGrid"></div>
+
+  <div class="card light">
+    <b style="color:var(--gold)">💡 名师点拨：</b>
+    <span style="line-height:1.9">分离各种细胞器的方法是 <b style="color:var(--accent)">差速离心法</b>（下一个环节亲自上手操作！）。
+    注意三种"身份特殊"的细胞器：<b>核糖体、中心体</b>没有膜结构（不穿"膜制服"）；
+    <b>液泡、叶绿体</b>是植物细胞的"专属部门"（动物细胞没有）；<b>中心体</b>见于动物和某些低等植物细胞。</span>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('cover')">← 返回首页</button>
+    <button class="btn" onclick="go('s2')">下一环节：动手做差速离心 →</button>
+  </div>
+</section>
+
+<!-- ================= 环节二：差速离心实验 ================= -->
+<section id="s2">
+  <h2><span class="tag">环节二</span>实验操作 —— 差速离心法分离细胞器</h2>
+  <p class="sub">原理像"甩干机"：<b style="color:var(--accent)">从低速到高速逐步离心</b>，越大的结构越先沉底。请按顺序点击操作（乱点无效哦，实验讲究程序！）</p>
+
+  <div class="card">
+    <div class="lab">
+      <div class="tube-stage">
+        <div style="text-align:center">
+          <div class="tube" id="tube1">
+            <div class="layer" id="l1a" style="height:0%;background:linear-gradient(180deg,#fde68a,#f59e0b)"></div>
+            <div class="layer" id="l1b" style="height:0%;background:linear-gradient(180deg,#93c5fd,#3b82f6)"></div>
+            <div class="layer" id="l1c" style="height:0%;background:linear-gradient(180deg,#c4b5fd,#7c3aed)"></div>
+            <div class="lbl" id="lbl1"></div>
+          </div>
+          <p style="margin-top:10px;font-size:13px;color:var(--muted)">离心管</p>
+        </div>
+        <div style="font-size:30px;color:var(--muted)">➜</div>
+        <div style="text-align:center">
+          <svg width="150" height="200" viewBox="0 0 150 200">
+            <rect x="25" y="30" width="100" height="140" rx="16" fill="#1c2a5e" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+            <g id="rotor" style="transform-origin:75px 100px">
+              <ellipse cx="75" cy="100" rx="34" ry="34" fill="#31418c"/>
+              <rect x="68" y="55" width="14" height="90" rx="7" fill="#5eead4" opacity=".8"/>
+              <rect x="30" y="93" width="90" height="14" rx="7" fill="#818cf8" opacity=".8"/>
+            </g>
+            <circle cx="75" cy="100" r="8" fill="#eef2ff"/>
+            <text x="75" y="192" text-anchor="middle" fill="#9fb0d8" font-size="12">离心机转子</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="speed-ctrl">
+        <button class="speed-btn" id="sp1" onclick="spinStep(1)">① 低速离心（~1000 g）<br><small style="color:var(--muted)">先让最大的沉下去</small></button>
+        <button class="speed-btn" id="sp2" onclick="spinStep(2)" disabled>② 中速离心<br><small style="color:var(--muted)">取上清液，继续提高转速</small></button>
+        <button class="speed-btn" id="sp3" onclick="spinStep(3)" disabled>③ 高速离心<br><small style="color:var(--muted)">进一步提高转速</small></button>
+        <button class="speed-btn" id="sp4" onclick="spinStep(4)" disabled>④ 超高速离心（~100000 g）<br><small style="color:var(--muted)">最小的也跑不掉了</small></button>
+      </div>
+    </div>
+    <div class="narrate" style="margin-top:22px">
+      <div class="step-no">🧪</div>
+      <p id="spinText">先把细胞<b>破碎</b>（细胞匀浆）放入离心管。点击 ① 开始第一步离心！</p>
+    </div>
+  </div>
+
+  <div class="card light" id="spinSummary" style="display:none">
+    <b style="color:var(--gold)">📋 实验结论：</b>
+    <span style="line-height:1.9">差速离心法按"由大到小"的顺序依次分离出：
+    <b>细胞核 → 叶绿体/线粒体 → 内质网、高尔基体等 → 核糖体</b>。
+    沉淀越来越"轻"，需要的转速越来越"猛"。</span>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s1')">← 上一环节</button>
+    <button class="btn" onclick="go('s3')">下一环节：分泌蛋白之旅 →</button>
+  </div>
+</section>
+
+<!-- ================= 环节三：分泌蛋白之旅 ================= -->
+<section id="s3">
+  <h2><span class="tag">环节三</span>核心剧情 —— 分泌蛋白的合成与运输</h2>
+  <p class="sub">科学家用 <b style="color:var(--accent)">³H（氚）标记的亮氨酸</b> 投喂豚鼠胰腺腺泡细胞，像给快递贴上「放射性追踪标签」。点击播放，跟着这枚发光的"包裹"走完全程！</p>
+
+  <div class="stage">
+    <svg viewBox="0 0 1000 460" id="journeySvg">
+      <defs>
+        <radialGradient id="jCyto" cx="45%" cy="40%" r="80%">
+          <stop offset="0%" stop-color="#24377e"/><stop offset="100%" stop-color="#101c4a"/>
+        </radialGradient>
+        <radialGradient id="jNucl" cx="40%" cy="35%" r="70%">
+          <stop offset="0%" stop-color="#d8ccff"/><stop offset="100%" stop-color="#7c5cd6"/>
+        </radialGradient>
+        <linearGradient id="jMito" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fda4af"/><stop offset="100%" stop-color="#e11d48"/>
+        </linearGradient>
+        <path id="route" d="M 415 175 C 455 140 500 128 545 132 C 590 136 620 120 660 110 C 705 98 750 105 790 130 C 830 155 860 190 890 230" fill="none"/>
+      </defs>
+      <!-- 细胞轮廓 -->
+      <rect x="14" y="14" width="972" height="432" rx="90" fill="url(#jCyto)" stroke="rgba(94,234,212,.65)" stroke-width="5"/>
+      <rect x="26" y="26" width="948" height="408" rx="80" fill="none" stroke="rgba(94,234,212,.22)" stroke-width="3"/>
+      <text x="500" y="52" text-anchor="middle" font-size="15" fill="#9fb0d8" font-weight="700">豚鼠胰腺腺泡细胞（正在分泌消化酶）</text>
+
+      <!-- 细胞核 -->
+      <g id="stNucl">
+        <circle cx="150" cy="230" r="88" fill="url(#jNucl)" stroke="#efe9ff" stroke-width="3"/>
+        <circle cx="150" cy="230" r="79" fill="none" stroke="rgba(239,233,255,.55)" stroke-width="1.8"/>
+        <circle cx="132" cy="215" r="22" fill="#5b3aa8"/>
+        <circle cx="172" cy="252" r="8" fill="#5b3aa8" opacity=".7"/>
+        <g fill="#efe9ff"><circle cx="88" cy="188" r="4"/><circle cx="212" cy="196" r="4"/><circle cx="108" cy="282" r="4"/><circle cx="200" cy="288" r="4"/></g>
+        <text x="150" y="345" text-anchor="middle" font-size="16" fill="#dfe6ff" font-weight="800">细胞核</text>
+        <text x="150" y="367" text-anchor="middle" font-size="12.5" fill="#9fb0d8">DNA 发号施令（转录 mRNA）</text>
+      </g>
+
+      <!-- 粗面内质网 -->
+      <g id="stER">
+        <path d="M262 165 q48 -30 100 -12 q45 15 88 -2" stroke="#1d4e89" stroke-width="20" fill="none" stroke-linecap="round"/>
+        <path d="M262 165 q48 -30 100 -12 q45 15 88 -2" stroke="#8fbef0" stroke-width="13" fill="none" stroke-linecap="round"/>
+        <path d="M258 210 q52 -22 104 -6 q48 15 92 -4" stroke="#1d4e89" stroke-width="20" fill="none" stroke-linecap="round"/>
+        <path d="M258 210 q52 -22 104 -6 q48 15 92 -4" stroke="#8fbef0" stroke-width="13" fill="none" stroke-linecap="round"/>
+        <path d="M262 255 q48 -20 100 -4 q45 14 88 -4" stroke="#1d4e89" stroke-width="20" fill="none" stroke-linecap="round"/>
+        <path d="M262 255 q48 -20 100 -4 q45 14 88 -4" stroke="#8fbef0" stroke-width="13" fill="none" stroke-linecap="round"/>
+        <g fill="#c084fc">
+          <circle cx="285" cy="152" r="6"/><circle cx="330" cy="146" r="6"/><circle cx="392" cy="150" r="6"/>
+          <circle cx="285" cy="198" r="6"/><circle cx="345" cy="197" r="6"/><circle cx="405" cy="198" r="6"/>
+          <circle cx="290" cy="243" r="6"/><circle cx="350" cy="244" r="6"/><circle cx="410" cy="241" r="6"/>
+        </g>
+        <text x="345" y="310" text-anchor="middle" font-size="16" fill="#93c5fd" font-weight="800">粗面内质网</text>
+        <text x="345" y="331" text-anchor="middle" font-size="12.5" fill="#9fb0d8">肽链加工车间（折叠、加糖链）</text>
+      </g>
+
+      <!-- 核糖体特写 -->
+      <g id="stRibo" transform="translate(415,175)">
+        <line x1="-48" y1="22" x2="48" y2="22" stroke="#fbbf24" stroke-width="3" stroke-dasharray="7 5"/>
+        <circle r="17" fill="#c084fc" stroke="#f3e8ff" stroke-width="2.5"/>
+        <circle cx="9" cy="9" r="12" fill="#a855f7" stroke="#f3e8ff" stroke-width="2"/>
+        <path d="M-4,-15 q7,-10 13,-4 q6,6 14,-2" stroke="#fb923c" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="0" y="48" text-anchor="middle" font-size="14" fill="#e9d5ff" font-weight="800">核糖体</text>
+        <text x="0" y="66" text-anchor="middle" font-size="11.5" fill="#9fb0d8">蛋白质合成机器</text>
+      </g>
+
+      <!-- 高尔基体 -->
+      <g id="stGolgi" transform="translate(660,110)">
+        <path d="M-85 -26 q85 -30 170 0" stroke="#9c640c" stroke-width="15" fill="none" stroke-linecap="round"/>
+        <path d="M-85 -26 q85 -30 170 0" stroke="#f9e797" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M-76 -2 q76 -24 152 0" stroke="#9c640c" stroke-width="15" fill="none" stroke-linecap="round"/>
+        <path d="M-76 -2 q76 -24 152 0" stroke="#f7dc6f" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <path d="M-64 22 q64 -20 128 0" stroke="#9c640c" stroke-width="15" fill="none" stroke-linecap="round"/>
+        <path d="M-64 22 q64 -20 128 0" stroke="#f5b041" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <g stroke="#9c640c" stroke-width="2"><circle cx="-88" cy="-28" r="7" fill="#f9e797"/><circle cx="88" cy="-28" r="7" fill="#f9e797"/><circle cx="-79" cy="-4" r="7" fill="#f7dc6f"/><circle cx="79" cy="-4" r="7" fill="#f7dc6f"/><circle cx="-67" cy="20" r="6.5" fill="#f5b041"/><circle cx="67" cy="20" r="6.5" fill="#f5b041"/></g>
+        <circle cx="-98" cy="-40" r="9" fill="#fdeaa7" stroke="#9c640c" stroke-width="2"/><circle cx="100" cy="-16" r="9" fill="#fdeaa7" stroke="#9c640c" stroke-width="2"/><circle cx="78" cy="36" r="8" fill="#fdeaa7" stroke="#9c640c" stroke-width="2"/>
+        <text x="0" y="66" text-anchor="middle" font-size="16" fill="#fde68a" font-weight="800">高尔基体</text>
+        <text x="0" y="86" text-anchor="middle" font-size="12.5" fill="#9fb0d8">质检 · 分拣 · 打包中心</text>
+      </g>
+
+      <!-- 线粒体 -->
+      <g id="stMito" transform="translate(520,330) rotate(-8)">
+        <ellipse rx="72" ry="34" fill="url(#jMito)" stroke="#ffe4e6" stroke-width="3"/>
+        <ellipse rx="62" ry="26" fill="none" stroke="#ffd6d0" stroke-width="2"/>
+        <path d="M-50 2 q12 -16 25 0 q12 16 25 0 q12 -16 25 0 q12 16 25 0" stroke="#ffe4e6" stroke-width="4" fill="none"/>
+        <text x="0" y="62" text-anchor="middle" font-size="16" fill="#fda4af" font-weight="800" transform="rotate(8)">线粒体 —— 全程供能 ⚡</text>
+      </g>
+      <g transform="translate(800,340) rotate(12)" opacity=".9">
+        <ellipse rx="52" ry="25" fill="url(#jMito)" stroke="#ffe4e6" stroke-width="2.5"/>
+        <ellipse rx="44" ry="18" fill="none" stroke="#ffd6d0" stroke-width="1.6"/>
+        <path d="M-36 1 q9 -12 18 0 q9 12 18 0 q9 -12 18 0" stroke="#ffe4e6" stroke-width="3" fill="none"/>
+      </g>
+
+      <!-- 细胞膜箭头出口 -->
+      <g id="stMemb">
+        <text x="905" y="215" font-size="15" fill="#5eead4" font-weight="800">细胞膜</text>
+        <text x="905" y="235" font-size="12" fill="#9fb0d8">胞吐释放</text>
+        <path d="M893 250 q30 -25 60 -18" stroke="#5eead4" stroke-width="4" fill="none" stroke-dasharray="8 6" style="animation:dashMove 1.2s linear infinite"/>
+        <text x="872" y="292" font-size="13" fill="#5eead4">细胞外 ↗</text>
+      </g>
+
+      <!-- 行进路线（虚线引导） -->
+      <use href="#route" stroke="rgba(253,224,71,.35)" stroke-width="3" stroke-dasharray="10 8" style="animation:dashMove 1.6s linear infinite"/>
+
+      <!-- 发光包裹 -->
+      <g id="cargo" style="opacity:0">
+        <circle r="13" fill="#fde047" stroke="#fff7cc" stroke-width="3"/>
+        <text y="4.5" text-anchor="middle" font-size="11" font-weight="800" fill="#713f12">³H</text>
+      </g>
+      <!-- 囊泡外壳 -->
+      <circle id="vesicle" r="24" fill="rgba(253,224,71,.12)" stroke="#fde047" stroke-width="2.5" stroke-dasharray="6 5" style="opacity:0"/>
+    </svg>
+  </div>
+
+  <div class="narrate">
+    <div class="step-no" id="stepNo">▶</div>
+    <p id="journeyText">准备好了吗？点击「▶ 播放动画」，追踪这枚带放射性的"快递包裹"。它要去哪儿？沿途每个部门会对它做什么？</p>
+  </div>
+  <div class="ctrl-row">
+    <button class="btn" id="playBtn" onclick="playJourney()">▶ 播放动画</button>
+    <button class="btn purple" onclick="stepJourney()" id="stepBtn">⏭ 分步讲解</button>
+    <button class="btn ghost" onclick="resetJourney()">↺ 重置</button>
+  </div>
+
+  <!-- 放射性动态曲线 -->
+  <div class="two-col" style="margin-top:26px">
+    <div class="card chart-card">
+      <b style="color:var(--accent)">📈 追踪结果：放射性依次出现在哪里？</b>
+      <canvas id="radioChart" width="520" height="300"></canvas>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.8;margin-top:8px">结论：放射性出现顺序为 <b style="color:#fde047">核糖体 → 内质网 → 高尔基体</b>，正是分泌蛋白的旅行路线！</p>
+    </div>
+    <div class="card chart-card">
+      <b style="color:var(--accent)">📊 膜面积变化（高考高频考点！）</b>
+      <canvas id="membChart" width="520" height="300"></canvas>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.8;margin-top:8px">内质网膜面积<b style="color:#fb7185">减少</b>，细胞膜面积<b style="color:#4ade80">增大</b>，高尔基体膜面积<b style="color:#fbbf24">基本不变</b>（收支平衡）。</p>
+    </div>
+  </div>
+
+  <div class="card light">
+    <b style="color:var(--gold)">🧠 一句话记住全过程：</b>
+    <div class="verse">核糖体合成 → 内质网粗加工 → 囊泡快递 → 高尔基体精加工 → 囊泡 → 细胞膜胞吐<br>线粒体全程供能，生物膜系统密切配合！</div>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s2')">← 上一环节</button>
+    <button class="btn" onclick="go('s4')">下一环节：生物膜系统 →</button>
+  </div>
+</section>
+
+<!-- ================= 环节四：生物膜系统 ================= -->
+<section id="s4">
+  <h2><span class="tag">环节四</span>升维思考 —— 细胞的生物膜系统</h2>
+  <p class="sub">为什么细胞器之间能如此默契？因为它们很多都穿着同款"膜制服"，组成一个统一系统。</p>
+
+  <div class="card center">
+    <svg viewBox="0 0 860 330" style="max-width:820px;width:100%">
+      <defs>
+        <linearGradient id="msG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#818cf8"/>
+        </linearGradient>
+      </defs>
+      <rect x="330" y="16" width="200" height="52" rx="16" fill="url(#msG)"/>
+      <text x="430" y="49" text-anchor="middle" font-size="19" font-weight="800" fill="#06112e">生物膜系统</text>
+      <g stroke="rgba(255,255,255,.4)" stroke-width="2.5">
+        <line x1="430" y1="68" x2="160" y2="130"/><line x1="430" y1="68" x2="430" y2="130"/><line x1="430" y1="68" x2="700" y2="130"/>
+      </g>
+      <g>
+        <rect x="70" y="130" width="180" height="48" rx="14" fill="rgba(94,234,212,.15)" stroke="#5eead4" stroke-width="2"/>
+        <text x="160" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#5eead4">细胞膜</text>
+        <rect x="340" y="130" width="180" height="48" rx="14" fill="rgba(167,139,250,.15)" stroke="#a78bfa" stroke-width="2"/>
+        <text x="430" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#a78bfa">核膜</text>
+        <rect x="610" y="130" width="180" height="48" rx="14" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="2"/>
+        <text x="700" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#fbbf24">细胞器膜</text>
+      </g>
+      <g stroke="rgba(255,255,255,.3)" stroke-width="2">
+        <line x1="700" y1="178" x2="640" y2="216"/><line x1="700" y1="178" x2="700" y2="216"/><line x1="700" y1="178" x2="760" y2="216"/>
+      </g>
+      <g font-size="14" font-weight="700">
+        <rect x="576" y="216" width="128" height="38" rx="12" fill="var(--panel,#16204e)" stroke="rgba(255,255,255,.2)"/>
+        <text x="640" y="241" text-anchor="middle" fill="#93c5fd">内质网膜</text>
+        <rect x="636" y="262" width="128" height="38" rx="12" fill="#16204e" stroke="rgba(255,255,255,.2)"/>
+        <text x="700" y="287" text-anchor="middle" fill="#fbbf24">高尔基体膜</text>
+        <rect x="716" y="216" width="128" height="38" rx="12" fill="#16204e" stroke="rgba(255,255,255,.2)"/>
+        <text x="780" y="241" text-anchor="middle" fill="#fda4af">线粒体膜等</text>
+      </g>
+      <g font-size="14.5" fill="#dfe6ff" line-height="1.6">
+        <text x="70" y="222">✔ 成分相似：脂质 + 蛋白质</text>
+        <text x="70" y="248">✔ 结构相似：流动镶嵌模型</text>
+        <text x="70" y="274">✔ 直接 / 间接（囊泡）相互联系</text>
+        <text x="70" y="300">✔ 功能上协调配合、统一整体</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="card light">
+    <b style="color:var(--gold)">⚠️ 易错警示（高考爱挖的坑）：</b>
+    <ul style="line-height:2.1;margin-left:20px;font-size:15px">
+      <li>生物膜系统 = 细胞膜 + 核膜 + 细胞器膜，<b style="color:#fb7185">不只是</b>"细胞器膜"！</li>
+      <li><b style="color:#fb7185">核糖体、中心体无膜</b>，不属于生物膜系统。</li>
+      <li>内质网内连核膜、外连细胞膜，是膜"转化枢纽"；高尔基体是囊泡运输的"交通枢纽"。</li>
+      <li>原核细胞只有细胞膜，<b>没有生物膜系统</b>。</li>
+    </ul>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s3')">← 上一环节</button>
+    <button class="btn" onclick="go('s5')">进入高考闯关 →</button>
+  </div>
+</section>
+
+<!-- ================= 环节五：高考闯关 ================= -->
+<section id="s5">
+  <h2><span class="tag">环节五</span>高考闯关 · 湖北真题演练</h2>
+  <p class="sub">以下题目精选自<b style="color:var(--gold)">湖北高考真题及湖北省内名校质检题</b>。点击选项立即判分，答错别慌，看解析！</p>
+  <div id="quizBox"></div>
+  <div class="card score-board" id="scoreBoard" style="display:none">
+    <p style="font-size:18px;color:var(--muted)">你的闯关成绩</p>
+    <div class="score-num" id="scoreNum">0 / 4</div>
+    <p id="scoreMsg" style="font-size:17px;margin-top:10px"></p>
+    <button class="btn ghost" style="margin-top:18px" onclick="resetQuiz()">🔄 再闯一次</button>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s4')">← 上一环节</button>
+    <button class="btn" onclick="go('s6')">课堂小结 →</button>
+  </div>
+</section>
+
+<!-- ================= 环节六：小结 ================= -->
+<section id="s6">
+  <h2><span class="tag">环节六</span>课堂小结 —— 一张图带走</h2>
+  <p class="sub">跟着思维导图，30 秒回顾今天全部内容。</p>
+
+  <div class="card">
+    <div class="mindmap">
+      <div class="mm-node mm-root">细胞器之间的分工合作</div>
+      <div class="mm-row">
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:var(--accent);color:var(--accent)">分工</div>
+          <div class="mm-node mm-leaf">差速离心法分离细胞器</div>
+          <div class="mm-node mm-leaf">8 种细胞器各守其岗<br>（线粒体供能 / 核糖体合成…）</div>
+        </div>
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:var(--pink);color:var(--pink)">合作</div>
+          <div class="mm-node mm-leaf">同位素标记法（³H-亮氨酸）</div>
+          <div class="mm-node mm-leaf">核糖体→内质网→高尔基体→细胞膜<br>线粒体供能 · 囊泡穿梭</div>
+        </div>
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:var(--gold);color:var(--gold)">系统</div>
+          <div class="mm-node mm-leaf">生物膜系统 = 细胞膜+核膜+细胞器膜</div>
+          <div class="mm-node mm-leaf">成分结构相似 · 功能协调统一</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card light center">
+    <div class="verse" style="font-size:clamp(16px,2.2vw,22px)">
+      「一颗小小细胞，一座精密工厂；<br>分工成就效率，合作造就生命。」
+    </div>
+    <p style="color:var(--muted);margin-top:10px;font-size:14.5px">课后任务：用彩泥或废旧材料制作一个你心目中的"细胞工厂"模型，下节课展示评比！</p>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s5')">← 返回闯关</button>
+    <button class="btn" onclick="go('cover')">🏠 回到首页</button>
+  </div>
+</section>
+
+<!-- 细胞器详情弹窗 -->
+<div id="modal"><div class="box">
+  <button class="close" onclick="closeModal()">✕</button>
+  <div id="modalBody"></div>
+</div></div>
+
+<script>
+/* ================= 数据：八大细胞器 ================= */
+const ORGANELLES = [
+ {id:'mito',name:'线粒体',alias:'⚡ 动力车间（发电站）',color:'#fb7185',
+  short:'有氧呼吸的主要场所，细胞的"能量货币"ATM机。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><linearGradient id="m3-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff9d6b"/><stop offset="55%" stop-color="#f0582b"/><stop offset="100%" stop-color="#b02e10"/></linearGradient><radialGradient id="m3-deck" cx="45%" cy="35%" r="80%"><stop offset="0%" stop-color="#ffcf8f"/><stop offset="100%" stop-color="#f59b46"/></radialGradient></defs><path d="M66,158 C58,112 118,86 186,90 C258,94 340,112 354,162 C364,208 296,240 206,236 C122,232 74,206 66,158 Z" fill="url(#m3-body)"/><path d="M92,140 C100,112 148,98 200,104 C260,110 318,128 330,160 C318,186 262,198 202,194 C140,190 100,168 92,140 Z" fill="url(#m3-deck)" stroke="#ffe3bd" stroke-width="7"/><g fill="none" stroke="#ffe3bd" stroke-width="8" stroke-linecap="round"><path d="M120,146 q22,-30 48,-14 q24,14 50,-16"/><path d="M150,176 q24,-24 50,-8 q24,14 52,-14"/><path d="M228,150 q22,-18 44,-4 q20,12 42,-10"/></g><g fill="none" stroke="#e8833a" stroke-width="2" stroke-linecap="round" opacity=".85"><path d="M120,150 q22,-30 48,-14 q24,14 50,-16"/><path d="M150,180 q24,-24 50,-8 q24,14 52,-14"/><path d="M228,154 q22,-18 44,-4 q20,12 42,-10"/></g><path d="M140,130 q18,14 34,2 q16,-12 30,4 q12,14 30,6" fill="none" stroke="#7c3aed" stroke-width="2.5"/><path d="M212,168 q16,12 32,0 q14,-10 28,4" fill="none" stroke="#7c3aed" stroke-width="2.5"/><g fill="#2dd4bf"><circle cx="128" cy="160" r="3.5"/><circle cx="180" cy="120" r="3.5"/><circle cx="240" cy="140" r="3.5"/><circle cx="290" cy="165" r="3.5"/><circle cx="200" cy="185" r="3.5"/><circle cx="310" cy="145" r="3.5"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="174" y1="126" x2="120" y2="46"/><line x1="128" y1="160" x2="66" y2="66"/><line x1="262" y1="146" x2="300" y2="46"/><line x1="222" y1="112" x2="222" y2="46"/><line x1="318" y1="178" x2="388" y2="150"/><line x1="352" y1="205" x2="392" y2="230"/></g><g fill="#374151"><circle cx="174" cy="126" r="2.6"/><circle cx="128" cy="160" r="2.6"/><circle cx="262" cy="146" r="2.6"/><circle cx="222" cy="112" r="2.6"/><circle cx="318" cy="178" r="2.6"/><circle cx="352" cy="205" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="112" y="42" text-anchor="end">DNA</text><text x="58" y="62" text-anchor="end">核糖体</text><text x="308" y="42">基质</text><text x="228" y="42" text-anchor="middle">嵴</text><text x="396" y="152">内膜</text><text x="398" y="238">外膜</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">线粒体 · 3D 剖面结构图</text></svg>`,
+  kv:{结构:'双层膜；内膜向内折叠形成"嵴"，增大膜面积；基质含DNA、核糖体',功能:'有氧呼吸第二、三阶段的场所，为生命活动供能（约95%）',分布:'动植物细胞；代谢旺盛的细胞（心肌、肝细胞）中特别多',类比:'发电站 / 充电宝——工厂停电，全线瘫痪！'}},
+ {id:'chlo',name:'叶绿体',alias:'🌱 养料制造车间 + 能量转换站',color:'#4ade80',
+  short:'光合作用的场所，把阳光"灌装"进有机物。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><linearGradient id="c3-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8fe0a4"/><stop offset="100%" stop-color="#1e7e46"/></linearGradient><radialGradient id="c3-deck" cx="45%" cy="35%" r="80%"><stop offset="0%" stop-color="#eefbef"/><stop offset="100%" stop-color="#a8dcb6"/></radialGradient></defs><ellipse cx="210" cy="162" rx="150" ry="90" fill="url(#c3-body)"/><ellipse cx="210" cy="140" rx="118" ry="58" fill="url(#c3-deck)" stroke="#eafaf0" stroke-width="6"/><g stroke="#2e9e5b" stroke-width="4" fill="none"><path d="M164,132 C178,138 186,142 192,148"/><path d="M240,146 C252,140 260,134 264,128"/></g><g><rect x="116" y="106" width="48" height="28" fill="#2e9e5b"/><ellipse cx="140" cy="134" rx="24" ry="8" fill="#1d7a45"/><path d="M116,115 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><path d="M116,125 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><ellipse cx="140" cy="106" rx="24" ry="8" fill="#57c878" stroke="#14532d" stroke-width="2"/></g><g><rect x="191" y="122" width="48" height="28" fill="#2e9e5b"/><ellipse cx="215" cy="150" rx="24" ry="8" fill="#1d7a45"/><path d="M191,131 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><path d="M191,141 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><ellipse cx="215" cy="122" rx="24" ry="8" fill="#57c878" stroke="#14532d" stroke-width="2"/></g><g><rect x="261" y="102" width="48" height="28" fill="#2e9e5b"/><ellipse cx="285" cy="130" rx="24" ry="8" fill="#1d7a45"/><path d="M261,111 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><path d="M261,121 a24,8 0 0 0 48,0" fill="none" stroke="#14532d" stroke-width="1.5"/><ellipse cx="285" cy="102" rx="24" ry="8" fill="#57c878" stroke="#14532d" stroke-width="2"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="140" y1="102" x2="66" y2="56"/><line x1="158" y1="168" x2="60" y2="238"/><line x1="322" y1="142" x2="388" y2="130"/><line x1="334" y1="214" x2="390" y2="238"/></g><g fill="#374151"><circle cx="140" cy="102" r="2.6"/><circle cx="158" cy="168" r="2.6"/><circle cx="322" cy="142" r="2.6"/><circle cx="334" cy="214" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="58" y="52" text-anchor="end">基粒</text><text x="52" y="246" text-anchor="end">基质</text><text x="396" y="132">内膜</text><text x="396" y="246">外膜</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">叶绿体 · 3D 剖面结构图（基粒由类囊体堆叠而成）</text></svg>`,
+  kv:{结构:'双层膜；内含基粒（类囊体堆叠而成，含光合色素和酶）与基质',功能:'光合作用场所：光能→化学能，CO₂+H₂O→有机物+O₂',分布:'绿色植物叶肉细胞等（根细胞没有！）',类比:'太阳能电池板 + 中央厨房'}},
+ {id:'er',name:'内质网',alias:'🏭 蛋白质加工车间 + 脂质合成车间',color:'#60a5fa',
+  short:'膜面积最大的细胞器，网状管道遍布细胞质。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><linearGradient id="e3-face" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#cfe3f7"/><stop offset="100%" stop-color="#7fb0e0"/></linearGradient></defs><g stroke="#2a6ea8" stroke-width="2.5"><path d="M42,102 C112,84 182,108 262,94 L264,112 C184,126 114,102 44,120 Z" fill="url(#e3-face)"/><path d="M50,138 C120,120 190,144 270,130 L272,148 C192,162 122,138 52,156 Z" fill="url(#e3-face)"/><path d="M42,174 C112,158 184,180 262,168 L264,186 C186,198 114,176 44,192 Z" fill="url(#e3-face)"/><path d="M50,210 C120,196 192,216 270,204 L272,222 C194,234 122,214 52,228 Z" fill="url(#e3-face)"/></g><g fill="#6b21a8"><circle cx="62" cy="92" r="3.8"/><circle cx="102" cy="88" r="3.8"/><circle cx="142" cy="94" r="3.8"/><circle cx="182" cy="98" r="3.8"/><circle cx="222" cy="92" r="3.8"/><circle cx="252" cy="90" r="3.8"/><circle cx="72" cy="128" r="3.8"/><circle cx="114" cy="124" r="3.8"/><circle cx="156" cy="132" r="3.8"/><circle cx="198" cy="134" r="3.8"/><circle cx="238" cy="126" r="3.8"/><circle cx="62" cy="164" r="3.8"/><circle cx="106" cy="162" r="3.8"/><circle cx="150" cy="168" r="3.8"/><circle cx="196" cy="170" r="3.8"/><circle cx="240" cy="162" r="3.8"/><circle cx="76" cy="200" r="3.8"/><circle cx="122" cy="198" r="3.8"/><circle cx="168" cy="204" r="3.8"/><circle cx="212" cy="206" r="3.8"/><circle cx="248" cy="198" r="3.8"/></g><g stroke-linecap="round" fill="none"><path d="M292,104 C316,78 350,82 364,108 C376,132 360,154 336,148" stroke="#2a6ea8" stroke-width="13"/><path d="M292,104 C316,78 350,82 364,108 C376,132 360,154 336,148" stroke="#d6e9f8" stroke-width="8"/><path d="M296,172 C322,152 358,160 368,186 C376,208 356,222 334,214" stroke="#2a6ea8" stroke-width="13"/><path d="M296,172 C322,152 358,160 368,186 C376,208 356,222 334,214" stroke="#d6e9f8" stroke-width="8"/><path d="M310,134 C328,120 352,128 356,146" stroke="#2a6ea8" stroke-width="11"/><path d="M310,134 C328,120 352,128 356,146" stroke="#d6e9f8" stroke-width="6.5"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="92" y1="88" x2="60" y2="52"/><line x1="150" y1="192" x2="86" y2="248"/><line x1="356" y1="118" x2="388" y2="62"/></g><g fill="#374151"><circle cx="92" cy="88" r="2.6"/><circle cx="150" cy="192" r="2.6"/><circle cx="356" cy="118" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="52" y="48" text-anchor="end">核糖体</text><text x="78" y="256" text-anchor="end">粗面内质网</text><text x="396" y="58">光面内质网</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">内质网 · 3D 结构图（左：粗面 / 右：光面）</text></svg>`,
+  kv:{结构:'单层膜围成的网状管道系统；分粗面（附着核糖体）和光面两种',功能:'粗面：蛋白质加工（折叠、组装、加糖基）；光面：合成脂质（如磷脂、固醇）',分布:'动植物细胞；内连核膜、外连细胞膜',类比:'流水生产线 + 内部物流网'}},
+ {id:'golgi',name:'高尔基体',alias:'📦 质检 · 分拣 · 打包中心',color:'#fbbf24',
+  short:'对来自内质网的蛋白质进行加工、分类和包装。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><g stroke="#9c640c" stroke-width="2.5"><path d="M74,84 C150,56 270,56 346,84 C358,87 356,97 344,98 C268,76 152,76 76,98 C64,97 62,87 74,84 Z" fill="#f9e797"/><path d="M74,116 C150,88 270,88 346,116 C358,119 356,129 344,130 C268,108 152,108 76,130 C64,129 62,119 74,116 Z" fill="#f5d66b"/><path d="M74,148 C150,120 270,120 346,148 C358,151 356,161 344,162 C268,140 152,140 76,162 C64,161 62,151 74,148 Z" fill="#f0b43c"/><path d="M74,180 C150,152 270,152 346,180 C358,183 356,193 344,194 C268,172 152,172 76,194 C64,193 62,183 74,180 Z" fill="#e8973a"/></g><g stroke="#9c640c" stroke-width="2"><circle cx="72" cy="88" r="8" fill="#f9e797"/><circle cx="348" cy="88" r="8" fill="#f9e797"/><circle cx="72" cy="120" r="8" fill="#f5d66b"/><circle cx="348" cy="120" r="8" fill="#f5d66b"/><circle cx="72" cy="152" r="8" fill="#f0b43c"/><circle cx="348" cy="152" r="8" fill="#f0b43c"/><circle cx="72" cy="184" r="8" fill="#e8973a"/><circle cx="348" cy="184" r="8" fill="#e8973a"/></g><g stroke="#b9770e" stroke-width="2"><circle cx="46" cy="58" r="7" fill="#fdf3cf"/><circle cx="34" cy="88" r="6" fill="#fdf3cf"/><circle cx="50" cy="120" r="8" fill="#fdf3cf"/></g><g fill="#ffffff" opacity=".8"><circle cx="44" cy="55" r="2.4"/><circle cx="32" cy="86" r="2"/><circle cx="48" cy="117" r="2.6"/></g><path d="M26,40 L56,60" stroke="#b9770e" stroke-width="2" stroke-dasharray="5 4" fill="none"/><g stroke="#b9770e" stroke-width="2"><circle cx="360" cy="182" r="7" fill="#fdf3cf"/><circle cx="384" cy="212" r="9" fill="#fdf3cf"/><circle cx="398" cy="242" r="6" fill="#fdf3cf"/></g><g fill="#ffffff" opacity=".8"><circle cx="358" cy="179" r="2.4"/><circle cx="381" cy="208" r="3"/><circle cx="396" cy="240" r="2"/></g><path d="M366,194 L392,228" stroke="#b9770e" stroke-width="2" stroke-dasharray="5 4" fill="none"/><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="210" y1="60" x2="210" y2="34"/><line x1="42" y1="94" x2="24" y2="132"/><line x1="352" y1="128" x2="390" y2="136"/><line x1="386" y1="214" x2="392" y2="252"/></g><g fill="#374151"><circle cx="210" cy="60" r="2.6"/><circle cx="42" cy="94" r="2.6"/><circle cx="352" cy="128" r="2.6"/><circle cx="386" cy="214" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="210" y="28" text-anchor="middle">扁平囊（堆叠）</text><text x="16" y="140">顺面（形成面）</text><text x="398" y="140" text-anchor="end">反面（成熟面）</text><text x="398" y="260" text-anchor="end">囊泡</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">高尔基体 · 3D 结构图（顺面接收 → 反面出芽，具有极性）</text></svg>`,
+  kv:{结构:'单层膜；由扁平囊堆叠而成，周围有大量囊泡',功能:'对蛋白质加工、分类、包装、发送；动物细胞中与分泌物形成有关，植物细胞中与细胞壁形成有关',分布:'动植物细胞；分泌旺盛的细胞中发达',类比:'质检部 + 快递分拣打包站'}},
+ {id:'ribo',name:'核糖体',alias:'🔧 蛋白质合成机器',color:'#c084fc',
+  short:'把氨基酸"串珠"成肽链，无膜的小小螺丝刀。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><radialGradient id="r3-big" cx="38%" cy="30%" r="85%"><stop offset="0%" stop-color="#e9ccf5"/><stop offset="100%" stop-color="#8e44ad"/></radialGradient><radialGradient id="r3-small" cx="38%" cy="30%" r="85%"><stop offset="0%" stop-color="#dcb4ec"/><stop offset="100%" stop-color="#a569bd"/></radialGradient></defs><line x1="40" y1="185" x2="380" y2="185" stroke="#d68910" stroke-width="4"/><g stroke="#d68910" stroke-width="2"><line x1="68" y1="179" x2="68" y2="191"/><line x1="96" y1="179" x2="96" y2="191"/><line x1="124" y1="179" x2="124" y2="191"/><line x1="296" y1="179" x2="296" y2="191"/><line x1="324" y1="179" x2="324" y2="191"/><line x1="352" y1="179" x2="352" y2="191"/></g><path d="M158,152 C146,94 190,60 228,64 C272,68 292,104 284,142 C278,164 250,172 220,172 C188,172 164,168 158,152 Z" fill="url(#r3-big)" stroke="#6c3483" stroke-width="3"/><ellipse cx="192" cy="88" rx="16" ry="8" fill="#ffffff" opacity=".45"/><path d="M182,180 C198,172 248,172 262,180 C270,200 254,214 222,216 C190,216 176,200 182,180 Z" fill="url(#r3-small)" stroke="#6c3483" stroke-width="3"/><ellipse cx="205" cy="184" rx="10" ry="5" fill="#ffffff" opacity=".4"/><path d="M240,64 C250,48 232,42 242,30 C250,20 266,26 272,16" stroke="#e59866" stroke-width="4" fill="none" stroke-linecap="round"/><g fill="#eb984e" stroke="#b9770e" stroke-width="1.5"><circle cx="244" cy="50" r="5"/><circle cx="238" cy="36" r="5"/><circle cx="256" cy="28" r="5"/><circle cx="268" cy="18" r="5"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="286" y1="104" x2="392" y2="90"/><line x1="262" y1="196" x2="392" y2="208"/><line x1="95" y1="185" x2="58" y2="208"/><line x1="268" y1="20" x2="392" y2="24"/></g><g fill="#374151"><circle cx="286" cy="104" r="2.6"/><circle cx="262" cy="196" r="2.6"/><circle cx="95" cy="185" r="2.6"/><circle cx="268" cy="20" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="398" y="92" text-anchor="end">大亚基</text><text x="398" y="212" text-anchor="end">小亚基</text><text x="20" y="216">mRNA</text><text x="398" y="28" text-anchor="end">新生肽链</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">核糖体 · 3D 结构图（正在合成肽链；无膜结构）</text></svg>`,
+  kv:{结构:'无膜结构；由RNA和蛋白质组成的大小两个亚基',功能:'氨基酸脱水缩合形成肽链的场所——"生产蛋白质的机器"',分布:'所有细胞（原核细胞唯一拥有的细胞器！）；游离在细胞质基质或附着在内质网上',类比:'3D打印机 / 串珠机'}},
+ {id:'lyso',name:'溶酶体',alias:'♻️ 消化车间 · 回收站',color:'#f97316',
+  short:'内含多种水解酶，吃掉衰老细胞器和入侵者。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><radialGradient id="l3-out" cx="38%" cy="30%" r="85%"><stop offset="0%" stop-color="#ffd8a8"/><stop offset="55%" stop-color="#eb984e"/><stop offset="100%" stop-color="#b34700"/></radialGradient></defs><circle cx="200" cy="150" r="95" fill="url(#l3-out)"/><ellipse cx="152" cy="100" rx="20" ry="10" fill="#ffffff" opacity=".4"/><path d="M200,58 C248,70 282,106 292,146 C268,180 230,190 202,156 C182,130 182,86 200,58 Z" fill="#fdebd0" stroke="#ffe8cc" stroke-width="3"/><g><circle cx="228" cy="108" r="7" fill="#e67e22"/><circle cx="256" cy="132" r="9" fill="#d35400"/><circle cx="226" cy="150" r="6" fill="#ba4a00"/><circle cx="262" cy="108" r="6" fill="#e67e22"/><circle cx="210" cy="128" r="6" fill="#d35400"/></g><g fill="#ffffff" opacity=".5"><circle cx="226" cy="106" r="2"/><circle cx="253" cy="129" r="2.6"/><circle cx="224" cy="148" r="1.8"/><circle cx="260" cy="106" r="1.8"/><circle cx="208" cy="126" r="1.8"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="118" y1="96" x2="58" y2="58"/><line x1="256" y1="132" x2="392" y2="118"/></g><g fill="#374151"><circle cx="118" cy="96" r="2.6"/><circle cx="256" cy="132" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="52" y="54" text-anchor="end">单层膜</text><text x="398" y="120">多种水解酶</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">溶酶体 · 3D 剖面结构图（内部为酸性环境，pH≈5）</text></svg>`,
+  kv:{结构:'单层膜；内含多种酸性水解酶（酶在核糖体上合成，经内质网、高尔基体加工）',功能:'分解衰老、损伤的细胞器；吞噬并杀死入侵的病毒或细菌',分布:'主要在动物细胞中',类比:'垃圾处理厂 + 保安队'}},
+ {id:'vacu',name:'液泡',alias:'💧 植物细胞的"水库+仓库"',color:'#38bdf8',
+  short:'中央大液泡撑起了植物细胞的"挺拔身姿"。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><radialGradient id="v3-out" cx="38%" cy="30%" r="85%"><stop offset="0%" stop-color="#eaf6fd"/><stop offset="55%" stop-color="#9ed2ee"/><stop offset="100%" stop-color="#4a9bc9"/></radialGradient></defs><circle cx="205" cy="152" r="100" fill="url(#v3-out)" stroke="#1a5276" stroke-width="4"/><ellipse cx="160" cy="104" rx="24" ry="12" fill="#ffffff" opacity=".55"/><g fill="#5499c7"><circle cx="170" cy="130" r="5"/><circle cx="240" cy="120" r="5"/><circle cx="262" cy="178" r="5"/><circle cx="180" cy="196" r="5"/><circle cx="222" cy="158" r="5"/></g><g fill="#af7ac5"><circle cx="200" cy="96" r="6"/><circle cx="150" cy="168" r="6"/></g><g fill="#d6eaf8"><circle cx="196" cy="142" r="3"/><circle cx="246" cy="150" r="3"/><circle cx="205" cy="182" r="3"/><circle cx="160" cy="152" r="3"/><circle cx="250" cy="200" r="3"/><circle cx="185" cy="112" r="3"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="283" y1="84" x2="392" y2="56"/><line x1="240" y1="150" x2="392" y2="150"/></g><g fill="#374151"><circle cx="283" cy="84" r="2.6"/><circle cx="240" cy="150" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="398" y="56" text-anchor="end">液泡膜（单层膜）</text><text x="398" y="154" text-anchor="end">细胞液</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">液泡 · 3D 结构图（细胞液含糖类、无机盐、色素等）</text></svg>`,
+  kv:{结构:'单层膜；内有细胞液，含糖类、无机盐、色素（花青素等）和蛋白质',功能:'调节植物细胞内环境；充盈的液泡使植物细胞保持坚挺',分布:'主要存在于植物细胞（成熟植物细胞有中央大液泡）',类比:'水库 + 调色盘（花瓣颜色就靠它）'}},
+ {id:'cent',name:'中心体',alias:'🎯 细胞分裂的"指挥棒"',color:'#e879f9',
+  short:'两个互相垂直的中心粒，发射纺锤丝牵引染色体。',
+  svg:`<svg viewBox="0 0 420 300" class="float-anim"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><linearGradient id="ct-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e8a9f0"/><stop offset="100%" stop-color="#a03a9e"/></linearGradient></defs><ellipse cx="210" cy="155" rx="155" ry="95" fill="#f7ecf9" stroke="#e3c9ec" stroke-width="2" stroke-dasharray="6 5"/><path d="M106,84 a24,13 0 0 1 48,0 L154,200 a24,13 0 0 1 -48,0 Z" fill="url(#ct-body)" stroke="#6e2f8a" stroke-width="3"/><ellipse cx="130" cy="84" rx="24" ry="13" fill="#f3d5fa" stroke="#6e2f8a" stroke-width="2.5"/><g stroke="#6e2f8a" stroke-width="2" opacity=".85"><line x1="112" y1="92" x2="112" y2="198"/><line x1="116" y1="90" x2="116" y2="200"/><line x1="120" y1="90" x2="120" y2="201"/><line x1="128" y1="89" x2="128" y2="202"/><line x1="132" y1="89" x2="132" y2="202"/><line x1="136" y1="89" x2="136" y2="202"/><line x1="144" y1="90" x2="144" y2="201"/><line x1="148" y1="90" x2="148" y2="200"/><line x1="152" y1="92" x2="152" y2="198"/></g><rect x="292" y="124" width="86" height="72" rx="30" fill="url(#ct-body)" stroke="#6e2f8a" stroke-width="3"/><g stroke="#6e2f8a" stroke-width="2" opacity=".85"><line x1="312" y1="140" x2="368" y2="140"/><line x1="312" y1="160" x2="372" y2="160"/><line x1="312" y1="180" x2="368" y2="180"/></g><ellipse cx="292" cy="160" rx="20" ry="36" fill="#f3d5fa" stroke="#6e2f8a" stroke-width="3"/><g fill="#6e2f8a"><circle cx="308" cy="160" r="3"/><circle cx="305.3" cy="176.8" r="3"/><circle cx="304.3" cy="179.3" r="3"/><circle cx="303.1" cy="181.6" r="3"/><circle cx="296.4" cy="188.8" r="3"/><circle cx="294.8" cy="189.5" r="3"/><circle cx="293.1" cy="189.9" r="3"/><circle cx="285.5" cy="187.4" r="3"/><circle cx="284" cy="186" r="3"/><circle cx="282.6" cy="184.3" r="3"/><circle cx="277.6" cy="173.2" r="3"/><circle cx="277" cy="170.3" r="3"/><circle cx="276.5" cy="167.3" r="3"/><circle cx="276.5" cy="152.7" r="3"/><circle cx="277" cy="149.7" r="3"/><circle cx="277.6" cy="146.8" r="3"/><circle cx="282.6" cy="135.7" r="3"/><circle cx="284" cy="134" r="3"/><circle cx="285.5" cy="132.6" r="3"/><circle cx="293.1" cy="130.1" r="3"/><circle cx="294.8" cy="130.5" r="3"/><circle cx="296.4" cy="131.2" r="3"/><circle cx="303.1" cy="138.4" r="3"/><circle cx="304.3" cy="140.7" r="3"/><circle cx="305.3" cy="143.2" r="3"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="130" y1="80" x2="62" y2="52"/><line x1="292" y1="130" x2="390" y2="52"/><line x1="98" y1="220" x2="58" y2="246"/></g><g fill="#374151"><circle cx="130" cy="80" r="2.6"/><circle cx="292" cy="130" r="2.6"/><circle cx="98" cy="220" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="56" y="48" text-anchor="end">中心粒（纵切）</text><text x="398" y="48" text-anchor="end">中心粒（横切：9组三联微管）</text><text x="52" y="254" text-anchor="end">中心粒周围物质</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">中心体 · 3D 结构图（两个中心粒互相垂直；无膜结构）</text></svg>`,
+  kv:{结构:'无膜；由两个互相垂直排列的中心粒及周围物质组成',功能:'与细胞的有丝分裂有关（发出星射线，形成纺锤体）',分布:'动物细胞和某些低等植物细胞',类比:'拔河比赛的裁判兼绳索发射器'}},
+ {id:'nucl',name:'细胞核（彩蛋）',alias:'🧠 工厂总控室',color:'#a78bfa',
+  short:'注意：细胞核不是细胞器，但它是整座工厂的大脑！',
+  svg:`<svg viewBox="0 0 420 300" class="pulse"><rect x="5" y="5" width="410" height="290" rx="16" fill="#ffffff"/><defs><radialGradient id="n3-out" cx="36%" cy="28%" r="85%"><stop offset="0%" stop-color="#e3c2f0"/><stop offset="55%" stop-color="#a05fb8"/><stop offset="100%" stop-color="#5e2d79"/></radialGradient><radialGradient id="n3-in" cx="50%" cy="42%" r="75%"><stop offset="0%" stop-color="#f6ecf9"/><stop offset="100%" stop-color="#c48fd6"/></radialGradient></defs><circle cx="205" cy="160" r="105" fill="url(#n3-out)"/><path d="M205,58 C258,72 296,112 308,158 C282,196 236,208 205,168 C182,138 180,88 205,58 Z" fill="url(#n3-in)" stroke="#f3e5f5" stroke-width="3"/><circle cx="222" cy="140" r="16" fill="#5e2d79"/><circle cx="216" cy="134" r="5" fill="#9b6bb5"/><g fill="#a05fb8" opacity=".55"><circle cx="240" cy="110" r="2.5"/><circle cx="265" cy="140" r="2.5"/><circle cx="225" cy="95" r="2.5"/><circle cx="280" cy="122" r="2.5"/><circle cx="245" cy="165" r="2.5"/><circle cx="200" cy="120" r="2.5"/><circle cx="260" cy="165" r="2.5"/></g><g fill="#f0c069" stroke="#8a5a20" stroke-width="1.5"><circle cx="196" cy="261" r="4.5"/><circle cx="139" cy="238" r="4.5"/><circle cx="109" cy="194" r="4.5"/><circle cx="103" cy="160" r="4.5"/><circle cx="109" cy="126" r="4.5"/><circle cx="133" cy="88" r="4.5"/><circle cx="170" cy="60" r="4.5"/><circle cx="252" cy="80" r="4.5"/><circle cx="294" cy="120" r="4.5"/><circle cx="262" cy="186" r="4.5"/></g><g fill="#8a5a20"><circle cx="196" cy="261" r="1.8"/><circle cx="139" cy="238" r="1.8"/><circle cx="109" cy="194" r="1.8"/><circle cx="103" cy="160" r="1.8"/><circle cx="109" cy="126" r="1.8"/><circle cx="133" cy="88" r="1.8"/><circle cx="170" cy="60" r="1.8"/><circle cx="252" cy="80" r="1.8"/><circle cx="294" cy="120" r="1.8"/><circle cx="262" cy="186" r="1.8"/></g><g stroke="#374151" stroke-width="1.4" fill="none"><line x1="108" y1="108" x2="60" y2="58"/><line x1="133" y1="88" x2="60" y2="98"/><line x1="222" y1="140" x2="388" y2="94"/><line x1="265" y1="140" x2="388" y2="150"/></g><g fill="#374151"><circle cx="108" cy="108" r="2.6"/><circle cx="133" cy="88" r="2.6"/><circle cx="222" cy="140" r="2.6"/><circle cx="265" cy="140" r="2.6"/></g><g font-size="14" fill="#111827" font-family="Microsoft YaHei,sans-serif"><text x="52" y="56" text-anchor="end">核膜</text><text x="52" y="102" text-anchor="end">核孔</text><text x="396" y="96">核仁</text><text x="396" y="154">染色质</text></g><text x="20" y="282" font-size="12" fill="#9ca3af" font-family="Microsoft YaHei,sans-serif">细胞核 · 3D 剖面结构图（注意：细胞核不属于细胞器）</text></svg>`,
+  kv:{身份:'细胞核不是细胞器（考试易错点！），是遗传信息库',功能:'遗传物质储存和复制的主要场所，是细胞代谢和遗传的控制中心',结构:'核膜（双层，有核孔）+ 核仁 + 染色质',类比:'厂长办公室——图纸（DNA）全在这里'}} 
+];
+
+/* ================= 渲染细胞器卡片 ================= */
+const grid = document.getElementById('orgGrid');
+ORGANELLES.forEach(o=>{
+  const d = document.createElement('div');
+  d.className='org-card'; d.style.setProperty('--oc',o.color);
+  d.innerHTML = `<span class="hint">点击详情</span>
+    <div class="svgbox">${o.svg}</div>
+    <h3>${o.name}</h3><div class="alias">${o.alias}</div><p>${o.short}</p>`;
+  d.onclick = ()=>openModal(o);
+  grid.appendChild(d);
+});
+function openModal(o){
+  const body = document.getElementById('modalBody');
+  let kvHtml = '';
+  for(const k in o.kv) kvHtml += `<b>${k}</b><span style="color:var(--muted);line-height:1.8">${o.kv[k]}</span>`;
+  body.innerHTML = `<h2 style="color:${o.color}">${o.name}</h2>
+    <p style="color:var(--accent);font-weight:700;margin-bottom:6px">${o.alias}</p>
+    <div class="bigsvg">${o.svg}</div>
+    <div class="kv">${kvHtml}</div>`;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal();});
+
+/* ================= 页面导航 & 进度 ================= */
+const ORDER=['cover','s1','s2','s3','s4','s5','s6'];
+const visited=new Set(['cover']);
+function go(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  document.querySelectorAll('.nav button').forEach(b=>{
+    b.classList.toggle('active',b.dataset.s===id);
+  });
+  visited.add(id);
+  document.querySelectorAll('.nav button').forEach(b=>{
+    if(visited.has(b.dataset.s)&&b.dataset.s!=='cover')b.classList.add('done');
+  });
+  const pct = Math.round((visited.size-1)/(ORDER.length-1)*100);
+  document.getElementById('progressBar').style.width=pct+'%';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.s));
+
+/* ================= 差速离心实验 ================= */
+let spinStage=0;
+const spinMsgs=[
+ '先把细胞<b>破碎</b>（细胞匀浆）放入离心管。点击 ① 开始第一步离心！',
+ '✅ 低速离心完成！<b style="color:#a78bfa">细胞核</b>最先沉底（个头最大）。倒出上清液，继续 ②！',
+ '✅ 中速离心完成！<b style="color:#60a5fa">叶绿体、线粒体、溶酶体</b>等较大的细胞器沉淀。继续 ③！',
+ '✅ 高速离心完成！<b style="color:#fbbf24">内质网、高尔基体</b>等较小结构沉淀。最后冲刺 ④！',
+ '🎉 超高速离心完成！最小的<b style="color:#c084fc">核糖体</b>也被"抓住"了。差速离心，大功告成！'
+];
+function spinStep(n){
+  if(n!==spinStage+1)return;
+  spinStage=n;
+  const rotor=document.getElementById('rotor');
+  rotor.style.animation='none';
+  document.getElementById('tube1').classList.add('spin');
+  document.getElementById('sp'+n).disabled=true;
+  setTimeout(()=>{
+    document.getElementById('tube1').classList.remove('spin');
+    const layers={1:['l1c',16],2:['l1b',30],3:['l1b',44],4:['l1a',58]};
+    if(n===1){setH('l1c',16,'细胞核');}
+    if(n===2){setH('l1b',30,'叶绿体·线粒体·溶酶体');setH('l1c',14,'细胞核');}
+    if(n===3){setH('l1a',0,'');setH('l1b',42,'内质网·高尔基体');setH('l1c',12,'');}
+    if(n===4){setH('l1a',56,'↑核糖体(最上层沉淀)');setH('l1b',38,'');setH('l1c',10,'');}
+    document.getElementById('spinText').innerHTML=spinMsgs[n];
+    document.getElementById('sp'+n).classList.add('done');
+    if(n<4)document.getElementById('sp'+(n+1)).disabled=false;
+    else document.getElementById('spinSummary').style.display='block';
+  },1300);
+}
+function setH(id,h,txt){
+  const el=document.getElementById(id);
+  el.style.height=h+'%';
+  if(txt)el.innerHTML=`<span style="position:absolute;top:4px;width:100%;text-align:center;font-size:9.5px;color:#06112e;font-weight:800">${txt}</span>`;
+}
+
+/* ================= 分泌蛋白之旅动画 ================= */
+const journeySteps=[
+ {t:0,txt:'<b>第①站 · 核糖体</b>：游离核糖体上以氨基酸为原料开始合成肽链，信号肽引导核糖体附着到内质网上。³H亮氨酸就在这里被"串"进肽链！',ves:false},
+ {t:.22,txt:'<b>第②站 · 内质网</b>：肽链进入内质网腔，进行<b>粗加工</b>——折叠、组装、加糖基团，形成有一定空间结构的蛋白质。',ves:false},
+ {t:.45,txt:'<b>转运 · 囊泡①</b>：内质网"出芽"形成<b>囊泡</b>，包裹着半成品蛋白质，向高尔基体飞奔。囊泡膜与高尔基体膜融合（膜成分在此更新！）。',ves:true},
+ {t:.68,txt:'<b>第③站 · 高尔基体</b>：对蛋白质做<b>再加工</b>——修饰、分类、包装，成为成熟的分泌蛋白，然后再次"出芽"形成囊泡。',ves:true},
+ {t:.9,txt:'<b>终点 · 细胞膜</b>：囊泡移动到细胞膜，与细胞膜融合，以<b>胞吐</b>方式把分泌蛋白释放到细胞外。',ves:true},
+ {t:1,txt:'<b>全程后勤 · 线粒体</b>：整个过程消耗的能量，由线粒体通过有氧呼吸提供 ⚡。分工明确、配合默契——这就是细胞器之间的协调配合！',ves:false}
+];
+const route=document.getElementById('route');
+const routeLen=route.getTotalLength();
+const cargo=document.getElementById('cargo'), vesicle=document.getElementById('vesicle');
+let journeyIdx=0, playing=false;
+function pointAt(t){const p=route.getPointAtLength(t*routeLen);return p;}
+function setCargo(t,ves){
+  const p=pointAt(t);
+  cargo.setAttribute('transform',`translate(${p.x},${p.y})`);
+  cargo.style.opacity=1;
+  vesicle.setAttribute('cx',p.x);vesicle.setAttribute('cy',p.y);
+  vesicle.style.opacity=ves?1:0;
+}
+function highlightStage(idx){
+  ['stRibo','stER','stGolgi','stMemb','stMito'].forEach(id=>{
+    document.getElementById(id).style.filter='';
+  });
+  const map={0:'stRibo',1:'stER',2:'stER',3:'stGolgi',4:'stMemb',5:'stMito'};
+  const el=document.getElementById(map[idx]);
+  if(el)el.style.filter='drop-shadow(0 0 14px rgba(253,224,71,.95))';
+}
+function showStep(i){
+  const s=journeySteps[i];
+  document.getElementById('stepNo').textContent=i+1;
+  document.getElementById('journeyText').innerHTML=s.txt;
+  setCargo(s.t,s.ves); highlightStage(i);
+  drawRadioChart(i);
+}
+function stepJourney(){
+  if(journeyIdx>=journeySteps.length)journeyIdx=0;
+  showStep(journeyIdx); journeyIdx++;
+  if(journeyIdx>=journeySteps.length){
+    document.getElementById('stepBtn').textContent='↺ 从头再讲';
+    drawMembChart();
+  }
+}
+function playJourney(){
+  if(playing)return; playing=true; resetJourney(false);
+  let i=0;
+  const total=journeySteps.length;
+  function next(){
+    if(i>=total){playing=false;drawMembChart();return;}
+    // 平滑移动到下一站
+    const s=journeySteps[i];
+    const prevT=i===0?0:journeySteps[i-1].t;
+    animateCargo(prevT,s.t,s.ves,1400,()=>{
+      document.getElementById('stepNo').textContent=i+1;
+      document.getElementById('journeyText').innerHTML=s.txt;
+      highlightStage(i); drawRadioChart(i);
+      i++; setTimeout(next,2600);
+    });
+  }
+  next();
+}
+function animateCargo(from,to,ves,dur,done){
+  const t0=performance.now();
+  function frame(now){
+    const k=Math.min(1,(now-t0)/dur);
+    const e=1-Math.pow(1-k,3);
+    setCargo(from+(to-from)*e,ves);
+    if(k<1)requestAnimationFrame(frame); else done&&done();
+  }
+  requestAnimationFrame(frame);
+}
+function resetJourney(clearText=true){
+  journeyIdx=0; playing=false;
+  cargo.style.opacity=0; vesicle.style.opacity=0;
+  ['stRibo','stER','stGolgi','stMemb','stMito'].forEach(id=>document.getElementById(id).style.filter='');
+  document.getElementById('stepNo').textContent='▶';
+  if(clearText)document.getElementById('journeyText').innerHTML='准备好了吗？点击「▶ 播放动画」，追踪这枚带放射性的"快递包裹"。';
+  document.getElementById('stepBtn').textContent='⏭ 分步讲解';
+}
+
+/* ================= 放射性曲线图 ================= */
+function drawRadioChart(stage){
+  const c=document.getElementById('radioChart'),ctx=c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
+  // 数据：不同追踪时间点各部位放射性
+  const groups=['核糖体','内质网','高尔基体','分泌小泡'];
+  const times=['3 min','17 min','117 min'];
+  const data=[[95,55,8,0],[25,80,50,5],[5,30,75,90]];
+  const colors=['#fde047','#fb923c','#f472b6'];
+  const W=c.width,H=c.height,pad=44,plotW=W-pad-10,plotH=H-pad-24;
+  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.moveTo(pad,12);ctx.lineTo(pad,pad+plotH-20);ctx.lineTo(W-8,pad+plotH-20);ctx.stroke();
+  ctx.fillStyle='#9fb0d8';ctx.font='12px Microsoft YaHei';
+  ctx.fillText('放射性强度（相对值）',pad-36,22);
+  const gw=plotW/groups.length, bw=gw/(times.length+1.4);
+  const showGroups = stage<2?2:groups.length; // 随剧情展开
+  groups.forEach((g,gi)=>{
+    if(gi>=showGroups)return;
+    times.forEach((t,ti)=>{
+      const v=data[ti][gi];
+      const h=(v/100)*(plotH-20);
+      const x=pad+gi*gw+ti*bw+8, y=pad+plotH-20-h;
+      ctx.fillStyle=colors[ti];ctx.globalAlpha=.92;
+      roundRect(ctx,x,y,bw-6,h,5);ctx.fill();ctx.globalAlpha=1;
+      ctx.fillStyle='#dfe6ff';ctx.font='11px Microsoft YaHei';
+      if(v>0)ctx.fillText(v,x+2,y-5);
+    });
+    ctx.fillStyle='#eef2ff';ctx.font='13px Microsoft YaHei';ctx.textAlign='center';
+    ctx.fillText(g,pad+gi*gw+gw/2,H-6);ctx.textAlign='left';
+  });
+  // 图例
+  times.forEach((t,ti)=>{
+    ctx.fillStyle=colors[ti];roundRect(ctx,W-128,16+ti*20,12,12,3);ctx.fill();
+    ctx.fillStyle='#dfe6ff';ctx.font='12px Microsoft YaHei';ctx.fillText('追踪 '+t,W-112,26+ti*20);
+  });
+}
+function roundRect(ctx,x,y,w,h,r){
+  if(h<0)h=0;
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
+}
+function drawMembChart(){
+  const c=document.getElementById('membChart'),ctx=c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
+  const labels=['内质网膜','高尔基体膜','细胞膜'];
+  const before=[100,100,100], after=[72,101,128];
+  const W=c.width,H=c.height,pad=50,plotW=W-pad-20,plotH=H-pad-30;
+  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.moveTo(pad,14);ctx.lineTo(pad,pad+plotH-22);ctx.lineTo(W-8,pad+plotH-22);ctx.stroke();
+  const gw=plotW/3,bw=gw/3.1;
+  labels.forEach((lb,i)=>{
+    [before[i],after[i]].forEach((v,j)=>{
+      const h=(v/140)*(plotH-22);
+      const x=pad+i*gw+j*bw+16,y=pad+plotH-22-h;
+      ctx.fillStyle=j===0?'#60a5fa':(i===0?'#fb7185':i===1?'#fbbf24':'#4ade80');
+      roundRect(ctx,x,y,bw-10,h,6);ctx.fill();
+      ctx.fillStyle='#dfe6ff';ctx.font='12px Microsoft YaHei';ctx.textAlign='center';
+      ctx.fillText(v,x+(bw-10)/2,y-6);ctx.textAlign='left';
+    });
+    ctx.fillStyle='#eef2ff';ctx.font='13.5px Microsoft YaHei';ctx.textAlign='center';
+    ctx.fillText(lb,pad+i*gw+gw/2,H-8);ctx.textAlign='left';
+  });
+  ctx.fillStyle='#60a5fa';roundRect(ctx,W-130,16,12,12,3);ctx.fill();
+  ctx.fillStyle='#dfe6ff';ctx.font='12px Microsoft YaHei';ctx.fillText('分泌前',W-114,26);
+  ctx.fillStyle='#4ade80';roundRect(ctx,W-130,36,12,12,3);ctx.fill();
+  ctx.fillStyle='#dfe6ff';ctx.fillText('分泌后',W-114,46);
+}
+
+/* ================= 高考闯关 ================= */
+const QUIZ=[
+ {src:'2021 · 湖北荆州联考（湖北名校题）',
+  q:'下列有关真核细胞结构和功能的叙述，正确的是（　　）',
+  opts:['核糖体是合成和分泌促胰液素的场所',
+        '细胞间的信息交流大多与细胞膜的结构和功能有关',
+        '线粒体是葡萄糖氧化分解生成 CO₂ 和 H₂O 的场所',
+        '细胞核是遗传信息转录和翻译的场所'],
+  ans:1,
+  exp:'<b>答案 B。</b> A 错：核糖体只是"合成"场所，分泌要靠内质网、高尔基体和细胞膜；C 错：葡萄糖在细胞质基质中被分解为丙酮酸，线粒体不能直接利用葡萄糖；D 错：翻译场所在核糖体，不在细胞核。'},
+ {src:'2023 · 湖北武汉质检（囊泡运输热点题）',
+  q:'细胞生命活动依赖于胞内运输系统。运输系统将物质分拣、包装到囊泡中，利用动力蛋白水解 ATP 驱动囊泡在细胞骨架上移动。下列叙述正确的是（　　）',
+  opts:['血红蛋白可通过囊泡分泌到细胞外',
+        '核糖体可出芽形成囊泡将肽链运往内质网进行加工',
+        '在胞内运输过程中，内质网起到重要的交通枢纽作用',
+        '动力蛋白驱动囊泡在细胞骨架上的移动伴随着能量代谢'],
+  ans:3,
+  exp:'<b>答案 D。</b> A 错：血红蛋白是胞内蛋白，不分泌；B 错：核糖体无膜结构，不能"出芽"形成囊泡，肽链直接进入内质网；C 错：交通枢纽是高尔基体；D 对：动力蛋白水解 ATP，伴随能量代谢。'},
+ {src:'2022 · 湖北恩施质检（生物膜系统辨析）',
+  q:'真核细胞的生物膜系统在生命活动中具有重要作用。下列关于生物膜的描述，正确的是（　　）',
+  opts:['核糖体的膜与其他细胞器膜共同构成生物膜系统',
+        '细胞核中合成的 mRNA 需穿过 2 层生物膜才能与核糖体结合',
+        '用 ³H 标记氨基酸，分泌蛋白形成时放射性依次出现在：核糖体→高尔基体→内质网→细胞膜',
+        '分泌蛋白形成前后，高尔基体的膜面积基本不变'],
+  ans:3,
+  exp:'<b>答案 D。</b> A 错：核糖体无膜；B 错：mRNA 经核孔出核，穿过 0 层膜；C 错：正确顺序是核糖体→内质网→高尔基体→细胞膜；D 对：高尔基体既接收囊泡又形成囊泡，膜面积"收支平衡"。'},
+ {src:'湖北省高考模拟 · 实验方法选择题',
+  q:'下列有关实验材料或方法的选择，正确的是（　　）',
+  opts:['研究分泌蛋白的形成过程——同位素标记法',
+        '利用废旧物品制作的真核细胞模型——概念模型',
+        '检测还原糖——红色的成熟西红柿',
+        '观察叶绿体——植物的根细胞'],
+  ans:0,
+  exp:'<b>答案 A。</b> 研究分泌蛋白合成与运输用的是同位素标记法（³H 标记亮氨酸）；B 错：实物模型是物理模型；C 错：红色材料会干扰砖红色沉淀的观察；D 错：根细胞无叶绿体。'}
+];
+let answered=0,score=0;
+function buildQuiz(){
+  const box=document.getElementById('quizBox');box.innerHTML='';
+  answered=0;score=0;
+  document.getElementById('scoreBoard').style.display='none';
+  QUIZ.forEach((it,qi)=>{
+    const div=document.createElement('div');div.className='quiz-q';
+    let optsHtml='';
+    it.opts.forEach((o,oi)=>{
+      optsHtml+=`<div class="opt" data-q="${qi}" data-o="${oi}"><span class="k">${'ABCD'[oi]}</span><span>${o}</span></div>`;
+    });
+    div.innerHTML=`<div class="src">📌 ${it.src}</div><h4>${qi+1}. ${it.q}</h4>${optsHtml}
+      <div class="explain" id="exp${qi}">${it.exp}</div>`;
+    box.appendChild(div);
+  });
+  box.querySelectorAll('.opt').forEach(el=>{
+    el.onclick=()=>{
+      const q=+el.dataset.q,o=+el.dataset.o;
+      const parent=el.parentElement;
+      if(parent.dataset.done)return;
+      parent.dataset.done='1';
+      const correct=QUIZ[q].ans;
+      parent.querySelectorAll('.opt').forEach((x,xi)=>{
+        if(xi===correct)x.classList.add('correct');
+        else if(xi===o)x.classList.add('wrong');
+        x.style.cursor='default';
+      });
+      document.getElementById('exp'+q).classList.add('show');
+      answered++; if(o===correct)score++;
+      if(answered===QUIZ.length){
+        const sb=document.getElementById('scoreBoard');
+        sb.style.display='block';
+        document.getElementById('scoreNum').textContent=`${score} / ${QUIZ.length}`;
+        const msg=score===4?'🏆 满分！高考这道题稳了！':score===3?'🌟 很棒！就差一点点，看看解析吧':score===2?'💪 过半了！回到环节三再复习一遍':'📚 别灰心，回到前面环节再听一遍讲解';
+        document.getElementById('scoreMsg').textContent=msg;
+        sb.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    };
+  });
+}
+function resetQuiz(){buildQuiz();window.scrollTo({top:0,behavior:'smooth'});}
+buildQuiz();
+drawRadioChart(0);
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/organelles/workbuddy/" data-file="workbuddy/3.2细胞器之间的分工合作.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

@@ -382,4 +382,4 @@ document.addEventListener('change',e=>{const key=e.target.dataset.change;if(!key
 document.addEventListener('keydown',e=>{if($('#infoDialog').open||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||/^(INPUT|TEXTAREA|SELECT|BUTTON|A|SUMMARY)$/.test(document.activeElement.tagName)||document.activeElement.isContentEditable||window.getSelection()?.toString())return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();goto(state.stage+(e.key==='ArrowRight'?1:-1));}});
 document.addEventListener('visibilitychange',()=>{document.body.classList.toggle('pause-motion',document.hidden);if(document.hidden&&playing){stop();render();}});render();
 })();
-</script></body></html>
+</script><!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/respiration/original/" data-file="细胞呼吸_碳的旅程_v1.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>

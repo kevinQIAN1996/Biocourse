@@ -469,4 +469,4 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 document.addEventListener('keydown',e=>{if($('modal').open||e.target.closest('button,input,select,textarea,a,summary')||window.getSelection().toString())return;if(state.room===1&&['ArrowLeft','ArrowRight',' '].includes(e.key)){e.preventDefault();if(e.key===' '){$('play').click();return;}stop();state.progress=Math.max(0,Math.min(5,Math.round(state.progress)+(e.key==='ArrowRight'?1:-1)));film();}});
 film();
 })();
-</script></body></html>
+</script><!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/division/original/" data-file="细胞的增殖_一分为二放映室_v1.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>

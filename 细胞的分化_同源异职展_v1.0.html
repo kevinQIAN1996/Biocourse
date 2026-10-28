@@ -314,4 +314,4 @@ const sections=['gallery','evidence','potential','stem','seminar'];
 if('IntersectionObserver' in window){const routeObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.route a').forEach(a=>{const active=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}});},{rootMargin:'-100px 0px -55% 0px',threshold:0});sections.forEach(id=>routeObserver.observe($(id)));const experimentObserver=new IntersectionObserver(entries=>{if(entries[0]&&!entries[0].isIntersecting)stop();},{threshold:0});experimentObserver.observe($('experimentArt'));}
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>stop()));
 })();
-</script></body></html>
+</script><!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/differentiation/original/" data-file="细胞的分化_同源异职展_v1.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>

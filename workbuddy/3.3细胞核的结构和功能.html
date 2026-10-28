@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第3集 · 3.3 细胞核的结构和功能 · 互动课件</title>
+<style>
+:root{
+  --bg:#0b1437; --bg2:#131f4d; --panel:rgba(255,255,255,.06);
+  --panel-border:rgba(255,255,255,.14);
+  --text:#eef2ff; --muted:#9fb0d8;
+  --accent:#5eead4; --accent2:#818cf8; --gold:#fbbf24; --pink:#f472b6;
+  --nucl:#a78bfa; --nucl-deep:#7c3aed;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;
+  background:radial-gradient(1200px 800px at 80% -10%, #241a5e 0%, var(--bg) 55%) fixed;
+  color:var(--text); min-height:100vh; overflow-x:hidden;
+}
+header{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(11,20,55,.85);border-bottom:1px solid var(--panel-border);
+  padding:10px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.logo{font-size:22px;font-weight:800;background:linear-gradient(90deg,#c4b5fd,var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.nav{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.nav button{
+  background:transparent;border:1px solid transparent;color:var(--muted);
+  padding:7px 13px;border-radius:999px;cursor:pointer;font-size:14px;transition:.25s;font-family:inherit;
+}
+.nav button:hover{color:var(--text);background:var(--panel)}
+.nav button.active{background:linear-gradient(90deg,rgba(167,139,250,.2),rgba(244,114,182,.15));
+  color:#c4b5fd;border-color:rgba(167,139,250,.45)}
+.nav button.done::after{content:" ✓";color:var(--accent)}
+#progressWrap{width:100%;height:5px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}
+#progressBar{height:100%;width:0;background:linear-gradient(90deg,#a78bfa,var(--pink),var(--gold));
+  border-radius:99px;transition:width .6s ease;box-shadow:0 0 12px rgba(167,139,250,.6)}
+section{display:none;max-width:1180px;margin:0 auto;padding:34px 22px 80px;animation:fadeUp .55s ease}
+section.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(28px,4.4vw,46px);line-height:1.25;font-weight:800}
+h2{font-size:clamp(22px,3vw,32px);margin-bottom:8px}
+h2 .tag{font-size:13px;vertical-align:middle;background:linear-gradient(90deg,var(--nucl-deep),var(--pink));
+  padding:3px 12px;border-radius:99px;color:#fff;margin-right:10px;letter-spacing:1px}
+.sub{color:var(--muted);margin-bottom:26px;font-size:16px}
+.card{
+  background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;
+  padding:24px;margin:18px 0;box-shadow:0 8px 32px rgba(0,0,0,.25);
+}
+.card.light{background:linear-gradient(135deg,rgba(167,139,250,.1),rgba(244,114,182,.07))}
+.btn{
+  display:inline-block;border:none;cursor:pointer;font-family:inherit;font-size:16px;font-weight:700;
+  padding:13px 30px;border-radius:14px;color:#fff;
+  background:linear-gradient(90deg,var(--nucl-deep),var(--accent2));transition:.25s;
+  box-shadow:0 6px 20px rgba(124,58,237,.35);
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(124,58,237,.5)}
+.btn.ghost{background:transparent;color:#c4b5fd;border:2px solid rgba(167,139,250,.5);box-shadow:none}
+.btn.gold{background:linear-gradient(90deg,var(--gold),#f97316);color:#3a2503;box-shadow:0 6px 20px rgba(251,191,36,.35)}
+.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.btn.small{padding:8px 18px;font-size:14px;border-radius:10px}
+.center{text-align:center}
+.flow-nav{display:flex;justify-content:space-between;margin-top:36px;gap:12px}
+/* 封面 */
+#cover{min-height:88vh;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#cover.show{display:flex}
+.series-badge{font-size:13px;letter-spacing:4px;color:#c4b5fd;border:1px solid rgba(167,139,250,.45);
+  padding:6px 20px;border-radius:99px;margin-bottom:14px;background:rgba(167,139,250,.1)}
+#cover .badge2{font-size:13px;color:var(--muted);margin-bottom:22px;letter-spacing:1px}
+#cover p.lead{color:var(--muted);font-size:18px;max-width:660px;margin:18px auto 30px;line-height:1.9}
+.hero{width:min(460px,88vw);margin:4px auto 12px;filter:drop-shadow(0 24px 60px rgba(167,139,250,.35))}
+/* 实验卡片 */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:880px){.exp-grid{grid-template-columns:1fr}}
+.exp-card{background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;padding:20px;transition:.3s;position:relative;overflow:hidden}
+.exp-card .no{position:absolute;top:-14px;right:-6px;font-size:96px;font-weight:900;color:rgba(167,139,250,.12);line-height:1}
+.exp-card h3{font-size:18px;margin-bottom:4px;color:#ddd6fe}
+.exp-card .who{font-size:12.5px;color:var(--muted);margin-bottom:12px}
+.exp-card .svgbox{background:#ffffff;border-radius:14px;padding:8px;margin-bottom:14px}
+.exp-card .svgbox svg{width:100%;height:auto;display:block}
+.reveal{display:none;margin-top:10px;padding:12px 16px;border-radius:12px;font-size:14.5px;line-height:1.8;animation:fadeUp .4s ease}
+.reveal.show{display:block}
+.reveal.phen{background:rgba(94,234,212,.1);border-left:4px solid var(--accent);color:var(--text)}
+.reveal.conc{background:rgba(251,191,36,.12);border-left:4px solid var(--gold);color:var(--text)}
+.reveal.phen b{color:var(--accent)} .reveal.conc b{color:var(--gold)}
+.exp-btns{display:flex;gap:10px;flex-wrap:wrap}
+/* 总结论横幅 */
+#verdict{display:none;text-align:center;padding:44px 26px;border-radius:24px;margin-top:26px;
+  background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(244,114,182,.18));
+  border:2px solid rgba(167,139,250,.5);box-shadow:0 0 60px rgba(167,139,250,.25)}
+#verdict.show{display:block;animation:pop .7s cubic-bezier(.34,1.5,.5,1)}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+#verdict .big{font-size:clamp(22px,3.2vw,34px);font-weight:900;line-height:1.7;
+  background:linear-gradient(90deg,#c4b5fd,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+/* 3D 细胞核模型 */
+.model-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:start}
+@media(max-width:920px){.model-wrap{grid-template-columns:1fr}}
+.model-stage{background:radial-gradient(600px 400px at 50% 40%, #221a52 0%, #0d1336 70%);
+  border:1px solid var(--panel-border);border-radius:24px;padding:10px;position:relative}
+.model-stage svg{width:100%;height:auto;display:block}
+.hotspot{cursor:pointer}
+.hotspot circle.ring{animation:hsPulse 2s ease-in-out infinite}
+@keyframes hsPulse{0%,100%{opacity:.35;r:14}50%{opacity:.9;r:20}}
+.hotspot:hover circle.core{fill:#fff}
+.info-panel{background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;padding:24px;min-height:300px}
+.info-panel h3{font-size:22px;margin-bottom:6px}
+.info-panel .en{color:var(--muted);font-size:13px;letter-spacing:2px;margin-bottom:14px}
+.info-panel p{font-size:15px;line-height:2;color:var(--text)}
+.info-panel .keypoint{margin-top:14px;padding:12px 16px;background:rgba(251,191,36,.1);
+  border-left:4px solid var(--gold);border-radius:0 12px 12px 0;font-size:14px;line-height:1.8}
+/* 染色质→染色体 */
+.morph-stage{background:radial-gradient(600px 380px at 50% 45%, #1c1650 0%, #0d1336 70%);
+  border:1px solid var(--panel-border);border-radius:24px;padding:14px}
+.morph-stage svg{width:100%;height:auto;display:block}
+.morph-label{text-align:center;font-size:19px;font-weight:800;margin-top:6px;min-height:30px;
+  background:linear-gradient(90deg,#c4b5fd,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 测验 */
+.quiz-q{background:var(--panel);border:1px solid var(--panel-border);border-radius:20px;padding:24px;margin:18px 0}
+.quiz-q .src{font-size:12.5px;color:var(--gold);margin-bottom:10px;letter-spacing:.5px}
+.quiz-q h4{font-size:16.5px;line-height:1.8;margin-bottom:16px;font-weight:600}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;border-radius:12px;cursor:pointer;
+  border:1px solid transparent;margin-bottom:8px;background:rgba(255,255,255,.04);transition:.2s;font-size:15px;line-height:1.7}
+.opt:hover{background:rgba(167,139,250,.14)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.opt.correct{background:rgba(74,222,128,.18);border-color:#4ade80}
+.opt.wrong{background:rgba(251,113,133,.15);border-color:#fb7185}
+.explain{display:none;margin-top:12px;padding:14px 18px;border-left:4px solid var(--accent);
+  background:rgba(94,234,212,.08);border-radius:0 12px 12px 0;font-size:14.5px;line-height:1.8}
+.explain.show{display:block;animation:fadeUp .4s ease}
+.score-board{text-align:center;padding:34px}
+.score-num{font-size:56px;font-weight:800;background:linear-gradient(90deg,var(--gold),var(--pink));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+/* 小结 */
+.mindmap{display:flex;flex-direction:column;align-items:center}
+.mm-node{border-radius:16px;padding:12px 26px;font-weight:700;text-align:center;font-size:15px;
+  border:1px solid var(--panel-border);background:var(--panel)}
+.mm-root{background:linear-gradient(90deg,var(--nucl-deep),var(--pink));color:#fff;font-size:18px;border:none}
+.mm-row{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.mm-col{display:flex;flex-direction:column;gap:10px;align-items:center}
+.mm-line{width:2px;height:16px;background:rgba(255,255,255,.3)}
+.mm-leaf{font-size:13.5px;font-weight:500;color:var(--muted);padding:8px 16px}
+.verse{font-size:clamp(18px,2.6vw,26px);text-align:center;line-height:2.1;font-weight:700;
+  background:linear-gradient(90deg,var(--gold),var(--pink),#c4b5fd);
+  -webkit-background-clip:text;background-clip:text;color:transparent;padding:8px 0}
+.footer-tip{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
+.float-anim{animation:floaty 4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes dashMove{to{stroke-dashoffset:-40}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🧬 细胞核探秘 · 第3集</div>
+  <nav class="nav">
+    <button data-s="cover" class="active">🏠 导入</button>
+    <button data-s="s1">① 悬念：谁在控制细胞？</button>
+    <button data-s="s2">② 四大经典实验</button>
+    <button data-s="s3">③ 3D细胞核模型</button>
+    <button data-s="s4">④ 染色质⇌染色体</button>
+    <button data-s="s5">⑤ 高考闯关</button>
+    <button data-s="s6">⑥ 课堂小结</button>
+  </nav>
+  <div id="progressWrap"><div id="progressBar"></div></div>
+</header>
+
+<!-- ============ 封面 ============ -->
+<section id="cover" class="show">
+  <div class="series-badge">细 胞 工 厂 探 秘 系 列 · 第 3 集</div>
+  <div class="badge2">人教版 · 高中生物必修1《分子与细胞》 · 第3章 第3节</div>
+  <h1>细胞核的<span style="background:linear-gradient(90deg,#c4b5fd,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent">结构和功能</span></h1>
+  <p class="lead">上一集我们巡视了工厂的各个车间，<br>唯独最神秘的「<b style="color:#c4b5fd">厂长办公室</b>」大门紧锁。<br>今天，用四组经典实验当钥匙，揭开细胞核的秘密。</p>
+  <div class="hero">
+    <!-- 封面：3D剖面细胞核（按教材插图风格矢量化重绘） -->
+    <svg viewBox="0 0 460 380" class="float-anim">
+      <defs>
+        <radialGradient id="cv-out" cx="36%" cy="28%" r="85%">
+          <stop offset="0%" stop-color="#e9d0f5"/><stop offset="55%" stop-color="#a05fb8"/><stop offset="100%" stop-color="#4c1d6e"/>
+        </radialGradient>
+        <radialGradient id="cv-in" cx="50%" cy="42%" r="75%">
+          <stop offset="0%" stop-color="#f8eefb"/><stop offset="100%" stop-color="#c48fd6"/>
+        </radialGradient>
+      </defs>
+      <circle cx="230" cy="200" r="140" fill="url(#cv-out)"/>
+      <path d="M230,64 C300,82 352,134 368,196 C332,248 268,262 230,208 C202,172 198,102 230,64 Z" fill="url(#cv-in)" stroke="#f6ebfa" stroke-width="4"/>
+      <circle cx="252" cy="176" r="22" fill="#5e2d79"/><circle cx="244" cy="168" r="7" fill="#9b6bb5"/>
+      <g fill="#b276c9" opacity=".6"><circle cx="276" cy="140" r="3"/><circle cx="310" cy="176" r="3"/><circle cx="258" cy="120" r="3"/><circle cx="330" cy="152" r="3"/><circle cx="282" cy="205" r="3"/><circle cx="222" cy="150" r="3"/><circle cx="300" cy="205" r="3"/></g>
+      <g fill="#f0c069" stroke="#8a5a20" stroke-width="1.8">
+        <circle cx="218" cy="333" r="6"/><circle cx="146" cy="302" r="6"/><circle cx="104" cy="248" r="6"/><circle cx="96" cy="200" r="6"/><circle cx="106" cy="152" r="6"/><circle cx="138" cy="106" r="6"/><circle cx="186" cy="72" r="6"/>
+        <circle cx="296" cy="98" r="6"/><circle cx="350" cy="148" r="6"/><circle cx="308" cy="232" r="6"/>
+      </g>
+      <g fill="#8a5a20">
+        <circle cx="218" cy="333" r="2.4"/><circle cx="146" cy="302" r="2.4"/><circle cx="104" cy="248" r="2.4"/><circle cx="96" cy="200" r="2.4"/><circle cx="106" cy="152" r="2.4"/><circle cx="138" cy="106" r="2.4"/><circle cx="186" cy="72" r="2.4"/>
+        <circle cx="296" cy="98" r="2.4"/><circle cx="350" cy="148" r="2.4"/><circle cx="308" cy="232" r="2.4"/>
+      </g>
+      <ellipse cx="160" cy="130" rx="34" ry="16" fill="#ffffff" opacity=".25"/>
+    </svg>
+  </div>
+  <button class="btn" onclick="go('s1')">🚀 开始破案</button>
+  <p class="footer-tip">建议全屏（F11）投影使用 · 插图按人教版教材风格矢量化重绘</p>
+</section>
+
+<!-- ============ 环节一：悬念导入 ============ -->
+<section id="s1">
+  <h2><span class="tag">环节一</span>悬念 —— 谁在控制这座工厂？</h2>
+  <p class="sub">回顾第3.2节的"细胞工厂"：线粒体发电、核糖体生产、高尔基体打包……可是，<b style="color:#c4b5fd">谁在指挥它们？</b></p>
+
+  <div class="card light">
+    <p style="font-size:17px;line-height:2.1">
+    🕵️ <b>案件背景：</b>克隆猴"中中"和"华华"诞生时，科学家把<b>体细胞的细胞核</b>移入去核卵细胞，培育出的克隆猴，长相跟<b style="color:var(--gold)">提供细胞核的猴</b>一模一样，而不是提供卵细胞的猴。<br><br>
+    🤔 <b>这说明什么？</b>生物体的遗传性状，似乎由<b style="color:#c4b5fd">细胞核</b>决定……但这只是推测！<br>
+    📋 <b>科学讲究证据</b> —— 接下来，跟随四位科学家的经典实验，一步步搜集证据，亲自得出结论！</p>
+  </div>
+
+  <div class="card center">
+    <p style="font-size:16px;color:var(--muted);line-height:2">本节探案路线</p>
+    <p style="font-size:clamp(15px,2.2vw,20px);font-weight:800;line-height:2.2">
+      <span style="color:#c4b5fd">实验1 美西螈核移植</span> →
+      <span style="color:#f9a8d4">实验2 蝾螈受精卵横缢</span> →
+      <span style="color:#5eead4">实验3 变形虫切割</span> →
+      <span style="color:#fbbf24">实验4 伞藻嫁接与核移植</span><br>
+      <span style="color:var(--muted);font-size:14px">⇓ 汇总证据</span><br>
+      <span style="background:linear-gradient(90deg,var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent">细胞核的功能 → 细胞核的结构 → 结构与功能相适应</span>
+    </p>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('cover')">← 返回首页</button>
+    <button class="btn" onclick="go('s2')">进入实验室 →</button>
+  </div>
+</section>
+
+<!-- ============ 环节二：四大经典实验 ============ -->
+<section id="s2">
+  <h2><span class="tag">环节二</span>资料分析 —— 四大经典实验</h2>
+  <p class="sub">每个实验都按科学探究的节奏来：<b style="color:var(--accent)">看过程 → 说现象 → 得结论</b>。自己点、自己想，结论让你来宣布！</p>
+
+  <div class="exp-grid">
+
+    <!-- 实验1 美西螈 -->
+    <div class="exp-card">
+      <div class="no">1</div>
+      <h3>美西螈核移植实验</h3>
+      <div class="who">议题：皮肤颜色（性状）由细胞核还是细胞质控制？</div>
+      <div class="svgbox">
+        <svg viewBox="0 0 400 190">
+          <circle cx="52" cy="60" r="30" fill="#3a3f4a" stroke="#6b7280" stroke-width="2.5"/>
+          <circle cx="52" cy="60" r="11" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <text x="52" y="112" text-anchor="middle" font-size="12" fill="#374151">黑色美西螈胚胎细胞</text>
+          <text x="52" y="127" text-anchor="middle" font-size="11" fill="#9ca3af">（取出细胞核）</text>
+          <circle cx="52" cy="155" r="30" fill="#f8f9fb" stroke="#9ca3af" stroke-width="2.5"/>
+          <line x1="36" y1="139" x2="68" y2="171" stroke="#ef4444" stroke-width="3"/>
+          <text x="52" y="196" text-anchor="middle" font-size="12" fill="#374151">白色美西螈卵细胞（去核）</text>
+          <path d="M95,60 L130,60" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4" style="animation:dashMove 1.4s linear infinite"/>
+          <path d="M95,155 L130,155" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 4"/>
+          <circle cx="168" cy="106" r="34" fill="#f8f9fb" stroke="#9ca3af" stroke-width="2.5"/>
+          <circle cx="168" cy="106" r="12" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <text x="168" y="162" text-anchor="middle" font-size="12" fill="#374151">重组卵细胞</text>
+          <path d="M205,106 L238,106" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr1)"/>
+          <defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7c3aed"/></marker></defs>
+          <g transform="translate(308,106)">
+            <path d="M-52,-6 C-30,-22 30,-22 48,-4 C58,5 54,14 40,14 L-30,14 C-50,14 -62,4 -52,-6 Z" fill="#3a3f4a" stroke="#6b7280" stroke-width="2"/>
+            <path d="M48,-4 C64,-12 76,-8 80,2 C70,6 58,8 48,8 Z" fill="#3a3f4a" stroke="#6b7280" stroke-width="2"/>
+            <circle cx="-34" cy="-8" r="4" fill="#f8f9fb"/>
+            <rect x="-24" y="12" width="8" height="12" rx="4" fill="#3a3f4a"/><rect x="16" y="12" width="8" height="12" rx="4" fill="#3a3f4a"/>
+            <text x="8" y="46" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#111827">发育成黑色美西螈</text>
+          </g>
+        </svg>
+      </div>
+      <div class="exp-btns">
+        <button class="btn small ghost" onclick="reveal('e1p')">👁 现象是？</button>
+        <button class="btn small gold" id="e1cb" onclick="reveal('e1c')" disabled>💡 结论是？</button>
+      </div>
+      <div class="reveal phen" id="e1p">📝 <b>现象：</b>移植了<b>黑色</b>美西螈胚胎细胞核的重组卵，发育成的美西螈全部是<b>黑色</b>的。</div>
+      <div class="reveal conc" id="e1c">🏆 <b>结论1：</b>美西螈皮肤颜色这一性状由<b>细胞核</b>控制 —— 细胞核与<b>遗传</b>有关。</div>
+    </div>
+
+    <!-- 实验2 蝾螈横缢 -->
+    <div class="exp-card">
+      <div class="no">2</div>
+      <h3>蝾螈受精卵横缢实验</h3>
+      <div class="who">议题：没有细胞核，细胞还能分裂、分化吗？</div>
+      <div class="svgbox">
+        <svg viewBox="0 0 400 190">
+          <ellipse cx="70" cy="85" rx="46" ry="40" fill="#fde8ef" stroke="#be5b7f" stroke-width="2.5"/>
+          <ellipse cx="70" cy="85" rx="8" ry="40" fill="#f8d0dd" stroke="#be5b7f" stroke-width="2"/>
+          <circle cx="42" cy="85" r="9" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <text x="70" y="148" text-anchor="middle" font-size="12" fill="#374151">头发丝横缢受精卵</text>
+          <text x="70" y="164" text-anchor="middle" font-size="11" fill="#9ca3af">一侧有核，一侧无核</text>
+          <path d="M125,85 L158,85" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr2)"/>
+          <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7c3aed"/></marker></defs>
+          <g transform="translate(215,60)">
+            <circle cx="-16" cy="-12" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/><circle cx="12" cy="-14" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/>
+            <circle cx="-18" cy="14" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/><circle cx="10" cy="12" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/>
+            <text x="-2" y="50" text-anchor="middle" font-size="11.5" fill="#374151">有核侧：正常分裂</text>
+          </g>
+          <g transform="translate(215,138)">
+            <ellipse rx="34" ry="18" fill="#f1f2f4" stroke="#c9ccd2" stroke-width="2" stroke-dasharray="5 4"/>
+            <text x="0" y="4" text-anchor="middle" font-size="11.5" fill="#9ca3af">无核侧：停止分裂</text>
+          </g>
+          <path d="M255,60 L288,60" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+          <g transform="translate(330,60)">
+            <circle cx="-16" cy="-12" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/><circle cx="12" cy="-14" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/>
+            <circle cx="-18" cy="14" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/><circle cx="10" cy="12" r="13" fill="#fde8ef" stroke="#be5b7f" stroke-width="2"/>
+            <circle cx="-2" cy="0" r="7" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.6"/>
+            <text x="0" y="50" text-anchor="middle" font-size="11.5" fill="#374151">核挤入后恢复分裂</text>
+          </g>
+          <text x="330" y="140" text-anchor="middle" font-size="11" fill="#9ca3af">发育为正常胚胎（较慢）</text>
+        </svg>
+      </div>
+      <div class="exp-btns">
+        <button class="btn small ghost" onclick="reveal('e2p')">👁 现象是？</button>
+        <button class="btn small gold" id="e2cb" onclick="reveal('e2c')" disabled>💡 结论是？</button>
+      </div>
+      <div class="reveal phen" id="e2p">📝 <b>现象：</b>有核的一半能分裂、分化；无核的一半停止发育。把核挤过去后，无核侧也能发育成胚胎（只是较慢）。</div>
+      <div class="reveal conc" id="e2c">🏆 <b>结论2：</b>细胞核控制着细胞的<b>分裂和分化</b> —— 没有细胞核，细胞不能进行分裂分化。</div>
+    </div>
+
+    <!-- 实验3 变形虫 -->
+    <div class="exp-card">
+      <div class="no">3</div>
+      <h3>变形虫切割实验</h3>
+      <div class="who">议题：细胞核与日常生命活动（摄食、应激、生长）有关吗？</div>
+      <div class="svgbox">
+        <svg viewBox="0 0 400 190">
+          <g transform="translate(70,88)">
+            <path d="M-40,-10 C-46,-34 -18,-44 2,-38 C22,-44 44,-30 40,-8 C48,8 34,26 12,24 C-2,34 -30,28 -34,10 C-44,2 -44,-2 -40,-10 Z" fill="#e6f7f1" stroke="#3aa884" stroke-width="2.5"/>
+            <circle cx="0" cy="-6" r="10" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+            <circle cx="-20" cy="10" r="4" fill="#8fd6bf"/><circle cx="18" cy="12" r="4" fill="#8fd6bf"/>
+          </g>
+          <text x="70" y="148" text-anchor="middle" font-size="12" fill="#374151">变形虫（有核）</text>
+          <line x1="70" y1="30" x2="70" y2="146" stroke="#ef4444" stroke-width="0" />
+          <path d="M118,50 L118,130" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4 5"/>
+          <text x="118" y="146" text-anchor="middle" font-size="11" fill="#ef4444">切割</text>
+          <path d="M138,88 L168,88" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr3)"/>
+          <defs><marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7c3aed"/></marker></defs>
+          <g transform="translate(218,64)">
+            <path d="M-30,-8 C-34,-26 -14,-34 2,-29 C18,-34 34,-24 31,-6 C37,6 26,20 9,18 C-2,26 -23,22 -26,8 C-33,2 -33,-2 -30,-8 Z" fill="#e6f7f1" stroke="#3aa884" stroke-width="2.5"/>
+            <circle cx="0" cy="-4" r="8" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+            <text x="0" y="44" text-anchor="middle" font-size="11.5" fill="#374151">有核：存活、摄食、生长</text>
+          </g>
+          <g transform="translate(218,140)" opacity=".55">
+            <path d="M-28,-6 C-32,-22 -12,-30 2,-25 C16,-30 30,-20 28,-5 C33,5 24,17 8,15 C-2,22 -20,18 -24,6 C-30,1 -30,-2 -28,-6 Z" fill="#f1f2f4" stroke="#c9ccd2" stroke-width="2" stroke-dasharray="5 4"/>
+            <text x="0" y="4" text-anchor="middle" font-size="11.5" fill="#9ca3af">无核：很快死亡</text>
+          </g>
+          <g transform="translate(330,64)">
+            <path d="M-30,-8 C-34,-26 -14,-34 2,-29 C18,-34 34,-24 31,-6 C37,6 26,20 9,18 C-2,26 -23,22 -26,8 C-33,2 -33,-2 -30,-8 Z" fill="#e6f7f1" stroke="#3aa884" stroke-width="2.5"/>
+            <circle cx="0" cy="-4" r="8" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+            <path d="M-40,-30 C-52,-34 -56,-22 -48,-14" stroke="#7c3aed" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+            <text x="0" y="44" text-anchor="middle" font-size="11.5" fill="#374151">植入新核：恢复正常</text>
+          </g>
+          <text x="330" y="140" text-anchor="middle" font-size="11" fill="#9ca3af">（核移植 rescue）</text>
+        </svg>
+      </div>
+      <div class="exp-btns">
+        <button class="btn small ghost" onclick="reveal('e3p')">👁 现象是？</button>
+        <button class="btn small gold" id="e3cb" onclick="reveal('e3c')" disabled>💡 结论是？</button>
+      </div>
+      <div class="reveal phen" id="e3p">📝 <b>现象：</b>有核的一半能摄食、生长、对刺激有反应；无核的一半很快死亡。给无核部分重新植入细胞核，又能恢复正常生命活动。</div>
+      <div class="reveal conc" id="e3c">🏆 <b>结论3：</b>细胞核是细胞<b>生命活动</b>的控制中心 —— 摄食、应激性、生长等离不开细胞核。</div>
+    </div>
+
+    <!-- 实验4 伞藻 -->
+    <div class="exp-card">
+      <div class="no">4</div>
+      <h3>伞藻嫁接与核移植实验</h3>
+      <div class="who">议题：伞藻"伞帽"的形状由哪一部分决定？</div>
+      <div class="svgbox">
+        <svg viewBox="0 0 400 190">
+          <g transform="translate(58,100)">
+            <path d="M0,-52 C-22,-52 -30,-38 -26,-28 C-14,-36 14,-36 26,-28 C30,-38 22,-52 0,-52 Z" fill="#f9c6d3" stroke="#c2527c" stroke-width="2"/>
+            <rect x="-4" y="-30" width="8" height="52" rx="4" fill="#cfe3b8" stroke="#7a9a52" stroke-width="2"/>
+            <ellipse cx="0" cy="28" rx="10" ry="8" fill="#cfe3b8" stroke="#7a9a52" stroke-width="2"/>
+            <circle cx="0" cy="28" r="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="0" y="58" text-anchor="middle" font-size="11.5" fill="#374151">伞形帽（种甲）</text>
+          </g>
+          <g transform="translate(142,100)">
+            <path d="M0,-52 C-8,-52 -26,-46 -26,-34 C-16,-40 -8,-38 0,-42 C8,-38 16,-40 26,-34 C26,-46 8,-52 0,-52 Z" fill="#c6d9f9" stroke="#527cc2" stroke-width="2"/>
+            <rect x="-4" y="-30" width="8" height="52" rx="4" fill="#cfe3b8" stroke="#7a9a52" stroke-width="2"/>
+            <ellipse cx="0" cy="28" rx="10" ry="8" fill="#cfe3b8" stroke="#7a9a52" stroke-width="2"/>
+            <circle cx="0" cy="28" r="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="0" y="58" text-anchor="middle" font-size="11.5" fill="#374151">菊花形帽（种乙）</text>
+          </g>
+          <path d="M180,90 L212,90" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr4)"/>
+          <defs><marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7c3aed"/></marker></defs>
+          <g transform="translate(262,100)">
+            <path d="M0,-52 C-22,-52 -30,-38 -26,-28 C-14,-36 14,-36 26,-28 C30,-38 22,-52 0,-52 Z" fill="#f9c6d3" stroke="#c2527c" stroke-width="2"/>
+            <rect x="-4" y="-30" width="8" height="30" rx="4" fill="#cfe3b8" stroke="#7a9a52" stroke-width="2"/>
+            <rect x="-4" y="-2" width="8" height="24" rx="4" fill="#dbeafe" stroke="#527cc2" stroke-width="2"/>
+            <ellipse cx="0" cy="28" rx="10" ry="8" fill="#dbeafe" stroke="#527cc2" stroke-width="2"/>
+            <circle cx="0" cy="28" r="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="0" y="58" text-anchor="middle" font-size="11.5" fill="#374151">嫁接：帽随"假根"而变</text>
+          </g>
+          <g transform="translate(352,100)">
+            <path d="M0,-52 C-22,-52 -30,-38 -26,-28 C-14,-36 14,-36 26,-28 C30,-38 22,-52 0,-52 Z" fill="#f9c6d3" stroke="#c2527c" stroke-width="2"/>
+            <rect x="-4" y="-30" width="8" height="52" rx="4" fill="#dbeafe" stroke="#527cc2" stroke-width="2"/>
+            <ellipse cx="0" cy="28" rx="10" ry="8" fill="#dbeafe" stroke="#527cc2" stroke-width="2"/>
+            <circle cx="0" cy="28" r="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="0" y="58" text-anchor="middle" font-size="11.5" fill="#374151">核移植：长出种甲的帽</text>
+          </g>
+          <text x="200" y="180" text-anchor="middle" font-size="11" fill="#9ca3af">核位于假根中 —— 换成谁的核，就长出谁的帽</text>
+        </svg>
+      </div>
+      <div class="exp-btns">
+        <button class="btn small ghost" onclick="reveal('e4p')">👁 现象是？</button>
+        <button class="btn small gold" id="e4cb" onclick="reveal('e4c')" disabled>💡 结论是？</button>
+      </div>
+      <div class="reveal phen" id="e4p">📝 <b>现象：</b>嫁接后新长出的伞帽形状由<b>假根</b>（细胞核所在部位）决定；核移植后，长出的是<b>供核一方</b>的伞帽。</div>
+      <div class="reveal conc" id="e4c">🏆 <b>结论4：</b>生物体<b>形态结构的建成</b>主要与细胞核有关 —— 再次指向"细胞核控制遗传"。</div>
+    </div>
+  </div>
+
+  <div id="verdict">
+    <p style="font-size:15px;color:var(--muted);letter-spacing:2px;margin-bottom:12px">⚖️ 证据链完整 · 现在宣布结论</p>
+    <div class="big">细胞核是<b>遗传信息库</b>，<br>是细胞<b>代谢和遗传</b>的控制中心。</div>
+    <p style="margin-top:14px;color:var(--muted);font-size:14.5px">实验1、4 → 控制遗传　|　实验2、3 → 控制代谢（分裂分化、生命活动）</p>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s1')">← 上一环节</button>
+    <button class="btn" onclick="go('s3')">拆解3D细胞核模型 →</button>
+  </div>
+</section>
+
+<!-- ============ 环节三：3D细胞核模型 ============ -->
+<section id="s3">
+  <h2><span class="tag">环节三</span>拆开"总控室" —— 3D 细胞核模型</h2>
+  <p class="sub">功能如此强大，结构必然精妙。下面是按教材插图风格重绘的 <b style="color:#c4b5fd">3D 剖面细胞核模型</b>，<b>点击发光标记</b>逐一探索四大结构：</p>
+
+  <div class="model-wrap">
+    <div class="model-stage">
+      <svg viewBox="0 0 640 520" id="nucleusModel">
+        <defs>
+          <radialGradient id="nm-out" cx="36%" cy="28%" r="85%">
+            <stop offset="0%" stop-color="#e9d0f5"/><stop offset="55%" stop-color="#9a58b5"/><stop offset="100%" stop-color="#46205f"/>
+          </radialGradient>
+          <radialGradient id="nm-in" cx="50%" cy="42%" r="78%">
+            <stop offset="0%" stop-color="#f8eefb"/><stop offset="100%" stop-color="#c48fd6"/>
+          </radialGradient>
+          <radialGradient id="nm-ncl" cx="38%" cy="32%" r="80%">
+            <stop offset="0%" stop-color="#8f4fae"/><stop offset="100%" stop-color="#3d1660"/>
+          </radialGradient>
+        </defs>
+        <!-- 外层细胞质氛围 -->
+        <circle cx="320" cy="268" r="238" fill="none" stroke="rgba(167,139,250,.15)" stroke-width="2" stroke-dasharray="4 8" style="animation:dashMove 3s linear infinite"/>
+        <!-- 核主体 -->
+        <g id="nm-body">
+          <circle cx="320" cy="268" r="196" fill="url(#nm-out)"/>
+          <!-- 剖面内腔 -->
+          <path d="M320,78 C418,102 486,176 508,262 C458,334 364,352 320,278 C286,228 280,128 320,78 Z" fill="url(#nm-in)" stroke="#f6ebfa" stroke-width="5"/>
+          <!-- 染色质纤维（内腔中） -->
+          <g stroke="#a05fb8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".85">
+            <path d="M330,140 q26,-16 44,6 q16,20 44,8" stroke-dasharray="10 7" style="animation:dashMove 2.2s linear infinite"/>
+            <path d="M330,300 q30,14 52,-4 q20,-16 48,-2" stroke-dasharray="10 7" style="animation:dashMove 2.8s linear infinite"/>
+            <path d="M430,180 q24,16 14,40 q-8,22 18,34" stroke-dasharray="10 7" style="animation:dashMove 2.5s linear infinite"/>
+          </g>
+          <g fill="#8e44ad" opacity=".8">
+            <circle cx="352" cy="160" r="4"/><circle cx="400" cy="150" r="4"/><circle cx="368" cy="300" r="4"/><circle cx="420" cy="296" r="4"/><circle cx="448" cy="210" r="4"/><circle cx="330" cy="240" r="4"/>
+          </g>
+          <!-- 核仁 -->
+          <circle cx="352" cy="238" r="32" fill="url(#nm-ncl)"/>
+          <circle cx="341" cy="226" r="10" fill="#b57fd0" opacity=".8"/>
+          <!-- 核孔（外膜+剖面边缘一圈） -->
+          <g fill="#f0c069" stroke="#8a5a20" stroke-width="2.2">
+            <circle cx="303" cy="462" r="8"/><circle cx="206" cy="418" r="8"/><circle cx="146" cy="344" r="8"/><circle cx="128" cy="268" r="8"/><circle cx="142" cy="192" r="8"/><circle cx="188" cy="122" r="8"/><circle cx="256" cy="84" r="8"/>
+            <circle cx="410" cy="112" r="8"/><circle cx="486" cy="190" r="8"/><circle cx="428" cy="318" r="8"/>
+          </g>
+          <g fill="#8a5a20">
+            <circle cx="303" cy="462" r="3.2"/><circle cx="206" cy="418" r="3.2"/><circle cx="146" cy="344" r="3.2"/><circle cx="128" cy="268" r="3.2"/><circle cx="142" cy="192" r="3.2"/><circle cx="188" cy="122" r="3.2"/><circle cx="256" cy="84" r="3.2"/>
+            <circle cx="410" cy="112" r="3.2"/><circle cx="486" cy="190" r="3.2"/><circle cx="428" cy="318" r="3.2"/>
+          </g>
+          <ellipse cx="222" cy="160" rx="46" ry="22" fill="#ffffff" opacity=".22"/>
+        </g>
+        <!-- 热点标记 -->
+        <g class="hotspot" data-k="membrane">
+          <circle class="ring" cx="150" cy="330" r="16" fill="none" stroke="#5eead4" stroke-width="2.5"/>
+          <circle class="core" cx="150" cy="330" r="8" fill="#5eead4"/>
+          <text x="150" y="335" text-anchor="middle" font-size="11" font-weight="800" fill="#062a24">膜</text>
+        </g>
+        <g class="hotspot" data-k="pore">
+          <circle class="ring" cx="188" cy="122" r="16" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+          <circle class="core" cx="188" cy="122" r="8" fill="#fbbf24"/>
+          <text x="188" y="127" text-anchor="middle" font-size="11" font-weight="800" fill="#3a2503">孔</text>
+        </g>
+        <g class="hotspot" data-k="nucleolus">
+          <circle class="ring" cx="352" cy="238" r="16" fill="none" stroke="#f472b6" stroke-width="2.5"/>
+          <circle class="core" cx="352" cy="238" r="8" fill="#f472b6"/>
+          <text x="352" y="243" text-anchor="middle" font-size="11" font-weight="800" fill="#3d0a24">仁</text>
+        </g>
+        <g class="hotspot" data-k="chromatin">
+          <circle class="ring" cx="440" cy="200" r="16" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+          <circle class="core" cx="440" cy="200" r="8" fill="#a78bfa"/>
+          <text x="440" y="205" text-anchor="middle" font-size="11" font-weight="800" fill="#241043">质</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+      <h3 id="ipTitle">👆 点击模型上的发光标记</h3>
+      <div class="en" id="ipEn">CLICK A HOTSPOT TO EXPLORE</div>
+      <p id="ipText">模型共有 4 个可探索结构：<b style="color:#5eead4">核膜</b>、<b style="color:#fbbf24">核孔</b>、<b style="color:#f472b6">核仁</b>、<b style="color:#a78bfa">染色质</b>。建议按"由外向内"的顺序探索。</p>
+      <div class="keypoint" id="ipKey">💡 探索完全部 4 个结构后，试着回答：细胞核的哪一结构直接体现了"遗传信息库"这一功能？</div>
+    </div>
+  </div>
+
+  <div class="card light">
+    <b style="color:var(--gold)">⚠️ 高考高频易错：</b>
+    <ul style="line-height:2.1;margin-left:20px;font-size:15px">
+      <li>核膜是<b>双层膜</b>（4层磷脂分子），把核内物质与细胞质分开；</li>
+      <li>核孔能实现核质之间<b>频繁的物质交换和信息交流</b>，但有<b>选择性</b>——RNA、蛋白质可通过，<b style="color:#fb7185">DNA不能通过</b>；</li>
+      <li>核仁与<b>某种RNA（rRNA）的合成</b>以及<b>核糖体的形成</b>有关；蛋白质合成旺盛的细胞核仁较大；</li>
+      <li>细胞核 ≠ 细胞器（教材表述），代谢旺盛的细胞中核孔数量较多。</li>
+    </ul>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s2')">← 上一环节</button>
+    <button class="btn" onclick="go('s4')">染色质怎么变成染色体？ →</button>
+  </div>
+</section>
+
+<!-- ============ 环节四：染色质⇌染色体 ============ -->
+<section id="s4">
+  <h2><span class="tag">环节四</span>变身时刻 —— 染色质 ⇌ 染色体</h2>
+  <p class="sub">细胞分裂时，细丝状的染色质会"变身"成粗短的染色体。点击按钮，观察这场变形的三个阶段：</p>
+
+  <div class="card">
+    <div class="morph-stage">
+      <svg viewBox="0 0 800 330">
+        <!-- 阶段1：染色质（细丝状） -->
+        <g id="morph1">
+          <g stroke="#c4b5fd" stroke-width="4" fill="none" stroke-linecap="round">
+            <path d="M120,120 q60,-50 130,-20 q70,30 130,-16 q60,-42 130,-8 q60,30 120,-6" stroke-dasharray="12 8" style="animation:dashMove 2.4s linear infinite"/>
+            <path d="M140,200 q70,-40 130,-10 q60,28 130,-12 q66,-36 130,-4 q56,26 110,-8" stroke-dasharray="12 8" style="animation:dashMove 2s linear infinite"/>
+            <path d="M180,260 q60,-30 120,-6 q64,24 124,-10 q60,-30 124,-4" stroke-dasharray="12 8" style="animation:dashMove 2.8s linear infinite"/>
+          </g>
+          <g fill="#f472b6"><circle cx="250" cy="100" r="6"/><circle cx="420" cy="86" r="6"/><circle cx="310" cy="192" r="6"/><circle cx="500" cy="176" r="6"/><circle cx="300" cy="254" r="6"/></g>
+        </g>
+        <!-- 阶段2：螺旋化（变粗变短） -->
+        <g id="morph2" style="display:none">
+          <g fill="none" stroke-linecap="round">
+            <path d="M180,240 C160,180 200,120 260,110 C320,100 360,140 350,190" stroke="#a78bfa" stroke-width="14"/>
+            <path d="M180,240 C160,180 200,120 260,110 C320,100 360,140 350,190" stroke="#ddd6fe" stroke-width="6"/>
+            <path d="M420,240 C400,170 450,110 520,110 C580,110 620,160 606,220" stroke="#a78bfa" stroke-width="14"/>
+            <path d="M420,240 C400,170 450,110 520,110 C580,110 620,160 606,220" stroke="#ddd6fe" stroke-width="6"/>
+          </g>
+          <text x="400" y="300" text-anchor="middle" font-size="14" fill="#9fb0d8">高度螺旋化 · 变短变粗</text>
+        </g>
+        <!-- 阶段3：染色体（X形） -->
+        <g id="morph3" style="display:none">
+          <g transform="translate(400,160)">
+            <rect x="-64" y="-80" width="34" height="150" rx="17" fill="#a78bfa" stroke="#ddd6fe" stroke-width="3" transform="rotate(-18)"/>
+            <rect x="30" y="-80" width="34" height="150" rx="17" fill="#a78bfa" stroke="#ddd6fe" stroke-width="3" transform="rotate(18)"/>
+            <circle cx="0" cy="0" r="16" fill="#f472b6" stroke="#fbcfe8" stroke-width="3"/>
+            <text x="0" y="5" text-anchor="middle" font-size="11" font-weight="800" fill="#3d0a24">着丝粒</text>
+          </g>
+          <text x="400" y="300" text-anchor="middle" font-size="14" fill="#9fb0d8">两条姐妹染色单体 + 着丝粒</text>
+        </g>
+      </svg>
+      <div class="morph-label" id="morphLabel">染色质（分裂间期 · 细丝状）</div>
+    </div>
+    <div class="ctrl-row" style="display:flex;gap:12px;justify-content:center;margin-top:18px">
+      <button class="btn ghost" onclick="morph(-1)">← 上一步</button>
+      <button class="btn" onclick="morph(1)">螺旋化 →</button>
+    </div>
+  </div>
+
+  <div class="card light center">
+    <b style="color:var(--gold)">🧠 核心关系（必背）：</b>
+    <div class="verse" style="font-size:clamp(16px,2.3vw,23px)">染色质 和 染色体 是<b>同一物质</b>（DNA + 蛋白质）<br>在细胞<b>不同时期</b>的<b>两种存在状态</b></div>
+    <p style="color:var(--muted);font-size:14.5px;margin-top:6px">间期：细丝状（染色质，便于DNA复制和转录） ⇌ 分裂期：圆柱状/杆状（染色体，便于平均分配）</p>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s3')">← 上一环节</button>
+    <button class="btn" onclick="go('s5')">进入高考闯关 →</button>
+  </div>
+</section>
+
+<!-- ============ 环节五：高考闯关 ============ -->
+<section id="s5">
+  <h2><span class="tag">环节五</span>高考闯关 · 真题演练</h2>
+  <p class="sub">精选高考真题与湖北省内名校质检题（细胞核专题）。点击选项立即判分：</p>
+  <div id="quizBox"></div>
+  <div class="card score-board" id="scoreBoard" style="display:none">
+    <p style="font-size:18px;color:var(--muted)">你的闯关成绩</p>
+    <div class="score-num" id="scoreNum">0 / 4</div>
+    <p id="scoreMsg" style="font-size:17px;margin-top:10px"></p>
+    <button class="btn ghost" style="margin-top:18px" onclick="resetQuiz()">🔄 再闯一次</button>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s4')">← 上一环节</button>
+    <button class="btn" onclick="go('s6')">课堂小结 →</button>
+  </div>
+</section>
+
+<!-- ============ 环节六：小结 ============ -->
+<section id="s6">
+  <h2><span class="tag">环节六</span>课堂小结 —— 一张图带走</h2>
+  <p class="sub">本节的主线只有一句话：<b style="color:#c4b5fd">结构决定功能，功能反映结构</b>。</p>
+
+  <div class="card">
+    <div class="mindmap">
+      <div class="mm-node mm-root">细胞核的结构和功能</div>
+      <div class="mm-row">
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:#f472b6;color:#f472b6">功能（实验证据）</div>
+          <div class="mm-node mm-leaf">美西螈 / 伞藻 → 控制遗传</div>
+          <div class="mm-node mm-leaf">蝾螈横缢 / 变形虫 → 控制代谢</div>
+          <div class="mm-node mm-leaf" style="color:var(--gold)">遗传信息库 · 代谢和遗传的控制中心</div>
+        </div>
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:#a78bfa;color:#c4b5fd">结构（3D模型）</div>
+          <div class="mm-node mm-leaf">核膜（双层）+ 核孔（选择性通道）</div>
+          <div class="mm-node mm-leaf">核仁（与rRNA、核糖体形成有关）</div>
+          <div class="mm-node mm-leaf">染色质 = DNA + 蛋白质（遗传物质载体）</div>
+        </div>
+        <div class="mm-col">
+          <div class="mm-line"></div>
+          <div class="mm-node" style="border-color:var(--accent);color:var(--accent)">整体观念</div>
+          <div class="mm-node mm-leaf">染色质 ⇌ 染色体：同物不同态</div>
+          <div class="mm-node mm-leaf">细胞是统一的整体<br>（核质相互依存，缺一不可）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card light center">
+    <div class="verse" style="font-size:clamp(16px,2.2vw,22px)">
+      「细胞核，总控室，双层膜上开核孔；<br>核仁忙着造核糖，染色质里藏密码。」
+    </div>
+    <p style="color:var(--muted);margin-top:10px;font-size:14.5px">课后任务：用彩泥制作一个细胞核剖面模型，标出四个结构，下节课互评。</p>
+  </div>
+
+  <div class="flow-nav">
+    <button class="btn ghost" onclick="go('s5')">← 返回闯关</button>
+    <button class="btn" onclick="go('cover')">🏠 回到首页</button>
+  </div>
+</section>
+
+<script>
+/* ===== 导航 ===== */
+const ORDER=['cover','s1','s2','s3','s4','s5','s6'];
+const visited=new Set(['cover']);
+function go(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.s===id));
+  visited.add(id);
+  document.querySelectorAll('.nav button').forEach(b=>{
+    if(visited.has(b.dataset.s)&&b.dataset.s!=='cover')b.classList.add('done');
+  });
+  document.getElementById('progressBar').style.width=Math.round((visited.size-1)/(ORDER.length-1)*100)+'%';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.s));
+
+/* ===== 实验启发式揭示 ===== */
+let concCount=0;
+function reveal(id){
+  const el=document.getElementById(id);
+  if(el.classList.contains('show'))return;
+  el.classList.add('show');
+  const n=id.slice(1,2);
+  if(id.endsWith('p')){
+    document.getElementById('e'+n+'cb').disabled=false;
+  }else{
+    concCount++;
+    if(concCount>=4){
+      setTimeout(()=>{
+        const v=document.getElementById('verdict');
+        v.classList.add('show');
+        v.scrollIntoView({behavior:'smooth',block:'center'});
+      },500);
+    }
+  }
+}
+
+/* ===== 3D细胞核热点 ===== */
+const INFO={
+  membrane:{t:'核膜',en:'NUCLEAR ENVELOPE',c:'#5eead4',
+    txt:'<b>双层膜</b>结构（外膜+内膜，共4层磷脂分子），把核内物质与细胞质分隔开，使核内环境相对稳定。外膜常与<b>粗面内质网</b>相连，其表面也附着核糖体——回忆一下3.2节的内质网！',
+    key:'💡 结构与功能相适应：双层屏障保证"遗传信息库"的安全与独立。'},
+  pore:{t:'核孔',en:'NUCLEAR PORE',c:'#fbbf24',
+    txt:'核膜上的通道（核孔复合体），实现核质之间<b>频繁的物质交换和信息交流</b>：RNA、蛋白质等大分子可以选择性地进出。注意：<b style="color:#fb7185">DNA 不会通过核孔离开细胞核</b>！',
+    key:'💡 代谢越旺盛的细胞，核孔越多——交流越频繁，通道越密集。'},
+  nucleolus:{t:'核仁',en:'NUCLEOLUS',c:'#f472b6',
+    txt:'核内最显眼的小球，与<b>某种RNA（rRNA）的合成</b>以及<b>核糖体的形成</b>有关。蛋白质合成旺盛的细胞（如分泌细胞），核仁往往又大又多。',
+    key:'💡 串联记忆：核仁 → rRNA → 核糖体 → 蛋白质合成机器。'},
+  chromatin:{t:'染色质',en:'CHROMATIN',c:'#a78bfa',
+    txt:'由 <b>DNA 和蛋白质</b>组成，DNA 是遗传信息的载体——所以染色质就是"遗传信息库"里存放图纸的档案。分裂间期呈细丝状；分裂期高度螺旋化成为<b>染色体</b>。',
+    key:'💡 这就是"遗传信息库"的结构基础：遗传信息就储存在染色质的 DNA 上。'}
+};
+let explored=new Set();
+document.querySelectorAll('.hotspot').forEach(h=>{
+  h.addEventListener('click',()=>{
+    const d=INFO[h.dataset.k];
+    document.getElementById('ipTitle').innerHTML=`<span style="color:${d.c}">●</span> ${d.t}`;
+    document.getElementById('ipEn').textContent=d.en;
+    document.getElementById('ipText').innerHTML=d.txt;
+    document.getElementById('ipKey').innerHTML=d.key;
+    explored.add(h.dataset.k);
+    if(explored.size===4){
+      document.getElementById('ipKey').innerHTML+='<br><br>🎉 <b>全部探索完成！</b>答案是：<b>染色质</b>——DNA 就藏在染色质里，所以细胞核才是"遗传信息库"。';
+    }
+  });
+});
+
+/* ===== 染色质⇌染色体 ===== */
+let morphStage=1;
+const MORPH={
+  1:{label:'染色质（分裂间期 · 细丝状）',btn:'螺旋化 →'},
+  2:{label:'正在螺旋化：变短、变粗 …',btn:'继续 →'},
+  3:{label:'染色体（分裂期 · X形，含两条姐妹染色单体）',btn:'↺ 解螺旋回到染色质'}
+};
+function morph(dir){
+  morphStage+=dir;
+  if(morphStage>3)morphStage=1;
+  if(morphStage<1)morphStage=3;
+  for(let i=1;i<=3;i++)document.getElementById('morph'+i).style.display=(i===morphStage?'block':'none');
+  document.getElementById('morphLabel').textContent=MORPH[morphStage].label;
+  document.querySelector('.ctrl-row .btn:not(.ghost)').textContent=MORPH[morphStage].btn;
+}
+
+/* ===== 高考闯关 ===== */
+const QUIZ=[
+ {src:'高考真题改编 · 细胞核的结构',
+  q:'下列关于细胞核结构的叙述，正确的是（　　）',
+  opts:['核膜是单层膜，把核内物质与细胞质分开',
+        'DNA 可以通过核孔自由进出细胞核',
+        '核仁与某种 RNA 的合成以及核糖体的形成有关',
+        '染色质和染色体是细胞中两种不同的物质'],
+  ans:2,
+  exp:'<b>答案 C。</b> A 错：核膜是双层膜；B 错：核孔有选择性，DNA 不能出核；D 错：染色质和染色体是同一物质（DNA+蛋白质）在不同时期的两种存在状态。'},
+ {src:'湖北武汉质检改编 · 美西螈核移植实验',
+  q:'科学家将黑色美西螈胚胎细胞的细胞核，移植到白色美西螈的去核卵细胞中，发育成的美西螈全为黑色。该实验直接说明（　　）',
+  opts:['细胞核是细胞代谢的控制中心',
+        '细胞核控制着生物的遗传性状',
+        '细胞质决定生物的肤色',
+        '细胞核是遗传信息库，DNA 储存于染色质上'],
+  ans:1,
+  exp:'<b>答案 B。</b> 该实验的因变量是"肤色"这一遗传性状，供核一方决定后代颜色，直接说明细胞核控制遗传。A 是蝾螈横缢、变形虫实验的方向；D 表述正确但超出了本实验能"直接"得出的范围。'},
+ {src:'高考真题改编 · 变形虫切割实验',
+  q:'将变形虫切成两半，有核的一半能摄食、生长、对刺激作出反应，无核的一半很快死亡；若给无核部分植入细胞核，则恢复生命活动。该实验最能说明（　　）',
+  opts:['细胞核是遗传信息库',
+        '细胞核是细胞生命活动的控制中心',
+        '细胞质为细胞核提供物质和能量',
+        '变形虫的细胞核可以无限分裂'],
+  ans:1,
+  exp:'<b>答案 B。</b> 有无细胞核直接决定摄食、应激、生长等生命活动的有无，且"植核复活"形成自身对照，说明细胞核控制细胞的生命活动（代谢）。'},
+ {src:'湖北名校联考改编 · 染色质与染色体',
+  q:'关于染色质和染色体的叙述，正确的是（　　）',
+  opts:['染色质只存在于细胞核中，染色体只存在于细胞质中',
+        '染色质和染色体是同一物质在细胞不同时期的两种存在状态',
+        '染色体解螺旋成染色质有利于遗传物质的平均分配',
+        '染色质的主要成分是 DNA 和 RNA'],
+  ans:1,
+  exp:'<b>答案 B。</b> A 错：二者都在细胞核内（分裂期核膜消失后染色体位于细胞中央，但本质同物）；C 错：螺旋化成染色体才有利于平均分配，解螺旋是分裂结束后的状态；D 错：主要成分是 DNA 和蛋白质。'}
+];
+let answered=0,score=0;
+function buildQuiz(){
+  const box=document.getElementById('quizBox');box.innerHTML='';
+  answered=0;score=0;
+  document.getElementById('scoreBoard').style.display='none';
+  QUIZ.forEach((it,qi)=>{
+    const div=document.createElement('div');div.className='quiz-q';
+    let optsHtml='';
+    it.opts.forEach((o,oi)=>{
+      optsHtml+=`<div class="opt" data-q="${qi}" data-o="${oi}"><span class="k">${'ABCD'[oi]}</span><span>${o}</span></div>`;
+    });
+    div.innerHTML=`<div class="src">📌 ${it.src}</div><h4>${qi+1}. ${it.q}</h4>${optsHtml}<div class="explain" id="exp${qi}">${it.exp}</div>`;
+    box.appendChild(div);
+  });
+  box.querySelectorAll('.opt').forEach(el=>{
+    el.onclick=()=>{
+      const q=+el.dataset.q,o=+el.dataset.o;
+      const parent=el.parentElement;
+      if(parent.dataset.done)return;
+      parent.dataset.done='1';
+      const correct=QUIZ[q].ans;
+      parent.querySelectorAll('.opt').forEach((x,xi)=>{
+        if(xi===correct)x.classList.add('correct');
+        else if(xi===o)x.classList.add('wrong');
+        x.style.cursor='default';
+      });
+      document.getElementById('exp'+q).classList.add('show');
+      answered++; if(o===correct)score++;
+      if(answered===QUIZ.length){
+        const sb=document.getElementById('scoreBoard');
+        sb.style.display='block';
+        document.getElementById('scoreNum').textContent=`${score} / ${QUIZ.length}`;
+        const msg=score===4?'🏆 满分！细胞核这节稳了！':score===3?'🌟 很棒！再看看解析巩固一下':score===2?'💪 过半了，回到3D模型环节再探索一遍':'📚 别灰心，回到四大实验重新破案';
+        document.getElementById('scoreMsg').textContent=msg;
+        sb.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    };
+  });
+}
+function resetQuiz(){buildQuiz();window.scrollTo({top:0,behavior:'smooth'});}
+buildQuiz();
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/nucleus/workbuddy/" data-file="workbuddy/3.3细胞核的结构和功能.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

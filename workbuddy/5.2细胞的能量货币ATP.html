@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.2 细胞的能量"货币"ATP | 高中生物必修一</title>
+<style>
+:root{
+  --gold:#f0b429; --gold-d:#b45309; --gold-l:#fde68a;
+  --cyan:#38bdf8; --green:#34d399; --red:#f87171; --violet:#a78bfa;
+  --bg1:#0a0f1e; --bg2:#101a30; --ink:#f1f5f9; --ink2:#9fb0c8;
+  --card:rgba(255,255,255,.045); --line:rgba(240,180,41,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  background:
+    radial-gradient(1000px 480px at 82% -6%,rgba(240,180,41,.08),transparent 60%),
+    radial-gradient(760px 520px at 8% 40%,rgba(56,189,248,.06),transparent 60%),
+    linear-gradient(172deg,var(--bg1),var(--bg2) 62%,#0b1224);
+  color:var(--ink); overflow-x:hidden;
+}
+.star{position:fixed;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(240,180,41,.8),transparent 70%);animation:starFloat linear infinite}
+@keyframes starFloat{0%{transform:translateY(104vh);opacity:0}12%{opacity:.7}88%{opacity:.6}100%{transform:translateY(-8vh);opacity:0}}
+#pbar{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-l));box-shadow:0 0 12px rgba(240,180,41,.7);transition:width .2s}
+#dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:13px}
+#dots a{width:11px;height:11px;border-radius:50%;background:rgba(240,180,41,.18);border:2px solid rgba(255,255,255,.45);position:relative;transition:.25s;display:block}
+#dots a:hover,#dots a.on{background:var(--gold);transform:scale(1.3);box-shadow:0 0 10px rgba(240,180,41,.8)}
+#dots a span{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;background:#16213a;border:1px solid var(--line);color:var(--gold-l);font-size:12px;padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:.2s}
+#dots a:hover span{opacity:1}
+/* ---------- 版式 ---------- */
+section{max-width:1080px;margin:0 auto;padding:78px 24px;position:relative;z-index:2}
+.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;padding:30px 34px;box-shadow:0 10px 36px rgba(0,0,0,.32);margin-bottom:24px;
+  opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.card.in{opacity:1;transform:none}
+.secnum{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+.secnum .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--gold-d),var(--gold));color:#2a1c00;font-weight:900;font-size:16px;box-shadow:0 4px 14px rgba(240,180,41,.4)}
+.secnum .t{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--gold)}
+h2{font-size:29px;margin-bottom:8px;color:var(--gold-l);letter-spacing:1px}
+h3{font-size:18px;color:var(--gold-l);margin:16px 0 10px}
+.sub{color:var(--ink2);font-size:15px;line-height:1.85}
+.hl{background:linear-gradient(transparent 60%,rgba(240,180,41,.35) 60%);font-weight:700;color:var(--gold-l);padding:0 2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,#d97706,var(--gold));color:#2a1c00;font-size:15px;font-weight:800;
+  padding:11px 26px;border-radius:999px;box-shadow:0 6px 18px rgba(217,119,6,.4);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(240,180,41,.5)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:rgba(255,255,255,.05);color:var(--gold-l);border:1.5px solid var(--line);box-shadow:none}
+.btn.cyan{background:linear-gradient(135deg,#0284c7,var(--cyan));color:#04222b;box-shadow:0 6px 18px rgba(56,189,248,.35)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.panel{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:15px 19px}
+.figure{background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:16px}
+.figure .cap{font-size:12.5px;color:#7f92ad;text-align:center;margin-top:10px;border-top:1px dashed rgba(255,255,255,.1);padding-top:8px}
+.grid2{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:start}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.reveal{border-left:4px solid var(--cyan);background:rgba(56,189,248,.07);border-radius:12px;padding:14px 18px;margin-top:12px;display:none;font-size:15px;line-height:1.85}
+.reveal.show{display:block;animation:pop .5s}
+@keyframes pop{0%{opacity:0;transform:scale(.96)}100%{opacity:1;transform:none}}
+.concl{background:linear-gradient(135deg,rgba(240,180,41,.13),rgba(240,180,41,.04));border:1.5px solid var(--gold);border-radius:16px;
+  padding:16px 22px;font-size:16px;line-height:1.95;display:none;margin-top:16px}
+.concl.show{display:block;animation:pop .6s}
+.concl b{color:var(--gold-l)}
+/* ---------- HERO 萤火虫 ---------- */
+#hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+#hero h1{font-size:48px;letter-spacing:3px;margin:12px 0 6px;
+  background:linear-gradient(120deg,#fffbe8,var(--gold) 50%,#d97706);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 24px rgba(240,180,41,.35))}
+#hero .en{color:#8ea0bd;letter-spacing:5px;font-size:13px}
+#hero .sub2{font-size:17px;color:var(--ink2);margin:16px 0 26px;line-height:2.1}
+.badge-series{display:inline-block;background:rgba(240,180,41,.09);border:1.5px solid var(--line);color:var(--gold);
+  padding:6px 18px;border-radius:999px;font-size:13.5px;font-weight:700;letter-spacing:2px}
+.flyGlow{animation:flyPulse 2.6s ease-in-out infinite}
+@keyframes flyPulse{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.floaty{animation:floaty 4s ease-in-out infinite}
+/* ---------- ATP 分子模型 ---------- */
+.hot{cursor:pointer;transition:.25s}
+.hot:hover{filter:brightness(1.25) drop-shadow(0 0 8px rgba(240,180,41,.6))}
+.hot.sel{filter:brightness(1.3) drop-shadow(0 0 12px rgba(240,180,41,.9))}
+#p3g{transition:transform 1.4s cubic-bezier(.5,.05,.3,1),opacity 1.2s}
+#p3g.away{transform:translate(120px,-70px);opacity:.55}
+#bondHE2{transition:opacity .5s}
+#burst{opacity:0;transform-box:fill-box;transform-origin:center}
+#burst.on{animation:burstPop 1s ease}
+@keyframes burstPop{0%{opacity:0;transform:scale(.3)}40%{opacity:1;transform:scale(1.35)}100%{opacity:0;transform:scale(1.1)}}
+.formula span{display:inline-block;opacity:.15;transition:.5s;font-weight:900}
+.formula.lit span{opacity:1}
+/* ---------- 循环 ---------- */
+.loopDot{opacity:.9}
+/* ---------- 类比条 ---------- */
+.money-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.money-grid{grid-template-columns:1fr}}
+.money{background:linear-gradient(165deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.13);
+  border-radius:16px;padding:20px;text-align:center;transition:.25s}
+.money:hover{transform:translateY(-5px);border-color:var(--gold)}
+.money .emo{font-size:44px;display:block;margin-bottom:8px}
+.money .mt{font-weight:800;font-size:16px;color:var(--gold-l)}
+.money .mc{font-size:13px;color:var(--ink2);line-height:1.75;margin-top:6px}
+/* ---------- 闯关 ---------- */
+.quiz .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.045);border:1.5px solid rgba(255,255,255,.13);border-radius:12px;
+  padding:11px 16px;margin:8px 0;font-size:14.5px;cursor:pointer;font-family:inherit;transition:.18s;color:var(--ink)}
+.quiz .opt:hover{border-color:var(--gold);transform:translateX(4px)}
+.quiz .opt b{color:var(--gold);margin-right:6px}
+.quiz .opt.right{background:rgba(52,211,153,.14);border-color:var(--green);color:#a7f3d0;font-weight:700}
+.quiz .opt.wrong{background:rgba(248,113,113,.14);border-color:var(--red);color:#fecaca;animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.why{font-size:13.5px;color:#a7f3d0;margin-top:6px;display:none;background:rgba(52,211,153,.07);border-radius:10px;padding:8px 14px;line-height:1.8}
+.why.show{display:block;animation:pop .4s}
+#scoreBox{text-align:center;display:none;padding:26px}
+#scoreBox .big{font-size:44px;font-weight:900;color:var(--gold)}
+.slogan{background:linear-gradient(120deg,#2a1c00,#92610a 55%,#b45309);border:1px solid var(--gold);color:#fef3c7;border-radius:18px;
+  padding:24px 30px;font-size:20px;line-height:2.15;text-align:center;letter-spacing:1px;box-shadow:0 12px 34px rgba(146,97,10,.45)}
+.slogan small{display:block;font-size:13px;opacity:.75;letter-spacing:4px;margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(80px);background:#16213a;border:1px solid var(--gold);color:var(--gold-l);
+  padding:12px 26px;border-radius:999px;font-size:15px;z-index:120;opacity:0;transition:.35s;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footer-note{text-align:center;color:#66788f;font-size:13px;padding:30px 0 60px}
+</style>
+</head>
+<body>
+<div id="pbar"></div>
+<nav id="dots">
+  <a href="#hero"><span>萤火之夜</span></a>
+  <a href="#s1"><span>问题探讨·发光实验</span></a>
+  <a href="#s2"><span>ATP 结构</span></a>
+  <a href="#s3"><span>断键放能</span></a>
+  <a href="#s4"><span>ATP⇌ADP 循环</span></a>
+  <a href="#s5"><span>能量流通网</span></a>
+  <a href="#s6"><span>高考闯关</span></a>
+  <a href="#s7"><span>小结</span></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div>
+    <div class="badge-series">细胞探秘系列 · 第 7 集 · 必修一 第五章 第 2 节</div>
+    <h1>细胞的能量"货币" ATP</h1>
+    <div class="en">ATP · THE ENERGY CURRENCY OF THE CELL</div>
+    <svg viewBox="0 0 360 200" width="340" class="floaty" style="margin:20px auto 6px;display:block">
+      <!-- 夜空草地 -->
+      <path d="M0 178 Q60 160 120 172 Q190 184 250 168 Q310 156 360 174 L360 200 L0 200 Z" fill="#14251a"/>
+      <g stroke="#1d3a24" stroke-width="3" stroke-linecap="round"><path d="M40 178 q4 -18 -2 -28"/><path d="M90 176 q-4 -16 4 -26"/><path d="M300 172 q4 -16 -2 -26"/><path d="M330 176 q-3 -14 3 -24"/></g>
+      <!-- 萤火虫 -->
+      <g>
+        <circle class="flyGlow" cx="90" cy="80" r="16" fill="rgba(253,230,138,.35)"/>
+        <circle class="flyGlow" cx="90" cy="80" r="6" fill="#fde68a"/>
+        <circle class="flyGlow" cx="220" cy="52" r="13" fill="rgba(253,230,138,.3)" style="animation-delay:.8s"/>
+        <circle class="flyGlow" cx="220" cy="52" r="5" fill="#fde68a" style="animation-delay:.8s"/>
+        <circle class="flyGlow" cx="300" cy="105" r="14" fill="rgba(253,230,138,.32)" style="animation-delay:1.5s"/>
+        <circle class="flyGlow" cx="300" cy="105" r="5.5" fill="#fde68a" style="animation-delay:1.5s"/>
+        <circle class="flyGlow" cx="160" cy="120" r="12" fill="rgba(253,230,138,.3)" style="animation-delay:2s"/>
+        <circle class="flyGlow" cx="160" cy="120" r="4.5" fill="#fde68a" style="animation-delay:2s"/>
+      </g>
+      <text x="180" y="34" font-size="14" fill="#9fb0c8" text-anchor="middle" font-style="italic">"银烛秋光冷画屏，轻罗小扇扑流萤"</text>
+    </svg>
+    <p class="sub2">萤火虫的点点荧光，肌肉的一次收缩，大脑的一次思考……<br>细胞做的每件事都要花钱，而它只收一种"现金"——<b style="color:var(--gold-l)">ATP</b>。</p>
+    <button class="btn" onclick="document.getElementById('s1').scrollIntoView({behavior:'smooth'})">💰 进入细胞银行</button>
+  </div>
+</section>
+
+<!-- ============ 问题探讨 ============ -->
+<section id="s1">
+  <div class="card">
+    <div class="secnum"><span class="n">1</span><span class="t">问题探讨 · 教材 P86</span></div>
+    <h2>🧪 荧光熄灭之后：谁能让它重新点亮？</h2>
+    <p class="sub">科学家把萤火虫的<b>发光器</b>取下、干燥研磨成粉。粉末能发光，但放着放着，荧光消失了——能量用完了。现在有两瓶试剂，<b>你觉得哪瓶能让荧光重现？动手滴加试试：</b></p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 460 280" width="100%">
+        <!-- 试管 -->
+        <path d="M190 60 L190 220 Q190 238 208 238 L252 238 Q270 238 270 220 L270 60" fill="rgba(255,255,255,.07)" stroke="#94a3b8" stroke-width="3"/>
+        <rect x="195" y="130" width="70" height="104" rx="4" fill="rgba(148,163,184,.25)"/>
+        <text x="230" y="186" font-size="12.5" fill="#cbd5e1" text-anchor="middle">发光器粉末</text>
+        <!-- 荧光 -->
+        <g id="glowG" opacity="0">
+          <circle cx="230" cy="182" r="46" fill="rgba(253,230,138,.22)"/>
+          <circle cx="230" cy="182" r="26" fill="rgba(253,230,138,.4)"/>
+        </g>
+        <text id="glowTxt" x="230" y="40" font-size="14" fill="#fde68a" text-anchor="middle" font-weight="800"></text>
+        <!-- 滴管提示 -->
+        <text x="60" y="90" font-size="26">🧪</text>
+        <text x="60" y="112" font-size="12" fill="#9fb0c8">A. 葡萄糖溶液</text>
+        <text x="330" y="90" font-size="26">💰</text>
+        <text x="330" y="112" font-size="12" fill="#9fb0c8">B. ATP 溶液</text>
+      </svg>
+      <div class="cap">图 1 · 萤火虫发光器粉末实验（经典科学实验重演）</div>
+      <div class="btnrow" style="justify-content:center">
+        <button class="btn ghost" onclick="drop('glu')">滴加葡萄糖溶液</button>
+        <button class="btn" onclick="drop('atp')">滴加 ATP 溶液</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="panel" id="dropMsg" style="min-height:74px;font-size:15px;line-height:1.85">
+        🎤 等待你的实验操作——想想：葡萄糖不是"主要能源物质"吗？
+      </div>
+      <div class="concl" id="dropConcl">
+        <b>📌 结论：</b>葡萄糖<b>不能</b>直接让荧光恢复，ATP 能！<br>
+        糖类、脂肪中的能量就像<b>大额存单</b>，必须先到"细胞银行"兑换成 ATP 这张<b>现金</b>才能花。<br>
+        <span class="hl">ATP 是驱动细胞生命活动的直接能源物质。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATP 结构 ============ -->
+<section id="s2">
+  <div class="card">
+    <div class="secnum"><span class="n">2</span><span class="t">结构认知 · 结构决定功能</span></div>
+    <h2>🔬 拆开 ATP：一枚"现金"的内部构造</h2>
+    <p class="sub">ATP 全名<span class="hl">腺苷三磷酸</span>，结构简式 <b>A-P~P~P</b>。点击分子模型上的四个发光部件，逐一认识它们：</p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 620 300" width="100%">
+        <defs>
+          <linearGradient id="adeG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c4b5fd"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+          <linearGradient id="ribG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fca5a5"/><stop offset="100%" stop-color="#dc2626"/></linearGradient>
+          <radialGradient id="phoG" cx="38%" cy="32%" r="80%"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#d97706"/></radialGradient>
+        </defs>
+        <!-- 腺嘌呤（双环） -->
+        <g class="hot" id="hot1" onclick="showHot(1)">
+          <polygon points="70,120 118,92 166,120 166,176 118,204 70,176" fill="url(#adeG)" stroke="#ddd6fe" stroke-width="2.5"/>
+          <polygon points="166,120 208,98 244,120 232,158 166,176" fill="url(#adeG)" stroke="#ddd6fe" stroke-width="2.5" opacity=".92"/>
+          <text x="118" y="152" font-size="15" fill="#fff" text-anchor="middle" font-weight="800">腺嘌呤</text>
+          <text x="86" y="120" font-size="11" fill="#ede9fe">N</text>
+          <text x="150" y="120" font-size="11" fill="#ede9fe">N</text>
+          <text x="196" y="126" font-size="11" fill="#ede9fe">N</text>
+          <text x="232" y="146" font-size="11" fill="#ede9fe">N</text>
+          <text x="96" y="192" font-size="11" fill="#ede9fe">N</text>
+        </g>
+        <!-- 连接键 -->
+        <line x1="244" y1="140" x2="272" y2="148" stroke="#cbd5e1" stroke-width="3"/>
+        <!-- 核糖（五边形） -->
+        <g class="hot" id="hot2" onclick="showHot(2)">
+          <polygon points="300,116 344,132 356,178 322,206 282,188 276,146" fill="url(#ribG)" stroke="#fecaca" stroke-width="2.5"/>
+          <text x="316" y="168" font-size="15" fill="#fff" text-anchor="middle" font-weight="800">核糖</text>
+          <circle cx="330" cy="112" r="9" fill="#fff" opacity=".85"/><text x="330" y="116" font-size="10" fill="#991b1b" text-anchor="middle" font-weight="800">O</text>
+        </g>
+        <!-- P1 普通键 -->
+        <line x1="358" y1="150" x2="392" y2="150" stroke="#cbd5e1" stroke-width="3"/>
+        <!-- 磷酸基团 P1 -->
+        <g class="hot" id="hot3" onclick="showHot(3)">
+          <circle cx="416" cy="150" r="24" fill="url(#phoG)" stroke="#fef3c7" stroke-width="2.5"/>
+          <text x="416" y="155" font-size="16" fill="#78350f" text-anchor="middle" font-weight="900">P</text>
+          <circle cx="492" cy="150" r="24" fill="url(#phoG)" stroke="#fef3c7" stroke-width="2.5"/>
+          <text x="492" y="155" font-size="16" fill="#78350f" text-anchor="middle" font-weight="900">P</text>
+        </g>
+        <!-- 高能键1 -->
+        <g class="hot" id="hot4" onclick="showHot(4)">
+          <path id="bondHE1" d="M440 150 q6 -12 12 0 q6 12 12 0" stroke="#f87171" stroke-width="4" fill="none"/>
+          <text x="452" y="128" font-size="15" fill="#f87171" font-weight="900">~</text>
+        </g>
+        <!-- 高能键2 + P3（可脱落） -->
+        <g id="p3g">
+          <path id="bondHE2" d="M516 150 q6 -12 12 0 q6 12 12 0" stroke="#f87171" stroke-width="4" fill="none"/>
+          <text x="528" y="128" font-size="15" fill="#f87171" font-weight="900">~</text>
+          <circle cx="566" cy="150" r="24" fill="url(#phoG)" stroke="#fef3c7" stroke-width="2.5"/>
+          <text x="566" y="155" font-size="16" fill="#78350f" text-anchor="middle" font-weight="900">P</text>
+        </g>
+        <!-- 能量爆闪 -->
+        <g id="burst"><path d="M566 96 l8 22 22 4 -16 16 4 22 -18 -12 -18 12 4 -22 -16 -16 22 -4Z" fill="#fde047" stroke="#f59e0b" stroke-width="2"/></g>
+        <!-- 结构简式 -->
+        <g class="formula" id="formula" font-size="26" fill="#f1f5f9">
+          <text x="180" y="264"><span>A</span><span> - </span><span>P</span><span fill="#f87171"> ~ </span><span>P</span><span fill="#f87171"> ~ </span><span>P</span></text>
+          <text x="330" y="264" font-size="13" fill="#9fb0c8"><span>A=腺苷　~=特殊的化学键（高能磷酸键）</span></text>
+        </g>
+      </svg>
+      <div class="cap">图 2 · ATP 分子结构模型（腺嘌呤 + 核糖 + 三个磷酸基团）</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">📇 部件档案</h3>
+      <div class="panel" id="hotPanel" style="min-height:170px;font-size:14.5px;line-height:1.9">
+        👆 点击左侧分子模型上的部件查看说明。<br><br>
+        <span style="color:#7f92ad;font-size:13px">提示：先认识结构，下一环节我们现场"花钱"——把末端磷酸剪掉！</span>
+      </div>
+      <div class="btnrow">
+        <button class="btn ghost" onclick="lightFormula()">✨ 点亮结构简式 A-P~P~P</button>
+        <button class="btn" onclick="document.getElementById('s3').scrollIntoView({behavior:'smooth'})">✂ 去"花钱" →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 断键放能 ============ -->
+<section id="s3">
+  <div class="card">
+    <div class="secnum"><span class="n">3</span><span class="t">机理动画</span></div>
+    <h2>✂ 花钱现场：ATP 水解，耦联供能</h2>
+    <p class="sub">在酶的催化下，ATP 与水反应生成 ADP 和无机磷酸。<b>能量释放来自水解整体反应的自由能降低，不是断开化学键本身释放能量。</b>反应涉及断键与成键；断键本身需要能量。生化标准条件下 ΔG°′ 约为 −30.5 kJ/mol，细胞内的实际数值受浓度等条件影响。点击按钮观察反应示意：</p>
+  </div>
+  <div class="card" style="text-align:center">
+    <div class="btnrow" style="justify-content:center">
+      <button class="btn" id="btnCut" onclick="cutP3()">观察 ATP 水解</button>
+      <button class="btn ghost" onclick="restoreP3()">↺ 复原（重新合成 ATP）</button>
+    </div>
+    <div class="panel" id="cutMsg" style="font-size:15px;line-height:1.9;min-height:60px;text-align:left">
+      💰 ATP 这张"百元钞"准备找零：剪掉一个 P，变成 ADP（二磷酸腺苷）+ Pi（磷酸）+ 可用能量。
+    </div>
+    <div class="concl" id="cutConcl">
+      <b>📌 为什么选 ATP 当"现金"？</b>高能磷酸键储能适中：<b>容易断</b>（随用随取），又<b>不至于太脆</b>（能安全携带）。<br>
+      花出去的能量用于：肌肉收缩、主动运输、物质合成、大脑思考、生物发电发光……许多吸能过程通过与 ATP 水解等放能过程耦联而进行。
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATP-ADP 循环 ============ -->
+<section id="s4">
+  <div class="card">
+    <div class="secnum"><span class="n">4</span><span class="t">动态平衡</span></div>
+    <h2>♻️ ATP ⇌ ADP：永不停歇的"换钞流水线"</h2>
+    <p class="sub">细胞里 ATP 含量很少，但转化极快——一个成年人静止一天就要"周转"约 40 kg ATP（剧烈运动时每分钟约 0.5 kg）！花钱（水解）和印钞（合成）同时高速运转，维持<span class="hl">动态平衡</span>。</p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 480 370" width="100%">
+        <defs><marker id="arwG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#f0b429"/></marker></defs>
+        <!-- 循环轨道 -->
+        <ellipse cx="240" cy="185" rx="150" ry="120" fill="none" stroke="rgba(240,180,41,.25)" stroke-width="3" stroke-dasharray="8 6"/>
+        <!-- ATP 节点 -->
+        <rect x="180" y="40" width="120" height="50" rx="14" fill="rgba(240,180,41,.15)" stroke="#f0b429" stroke-width="2.5"/>
+        <text x="240" y="71" font-size="20" font-weight="900" fill="#fde68a" text-anchor="middle">ATP</text>
+        <!-- ADP 节点 -->
+        <rect x="165" y="285" width="150" height="50" rx="14" fill="rgba(56,189,248,.12)" stroke="#38bdf8" stroke-width="2.5"/>
+        <text x="240" y="316" font-size="18" font-weight="900" fill="#7dd3fc" text-anchor="middle">ADP + Pi</text>
+        <!-- 左侧：水解 -->
+        <path d="M96 130 Q64 185 96 240" stroke="#f87171" stroke-width="4" fill="none" marker-end="url(#arwG)"/>
+        <text x="30" y="176" font-size="13" fill="#fca5a5" font-weight="800">水解酶</text>
+        <text x="16" y="196" font-size="12" fill="#fca5a5">能量输出 ↓</text>
+        <!-- 右侧：合成 -->
+        <path d="M384 240 Q416 185 384 130" stroke="#34d399" stroke-width="4" fill="none" marker-end="url(#arwG)"/>
+        <text x="398" y="176" font-size="13" fill="#6ee7b7" font-weight="800">合成酶</text>
+        <text x="392" y="196" font-size="12" fill="#6ee7b7">能量输入 ↑</text>
+        <!-- 流动能量珠 -->
+        <circle class="loopDot" r="7" fill="#fde047"><animateMotion dur="4s" repeatCount="indefinite" path="M180 65 Q90 100 96 130 Q64 185 96 240 Q110 290 200 310"/></circle>
+        <circle class="loopDot" r="7" fill="#6ee7b7"><animateMotion dur="4s" repeatCount="indefinite" path="M280 310 Q370 290 384 240 Q416 185 384 130 Q370 90 300 65"/></circle>
+        <!-- 能量来源/去向标注 -->
+        <text x="240" y="160" font-size="12.5" fill="#9fb0c8" text-anchor="middle">花钱 ← 水解 → 印钞</text>
+        <text x="240" y="180" font-size="12.5" fill="#9fb0c8" text-anchor="middle">吸能反应　　放能反应</text>
+        <text x="240" y="200" font-size="12.5" fill="#7f92ad" text-anchor="middle">（肌肉收缩等） （呼吸/光合）</text>
+      </svg>
+      <div class="cap">图 3 · ATP 与 ADP 的相互转化（时刻不停，含量少、周转快）</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">🤔 快问快答</h3>
+      <p class="sub">"ATP ⇌ ADP + Pi + 能量" 这个式子，<b>是可逆反应吗？</b></p>
+      <div class="btnrow">
+        <button class="btn cyan" onclick="judgeRev(true)">是，箭头双向就是可逆</button>
+        <button class="btn" onclick="judgeRev(false)">不是，另有隐情</button>
+      </div>
+      <div class="reveal" id="revWhy">
+        ✔ <b>不是可逆反应！</b>四个理由（高考常考）：<br>
+        ① <b>酶不同</b>：水解酶 vs 合成酶；<br>
+        ② <b>能量不同</b>：水解释放的能量用于生命活动，合成 ATP 的能量来自呼吸作用（和光合作用）——能量<b>不可逆</b>；<br>
+        ③ <b>场所不同</b>；<br>
+        ④ 只有物质（ATP、ADP、Pi）是可逆的。<br>
+        <span style="font-size:13.5px;color:#7dd3fc">合成能量来源：人、动物、真菌和大多数细菌 → 呼吸作用；绿色植物 → 呼吸作用 + 光合作用。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 能量流通网 ============ -->
+<section id="s5">
+  <div class="card">
+    <div class="secnum"><span class="n">5</span><span class="t">能量经济体系</span></div>
+    <h2>🏦 细胞的"货币体系"：谁是大额存单，谁是现金？</h2>
+    <p class="sub">把细胞比作一家银行：<b>放能反应</b>赚的钱先存起来，<b>吸能反应</b>花钱时必须取现金。ATP 就是连接两者的现金——吸能反应一般与 ATP <b>水解</b>相联系，放能反应一般与 ATP <b>合成</b>相联系。</p>
+  </div>
+  <div class="card">
+    <div class="money-grid">
+      <div class="money"><span class="emo">☀️</span><div class="mt">太阳能 · 央行印钞机</div><div class="mc">生命活动的<b>根本能源</b><br>绿色植物经光合作用把光能存入有机物</div></div>
+      <div class="money"><span class="emo">🍬</span><div class="mt">葡萄糖 · 大额存单</div><div class="mc">细胞生命活动的<b>主要能源物质</b><br>存得多，但不能直接花，须先兑换</div></div>
+      <div class="money"><span class="emo">💵</span><div class="mt">ATP · 流通现金</div><div class="mc"><b>直接能源物质</b>，随用随取<br>含量少、周转快，永远不缺零钞</div></div>
+    </div>
+    <div class="reveal show" style="margin-top:16px">
+      💡 <b style="color:var(--gold-l)">一句话总结能量流向：</b>太阳能 →（光合作用）→ 有机物中的化学能 →（呼吸作用）→ ATP 中活跃的化学能 →（水解）→ 各项生命活动。<br>
+      <span style="font-size:13.5px;color:#9fb0c8">🧊 冷知识：脂肪是细胞内良好的储能物质（相当于"不动产"）；萤火虫发光的能量也直接来自 ATP——荧光素在荧光素酶催化下被激活，与氧反应发光。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 闯关 ============ -->
+<section id="s6">
+  <div class="card" style="text-align:center">
+    <div class="secnum" style="justify-content:center"><span class="n">6</span><span class="t">真题检验</span></div>
+    <h2>⚔️ 高考闯关</h2>
+    <p class="sub">湖北及全国卷精选/改编题，点击选项即刻判分。全对可获"💵 细胞银行行长"称号！</p>
+  </div>
+  <div id="quizBox"></div>
+  <div class="card" id="scoreBox">
+    <div class="big" id="scoreTxt"></div>
+    <p id="scoreMsg" class="sub" style="margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ============ 小结 ============ -->
+<section id="s7">
+  <div class="card" style="text-align:center">
+    <div class="secnum" style="justify-content:center"><span class="n">7</span><span class="t">课堂小结</span></div>
+    <h2>🗺️ 一张图带走 ATP</h2>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 400" width="100%">
+      <defs><marker id="arw4" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#f0b429"/></marker></defs>
+      <rect x="375" y="162" width="210" height="76" rx="16" fill="rgba(240,180,41,.13)" stroke="#f0b429" stroke-width="2.5"/>
+      <text x="480" y="194" font-size="20" font-weight="900" fill="#fde68a" text-anchor="middle">ATP 能量货币</text>
+      <text x="480" y="218" font-size="12" fill="#c9a86a" text-anchor="middle">直接能源物质</text>
+      <line x1="375" y1="178" x2="248" y2="92" stroke="#f0b429" stroke-width="2.5" marker-end="url(#arw4)"/>
+      <rect x="30" y="46" width="230" height="94" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(240,180,41,.5)" stroke-width="2"/>
+      <text x="145" y="72" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">结构 A-P~P~P</text>
+      <text x="145" y="96" font-size="12" fill="#9fb0c8" text-anchor="middle">腺苷（腺嘌呤+核糖）+3个磷酸</text>
+      <text x="145" y="116" font-size="12" fill="#9fb0c8" text-anchor="middle">~ 特殊化学键，末端易断放能</text>
+      <line x1="375" y1="226" x2="248" y2="312" stroke="#f0b429" stroke-width="2.5" marker-end="url(#arw4)"/>
+      <rect x="30" y="266" width="230" height="94" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(240,180,41,.5)" stroke-width="2"/>
+      <text x="145" y="292" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">ATP⇌ADP 转化</text>
+      <text x="145" y="316" font-size="12" fill="#9fb0c8" text-anchor="middle">含量少、转化快、动态平衡</text>
+      <text x="145" y="336" font-size="12" fill="#9fb0c8" text-anchor="middle">非可逆反应（酶/能量/场所不同）</text>
+      <line x1="585" y1="178" x2="712" y2="92" stroke="#f0b429" stroke-width="2.5" marker-end="url(#arw4)"/>
+      <rect x="700" y="46" width="230" height="94" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(240,180,41,.5)" stroke-width="2"/>
+      <text x="815" y="72" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">能量来源（合成）</text>
+      <text x="815" y="96" font-size="12" fill="#9fb0c8" text-anchor="middle">动植物：呼吸作用</text>
+      <text x="815" y="116" font-size="12" fill="#9fb0c8" text-anchor="middle">绿色植物：呼吸作用 + 光合作用</text>
+      <line x1="585" y1="226" x2="712" y2="312" stroke="#f0b429" stroke-width="2.5" marker-end="url(#arw4)"/>
+      <rect x="700" y="266" width="230" height="94" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(240,180,41,.5)" stroke-width="2"/>
+      <text x="815" y="292" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">能量去向（水解）</text>
+      <text x="815" y="316" font-size="12" fill="#9fb0c8" text-anchor="middle">肌肉收缩、主动运输、思考</text>
+      <text x="815" y="336" font-size="12" fill="#9fb0c8" text-anchor="middle">物质合成、生物发电发光</text>
+    </svg>
+    <div class="cap">本节知识脉络：结构 → 转化 → 来源 → 去向</div>
+  </div>
+  <div class="slogan">
+    <small>课 堂 口 诀</small>
+    腺嘌呤加核糖，三个磷酸连成长；<br>
+    末端一断能量放，ATP 变 ADP 忙；<br>
+    含量虽少周转快，细胞花钱全靠它！
+  </div>
+  <div class="card" style="margin-top:22px;text-align:center">
+    <p class="sub">📖 课后任务：① 用一句话向家人解释"为什么葡萄糖不能直接供能"；<br>② 预习 5.3——细胞这座"印钞厂"到底是怎么通过呼吸作用把葡萄糖兑换成 ATP 的？🏭</p>
+  </div>
+</section>
+
+<div class="footer-note">细胞探秘系列 · 第 7 集 《细胞的能量"货币"ATP》 · 人教版高中生物必修一 第五章 第 2 节 · 建议 F11 全屏授课</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 背景星点 ---------- */
+(function(){
+  for(let i=0;i<14;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=2.5+Math.random()*4;
+    s.style.width=s.style.height=sz+'px';
+    s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(10+Math.random()*14)+'s';
+    s.style.animationDelay=(-Math.random()*14)+'s';
+    document.body.appendChild(s);
+  }
+})();
+/* ---------- 进度条 / 导航 / 入场 ---------- */
+const secs=[...document.querySelectorAll('section')];
+const dots=[...document.querySelectorAll('#dots a')];
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('pbar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let idx=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)idx=i});
+  dots.forEach((d,i)=>d.classList.toggle('on',i===idx));
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card').forEach(c=>io.observe(c));
+let toastTimer;
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
+/* ---------- 发光实验 ---------- */
+let dropped={glu:false,atp:false};
+function drop(k){
+  const msg=document.getElementById('dropMsg');
+  const glow=document.getElementById('glowG');
+  const gt=document.getElementById('glowTxt');
+  if(k==='glu'){
+    dropped.glu=true;
+    glow.setAttribute('opacity','0');
+    gt.textContent='（毫无反应……）';
+    msg.innerHTML='🍬 滴加葡萄糖溶液——粉末静悄悄，<b>荧光没有恢复</b>。葡萄糖里的能量虽多，却是"大额存单"，不能直接花！';
+    toast('葡萄糖：我有钱，但我不是现金……');
+  }else{
+    dropped.atp=true;
+    glow.setAttribute('opacity','1');
+    gt.textContent='✨ 荧光重现！';
+    msg.innerHTML='💰 滴加 ATP 溶液——<b style="color:#fde68a">荧光重新亮起来了！</b>ATP 才是能直接"付款"的现金。';
+    toast('✨ ATP 到账，荧光点亮！');
+    setTimeout(()=>document.getElementById('dropConcl').classList.add('show'),800);
+  }
+}
+/* ---------- ATP 结构热点 ---------- */
+const hotInfo={
+ 1:'<b style="color:#c4b5fd">🟣 腺嘌呤</b>：一种含氮碱基（双环结构，顶点标 N）。它曾在 DNA 里打过工，这里是 ATP 的"身份证头像"。',
+ 2:'<b style="color:#fca5a5">🔴 核糖</b>：五碳糖（五边形结构，顶端有氧原子 O）。<b>腺嘌呤 + 核糖 = 腺苷（A）</b>。',
+ 3:'<b style="color:#fde68a">🟡 磷酸基团（P）</b>：一共三个，连成一条"尾巴"。尾巴越长，储的"零钱"越多。',
+ 4:'<b style="color:#f87171">⚡ "~" 特殊的化学键（高能磷酸键）</b>：相邻磷酸基团都带负电、互相排斥，像被压紧的弹簧。末端这个键<b>最容易断裂</b>，断开时释放大量能量——钱就藏在这里！'
+};
+function showHot(n){
+  document.getElementById('hotPanel').innerHTML=hotInfo[n];
+  [1,2,3,4].forEach(i=>document.getElementById('hot'+i).classList.toggle('sel',i===n));
+}
+function lightFormula(){
+  document.getElementById('formula').classList.add('lit');
+  toast('A-P~P~P：腺苷 + 三个磷酸，两个高能键');
+}
+/* ---------- 断键放能 ---------- */
+let cut=false;
+function cutP3(){
+  if(cut)return;cut=true;
+  document.getElementById('p3g').classList.add('away');
+  document.getElementById('burst').classList.remove('on');void document.getElementById('burst').getBBox();
+  document.getElementById('burst').classList.add('on');
+  document.getElementById('cutMsg').innerHTML='⚡ <b>断裂完成！</b>末端磷酸（Pi）脱落飞出，能量释放——<b style="color:#fde68a">ATP → ADP + Pi + 能量（约 30.54 kJ/mol）</b>。这笔能量立刻被肌肉、载体蛋白、神经细胞"签收"。';
+  document.getElementById('cutConcl').classList.add('show');
+  document.getElementById('btnCut').disabled=true;
+  toast('⚡ 能量到账！');
+}
+function restoreP3(){
+  cut=false;
+  document.getElementById('p3g').classList.remove('away');
+  document.getElementById('cutMsg').innerHTML='🏭 在<b>合成酶</b>作用下，ADP + Pi 重新抓住一个磷酸 → ATP 合成！合成所需能量来自呼吸作用（绿色植物还来自光合作用）。';
+  document.getElementById('btnCut').disabled=false;
+}
+/* ---------- 可逆反应判断 ---------- */
+let judged=false;
+function judgeRev(sayYes){
+  if(sayYes){toast('✘ 被双向箭头骗了！看看隐情——');}
+  else{toast('✔ 答对！物质可逆，能量不可逆。');}
+  if(!judged){judged=true;document.getElementById('revWhy').classList.add('show');}
+}
+/* ---------- 闯关 ---------- */
+const QUIZ=[
+ {q:'1. ATP 的结构简式为 A-P~P~P，其中的"A"代表？',
+  opts:['腺嘌呤','腺苷（腺嘌呤+核糖）','氨基酸','磷酸基团'],a:1,
+  why:'A = 腺苷 = 腺嘌呤 + 核糖；P = 磷酸基团；"~" = 特殊的化学键（高能磷酸键）。'},
+ {q:'2.（2021·湖北荆州联考改编）"ATP ⇌ ADP+Pi+能量"不是可逆反应，其根本原因是？',
+  opts:['反应物不同','所需的酶不同，且能量的来源和去向不同','反应必须在不同温度下进行','ATP 比 ADP 稳定'],a:1,
+  why:'两方向由不同的酶催化；水解释放的能量用于生命活动，合成所需能量来自呼吸作用（和光合作用）——物质可逆、能量不可逆。'},
+ {q:'3.（2022·湖北黄冈质检改编）下列生命活动中，不需要 ATP 直接供能的是？',
+  opts:['小肠上皮细胞吸收葡萄糖','肌肉收缩','氧气进入肺泡细胞','萤火虫发光'],a:2,
+  why:'氧气进入细胞是自由扩散，顺浓度梯度、不耗能；其余三项（主动运输、肌肉收缩、生物发光）都直接消耗 ATP。'},
+ {q:'4. 人、动物、真菌和大多数细菌合成 ATP 时，所需能量来自？',
+  opts:['光合作用','呼吸作用中有机物氧化分解释放的能量','从外界环境直接吸收','ATP 水解'],a:1,
+  why:'这些生物不能进行光合作用，合成 ATP 的能量只能来自呼吸作用；绿色植物则来自呼吸作用和光合作用两条途径。'},
+ {q:'5.（全国卷经典题型）关于 ATP 在细胞中的含量与转化，下列叙述正确的是？',
+  opts:['ATP 在细胞内含量很高，所以能持续供能','ATP 含量很少，但与 ADP 的相互转化十分迅速，处于动态平衡','ATP 水解后不能重新合成','只有植物细胞才存在 ATP 与 ADP 的转化'],a:1,
+  why:'ATP 含量少、周转快：一个成年人静止状态 24h 周转约 40kg ATP；这种迅速转化保证了能量持续供应。'}
+];
+let answered=0,score=0;
+(function buildQuiz(){
+  const box=document.getElementById('quizBox');
+  QUIZ.forEach((it,i)=>{
+    const d=document.createElement('div');d.className='card quiz';
+    d.innerHTML='<h3 style="margin-top:0">'+it.q+'</h3>'+
+      it.opts.map((o,j)=>'<button class="opt" onclick="answer(this,'+i+','+j+')"><b>'+'ABCD'[j]+'.</b>'+o+'</button>').join('')+
+      '<div class="why" id="why'+i+'">📖 '+it.why+'</div>';
+    box.appendChild(d);io.observe(d);
+  });
+})();
+function answer(btn,qi,oi){
+  const card=btn.parentElement;
+  if(card.dataset.done)return;card.dataset.done='1';
+  const ok=oi===QUIZ[qi].a;
+  [...card.querySelectorAll('.opt')].forEach((o,j)=>{
+    if(j===QUIZ[qi].a)o.classList.add('right');
+    else if(o===btn)o.classList.add('wrong');
+  });
+  card.querySelector('#why'+qi).classList.add('show');
+  answered++;if(ok){score++;toast('✔ 回答正确！')}else toast('✘ 看解析：抓"直接能源=ATP"这条主线');
+  if(answered===QUIZ.length){
+    const sb=document.getElementById('scoreBox');sb.style.display='block';sb.classList.add('in');
+    document.getElementById('scoreTxt').textContent=score+' / '+QUIZ.length;
+    const msg=score===5?'🏆 满分！授予你"💵 细胞银行行长"称号——能量货币体系你已完全掌握！':
+      score>=4?'🎉 很棒！只差一步满分，回看错题巩固一下。':
+      score>=3?'👍 合格！"结构-转化-来源-去向"这条链再捋一遍。':
+      '💪 别灰心，回结构模型点一遍热点，理解了再来挑战！';
+    document.getElementById('scoreMsg').textContent=msg;
+    sb.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/atp/workbuddy/" data-file="workbuddy/5.2细胞的能量货币ATP.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

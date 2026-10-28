@@ -567,4 +567,4 @@ document.addEventListener('keydown',e=>{if($('guideDialog').open||$('sourcesDial
 function frame(now){const dt=Math.min(.1,(now-last)/1000);last=now;if(!document.hidden){if(stage===0&&boundaryDamaged&&boundaryProgress<1){boundaryProgress=Math.min(1,boundaryProgress+dt*.55);drawBoundary();}if(stage===2&&buildPlaying){buildClock+=dt;buildScene.setTime(buildClock);}if(stage===3){if(fusionPlaying){fusionProgress=Math.min(1,fusionProgress+dt*.12);if(fusionProgress>=1)fusionPlaying=false;drawFusion();}if(moleculePlaying){moleculeClock+=dt;fluidScene.setTime(moleculeClock);}}if(stage===4&&commPlaying){commProgress=Math.min(1,commProgress+dt*.26);if(commProgress>=1)commPlaying=false;drawComm();}}requestAnimationFrame(frame);}drawBoundary();renderHistory();renderBuild();renderFluidQuestion();drawFusion();drawComm();renderQuiz();setStage(0);requestAnimationFrame(frame);
 })();
 </script>
-</body></html>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/membrane/original/" data-file="细胞膜_边界研究所_v1.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>

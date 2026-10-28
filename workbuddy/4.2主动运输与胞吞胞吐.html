@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.2 主动运输与胞吞胞吐 · 逆流而上 | 高中生物必修一</title>
+<style>
+:root{
+  --gold:#fbbf24; --gold-d:#b45309; --cyan:#22d3ee; --violet:#a78bfa; --pink:#f472b6;
+  --bg1:#070b1d; --bg2:#0d1430; --ink:#eef2ff; --ink2:#a5b4d4;
+  --card:rgba(255,255,255,.055); --line:rgba(251,191,36,.22);
+  --green:#34d399; --red:#f87171;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  background:
+    radial-gradient(900px 500px at 85% -5%,rgba(251,191,36,.09),transparent 60%),
+    radial-gradient(800px 500px at 10% 30%,rgba(34,211,238,.07),transparent 60%),
+    radial-gradient(700px 600px at 80% 80%,rgba(167,139,250,.08),transparent 60%),
+    linear-gradient(170deg,var(--bg1),var(--bg2) 60%,#0a1026);
+  color:var(--ink); overflow-x:hidden;
+}
+/* ---------- 能量粒子背景 ---------- */
+.spark{position:fixed;border-radius:50%;pointer-events:none;z-index:0;
+  background:radial-gradient(circle,rgba(251,191,36,.9),rgba(251,191,36,0) 70%);
+  animation:sparkFloat linear infinite}
+@keyframes sparkFloat{0%{transform:translateY(105vh);opacity:0}12%{opacity:.8}88%{opacity:.8}100%{transform:translateY(-10vh);opacity:0}}
+/* ---------- 进度条 / 导航点 ---------- */
+#pbar{position:fixed;top:0;left:0;height:4px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--gold),#fde68a);border-radius:0 4px 4px 0;
+  box-shadow:0 0 14px rgba(251,191,36,.8);transition:width .2s}
+#dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:13px}
+#dots a{width:12px;height:12px;border-radius:50%;background:rgba(251,191,36,.2);border:2px solid rgba(255,255,255,.5);
+  position:relative;transition:.25s;display:block}
+#dots a:hover,#dots a.on{background:var(--gold);transform:scale(1.35);box-shadow:0 0 12px rgba(251,191,36,.8)}
+#dots a span{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  background:#1a2340;border:1px solid var(--line);color:var(--gold);font-size:12px;padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:.2s}
+#dots a:hover span{opacity:1}
+/* ---------- 版式 ---------- */
+section{max-width:1080px;margin:0 auto;padding:80px 24px;position:relative;z-index:2}
+.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);
+  border-radius:22px;padding:30px 34px;box-shadow:0 12px 40px rgba(0,0,0,.35);margin-bottom:26px;
+  opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.card.in{opacity:1;transform:none}
+.tag{display:inline-block;background:linear-gradient(90deg,var(--gold),#fde68a);color:#3b2f04;
+  font-size:14px;font-weight:800;padding:5px 16px;border-radius:999px;letter-spacing:2px;margin-bottom:14px;
+  box-shadow:0 4px 16px rgba(251,191,36,.4)}
+h2{font-size:30px;margin-bottom:8px;
+  background:linear-gradient(120deg,#fde68a,var(--gold) 50%,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent}
+h3{font-size:19px;color:#fde68a;margin:18px 0 10px}
+.sub{color:var(--ink2);font-size:15px;line-height:1.85}
+.hl{background:linear-gradient(transparent 60%,rgba(251,191,36,.4) 60%);font-weight:700;color:#fde68a;padding:0 2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,#f59e0b,var(--gold));color:#3b2f04;font-size:15px;font-weight:800;
+  padding:11px 26px;border-radius:999px;box-shadow:0 6px 20px rgba(245,158,11,.45);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(251,191,36,.55)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:rgba(255,255,255,.06);color:#fde68a;border:1.5px solid var(--line);box-shadow:none}
+.btn.cyan{background:linear-gradient(135deg,#0891b2,var(--cyan));color:#04222b;box-shadow:0 6px 20px rgba(34,211,238,.4)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.panel{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 20px}
+.figure{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:14px}
+.figure .cap{font-size:12.5px;color:#7c8db0;text-align:center;margin-top:8px}
+.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.reveal{border-left:4px solid var(--cyan);background:rgba(34,211,238,.08);
+  border-radius:12px;padding:14px 18px;margin-top:12px;display:none;font-size:15px;line-height:1.85}
+.reveal.show{display:block;animation:pop .5s}
+@keyframes pop{0%{opacity:0;transform:scale(.96)}100%{opacity:1;transform:none}}
+.concl{background:linear-gradient(135deg,rgba(251,191,36,.14),rgba(251,191,36,.05));border:1.5px solid var(--gold);border-radius:16px;
+  padding:16px 22px;font-size:16px;line-height:1.95;display:none;margin-top:16px}
+.concl.show{display:block;animation:pop .6s}
+.concl b{color:#fde68a}
+/* ---------- HERO ---------- */
+#hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+#hero h1{font-size:52px;letter-spacing:4px;margin:12px 0 6px;
+  background:linear-gradient(120deg,#fff7d6,var(--gold) 45%,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 24px rgba(251,191,36,.35))}
+#hero .en{color:#8fa3c8;letter-spacing:5px;font-size:13px}
+#hero .sub2{font-size:17px;color:var(--ink2);margin:16px 0 26px;line-height:2.1}
+.badge-series{display:inline-block;background:rgba(251,191,36,.1);border:1.5px solid var(--line);color:var(--gold);
+  padding:6px 18px;border-radius:999px;font-size:13.5px;font-weight:700;letter-spacing:2px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.floaty{animation:floaty 4s ease-in-out infinite}
+@keyframes coinSpin{0%,100%{transform:rotateY(0)}50%{transform:rotateY(180deg)}}
+/* ---------- 爬坡挑战 ---------- */
+#ball,#truckG,#coinG{will-change:transform}
+.anim-free{animation:freeRoll 2.2s ease-in-out}
+@keyframes freeRoll{0%{transform:translate(0,0)}38%{transform:translate(105px,-72px)}70%{transform:translate(100px,-68px)}100%{transform:translate(0,0)}}
+.anim-assist{animation:assistRoll 2.6s ease-in-out}
+@keyframes assistRoll{0%{transform:translate(0,0)}45%{transform:translate(185px,-128px)}72%{transform:translate(180px,-124px)}100%{transform:translate(0,0)}}
+.anim-ride{animation:rideUp 3s cubic-bezier(.45,.1,.35,1) forwards}
+@keyframes rideUp{0%{transform:translate(0,0)}18%{transform:translate(60px,-18px)}100%{transform:translate(326px,-178px)}}
+.anim-truck{animation:truckUp 3s cubic-bezier(.45,.1,.35,1) forwards}
+@keyframes truckUp{0%{transform:translate(0,0);opacity:1}18%{transform:translate(60px,-18px);opacity:1}100%{transform:translate(326px,-178px);opacity:1}}
+.coinDrop{animation:coinFall .9s ease-in forwards}
+@keyframes coinFall{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(150px);opacity:1}}
+.gateGlow{filter:drop-shadow(0 0 10px var(--cyan))}
+#confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+#confetti span{position:absolute;top:-30px;font-size:26px;animation:confFall 2.6s ease-in forwards}
+@keyframes confFall{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(420px) rotate(340deg);opacity:0}}
+/* ---------- 钠钾泵 ---------- */
+.mv{transition:transform .9s cubic-bezier(.5,.05,.3,1),opacity .6s}
+.pumpB{transition:opacity .5s}
+.pd{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.15);display:inline-block;margin:0 4px;transition:.3s}
+.pd.on{background:var(--gold);box-shadow:0 0 10px var(--gold)}
+/* ---------- 胞吞胞吐 ---------- */
+.memState{transition:opacity 1s}
+/* ---------- 梗图卡 ---------- */
+.meme-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.meme-grid{grid-template-columns:repeat(2,1fr)}}
+.meme{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;padding:20px 14px;text-align:center;transition:.25s;cursor:default}
+.meme:hover{transform:translateY(-6px) rotate(-1deg);border-color:var(--gold);box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.meme .emo{font-size:52px;display:block;margin-bottom:8px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.5))}
+.meme .mt{font-weight:800;font-size:16px;color:#fde68a;margin-bottom:6px}
+.meme .mc{font-size:12.5px;color:var(--ink2);line-height:1.7}
+/* ---------- 表格 ---------- */
+table.cmp{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+table.cmp th{background:linear-gradient(90deg,#b45309,var(--gold));color:#3b2f04;padding:11px 12px;font-size:14.5px}
+table.cmp td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);line-height:1.7;color:var(--ink);background:rgba(255,255,255,.04)}
+table.cmp tr:last-child td{border-bottom:none}
+table.cmp td:first-child{font-weight:800;color:#fde68a;white-space:nowrap}
+/* ---------- 闯关 ---------- */
+.quiz .opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.14);border-radius:12px;
+  padding:11px 16px;margin:8px 0;font-size:14.5px;cursor:pointer;font-family:inherit;transition:.18s;color:var(--ink)}
+.quiz .opt:hover{border-color:var(--gold);transform:translateX(4px)}
+.quiz .opt b{color:var(--gold);margin-right:6px}
+.quiz .opt.right{background:rgba(52,211,153,.15);border-color:var(--green);color:#a7f3d0;font-weight:700}
+.quiz .opt.wrong{background:rgba(248,113,113,.15);border-color:var(--red);color:#fecaca;animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.why{font-size:13.5px;color:#a7f3d0;margin-top:6px;display:none;background:rgba(52,211,153,.08);border-radius:10px;padding:8px 14px}
+.why.show{display:block;animation:pop .4s}
+#scoreBox{text-align:center;display:none;padding:26px}
+#scoreBox .big{font-size:44px;font-weight:900;color:var(--gold)}
+/* ---------- 口诀 ---------- */
+.slogan{background:linear-gradient(120deg,#3b2f04,#92610a 55%,#b45309);border:1px solid var(--gold);color:#fff7d6;border-radius:18px;
+  padding:24px 30px;font-size:20px;line-height:2.15;text-align:center;letter-spacing:1px;
+  box-shadow:0 12px 34px rgba(180,83,9,.45)}
+.slogan small{display:block;font-size:13px;opacity:.75;letter-spacing:4px;margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(80px);background:#1a2340;border:1px solid var(--gold);color:#fde68a;
+  padding:12px 26px;border-radius:999px;font-size:15px;z-index:120;opacity:0;transition:.35s;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footer-note{text-align:center;color:#5f7099;font-size:13px;padding:30px 0 60px}
+</style>
+</head>
+<body>
+<div id="pbar"></div>
+<nav id="dots">
+  <a href="#hero"><span>逆流悬念</span></a>
+  <a href="#s1"><span>问题·逆浓度现象</span></a>
+  <a href="#s2"><span>爬坡挑战赛</span></a>
+  <a href="#s3"><span>钠钾泵拆解</span></a>
+  <a href="#s4"><span>胞吞胞吐</span></a>
+  <a href="#s5"><span>运输家族图鉴</span></a>
+  <a href="#s6"><span>高考闯关</span></a>
+  <a href="#s7"><span>小结</span></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div>
+    <div class="badge-series">细胞探秘系列 · 第 5 集 · 必修一 第四章 第 2 节</div>
+    <h1>主动运输与胞吞胞吐</h1>
+    <div class="en">ACTIVE TRANSPORT · ENDOCYTOSIS & EXOCYTOSIS · 逆流而上</div>
+    <svg viewBox="0 0 340 190" width="330" class="floaty" style="margin:20px auto 6px;display:block">
+      <defs>
+        <linearGradient id="hillG" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#164e63"/><stop offset="100%" stop-color="#0e7490"/>
+        </linearGradient>
+        <radialGradient id="coinG" cx="38%" cy="32%" r="80%">
+          <stop offset="0%" stop-color="#fef3c7"/><stop offset="60%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#b45309"/>
+        </radialGradient>
+      </defs>
+      <!-- 山坡 -->
+      <path d="M10 170 Q120 165 175 110 Q235 50 330 45 L330 185 L10 185 Z" fill="url(#hillG)" stroke="#22d3ee" stroke-width="2" opacity=".9"/>
+      <text x="36" y="158" font-size="12" fill="#a5f3fc">低浓度（山脚）</text>
+      <text x="222" y="40" font-size="12" fill="#fde68a">高浓度（山顶·细胞内）</text>
+      <!-- 山顶拥挤的分子 -->
+      <g fill="#f472b6"><circle cx="290" cy="70" r="6"/><circle cx="310" cy="88" r="6"/><circle cx="272" cy="90" r="6"/><circle cx="296" cy="104" r="6"/></g>
+      <!-- 金币 -->
+      <g style="animation:coinSpin 2.4s linear infinite;transform-box:fill-box;transform-origin:center">
+        <circle cx="86" cy="80" r="17" fill="url(#coinG)" stroke="#92400e" stroke-width="2.5"/>
+        <text x="86" y="86" font-size="14" font-weight="900" fill="#78350f" text-anchor="middle">ATP</text>
+      </g>
+      <!-- 爬山的小分子 -->
+      <circle cx="196" cy="96" r="8" fill="#f472b6" stroke="#9d174d" stroke-width="2"/>
+    </svg>
+    <p class="sub2">上一集，物质顺坡滑下，全程免费；<br>这一集，有的分子偏偏要<b style="color:#fde68a">逆着浓度往山上爬</b>——<br>它们哪来这么强的"钞能力"？</p>
+    <button class="btn" onclick="document.getElementById('s1').scrollIntoView({behavior:'smooth'})">⚡ 出发！揭开"逆流"之谜</button>
+  </div>
+</section>
+
+<!-- ============ 悬念问题 ============ -->
+<section id="s1">
+  <div class="card">
+    <span class="tag">问题探讨</span>
+    <h2>🌀 反常！它们偏要逆流而上</h2>
+    <p class="sub">教材"问题探讨"：人体甲状腺滤泡上皮细胞内的碘浓度，比血液中的碘浓度高 <span class="hl">20～25 倍</span>，但它仍然能源源不断地从血液中吸收碘。海带细胞富集碘也是同理。按照上一集被动运输的规律，碘应该往外跑才对——<b style="color:#fde68a">是什么力量在"倒着推"？</b></p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 480 250" width="100%">
+        <!-- 血液侧 -->
+        <rect x="30" y="50" width="180" height="150" rx="14" fill="rgba(34,211,238,.08)" stroke="#22d3ee" stroke-width="2"/>
+        <text x="120" y="40" font-size="14" fill="#67e8f9" text-anchor="middle" font-weight="700">血液（碘少）</text>
+        <g fill="#22d3ee"><circle cx="70" cy="100" r="6"/><circle cx="140" cy="150" r="6"/><circle cx="100" cy="180" r="6"/></g>
+        <!-- 甲状腺细胞侧 -->
+        <rect x="270" y="50" width="180" height="150" rx="14" fill="rgba(251,191,36,.1)" stroke="#fbbf24" stroke-width="2"/>
+        <text x="360" y="40" font-size="14" fill="#fde68a" text-anchor="middle" font-weight="700">甲状腺滤泡上皮细胞（碘多）</text>
+        <g fill="#fbbf24"><circle cx="300" cy="80" r="6"/><circle cx="330" cy="100" r="6"/><circle cx="360" cy="80" r="6"/><circle cx="390" cy="100" r="6"/><circle cx="420" cy="80" r="6"/><circle cx="315" cy="130" r="6"/><circle cx="345" cy="150" r="6"/><circle cx="375" cy="130" r="6"/><circle cx="405" cy="150" r="6"/><circle cx="300" cy="170" r="6"/><circle cx="330" cy="180" r="6"/><circle cx="360" cy="170" r="6"/><circle cx="390" cy="185" r="6"/><circle cx="420" cy="170" r="6"/></g>
+        <!-- 逆流箭头 -->
+        <path d="M215 125 L260 125" stroke="#f87171" stroke-width="5" marker-end="url(#arwR)"/>
+        <defs><marker id="arwR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#f87171"/></marker></defs>
+        <text x="237" y="112" font-size="13" fill="#f87171" text-anchor="middle" font-weight="800">逆流！</text>
+        <text x="240" y="230" font-size="12.5" fill="#7c8db0" text-anchor="middle">碘：从低浓度 → 高浓度（逆浓度梯度）</text>
+      </svg>
+      <div class="cap">图 1 · 碘的"反常"运输方向（仿教材 4.2 问题探讨情境绘制）</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">🧐 大胆猜想</h3>
+      <p class="sub">逆着浓度梯度运输，就像把水从低处往高处抽，自然界不会"白干活"。细胞要完成这件事，必须满足三个条件。猜猜是哪三个？</p>
+      <div class="reveal" id="guess1">① 方向：<span class="hl">逆浓度梯度</span>（低 → 高），不能靠"滑滑梯"白嫖；</div>
+      <div class="reveal" id="guess2">② 帮手：需要<span class="hl">载体蛋白</span>（膜上的"打工蛋白"）帮忙；</div>
+      <div class="reveal" id="guess3">③ 动力：需要消耗<span class="hl">能量（ATP 水解释放）</span>——不充钱怎么变强？💰</div>
+      <div class="btnrow">
+        <button class="btn ghost" onclick="revealGuess()">💡 我没有思路，求剧透</button>
+        <button class="btn" onclick="document.getElementById('s2').scrollIntoView({behavior:'smooth'})">🎮 去爬坡挑战赛验证 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 爬坡挑战赛 ============ -->
+<section id="s2">
+  <div class="card">
+    <span class="tag">互动实验 · 爬坡挑战赛</span>
+    <h2>🧗 三种方式，谁能翻过"浓度大山"？</h2>
+    <p class="sub">规则：把小分子从<b>山脚（低浓度·细胞外）</b>送到<b>山顶（高浓度·细胞内）</b>。三种运输方式轮流挑战，看看谁能成功登顶！</p>
+  </div>
+  <div class="card" style="position:relative;overflow:hidden">
+    <div id="confetti"></div>
+    <div class="figure">
+      <svg id="slopeSvg" viewBox="0 0 520 320" width="100%">
+        <!-- 山 -->
+        <path d="M20 300 Q140 290 210 210 Q290 115 500 100 L500 320 L20 320 Z" fill="rgba(14,116,144,.35)" stroke="#22d3ee" stroke-width="2"/>
+        <text x="40" y="288" font-size="13" fill="#a5f3fc">细胞外 · 低浓度</text>
+        <text x="356" y="92" font-size="13" fill="#fde68a" font-weight="700">细胞内 · 高浓度</text>
+        <!-- 山顶分子群 -->
+        <g fill="#f472b6" opacity=".9"><circle cx="430" cy="130" r="7"/><circle cx="455" cy="145" r="7"/><circle cx="410" cy="150" r="7"/><circle cx="440" cy="165" r="7"/><circle cx="465" cy="125" r="7"/></g>
+        <!-- 细胞膜（山顶大门） -->
+        <rect id="gate" x="382" y="96" width="10" height="130" rx="5" fill="#0891b2" stroke="#67e8f9" stroke-width="2"/>
+        <text x="387" y="240" font-size="11.5" fill="#67e8f9" text-anchor="middle">细胞膜</text>
+        <!-- 打工蛋白卡车 -->
+        <g id="truckG" opacity="0" class="mv">
+          <rect x="52" y="238" width="46" height="22" rx="8" fill="#fbbf24" stroke="#92400e" stroke-width="2.5"/>
+          <circle cx="62" cy="264" r="6" fill="#78350f"/><circle cx="88" cy="264" r="6" fill="#78350f"/>
+          <text x="75" y="253" font-size="10" font-weight="900" fill="#78350f" text-anchor="middle">载体</text>
+        </g>
+        <!-- 小球分子 -->
+        <circle id="ball" cx="60" cy="252" r="9" fill="#f472b6" stroke="#9d174d" stroke-width="2.5"/>
+        <!-- ATP 金币 -->
+        <g id="coinG" opacity="0">
+          <circle cx="75" cy="90" r="16" fill="url(#coinG)" stroke="#92400e" stroke-width="2.5"/>
+          <text x="75" y="95" font-size="12" font-weight="900" fill="#78350f" text-anchor="middle">ATP</text>
+        </g>
+      </svg>
+      <div class="cap">爬坡赛道：山脚低浓度 → 山顶高浓度（逆浓度梯度）</div>
+    </div>
+    <div class="btnrow">
+      <button class="btn cyan" id="btnFree" onclick="roll('free')">🛝 自由扩散出战</button>
+      <button class="btn cyan" id="btnAssist" onclick="roll('assist')">🚪 协助扩散出战</button>
+      <button class="btn" id="btnCoin" onclick="dropCoin()">💰 投入 ATP 金币（主动运输）</button>
+      <button class="btn ghost" onclick="resetSlope()">↺ 重置赛道</button>
+    </div>
+    <div class="panel" id="slopeMsg" style="font-size:15px;line-height:1.9;min-height:64px">
+      🎤 裁判就绪：先让"免费组"试试身手吧！
+    </div>
+    <div class="concl" id="slopeConcl">
+      <b>📌 结论 · 主动运输三要素：</b><br>
+      物质<span class="hl">逆浓度梯度</span>进行跨膜运输，需要<span class="hl">载体蛋白</span>的协助，同时还需要消耗细胞内化学反应所释放的<span class="hl">能量</span>，这种方式叫作<b>主动运输</b>。<br>
+      <span style="font-size:13.5px;color:#d9c17a">实例：小肠上皮细胞吸收葡萄糖、氨基酸；植物根细胞吸收矿质元素离子；甲状腺滤泡上皮细胞吸收碘。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 钠钾泵 ============ -->
+<section id="s3">
+  <div class="card">
+    <span class="tag">深度拆解 · 教材拓展</span>
+    <h2>🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）</h2>
+    <p class="sub">细胞膜上最勤劳的"打工蛋白"：每消耗 <span class="hl">1 个 ATP</span>，就把 <span class="hl">3 个 Na⁺ 泵出细胞</span>、<span class="hl">2 个 K⁺ 泵入细胞</span>，维持细胞内外离子浓度差。点"自动播放"或按步骤拆解它的工作流程！</p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 520 360" width="100%">
+        <!-- 细胞外/内 -->
+        <text x="24" y="40" font-size="14" fill="#67e8f9" font-weight="700">细胞外（Na⁺ 多）</text>
+        <text x="24" y="340" font-size="14" fill="#c4b5fd" font-weight="700">细胞内（K⁺ 多）</text>
+        <!-- 膜 -->
+        <g id="pumpMembrane"></g>
+        <!-- 泵蛋白两态 -->
+        <g transform="translate(260,200)">
+          <path id="pumpA" class="pumpB" d="M-42 -70 Q-42 -84 -28 -84 L-14 -84 Q-6 -84 -6 -74 L-6 -20 Q-30 -8 -30 10 Q-30 30 -6 40 L-6 74 Q-6 84 -14 84 L-28 84 Q-42 84 -42 70 Z" fill="#a78bfa" stroke="#5b21b6" stroke-width="3"/>
+          <path id="pumpB" class="pumpB" opacity="0" d="M6 -70 Q6 -84 20 -84 L34 -84 Q42 -84 42 -74 L42 -20 Q16 -8 16 10 Q16 30 42 40 L42 74 Q42 84 34 84 L20 84 Q6 84 6 70 Z" fill="#f472b6" stroke="#9d174d" stroke-width="3"/>
+        </g>
+        <!-- Na+ 3个 -->
+        <g id="naG" class="mv" fill="#38bdf8" stroke="#075985" stroke-width="2">
+          <circle cx="222" cy="290" r="10"/><circle cx="260" cy="306" r="10"/><circle cx="298" cy="290" r="10"/>
+          <text x="222" y="294" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">Na</text>
+          <text x="260" y="310" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">Na</text>
+          <text x="298" y="294" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">Na</text>
+        </g>
+        <!-- K+ 2个 -->
+        <g id="kG" class="mv" fill="#c4b5fd" stroke="#5b21b6" stroke-width="2">
+          <circle cx="236" cy="66" r="10"/><circle cx="284" cy="66" r="10"/>
+          <text x="236" y="70" font-size="10" fill="#3b1d6e" text-anchor="middle" font-weight="800">K</text>
+          <text x="284" y="70" font-size="10" fill="#3b1d6e" font-weight="800">K</text>
+        </g>
+        <!-- ATP -->
+        <g id="atpG" class="mv" opacity="0">
+          <circle cx="150" cy="120" r="16" fill="url(#coinG)" stroke="#92400e" stroke-width="2.5"/>
+          <text x="150" y="125" font-size="11" font-weight="900" fill="#78350f" text-anchor="middle">ATP</text>
+        </g>
+        <text id="atpNote" x="120" y="170" font-size="12.5" fill="#fbbf24" opacity="0" font-weight="700">ATP → ADP + Pi 释放能量 ⚡</text>
+      </svg>
+      <div class="cap">图 2 · 钠钾泵工作循环（每循环：3 Na⁺ 出细胞，2 K⁺ 进细胞，耗 1 ATP）</div>
+    </div>
+    <div class="card">
+      <div class="btnrow">
+        <button class="btn ghost" onclick="pumpStep(pumpIdx-1)">← 上一步</button>
+        <button class="btn" id="pumpAuto" onclick="togglePumpAuto()">▶ 自动播放</button>
+        <button class="btn ghost" onclick="pumpStep(pumpIdx+1)">下一步 →</button>
+      </div>
+      <div style="margin:6px 0 12px" id="pumpDots"></div>
+      <div class="panel" id="pumpText" style="font-size:15px;line-height:1.95;min-height:150px"></div>
+      <div class="concl show" style="margin-top:14px">
+        <b>⚠️ 注意：</b>钠钾泵本身<b>就是一种载体蛋白</b>，它在转运过程中会发生<b>形状改变</b>，且每次转运都消耗能量——这是主动运输"载体 + 耗能"的活标本！
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 胞吞胞吐 ============ -->
+<section id="s4">
+  <div class="card">
+    <span class="tag">大分子的专属通道</span>
+    <h2>😋📦 胞吞与胞吐：不走门，直接"吞"和"吐"</h2>
+    <p class="sub">蛋白质这样的<b>大分子</b>穿不过磷脂双分子层，也塞不进载体蛋白。怎么办？细胞膜祭出大招——用<span class="hl">膜的流动性</span>，把大分子"一口闷"（胞吞）或"打包发出"（胞吐）。</p>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 340" width="100%">
+      <!-- ===== 左：胞吞 ===== -->
+      <text x="240" y="34" font-size="17" fill="#fde68a" text-anchor="middle" font-weight="900">😋 胞吞（白细胞吞噬病菌）</text>
+      <!-- 膜两态 -->
+      <path id="endoFlat" class="memState" d="M60 170 Q240 162 420 170" stroke="#22d3ee" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <path id="endoBent" class="memState" opacity="0" d="M60 170 Q150 164 200 168 Q236 172 240 218 Q244 172 280 168 Q330 164 420 170" stroke="#22d3ee" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <text x="66" y="150" font-size="12" fill="#67e8f9">细胞外</text>
+      <text x="66" y="215" font-size="12" fill="#a5b4d4">细胞内</text>
+      <!-- 病菌 -->
+      <g id="bugG" class="mv">
+        <circle cx="240" cy="96" r="17" fill="#4ade80" stroke="#166534" stroke-width="2.5"/>
+        <g stroke="#166534" stroke-width="2.5" stroke-linecap="round"><line x1="228" y1="84" x2="222" y2="76"/><line x1="240" y1="79" x2="240" y2="70"/><line x1="252" y1="84" x2="258" y2="76"/><line x1="224" y1="100" x2="215" y2="98"/><line x1="256" y1="100" x2="265" y2="98"/></g>
+        <circle cx="235" cy="93" r="2.4" fill="#052e16"/><circle cx="246" cy="93" r="2.4" fill="#052e16"/>
+      </g>
+      <!-- 囊泡（胞吞产物） -->
+      <g id="endoVes" class="mv" opacity="0">
+        <circle cx="240" cy="212" r="26" fill="rgba(34,211,238,.18)" stroke="#22d3ee" stroke-width="3"/>
+        <circle cx="240" cy="212" r="12" fill="#4ade80" stroke="#166534" stroke-width="2"/>
+      </g>
+      <!-- ===== 右：胞吐 ===== -->
+      <text x="720" y="34" font-size="17" fill="#fde68a" text-anchor="middle" font-weight="900">📦 胞吐（分泌蛋白释放）</text>
+      <path id="exoFlat" class="memState" d="M540 170 Q720 162 900 170" stroke="#f472b6" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <path id="exoOpen" class="memState" opacity="0" d="M540 170 Q640 164 690 168 M750 168 Q800 164 900 170" stroke="#f472b6" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <text x="546" y="150" font-size="12" fill="#f9a8d4">细胞外</text>
+      <text x="546" y="215" font-size="12" fill="#a5b4d4">细胞内</text>
+      <!-- 囊泡（胞吐） -->
+      <g id="exoVes" class="mv">
+        <circle cx="720" cy="262" r="26" fill="rgba(244,114,182,.18)" stroke="#f472b6" stroke-width="3"/>
+        <g id="exoCargo"><circle cx="712" cy="258" r="5" fill="#fbbf24"/><circle cx="728" cy="258" r="5" fill="#fbbf24"/><circle cx="720" cy="270" r="5" fill="#fbbf24"/></g>
+      </g>
+      <!-- 释放的货物 -->
+      <g id="exoOut" class="mv" opacity="0" fill="#fbbf24">
+        <circle cx="700" cy="150" r="5"/><circle cx="720" cy="138" r="5"/><circle cx="740" cy="150" r="5"/>
+      </g>
+      <!-- 中部能量标签 -->
+      <g>
+        <rect x="388" y="292" width="184" height="34" rx="17" fill="rgba(251,191,36,.14)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="480" y="314" font-size="13.5" fill="#fde68a" text-anchor="middle" font-weight="700">⚡ 两者都消耗能量</text>
+      </g>
+    </svg>
+    <div class="cap">图 3 · 胞吞与胞吐动态演示（大分子穿过 0 层膜，依靠膜的流动性形成囊泡运输）</div>
+    <div class="btnrow" style="justify-content:center">
+      <button class="btn cyan" id="btnEndo" onclick="playEndo()">▶ 播放胞吞</button>
+      <button class="btn" id="btnExo" onclick="playExo()">▶ 播放胞吐</button>
+      <button class="btn ghost" onclick="resetMemb()">↺ 重置</button>
+    </div>
+    <div class="panel" id="membMsg" style="font-size:15px;line-height:1.9;min-height:58px">🎬 点击按钮，看看细胞膜如何表演"吞"与"吐"。</div>
+  </div>
+  <div class="card">
+    <div class="meme-grid">
+      <div class="meme"><span class="emo">🛝</span><div class="mt">被动运输</div><div class="mc">"顺坡滑滑梯，一分钱不花"<br>躺平组 · 自由/协助扩散</div></div>
+      <div class="meme"><span class="emo">🧗</span><div class="mt">主动运输</div><div class="mc">"逆流爬山，氪金充能"<br>内卷组 · 载体+ATP 缺一不可</div></div>
+      <div class="meme"><span class="emo">😋</span><div class="mt">胞吞</div><div class="mc">"干饭不积极，思想有问题"<br>一口闷 · 白细胞吞噬病菌</div></div>
+      <div class="meme"><span class="emo">📦</span><div class="mt">胞吐</div><div class="mc">"您的外卖已发出"<br>快递组 · 消化酶、抗体、激素</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 家族对比 ============ -->
+<section id="s5">
+  <div class="card">
+    <span class="tag">归纳整合</span>
+    <h2>🏆 物质跨膜运输·家族总图鉴</h2>
+    <p class="sub">两集内容一次收齐。考试遇到任何物质，按"<b style="color:#fde68a">看方向 → 看载体 → 看能量</b>"三步判断，百试百灵。</p>
+    <table class="cmp">
+      <tr><th>方式</th><th>方向</th><th>转运蛋白</th><th>能量</th><th>经典实例</th></tr>
+      <tr><td>🛝 自由扩散</td><td>顺浓度梯度</td><td>不需要</td><td>不消耗</td><td>O₂、CO₂、甘油、乙醇、苯</td></tr>
+      <tr><td>🚪 协助扩散</td><td>顺浓度梯度</td><td>需要（载体/通道）</td><td>不消耗</td><td>葡萄糖进红细胞、水经水通道蛋白</td></tr>
+      <tr><td>🧗 主动运输</td><td><b style="color:#fbbf24">逆浓度梯度</b></td><td>需要载体蛋白</td><td><b style="color:#fbbf24">消耗 ATP</b></td><td>小肠吸收葡萄糖/氨基酸、根吸收矿质离子、钠钾泵</td></tr>
+      <tr><td>😋 胞吞</td><td>细胞外 → 内</td><td>不需要（囊泡运输）</td><td>消耗</td><td>白细胞吞噬病菌、变形虫摄食</td></tr>
+      <tr><td>📦 胞吐</td><td>细胞内 → 外</td><td>不需要（囊泡运输）</td><td>消耗</td><td>分泌蛋白释放（消化酶、抗体、部分激素）</td></tr>
+    </table>
+    <div class="reveal show" style="margin-top:16px">
+      💡 <b style="color:#fde68a">两个高频易错：</b>① 胞吞胞吐穿膜层数是 <b>0 层</b>（物质始终在囊泡里/外，没穿过磷脂双分子层）；② 主动运输的意义：保证活细胞能够<b>按照生命活动的需要</b>，主动选择吸收所需要的物质，排出代谢废物和对细胞有害的物质。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 闯关 ============ -->
+<section id="s6">
+  <div class="card" style="text-align:center">
+    <span class="tag">高考闯关</span>
+    <h2>⚔️ 真题试炼场</h2>
+    <p class="sub">湖北及全国卷精选/改编题，点击选项即刻判分。全对可获"⚡ 能量大亨"称号！</p>
+  </div>
+  <div id="quizBox"></div>
+  <div class="card" id="scoreBox">
+    <div class="big" id="scoreTxt"></div>
+    <p id="scoreMsg" class="sub" style="margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ============ 小结 ============ -->
+<section id="s7">
+  <div class="card" style="text-align:center">
+    <span class="tag">课堂小结</span>
+    <h2>🗺️ 一张图带走本集</h2>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 400" width="100%">
+      <defs><marker id="arw2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#fbbf24"/></marker></defs>
+      <rect x="370" y="164" width="220" height="76" rx="16" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="2.5"/>
+      <text x="480" y="196" font-size="19" font-weight="900" fill="#fde68a" text-anchor="middle">逆流而上的运输</text>
+      <text x="480" y="220" font-size="12" fill="#d9c17a" text-anchor="middle">主动运输 + 胞吞胞吐</text>
+      <line x1="370" y1="180" x2="238" y2="96" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arw2)"/>
+      <rect x="30" y="50" width="220" height="92" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(251,191,36,.5)" stroke-width="2"/>
+      <text x="140" y="76" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">主动运输三要素</text>
+      <text x="140" y="100" font-size="12" fill="#a5b4d4" text-anchor="middle">逆浓度梯度 + 载体蛋白</text>
+      <text x="140" y="120" font-size="12" fill="#a5b4d4" text-anchor="middle">+ 消耗能量（ATP）</text>
+      <line x1="370" y1="224" x2="238" y2="312" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arw2)"/>
+      <rect x="30" y="266" width="220" height="92" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(251,191,36,.5)" stroke-width="2"/>
+      <text x="140" y="292" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">实例</text>
+      <text x="140" y="316" font-size="12" fill="#a5b4d4" text-anchor="middle">小肠吸收葡萄糖、根吸收离子</text>
+      <text x="140" y="336" font-size="12" fill="#a5b4d4" text-anchor="middle">甲状腺摄碘、钠钾泵</text>
+      <line x1="590" y1="180" x2="722" y2="96" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arw2)"/>
+      <rect x="710" y="50" width="220" height="92" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(251,191,36,.5)" stroke-width="2"/>
+      <text x="820" y="76" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">胞吞胞吐</text>
+      <text x="820" y="100" font-size="12" fill="#a5b4d4" text-anchor="middle">大分子 · 囊泡运输 · 耗能</text>
+      <text x="820" y="120" font-size="12" fill="#a5b4d4" text-anchor="middle">穿 0 层膜 · 靠膜的流动性</text>
+      <line x1="590" y1="224" x2="722" y2="312" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arw2)"/>
+      <rect x="710" y="266" width="220" height="92" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(251,191,36,.5)" stroke-width="2"/>
+      <text x="820" y="292" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">判断三步法</text>
+      <text x="820" y="316" font-size="12" fill="#a5b4d4" text-anchor="middle">看方向 → 看载体 → 看能量</text>
+      <text x="820" y="336" font-size="12" fill="#a5b4d4" text-anchor="middle">逆浓度 = 主动运输（铁证！）</text>
+    </svg>
+    <div class="cap">本集知识脉络：三要素 → 实例 → 胞吞胞吐 → 判断法</div>
+  </div>
+  <div class="slogan">
+    <small>课 堂 口 诀</small>
+    顺下坡，逆爬山；被动免费，主动烧钱；<br>
+    逆浓度、要载体、耗能量，三样凑齐才算主动运输；<br>
+    大分子，不钻膜，胞吞胞吐泡泡船！
+  </div>
+  <div class="card" style="margin-top:22px;text-align:center">
+    <p class="sub">📖 课后任务：① 查一查"海带为什么能富集碘"，下节课分享；② 用橡皮泥捏一个钠钾泵，标出 3 Na⁺ 和 2 K⁺ 的行进路线。<br>🎉 至此，第四章"细胞的物质输入和输出"主线完结——细胞这座工厂，原料进出全被你拿捏了！</p>
+  </div>
+</section>
+
+<div class="footer-note">细胞探秘系列 · 第 5 集 《主动运输与胞吞胞吐》 · 人教版高中生物必修一 第四章 第 2 节 · 建议 F11 全屏授课</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 背景能量粒子 ---------- */
+(function(){
+  for(let i=0;i<16;i++){
+    const s=document.createElement('div');s.className='spark';
+    const sz=3+Math.random()*5;
+    s.style.width=s.style.height=sz+'px';
+    s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(9+Math.random()*14)+'s';
+    s.style.animationDelay=(-Math.random()*14)+'s';
+    if(Math.random()<.4)s.style.background='radial-gradient(circle,rgba(34,211,238,.9),rgba(34,211,238,0) 70%)';
+    document.body.appendChild(s);
+  }
+})();
+/* ---------- 进度条 / 导航 / 入场 ---------- */
+const secs=[...document.querySelectorAll('section')];
+const dots=[...document.querySelectorAll('#dots a')];
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('pbar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let idx=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)idx=i});
+  dots.forEach((d,i)=>d.classList.toggle('on',i===idx));
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card').forEach(c=>io.observe(c));
+let toastTimer;
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
+/* ---------- 猜想揭示 ---------- */
+let gIdx=0;
+function revealGuess(){
+  const ids=['guess1','guess2','guess3'];
+  if(gIdx<ids.length){document.getElementById(ids[gIdx]).classList.add('show');gIdx++;}
+  if(gIdx===ids.length)toast('三要素集齐！去挑战赛验证吧 🎮');
+}
+/* ---------- 爬坡挑战赛 ---------- */
+let slopeBusy=false;
+const ball=document.getElementById('ball');
+const slopeMsg=document.getElementById('slopeMsg');
+function clearAnim(){ball.classList.remove('anim-free','anim-assist','anim-ride');void ball.offsetWidth}
+function roll(mode){
+  if(slopeBusy)return;slopeBusy=true;clearAnim();
+  if(mode==='free'){
+    ball.classList.add('anim-free');
+    slopeMsg.innerHTML='🛝 自由扩散：小分子埋头猛冲……冲到半山腰，<b style="color:#f87171">没劲了，滑回来了</b>！<br>💬 "免费玩家的天花板，就到这儿了。"——顺浓度它很快，逆浓度它不行。';
+    setTimeout(()=>{slopeBusy=false},2300);
+  }else{
+    document.getElementById('gate').classList.add('gateGlow');
+    ball.classList.add('anim-assist');
+    slopeMsg.innerHTML='🚪 协助扩散：载体蛋白开门接应，冲得更高了……但还是<b style="color:#f87171">差一口气，又滑下来了</b>！<br>💬 协助扩散只能"顺水推舟"（顺浓度），逆坡这道坎，光有门没有发动机还是过不去。';
+    setTimeout(()=>{slopeBusy=false;document.getElementById('gate').classList.remove('gateGlow')},2700);
+  }
+}
+function dropCoin(){
+  if(slopeBusy)return;slopeBusy=true;clearAnim();
+  const coin=document.getElementById('coinG');coin.setAttribute('opacity','1');
+  coin.classList.remove('coinDrop');void coin.offsetWidth;coin.classList.add('coinDrop');
+  slopeMsg.innerHTML='💰 ATP 金币投入！载体蛋白"打工模式"启动，正在充能……';
+  setTimeout(()=>{
+    const truck=document.getElementById('truckG');
+    truck.style.opacity='1';
+    ball.classList.add('anim-ride');
+    truck.classList.remove('anim-truck');void truck.offsetWidth;truck.classList.add('anim-truck');
+    slopeMsg.innerHTML='🧗 主动运输：载体蛋白背着小分子，<b style="color:#fbbf24">烧着 ATP 的能量一路爬坡</b>……';
+  },950);
+  setTimeout(()=>{
+    slopeMsg.innerHTML='🎉 <b style="color:#34d399">登顶成功！</b>逆浓度梯度运输完成！<br>结论：方向（逆浓度）+ 载体蛋白 + 能量 ATP，<b style="color:#fbbf24">三要素缺一不可</b>。';
+    confetti();
+    document.getElementById('slopeConcl').classList.add('show');
+    slopeBusy=false;
+  },4100);
+}
+function confetti(){
+  const box=document.getElementById('confetti');
+  const emo=['🎉','⚡','💰','🧗','⭐','🏆'];
+  for(let i=0;i<22;i++){
+    const sp=document.createElement('span');
+    sp.textContent=emo[Math.floor(Math.random()*emo.length)];
+    sp.style.left=Math.random()*100+'%';
+    sp.style.animationDelay=(Math.random()*.9)+'s';
+    box.appendChild(sp);
+    setTimeout(()=>sp.remove(),3800);
+  }
+}
+function resetSlope(){
+  slopeBusy=false;clearAnim();
+  const coin=document.getElementById('coinG');coin.setAttribute('opacity','0');coin.classList.remove('coinDrop');
+  const truck=document.getElementById('truckG');truck.style.opacity='0';truck.classList.remove('anim-truck');
+  document.getElementById('slopeConcl').classList.remove('show');
+  slopeMsg.innerHTML='🎤 赛道已重置，再来一轮！';
+}
+/* ---------- 钠钾泵 ---------- */
+(function buildPumpMembrane(){
+  const g=document.getElementById('pumpMembrane');let s='';
+  for(let x=40;x<=480;x+=26){
+    if(x>222&&x<298)continue;
+    s+='<circle cx="'+x+'" cy="182" r="7" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/>'
+      +'<line x1="'+(x-3)+'" y1="189" x2="'+(x-3)+'" y2="206" stroke="#3b82f6" stroke-width="2.5" opacity=".6"/>'
+      +'<line x1="'+(x+3)+'" y1="189" x2="'+(x+3)+'" y2="206" stroke="#3b82f6" stroke-width="2.5" opacity=".6"/>'
+      +'<circle cx="'+x+'" cy="236" r="7" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/>'
+      +'<line x1="'+(x-3)+'" y1="229" x2="'+(x-3)+'" y2="212" stroke="#3b82f6" stroke-width="2.5" opacity=".6"/>'
+      +'<line x1="'+(x+3)+'" y1="229" x2="'+(x+3)+'" y2="212" stroke="#3b82f6" stroke-width="2.5" opacity=".6"/>';
+  }
+  g.innerHTML=s;
+})();
+const pumpSteps=[
+ {na:'translate(0,0)',k:'translate(0,0)',atp:0,note:0,pump:0,
+  t:'<b>第 1 步 · 待命</b>：钠钾泵开口朝向细胞内，等待结合 Na⁺。细胞内 K⁺ 多、细胞外 Na⁺ 多——这个浓度差就是它要维护的"江山"。'},
+ {na:'translate(38,-90px)',k:'translate(0,0)',atp:0,note:0,pump:0,
+  t:'<b>第 2 步 · 结合</b>：3 个 Na⁺ 进入泵内结合位点（钠钾泵对离子有<b>特异性</b>，认准了才结合）。'},
+ {na:'translate(38,-90px)',k:'translate(0,0)',atp:1,note:1,pump:1,
+  t:'<b>第 3 步 · 充能变形</b>：1 个 ATP 水解为 ADP + Pi，释放能量，泵蛋白<b>磷酸化并改变形状</b>——开口转向细胞外！'},
+ {na:'translate(38,-196px)',k:'translate(0,0)',atp:0,note:0,pump:1,
+  t:'<b>第 4 步 · 排出</b>：3 个 Na⁺ 被释放到<b>细胞外</b>。变形后的泵对 Na⁺ 亲和力降低，对 K⁺ 亲和力升高。'},
+ {na:'translate(38,-196px)',k:'translate(-24,120px)',atp:0,note:0,pump:1,
+  t:'<b>第 5 步 · 装载 K⁺</b>：2 个 K⁺ 从细胞外进入泵内。'},
+ {na:'translate(38,-196px)',k:'translate(-24,224px)',atp:0,note:0,pump:0,
+  t:'<b>第 6 步 · 复位释放</b>：泵去磷酸化、恢复原状，开口转向细胞内，2 个 K⁺ 释放入<b>细胞内</b>。一个循环完成：3 Na⁺ 出、2 K⁺ 进、耗 1 ATP！'}
+];
+let pumpIdx=0,pumpTimer=null;
+function pumpStep(i){
+  pumpIdx=(i+pumpSteps.length)%pumpSteps.length;
+  const s=pumpSteps[pumpIdx];
+  document.getElementById('naG').style.transform=s.na;
+  document.getElementById('kG').style.transform=s.k;
+  document.getElementById('atpG').style.opacity=s.atp;
+  document.getElementById('atpNote').setAttribute('opacity',s.note);
+  document.getElementById('pumpA').setAttribute('opacity',s.pump?0:1);
+  document.getElementById('pumpB').setAttribute('opacity',s.pump?1:0);
+  document.getElementById('pumpText').innerHTML=s.t;
+  document.getElementById('pumpDots').innerHTML=pumpSteps.map((_,j)=>'<span class="pd'+(j===pumpIdx?' on':'')+'"></span>').join('');
+}
+function togglePumpAuto(){
+  const b=document.getElementById('pumpAuto');
+  if(pumpTimer){clearInterval(pumpTimer);pumpTimer=null;b.textContent='▶ 自动播放'}
+  else{pumpTimer=setInterval(()=>pumpStep(pumpIdx+1),2600);b.textContent='⏸ 暂停播放'}
+}
+pumpStep(0);
+/* ---------- 胞吞胞吐 ---------- */
+let membBusy=false;
+function playEndo(){
+  if(membBusy)return;membBusy=true;
+  const msg=document.getElementById('membMsg');
+  msg.innerHTML='😋 <b>胞吞 ①</b>：病菌靠近细胞，细胞膜识别出"猎物"……';
+  document.getElementById('bugG').style.transform='translateY(56px)';
+  setTimeout(()=>{
+    msg.innerHTML='😋 <b>胞吞 ②</b>：细胞膜<b>内陷</b>，像包饺子一样把病菌包住（这靠的是<b>膜的流动性</b>！）';
+    document.getElementById('endoFlat').setAttribute('opacity','0');
+    document.getElementById('endoBent').setAttribute('opacity','1');
+  },1200);
+  setTimeout(()=>{
+    msg.innerHTML='😋 <b>胞吞 ③</b>：膜封口，形成<b>囊泡</b>，病菌被"一口闷"进细胞。';
+    document.getElementById('bugG').style.opacity='0';
+    const v=document.getElementById('endoVes');v.setAttribute('opacity','1');
+  },2600);
+  setTimeout(()=>{
+    document.getElementById('endoVes').style.transform='translateY(70px)';
+    msg.innerHTML='😋 <b>胞吞完成</b>：囊泡进入细胞质，等待溶酶体来"消化"。⚡全程耗能，病菌<b>穿过 0 层膜</b>！';
+    membBusy=false;
+  },3800);
+}
+function playExo(){
+  if(membBusy)return;membBusy=true;
+  const msg=document.getElementById('membMsg');
+  msg.innerHTML='📦 <b>胞吐 ①</b>：装着分泌蛋白的囊泡，从细胞内部向细胞膜移动……（还记得 3.2 的分泌蛋白之旅吗？）';
+  document.getElementById('exoVes').style.transform='translateY(-92px)';
+  setTimeout(()=>{
+    msg.innerHTML='📦 <b>胞吐 ②</b>：囊泡膜与细胞膜<b>融合</b>，打开出口——又一次秀了一把膜的流动性！';
+    document.getElementById('exoFlat').setAttribute('opacity','0');
+    document.getElementById('exoOpen').setAttribute('opacity','1');
+    document.getElementById('exoVes').style.opacity='0';
+  },1400);
+  setTimeout(()=>{
+    msg.innerHTML='📦 <b>胞吐 ③</b>：货物释放到细胞外！消化酶、抗体、蛋白质类激素就是这样"发货"的。';
+    const o=document.getElementById('exoOut');o.setAttribute('opacity','1');o.style.transform='translateY(-46px)';
+  },2400);
+  setTimeout(()=>{
+    msg.innerHTML='📦 <b>胞吐完成</b>：⚡全程耗能，蛋白质<b>穿过 0 层膜</b>——它是被囊泡"渡"出去的，不是钻出去的！';
+    membBusy=false;
+  },3400);
+}
+function resetMemb(){
+  membBusy=false;
+  document.getElementById('bugG').style.transform='translateY(0)';document.getElementById('bugG').style.opacity='1';
+  document.getElementById('endoFlat').setAttribute('opacity','1');document.getElementById('endoBent').setAttribute('opacity','0');
+  const v=document.getElementById('endoVes');v.setAttribute('opacity','0');v.style.transform='translateY(0)';
+  const ev=document.getElementById('exoVes');ev.style.transform='translateY(0)';ev.style.opacity='1';
+  document.getElementById('exoFlat').setAttribute('opacity','1');document.getElementById('exoOpen').setAttribute('opacity','0');
+  const o=document.getElementById('exoOut');o.setAttribute('opacity','0');o.style.transform='translateY(0)';
+  document.getElementById('membMsg').innerHTML='🎬 已重置，可以再播一遍。';
+}
+/* ---------- 闯关 ---------- */
+const QUIZ=[
+ {q:'1.（2020·湖北襄阳联考改编）甲状腺滤泡上皮细胞内的碘浓度比血液高 20～25 倍，仍能不断从血液中吸收碘。该吸收方式的特点是？',
+  opts:['顺浓度梯度，不消耗能量','逆浓度梯度，需要载体蛋白且消耗能量','顺浓度梯度，需要载体蛋白','逆浓度梯度，不需要载体蛋白'],a:1,
+  why:'逆浓度梯度运输 = 主动运输的铁证；主动运输必须同时具备载体蛋白和能量两个条件。'},
+ {q:'2.（2022·湖北黄冈质检改编）向培养植物的培养液中加入呼吸抑制剂后，根细胞吸收 K⁺ 的速率明显下降。这说明根细胞吸收 K⁺ 的方式？',
+  opts:['是自由扩散','是协助扩散','需要消耗能量，属于主动运输','与能量供应无关'],a:2,
+  why:'呼吸抑制剂减少 ATP 供应，吸收速率随之下降 → 该过程耗能 → 属于主动运输。"抑制剂/氧浓度影响吸收速率"是判断主动运输的经典信号。'},
+ {q:'3. 关于细胞膜上的钠钾泵，下列叙述正确的是？',
+  opts:['每消耗 1 分子 ATP，泵出 2 个 Na⁺、泵入 3 个 K⁺','每消耗 1 分子 ATP，泵出 3 个 Na⁺、泵入 2 个 K⁺','它只起通道作用，不属于载体蛋白','其运输过程不消耗能量'],a:1,
+  why:'钠钾泵每消耗 1 ATP：3 Na⁺ 出细胞、2 K⁺ 进细胞；它在转运中改变形状并消耗能量，本质是载体蛋白（主动运输）。'},
+ {q:'4.（2021·湖北武汉质检改编）关于胞吞和胞吐，下列叙述错误的是？',
+  opts:['依赖细胞膜的流动性','运输过程中物质穿过 2 层膜','需要消耗能量','可用于大分子物质的运输'],a:1,
+  why:'胞吞胞吐靠囊泡运输，物质始终在膜包被的结构内/外，穿过 0 层膜——这是最高频的易错点！'},
+ {q:'5.（曲线题）在一定范围内，随着 O₂ 浓度增大，植物根细胞吸收矿质离子的速率加快；O₂ 浓度继续增大，速率不再增加。后者限制吸收速率的主要因素是？',
+  opts:['膜上载体蛋白的数量有限','细胞外离子浓度过低','水分供应不足','细胞膜面积太小'],a:0,
+  why:'O₂ 浓度影响呼吸供能，前半段说明该运输耗能（主动运输）；能量充足后速率出现平台，是因为载体蛋白数量有限（饱和性）。'}
+];
+let answered=0,score=0;
+(function buildQuiz(){
+  const box=document.getElementById('quizBox');
+  QUIZ.forEach((it,i)=>{
+    const d=document.createElement('div');d.className='card quiz';
+    d.innerHTML='<h3 style="margin-top:0">'+it.q+'</h3>'+
+      it.opts.map((o,j)=>'<button class="opt" onclick="answer(this,'+i+','+j+')"><b>'+'ABCD'[j]+'.</b>'+o+'</button>').join('')+
+      '<div class="why" id="why'+i+'">📖 '+it.why+'</div>';
+    box.appendChild(d);io.observe(d);
+  });
+})();
+function answer(btn,qi,oi){
+  const card=btn.parentElement;
+  if(card.dataset.done)return;card.dataset.done='1';
+  const ok=oi===QUIZ[qi].a;
+  [...card.querySelectorAll('.opt')].forEach((o,j)=>{
+    if(j===QUIZ[qi].a)o.classList.add('right');
+    else if(o===btn)o.classList.add('wrong');
+  });
+  card.querySelector('#why'+qi).classList.add('show');
+  answered++;if(ok){score++;toast('✔ 回答正确！')}else toast('✘ 看解析：抓"方向/载体/能量"三要素');
+  if(answered===QUIZ.length){
+    const sb=document.getElementById('scoreBox');sb.style.display='block';sb.classList.add('in');
+    document.getElementById('scoreTxt').textContent=score+' / '+QUIZ.length;
+    const msg=score===5?'🏆 满分！授予你"⚡ 能量大亨"称号——逆浓度 transport 已被你彻底拿捏！':
+      score>=4?'🎉 很棒！只差一步登顶，回看错题解析再巩固一下。':
+      score>=3?'👍 合格！"逆浓度 = 主动运输"这条铁证再多用几次。':
+      '💪 别灰心，回爬坡挑战赛再玩一轮，理解三要素后重刷！';
+    document.getElementById('scoreMsg').textContent=msg;
+    sb.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/active/workbuddy/" data-file="workbuddy/4.2主动运输与胞吞胞吐.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

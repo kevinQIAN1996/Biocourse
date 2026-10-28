@@ -154,4 +154,4 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});d
 function frame(now){const dt=Math.min(.1,(now-last)/1000);last=now;if(playing&&!document.hidden){time=Math.min(80,time+dt*speed);scene.setTime(time);followMobile();elapsed+=dt;if(elapsed>.06||time>=80){updateUI();elapsed=0}if(time>=80)pause()}requestAnimationFrame(frame)}requestAnimationFrame(frame);
 })();
 </script>
-</body></html>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/secretion/legacy/" data-file="分泌蛋白_膜上旅程_v1.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>

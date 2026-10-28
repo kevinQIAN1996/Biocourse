@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.3 细胞呼吸的原理和应用 | 高中生物必修一</title>
+<style>
+:root{
+  --paper:#f7f3ea; --paper2:#efe9dc; --ink:#292524; --ink2:#6b6255;
+  --teal:#0f766e; --teal-l:#14b8a6; --rust:#c2410c; --amber:#b45309;
+  --card:#fffdf7; --line:#e2d9c6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+  background:
+    radial-gradient(900px 460px at 85% -4%,rgba(20,184,166,.08),transparent 60%),
+    radial-gradient(760px 520px at 6% 42%,rgba(194,65,12,.06),transparent 60%),
+    linear-gradient(170deg,#f9f5ec,var(--paper) 55%,#f2ecdf);
+  color:var(--ink); overflow-x:hidden;
+}
+#pbar{position:fixed;top:0;left:0;height:4px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--teal),var(--teal-l));transition:width .2s}
+#dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:13px}
+#dots a{width:11px;height:11px;border-radius:50%;background:rgba(15,118,110,.18);border:2px solid #fff;
+  box-shadow:0 1px 5px rgba(41,37,36,.25);position:relative;transition:.25s;display:block}
+#dots a:hover,#dots a.on{background:var(--teal);transform:scale(1.3)}
+#dots a span{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  background:var(--ink);color:#f5f0e4;font-size:12px;padding:4px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:.2s}
+#dots a:hover span{opacity:1}
+/* ---------- 期刊版式 ---------- */
+section{max-width:1060px;margin:0 auto;padding:72px 24px;position:relative;z-index:2}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;
+  box-shadow:0 6px 22px rgba(87,74,55,.1);margin-bottom:24px;
+  opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.card.in{opacity:1;transform:none}
+.kicker{display:flex;align-items:baseline;gap:14px;border-bottom:2.5px solid var(--ink);padding-bottom:10px;margin-bottom:18px}
+.kicker .no{font-family:"Georgia","STZhongsong",serif;font-size:44px;font-weight:900;color:var(--teal);line-height:1}
+.kicker .kt{font-size:12px;letter-spacing:3px;color:var(--rust);font-weight:800}
+h2{font-family:"Georgia","STZhongsong","SimSun",serif;font-size:30px;letter-spacing:2px;margin-bottom:8px;color:var(--ink)}
+h3{font-size:18px;color:var(--teal);margin:16px 0 10px}
+.sub{color:var(--ink2);font-size:15px;line-height:1.9}
+.hl{background:linear-gradient(transparent 60%,rgba(20,184,166,.28) 60%);font-weight:700;color:#0b5a53;padding:0 2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;
+  background:var(--teal);color:#fff;font-size:15px;font-weight:700;
+  padding:11px 24px;border-radius:6px;box-shadow:0 4px 12px rgba(15,118,110,.3);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#0b5a53}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--teal);border:1.5px solid var(--teal);box-shadow:none}
+.btn.rust{background:var(--rust)}
+.btn.rust:hover{background:#9a3412}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.panel{background:var(--paper2);border:1px solid var(--line);border-radius:10px;padding:15px 19px}
+.figure{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 3px 12px rgba(87,74,55,.08)}
+.figure .cap{font-size:12.5px;color:#8a7f6d;text-align:center;margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;font-style:italic}
+.grid2{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:start}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.reveal{border-left:4px solid var(--teal-l);background:rgba(20,184,166,.08);
+  border-radius:8px;padding:14px 18px;margin-top:12px;display:none;font-size:15px;line-height:1.9}
+.reveal.show{display:block;animation:pop .5s}
+@keyframes pop{0%{opacity:0;transform:scale(.97)}100%{opacity:1;transform:none}}
+.concl{background:#fdf6e9;border:1.5px solid var(--amber);border-radius:10px;
+  padding:16px 22px;font-size:15.5px;line-height:2;display:none;margin-top:16px}
+.concl.show{display:block;animation:pop .6s}
+.concl b{color:#8a3a06}
+.eq{font-family:"Consolas","Microsoft YaHei",monospace;background:#fff;border:1.5px dashed var(--teal);
+  border-radius:8px;padding:10px 16px;font-size:14.5px;color:#134e4a;margin:8px 0;line-height:1.7;text-align:center}
+/* ---------- 封面 ---------- */
+#hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+.cover{border:3px solid var(--ink);padding:36px 48px;background:var(--card);box-shadow:8px 8px 0 rgba(15,118,110,.25);max-width:760px}
+.cover .vol{font-size:13px;letter-spacing:4px;color:var(--rust);font-weight:800}
+.cover h1{font-family:"Georgia","STZhongsong","SimSun",serif;font-size:44px;letter-spacing:4px;margin:14px 0 4px;color:var(--ink)}
+.cover .en{color:#8a7f6d;letter-spacing:3px;font-size:12px}
+.cover .sub2{font-size:16px;color:var(--ink2);margin:18px 0 24px;line-height:2.1}
+.cover hr{border:none;border-top:1.5px solid var(--ink);margin:14px 0}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.floaty{animation:floaty 4s ease-in-out infinite}
+/* ---------- 实验 ---------- */
+.flask-liquid{transition:fill 1.6s}
+.bubB{animation:riseB 2.2s linear infinite;opacity:0}
+@keyframes riseB{0%{transform:translateY(0);opacity:0}12%{opacity:.9}90%{opacity:.85}100%{transform:translateY(-70px);opacity:0}}
+.bubS{animation-play-state:paused}
+.playing .bubS{animation-play-state:running}
+/* ---------- 三阶段 ---------- */
+.stageChip{padding:9px 20px;border-radius:6px;background:#fff;border:1.5px solid var(--teal);
+  font-size:14px;font-weight:700;color:var(--teal);cursor:pointer;transition:.2s;user-select:none;font-family:inherit}
+.stageChip.cur{background:var(--teal);color:#fff}
+.stageChip.done{background:#ccfbf1;border-color:#99f6e4;color:#0b5a53}
+.stageZone{transition:opacity .6s,filter .6s}
+.dim{opacity:.28}
+.glowZone{filter:drop-shadow(0 0 10px rgba(20,184,166,.8))}
+/* ---------- 曲线 ---------- */
+input[type=range]{width:100%;accent-color:var(--teal);cursor:pointer}
+/* ---------- 应用卡 ---------- */
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.app-grid{grid-template-columns:1fr}}
+.app{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 16px;transition:.2s;cursor:pointer}
+.app:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 8px 18px rgba(87,74,55,.14)}
+.app .emo{font-size:34px}
+.app .at{font-weight:800;font-size:15px;margin:6px 0 4px;color:var(--ink)}
+.app .ad{font-size:13px;color:var(--ink2);line-height:1.75;display:none}
+.app.open .ad{display:block;animation:pop .4s}
+/* ---------- 闯关 ---------- */
+.quiz .opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:8px;
+  padding:11px 16px;margin:8px 0;font-size:14.5px;cursor:pointer;font-family:inherit;transition:.18s;color:var(--ink)}
+.quiz .opt:hover{border-color:var(--teal);transform:translateX(4px)}
+.quiz .opt b{color:var(--teal);margin-right:6px}
+.quiz .opt.right{background:#f0fdf4;border-color:#16a34a;color:#14532d;font-weight:700}
+.quiz .opt.wrong{background:#fef2f2;border-color:#dc2626;color:#7f1d1d;animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.why{font-size:13.5px;color:#14532d;margin-top:6px;display:none;background:#f0fdf4;border-radius:8px;padding:8px 14px;line-height:1.8}
+.why.show{display:block;animation:pop .4s}
+#scoreBox{text-align:center;display:none;padding:26px}
+#scoreBox .big{font-size:44px;font-weight:900;color:var(--teal);font-family:"Georgia",serif}
+.slogan{background:var(--ink);color:#f5f0e4;border-radius:12px;
+  padding:24px 30px;font-size:19px;line-height:2.15;text-align:center;letter-spacing:1px;
+  font-family:"Georgia","STZhongsong","SimSun",serif}
+.slogan small{display:block;font-size:12px;opacity:.6;letter-spacing:4px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#f5f0e4;
+  padding:12px 26px;border-radius:8px;font-size:15px;z-index:120;opacity:0;transition:.35s;box-shadow:0 10px 30px rgba(41,37,36,.4)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footer-note{text-align:center;color:#a2957f;font-size:13px;padding:30px 0 60px}
+table.cmp{width:100%;border-collapse:collapse;background:#fff;font-size:14px;box-shadow:0 3px 12px rgba(87,74,55,.08)}
+table.cmp th{background:var(--ink);color:#f5f0e4;padding:11px 12px;font-size:14px}
+table.cmp td{padding:10px 12px;border-bottom:1px solid var(--line);line-height:1.75;color:var(--ink)}
+table.cmp tr:last-child td{border-bottom:none}
+table.cmp td:first-child{font-weight:800;color:var(--teal);white-space:nowrap;background:#f5f1e6}
+</style>
+</head>
+<body>
+<div id="pbar"></div>
+<nav id="dots">
+  <a href="#hero"><span>封面</span></a>
+  <a href="#s1"><span>探究·酵母菌实验</span></a>
+  <a href="#s2"><span>有氧呼吸三阶段</span></a>
+  <a href="#s3"><span>无氧呼吸</span></a>
+  <a href="#s4"><span>对比整合</span></a>
+  <a href="#s5"><span>影响因素与应用</span></a>
+  <a href="#s6"><span>高考闯关</span></a>
+  <a href="#s7"><span>小结</span></a>
+</nav>
+
+<!-- ============ 封面 ============ -->
+<section id="hero">
+  <div class="cover">
+    <div class="vol">CELL EXPLORER · 细胞探秘系列 · 第 8 集 · 必修一 第五章 第 3 节</div>
+    <hr>
+    <h1>细胞呼吸的原理和应用</h1>
+    <div class="en">CELLULAR RESPIRATION · 细胞里的"印钞厂"开工了</div>
+    <svg viewBox="0 0 340 170" width="310" class="floaty" style="margin:16px auto 4px;display:block">
+      <!-- 线粒体工厂 -->
+      <path d="M40 90 C40 45 105 25 170 25 C235 25 300 45 300 90 C300 135 235 150 170 150 C105 150 40 135 40 90Z" fill="#fef3c7" stroke="#b45309" stroke-width="3.5"/>
+      <path d="M62 90 C62 60 110 46 135 44 q2 20 8 36 q6 -16 8 -36 L185 42 q2 20 8 36 q6 -16 8 -36 L232 46 q2 18 8 32 q6 -14 8 -32 C 268 52 278 66 278 90 C 278 122 232 132 170 132 C 108 132 62 122 62 90Z" fill="#fffdf7" stroke="#c2410c" stroke-width="2.5"/>
+      <!-- 输入葡萄糖 -->
+      <g><rect x="18" y="60" width="46" height="24" rx="6" fill="#99f6e4" stroke="#0f766e" stroke-width="2"/><text x="41" y="77" font-size="11" fill="#134e4a" text-anchor="middle" font-weight="800">葡萄糖</text>
+      <path d="M64 72 L84 78" stroke="#0f766e" stroke-width="3" marker-end="url(#ar)"/></g>
+      <!-- 输入氧 -->
+      <g><circle cx="30" cy="126" r="15" fill="#bae6fd" stroke="#0369a1" stroke-width="2"/><text x="30" y="130" font-size="11" fill="#075985" text-anchor="middle" font-weight="800">O₂</text>
+      <path d="M45 118 L70 104" stroke="#0369a1" stroke-width="3" marker-end="url(#ar)"/></g>
+      <!-- 输出ATP -->
+      <g><circle cx="310" cy="120" r="17" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/><text x="310" y="125" font-size="10" fill="#78350f" text-anchor="middle" font-weight="900">ATP</text>
+      <path d="M282 106 L296 114" stroke="#b45309" stroke-width="3" marker-end="url(#ar)"/></g>
+      <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#555"/></marker></defs>
+      <text x="170" y="166" font-size="12" fill="#8a7f6d" text-anchor="middle">原料进厂（葡萄糖+氧）→ 印出 ATP</text>
+    </svg>
+    <p class="sub2">上一集我们知道：细胞花钱只收 ATP 现金。<br>那么这家"印钞厂"在哪里？它如何把葡萄糖里的能量<br>一点点"印刷"成 ATP？本期带你进厂参观。</p>
+    <button class="btn" onclick="document.getElementById('s1').scrollIntoView({behavior:'smooth'})">🏭 进厂参观</button>
+  </div>
+</section>
+
+<!-- ============ 探究实验 ============ -->
+<section id="s1">
+  <div class="card">
+    <div class="kicker"><span class="no">01</span><span class="kt">探究 · 实践 · 教材 P90</span></div>
+    <h2>酵母菌的"两副面孔"：探究细胞呼吸的方式</h2>
+    <p class="sub">酵母菌是<b>兼性厌氧菌</b>：有氧无氧都能活。它成了探究细胞呼吸方式的明星材料。两组装置，请你来操作，并用两种试剂检测产物：</p>
+    <p class="sub">🔍 检测工具：<span class="hl">溴麝香草酚蓝溶液</span>（遇 CO₂：蓝→绿→黄）和<span class="hl">酸性重铬酸钾溶液</span>（遇酒精：橙色→灰绿色）。</p>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 330" width="100%">
+      <!-- 有氧组 -->
+      <text x="240" y="36" font-size="16" fill="#0f766e" text-anchor="middle" font-weight="900">甲组 · 有氧条件（接气泵通气）</text>
+      <path d="M70 60 Q40 130 80 160" stroke="#64748b" stroke-width="4" fill="none" stroke-dasharray="7 5"/>
+      <text x="30" y="110" font-size="12" fill="#64748b">气泵→</text>
+      <path d="M170 80 L170 210 Q170 228 188 228 L232 228 Q250 228 250 210 L250 80" fill="rgba(255,255,255,.6)" stroke="#64748b" stroke-width="3"/>
+      <rect x="175" y="140" width="70" height="82" fill="rgba(204,251,241,.55)"/>
+      <text x="210" y="188" font-size="12" fill="#134e4a" text-anchor="middle">酵母菌液</text>
+      <g class="playing" id="bubA" fill="#5eead4">
+        <circle class="bubS bubB" cx="196" cy="220" r="4"/><circle class="bubS bubB" cx="214" cy="224" r="3.5" style="animation-delay:.5s"/><circle class="bubS bubB" cx="228" cy="220" r="4" style="animation-delay:1s"/><circle class="bubS bubB" cx="204" cy="226" r="3" style="animation-delay:1.5s"/><circle class="bubS bubB" cx="222" cy="226" r="3.5" style="animation-delay:.8s"/>
+      </g>
+      <!-- 甲组检测管 -->
+      <path d="M330 120 L330 220 Q330 236 346 236 L374 236 Q390 236 390 220 L390 120" fill="rgba(255,255,255,.6)" stroke="#64748b" stroke-width="3"/>
+      <rect id="co2A" class="flask-liquid" x="334" y="160" width="52" height="72" fill="#3b82f6"/>
+      <text x="360" y="112" font-size="12" fill="#8a7f6d" text-anchor="middle">溴麝香草酚蓝</text>
+      <text id="co2At" x="360" y="262" font-size="12.5" fill="#8a7f6d" text-anchor="middle" font-weight="700"></text>
+      <!-- 无氧组 -->
+      <text x="720" y="36" font-size="16" fill="#c2410c" text-anchor="middle" font-weight="900">乙组 · 无氧条件（密封+石蜡油封层）</text>
+      <path d="M650 80 L650 210 Q650 228 668 228 L712 228 Q730 228 730 210 L730 80" fill="rgba(255,255,255,.6)" stroke="#64748b" stroke-width="3"/>
+      <rect x="655" y="96" width="70" height="14" fill="#e7e5e4" opacity=".9"/>
+      <text x="690" y="107" font-size="11" fill="#78716c" text-anchor="middle">油封</text>
+      <rect x="655" y="140" width="70" height="82" fill="rgba(204,251,241,.55)"/>
+      <text x="690" y="188" font-size="12" fill="#134e4a" text-anchor="middle">酵母菌液</text>
+      <g class="playing" id="bubB" fill="#5eead4">
+        <circle class="bubS bubB" cx="676" cy="220" r="3.5" style="animation-duration:3s"/><circle class="bubS bubB" cx="696" cy="224" r="3" style="animation-delay:1.2s;animation-duration:3.4s"/><circle class="bubS bubB" cx="708" cy="220" r="3.5" style="animation-delay:2s;animation-duration:3.2s"/>
+      </g>
+      <!-- 乙组检测管（酒精） -->
+      <path d="M810 120 L810 220 Q810 236 826 236 L854 236 Q870 236 870 220 L870 120" fill="rgba(255,255,255,.6)" stroke="#64748b" stroke-width="3"/>
+      <rect id="alcB" class="flask-liquid" x="814" y="160" width="52" height="72" fill="#f59e0b"/>
+      <text x="840" y="112" font-size="12" fill="#8a7f6d" text-anchor="middle">酸性重铬酸钾</text>
+      <text id="alcBt" x="840" y="262" font-size="12.5" fill="#8a7f6d" text-anchor="middle" font-weight="700"></text>
+      <!-- 分隔 -->
+      <line x1="480" y1="50" x2="480" y2="290" stroke="#e2d9c6" stroke-width="2" stroke-dasharray="6 6"/>
+    </svg>
+    <div class="cap">图 1 · 探究酵母菌细胞呼吸方式的对比装置（示意）</div>
+    <div class="btnrow" style="justify-content:center">
+      <button class="btn" id="btnCo2" onclick="testCo2()">🧪 检测两组 CO₂ 产生情况</button>
+      <button class="btn rust" id="btnAlc" onclick="testAlc()">🍶 检测乙组是否产生酒精</button>
+      <button class="btn ghost" onclick="resetExp()">↺ 重置</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="concl" id="expConcl">
+      <b>📌 实验结论：</b>酵母菌在有氧和无氧条件下都能进行细胞呼吸：<br>
+      · 有氧条件 → 产生<b>大量 CO₂</b>（甲组溶液迅速由蓝变绿再变黄），不产生酒精；<br>
+      · 无氧条件 → 产生<b>少量 CO₂ + 酒精</b>（乙组变色慢，且重铬酸钾变成<span class="hl">灰绿色</span>）。<br>
+      <span style="font-size:13.5px;color:#8a6d4a">💡 为什么要密封后静置一段时间再检测？——先耗尽装置内残留的 O₂，保证真正的无氧环境。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 有氧呼吸 ============ -->
+<section id="s2">
+  <div class="card">
+    <div class="kicker"><span class="no">02</span><span class="kt">核心过程 · 有氧呼吸</span></div>
+    <h2>参观主车间：有氧呼吸三阶段</h2>
+    <p class="sub">有氧呼吸的主要场所是<span class="hl">线粒体</span>（第一车间在细胞质基质）。点击三个阶段，跟着葡萄糖走完整条流水线：</p>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 360" width="100%">
+      <!-- 细胞质区域 -->
+      <rect x="20" y="30" width="330" height="300" rx="16" fill="#f0fdfa" stroke="#99f6e4" stroke-width="2"/>
+      <text x="185" y="56" font-size="14" fill="#0f766e" text-anchor="middle" font-weight="900">细胞质基质（第一车间）</text>
+      <!-- 线粒体 -->
+      <g id="mito">
+        <path d="M420 90 C420 45 500 30 620 30 C740 30 880 55 880 130 C880 205 740 235 620 235 C500 235 420 175 420 130Z" fill="#fef3c7" stroke="#b45309" stroke-width="3.5"/>
+        <path d="M448 120 C448 80 510 62 560 58 q3 22 9 40 q6 -18 9 -40 L640 52 q3 22 9 40 q6 -18 9 -40 L722 56 q3 20 9 36 q6 -16 9 -36 C 780 62 850 84 850 130 C 850 186 740 208 620 208 C 510 208 448 168 448 120Z" fill="#fffdf7" stroke="#c2410c" stroke-width="2.5"/>
+        <text x="650" y="46" font-size="13" fill="#8a3a06" text-anchor="middle" font-weight="800">线粒体</text>
+      </g>
+      <!-- 阶段① -->
+      <g id="zone1" class="stageZone">
+        <rect x="60" y="90" width="250" height="150" rx="12" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-dasharray="7 5"/>
+        <text x="185" y="118" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="900">① 糖分解</text>
+        <text x="185" y="152" font-size="13" fill="#334155" text-anchor="middle">葡萄糖 → 丙酮酸 + [H]</text>
+        <text x="185" y="178" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">+ 少量 ATP</text>
+        <text x="185" y="206" font-size="12" fill="#8a7f6d" text-anchor="middle">（不需要 O₂ 参与）</text>
+      </g>
+      <!-- 丙酮酸进线粒体箭头 -->
+      <path d="M310 165 L420 150" stroke="#64748b" stroke-width="3.5" marker-end="url(#ar2)"/>
+      <text x="365" y="140" font-size="12" fill="#64748b" text-anchor="middle">丙酮酸进厂</text>
+      <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker></defs>
+      <!-- 阶段② -->
+      <g id="zone2" class="stageZone dim">
+        <rect x="470" y="88" width="180" height="104" rx="12" fill="rgba(20,184,166,.06)" stroke="#14b8a6" stroke-width="2.5"/>
+        <text x="560" y="116" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="900">② 彻底分解</text>
+        <text x="560" y="142" font-size="12.5" fill="#334155" text-anchor="middle">丙酮酸+H₂O → CO₂+[H]</text>
+        <text x="560" y="164" font-size="12.5" fill="#b45309" text-anchor="middle" font-weight="700">+ 少量 ATP（线粒体基质）</text>
+      </g>
+      <!-- 阶段③ -->
+      <g id="zone3" class="stageZone dim">
+        <rect x="690" y="92" width="180" height="112" rx="12" fill="rgba(194,65,12,.06)" stroke="#c2410c" stroke-width="2.5"/>
+        <text x="780" y="118" font-size="15" fill="#c2410c" text-anchor="middle" font-weight="900">③ 能量爆发</text>
+        <text x="780" y="144" font-size="12.5" fill="#334155" text-anchor="middle">[H]+O₂ → H₂O</text>
+        <text x="780" y="166" font-size="12.5" fill="#b45309" text-anchor="middle" font-weight="700">+ 大量 ATP（线粒体内膜）</text>
+      </g>
+      <!-- O2/CO2/H2O 标注 -->
+      <text x="700" y="300" font-size="12.5" fill="#0369a1">O₂ 从外界进来 → 参与第三阶段</text>
+      <text x="80" y="300" font-size="12.5" fill="#64748b">CO₂ 是第二阶段的产物；H₂O 在第三阶段生成</text>
+    </svg>
+    <div class="cap">图 2 · 有氧呼吸三阶段示意（一质二基三内膜）</div>
+    <div class="btnrow" style="justify-content:center">
+      <button class="stageChip cur" onclick="showStage(1)">① 细胞质基质</button>
+      <button class="stageChip" onclick="showStage(2)">② 线粒体基质</button>
+      <button class="stageChip" onclick="showStage(3)">③ 线粒体内膜</button>
+      <button class="btn ghost" onclick="showStage(0)">👁 看全景</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="panel" id="stagePanel" style="font-size:15px;line-height:1.9">
+      <b style="color:var(--teal)">第一阶段（细胞质基质）：</b>1 分子葡萄糖分解成 2 分子丙酮酸，产生少量 [H]，释放少量能量（合成少量 ATP）。<b>不需要氧气。</b>
+      <div class="eq">C₆H₁₂O₆ →（酶）2C₃H₄O₃（丙酮酸）+ 4[H] + 少量能量</div>
+    </div>
+    <div class="concl" id="totalEq">
+      <b>📌 有氧呼吸总反应式（教材标准）：</b>
+      <div class="eq" style="font-size:15px">C₆H₁₂O₆ + 6H₂O + 6O₂ →（酶）6CO₂ + 12H₂O + 能量</div>
+      1 mol 葡萄糖彻底氧化分解释放 <b>2870 kJ</b> 能量，其中约 <b>977.28 kJ</b> 储存在 ATP 中（约 32 分子 ATP），其余以<b>热能</b>形式散失（维持体温就靠它）。<br>
+      <b>概念：</b>有氧呼吸是指细胞在氧的参与下，通过多种酶的催化作用，把葡萄糖等有机物<span class="hl">彻底氧化分解</span>，产生二氧化碳和水，释放能量，生成大量 ATP 的过程。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 无氧呼吸 ============ -->
+<section id="s3">
+  <div class="card">
+    <div class="kicker"><span class="no">03</span><span class="kt">备用方案 · 无氧呼吸</span></div>
+    <h2>没有氧怎么办？无氧呼吸的两条"应急通道"</h2>
+    <p class="sub">无氧呼吸全程在<span class="hl">细胞质基质</span>中进行。第一阶段与有氧呼吸<b>完全相同</b>；第二阶段丙酮酸不走线粒体，而是就地转化——两条路线，点击看看分别通向哪里：</p>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 330" width="100%">
+      <!-- 公共第一段 -->
+      <rect x="60" y="120" width="220" height="90" rx="12" fill="#f0fdfa" stroke="#0f766e" stroke-width="2.5"/>
+      <text x="170" y="152" font-size="15" fill="#0f766e" text-anchor="middle" font-weight="900">葡萄糖</text>
+      <text x="170" y="176" font-size="12.5" fill="#334155" text-anchor="middle">→ 丙酮酸 + [H] + 少量 ATP</text>
+      <text x="170" y="196" font-size="11.5" fill="#8a7f6d" text-anchor="middle">（第一阶段，与有氧呼吸相同）</text>
+      <!-- 分叉 -->
+      <path d="M280 150 Q340 148 380 80" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#ar3)"/>
+      <path d="M280 180 Q340 184 380 250" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#ar3)"/>
+      <defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#94a3b8"/></marker></defs>
+      <!-- 酒精路线 -->
+      <g class="stageZone" id="routeA">
+        <rect x="390" y="30" width="500" height="110" rx="14" fill="#fff7ed" stroke="#c2410c" stroke-width="2.5"/>
+        <text x="410" y="62" font-size="16" fill="#c2410c" font-weight="900">🍺 路线 A · 酒精发酵</text>
+        <text x="410" y="90" font-size="13.5" fill="#334155">丙酮酸 → 酒精（C₂H₅OH）+ CO₂　<b style="color:#c2410c">不释放能量</b></text>
+        <text x="410" y="116" font-size="12.5" fill="#8a7f6d">代表选手：酵母菌、水稻等大多数植物细胞</text>
+      </g>
+      <!-- 乳酸路线 -->
+      <g class="stageZone" id="routeB">
+        <rect x="390" y="200" width="500" height="110" rx="14" fill="#eff6ff" stroke="#0369a1" stroke-width="2.5"/>
+        <text x="410" y="232" font-size="16" fill="#0369a1" font-weight="900">🏃 路线 B · 乳酸发酵</text>
+        <text x="410" y="260" font-size="13.5" fill="#334155">丙酮酸 → 乳酸（C₃H₆O₃）　<b style="color:#0369a1">不释放能量</b></text>
+        <text x="410" y="286" font-size="12.5" fill="#8a7f6d">代表选手：动物和人的肌细胞、乳酸菌、马铃薯块茎、甜菜块根、玉米胚</text>
+      </g>
+    </svg>
+    <div class="cap">图 3 · 无氧呼吸第二阶段的两条路线（全程在细胞质基质）</div>
+    <div class="btnrow" style="justify-content:center">
+      <button class="btn rust" onclick="pickRoute('A')">🍺 点亮酒精路线</button>
+      <button class="btn" style="background:#0369a1" onclick="pickRoute('B')">🏃 点亮乳酸路线</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="eq">C₆H₁₂O₆ →（酶）2C₂H₅OH + 2CO₂ + 少量能量　　｜　　C₆H₁₂O₆ →（酶）2C₃H₆O₃ + 少量能量</div>
+    <div class="concl" id="anaConcl">
+      <b>📌 无氧呼吸要点（高频考点）：</b><br>
+      ① 只在<b>第一阶段</b>释放少量能量、合成少量 ATP；第二阶段<b>不释放能量</b>；<br>
+      ② 葡萄糖中的大部分能量仍存留在<b>酒精或乳酸</b>中（所以无氧呼吸"亏"：分解不彻底）；<br>
+      ③ 剧烈运动肌肉酸痛，就是肌细胞无氧呼吸产生<b>乳酸</b>堆积造成的；<br>
+      ④ 概念：在没有氧参与的情况下，葡萄糖等有机物经过不完全分解，释放少量能量的过程。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 对比整合 ============ -->
+<section id="s4">
+  <div class="card">
+    <div class="kicker"><span class="no">04</span><span class="kt">归纳 · 对比</span></div>
+    <h2>有氧 vs 无氧：一张表说清</h2>
+    <table class="cmp">
+      <tr><th>项目</th><th>🫁 有氧呼吸</th><th>🫧 无氧呼吸</th></tr>
+      <tr><td>场所</td><td>细胞质基质 + 线粒体（主要）</td><td>始终在细胞质基质</td></tr>
+      <tr><td>条件</td><td>需要 O₂、多种酶</td><td>不需要 O₂，需要酶</td></tr>
+      <tr><td>产物</td><td>CO₂ + H₂O（彻底分解）</td><td>酒精+CO₂ 或 乳酸（不彻底）</td></tr>
+      <tr><td>能量</td><td>大量（1 mol 葡萄糖 → 约 32 ATP）</td><td>少量（只在第一阶段产 ATP）</td></tr>
+      <tr><td>联系</td><td colspan="2" style="text-align:center">第一阶段完全相同；本质都是氧化分解有机物、释放能量、合成 ATP</td></tr>
+    </table>
+    <div class="reveal show" style="margin-top:16px">
+      💡 <b>细胞呼吸的定义（教材原话级别）：</b>有机物在细胞内经过一系列的<span class="hl">氧化分解</span>，释放能量并生成 ATP 的过程。细胞呼吸是否都需要氧？——不一定，所以它分为有氧呼吸和无氧呼吸两种类型。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 影响因素与应用 ============ -->
+<section id="s5">
+  <div class="card">
+    <div class="kicker"><span class="no">05</span><span class="kt">原理走向应用</span></div>
+    <h2>O₂ 浓度曲线 + 生活应用</h2>
+    <p class="sub">拖动滑块改变 O₂ 浓度，观察两条呼吸曲线的此消彼长——然后回答果农最关心的问题：<b>水果储存，氧气应该调到多少？</b></p>
+  </div>
+  <div class="grid2">
+    <div class="figure card">
+      <svg viewBox="0 0 520 330" width="100%">
+        <line x1="56" y1="280" x2="490" y2="280" stroke="#78716c" stroke-width="2.5" marker-end="url(#ax2)"/>
+        <line x1="56" y1="280" x2="56" y2="24" stroke="#78716c" stroke-width="2.5" marker-end="url(#ax2)"/>
+        <defs><marker id="ax2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#78716c"/></marker></defs>
+        <text x="462" y="304" font-size="13" fill="#78716c">O₂ 浓度</text>
+        <text x="26" y="36" font-size="13" fill="#78716c">速率</text>
+        <!-- 无氧呼吸曲线 -->
+        <path d="M56 90 C160 150 230 250 300 272 L480 276" fill="none" stroke="#c2410c" stroke-width="3.5"/>
+        <text x="330" y="262" font-size="12.5" fill="#c2410c" font-weight="700">无氧呼吸</text>
+        <!-- 有氧呼吸曲线 -->
+        <path d="M56 276 C170 276 240 210 320 130 C380 84 430 74 480 70" fill="none" stroke="#0f766e" stroke-width="3.5"/>
+        <text x="386" y="100" font-size="12.5" fill="#0f766e" font-weight="700">有氧呼吸</text>
+        <!-- 总呼吸曲线 -->
+        <path d="M56 100 C140 190 200 226 252 218 C320 208 400 140 480 96" fill="none" stroke="#b45309" stroke-width="3.5" stroke-dasharray="9 5"/>
+        <text x="150" y="196" font-size="12.5" fill="#b45309" font-weight="700">总呼吸强度</text>
+        <!-- 最低点 -->
+        <circle cx="252" cy="218" r="6" fill="#b45309" stroke="#fff" stroke-width="2.5"/>
+        <text x="252" y="246" font-size="12" fill="#b45309" text-anchor="middle" font-weight="800">储存最佳点</text>
+        <!-- 滑块指针 -->
+        <line id="o2line" x1="252" y1="40" x2="252" y2="280" stroke="#0f766e" stroke-width="2" stroke-dasharray="5 4"/>
+      </svg>
+      <div class="cap">图 4 · O₂ 浓度对细胞呼吸的影响（经典曲线）</div>
+      <input type="range" min="0" max="100" value="45" oninput="slideO2(this.value)">
+      <div class="panel" id="o2msg" style="margin-top:10px;font-size:14.5px;line-height:1.8">🔍 当前：低氧区——无氧呼吸被压制，有氧呼吸尚未旺盛，<b>总呼吸最弱</b>。</div>
+    </div>
+    <div class="card">
+      <div class="concl show" style="margin-top:0">
+        <b>📌 读图结论：</b>O₂ 浓度升高 → 无氧呼吸受抑制直至消失，有氧呼吸逐渐增强；储存果蔬粮食应选<b>低氧（总呼吸最低点）</b>而非无氧——无氧时无氧呼吸旺盛，反而更费有机物还产酒精！
+      </div>
+      <h3>🧰 点卡片，看原理应用（点击展开）</h3>
+      <div class="app-grid">
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🩹</div><div class="at">透气创可贴</div><div class="ad">透气抑制<b>破伤风芽孢杆菌</b>等厌氧菌繁殖——它们怕氧！</div></div>
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🌱</div><div class="at">中耕松土</div><div class="ad">增加土壤 O₂，促进根部有氧呼吸，利于吸收矿质离子（主动运输要 ATP）。</div></div>
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🏃</div><div class="at">提倡慢跑</div><div class="ad">剧烈运动肌细胞无氧呼吸产乳酸→酸痛；慢跑保持有氧供能。</div></div>
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🍎</div><div class="at">低温低氧储果</div><div class="ad">低温降酶活性，低氧压总呼吸——有机物消耗最小化。</div></div>
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🍷</div><div class="at">酿酒先通气后密封</div><div class="ad">先通气让酵母菌有氧繁殖扩大种群，再密封进行无氧呼吸产酒精。</div></div>
+        <div class="app" onclick="this.classList.toggle('open')"><div class="emo">🌾</div><div class="at">稻田定期排水</div><div class="ad">防止根部长期无氧呼吸产生酒精，导致烂根。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 闯关 ============ -->
+<section id="s6">
+  <div class="card" style="text-align:center">
+    <div class="kicker" style="justify-content:center"><span class="no">06</span><span class="kt">真题检验</span></div>
+    <h2>⚔️ 高考闯关</h2>
+    <p class="sub">湖北及全国卷精选/改编题，点击选项即刻判分。全对可获"🏭 印钞厂总工程师"称号！</p>
+  </div>
+  <div id="quizBox"></div>
+  <div class="card" id="scoreBox">
+    <div class="big" id="scoreTxt"></div>
+    <p id="scoreMsg" class="sub" style="margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ============ 小结 ============ -->
+<section id="s7">
+  <div class="card" style="text-align:center">
+    <div class="kicker" style="justify-content:center"><span class="no">07</span><span class="kt">课堂小结</span></div>
+    <h2>🗺️ 一张图带走细胞呼吸</h2>
+  </div>
+  <div class="figure card">
+    <svg viewBox="0 0 960 400" width="100%">
+      <defs><marker id="arw5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#0f766e"/></marker></defs>
+      <rect x="375" y="162" width="210" height="76" rx="14" fill="#f0fdfa" stroke="#0f766e" stroke-width="2.5"/>
+      <text x="480" y="194" font-size="19" font-weight="900" fill="#0b5a53" text-anchor="middle">细胞呼吸</text>
+      <text x="480" y="218" font-size="12" fill="#6b8f8a" text-anchor="middle">氧化分解有机物 · 释放能量 · 合成ATP</text>
+      <line x1="375" y1="178" x2="248" y2="92" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arw5)"/>
+      <rect x="30" y="46" width="232" height="96" rx="12" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+      <text x="146" y="72" font-size="15" font-weight="800" fill="#0b5a53" text-anchor="middle">有氧呼吸（三阶段）</text>
+      <text x="146" y="96" font-size="12" fill="#6b6255" text-anchor="middle">①细胞质基质 ②线粒体基质</text>
+      <text x="146" y="116" font-size="12" fill="#6b6255" text-anchor="middle">③线粒体内膜 · 产大量ATP</text>
+      <line x1="375" y1="226" x2="248" y2="312" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arw5)"/>
+      <rect x="30" y="266" width="232" height="96" rx="12" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+      <text x="146" y="292" font-size="15" font-weight="800" fill="#0b5a53" text-anchor="middle">无氧呼吸（两路线）</text>
+      <text x="146" y="316" font-size="12" fill="#6b6255" text-anchor="middle">酒精发酵：酵母菌、植物</text>
+      <text x="146" y="336" font-size="12" fill="#6b6255" text-anchor="middle">乳酸发酵：肌细胞、乳酸菌</text>
+      <line x1="585" y1="178" x2="712" y2="92" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arw5)"/>
+      <rect x="700" y="46" width="232" height="96" rx="12" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+      <text x="816" y="72" font-size="15" font-weight="800" fill="#0b5a53" text-anchor="middle">能量账</text>
+      <text x="816" y="96" font-size="12" fill="#6b6255" text-anchor="middle">2870 kJ/mol → 约32 ATP</text>
+      <text x="816" y="116" font-size="12" fill="#6b6255" text-anchor="middle">无氧：大部分能量留在产物中</text>
+      <line x1="585" y1="226" x2="712" y2="312" stroke="#0f766e" stroke-width="2.5" marker-end="url(#arw5)"/>
+      <rect x="700" y="266" width="232" height="96" rx="12" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+      <text x="816" y="292" font-size="15" font-weight="800" fill="#0b5a53" text-anchor="middle">影响因素与应用</text>
+      <text x="816" y="316" font-size="12" fill="#6b6255" text-anchor="middle">温度、O₂浓度、CO₂、水分</text>
+      <text x="816" y="336" font-size="12" fill="#6b6255" text-anchor="middle">储果低氧 · 创可贴透气 · 慢跑</text>
+    </svg>
+    <div class="cap">本节知识脉络：过程 → 路线 → 能量 → 应用</div>
+  </div>
+  <div class="slogan">
+    <small>课 堂 口 诀</small>
+    一质二基三内膜，葡萄糖变丙酮酸；<br>
+    有氧彻底产能多，无氧半程留遗憾；<br>
+    储果低氧别无氧，透气慢跑记心间。
+  </div>
+  <div class="card" style="margin-top:22px;text-align:center">
+    <p class="sub">📖 课后任务：① 观察家里酸奶/馒头的制作，说出利用了哪种呼吸方式；<br>② 预习 5.4——绿色植物还有一台更神奇的机器：能把光能直接"打印"进有机物，那就是光合作用 🌿。</p>
+  </div>
+</section>
+
+<div class="footer-note">细胞探秘系列 · 第 8 集 《细胞呼吸的原理和应用》 · 人教版高中生物必修一 第五章 第 3 节 · 建议 F11 全屏授课</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 进度条 / 导航 / 入场 ---------- */
+const secs=[...document.querySelectorAll('section')];
+const dots=[...document.querySelectorAll('#dots a')];
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('pbar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let idx=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.4)idx=i});
+  dots.forEach((d,i)=>d.classList.toggle('on',i===idx));
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card').forEach(c=>io.observe(c));
+let toastTimer;
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
+/* ---------- 酵母菌实验 ---------- */
+let tested={co2:false,alc:false};
+function checkDone(){if(tested.co2&&tested.alc)document.getElementById('expConcl').classList.add('show')}
+function testCo2(){
+  if(tested.co2)return;tested.co2=true;
+  document.getElementById('co2A').style.fill='#facc15';
+  document.getElementById('co2At').textContent='蓝 → 绿 → 黄（变色快，CO₂多）';
+  toast('甲组：溴麝香草酚蓝迅速变黄——有氧呼吸产生大量CO₂');
+  document.getElementById('btnCo2').disabled=true;
+  checkDone();
+}
+function testAlc(){
+  if(tested.alc)return;tested.alc=true;
+  document.getElementById('alcB').style.fill='#6b8f71';
+  document.getElementById('alcBt').textContent='橙色 → 灰绿色（有酒精！）';
+  toast('乙组：重铬酸钾变灰绿——无氧呼吸产生了酒精');
+  document.getElementById('btnAlc').disabled=true;
+  checkDone();
+}
+function resetExp(){
+  tested={co2:false,alc:false};
+  document.getElementById('co2A').style.fill='#3b82f6';document.getElementById('co2At').textContent='';
+  document.getElementById('alcB').style.fill='#f59e0b';document.getElementById('alcBt').textContent='';
+  document.getElementById('btnCo2').disabled=false;document.getElementById('btnAlc').disabled=false;
+  document.getElementById('expConcl').classList.remove('show');
+}
+/* ---------- 有氧呼吸三阶段 ---------- */
+const stageInfo={
+ 1:'<b style="color:var(--teal)">第一阶段（细胞质基质）：</b>1 分子葡萄糖分解成 2 分子丙酮酸，产生少量 [H]，释放少量能量（合成少量 ATP）。<b>不需要氧气。</b><div class="eq">C₆H₁₂O₆ →（酶）2C₃H₄O₃（丙酮酸）+ 4[H] + 少量能量</div>',
+ 2:'<b style="color:var(--teal)">第二阶段（线粒体基质）：</b>丙酮酸和水彻底分解成二氧化碳，产生大量 [H]，释放少量能量。<b>不需要氧气直接参与。</b><div class="eq">2C₃H₄O₃ + 6H₂O →（酶）6CO₂ + 20[H] + 少量能量</div>',
+ 3:'<b style="color:var(--teal)">第三阶段（线粒体内膜）：</b>前两个阶段产生的 [H] 与氧结合生成水，释放<b>大量能量</b>（合成大量 ATP）。<b>氧气在这一步才登场！</b><div class="eq">24[H] + 6O₂ →（酶）12H₂O + 大量能量</div>'
+};
+function showStage(n){
+  [1,2,3].forEach(i=>{
+    const z=document.getElementById('zone'+i);
+    z.classList.toggle('dim',n!==0&&n!==i);
+    z.classList.toggle('glowZone',n===i);
+  });
+  document.querySelectorAll('.stageChip').forEach((c,j)=>{
+    c.classList.toggle('cur',j+1===n);
+    c.classList.toggle('done',n!==0&&j+1<n);
+  });
+  if(n===0){document.getElementById('stagePanel').innerHTML='👁 全景视角：葡萄糖在细胞质基质开局，丙酮酸进线粒体完成后续两步；氧气只参与第三阶段，却是产能最多的阶段。'}
+  else{
+    document.getElementById('stagePanel').innerHTML=stageInfo[n];
+    if(n===3)document.getElementById('totalEq').classList.add('show');
+  }
+}
+/* ---------- 无氧路线 ---------- */
+let routesSeen={A:false,B:false};
+function pickRoute(r){
+  routesSeen[r]=true;
+  const g=document.getElementById('route'+r);
+  g.classList.add('glowZone');
+  setTimeout(()=>g.classList.remove('glowZone'),1600);
+  toast(r==='A'?'🍺 酒精发酵：酵母菌的拿手好戏':'🏃 乳酸发酵：你运动后腿酸的元凶');
+  if(routesSeen.A&&routesSeen.B)document.getElementById('anaConcl').classList.add('show');
+}
+/* ---------- O2 曲线滑块 ---------- */
+function slideO2(v){
+  const x=56+(v/100)*(480-56);
+  document.getElementById('o2line').setAttribute('x1',x);
+  document.getElementById('o2line').setAttribute('x2',x);
+  const msg=document.getElementById('o2msg');
+  if(v<12)msg.innerHTML='🔴 当前：<b>接近无氧</b>——无氧呼吸极其旺盛，有机物消耗快还产酒精，水果很快烂掉！';
+  else if(v<38)msg.innerHTML='🟢 当前：<b>低氧区</b>——无氧呼吸被压制，有氧呼吸尚未旺盛，<b>总呼吸最弱 → 储存最佳区间</b>！';
+  else if(v<70)msg.innerHTML='🟡 当前：<b>中氧区</b>——有氧呼吸逐渐成为主力，有机物消耗加快。';
+  else msg.innerHTML='🔵 当前：<b>高氧区</b>——有氧呼吸旺盛并趋于饱和，有机物消耗大，不利于储存。';
+}
+/* ---------- 闯关 ---------- */
+const QUIZ=[
+ {q:'1. 有氧呼吸第三阶段发生的场所和产物分别是？',
+  opts:['细胞质基质；丙酮酸','线粒体基质；CO₂','线粒体内膜；H₂O 和大量 ATP','线粒体外膜；乳酸'],a:2,
+  why:'口诀"一质二基三内膜"：第三阶段在线粒体内膜上，[H] 与 O₂ 结合生成水，释放大量能量（ATP 最多的一步）。'},
+ {q:'2.（2021·湖北武汉质检改编）关于无氧呼吸，下列叙述正确的是？',
+  opts:['两个阶段都释放能量并合成 ATP','只在第一阶段释放少量能量，第二阶段不释放能量','葡萄糖中的能量全部释放出来','产物只能是乳酸'],a:1,
+  why:'无氧呼吸只有第一阶段产生少量 ATP；葡萄糖中的大部分能量仍存留在酒精或乳酸中（分解不彻底）；产物有酒精+CO₂ 或乳酸两种路线。'},
+ {q:'3. 下列生物或细胞进行无氧呼吸产生乳酸的是？',
+  opts:['酵母菌','水稻根细胞','人的骨骼肌细胞','苹果果实细胞'],a:2,
+  why:'人和动物的肌细胞、乳酸菌、马铃薯块茎、甜菜块根、玉米胚等产乳酸；酵母菌和大多数植物细胞产酒精+CO₂。'},
+ {q:'4.（2022·湖北恩施质检改编）储存水果和蔬菜时，常采取"低温、低氧"条件。其中"低氧"而非"无氧"的原因是？',
+  opts:['无氧环境下细胞完全不呼吸，利于保鲜','低氧时无氧呼吸受抑制、有氧呼吸也较弱，有机物总消耗最少','低氧能产生更多酒精杀菌','无氧会直接导致细胞死亡'],a:1,
+  why:'O₂ 浓度曲线上总呼吸强度最低点对应低氧环境；完全无氧时无氧呼吸旺盛，既多耗有机物又产生酒精（对植物有害）。'},
+ {q:'5.（实验题）在"探究酵母菌细胞呼吸的方式"实验中，检测酒精应选用的试剂及现象是？',
+  opts:['溴麝香草酚蓝溶液，由蓝变绿再变黄','澄清石灰水，变浑浊','酸性重铬酸钾溶液，由橙色变成灰绿色','碘液，变蓝色'],a:2,
+  why:'酒精用酸性重铬酸钾检测：橙色→灰绿色；CO₂ 用澄清石灰水（变浑浊）或溴麝香草酚蓝（蓝→绿→黄）检测。'}
+];
+let answered=0,score=0;
+(function buildQuiz(){
+  const box=document.getElementById('quizBox');
+  QUIZ.forEach((it,i)=>{
+    const d=document.createElement('div');d.className='card quiz';
+    d.innerHTML='<h3 style="margin-top:0">'+it.q+'</h3>'+
+      it.opts.map((o,j)=>'<button class="opt" onclick="answer(this,'+i+','+j+')"><b>'+'ABCD'[j]+'.</b>'+o+'</button>').join('')+
+      '<div class="why" id="why'+i+'">📖 '+it.why+'</div>';
+    box.appendChild(d);io.observe(d);
+  });
+})();
+function answer(btn,qi,oi){
+  const card=btn.parentElement;
+  if(card.dataset.done)return;card.dataset.done='1';
+  const ok=oi===QUIZ[qi].a;
+  [...card.querySelectorAll('.opt')].forEach((o,j)=>{
+    if(j===QUIZ[qi].a)o.classList.add('right');
+    else if(o===btn)o.classList.add('wrong');
+  });
+  card.querySelector('#why'+qi).classList.add('show');
+  answered++;if(ok){score++;toast('✔ 回答正确！')}else toast('✘ 看解析：抓"场所+产物+能量"三件套');
+  if(answered===QUIZ.length){
+    const sb=document.getElementById('scoreBox');sb.style.display='block';sb.classList.add('in');
+    document.getElementById('scoreTxt').textContent=score+' / '+QUIZ.length;
+    const msg=score===5?'🏆 满分！授予你"🏭 印钞厂总工程师"称号——细胞呼吸流水线任你调度！':
+      score>=4?'🎉 很棒！只差一步满分，回看错题巩固一下。':
+      score>=3?'👍 合格！"一质二基三内膜"口诀再背一遍。':
+      '💪 别灰心，回三阶段流水线再走一遍，理解了再来！';
+    document.getElementById('scoreMsg').textContent=msg;
+    sb.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/respiration/workbuddy/" data-file="workbuddy/5.3细胞呼吸的原理和应用.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

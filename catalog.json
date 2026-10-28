@@ -1,0 +1,851 @@
+[
+  {
+    "id": "protein",
+    "title": "蛋白质",
+    "category": "cell",
+    "summary": "从氨基酸到空间结构，理解生命活动的主要承担者。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "蛋白质生命架构实验室.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "从氨基酸到空间结构，理解生命活动的主要承担者。",
+        "features": [
+          "识别氨基酸共同结构与 R 基差异",
+          "逐步形成肽键并观察脱水缩合",
+          "切换蛋白质结构模型，完成结构功能匹配"
+        ],
+        "approach": "先辨认组成，再连接与折叠，最后让学生用结构证据解释功能。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/protein/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 182665,
+        "contentSha256": "e2060804751dbdf58688a8ee6b76cfb04fa23d7ced0250766cf418e7ec09d894"
+      }
+    ]
+  },
+  {
+    "id": "nucleic",
+    "title": "核酸",
+    "category": "cell",
+    "summary": "亲手组装核苷酸，用互补规则认识遗传信息。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "核酸训练实验室.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "亲手组装核苷酸，用互补规则认识遗传信息。",
+        "features": [
+          "DNA 与 RNA 核苷酸组装校验",
+          "碱基配对任务与序列切换",
+          "双螺旋模型及骨架、氢键分层观察"
+        ],
+        "approach": "两人分别担任构建员与校验员，从单位组成推进到序列与结构。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/nucleic/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 93973,
+        "contentSha256": "480007a2f3f50a39ff454c034b07edef7cdf17f734d749706e6aa8083236a743"
+      }
+    ]
+  },
+  {
+    "id": "membrane",
+    "title": "细胞膜",
+    "category": "cell",
+    "summary": "用膜结构、流动性与信号交流解释细胞边界。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞膜_边界研究所_v1.0.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "用膜结构、流动性与信号交流解释细胞边界。",
+        "features": [
+          "完整与受损细胞膜对照",
+          "膜分子搭建和标记蛋白混合演示",
+          "可溶性信号、直接接触和胞间连丝情境"
+        ],
+        "approach": "先讨论功能，再用实验认识结构，最后检验结构与功能的联系。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/membrane/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 91877,
+        "contentSha256": "b334daded1c941098e515c0d7e93e79a12c13d771744e894e1285805628d86cc"
+      }
+    ]
+  },
+  {
+    "id": "organelles",
+    "title": "细胞器",
+    "category": "cell",
+    "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/3.2细胞器之间的分工合作.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "以细胞工厂为情境，串联细胞器分工、离心实验与协作。",
+        "features": [
+          "细胞器图鉴与分工探索",
+          "差速离心分步操作",
+          "分泌蛋白动画、生物膜系统和练习"
+        ],
+        "approach": "先认识各部门，再用分离实验区分结构，最后追踪协作路线。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/organelles/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 83112,
+        "contentSha256": "d6344f2a4aefa5e22f1912c77f6eb0eae8a808f12d0d19d518341264dc41cab7"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞器图鉴_2D互动版_v1.0.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
+        "features": [
+          "2D 图鉴逐项观察与结构标注",
+          "膜结构分类归档任务",
+          "结构比较和情境推理练习"
+        ],
+        "approach": "先看结构再讲功能，以分类和比较代替孤立记忆。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/organelles/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 70052,
+        "contentSha256": "fd32066c5a7ae644820ffdd20b7a7c0da637027b2b4b405794a6fda1df01e5c7"
+      }
+    ]
+  },
+  {
+    "id": "cell-stem",
+    "title": "细胞结构探索",
+    "category": "cell",
+    "summary": "把细胞看成相互协作的生命系统。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞工程局_STEM探索课.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "把细胞看成相互协作的生命系统。",
+        "features": [
+          "膜结构工坊及模型视角操作",
+          "动物与叶肉细胞比较和分泌蛋白路线",
+          "伞藻证据讨论、工程验收与学习记录"
+        ],
+        "approach": "用研究员和工程师角色完成边界、协作、控制三项建造任务。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/cell-stem/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 4471529,
+        "contentSha256": "a65c359b96dae2eacbaa0fd6ee588ce25183a5c4d87ecde04dc24e4197961410"
+      }
+    ]
+  },
+  {
+    "id": "textbook-atlas",
+    "title": "细胞结构图谱",
+    "category": "cell",
+    "summary": "对照教材图示，练习定位、观察和解释。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞结构图谱_教材原图交互版.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "对照教材图示，练习定位、观察和解释。",
+        "features": [
+          "教材原图缩放与结构定位",
+          "指图挑战与名称显隐",
+          "分泌蛋白追踪、科学史和课堂任务"
+        ],
+        "approach": "先让学生指认位置，再用证据说明结构功能，最后串联运输过程。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/textbook-atlas/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 38576134,
+        "contentSha256": "135814c9e576b61abd9073a6ff504a117ef196674bb3359bb87831590e3a09fc"
+      }
+    ]
+  },
+  {
+    "id": "secretion",
+    "title": "分泌蛋白",
+    "category": "cell",
+    "summary": "沿着一条蛋白质，读懂膜的协作。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.1",
+        "edition": "原版",
+        "file": "分泌蛋白_膜上旅程_v1.1.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "沿着一条蛋白质，读懂膜的协作。",
+        "features": [
+          "连续播放与逐步观察两种模式",
+          "四个预测暂停点，先判断再验证",
+          "同步局部放大框与结构标注"
+        ],
+        "approach": "以预测—观察—解释循环推进运输过程，重点观察区室关系。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/secretion/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 64702,
+        "contentSha256": "4e9650d7bdb03802620c81fd0177e82e9cf40479c1699e2b72b97fe2d72e74da"
+      },
+      {
+        "id": "legacy",
+        "label": "1.0",
+        "edition": "历史原版",
+        "file": "分泌蛋白_膜上旅程_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "历史版本于此日归档上线，非原始制作日期",
+        "summary": "以完整的运输动画串联核糖体、内质网、高尔基体和细胞膜。",
+        "features": [
+          "分泌蛋白区室剖面动画",
+          "播放、分步前进、重置与结构标注",
+          "课堂提问及科学模型说明"
+        ],
+        "approach": "先完整观看运输路线，再逐步暂停讨论各区室的作用。",
+        "changes": [
+          "保留早期交互流程，支持与新版对照。"
+        ],
+        "route": "courses/secretion/legacy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 47359,
+        "contentSha256": "f94a36ab1bd61359da153670dcfe300e54f7ef1ba5582a94af9291fe6a5261b5"
+      }
+    ]
+  },
+  {
+    "id": "active",
+    "title": "主动运输与胞吞胞吐",
+    "category": "cell",
+    "summary": "围绕条件、方向与膜变化比较运输方式。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/4.2主动运输与胞吞胞吐.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "以逆流挑战引出供能与载体，观察囊泡运输。",
+        "features": [
+          "浓度坡挑战与运输方式对比",
+          "钠钾泵逐步播放",
+          "胞吞胞吐动画和运输分类汇总"
+        ],
+        "approach": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/active/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 51908,
+        "contentSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "主动运输与胞吞胞吐_细胞物流港_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "围绕条件、方向与膜变化比较运输方式。",
+        "features": [
+          "控制载体和供能，比较主动运输条件",
+          "胞吞步骤排序和动画观察",
+          "胞吐融合条件、路线判断与学习记录"
+        ],
+        "approach": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/active/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 86460,
+        "contentSha256": "7aed332de029fe5f415a6086900cb328dbe84d5598bce51ed60d9dd6947daafa"
+      }
+    ]
+  },
+  {
+    "id": "enzyme",
+    "title": "降低活化能的酶",
+    "category": "cell",
+    "summary": "通过对照实验与能量路径理解酶的催化作用。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/5.1降低化学反应的活化能.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "用四管实验与闯关比喻解释活化能降低。",
+        "features": [
+          "过氧化氢四管实验和检测记录",
+          "无催化、Fe³⁺、酶的能量路径比较",
+          "酶本质的科学史档案与练习"
+        ],
+        "approach": "先做条件对照，再用能量曲线解释催化，最后讨论酶的本质。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/enzyme/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 50022,
+        "contentSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "降低活化能的酶_催化现场_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "通过对照实验与能量路径理解酶的催化作用。",
+        "features": [
+          "不同条件反应速率比较与活化能路径",
+          "酶和底物结合的逐步演示",
+          "温度、pH 测点记录及复温情境"
+        ],
+        "approach": "从实验现象提出解释，再改变一个条件建立有依据的判断。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/enzyme/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 249248,
+        "contentSha256": "5793cad69cceccce1831f4615b348dee4c88669f7f50e0a72cbc4059fef72e22"
+      }
+    ]
+  },
+  {
+    "id": "atp",
+    "title": "ATP",
+    "category": "cell",
+    "summary": "辨认结构，追踪反应，解释能量耦联。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0.1",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/5.2细胞的能量货币ATP.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "以细胞银行为情境认识 ATP 结构和周转。",
+        "features": [
+          "荧光恢复条件比较",
+          "ATP 部件辨认和水解、合成演示",
+          "ATP 与 ADP 循环及能源物质比较"
+        ],
+        "approach": "从供能实验引入，再看结构与转化，最后比较储能和直接供能。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "修正 ATP 水解供能说明：区分断键与整体反应的自由能变化，并标明标准条件。"
+        ],
+        "note": "教学辨析：ATP 水解的整体反应释放能量，不能把“断开一根化学键本身”理解为能量来源；约 30.5 kJ/mol 对应标准条件，细胞内实际数值受条件影响。",
+        "route": "courses/atp/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 40937,
+        "contentSha256": "baeacb637aae47d1d62577ef9cddb3f7359b3d6e36bb36d628d0fbecbce1738d"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "ATP_细胞能量交换站_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "辨认结构，追踪反应，解释能量耦联。",
+        "features": [
+          "腺嘌呤、核糖、磷酸基团分层辨认",
+          "整体水解反应与泵的工作周期对照",
+          "供需条件控制与 ATP 周转计数"
+        ],
+        "approach": "先分清组成，再观察整体反应与做功耦联，最后理解少量库存的快速周转。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/atp/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 228297,
+        "contentSha256": "b01031743baf54451e85d90469fe8fe31f1fcfc8d74ca9d360565847b6cea2a3"
+      }
+    ]
+  },
+  {
+    "id": "respiration",
+    "title": "细胞呼吸",
+    "category": "cell",
+    "summary": "追踪物质与能量，比较有氧和无氧途径。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/5.3细胞呼吸的原理和应用.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "从酵母菌实验到呼吸途径，再走向生活应用。",
+        "features": [
+          "酵母菌实验中 CO₂ 和酒精检测",
+          "有氧呼吸三阶段与两类无氧途径",
+          "氧浓度曲线、生活应用与练习"
+        ],
+        "approach": "先根据检测结果判断呼吸方式，再分区追踪过程并迁移到应用。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/respiration/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 46592,
+        "contentSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞呼吸_碳的旅程_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "追踪物质与能量，比较有氧和无氧途径。",
+        "features": [
+          "有氧呼吸与无氧途径的过程观察",
+          "通过情境比较物质去向与能量变化",
+          "课堂问题、诊断练习与科学资料说明"
+        ],
+        "approach": "沿碳的去向组织过程，再比较氧条件下的差异。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/respiration/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 79203,
+        "contentSha256": "cb2cc8ed45a8d616ae0d1db5c5353a4b63f8e193351758fd5ee3db3b16267456"
+      }
+    ]
+  },
+  {
+    "id": "photosynthesis",
+    "title": "光合作用",
+    "category": "cell",
+    "summary": "从一束光出发，解释物质来源与能量转化。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "光合作用_一束光的温室_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "从一束光出发，解释物质来源与能量转化。",
+        "features": [
+          "叶绿体结构及反应分区观察",
+          "水与二氧化碳的氧标记对照",
+          "改变条件记录温室模拟输出"
+        ],
+        "approach": "通过结构、示踪和变量控制三个角度建立解释，让学生报告观察证据。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/photosynthesis/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 75593,
+        "contentSha256": "5251b886f98ec27a06bc81db8e6ba0b9044ce4b28763ebd8cec7d889acd4c9e9"
+      }
+    ]
+  },
+  {
+    "id": "division",
+    "title": "细胞的增殖",
+    "category": "cell",
+    "summary": "看见分裂过程，核算遗传信息怎样传递。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞的增殖_一分为二放映室_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "看见分裂过程，核算遗传信息怎样传递。",
+        "features": [
+          "细胞周期与植物、动物有丝分裂放映",
+          "DNA 与染色体数量核算",
+          "根尖模拟观察及制片步骤排序"
+        ],
+        "approach": "先看动态过程，再核算数量，最后把显微观察结果讲成证据。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/division/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 95979,
+        "contentSha256": "5a4b0c1fdfab4cada914ad6853c250b63066ede7f7ba8fa553315424482db43d"
+      }
+    ]
+  },
+  {
+    "id": "differentiation",
+    "title": "细胞的分化",
+    "category": "cell",
+    "summary": "同源细胞为何能承担不同的工作？",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞的分化_同源异职展_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "同源细胞为何能承担不同的工作？",
+        "features": [
+          "细胞职责匹配与分裂分化比较",
+          "DNA、RNA、蛋白质证据链排序",
+          "细胞培养、核移植和干细胞情境"
+        ],
+        "approach": "从相同起点提出疑问，以表达差异解释分工，再讨论发育潜能。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/differentiation/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 91911,
+        "contentSha256": "41d2b325522d9f8c0e63ef0875025c2c4a6c59035536b73edf2fcfd300971e06"
+      }
+    ]
+  },
+  {
+    "id": "aging",
+    "title": "细胞的衰老和死亡",
+    "category": "cell",
+    "summary": "观察衰老线索，辨析不同的死亡与回收过程。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞的衰老和死亡_生命维护现场_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "观察衰老线索，辨析不同的死亡与回收过程。",
+        "features": [
+          "衰老特征及端粒、损伤解释情境",
+          "细胞凋亡与坏死的对照动画",
+          "自噬回收追踪、学生听证与简报"
+        ],
+        "approach": "从观察到解释，要求学生区分现象、推断和结论适用范围。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/aging/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 80487,
+        "contentSha256": "37029b2185746c4b91d61d22a0c45f40883b5f8a5a82f2d65e8bd2360d904572"
+      }
+    ]
+  },
+  {
+    "id": "mendel",
+    "title": "孟德尔的豌豆杂交实验",
+    "category": "gene",
+    "summary": "先提出假说，再用杂交和抽样检验遗传规律。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "先提出假说，再用杂交和抽样检验遗传规律。",
+        "features": [
+          "人工杂交操作排序和单性状棋盘",
+          "不同样本量的模拟统计与测交",
+          "两对性状配子清单、棋盘及预测比较"
+        ],
+        "approach": "沿问题—假说—预测—验证路线，理解比例产生的条件。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/mendel/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 95718,
+        "contentSha256": "db1e6d6c904293bafbcc5d4bd3e5042cafc535a85f243c3095c9586783cf0597"
+      }
+    ]
+  },
+  {
+    "id": "chromosome",
+    "title": "基因在染色体上",
+    "category": "gene",
+    "summary": "把果蝇的遗传现象转化为可检验的解释。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "基因在染色体上_果蝇遗传调查室_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "把果蝇的遗传现象转化为可检验的解释。",
+        "features": [
+          "基因与染色体行为类比",
+          "常染色体与 X 染色体假说预测比较",
+          "果蝇分组统计、受精追踪及论证记录"
+        ],
+        "approach": "先区分类比与证明，再设计能区分两种解释的实验。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/chromosome/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 96735,
+        "contentSha256": "addf3552ce2895a62d1ab1d639df9fa08a9e6fa0ac4acc40df592a9c8ca4184e"
+      }
+    ]
+  },
+  {
+    "id": "dna-evidence",
+    "title": "DNA 是主要的遗传物质",
+    "category": "gene",
+    "summary": "用转化实验与示踪证据判断遗传物质。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "2.0",
+        "edition": "原版",
+        "file": "DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "用转化实验与示踪证据判断遗传物质。",
+        "features": [
+          "细菌转化实验的预测、观察和对照",
+          "噬菌体实验流程排序与异常条件分析",
+          "RNA 病毒证据、结论边界和小组研究记录"
+        ],
+        "approach": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/dna-evidence/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 94866,
+        "contentSha256": "a5c4685e855f647a1cd3697e7cc4f017343c3a34bddf0b663f483cdd78b8262b"
+      },
+      {
+        "id": "legacy",
+        "label": "1.0",
+        "edition": "历史原版",
+        "file": "DNA是主要的遗传物质_证据接力_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "历史版本于此日归档上线，非原始制作日期",
+        "summary": "按实验顺序逐站收集证据，区分事实和过度结论。",
+        "features": [
+          "初始观点选择与细菌转化对照",
+          "DNA 酶处理预测及噬菌体标记追踪",
+          "搅拌离心辨析和 RNA 遗传物质情境"
+        ],
+        "approach": "从猜想开始，通过每一站的对照结果修正判断。",
+        "changes": [
+          "保留早期交互流程，支持与新版对照。"
+        ],
+        "route": "courses/dna-evidence/legacy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 95366,
+        "contentSha256": "20b7265f65f74c6582707346a850958bad09cedb0ee695b1e585a7c365436aa8"
+      }
+    ]
+  },
+  {
+    "id": "replication",
+    "title": "DNA 的复制",
+    "category": "gene",
+    "summary": "从三种假说到半保留复制的实验依据。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "DNA的复制_双链蓝图工坊_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "从三种假说到半保留复制的实验依据。",
+        "features": [
+          "保守、半保留和分散复制的预测",
+          "不同代数密度分布比较",
+          "模板配对、复制条件与局部过程演示"
+        ],
+        "approach": "先预测实验差异，再配对新链，把模型推理与结构机制联系起来。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/replication/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 87565,
+        "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c"
+      }
+    ]
+  },
+  {
+    "id": "population",
+    "title": "种群及其动态",
+    "category": "eco",
+    "summary": "走进模拟野外，用数据解释数量变化。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "种群及其动态_山野调查手记_v1.0.html",
+        "published": "2026-10-28",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "走进模拟野外，用数据解释数量变化。",
+        "features": [
+          "随机样方与偏向布样比较",
+          "标记重捕估算及可信度检查",
+          "增长模型、环境容纳量与小组调查手记"
+        ],
+        "approach": "先解决怎样数，再解释为何变，并检验模型的适用条件。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+        ],
+        "route": "courses/population/original/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 92583,
+        "contentSha256": "231395781bf882234bf2151e20f4f9c34089e4dae8d63981fc9fb1d5d8068a89"
+      }
+    ]
+  },
+  {
+    "id": "nucleus",
+    "title": "细胞核的结构和功能",
+    "category": "cell",
+    "summary": "用经典实验与结构观察，解释细胞核的功能。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "1.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/3.3细胞核的结构和功能.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "用经典实验与结构观察，解释细胞核的功能。",
+        "features": [
+          "核移植、横缢、切割、伞藻四类实验",
+          "细胞核模型热点观察",
+          "染色质与染色体转化及练习"
+        ],
+        "approach": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/nucleus/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 53849,
+        "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad"
+      }
+    ]
+  },
+  {
+    "id": "passive",
+    "title": "被动运输",
+    "category": "cell",
+    "summary": "在水分侦探情境中理解渗透与被动运输。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "1.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/4.1被动运输.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "在水分侦探情境中理解渗透与被动运输。",
+        "features": [
+          "渗透作用实验与预测题",
+          "动物细胞吸失水、植物质壁分离与复原",
+          "自由扩散、载体和通道介导运输比较"
+        ],
+        "approach": "由水的运动推理细胞变化，再比较被动运输的不同方式。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/passive/workbuddy/",
+        "platformUpdated": "2026-10-28",
+        "bytes": 53533,
+        "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3"
+      }
+    ]
+  }
+]

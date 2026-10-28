@@ -212,4 +212,4 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden){director.p
 function frame(now){const delta=Math.min(.1,(now-last)/1000);last=now;if(director.playing&&!document.hidden){const checkpoint=director.advance(delta*speed);render();if(checkpoint){lastQuestion=null;drawPrediction();scrollPrediction();}}requestAnimationFrame(frame);}drawPrediction();render();requestAnimationFrame(frame);
 })();
 </script>
-</body></html>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="assets/lesson-bridge.js" data-portal="courses/secretion/original/" data-file="分泌蛋白_膜上旅程_v1.1.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>
