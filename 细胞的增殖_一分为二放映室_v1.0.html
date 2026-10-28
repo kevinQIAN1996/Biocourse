@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="面向高中课堂的细胞增殖互动课件：细胞周期、有丝分裂、数量变化与根尖观察。"><title>细胞的增殖 · 一分为二放映室 v1.0</title><style>@charset "UTF-8";
+:root{--ink:#241d34;--muted:#6b627c;--paper:#f5f2f8;--white:#fff;--purple:#6844c5;--lilac:#e9e0fb;--line:#ded6e7;--night:#161329;--yellow:#f9d680;--base:16px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:var(--base)/1.75 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button{border:1px solid var(--line);background:#fff;color:inherit;padding:10px 17px;border-radius:9px;cursor:pointer;transition:background .18s,transform .18s}button:hover{background:var(--lilac);border-color:#b4a0db}button:active{transform:translateY(1px)}button:disabled{cursor:default;opacity:.5}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b18a23;outline-offset:3px}a{color:var(--purple)}[hidden]{display:none!important}h1,h2,h3,p{margin:0}p+p{margin-top:13px}h1,h2,h3{line-height:1.35}h2{font-size:1.65rem;letter-spacing:-.025em}h3{font-size:1.15rem}svg{max-width:100%;display:block}button svg{pointer-events:none}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4.5%;border-bottom:1px solid var(--line);background:#fbf9fd}.brand{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font-size:22px;font-weight:800;letter-spacing:.08em}.brand-mark{background:var(--purple);color:white;width:44px;height:44px;display:grid;place-items:center;font-family:Georgia,serif;font-size:32px;border-radius:14px 4px 14px 4px}.brand-sub{display:block;font-size:9px;letter-spacing:.22em;line-height:1.4}.top-course{font-size:13px;color:var(--muted)}.top-course span{display:block}.top-actions{display:flex;gap:7px}.top-actions button{font-size:12px;padding:8px 11px;background:transparent}.rooms{display:flex;gap:6px;padding:14px 4.5%;overflow:auto;scrollbar-width:thin;border-bottom:1px solid var(--line);background:#fbf9fd}.rooms button{white-space:nowrap;background:transparent;border:0;padding:10px 20px;font-size:.9rem}.rooms button span{color:var(--muted);margin-right:10px;font:12px monospace}.rooms button.active{background:var(--ink);color:white}.rooms button.active span{color:var(--yellow)}main{max-width:1440px;margin:auto;padding:30px 4.5% 0}.room{animation:enter .4s ease}.opening{display:grid;grid-template-columns:1.05fr 1fr;gap:35px;align-items:center;margin-bottom:56px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--purple);margin-bottom:12px}.opening h1{font-size:clamp(35px,4.3vw,62px);letter-spacing:-.045em;line-height:1.22}.opening em{font-style:normal;color:var(--purple)}.lead{font-size:1.02rem;color:var(--muted);margin-top:22px}.opening-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap;margin:24px 0}.primary{background:var(--purple);color:white;border-color:var(--purple);font-weight:700}.primary:hover{background:#5433a6;color:white;border-color:#5433a6}.primary span{margin-left:22px}.small{font-size:12px;color:var(--muted)}.opening-note{border-top:1px solid var(--line);padding-top:16px;font-size:.83rem;color:var(--muted);max-width:490px}.opening-note b{display:block;color:var(--ink);margin-bottom:4px}.poster{border-radius:25px 25px 7px 25px;overflow:hidden;background:var(--night);box-shadow:0 15px 35px #23123814}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:25px;margin:12px 0 26px}.section-heading p:not(.eyebrow){margin-top:12px;color:var(--muted)}.tag{font-size:11px;letter-spacing:.06em;border:1px solid #cdbce5;padding:7px 12px;border-radius:30px;white-space:nowrap;color:var(--purple)}.scale-lab{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;background:#fff;border:1px solid var(--line);padding:30px;border-radius:18px}.cube-view{align-self:center}.scale-controls label{display:flex;align-items:center;gap:15px;font-weight:700}.scale-controls output{font:34px Georgia,serif;color:var(--purple)}.scale-controls label span{font-size:12px;font-weight:normal;color:var(--muted)}input[type=range]{accent-color:var(--purple);width:100%;cursor:pointer;margin:18px 0;height:6px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 20px}.metrics div{background:var(--paper);padding:12px;border-radius:10px}.metrics small{display:block;color:var(--muted);font-size:12px}.metrics strong{font:32px Georgia,serif}.scale-controls p{font-size:.9rem}.model-note{font-size:.75rem!important;color:var(--muted);line-height:1.8}.text-btn{border:0;padding:10px 0;color:var(--purple);background:transparent}.text-btn:hover{background:transparent;text-decoration:underline}.feedback{padding:13px 16px;margin-top:13px;border-left:3px solid var(--purple);background:#eee7f8;font-size:.88rem;border-radius:0 8px 8px 0}.feedback.good{background:#e7f3ed;border-color:#328360;color:#205c42}.feedback.wrong{background:#fff1df;border-color:#bd7c1f;color:#7d4f0b}.cycle-section{display:grid;grid-template-columns:1fr .9fr 1fr;gap:25px;align-items:center;margin:55px 0}.cycle-section p{margin-top:16px;font-size:.88rem}.cycle-section .eyebrow{margin-top:0}.segmented{display:flex;background:#eae4f1;padding:4px;border-radius:11px;gap:4px}.segmented button{flex:1;background:transparent;border:0;white-space:nowrap;padding:7px 14px;font-size:.85rem}.segmented button.selected{background:#fff;color:var(--purple);box-shadow:0 3px 10px #30203810}.cycle-detail h3{margin-top:20px}.tip{padding:16px 18px;background:#f1ebfc;border-radius:10px;font-size:.85rem;margin-top:20px}.page-turn{border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;align-items:center;margin:35px 0 24px;padding-top:24px;font-size:.85rem}.page-turn span{color:var(--muted)}.page-turn button{background:var(--ink);color:white;border-color:var(--ink)}.room-title{font-size:clamp(28px,3vw,43px);letter-spacing:-.035em}.cinema{background:var(--night);border-radius:17px;overflow:hidden;color:#f1ecff;box-shadow:0 15px 40px #25134212}.cinema-top{display:flex;justify-content:space-between;align-items:center;padding:15px 24px;border-bottom:1px solid #ffffff17;font-size:13px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--yellow);margin-right:8px}.cinema button{background:transparent;border:1px solid #5b5076;color:#eee8fc;font-size:12px}.cinema button:hover{background:#382d55}.cinema-top button{padding:5px 10px}.mitosis-view{max-width:1010px;margin:auto;width:100%}.mitosis-view svg{width:100%;max-height:460px}.cinema-caption{padding:0 25px 15px;font-size:12px;color:#bfb6d3;text-align:center;min-height:37px}.transport{display:flex;gap:20px;align-items:center;padding:0 25px 18px}.transport .play{background:var(--yellow);color:#251c30;border-color:var(--yellow);min-width:90px;font-weight:bold}.transport input{accent-color:#b39aee;min-width:70px;margin:0}.transport output{font:11px monospace;white-space:nowrap;color:#c9bddb}.transport button:last-child{white-space:nowrap}.stage-stops{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid #ffffff20}.stage-stops button{border:0;border-right:1px solid #ffffff10;border-radius:0;padding:14px 4px;color:#bfb6d3;font-size:12px}.stage-stops button.current{color:var(--yellow);background:#2a2340}.stage-stops button small{display:block;font:10px monospace;opacity:.7;margin-bottom:4px}.film-bottom{display:grid;grid-template-columns:1.2fr 1fr;gap:35px;margin:30px 0}.stage-notes{padding:6px 0}.large-text{font-size:1.05rem;font-weight:600;margin:16px 0 12px}.stage-notes>p:not(.eyebrow){color:#51475f}.director{background:white;border:1px solid var(--line);border-radius:15px;padding:25px}.answers{display:grid;gap:10px;margin-top:20px}.answers button{text-align:left;padding:12px 15px;font-size:.9rem;display:flex;align-items:baseline;gap:13px}.answer-letter{font:12px monospace;color:var(--purple)}.answers button.correct,.phase-answers button.correct{background:#e0f1e7;border-color:#80b798}.answers button.incorrect,.phase-answers button.incorrect{background:#fff1dc;border-color:#cbaa71}.contrast-strip{display:flex;gap:20px;background:#e8e1f2;padding:18px 22px;border-radius:12px;font-size:.8rem;margin:15px 0}.contrast-strip b{white-space:nowrap;color:var(--purple)}.contrast-strip span+span{border-left:1px solid #c9bbdb;padding-left:20px}.audit-tabs{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.audit-tabs button.active{background:var(--purple);color:white;border-color:var(--purple)}.audit-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:25px}.audit-diagram{background:#eee6fa;border:1px solid #ddcfee;border-radius:15px;padding:22px}.audit-diagram svg{width:100%;max-height:270px}.audit-scope{display:inline-block;background:#fff;padding:6px 13px;font-size:.8rem;border-radius:30px;color:var(--purple);font-weight:bold}.audit-form{background:#fff;border:1px solid var(--line);border-radius:15px;padding:26px}.audit-form label{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid var(--line);padding:12px 0;font-size:.9rem}.audit-form select{min-width:110px;background:#f6f2fc;border:1px solid #cdbce5;padding:8px;border-radius:8px;color:var(--ink)}.audit-form>.primary{width:100%;margin-top:20px}details{border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:20px;background:#fff;font-size:.87rem}summary{cursor:pointer;font-weight:bold;color:var(--purple)}details[open] summary{margin-bottom:16px}details p{margin-top:12px}table{border-collapse:collapse;width:100%;font-size:.83rem}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:center}th{background:#eee7f8}th:first-child,td:first-child{text-align:left}.teach-back{margin:28px 0;padding:26px;border-left:5px solid var(--purple);background:#e9e0f7}.teach-back b{font-size:12px;color:var(--purple)}.teach-back p{margin-top:12px}.scope-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:start}.scope-board{background:#ddd7e5;border-radius:16px;padding:18px;border:1px solid #c8bfd1}.scope-top{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px;margin-bottom:13px}.scope-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.scope-grid button{padding:0;background:#f5f3f7;border:2px solid transparent;border-radius:7px;position:relative;overflow:hidden}.scope-grid button:hover{border-color:#b69cdd}.scope-grid button.selected{border-color:var(--purple);box-shadow:0 0 0 2px #6844c52a}.scope-grid button .cell-number{position:absolute;left:5px;top:2px;font:10px monospace;color:#8e809e}.cell-check{position:absolute;right:4px;bottom:2px;color:#286745;font-size:13px}.scope-inspect{background:white;border:1px solid var(--line);border-radius:15px;padding:23px}.scope-inspect #scopeZoom{max-width:200px;margin:0 auto 10px}.phase-answers{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}.phase-answers button{font-size:.8rem;padding:6px 10px}.observation-record{margin-top:25px}.observation-record .section-heading{margin-bottom:15px}.scope-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}.scope-stats div{padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:9px;font-size:.8rem}.scope-stats strong{display:block;font:28px Georgia,serif;color:var(--purple)}.prep{border-top:1px solid var(--line);padding-top:35px;margin-top:35px}.prep-flow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:22px 0}.prep-flow span{background:#fff;border:1px solid var(--line);padding:15px 20px;border-radius:12px;flex:1;font-weight:bold;color:var(--purple)}.prep-flow small{display:block;font-size:.7rem;color:var(--muted);font-weight:normal}.prep-flow b{color:#baa6d4}.closing-prompt{display:grid;grid-template-columns:45px 1.2fr 1fr;gap:25px;padding:35px;background:#e8dff7;border-radius:18px;align-items:center;margin-bottom:35px}.quote-mark{font:100px Georgia,serif;color:var(--purple);align-self:start;line-height:1}.closing-prompt h2{font-size:1.8rem;line-height:1.6}.closing-prompt p{font-size:.85rem}.word-bank{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.word-bank span{font-size:11px;border:1px solid #c2acd9;padding:5px 11px;border-radius:20px}.quiz-shell{display:grid;grid-template-columns:.6fr 1.5fr;border:1px solid var(--line);border-radius:17px;background:white;overflow:hidden}.quiz-left{padding:35px;background:#eee8f6}.quiz-left h2{font-size:2rem}.quiz-left>p:not(.eyebrow){margin-top:20px;font-size:.85rem}.quiz-main{padding:35px}.quiz-dots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}.quiz-dots button{padding:7px;background:transparent;font-size:12px}.quiz-dots button.current{background:var(--purple);color:white}.quiz-dots button.done{border-color:#549574}.quiz-nav{display:flex;justify-content:space-between;margin-top:20px;gap:15px}.takeaway{margin:35px 0;text-align:center;padding:35px}.takeaway b{color:var(--purple);font-size:12px;letter-spacing:.14em}.takeaway p{font-size:1.6rem;font-weight:bold;margin:15px 0 25px}footer{max-width:1440px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:25px 4.5%;border-top:1px solid var(--line);color:var(--muted);font-size:10px}footer button{background:transparent;border:0;font-size:11px;color:var(--purple)}dialog{border:1px solid #cec0dc;border-radius:18px;padding:0;color:var(--ink);width:min(760px,92vw);max-height:85vh;background:var(--paper)}dialog::backdrop{background:#160e2a99;backdrop-filter:blur(5px)}.modal-head{display:flex;justify-content:space-between;align-items:center;background:var(--paper);position:sticky;top:0;padding:20px 28px;border-bottom:1px solid var(--line)}.modal-head button{font-size:25px;border:0;padding:0 8px}.modal-head h2{font-size:1.4rem}#modalBody{padding:25px 28px;font-size:.9rem}#modalBody h3{margin:20px 0 12px}#modalBody li{margin-bottom:13px}#modalBody a{overflow-wrap:anywhere}#modalBody .source{padding:14px 0;border-bottom:1px solid var(--line)}#modalBody .source p{font-size:.8rem;color:var(--muted)}.large-font{--base:19px}.large-font .eyebrow,.large-font .model-note{font-size:14px!important}.large-font .stage-stops button{font-size:14px}@keyframes enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@media(min-width:1600px){main{padding-left:40px;padding-right:40px}}@media(max-width:1000px){.top-course{display:none}.top{padding:18px 4%}.opening{gap:25px}.cycle-section{grid-template-columns:1fr 1fr}.cycle-section>div:first-child{grid-column:1/-1}.film-bottom{gap:22px}.contrast-strip{flex-wrap:wrap}.scope-layout{grid-template-columns:1.2fr 1fr}.scope-grid{grid-template-columns:repeat(4,1fr)}.closing-prompt{grid-template-columns:1fr 1fr}.quote-mark{display:none}.prep-flow{flex-wrap:wrap}.prep-flow span{flex-basis:36%}.prep-flow b:nth-of-type(2){display:none}}@media(max-width:700px){body{--base:15px}.top{gap:10px;padding:16px 5%}.brand{font-size:18px;gap:8px}.brand-mark{width:36px;height:36px;font-size:26px}.brand-sub{font-size:7px}.top-actions{gap:3px}.top-actions button{padding:6px;font-size:10px}.top-actions #fontToggle span{display:none}.rooms{padding:10px 4%}.rooms button{padding:8px 13px}.rooms button span{margin-right:6px}main{padding:24px 5% 0}.opening{grid-template-columns:1fr;gap:24px;margin-bottom:35px}.opening h1{font-size:39px}.poster{max-width:500px}.opening-note{max-width:none}.section-heading{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:20px}.section-heading h2{font-size:1.45rem}.scale-lab{grid-template-columns:1fr;padding:20px;gap:5px}.cube-view{max-width:320px;margin:auto;width:100%}.cycle-section{gap:15px;margin:35px 0}.cycle-wheel{grid-column:1/-1;max-width:270px;margin:auto}.cycle-detail{grid-column:1/-1}.page-turn{flex-direction:column;align-items:stretch}.room-title{font-size:30px}.segmented{max-width:100%}.segmented button{padding:7px 12px;font-size:.8rem}.cinema-top{padding:12px 14px;font-size:11px}.cinema-top button{font-size:10px}.cinema-caption{font-size:10px;padding:0 14px 12px}.transport{gap:10px;padding:0 13px 15px;flex-wrap:wrap}.transport .play{min-width:70px;padding:7px 10px}.transport input{flex:1}.transport output{font-size:10px}.transport button:last-child{padding:5px 7px;font-size:10px}.stage-stops{grid-template-columns:repeat(3,1fr)}.stage-stops button{font-size:11px;padding:10px 3px;border-bottom:1px solid #ffffff10}.film-bottom{grid-template-columns:1fr}.director{padding:20px}.contrast-strip{gap:10px}.contrast-strip span{flex-basis:100%;border:0!important;padding:0!important}.audit-layout{grid-template-columns:1fr}.audit-tabs{gap:6px}.audit-tabs button{font-size:12px;padding:8px 12px}.audit-form{padding:20px}.count-key{overflow-x:auto}th,td{padding:8px;font-size:11px}.scope-layout{grid-template-columns:1fr}.scope-grid{grid-template-columns:repeat(5,1fr)}.scope-board{padding:10px}.scope-top{font-size:10px}.scope-inspect{display:grid;grid-template-columns:.8fr 1.2fr;gap:10px 15px;padding:18px}.scope-inspect>.eyebrow{grid-column:1/-1;margin:0}.scope-inspect #scopeZoom{grid-row:2/5;align-self:center}.scope-inspect h3{font-size:1rem}.scope-inspect .phase-answers{margin:0}.scope-inspect .feedback{grid-column:1/-1;margin:0}.scope-inspect #nextCell{grid-column:2}.scope-stats{gap:4px}.scope-stats div{padding:9px 5px;font-size:11px;text-align:center}.scope-stats strong{font-size:23px}.prep-flow{gap:8px}.prep-flow span{padding:12px}.closing-prompt{grid-template-columns:1fr;padding:25px;gap:20px}.closing-prompt h2{font-size:1.45rem}.quiz-shell{grid-template-columns:1fr}.quiz-left{padding:23px}.quiz-left h2{font-size:1.5rem}.quiz-left h2 br{display:none}.quiz-left>p:not(.eyebrow){margin-top:10px}.quiz-dots{grid-template-columns:repeat(8,1fr);gap:5px;margin:14px 0 5px}.quiz-dots button{padding:6px 0}.quiz-main{padding:23px}.takeaway{padding:20px 0}.takeaway p{font-size:1.25rem}footer{flex-wrap:wrap;gap:9px;padding:20px 5%}footer>span:nth-child(2){flex-basis:100%;order:3}.modal-head{padding:17px 20px}#modalBody{padding:20px}.large-font{--base:18px}.large-font .opening h1{font-size:40px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+.scope-caution{background:#e9e0f7;border-left:3px solid #6844c5;padding:12px 18px;margin-bottom:22px;font-size:.8rem}
+.focus-film{overflow:hidden}.focus-film .cinema{position:fixed;inset:12px;z-index:30;display:flex;flex-direction:column;border-radius:12px}.focus-film .mitosis-view{flex:1;min-height:0;display:flex;max-width:none}.focus-film .mitosis-view svg{height:100%!important;max-height:none;width:100%!important}.focus-film .cinema-top,.focus-film .transport,.focus-film .stage-stops,.focus-film .cinema-caption{flex-shrink:0}.focus-film .stage-stops button{padding:10px 4px}.focus-film .cinema-caption{padding-bottom:10px}.focus-film .transport{padding-bottom:12px}@media(max-width:700px){.focus-film .cinema{inset:5px}.focus-film .cinema-top{flex-wrap:wrap;gap:8px}}
+html.large-font{font-size:19px}
+</style></head>
+<body>
+<header class="top"><a class="brand" href="#" id="brand"><span class="brand-mark">Ⅱ</span><span>一分为二<span class="brand-sub">THE DIVISION STUDIO</span></span></a><div class="top-course">人教版 · 必修 1<span>第 6 章 / 第 1 节 细胞的增殖</span></div><div class="top-actions"><button id="fontToggle" aria-pressed="false" title="放大文字">Aa <span>大字</span></button><button id="guideBtn">课堂指南</button><button id="sourcesBtn">科学依据</button></div></header>
+<nav class="rooms" aria-label="学习场景"><button data-room="0" class="active" aria-current="page"><span>01</span> 生长的尺度</button><button data-room="1"><span>02</span> 分裂放映室</button><button data-room="2"><span>03</span> 数量核算台</button><button data-room="3"><span>04</span> 根尖观察局</button><button data-room="4"><span>05</span> 把证据讲出来</button></nav>
+<main id="main">
+<section class="room" id="room0" aria-labelledby="title0">
+<div class="opening"><div class="opening-copy"><p class="eyebrow">从一个细胞，到新的细胞</p><h1 id="title0">一分为二。<br><em>信息，如何接力？</em></h1><p class="lead">身体长大，伤口愈合。新的细胞从哪里来？<br>今天，你来当一次细胞分裂的“科学导演”。</p><div class="opening-actions"><button class="primary" data-goto="1">进入分裂放映室 <span>↗</span></button><span class="small">先观察 → 再计数 → 用证据解释</span></div><div class="opening-note"><b>本课主线</b> 母细胞的 DNA 先复制，复制后的遗传物质再分配到子细胞。有丝分裂维持亲子代细胞染色体数目的稳定。</div></div><div class="poster" id="poster" aria-label="细胞分裂主题示意图"></div></div>
+<div class="section-heading"><div><p class="eyebrow">问题 01 / 只变大，行不行？</p><h2>个体的生长，需要细胞生长与增殖。</h2></div><span class="tag">数学模型 × 生物推理</span></div>
+<div class="scale-lab"><div class="cube-view" id="cubeView"></div><div class="scale-controls"><label for="size">模型立方体边长 <output id="sizeValue">2</output><span>相对单位</span></label><input id="size" type="range" min="1" max="6" value="2" step="1"><div class="metrics"><div><small>表面积 S</small><strong id="surface">24</strong></div><div><small>体积 V</small><strong id="volume">8</strong></div><div><small>S / V</small><strong id="ratio">3.00</strong></div></div><p>把边长调大：体积增长得更快。单位体积对应的表面积减少，这会限制通过表面与外界交换物质的相对能力。</p><p class="model-note">立方体只是几何模型。真实细胞形态、膜折叠、运输机制等也会影响交换；不能推出“细胞越小越好”。</p><button class="text-btn" id="growthReveal">生长与增殖有什么不同？ ↓</button><div id="growthAnswer" hidden class="feedback">细胞生长主要使体积增大；细胞增殖使数目增加。细胞增殖是生物体生长、发育、繁殖和修复的基础。</div></div></div>
+<div class="cycle-section"><div><p class="eyebrow">问题 02 / 分裂之前在忙什么？</p><h2>细胞周期，<br>从一次分裂完成开始。</h2><p>连续分裂的细胞，从一次分裂完成时开始，到下一次分裂完成时为止，是一个细胞周期。</p><p class="model-note">G₁、S、G₂ 属于分裂间期；M 期包含有丝分裂与胞质分裂。环图比例仅用于示意，不代表固定时长。</p></div><div class="cycle-wheel" id="cycleWheel"></div><div class="cycle-detail"><div class="segmented" id="cycleButtons"><button data-cycle="0" class="selected">G₁</button><button data-cycle="1">S</button><button data-cycle="2">G₂</button><button data-cycle="3">M</button></div><h3 id="cycleTitle"></h3><p id="cycleText"></p><p class="tip">间期可不“闲”——DNA 复制、蛋白质合成等准备工作，都在这里发生。</p></div></div>
+<div class="page-turn"><span>准备好了？去看染色体如何被分配。</span><button data-goto="1">下一幕：分裂放映室 →</button></div>
+</section>
+<section class="room" id="room1" hidden aria-labelledby="title1">
+<div class="section-heading"><div><p class="eyebrow">02 / 你来控制时间</p><h1 id="title1" class="room-title">分裂放映室</h1><p>拖动进度，停在你想解释的那一帧。</p></div><div class="segmented" id="cellType"><button data-type="plant" class="selected">高等植物细胞</button><button data-type="animal">动物细胞</button></div></div>
+<div class="cinema"><div class="cinema-top"><span><i class="dot"></i> <b id="stageName">间期 · 复制前</b></span><div><button id="labelToggle" aria-pressed="true">结构标注：开</button> <button id="focusFilm" aria-pressed="false">放映模式 ↗</button></div></div><div id="mitosisView" class="mitosis-view"></div><div class="cinema-caption" id="sceneCaption"></div><div class="transport"><button id="play" class="play" aria-label="播放分裂动画">▶ 播放</button><input aria-label="细胞分裂时间轴" id="timeline" type="range" min="0" max="500" value="0" step="1"><output id="frameOutput">01 / 06</output><button id="resetFilm" title="回到复制前">↺ 重播</button></div><div id="stageStops" class="stage-stops"></div></div>
+<div class="film-bottom"><article class="stage-notes"><p class="eyebrow" id="stageLabel">观察笔记</p><h2 id="stageTitle"></h2><p id="stageObservation" class="large-text"></p><p id="stageMechanism"></p><div id="stageTrap" class="tip"></div></article><aside class="director"><p class="eyebrow">把暂停键交给学生</p><h3 id="stageQuestion"></h3><div id="stageOptions" class="answers"></div><div id="stageFeedback" class="feedback" role="status" hidden></div></aside></div>
+<div class="contrast-strip"><b>对照看</b><span>植物：中央形成细胞板，向周围扩展。</span><span>动物：细胞膜从中部向内凹陷。</span><span>两者都要准确分配复制后的染色体。</span></div><p class="model-note">本片为 2n = 4 的理想化教学模型，展示典型开放式有丝分裂。不同颜色用于追踪同一条染色体的复制与分配，不代表父本、母本；比例、帧间时长与轨迹均不是真实测量。</p>
+<div class="page-turn"><span>看起来变多了？先说清你在数什么。</span><button data-goto="2">下一幕：数量核算台 →</button></div>
+</section>
+<section class="room" id="room2" hidden aria-labelledby="title2"><div class="section-heading"><div><p class="eyebrow">03 / 同一段故事，三本账</p><h1 class="room-title" id="title2">复制 DNA，≠ 立刻增加染色体数。</h1><p>选择一个节点，给这个 2n = 4 模型填账。请先看清统计范围。</p></div><span class="tag">计数依据：着丝粒</span></div><div class="audit-tabs" id="auditTabs"></div><div class="audit-layout"><div class="audit-diagram"><div class="audit-scope" id="auditScope"></div><div id="auditImage"></div><p class="model-note" id="auditNote"></p></div><div class="audit-form"><p class="eyebrow" id="auditHeading"></p><label>染色体数 <select id="countChrom" aria-label="染色体数"><option value="">请选择</option><option>2</option><option>4</option><option>8</option></select></label><label>DNA 分子数（核 DNA）<select id="countDNA" aria-label="核DNA分子数"><option value="">请选择</option><option>2</option><option>4</option><option>8</option></select></label><label>姐妹染色单体数 <select id="countSister" aria-label="姐妹染色单体数"><option value="">请选择</option><option>0</option><option>4</option><option>8</option></select></label><button class="primary" id="checkCounts">核对这笔账 →</button><div id="countFeedback" class="feedback" role="status" hidden></div></div></div><details class="count-key"><summary>查看整段数量变化与计数规则</summary><div id="countTable"></div><p>一条染色体含一个着丝粒（按教材计数口径）。复制后由两条姐妹染色单体组成，仍计作一条染色体；后期姐妹染色单体分离，分别成为独立染色体，此时不再称姐妹染色单体。上表“0”沿用高中教材这一计数口径。</p><p class="model-note">DNA 数只统计核 DNA。细胞器 DNA 不包含在此账本中；DNA 分子是双链分子，不要把两条链算成两个分子。</p></details><div class="teach-back"><b>30 秒讲给同学听</b><p>“DNA 数量在 ______ 增加；染色体数量在 ______ 暂时增加；分裂完成后每个子细胞 ______。”</p><button class="text-btn" id="teachReveal">展开参考表达 ↓</button><p id="teachAnswer" hidden>DNA 在间期的 S 期复制；姐妹染色单体在后期分离后，尚未完成胞质分裂的整个细胞内染色体数暂时加倍；分裂完成后，每个子细胞的染色体数与母细胞复制前相同。</p></div><div class="page-turn"><span>会计数，还要会从结构证据辨认时期。</span><button data-goto="3">下一幕：根尖观察局 →</button></div></section>
+<section class="room" id="room3" hidden aria-labelledby="title3"><div class="section-heading"><div><p class="eyebrow">04 / 观察，而不是猜名字</p><h1 class="room-title" id="title3">根尖观察局</h1><p>点击一个细胞，放大观察。选时期，再说出你看到的证据。</p></div><span class="tag">原创模拟图 · 非显微照片</span></div><p class="scope-caution">本区只练习辨认形态，图中符号数量不沿用放映室的 2n = 4 模型，也不复刻洋葱的真实 2n = 16；请勿用这些图来数洋葱染色体。</p><div class="scope-layout"><div class="scope-board"><div class="scope-top"><span>模拟分生区 / 20 个细胞</span><span id="scopeProgress">已记录 0 / 20</span></div><div id="scopeGrid" class="scope-grid"></div></div><aside class="scope-inspect"><p class="eyebrow" id="cellIndex">样本 01</p><div id="scopeZoom"></div><h3>这个细胞处于哪一时期？</h3><div id="phaseAnswers" class="phase-answers"></div><div id="scopeFeedback" class="feedback" role="status" hidden></div><button id="nextCell" class="text-btn">观察下一个 →</button></aside></div><div class="observation-record"><div class="section-heading"><h2>把视野变成证据</h2><button id="scopeReset">重做观察记录</button></div><div id="scopeStats" class="scope-stats"></div><p class="model-note">这个视野是人工设计的练习样本，不能用于测量真实周期。固定、染色的装片中细胞已失去活性；要观察不同时期，需要移动装片寻找不同细胞。</p><details><summary>数量比例能不能代表时间比例？</summary><p>只有在连续增殖、各细胞不同步、抽样具有代表性等适当前提下，某时期细胞数的比例才可用来粗略估计该时期占周期的比例。需观察多个视野、较多细胞；培养条件、死亡和取样偏差都可能干扰。这里 20 个图形是人为构成，不作真实时长推算。</p></details></div><div class="prep"><div><p class="eyebrow">真正的实验如何准备</p><h2>制片顺序，不能随便剪辑。</h2><p>下列是教材实验的流程复习，不替代教师指导下的实验操作。</p></div><div class="prep-flow"><span>解离<small>使组织中的细胞分离</small></span><b>→</b><span>漂洗<small>洗去解离液</small></span><b>→</b><span>染色<small>使染色体着色</small></span><b>→</b><span>制片<small>让细胞尽量分散</small></span></div><p class="model-note">先用低倍镜找到根尖分生区（细胞较小、排列紧密、近似方形），再换高倍镜观察。染色剂可按教材及学校实验方案选用甲紫溶液或醋酸洋红液等。</p></div><div class="page-turn"><span>把过程、数字和观察串成一段解释。</span><button data-goto="4">最后一幕：把证据讲出来 →</button></div></section>
+<section class="room" id="room4" hidden aria-labelledby="title4"><div class="section-heading"><div><p class="eyebrow">05 / 今天，由学生主讲</p><h1 class="room-title" id="title4">把证据讲出来。</h1><p>两人一组：一人解释，一人追问“你的证据是什么？”</p></div><span class="tag">原创练习 · 非高考原题</span></div><div class="closing-prompt"><span class="quote-mark">“</span><h2>一个细胞变成两个，<br>为什么每个子细胞的遗传信息<br>没有简单地“少一半”？</h2><div><p>你的解释至少要用到：</p><div class="word-bank"><span>DNA 复制</span><span>姐妹染色单体分离</span><span>均等分配</span><span>染色体数目稳定</span></div><button id="explainReveal">查看参考逻辑 ↓</button><p id="explainAnswer" hidden>间期完成 DNA 复制，形成的两份 DNA 随姐妹染色单体在后期分离，并分配到两个子细胞中。在正常有丝分裂模型中，每个子细胞都获得一套与母细胞复制前相同的染色体。这里不讨论突变等例外。</p></div></div><div class="quiz-shell"><div class="quiz-left"><p class="eyebrow">课堂出口 / 8 道题</p><h2>带着理由<br>作答。</h2><p id="quizScore">已作答 0 / 8</p><div id="quizDots" class="quiz-dots"></div><button id="resetQuiz" class="text-btn">重新作答 ↺</button></div><div class="quiz-main"><p id="quizKicker" class="eyebrow"></p><h3 id="quizQuestion"></h3><div id="quizOptions" class="answers"></div><div id="quizFeedback" class="feedback" role="status" hidden></div><div class="quiz-nav"><button id="prevQ">← 上一题</button><button id="nextQ">下一题 →</button></div></div></div><details class="extra"><summary>教材补充：无丝分裂，也是这一节的内容</summary><div id="amitosis"></div></details><div class="takeaway"><b>今天带走的一句话</b><p>细胞增殖不仅是“数量增加”，也是遗传信息的复制与传递。</p><button data-goto="1">回到放映室，讲一遍 →</button></div></section>
+</main><footer><span>一分为二放映室 / v1.0</span><span>原创教学示意 · 可离线使用 · 学习记录仅在本次打开中保留</span><button id="footerSources">参考与模型说明 ↗</button></footer>
+<dialog id="modal" aria-labelledby="modalTitle"><div class="modal-head"><h2 id="modalTitle"></h2><button id="closeModal" aria-label="关闭对话框">×</button></div><div id="modalBody"></div></dialog>
+<script>/* 原创课件文案；资料核验：2026-10-24。选择题答案从0编号。 */
+(function(g){'use strict';
+g.DivisionContent={
+  intro:{
+    title:'细胞的增殖',
+    scope:'对应人教版高中生物学必修1《分子与细胞》第6章第1节“细胞的增殖”，承接上一章光合作用。以二倍体细胞的有丝分裂为主要模型，配合细胞周期、动植物胞质分裂差异、观察实验与无丝分裂知识卡。未核定使用者纸本教材的具体印次。',
+    idea:'细胞增殖通常先复制遗传物质，再将复制后的染色体分配给子细胞。正常有丝分裂使两个子细胞分别获得与亲代细胞相同的一套核染色体，是生长、发育、更新与修复的重要基础。',
+    cycleDefinition:'对连续分裂的细胞，从一次分裂完成时开始，到下一次分裂完成时为止，构成一个细胞周期。间期包含G₁、S、G₂；M期包括核分裂及通常与之衔接、部分重叠的胞质分裂。',
+    countingRule:'本课假设二倍体细胞2n=4。复制前每条染色体含1个核DNA分子；复制完成后每条含2个姐妹染色单体、共2个核DNA分子。复制后、姐妹染色单体尚未分离时仍按1条染色体计；分离后各成为独立子染色体。数目必须说明统计的是整个未分开的细胞、每一极、每个细胞核，还是每个子细胞。',
+    amitosis:'教材保留“无丝分裂”，以蛙的红细胞为例：细胞核延长、缢裂，随后细胞质分开；不出现有丝分裂中典型的纺锤丝和染色体形态变化。“无丝”不等于没有DNA、不需遗传物质复制，也不能与原核细胞的二分裂混为一谈。本课只作概念辨识，不用有丝分裂的动画冒充无丝分裂。',
+    size:'细胞生长与分裂共同参与个体生长。细胞尺寸增大时，表面积/体积比通常下降，可用来解释物质交换的限制之一；不能据此推出细胞越小越好，也不能把“无限长大”只归因于这一因素。',
+    microscope:'根尖分生区细胞排列较紧密、核相对明显，可用于观察有丝分裂。常规解离、染色制成的装片是固定材料，应从不同细胞的形态拼出过程，不能等待同一个被解离、染色的细胞继续分裂。'
+  },
+  cycle:[
+    {id:'g1',title:'G₁｜复制前',explanation:'细胞生长并合成相关RNA和蛋白质，为DNA复制作准备；不是“什么也不做”的休息。此模型每细胞4条染色体、4个核DNA分子。'},
+    {id:'s',title:'S｜DNA合成',explanation:'核DNA复制由4个分子逐渐增加到8个分子，形成姐妹染色单体；染色体数仍为4。复制发生于间期，不是因为前期看见X形才开始。'},
+    {id:'g2',title:'G₂｜复制后准备',explanation:'DNA复制已经完成，细胞继续生长并准备进入M期。此模型每细胞4条染色体、8个核DNA分子、8条姐妹染色单体。'},
+    {id:'m',title:'M｜分配与分开',explanation:'凝缩后的复制染色体排列，姐妹染色单体分离，核结构重建，胞质分裂通常与这些事件衔接并有时间重叠。间期通常占较大比例，具体持续时间依细胞类型及条件而异。'}
+  ],
+  stages:[
+    {
+      id:'g1',title:'G₁｜先长大，做准备',
+      observation:'核内染色质较松散，通常看不到一条条清楚的凝缩染色体。',
+      mechanism:'细胞进行生长及相关物质合成，尚未开始本轮S期的核DNA复制。模型所示4条染色体并非4个一直保持棒状的实体；松散染色质仍属于染色体物质。',
+      pitfall:'“看不见清楚的染色体”不等于没有染色体或DNA；G₁也不是静止无代谢。',
+      question:'此时本模型一个细胞的染色体数与核DNA分子数分别是？',
+      options:['4条，4个','4条，8个','8条，8个'],answer:0,
+      explanation:'复制前每条染色体对应1个核DNA分子。数量来自模型的遗传设定，不能从普通间期显微图里直接数出这些松散线团。'
+    },
+    {
+      id:'replication',title:'S / G₂｜复制，再检查准备',
+      observation:'外观仍以松散染色质为主，DNA在S期复制，G₂时复制完成。',
+      mechanism:'S期把每条染色体的DNA复制为两份，形成相连的姐妹染色单体；G₂继续作分裂准备。本定格节点代表G₂复制完成：4条染色体、8个核DNA分子；S期的复制过程则发生在此前的过渡动画中。',
+      pitfall:'DNA数加倍不等于染色体数立即加倍；S期在前，G₂在后，不是两个阶段同时复制。',
+      question:'复制完成后的G₂，哪组账目符合本模型？',
+      options:['8条染色体、8个核DNA分子、0条染色单体','4条染色体、8个核DNA分子、8条姐妹染色单体','4条染色体、4个核DNA分子、8条姐妹染色单体'],answer:1,
+      explanation:'每条复制后的染色体含2条姐妹染色单体，每条染色单体含1个核DNA分子；姐妹尚未分离，染色体仍计4条。'
+    },
+    {
+      id:'prophase',title:'前期｜打包，建立分配系统',
+      observation:'染色质逐渐凝缩，出现清楚的染色体；纺锤体形成，核仁与核膜逐渐解体。',
+      mechanism:'复制后的染色体变得较短粗，便于分离。以开放式有丝分裂为模型，核膜解体后，纺锤体微管可以与染色体着丝粒区域的动粒相联系。高中四期模型把更细分的前中期事件合并讲述。',
+      pitfall:'前期主要是凝缩和装配，不是此时才复制DNA；X形是凝缩的复制染色体的一种示意形态。',
+      question:'前期出现短粗的复制染色体，最能说明什么？',
+      options:['DNA刚从无到有出现','有4个X，所以有8条染色体','已经复制的染色质发生凝缩，数量需按未分离的复制染色体统计'],answer:2,
+      explanation:'凝缩改变形态和可辨认程度，不重新完成一次DNA复制。本阶段整个模型细胞仍有4条染色体、8个核DNA分子。'
+    },
+    {
+      id:'metaphase',title:'中期｜对齐，准备均等分配',
+      observation:'各复制染色体的着丝粒区域排列在细胞中央的赤道板位置。',
+      mechanism:'每条复制染色体的姐妹动粒分别与来自相反两极的纺锤体微管建立正确联系，为后期两套遗传信息的分离作准备。赤道板是用于描述位置的假想平面，不是一块突然长出的结构。',
+      pitfall:'有丝分裂不是同源染色体联会配对；也不是把整个X拉到一极、另一个同源X拉到另一极。',
+      question:'中期正确的准备方式应是？',
+      options:['一条复制染色体的两个姐妹动粒分别连向两极','同源染色体先联会成四分体','先把每条染色体的DNA重新复制一轮'],answer:0,
+      explanation:'有丝分裂准备分离的是姐妹染色单体。图中的颜色只辅助追踪身份，不代表相同颜色的同源染色体必须配对。'
+    },
+    {
+      id:'anaphase',title:'后期｜分开，成为子染色体',
+      observation:'姐妹染色单体分离后，各自作为子染色体向相反两极移动。',
+      mechanism:'姐妹间的连接解除，各子染色体的着丝粒区域通常先向所在一极移动。教材常用“着丝粒分裂”描述该计数转折；这不是在着丝粒位置把DNA剪断。此时尚未分开的整个细胞计8条染色体、8个核DNA分子，每一极各4条、4个。',
+      pitfall:'后期染色体数暂时增加源于姐妹分离，而不是DNA又复制了一次；分离后不再称为姐妹染色单体。',
+      question:'按后期整个尚未分开的细胞统计，哪组正确？',
+      options:['4条染色体、8个核DNA分子','8条染色体、8个核DNA分子','8条染色体、16个核DNA分子'],answer:1,
+      explanation:'整个细胞暂时计8条子染色体，每条含1个核DNA分子；每一极仍得到4条。不要把“每极”和“整个细胞”的数目混在一起。'
+    },
+    {
+      id:'telophase',title:'末期与胞质分裂｜重建，完成交接',
+      observation:'两极染色体逐渐解凝缩，核膜、核仁重新形成，胞质分裂逐渐完成。',
+      mechanism:'动物细胞通常由分裂沟向内缢裂；高等植物细胞以囊泡参与构建细胞板，向周缘扩展并形成新的分隔。图中末期与胞质分裂合在一幕，真实过程部分重叠，并非所有细胞都先核分裂完全结束、再突然分开。',
+      pitfall:'核膜重建后每核4条染色体，并不意味着未完成胞质分裂时整个细胞只剩4条；完成后应分别统计每个子细胞。',
+      question:'正常胞质分裂完成后，本模型每个子细胞应有？',
+      options:['8条染色体、8个核DNA分子','2条染色体、4个核DNA分子','4条染色体、4个核DNA分子'],answer:2,
+      explanation:'每个子细胞获得与亲代G₁相同的一套核染色体。此前复制的8个核DNA分子分配到两个子细胞中，每个得到4个；不是遗传信息凭空丢失。'
+    }
+  ],
+  quiz:[
+    {
+      stem:'某二倍体细胞2n=4，已完成S期，尚未进入M期。以下“每细胞”账目正确的是？',
+      options:['8条染色体、8个核DNA分子','4条染色体、8个核DNA分子','4条染色体、4个核DNA分子','8条染色体、16个核DNA分子'],answer:1,
+      explanation:'S期增加的是每条染色体所含的DNA份数，姐妹尚未分离。G₂每细胞4条染色体、8个核DNA分子、8条姐妹染色单体。'
+    },
+    {
+      stem:'同一模型细胞处于有丝分裂后期，胞质尚未分开。整个细胞与每一极的染色体数分别是多少？',
+      options:['4条和2条','4条和4条','8条和4条','8条和8条'],answer:2,
+      explanation:'姐妹分离后各成为独立子染色体；整个尚未分开的细胞共8条，每极4条。此时整个细胞的核DNA分子数仍为8，没有再次复制。'
+    },
+    {
+      stem:'测得一批2n=4细胞中的某细胞有8个核DNA分子。仅据这一数据，能否断定它处于中期？',
+      options:['不能；G₂、前期、中期或胞质未分开时的后期等都可能有8个，应结合形态','能；只有中期具有8个核DNA分子','能；DNA数直接等于阶段名称','不能；任何正常细胞永远只有4个核DNA分子'],answer:0,
+      explanation:'单一DNA数无法区分所有时期。细胞核结构、染色体排列与分离状态能提供额外证据；S期结束时也达到8个。'
+    },
+    {
+      stem:'学生看到前期X形染色体后说：“DNA一定是在前期看到X时才复制的。”最合适的纠正是？',
+      options:['DNA在中期的赤道板位置复制','X是两条未复制的同源染色体临时粘在一起','每条X形染色体含4个核DNA分子','DNA在此前的S期已复制，前期凝缩使复制染色体更易辨认'],answer:3,
+      explanation:'复制与凝缩是两个事件。复制完成的染色体通常含两条姐妹染色单体、两个DNA分子；它在间期并不一直保持示意图中的X形。'
+    },
+    {
+      stem:'观察正常植物根尖有丝分裂，下列哪项最能区分中期与后期，而不依赖“细胞看起来更长”？',
+      options:['细胞是否含水','复制染色体是否在中央排列，还是姐妹已分离并分向两极','细胞壁是否存在','细胞中是否有DNA'],answer:1,
+      explanation:'中期姐妹尚未分离，着丝粒区域位于赤道板位置；后期已成为两组子染色体。细胞长宽、是否含水或有DNA不能独立作为分期依据。'
+    },
+    {
+      stem:'比较典型动物细胞与高等植物细胞的胞质分裂，下列解释正确的是？',
+      options:['动物常由分裂沟向内缢裂，高等植物由细胞板逐步向周缘扩展形成分隔','两者都从细胞壁外侧向内缢裂','高等植物没有中心体，所以不可能形成纺锤体','植物的赤道板就是早已存在的细胞板'],answer:0,
+      explanation:'两类细胞核内染色体分配遵循有丝分裂的基本规律，胞质分裂方式不同。高等植物可形成不依赖典型中心体的纺锤体；赤道板是假想位置，细胞板是实际形成的结构。'
+    },
+    {
+      stem:'随机统计稳定生长、异步分裂且各期取样机会近似相同的根尖分生区细胞，200个中20个处于分裂期。哪项推断最合理？',
+      options:['每个细胞会在10分钟内完成分裂','固定装片中观察10分钟，就能看见同一细胞分完','在题设近似条件下，分裂期约占周期时长的10%，不能脱离条件直接推广','其余180个细胞没有任何生命活动'],answer:2,
+      explanation:'用某阶段细胞比例近似该阶段时间比例，需要稳定、异步、取样具有代表性等条件。20/200=10%，仅凭比例不能给出分钟数；常规固定染色装片也不能连续追踪同一细胞。'
+    },
+    {
+      stem:'关于教材中的无丝分裂，哪项表述最严谨？',
+      options:['无丝分裂就是原核细胞的二分裂','无丝分裂没有DNA，所以无需分配遗传信息','只要没看到X形，就一定正在无丝分裂','不出现有丝分裂中典型的纺锤丝和染色体形态变化，“无丝”不等于没有DNA或不需遗传物质复制'],answer:3,
+      explanation:'教材以蛙红细胞的核延长、缢裂及随后胞质分开作例。仅看到间期没有清晰的凝缩染色体，也不能据此判为无丝分裂；更不能把它与原核二分裂划等号。'
+    }
+  ],
+  teacherNotes:[
+    {title:'01｜从一份到两份：提出分配问题',minutes:5,prompt:'一个细胞变成两个，为什么不能只把细胞一切两半？',expected:'每个子细胞都需要一套可用的遗传信息，复制与分配必须协调。',detail:'先区分生长和分裂，再建立2n=4的示意假设。细胞增殖是数量增加，不能把个体长大解释为细胞体积无限增加。'},
+    {title:'02｜把复制放在正确时间',minutes:7,prompt:'复制是S期的事件，还是前期看见X时才发生？间期真的在休息吗？',expected:'S期完成DNA复制，G₁和G₂参与生长与准备；间期有活跃的生命活动。',detail:'学生依次摆出G₁→S→G₂→M。展示4→8个核DNA分子时说清是S过程；展示稳定的4条染色体、8DNA、8单体时标注“复制完成”。'},
+    {title:'03｜从形态读出机制',minutes:13,prompt:'让操作员推进动画，观察员指认形态，解释员回答“这一变化怎样服务于分配”。',expected:'前期凝缩和纺锤体建立；中期正确排列、联系两极；后期分离；末期解凝缩、重建核。',detail:'本课四期与教材一致；前中期不另设按钮。不要让动画中每条染色体从头到尾都保持X形，也不要把有丝分裂画成同源染色体联会。'},
+    {title:'04｜做一张有统计范围的账',minutes:8,prompt:'后期同学分别报4条和8条，谁可能说得对？',expected:'每极4条；整个尚未分开的细胞8条。复制后、分离前整个细胞4条染色体8DNA；后期8条8DNA。',detail:'把“整个细胞／每极／每核／每子细胞”写在数目前。末期两核各4条与尚未分开的整个细胞8条可以同时成立。复制完成到后期分离DNA不再加倍。'},
+    {title:'05｜从多张静态图重建过程',minutes:6,prompt:'固定根尖装片能否等来同一细胞继续分裂？哪种证据足以分期？',expected:'从不同细胞的染色体形态推断顺序；不能等待固定材料继续变化。',detail:'结合典型动植物胞质分裂差异。期内细胞数比例估算时间比例要说明取样和稳定异步群体等条件；只看一幅细胞长短或颜色深浅不足以断言阶段。'},
+    {title:'06｜用限定语完成解释',minutes:6,prompt:'每组挑一道题，先作答，再用“统计范围是……证据是……模型省略了……”解释。',expected:'能用正确数目和形态解释分配，也能说出课件与真实细胞的差别。',detail:'8题全部为原创高考思维训练，非高考真题。最后补充无丝分裂与细胞尺寸限制；不把有丝分裂模式推广为一切细胞增殖方式。'}
+  ],
+  boundaries:[
+    '所有动画为原创二维教学模式图，2n=4是假定核染色体数，不代表人类、洋葱或某一实物样本；颜色只辅助追踪，形状、长度、位置与时间不按真实比例。',
+    '主模型为典型开放式有丝分裂，按高中四期归并事件；并非所有真核生物都有核膜解体或典型中心体。高等植物也能建立功能性纺锤体。',
+    'DNA计数仅指染色体中的核DNA分子，不包含线粒体、叶绿体DNA。每个DNA分子是一条双链DNA分子，不能把两条多核苷酸链另计成两个DNA分子。',
+    '复制与染色质凝缩分开呈现。X形只是一种凝缩复制染色体的示意；后期姐妹分离后为子染色体，形态可以是V形、J形或其他与着丝粒位置和运动状态有关的形状。',
+    '“姐妹染色单体”数在分离后不再沿用。若数表按高中惯例填0，表示这一名称不再适用，并非DNA分子消失。',
+    '核分裂和胞质分裂是相互协调的不同过程，真实时间部分重叠；末期重建两个核后、胞质尚未分开时，应区分每核与整个细胞的计数。',
+    '正常分裂且忽略复制差错、突变等时，子细胞获得相同的一套核遗传信息；不据此保证两个子细胞全部细胞器的数量、细胞质成分和大小严格相等。',
+    '细胞周期适用于连续分裂的细胞；并非所有成熟细胞都持续循环。各期时间因细胞类型与环境而异，动画等时播放不表示各期等长。',
+    '本节按教材保留无丝分裂概念卡，以典型形态作辨识；不展开不同研究体系中直接核分裂的复杂机制，不与原核二分裂或减数分裂混同。',
+    '根尖辨图是教学示意而非显微照片；固定材料的不同细胞代表不同状态，不能当成对同一个活细胞的时间追踪记录。'
+  ],
+  references:[
+    {title:'人教社｜高中生物新教材培训资料',url:'https://www.pep.com.cn/xw/zt/xkzt/swpxhkj/hyzl/202105/W020210526306605422940.pdf',support:'官方资料列明第6章第1节“细胞的增殖”及“观察根尖分生组织细胞有丝分裂”探究实践；用于核对课程位置。'},
+    {title:'国家中小学智慧教育平台｜人教版必修1《分子与细胞》',url:'https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/9d522562-b529-446c-9b5b-084812beee6e.pkg/pdf.pdf',support:'官方教材资源的第6章第1节含细胞周期、有丝分裂、无丝分裂以及细胞尺寸模型。教材保留蛙红细胞无丝分裂示意（印刷页115）；资源访问可能受平台授权限制。'},
+    {title:'NCBI Bookshelf｜An Overview of the Cell Cycle',url:'https://www.ncbi.nlm.nih.gov/books/NBK26869/',support:'Alberts等《Molecular Biology of the Cell》：DNA复制发生于S期，G₁/G₂的准备和调控，M期核分裂及胞质分裂的衔接。'},
+    {title:'NCBI Bookshelf｜The Eukaryotic Cell Cycle',url:'https://www.ncbi.nlm.nih.gov/books/NBK9876/',support:'Cooper《The Cell》：间期不是不活动，DNA含量与G₁、S、G₂/M的联系及仅凭DNA含量分期的局限。'},
+    {title:'NCBI Bookshelf｜Mitosis',url:'https://www.ncbi.nlm.nih.gov/books/NBK26934/',support:'Alberts等：凝缩、核膜解体、双向动粒连接、姐妹连接解除、子染色体分离与核膜重建；植物可无典型中心体建立纺锤体。'},
+    {title:'NCBI Bookshelf｜Cytokinesis',url:'https://www.ncbi.nlm.nih.gov/books/NBK26831/',support:'Alberts等：核分裂和胞质分裂的重叠，动物分裂沟及收缩环，高等植物细胞板由内向外扩展。'},
+    {title:'Oregon State University｜The Cell Cycle and Mitosis',url:'https://open.oregonstate.education/cellbiology/chapter/cell-cycle-and-mitosis/',support:'大学开放教材：细胞周期组织、复制后染色体结构、有丝分裂分期与检查点概念；本课不把检查点当自动纠正一切错误的系统。'},
+    {title:'University of Arizona｜The Cell Cycle & Mitosis Tutorial',url:'https://biology.arizona.edu/cell_bio/tutorials/cell_cycle/01d.html',support:'高校教学材料核对G₂时一条复制染色体含两条姐妹染色单体，但染色体数仍按未分离的复制染色体统计。'},
+    {title:'University of Arizona｜Online Onion Root Tips',url:'https://biology.arizona.edu/cell_bio/activities/cell_cycle/cell_cycle.html',support:'以根尖不同细胞形态判定时期、用样本统计讨论各期时长的教学组织；本课未复制其图片和题目。'}
+  ]
+};
+})(window);
+</script><script>(function (global) {
+  'use strict';
+  const K = { bg:'#161329', membrane:'#c6b5f2', muted:'#b0a7c8', white:'#f5efff', spindle:'#b1cfe5', gold:'#ffd77e', colors:['#b7a4ff','#ff98bd','#ffd77e','#86daca'] };
+  const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+  const mix=(a,b,t)=>a+(b-a)*t;
+  const smooth=t=>{t=clamp(t);return t*t*(3-2*t);};
+  const ramp=(a,b,p)=>smooth((p-a)/(b-a));
+  const n=v=>Number(v.toFixed(2));
+  const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const text=(x,y,value,size=15,color=K.white,anchor='start',attrs='')=>`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" text-anchor="${anchor}" font-family="'Segoe UI','Microsoft YaHei',sans-serif" ${attrs}>${esc(value)}</text>`;
+  const bases=[
+    {color:K.colors[0],long:true,g1:[401,192],pro:[383,183],meta:[450,145],ana:[268,162],end:[232,187]},
+    {color:K.colors[1],long:true,g1:[488,294],pro:[495,310],meta:[450,211],ana:[236,220],end:[276,223]},
+    {color:K.colors[2],long:false,g1:[480,193],pro:[504,201],meta:[450,279],ana:[265,282],end:[229,279]},
+    {color:K.colors[3],long:false,g1:[403,295],pro:[393,300],meta:[450,345],ana:[238,334],end:[273,315]}
+  ];
+  function caption(progress,type='plant'){
+    const p=clamp(Number(progress)||0,0,5),plant=type!=='animal';
+    const node=Math.round(p);
+    if(Math.abs(p-node)<=.01)return [
+      'G₁期：DNA尚未复制，染色质松散；以2n=4的细胞作追踪示例。',
+      '复制完成：每条染色体含两条姐妹染色单体，染色体数仍为4。',
+      '前期至前中期：染色体已凝缩，核膜已解体，纺锤体形成。',
+      '中期：4条复制后的染色体排列在赤道板附近；姐妹分别连接两极。',
+      '后期定格：姐妹染色单体已经分离；细胞内共8条，每极4条。',
+      '分裂完成：两个子细胞各含4条染色体，染色体数与母细胞相同。'
+    ][node];
+    if(p<1)return '复制过渡：DNA逐步复制，姐妹染色单体逐渐形成；染色质仍松散。';
+    if(p<2)return '进入分裂期：染色质逐渐凝缩，核膜逐渐解体，纺锤体逐步形成。';
+    if(p<3)return '排列过渡：染色体向赤道板位置移动，纺锤体连接与中期排列正在建立。';
+    if(p<4)return '分离与移动过渡：姐妹染色单体分离后，各作为染色体向相反两极移动。';
+    return plant?'末期与胞质分裂过渡：双核逐渐重建、染色体去凝缩；细胞板从中央扩展。':'末期与胞质分裂过渡：双核逐渐重建、染色体去凝缩；分裂沟逐渐加深。';
+  }
+  function stageName(p){
+    const node=Math.round(p);
+    if(Math.abs(p-node)<=.01)return ['G₁期','复制完成','前期 / 前中期','中期','后期定格','两个子细胞'][node];
+    if(p<1)return 'DNA复制过程';if(p<2)return '凝缩 · 核膜解体';
+    if(p<3)return '向赤道位置排列';if(p<4)return '姐妹分离 · 向两极移动';
+    return '双核重建 · 胞质分裂';
+  }
+  function defs(){return `<defs>
+    <linearGradient id="mi-cytoplasm" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#28203f"/><stop offset="1" stop-color="#1b1a32"/></linearGradient>
+    <radialGradient id="mi-nucleus"><stop stop-color="#756087" stop-opacity=".19"/><stop offset="1" stop-color="#9f8ac0" stop-opacity=".06"/></radialGradient>
+    <filter id="mi-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>`;}
+  function plantCell(p){
+    const t=ramp(4.18,5,p),extent=165*t;
+    return `<g>
+      <rect x="74" y="83" width="752" height="330" rx="34" fill="url(#mi-cytoplasm)" stroke="#807394" stroke-width="9"/>
+      <rect x="86" y="95" width="728" height="306" rx="25" fill="none" stroke="${K.membrane}" stroke-width="2.2" opacity=".83"/>
+      ${t>0?`<path d="M450 ${n(248-extent)} V${n(248+extent)}" stroke="${K.gold}" stroke-width="${n(2+5*t)}" stroke-linecap="round" opacity="${n(.4+.6*t)}"/><path d="M${n(450-5*t)} ${n(248-extent)} V${n(248+extent)} M${n(450+5*t)} ${n(248-extent)} V${n(248+extent)}" stroke="${K.membrane}" stroke-width="1.6" opacity="${n(t)}"/>`:''}
+    </g>`;
+  }
+  function animalCell(p){
+    const t=ramp(4.12,5,p),gap=12*ramp(.88,1,t),top=mix(90,247,t),bottom=mix(405,247,t),cp=60*t;
+    const left=`M${n(450-gap)} ${n(top)} C${n(450-cp-gap)} 90 120 87 90 247 C120 407 ${n(450-cp-gap)} 407 ${n(450-gap)} ${n(bottom)}`;
+    const right=`M${n(450+gap)} ${n(top)} C${n(450+cp+gap)} 90 780 87 810 247 C780 407 ${n(450+cp+gap)} 407 ${n(450+gap)} ${n(bottom)}`;
+    return `<g><path d="${left} Z" fill="url(#mi-cytoplasm)"/><path d="${right} Z" fill="url(#mi-cytoplasm)"/><path d="${left}" fill="none" stroke="${K.membrane}" stroke-width="3" stroke-linecap="round"/><path d="${right}" fill="none" stroke="${K.membrane}" stroke-width="3" stroke-linecap="round"/></g>`;
+  }
+  function nuclei(p){
+    const old=1-ramp(1.18,1.88,p),fresh=ramp(4.2,4.9,p),nucleolusOld=1-ramp(1.1,1.65,p),nucleolusNew=ramp(4.55,5,p);
+    let out='';
+    if(old>.001)out+=`<g opacity="${n(old)}"><ellipse cx="450" cy="247" rx="126" ry="126" fill="url(#mi-nucleus)" stroke="${K.membrane}" stroke-width="2.1" stroke-dasharray="${p>1.18?'14 6':'none'}"/><ellipse cx="450" cy="247" rx="121" ry="121" fill="none" stroke="${K.membrane}" stroke-opacity=".35" stroke-width="1"/></g>`;
+    if(nucleolusOld>.001)out+=`<circle cx="465" cy="265" r="12" fill="#cbb3da" opacity="${n(.23*nucleolusOld)}"/>`;
+    if(fresh>.001){
+      for(const cx of [250,650])out+=`<g opacity="${n(fresh)}"><ellipse cx="${cx}" cy="247" rx="100" ry="120" fill="url(#mi-nucleus)" stroke="${K.membrane}" stroke-width="2.1"/><ellipse cx="${cx}" cy="247" rx="95" ry="115" fill="none" stroke="${K.membrane}" stroke-opacity=".35" stroke-width="1"/></g>`;
+    }
+    if(nucleolusNew>.001)for(const cx of [271,629])out+=`<circle cx="${cx}" cy="260" r="10" fill="#cbb3da" opacity="${n(.23*nucleolusNew)}"/>`;
+    return out;
+  }
+  function chromosomeState(b,p,side){
+    const condense=ramp(1.12,1.94,p),align=ramp(2,3,p),apart=ramp(3,4,p),unwind=ramp(4.22,4.96,p);
+    let cx=mix(b.g1[0],b.pro[0],condense),cy=mix(b.g1[1],b.pro[1],condense);
+    cx=mix(cx,b.meta[0],align);cy=mix(cy,b.meta[1],align);
+    const anaX=side<0?b.ana[0]:900-b.ana[0];
+    cx=mix(cx,anaX,apart);cy=mix(cy,b.ana[1],apart);
+    const endX=side<0?b.end[0]:900-b.end[0];
+    cx=mix(cx,endX,unwind);cy=mix(cy,b.end[1],unwind);
+    const looseH=b.long?42:31,compactH=b.long?28:20;
+    let h=mix(looseH,compactH,condense);h=mix(h,b.long?36:27,unwind);
+    const arm=b.long?15:12;
+    const wiggle=[[-14,-h],[24,-.83*h],[-25,-.24*h],[0,0],[26,.24*h],[-21,.83*h],[13,h]];
+    // An X consists of two continuous sister chromatids, joined at one centromere region.
+    const compact=[[side*arm,-h],[side*arm*.45,-h*.58],[side*1.3,-h*.19],[0,0],[side*1.3,h*.19],[side*arm*.45,h*.58],[side*arm,h]];
+    const turn=ramp(3,3.42,p),trailing=-side*(b.long?25:20);
+    const daughter=[[trailing,-h],[trailing*.6,-h*.66],[trailing*.18,-h*.23],[0,0],[trailing*.18,h*.23],[trailing*.6,h*.66],[trailing,h]];
+    const points=wiggle.map((v,i)=>{
+      const wx=side<0?v[0]:-v[0],wy=v[1];
+      let x=mix(wx,compact[i][0],condense),y=mix(wy,compact[i][1],condense);
+      x=mix(x,daughter[i][0],turn);y=mix(y,daughter[i][1],turn);
+      x=mix(x,side<0?v[0]:-v[0],unwind);y=mix(y,v[1],unwind);
+      return[n(cx+x),n(cy+y)];
+    });
+    return {cx,cy,points,opacity:side<0?1:ramp(.1,.93,p),width:mix(mix(2.4,7,condense),2.4,unwind),centromere:condense*(1-unwind),apart};
+  }
+  function pathOf(points){const a=points;return `M${a[0][0]} ${a[0][1]} C${a[1][0]} ${a[1][1]} ${a[2][0]} ${a[2][1]} ${a[3][0]} ${a[3][1]} C${a[4][0]} ${a[4][1]} ${a[5][0]} ${a[5][1]} ${a[6][0]} ${a[6][1]}`;}
+  function spindle(p,type,states){
+    const opacity=ramp(1.34,2.18,p)*(1-ramp(4.02,4.55,p));
+    if(opacity<.001)return '';
+    let out=`<g opacity="${n(opacity)}">`;
+    for(let i=0;i<states.length;i++){
+      const [left,right]=states[i];
+      for(const side of [-1,1]){
+        const s=side<0?left:right,px=side<0?171:729;
+        for(const dy of [-2.5,2.5])out+=`<path d="M${px} ${247+dy} C${n(px-side*102)} ${n(247+dy)} ${n(s.cx+side*75)} ${n(s.cy+dy)} ${n(s.cx)} ${n(s.cy)}" fill="none" stroke="${K.spindle}" stroke-width="1.15" stroke-opacity=".24"/>`;
+      }
+    }
+    if(type==='animal'){
+      for(const px of [171,729]){
+        out+=`<g transform="translate(${px} 247)">`;
+        for(let i=0;i<8;i++){const a=i*Math.PI/4,x1=Math.cos(a)*12,y1=Math.sin(a)*12,x2=Math.cos(a)*26,y2=Math.sin(a)*26;out+=`<path d="M${n(x1)} ${n(y1)} L${n(x2)} ${n(y2)}" stroke="${K.spindle}" stroke-opacity=".19" stroke-width="1.2"/>`;}
+        out+=`<rect x="-7" y="-3" width="13" height="5" rx="1.4" fill="#ffd77e" opacity=".7" transform="rotate(25)"/><rect x="-2.5" y="-8" width="5" height="13" rx="1.4" fill="#ffd77e" opacity=".7" transform="rotate(25)"/></g>`;
+      }
+    }
+    out+='</g>';return out;
+  }
+  function chromosomes(states){let out='';
+    states.forEach((pair,i)=>pair.forEach(s=>{
+      if(s.opacity<.001)return;
+      const d=pathOf(s.points);
+      out+=`<g opacity="${n(s.opacity)}"><path d="${d}" fill="none" stroke="${K.colors[i]}" stroke-width="${n(s.width)}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="${n(Math.max(.6,s.width*.18))}" stroke-opacity=".18" stroke-linecap="round"/>${s.centromere>.01?`<circle cx="${n(s.cx)}" cy="${n(s.cy)}" r="2.8" fill="${K.bg}" stroke="${K.colors[i]}" stroke-width="1.3" opacity="${n(s.centromere)}"/>`:''}</g>`;
+    }));return out;
+  }
+  function labels(p,type){
+    const plant=type!=='animal';let out=text(80,44,stageName(p),23,K.white,'start','font-weight="650"')+text(820,43,plant?'高等植物细胞':'动物细胞',16,K.muted,'end');
+    if(p<=.01)out+=text(450,443,'松散染色质的线条仅作追踪符号，并非真实可辨认的条数',15,K.muted,'middle');
+    else if(p<.99)out+=text(450,443,'DNA逐步复制；图中线条是追踪示意',15,K.muted,'middle');
+    else if(p<=1.01)out+=text(450,443,'DNA复制已完成；染色体数仍为4，姐妹染色单体相连',15,K.muted,'middle');
+    else if(p<2.01)out+=text(450,443,plant?'高等植物无中心体，也能形成纺锤体':'核膜逐渐解体；纺锤体与染色体逐步建立连接',16,K.muted,'middle');
+    else if(p<=3.01){
+      out+=text(645,72,'赤道板 · 假想平面',14,K.gold,'middle');
+      out+=`<path d="M570 68 L451 105" fill="none" stroke="${K.gold}" stroke-width="1" stroke-opacity=".65"/>`;
+      out+=text(450,443,p>=2.99?'4条复制后的染色体 · 不发生同源染色体配对':'向赤道位置排列中 · 不发生同源染色体配对',16,K.muted,'middle');
+    }else if(p<3.99)out+=text(450,443,'姐妹分离后向相反两极移动；不再以X形整体迁移',16,K.muted,'middle');
+    else if(p<=4.01)out+=text(450,443,'后期定格：全细胞8条，每极4条；每条不再是X形',16,K.muted,'middle');
+    else if(p<4.99)out+=text(450,443,plant?'细胞板从中央开始扩展，最终与原细胞壁相接':'分裂沟逐渐加深，胞质分为两部分',16,K.muted,'middle');
+    else out+=text(250,443,'子细胞 2n = 4',17,K.white,'middle')+text(650,443,'子细胞 2n = 4',17,K.white,'middle');
+    out+=text(450,481,'2n = 4 示意｜颜色仅用于追踪，不表示父、母本｜结构与阶段时长均作简化',12,K.muted,'middle');
+    return out;
+  }
+  function svg(progress,type='plant',showLabels=true){
+    const p=clamp(Number(progress)||0,0,5),kind=type==='animal'?'animal':'plant';
+    const states=bases.map(b=>[-1,1].map(side=>chromosomeState(b,p,side)));
+    const equator=ramp(2.35,2.8,p)*(1-ramp(3.08,3.4,p));
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-label="${esc(caption(p,kind))}" style="display:block;width:100%;height:auto;overflow:visible"><title>${esc(caption(p,kind))}</title>${defs()}
+      ${kind==='plant'?plantCell(p):animalCell(p)}
+      ${equator>.001?`<path d="M450 105 V391" stroke="${K.gold}" stroke-width="1.2" stroke-dasharray="4 7" stroke-opacity="${n(equator*.37)}"/>`:''}
+      ${nuclei(p)}${spindle(p,kind,states)}${chromosomes(states)}
+      ${showLabels?labels(p,kind):''}
+    </svg>`;
+  }
+  global.MitosisScene={svg,caption};
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>(function (g) {
+  'use strict';
+  const phases = ['间期', '前期', '中期', '后期', '末期'];
+  const sequence = [0, 1, 0, 0, 2, 0, 0, 3, 0, 1, 0, 0, 4, 0, 2, 0, 1, 0, 3, 0];
+  const reasons = [
+    '核的轮廓较完整，可见核仁；染色质较分散，未见凝缩染色体的赤道排列或两极分离。仅凭此形态不能区分 G₁、S、G₂。',
+    '染色质正在凝缩，可辨较粗短的染色体；核的轮廓逐渐不清，染色体尚未排列在赤道区域。',
+    '凝缩染色体集中排列在细胞中部的赤道区域，尚未分成两组移向两极。赤道板是位置，并非实体板。',
+    '姐妹染色单体已经分开成为子染色体，两组分别移向相反两极；中部出现明显分离区。',
+    '两极各形成一个新的核，染色体开始解凝缩；细胞中部可见正在形成的细胞板。植物细胞不是从两侧缢裂。'
+  ];
+  const cells = sequence.map((phase, id) => ({id, phase, reason: reasons[phase]}));
+  const purple = '#674782';
+  const path = (d, w = 2.3, opacity = 1, color = purple) => `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" opacity="${opacity}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  // All variation is deterministic and decorative. It is not experimental noise.
+  const jitter = (id, n) => (((id + 11) * (n + 17) * 37) % 101) / 100;
+  function chromosome(x, y, angle, scale = 1) {
+    return `<g transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})">${path('M-4 -7 Q-2 -4 0 0 Q2 4 4 7', 3.2)}${path('M4 -7 Q2 -4 0 0 Q-2 4 -4 7', 3.2)}<circle r="1.65" fill="#513467"/></g>`;
+  }
+  function nucleus(x, y, rx, ry, id, daughter = false) {
+    let out = `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#d7cddd" fill-opacity=".8" stroke="#9f8bac" stroke-width="1.2"/>`;
+    for (let i = 0; i < 15; i++) {
+      const a = i * 2.399963 + id * .39, r = Math.sqrt((i + .5) / 15);
+      const px = x + Math.cos(a) * rx * .68 * r;
+      const py = y + Math.sin(a) * ry * .65 * r;
+      out += path(`M${px - 3.2} ${py - 2} q5 -4 7 1 q-2 5 2 5`, daughter ? 1.05 : .9, .35);
+    }
+    out += `<ellipse cx="${x + rx * .25}" cy="${y - ry * .22}" rx="${daughter ? 3 : 4.8}" ry="${daughter ? 2.7 : 4.2}" fill="#80628f" opacity=".8"/>`;
+    return out;
+  }
+  function svg(cell, reveal = false) {
+    const c = typeof cell === 'number' ? cells[cell] : cell;
+    if (!c || !Number.isInteger(c.id) || !Number.isInteger(c.phase) || c.phase < 0 || c.phase > 4) return '';
+    const id = c.id, dx = (jitter(id, 2) - .5) * 8, dy = (jitter(id, 3) - .5) * 7;
+    const rot = (jitter(id, 5) - .5) * 6;
+    let body = `<rect width="160" height="150" rx="9" fill="#f6f6f5"/><g transform="rotate(${rot} 80 68)"><path d="M16 11 Q45 8 79 10 L144 12 Q147 43 145 72 L143 126 Q109 129 77 127 L15 126 Q12 94 14 67 Z" fill="#eeebf0" stroke="#b8afbe" stroke-width="2.5"/><path d="M20 15 Q49 12 79 14 L140 16 L139 122 Q108 124 77 123 L20 122 Q16 94 18 67 Z" fill="#f4f0f5" stroke="#d4cbd9" stroke-width=".9"/>`;
+    for (let i = 0; i < 17; i++) {
+      const x = 25 + jitter(id, i + 10) * 107, y = 21 + jitter(id, i + 30) * 94;
+      body += `<circle cx="${x}" cy="${y}" r="${.5 + jitter(id, i + 50) * .6}" fill="#a08aac" opacity=".11"/>`;
+    }
+    if (c.phase === 0) {
+      body += nucleus(80 + dx, 67 + dy, 27 + jitter(id, 6) * 3, 25 + jitter(id, 7) * 3, id);
+    } else if (c.phase === 1) {
+      body += `<ellipse cx="${80 + dx}" cy="${68 + dy}" rx="35" ry="31" fill="#d9cddd" opacity=".35"/><ellipse cx="${80 + dx}" cy="${68 + dy}" rx="35" ry="31" fill="none" stroke="#a692b4" stroke-width="1.15" stroke-dasharray="12 7 5 9" opacity=".66"/>`;
+      [[60,49,-24],[83,45,38],[103,62,-39],[60,76,43],[82,85,-20],[99,87,33]].forEach(([x,y,a],i) => {
+        body += chromosome(x + dx + (jitter(id,i+60)-.5)*3, y + dy, a + (id%3)*7, .82);
+      });
+    } else if (c.phase === 2) {
+      // Side view: six duplicated chromosomes on a narrow equatorial region.
+      [43,58,73,88,103,118].forEach((x,i) => {
+        body += chromosome(x, 68 + dy + (i%2 ? 1.5 : -1.5), (i%2 ? 13 : -10) + (id%2)*3, .77);
+      });
+    } else if (c.phase === 3) {
+      // Centromeres lead: top group points upward, bottom group points downward.
+      [48,61,74,87,100,113].forEach((x,i) => {
+        const upper = 38 + Math.abs(i-2.5)*1.8 + dy;
+        const lower = 99 - Math.abs(i-2.5)*1.8 + dy;
+        body += path(`M${x-4.5} ${upper+9} L${x} ${upper} L${x+4.5} ${upper+9}`, 3.1);
+        body += path(`M${x-4.5} ${lower-9} L${x} ${lower} L${x+4.5} ${lower-9}`, 3.1);
+      });
+    } else {
+      body += nucleus(80 + dx, 39, 24, 20, id, true);
+      body += nucleus(80 + dx, 99, 24, 20, id + 3, true);
+      // A cell plate grows outward from the centre, rather than a cleavage furrow.
+      body += path('M43 69 Q61 68 80 69 Q99 70 117 69', 2, .65, '#ad91b8');
+      body += path('M45 72 Q61 71 80 72 Q99 73 115 72', .8, .48, '#b59bc0');
+      [39,121].forEach(x => {body += `<circle cx="${x}" cy="70" r="2" fill="#b49ac0" opacity=".45"/>`;});
+    }
+    body += `</g><text x="12" y="143" fill="#9b8ba5" font-family="Microsoft YaHei,sans-serif" font-size="8.5">模拟 · ${String(id+1).padStart(2,'0')}</text>`;
+    if (reveal) body += `<text x="148" y="143" text-anchor="end" fill="#674782" font-family="Microsoft YaHei,sans-serif" font-size="10" font-weight="600">${phases[c.phase]}</text>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 150" role="img" aria-label="第${id+1}个根尖细胞原创形态模拟${reveal?'，'+phases[c.phase]:''}"><title>根尖细胞形态模拟 ${id+1}${reveal?'：'+phases[c.phase]:''}</title>${body}</svg>`;
+  }
+  g.ScopeLab = {cells, svg, phases};
+})(window);
+</script><script>(function(){'use strict';
+const $=id=>document.getElementById(id),D=window.DivisionContent,NS='http://www.w3.org/2000/svg';
+const state={room:0,progress:0,type:'plant',labels:true,playing:false,last:0,cycle:0,stage:-1,stageAnswers:{},audit:0,cell:0,classified:{},quiz:0,quizAnswers:{}};
+const stageNames=['G₁ · 复制前','S / G₂ · 复制完成','前期','中期','后期','末期与胞质分裂'];
+const colors=['#b9a2ee','#ed91b7','#e4b860','#7ebeb7'];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showFeedback(id,text,good){const e=$(id);e.hidden=false;e.className='feedback '+(good===undefined?'':good?'good':'wrong');e.textContent=text;}
+function hideFeedback(id){$(id).hidden=true;}
+function stop(){state.playing=false;$('play').textContent='▶ 播放';$('play').setAttribute('aria-label','播放分裂动画');}
+function goto(room){stop();state.room=room;document.querySelectorAll('.room').forEach((e,i)=>e.hidden=i!==room);document.querySelectorAll('[data-room]').forEach(e=>{e.classList.toggle('active',+e.dataset.room===room);if(+e.dataset.room===room)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current');});if(room===1)film();if(room===3)scope();window.scrollTo({top:0,behavior:'instant'});}
+document.querySelectorAll('[data-room]').forEach(e=>e.addEventListener('click',()=>goto(+e.dataset.room)));
+document.querySelectorAll('[data-goto]').forEach(e=>e.addEventListener('click',()=>goto(+e.dataset.goto)));
+$('brand').addEventListener('click',e=>{e.preventDefault();goto(0);});
+$('fontToggle').addEventListener('click',()=>{const on=document.body.classList.toggle('large-font');document.documentElement.classList.toggle('large-font',on);$('fontToggle').setAttribute('aria-pressed',on);});
+function toggle(id,button,open,closed){const el=$(id);el.hidden=!el.hidden;$(button).textContent=el.hidden?closed:open;}
+$('growthReveal').onclick=()=>toggle('growthAnswer','growthReveal','收起解释 ↑','生长与增殖有什么不同？ ↓');
+$('teachReveal').onclick=()=>toggle('teachAnswer','teachReveal','收起参考表达 ↑','展开参考表达 ↓');
+$('explainReveal').onclick=()=>toggle('explainAnswer','explainReveal','收起参考逻辑 ↑','查看参考逻辑 ↓');
+// Original cover composition. The two daughter nuclei carry the same four identity colors.
+function nucleus(x,y,r){return `<g transform="translate(${x} ${y})"><circle r="${r}" fill="#b6a0f2" fill-opacity=".08" stroke="#b9a2ee" stroke-opacity=".5"/>${colors.map((c,i)=>`<path d="M${-r*.6} ${-r*.55+i*r*.35} q${r*.4} ${-r*.22} ${r*.55} 0 t${r*.55} 0" fill="none" stroke="${c}" stroke-width="3" stroke-linecap="round"/>`).join('')}</g>`;}
+$('poster').innerHTML=`<svg viewBox="0 0 560 470" role="img" aria-label="遗传物质先复制，再均等分配的主题示意"><defs><radialGradient id="posterGlow"><stop stop-color="#6346a9" stop-opacity=".3"/><stop offset="1" stop-color="#161329" stop-opacity="0"/></radialGradient></defs><rect width="560" height="470" fill="#161329"/><circle cx="280" cy="225" r="230" fill="url(#posterGlow)"/><path d="M35 65H525M35 405H525" stroke="#5b4b77" stroke-width=".6"/><text x="35" y="43" fill="#b7a7cc" font-size="10" letter-spacing="3">ONE CELL. TWO BEGINNINGS.</text><text x="480" y="43" fill="#f9d680" font-family="monospace" font-size="12">01 → 02</text><ellipse cx="280" cy="153" rx="103" ry="76" fill="#b6a0f2" fill-opacity=".03" stroke="#b7a4ff" stroke-width="2"/>${nucleus(280,153,49)}<path d="M248 234Q219 270 169 279M312 234Q341 270 391 279" fill="none" stroke="#f9d680" stroke-width="1.6"/><path d="M172 269l-5 12 15-1M388 269l5 12-15-1" fill="none" stroke="#f9d680"/><ellipse cx="158" cy="330" rx="82" ry="61" fill="#b6a0f2" fill-opacity=".03" stroke="#b7a4ff" stroke-width="2"/><ellipse cx="402" cy="330" rx="82" ry="61" fill="#b6a0f2" fill-opacity=".03" stroke="#b7a4ff" stroke-width="2"/>${nucleus(158,330,38)}${nucleus(402,330,38)}<text x="280" y="258" text-anchor="middle" fill="#f9d680" font-size="12">先复制，再分配</text><text x="35" y="438" fill="#b7a7cc" font-size="11">细胞增殖 · 形态示意</text><text x="525" y="438" text-anchor="end" fill="#b7a7cc" font-size="11">2n = 4</text></svg>`;
+function cube(){const a=+$('size').value,S=6*a*a,V=a*a*a,k=36+a*14,ox=190,oy=215,dx=k*.55,dy=-k*.36;const front=`${ox-k/2},${oy-k/2} ${ox+k/2},${oy-k/2} ${ox+k/2},${oy+k/2} ${ox-k/2},${oy+k/2}`;const top=`${ox-k/2},${oy-k/2} ${ox-k/2+dx},${oy-k/2+dy} ${ox+k/2+dx},${oy-k/2+dy} ${ox+k/2},${oy-k/2}`;const right=`${ox+k/2},${oy-k/2} ${ox+k/2+dx},${oy-k/2+dy} ${ox+k/2+dx},${oy+k/2+dy} ${ox+k/2},${oy+k/2}`;$('cubeView').innerHTML=`<svg viewBox="0 0 430 350" role="img" aria-label="边长${a}的立方体几何模型"><path d="M45 290H390M70 80V310" stroke="#e9e0f2"/><ellipse cx="230" cy="300" rx="130" ry="12" fill="#ebe4f4"/><polygon points="${front}" fill="#b9a2e9" stroke="#6844c5"/><polygon points="${top}" fill="#e0d3f7" stroke="#6844c5"/><polygon points="${right}" fill="#8f6dd2" stroke="#6844c5"/><text x="${ox}" y="${oy+k/2+28}" text-anchor="middle" fill="#6844c5" font-size="16">a = ${a}</text><text x="55" y="45" fill="#9685aa" font-size="12" letter-spacing="1">S = 6a²　　 V = a³</text></svg>`;$('sizeValue').value=a;$('surface').textContent=S;$('volume').textContent=V;$('ratio').textContent=(S/V).toFixed(2);}
+$('size').oninput=cube;cube();
+function cycle(){const entries=D.cycle,c=state.cycle;$('cycleTitle').textContent=entries[c].title;$('cycleText').textContent=entries[c].explanation;document.querySelectorAll('[data-cycle]').forEach(e=>{e.classList.toggle('selected',+e.dataset.cycle===c);e.setAttribute('aria-pressed',+e.dataset.cycle===c);});const lengths=[34,28,24,14],cs=['#c1afe7','#9e7cd1','#7853b4','#e9bc5c'];let off=0;const arcs=lengths.map((len,i)=>{const part=`<circle cx="160" cy="160" r="105" fill="none" stroke="${cs[i]}" stroke-width="${i===c?43:33}" pathLength="100" stroke-dasharray="${len-1.2} ${101.2-len}" stroke-dashoffset="${-off}" transform="rotate(-90 160 160)"/>`;off+=len;return part;}).join('');$('cycleWheel').innerHTML=`<svg viewBox="0 0 320 320" role="img" aria-label="G1、S、G2、M依次循环，比例仅示意">${arcs}<text x="160" y="153" text-anchor="middle" fill="#6844c5" font-size="38" font-family="Georgia,serif">${['G₁','S','G₂','M'][c]}</text><text x="160" y="184" text-anchor="middle" fill="#746486" font-size="12">连续分裂的细胞</text><text x="160" y="311" text-anchor="middle" fill="#746486" font-size="11">顺时针 G₁ → S → G₂ → M → G₁</text></svg>`;}
+document.querySelectorAll('[data-cycle]').forEach(e=>e.onclick=()=>{state.cycle=+e.dataset.cycle;cycle();});cycle();
+$('stageStops').innerHTML=stageNames.map((name,i)=>`<button data-stage="${i}"><small>0${i+1}</small>${name}</button>`).join('');
+document.querySelectorAll('[data-stage]').forEach(e=>e.onclick=()=>{stop();state.progress=+e.dataset.stage;film();});
+function stageIndex(){return Math.max(0,Math.min(5,Math.round(state.progress)));}
+function stageQuestions(){const i=state.stage,entry=D.stages[i],chosen=state.stageAnswers[i];$('stageOptions').innerHTML=entry.options.map((v,j)=>`<button data-stage-answer="${j}" class="${chosen===j?(j===entry.answer?'correct':'incorrect'):''}"><span class="answer-letter">${'ABC'[j]}</span><span>${esc(v)}</span></button>`).join('');document.querySelectorAll('[data-stage-answer]').forEach(e=>e.onclick=()=>{state.stageAnswers[i]=+e.dataset.stageAnswer;stageQuestions();});if(chosen===undefined)hideFeedback('stageFeedback');else showFeedback('stageFeedback',(chosen===entry.answer?'判断正确。':'再看一眼这个阶段。')+entry.explanation,chosen===entry.answer);}
+const transitionCopy=[['DNA 正在复制','相连的姐妹染色单体逐步形成，染色质仍较松散。','S期的DNA复制是一个过程，不能把复制完成的8个核DNA分子提前套在整个S期。'],['染色质逐渐凝缩','核膜逐渐解体，纺锤体开始形成。','这一步改变形态和分配装置；此前S期已经完成DNA复制。'],['向赤道位置排列','复制染色体与纺锤体建立联系，逐渐排列到细胞中央。','只有到达中期定格节点，才用“着丝粒区域排列在赤道板位置”描述本图。'],['姐妹分离，向两极移动','分离后的姐妹各自成为子染色体，逐渐向两极移动。','分离发生后，整个尚未分开的细胞内计8条子染色体；DNA没有再复制。'],['重建细胞核，分开细胞质','两组染色体解凝缩，核膜恢复，胞质分裂逐步完成。','过程中的每核、整个细胞、完成后的每个子细胞是不同统计范围。']];
+function film(){const p=state.progress,i=stageIndex(),stable=Math.abs(p-i)<=.01,from=Math.min(4,Math.floor(p)),key=stable?'s'+i:'t'+from,entry=D.stages[i];$('mitosisView').innerHTML=MitosisScene.svg(p,state.type,state.labels);$('timeline').value=Math.round(p*100);$('frameOutput').value=stable?`0${i+1} / 06`:`${from+1} → ${from+2}`;$('stageName').textContent=stable?stageNames[i]:stageNames[from]+' → '+stageNames[from+1];$('sceneCaption').textContent=MitosisScene.caption(p,state.type);document.querySelectorAll('[data-stage]').forEach(e=>{e.classList.toggle('current',stable&&+e.dataset.stage===i);e.setAttribute('aria-pressed',stable&&+e.dataset.stage===i);});if(state.filmKey!==key){state.filmKey=key;state.stage=i;if(stable){$('stageLabel').textContent=`第 ${i+1} 幕 / 定格观察笔记`;$('stageTitle').textContent=entry.title;$('stageObservation').textContent=entry.observation;$('stageMechanism').textContent=entry.mechanism;$('stageTrap').textContent=entry.pitfall;$('stageQuestion').textContent=entry.question;stageQuestions();}else{const t=transitionCopy[from];$('stageLabel').textContent='连续过渡 / 此帧不是静态分期标本';$('stageTitle').textContent=t[0];$('stageObservation').textContent=t[1];$('stageMechanism').textContent=t[2];$('stageTrap').textContent='分期是为描述连续过程而作的划分。点击下方按钮，回到清楚的定格节点再作答。';$('stageQuestion').textContent='想检验哪个定格节点？';$('stageOptions').innerHTML=[from,from+1].map(j=>`<button data-snap="${j}">${esc(stageNames[j])} →</button>`).join('');document.querySelectorAll('[data-snap]').forEach(e=>e.onclick=()=>{stop();state.progress=+e.dataset.snap;film();});hideFeedback('stageFeedback');}}}
+$('timeline').oninput=()=>{stop();state.progress=+$('timeline').value/100;film();};
+$('play').onclick=()=>{if(state.playing){stop();return;}if(state.progress>=5)state.progress=0;state.playing=true;state.last=0;$('play').textContent='Ⅱ 暂停';$('play').setAttribute('aria-label','暂停分裂动画');requestAnimationFrame(tick);};
+function tick(t){if(!state.playing)return;if(state.last)state.progress=Math.min(5,state.progress+Math.min(t-state.last,100)/1000/5.5);state.last=t;film();if(state.progress>=5){stop();return;}requestAnimationFrame(tick);}
+$('resetFilm').onclick=()=>{stop();state.progress=0;film();};
+document.querySelectorAll('[data-type]').forEach(e=>e.onclick=()=>{stop();state.type=e.dataset.type;document.querySelectorAll('[data-type]').forEach(b=>{b.classList.toggle('selected',b===e);b.setAttribute('aria-pressed',b===e);});film();});
+$('labelToggle').onclick=()=>{state.labels=!state.labels;$('labelToggle').setAttribute('aria-pressed',state.labels);$('labelToggle').textContent='结构标注：'+(state.labels?'开':'关');film();};
+function focusFilm(on){document.body.classList.toggle('focus-film',on);$('focusFilm').textContent=on?'退出放映 ↙':'放映模式 ↗';$('focusFilm').setAttribute('aria-pressed',on);}
+$('focusFilm').onclick=()=>focusFilm(!document.body.classList.contains('focus-film'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('focus-film'))focusFilm(false);});
+const accounts=[
+{title:'G₁ · 复制前',scope:'范围：一个细胞',c:4,d:4,s:0,kind:'single',note:'为便于计数，这里把松散染色质抽象成四个符号；不是间期真实显微形态。',explain:'每条未复制的染色体含一个核DNA分子。姐妹染色单体尚未形成。'},
+{title:'G₂ / 前期 / 中期',scope:'范围：一个细胞，复制已完成',c:4,d:8,s:8,kind:'double',note:'X形是便于计数的抽象符号。G₂中染色质较松散，真实外观不等于四个X。',explain:'每条染色体含两个相连的姐妹染色单体；染色体数仍是4，核DNA与姐妹染色单体各8。'},
+{title:'后期 · 整个细胞',scope:'范围：胞质尚未分开的整个细胞',c:8,d:8,s:0,kind:'both',note:'左右各一组，共8条子染色体；尚未完成胞质分裂。',explain:'姐妹分离后分别计为独立子染色体，整个细胞暂时8条；DNA没有再次复制，仍8个。'},
+{title:'后期 · 每一极',scope:'范围：只统计其中一极',c:4,d:4,s:0,kind:'pole',note:'紫色虚线圈定被统计的一极；另一极也获得同样的一组。',explain:'每一极得到4条子染色体、4个核DNA分子。范围改变，数目随之改变。'},
+{title:'分裂完成 · 每个子细胞',scope:'范围：其中一个子细胞',c:4,d:4,s:0,kind:'child',note:'末期重建后染色质变松散；这里仍用抽象符号说明数量。',explain:'每个子细胞各4条染色体、4个核DNA分子，与亲代G₁相同；两个子细胞要分别统计。'}];
+function glyph(x,y,i,kind){const col=colors[i],len=i<2?33:23;return `<g transform="translate(${x} ${y})" fill="none" stroke="${col}" stroke-width="8" stroke-linecap="round">${kind==='double'?`<path d="M-11 -${len}Q7 0 -11 ${len}M11 -${len}Q-7 0 11 ${len}"/>`:`<path d="M0 -${len}Q-6 0 0 ${len}"/>`}<circle r="3.5" fill="#51346f" stroke="none"/></g>`;}
+function auditDraw(a){const both=['both','pole'].includes(a.kind);let nodes='';if(both){for(let side=0;side<2;side++)for(let j=0;j<4;j++)nodes+=glyph(150+side*250+(j%2)*57,100+Math.floor(j/2)*88,j,'single');}else for(let j=0;j<4;j++)nodes+=glyph(165+j*80,145,j,a.kind);return `<svg viewBox="0 0 600 290" role="img" aria-label="${esc(a.title)}抽象计数图"><rect x="60" y="42" width="480" height="200" rx="88" fill="#fff" fill-opacity=".8" stroke="#bda9d4" stroke-width="2"/>${both?'<path d="M300 65V225" stroke="#d4c7e4" stroke-dasharray="5 5"/>':''}${a.kind==='pole'?'<ellipse cx="179" cy="145" rx="85" ry="98" fill="#c5b3e8" fill-opacity=".2" stroke="#6844c5" stroke-dasharray="6 5"/>':''}${nodes}<text x="300" y="275" text-anchor="middle" fill="#7b688c" font-size="11">身份配色保持一致 / 符号不是实际染色质形态</text></svg>`;}
+function audit(){const a=accounts[state.audit];$('auditTabs').innerHTML=accounts.map((x,i)=>`<button data-audit="${i}" class="${i===state.audit?'active':''}">${x.title}</button>`).join('');document.querySelectorAll('[data-audit]').forEach(e=>e.onclick=()=>{state.audit=+e.dataset.audit;audit();});$('auditScope').textContent=a.scope;$('auditHeading').textContent=a.title;$('auditNote').textContent=a.note;$('auditImage').innerHTML=auditDraw(a);['countChrom','countDNA','countSister'].forEach(id=>$(id).value='');hideFeedback('countFeedback');}
+$('checkCounts').onclick=()=>{const a=accounts[state.audit],values=['countChrom','countDNA','countSister'].map(id=>$(id).value);if(values.some(v=>v==='')){showFeedback('countFeedback','请把三项都填写完整，再核对。');return;}const correct=+values[0]===a.c&&+values[1]===a.d&&+values[2]===a.s;showFeedback('countFeedback',(correct?'三本账都对了。':`本范围应为：${a.c}条染色体、${a.d}个核DNA分子、${a.s}条姐妹染色单体。`)+a.explain,correct);};
+$('countTable').innerHTML='<table><thead><tr><th>时点与范围</th><th>染色体</th><th>核DNA</th><th>姐妹单体</th></tr></thead><tbody>'+accounts.map(a=>`<tr><td>${a.title}</td><td>${a.c}</td><td>${a.d}</td><td>${a.s}</td></tr>`).join('')+'</tbody></table>';audit();
+function scope(){const lab=ScopeLab,cell=lab.cells[state.cell],chosen=state.classified[cell.id];$('scopeGrid').innerHTML=lab.cells.map(c=>`<button data-cell="${c.id}" class="${c.id===state.cell?'selected':''}" aria-label="观察模拟细胞${c.id+1}">${lab.svg(c,false)}<span class="cell-number">${String(c.id+1).padStart(2,'0')}</span>${state.classified[c.id]===undefined?'':`<span class="cell-check">${state.classified[c.id]===c.phase?'✓':'•'}</span>`}</button>`).join('');document.querySelectorAll('[data-cell]').forEach(e=>e.onclick=()=>{state.cell=+e.dataset.cell;scope();});$('cellIndex').textContent=`样本 ${String(cell.id+1).padStart(2,'0')} / 原创形态模拟`;$('scopeZoom').innerHTML=lab.svg(cell,chosen!==undefined);$('phaseAnswers').innerHTML=lab.phases.map((p,i)=>`<button data-phase="${i}" class="${chosen===i?(chosen===cell.phase?'correct':'incorrect'):''}">${p}</button>`).join('');document.querySelectorAll('[data-phase]').forEach(e=>e.onclick=()=>{state.classified[cell.id]=+e.dataset.phase;scope();});if(chosen===undefined)hideFeedback('scopeFeedback');else showFeedback('scopeFeedback',(chosen===cell.phase?'判断正确。':`该图是${lab.phases[cell.phase]}。`)+cell.reason,chosen===cell.phase);const done=Object.keys(state.classified).length,correct=lab.cells.filter(c=>state.classified[c.id]===c.phase).length;$('scopeProgress').textContent=`已记录 ${done} / 20 · 正确 ${correct}`;const tally=lab.phases.map((_,i)=>Object.values(state.classified).filter(v=>v===i).length);$('scopeStats').innerHTML=lab.phases.map((p,i)=>`<div>${p}<strong>${tally[i]}</strong><span>我的分类记录</span></div>`).join('');}
+$('nextCell').onclick=()=>{state.cell=(state.cell+1)%20;scope();};$('scopeReset').onclick=()=>{state.classified={};state.cell=0;scope();};scope();
+function quiz(){const q=D.quiz[state.quiz],choice=state.quizAnswers[state.quiz];$('quizKicker').textContent=`题 ${state.quiz+1} / 8 · 先判断，再解释`;$('quizQuestion').textContent=q.stem;$('quizOptions').innerHTML=q.options.map((s,i)=>`<button data-qanswer="${i}" class="${choice===i?(i===q.answer?'correct':'incorrect'):''}"><span class="answer-letter">${'ABCD'[i]}</span><span>${esc(s)}</span></button>`).join('');document.querySelectorAll('[data-qanswer]').forEach(e=>e.onclick=()=>{state.quizAnswers[state.quiz]=+e.dataset.qanswer;quiz();});if(choice===undefined)hideFeedback('quizFeedback');else showFeedback('quizFeedback',(choice===q.answer?'判断正确。':`参考答案：${'ABCD'[q.answer]}。`)+q.explanation,choice===q.answer);const done=Object.keys(state.quizAnswers).length,score=D.quiz.filter((x,i)=>state.quizAnswers[i]===x.answer).length;$('quizScore').textContent=`已作答 ${done} / 8 · 正确 ${score} 题`;$('quizDots').innerHTML=D.quiz.map((_,i)=>`<button data-question="${i}" aria-label="第${i+1}题" class="${state.quiz===i?'current ':''}${state.quizAnswers[i]!==undefined?'done':''}">${i+1}</button>`).join('');document.querySelectorAll('[data-question]').forEach(e=>e.onclick=()=>{state.quiz=+e.dataset.question;quiz();});$('prevQ').disabled=state.quiz===0;$('nextQ').disabled=state.quiz===7;}
+$('prevQ').onclick=()=>{state.quiz=Math.max(0,state.quiz-1);quiz();};$('nextQ').onclick=()=>{state.quiz=Math.min(7,state.quiz+1);quiz();};$('resetQuiz').onclick=()=>{state.quizAnswers={};state.quiz=0;quiz();};quiz();
+$('amitosis').innerHTML=`<p>${esc(D.intro.amitosis)}</p><p class="model-note">本知识卡不把有丝分裂的动态模型套用于无丝分裂；也不把看不到凝缩染色体的普通间期误判成无丝分裂。</p>`;
+function modal(title,body){stop();$('modalTitle').textContent=title;$('modalBody').innerHTML=body;$('modal').showModal();$('modal').scrollTop=0;}
+$('guideBtn').onclick=()=>modal('把课堂交给学生',`<p>建议 45 分钟；也可以分两课时，增加根尖观察与讨论时间。本节聚焦“细胞的增殖”，后续的细胞分化、衰老与死亡另属本章其他节。</p><h3>三个人，三种任务</h3><p><b>操作员</b>控制进度；<b>观察员</b>描述形态；<b>解释员</b>说明物质如何分配。每换一幕，轮换一次角色。</p>${D.teacherNotes.map(x=>`<h3>${esc(x.title)} · ${x.minutes} 分钟</h3><p><b>引导问题：</b>${esc(x.prompt)}</p><p><b>期望表达：</b>${esc(x.expected)}</p><p class="model-note">${esc(x.detail)}</p>`).join('')}<h3>操作说明</h3><p>顶部切换学习场景。放映室支持播放、暂停和拖动时间轴；点阶段按钮可直接跳到稳定节点。左右方向键在放映室逐幕切换，空格播放或暂停（输入控件内不触发）。大字按钮适合投屏，浏览器全屏可用 F11。关闭页面后，练习记录不保留。</p>`);
+function sources(){const extra=[{title:'HHMI BioInteractive｜The Eukaryotic Cell Cycle and Cancer',url:'https://www.biointeractive.org/classroom-resources/eukaryotic-cell-cycle-and-cancer',support:'参考可点击的周期分区与提问组织方式；未借用其动画，本课不展开癌症机制。'},{title:'SAPS｜Microscopy of root tip mitosis',url:'https://www.saps.org.uk/teaching-resources/resources/1358/a-level-set-practicals-microscopy-of-root-tip-mitosis/',support:'参考根尖取材、显微观察与分类统计的教学逻辑；具体制片试剂按所用教材与学校方案。'}];modal('科学依据与模型说明',`<p>${esc(D.intro.scope)}</p><h3>图像与模拟的边界</h3><ul>${D.boundaries.map(s=>`<li>${esc(s)}</li>`).join('')}<li>根尖图集中的染色体仅为少量形态符号，未复刻洋葱真实的 2n=16；不应用来数洋葱染色体。图集人为设定12个间期、3个前期、2个中期、2个后期、1个末期，不能由此推出真实周期时长。</li><li>动画顺序、细胞周期环与数量账本分别表达过程、阶段关系与计数规则；都不是实时实验记录。题目均为原创，不标称任何地区高考真题。</li></ul><h3>资料与教学参考</h3><p class="model-note">资料核对日期：2026-10-24。课件绘图为原创SVG，无外部媒体运行依赖；以下链接需联网访问。</p>${D.references.concat(extra).map(r=>`<div class="source"><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)} ↗</a><p>${esc(r.support)}</p></div>`).join('')}`);}
+$('sourcesBtn').onclick=sources;$('footerSources').onclick=sources;$('closeModal').onclick=()=>$('modal').close();$('modal').addEventListener('click',e=>{if(e.target===$('modal')){const r=$('modal').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('modal').close();}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+document.addEventListener('keydown',e=>{if($('modal').open||e.target.closest('button,input,select,textarea,a,summary')||window.getSelection().toString())return;if(state.room===1&&['ArrowLeft','ArrowRight',' '].includes(e.key)){e.preventDefault();if(e.key===' '){$('play').click();return;}stop();state.progress=Math.max(0,Math.min(5,Math.round(state.progress)+(e.key==='ArrowRight'?1:-1)));film();}});
+film();
+})();
+</script></body></html>

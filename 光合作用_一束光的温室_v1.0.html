@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>光合作用温室 · 光合作用与能量转化 v1.0</title><meta name="description" content="一间可操作的光合作用温室：色素分离、光反应与暗反应、氧同位素证据、净光合探究。高中生物单文件互动课件。"><style>:root{--paper:#f7f5ed;--white:#fffef9;--ink:#173e32;--muted:#708278;--line:#d1d9c9;--green:#3e8a5f;--mint:#e6edda;--yellow:#e2b948;--coral:#d77958;--soft:#eceadf;--radius:24px;color-scheme:light;font-family:"Microsoft YaHei","PingFang SC",sans-serif}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-size:15px;line-height:1.75}button,select,input{font:inherit}button{background:transparent;border:1px solid var(--line);border-radius:30px;padding:9px 19px;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s}button:hover{border-color:var(--green);background:#3e8a5f09}button:disabled{opacity:.38;cursor:default}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--coral);outline-offset:4px}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}[hidden]{display:none!important}header{max-width:1550px;margin:auto;display:flex;align-items:center;gap:35px;padding:24px 44px 22px}.wordmark{display:flex;align-items:center;gap:12px;text-decoration:none!important;color:var(--ink);font-size:21px;font-weight:700;letter-spacing:1px}.logo-leaf{display:grid;place-items:center;background:var(--ink);color:#e4edb5;width:45px;height:49px;border-radius:50% 3px 50% 3px;font:35px Georgia,serif}.wordmark small{font:8px monospace;display:block;letter-spacing:2px;color:var(--muted);margin-top:4px}.header-label{font-size:11px;line-height:1.8;padding-left:25px;border-left:1px solid var(--line);color:var(--muted)}.header-actions{margin-left:auto;display:flex;gap:8px}.header-actions button{font-size:11px;padding:7px 13px}nav{display:flex;justify-content:center;gap:10px;padding:14px 24px;border-block:1px solid var(--line);background:#fffdf650;overflow-x:auto}nav button{flex-shrink:0;border-color:transparent;border-radius:6px;font-size:12px;padding:7px 18px}nav button span{font:10px monospace;color:#8b9b8c;margin-right:9px}nav button[aria-current=page]{background:var(--ink);color:var(--paper)}nav button[aria-current=page] span{color:#b8d1b0}main{max-width:1450px;margin:auto;padding:34px 44px 20px;min-height:calc(100vh - 280px)}.label{font:10px monospace;letter-spacing:2px;color:var(--green)}.eyeline{display:flex;align-items:center;gap:18px;margin-bottom:20px}.eyeline::after{content:"";flex:1;height:1px;background:var(--line)}h1,h2,h3,p{margin-top:0}h1{font-family:"Songti SC","SimSun",serif;font-size:clamp(34px,4vw,55px);font-weight:500;line-height:1.35;letter-spacing:2px}h1 em{font-style:normal;color:var(--green)}h2{font-size:24px;line-height:1.5;font-weight:600;letter-spacing:.5px}h3{font-size:17px;font-weight:600}.intro{color:var(--muted);font-size:13px;line-height:1.9}.chapter-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin:8px 0 25px}.chapter-head h1{font-size:34px;margin-bottom:10px}.chapter-head p{max-width:700px;margin:0}.chapter-no{font:80px Georgia,serif;color:#d9decb;line-height:1}.hero{display:grid;grid-template-columns:43% 57%;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--white)}.hero-copy{padding:40px 37px 25px;display:flex;flex-direction:column}.hero-copy h1{margin:19px 0 22px}.hero-copy .intro{max-width:360px}.hero-art{background:linear-gradient(140deg,#eaf0d8,#e0e9d0);position:relative;display:flex;flex-direction:column;justify-content:center;padding:18px 0}.art-label{font:9px monospace;letter-spacing:2px;color:#718368;position:absolute;top:23px;left:28px}.hero-svg{width:100%;height:auto;display:block}.light-select{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 17px}.light-select button{font-size:11px;padding:7px 13px;background:#fff7}.light-select button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:white}.swatch{width:8px;height:8px;display:inline-block;border-radius:50%;margin-right:7px}.observation{border-top:1px solid var(--line);padding-top:17px;margin-top:auto;font-size:12px}.observation b{font-size:13px}.observation p{margin:6px 0;color:var(--muted)}.spectrum-strip{height:12px;background:linear-gradient(90deg,#744ea9,#456ecc,#47a4bd,#6fa76a,#d9c45d,#e68a54,#c55b53);margin:0 28px;border-radius:20px}.art-caption{color:#687e65;font-size:10px;padding:12px 30px 0}.route-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:22px}.route-card{padding:19px 22px;border:1px solid var(--line);border-radius:15px;background:#fff9;display:flex;gap:15px}.route-card span{font:28px Georgia,serif;color:var(--green)}.route-card h3{font-size:14px;margin-bottom:4px}.route-card p{font-size:11px;color:var(--muted);margin:0}.mini-note{font-size:10px;color:var(--muted);margin:13px 0 0;line-height:1.8}.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}.primary:hover{background:#2c5c47;color:var(--paper)}.small-button{font-size:11px;padding:7px 13px}.split-work{display:grid;grid-template-columns:minmax(0,1fr) 42%;gap:25px}.paper{border:1px solid var(--line);background:var(--white);border-radius:22px;padding:26px;min-width:0}.chrom-paper{background:#e9eddc;position:relative;border-radius:22px;border:1px solid #ccd4bf;overflow:hidden}.chrom-paper svg{width:100%;display:block;max-height:580px;aspect-ratio:690/570}.instrument-top{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 25px 0;font-size:10px;color:var(--muted)}.numbered{font:11px monospace;color:var(--green);letter-spacing:1px}.pigment-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.pigment-cards button{border-radius:13px;text-align:left;padding:12px 15px;background:#f7f7ed;font-size:12px}.pigment-cards i{display:block;width:32px;height:5px;border-radius:5px;margin-bottom:8px}.order-list{display:grid;gap:7px;margin-bottom:17px}.order-slot{display:flex;align-items:center;gap:12px;border:1px dashed #bdcbb8;border-radius:11px;padding:9px 12px;text-align:left;min-height:43px;font-size:12px;background:#f4f6e9}.order-slot span{font:10px monospace;color:var(--muted)}.action-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.action-row button{font-size:12px}.feedback{padding:13px 15px;background:#e6efdf;border-radius:11px;color:#315a3c;font-size:12px;line-height:1.85;margin:15px 0 0}.feedback.wrong{background:#f5e6da;color:#995b3e}.definition{padding-top:17px;margin-top:19px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.definition b{display:block;color:var(--ink);font-size:12px;margin-bottom:5px}.theater{background:#fffdf7;border:1px solid var(--line);border-radius:25px;overflow:hidden}.theater-top{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:19px 25px;border-bottom:1px solid var(--line)}.theater-top span{font:10px monospace;letter-spacing:1px;color:var(--muted)}.stage-buttons{display:flex;gap:7px;flex-wrap:wrap}.stage-buttons button{font-size:11px;padding:7px 13px}.stage-buttons button[aria-pressed=true]{background:#dce7c5;border-color:#93b580}.chloroplast{display:block;width:100%;max-height:610px;aspect-ratio:1000/570}.chloroplast text{font-family:"Microsoft YaHei",sans-serif}.theater-bottom{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.theater-caption{padding:21px 26px;background:#eef2e3}.theater-caption h3{font-size:18px;margin-bottom:8px}.theater-caption p{font-size:12px;margin-bottom:0;color:#677b68}.theater-question{padding:20px 25px}.question{font-size:13px;font-weight:700;line-height:1.85;margin-bottom:10px}.choices{display:grid;gap:7px}.choices button{text-align:left;border-radius:10px;background:#fff9;font-size:12px;padding:10px 13px;line-height:1.75}.choices button.correct{background:#deead2;border-color:#70995d}.choices button.wrong{background:#f7e7da;border-color:#c28e70}.choices.two-col{grid-template-columns:1fr 1fr}.equation{padding:16px 22px;background:var(--ink);color:#edf0d4;border-radius:15px;font-size:17px;font-family:Georgia,"Microsoft YaHei",serif;line-height:1.9;margin-top:18px}.equation small{font:10px/1.85 "Microsoft YaHei",sans-serif;color:#b5c7ad;display:block}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.evidence-card{border:1px solid var(--line);background:var(--white);border-radius:23px;overflow:hidden}.evidence-card h3{padding:20px 24px;margin:0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;font-size:17px}.evidence-card h3 span{font:11px monospace;color:var(--green)}.evidence-svg{display:block;width:100%;aspect-ratio:580/400;background:#edf0e0}.prediction{max-width:900px;margin:20px auto 0;text-align:center}.prediction .choices{max-width:820px;margin:15px auto;grid-template-columns:repeat(3,1fr);text-align:left}.evidence-conclusion{display:grid;grid-template-columns:120px 1fr;gap:25px;margin-top:22px;border-top:1px solid var(--line);padding-top:19px}.evidence-conclusion b{font-family:Georgia,serif;font-size:36px;font-weight:400;color:var(--green)}.evidence-conclusion p{font-size:12px;color:var(--muted);margin:0}.greenhouse{display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px}.controls{padding:25px;background:var(--ink);border-radius:22px;color:#f2f1d9;min-width:0}.controls h3{font-size:20px;font-weight:500}.controls .label{color:#b7d0a8}.control{margin:23px 0}.control label{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:9px}.control output{font:17px Georgia,serif;color:#d8d878}.control input[type=range]{width:100%;accent-color:#dbd779;cursor:pointer}.temperature{display:flex;gap:5px}.temperature button{border-color:#52745c;color:#d3e2c4;font-size:11px;flex:1;padding:6px 8px}.temperature button[aria-pressed=true]{background:#d8dfad;color:var(--ink)}.controls p{font-size:10px;line-height:1.85;color:#abc19f}.controls>button{color:#e9edd0;border-color:#63806b;font-size:11px}.chart-paper{padding:20px 25px;background:var(--white);border-radius:22px;border:1px solid var(--line);min-width:0}.chart-paper svg{width:100%;display:block;aspect-ratio:800/400}.chart-legend{display:flex;gap:19px;flex-wrap:wrap;font-size:10px;color:var(--muted)}.chart-legend i{width:20px;height:3px;background:var(--green);display:inline-block;vertical-align:middle;margin-right:6px}.metric-equation{display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr;align-items:center;text-align:center;background:#eef2e4;border-radius:15px;padding:15px;gap:5px;margin-top:12px}.metric-equation b{display:block;font:30px Georgia,serif}.metric-equation small{font-size:10px;color:var(--muted)}.metric-equation>span{color:var(--muted)}.greenhouse-tasks{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.greenhouse-tasks button{font-size:11px;background:#fff8}.greenhouse-tasks button[aria-pressed=true]{background:#e3e9d0;border-color:var(--green)}.record-area{margin-top:17px}.record-area h3{font-size:14px}.record-table{width:100%;border-collapse:collapse;font-size:11px}.record-table th,.record-table td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left}.salon{display:grid;grid-template-columns:330px 1fr;gap:24px}.reflection{background:#e2e9d1;border:1px solid #c6d2b9;border-radius:22px;padding:28px}.reflection h2{font-family:"SimSun",serif;font-size:29px;font-weight:500}.reflection p{font-size:12px;color:#607361}.reflection .line{border-bottom:1px solid #bccbab;padding:16px 0 10px;font-size:12px}.quiz{border:1px solid var(--line);background:var(--white);border-radius:22px;padding:28px}.quiz h2{font-size:20px;line-height:1.9;margin:15px 0 20px}.quiz-dots{display:flex;gap:7px;margin-top:24px}.quiz-dots i{width:10px;height:10px;border-radius:50%;background:#d9dfcf}.quiz-dots i.done{background:var(--green)}.quiz-actions{display:flex;justify-content:space-between;gap:15px;margin-top:18px}.quiz-actions button{font-size:12px}details{border:1px solid var(--line);border-radius:13px;padding:13px 18px;margin:19px 0;font-size:12px;background:#fff8}summary{cursor:pointer;font-weight:600}details p{font-size:11px;line-height:1.9;color:var(--muted);margin-top:12px;margin-bottom:0}footer{display:flex;gap:20px;align-items:center;max-width:1450px;margin:auto;border-top:1px solid var(--line);padding:23px 44px 28px;font-size:11px;color:var(--muted)}footer>div{display:flex;align-items:center;gap:13px;margin-left:auto}footer button{width:34px;height:34px;padding:0}footer .teacher-link{width:auto;height:auto;border:none;padding:6px;font-size:11px}footer small{font-size:9px}.footer-brand{font-family:"SimSun",serif;font-size:13px}dialog{width:calc(100% - 36px);max-width:900px;max-height:88vh;background:var(--paper);color:var(--ink);border:1px solid #aebfa3;border-radius:23px;padding:0;box-shadow:0 30px 90px #193c322a}dialog::backdrop{background:#19382a77;backdrop-filter:blur(6px)}.modal-head{padding:24px 28px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:15px;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:1}.modal-head h2{margin:7px 0 0;font-size:25px}.modal-head button{padding:0;width:34px;height:34px}.modal-body{padding:18px 28px 26px;font-size:12px;color:#5f7665}.modal-body h3{color:var(--ink);margin-top:25px;font-size:16px}.modal-body li{margin:12px 0;line-height:1.95}.modal-body small{font-size:10px;display:block;margin-top:5px}.source-list{padding:0;list-style:none}.source-list li{padding:12px 0;border-bottom:1px solid var(--line)}.source-list a{overflow-wrap:anywhere}.callout{padding:15px 20px;border-left:3px solid var(--green);background:#e7ecd8;border-radius:0 10px 10px 0;color:#41694c;font-size:13px}.focus{font-size:17px}.focus .intro,.focus .choices button,.focus .theater-caption p,.focus .question{font-size:15px}.focus .mini-note{font-size:12px}.focus .hero-copy{padding:35px}.focus .header-label{display:none}.enter{animation:arrive .5s ease both}.chrom-band{animation:develop 3s ease both;transform:translateY(0)}.flow{stroke-dasharray:7 7;animation:dash 2s linear infinite}.paused *{animation-play-state:paused!important}@keyframes arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes develop{from{transform:translateY(var(--travel));opacity:.2}to{transform:translateY(0);opacity:1}}@keyframes dash{to{stroke-dashoffset:-28}}@media(max-width:1100px){header{padding:21px 28px}.header-label{display:none}main{padding:30px 28px 20px}.hero-copy{padding:30px 27px}.hero-copy h1{font-size:40px}.header-actions{gap:6px}nav{justify-content:flex-start}nav button{padding-inline:13px}.greenhouse{grid-template-columns:250px minmax(0,1fr)}.split-work{grid-template-columns:1fr 44%}.salon{grid-template-columns:280px minmax(0,1fr)}}@media(max-width:800px){header{padding:18px 20px}.wordmark{font-size:18px}.header-actions button{font-size:10px;padding:7px 9px}.header-actions button[data-do=guide]{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:28px}.hero-copy h1{font-size:45px;margin-top:12px}.hero-copy .intro{max-width:none}.hero-art{padding-top:30px}.hero-svg{max-height:420px}.route-cards{grid-template-columns:1fr}.route-card{padding:13px 18px}.chapter-head h1{font-size:29px}.chapter-no{font-size:60px}.split-work{grid-template-columns:1fr}.chrom-paper svg{max-height:500px}.theater-top{flex-wrap:wrap;padding:16px 20px}.theater-bottom{grid-template-columns:1fr}.theater-question{padding:20px}.evidence-grid{gap:13px}.evidence-card h3{font-size:14px;padding:15px}.prediction .choices{grid-template-columns:1fr}.greenhouse{grid-template-columns:1fr}.controls{padding:20px}.controls-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.control{margin:17px 0}.salon{grid-template-columns:1fr}.reflection{padding:22px}.reflection h2{font-size:26px}.reflection .line{display:inline-block;width:30%;margin-right:3%;font-size:11px}.chart-paper{padding:16px}.evidence-conclusion{grid-template-columns:80px 1fr}footer{padding:20px 28px}.footer-brand{display:none}}@media(max-width:500px){header{padding:17px 14px;gap:10px}.wordmark{font-size:16px;gap:9px}.logo-leaf{width:35px;height:39px;font-size:27px}.wordmark small{font-size:6px;letter-spacing:1px}.header-actions{gap:4px}.header-actions button{font-size:9px;padding:6px 9px}nav{padding:10px 14px;gap:4px}nav button{font-size:11px;padding:7px 11px}main{padding:25px 15px 15px}.hero-copy,.focus .hero-copy{padding:25px 23px}.hero-copy h1{font-size:38px}.light-select button{font-size:10px;padding:7px 11px}.label{font-size:9px}.chapter-head{align-items:center}.chapter-head h1{font-size:26px}.chapter-no{font-size:48px}.chapter-head p{font-size:12px}.paper{padding:21px}.pigment-cards{gap:7px}.pigment-cards button{font-size:11px}.evidence-grid{grid-template-columns:1fr}.evidence-svg{max-height:330px}.evidence-conclusion{gap:15px}.choices.two-col{grid-template-columns:1fr}.controls-grid{grid-template-columns:1fr;gap:0}.metric-equation{gap:3px;padding:13px 8px}.metric-equation b{font-size:25px}.metric-equation small{font-size:9px}.metric-equation{grid-template-columns:1fr 15px 1fr 15px 1fr}.chart-legend{gap:10px;font-size:9px}.record-table th,.record-table td{font-size:9px;padding:7px 4px}.quiz{padding:22px}.quiz h2{font-size:18px}.reflection .line{display:block;width:100%;margin:0}.chloroplast{min-height:220px}.theater-caption{padding:18px 20px}.theater-caption h3{font-size:17px}.theater-top span{font-size:8px}.stage-buttons{gap:5px}.stage-buttons button{font-size:10px;padding:6px 10px}.equation{font-size:15px;padding:15px 18px}.equation small{font-size:9px}.modal-head{padding:21px}.modal-head h2{font-size:21px}.modal-body{padding:15px 21px}.modal-body li{font-size:11px}footer{gap:9px;flex-wrap:wrap;padding:19px 15px}footer>div{margin-left:0}footer .teacher-link{margin-left:auto}footer small{width:100%;text-align:center}.mini-note{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.pigment-cards button:disabled{opacity:.65}.order-slot:disabled{opacity:1}
+</style></head><body>
+<header><a class="wordmark" href="#"><span class="logo-leaf">↗</span><span>光合作用温室<small>THE SUNLIGHT CONSERVATORY</small></span></a><div class="header-label">人教版生物学 · 必修1<br>光合作用与能量转化</div><div class="header-actions"><button data-do="guide">上课指南</button><button data-do="sources">科学资料 ↗</button><button data-do="focus" aria-pressed="false" id="focusButton">放大字号 Aa</button></div></header>
+<nav id="chapterNav" aria-label="温室学习区域"></nav><main id="room"></main><footer><span class="footer-brand">一束光的能量，有物质来承接。</span><div><button data-do="previous" aria-label="上一区域">←</button><span id="roomCount"></span><button data-do="next" aria-label="下一区域">→</button></div><button data-do="guide" class="teacher-link">让学生来讲 ↗</button><small>离线课堂版 · v1.0</small></footer>
+<dialog id="dialog"><div class="modal-head"><div><span class="label" id="modalLabel"></span><h2 id="modalTitle"></h2></div><button data-do="close" aria-label="关闭">×</button></div><div class="modal-body" id="modalBody"></div></dialog>
+<script>/* 原创课堂文案；资料核验日：2026-10-24。答案索引从 0 开始。 */
+window.PhotoContent = {
+  scopeNote: '本课对应人教版普通高中生物学必修1《分子与细胞》第5章第4节“光合作用与能量转化”，承接细胞呼吸。以绿色植物叶绿体中的光合作用为主要对象，采用高中层级的过程模型；不展开C4、CAM、光呼吸及完整电子传递链。图形、曲线和数值均为原创教学示意，不是显微图、真实实验数据或作物产量预测。未核定教师所用纸本的具体印次，请以本校教材版权页为准。',
+  references: [
+    {
+      title: '人教社｜必修1《分子与细胞》教材简介',
+      url: 'https://www.pep.com.cn/xw/zt/px/2019/sw2019/jysw/201907/t20190702_1939926.shtml',
+      note: '出版社官方教材培训资料入口，用于确认课程组织与教材背景。'
+    },
+    {
+      title: '国家中小学智慧教育平台｜人教版必修1教材资源',
+      url: 'https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/9d522562-b529-446c-9b5b-084812beee6e.pkg/pdf.pdf',
+      note: '第5章第4节为“光合作用与能量转化”，包括色素、光反应、暗反应及环境因素。平台资源访问可能需要其页面授权。'
+    },
+    {
+      title: '人教社｜高中生物新教材培训资料',
+      url: 'https://www.pep.com.cn/xw/zt/xkzt/swpxhkj/hyzl/202105/W020210526306605422940.pdf',
+      note: '确认第5章第4节的色素提取分离、环境因素探究等实验内容。'
+    },
+    {
+      title: 'NCBI Bookshelf｜Chloroplasts and Photosynthesis',
+      url: 'https://www.ncbi.nlm.nih.gov/books/NBK26819/',
+      note: 'Alberts等《Molecular Biology of the Cell》：叶绿体区室、水供电子、光反应产物与碳固定循环。'
+    },
+    {
+      title: 'NCBI Bookshelf｜Photosynthesis',
+      url: 'https://www.ncbi.nlm.nih.gov/books/NBK9861/',
+      note: 'Cooper《The Cell》：类囊体膜与基质的分工、ATP和NADPH的产生及利用。'
+    },
+    {
+      title: 'Nobel Prize｜The Path of Carbon in Photosynthesis',
+      url: 'https://www.nobelprize.org/uploads/2017/03/calvin-lecture.pdf',
+      note: 'Calvin 1961年诺贝尔演讲原始资料；碳同位素示踪与光合碳循环的研究思路。研究由Calvin、Benson、Bassham等团队成员共同推进。'
+    },
+    {
+      title: 'SAPS｜色素层析教学实验',
+      url: 'https://www.saps.org.uk/teaching-resources/resources/181/thin-layer-chromatography/',
+      note: 'Science & Plants for Schools官方资源：通过实验分离、辨认光合色素；仅借鉴先预测、再观察、后解释的教学组织。'
+    },
+    {
+      title: '植物生理研究｜绿光也能驱动光合作用',
+      url: 'https://doi.org/10.1093/pcp/pcp034',
+      note: 'Terashima等，Plant and Cell Physiology，2009。用于校正“绿光完全不能利用”的误解；不把特定条件的结果推广到所有植物与光环境。'
+    }
+  ],
+  quiz: [
+    {
+      stem: '给叶绿体的两个工作区贴标签。哪一组正确？',
+      options: [
+        '光反应在线粒体内膜；暗反应在细胞质基质',
+        '光反应在类囊体薄膜；暗反应在叶绿体基质',
+        '两阶段都只发生在叶绿体外膜',
+        '光反应在基质；暗反应在类囊体腔'
+      ],
+      answer: 1,
+      explanation: '光合色素与光反应相关复合体位于类囊体薄膜；固定CO₂及后续还原、再生反应主要在叶绿体基质完成。基质与类囊体腔是不同空间。'
+    },
+    {
+      stem: '有人说：“叶片是绿色的，所以绿光对光合作用完全没用。”最科学的修正是？',
+      options: [
+        '叶绿素主要吸收红光和蓝紫光，绿光吸收相对较少；完整叶片仍可利用部分绿光',
+        '绿色叶片只吸收绿光，不吸收其他颜色的光',
+        '叶片显示哪种颜色，就一定最强烈地吸收哪种光',
+        '所有植物在任何条件下，绿光都比红光更高效'
+      ],
+      answer: 0,
+      explanation: '颜色与反射、透射有关，不能把“吸收较少”写成“完全不吸收”。叶片结构、背景光与物种都会影响绿光的利用，色素溶液的吸收光谱也不等同于完整叶片的光合速率曲线。'
+    },
+    {
+      stem: '在适宜光照下，用H₂¹⁸O而非普通水供给绿色植物，同时供给未标记的CO₂。追踪新释放的O₂，最合理的预期是？',
+      options: [
+        'O₂不可能带标记，因为O₂只来自CO₂',
+        '所有新合成有机物都只含¹⁸O，不会有其他氧同位素',
+        '新释放的O₂可以含¹⁸O，支持其氧原子来自水',
+        '光能会直接转化成氧原子'
+      ],
+      answer: 2,
+      explanation: '放氧光合作用释放的分子氧来自水的氧化。标记实验追踪的是原子的去向；光提供能量，不提供氧原子。这里按短时示踪的教学简化处理，不展开氧同位素交换。'
+    },
+    {
+      stem: '在C3植物的暗反应示意中，1分子CO₂与1分子C₅结合，形成2分子C₃。紧接着还原C₃所需的主要能量和还原力来自哪里？',
+      options: [
+        'O₂直接给C₃供能，并变成葡萄糖',
+        'CO₂自己释放足够能量，因此无需其他物质',
+        '只需叶绿素，不需要ATP或NADPH',
+        '光反应提供的ATP和NADPH'
+      ],
+      answer: 3,
+      explanation: 'ATP供给能量，NADPH供给还原力并参与能量转化。碳固定后还须经历还原和C₅再生；循环产生的部分三碳糖磷酸可用于合成糖类，CO₂不是一步变成葡萄糖。'
+    },
+    {
+      stem: '“暗反应”这个名称最容易造成哪种误解？应如何纠正？',
+      options: [
+        '只能在黑暗中进行；白天必须停止',
+        '不直接以光为反应条件，但通常依赖光反应持续提供ATP和NADPH',
+        '无需酶催化，加入CO₂即可无限进行',
+        '只要有CO₂，完全断光后仍能长期维持原速率'
+      ],
+      answer: 1,
+      explanation: '“暗”不等于“夜间专属”。正常叶片在光下也进行暗反应；停止光照后，随着ATP和NADPH供应变化，碳同化不能长期保持原速率，部分相关酶也受光环境调控。'
+    },
+    {
+      stem: '同一叶片在某光照下净吸收CO₂为6个相对单位，估算同条件下呼吸释放CO₂为2个相对单位。按本课简化关系，总光合固定CO₂速率是多少？',
+      options: [
+        '8个相对单位',
+        '4个相对单位',
+        '6个相对单位',
+        '0个相对单位，因为光下不呼吸'
+      ],
+      answer: 0,
+      explanation: '总光合=净光合+呼吸，因此6+2=8。这里采用同一叶片、同一时段、同一计量基准并忽略光呼吸等影响的教学关系。真实测量中不能总把黑暗呼吸值无条件当作光下呼吸值。'
+    },
+    {
+      stem: '恒温且供水正常时，增大光照后净光合速率接近平台；保持该光照，提高CO₂供应又使速率上升。哪项推论最合理？',
+      options: [
+        '平台证明植物不再需要CO₂',
+        '只要继续加强光照，速率一定无限增长',
+        '该条件下CO₂供应具有一定限制作用；平台不能简单理解为“光越强永远越好”',
+        '所有物种都具有完全相同的平台高度'
+      ],
+      answer: 2,
+      explanation: '改变CO₂后速率上升，为CO₂具有一定限制作用提供证据。平台可能受多种过程共同限制；实际强光还可能造成光抑制，本课理想化曲线不包含这类胁迫。'
+    },
+    {
+      stem: '绿叶色素分离实验中，滤液细线被层析液液面淹没。最可能出现什么问题？',
+      options: [
+        '色素立刻变成更多的ATP，因此色带更清晰',
+        '只影响叶绿素b，不影响其他任何色素',
+        '色素沿滤纸的正常迁移完全不受影响',
+        '色素可能溶入液体，影响正常分离，应让细线高于液面'
+      ],
+      answer: 3,
+      explanation: '点样线应高于层析液液面。教材典型纸层析条件下，由上到下通常为胡萝卜素、叶黄素、叶绿素a、叶绿素b；颜色、带宽和位置会受样品、溶剂、滤纸及操作影响。'
+    }
+  ],
+  teacherNotes: [
+    {
+      title: '01｜从呼吸课接一束光',
+      minutes: 5,
+      prompt: '呼吸把有机物中的化学能用于生命活动，这些有机物最初如何形成？光是原料还是能量？',
+      expected: 'CO₂和水提供物质来源，光提供能量；物质流和能量流须分别追踪。',
+      detail: '先让学生描述，再亮出总体关系。叶绿体外膜、内膜与类囊体膜分开命名；绿色植物还会持续进行细胞呼吸。'
+    },
+    {
+      title: '02｜让颜色成为证据',
+      minutes: 8,
+      prompt: '一片绿叶中只有一种色素吗？先预测色带，再观察分离过程。绿色是否意味着只利用绿光？',
+      expected: '叶绿素a、叶绿素b和类胡萝卜素共同参与光能吸收；叶绿素对红光和蓝紫光吸收较强。',
+      detail: '教材典型色带从上到下为橙黄色胡萝卜素、黄色叶黄素、蓝绿色叶绿素a、黄绿色叶绿素b。上、下以展开方向为准。相同光谱曲线的高度不可当作实际吸收百分比；绿光利用不为零。'
+    },
+    {
+      title: '03｜到类囊体膜取证',
+      minutes: 10,
+      prompt: '圈出水和O₂的关系，再分别追踪ATP与NADPH会送到哪里。',
+      expected: '光反应在类囊体薄膜进行，光能参与生成ATP和NADPH，水提供电子并释放O₂；ATP和NADPH用于基质内的碳同化。',
+      detail: '不能把光画成一种物质，也不能把NADPH写成NADH。动画不做光子数、ATP数或真实时间的定量对应。简化水光解式2H₂O→O₂+4H⁺+4e⁻只表达放氧与电子来源。'
+    },
+    {
+      title: '04｜一粒碳的循环路线',
+      minutes: 10,
+      prompt: '用碳数核对CO₂+C₅→2C₃，再解释为什么C₅必须再生，以及为什么不是一个循环输出一分子葡萄糖。',
+      expected: '固定时1+5=2×3；还原与再生是多步酶促过程；多数中间物回到循环，少量三碳糖磷酸输出。',
+      detail: '进阶计数：固定3CO₂，形成6个三碳中间物；经还原后相当于净输出1个三碳糖磷酸，其余5个用于再生3个C₅。完整循环需要9ATP和6NADPH，其中ATP也用于C₅再生。这是化学计量示意，不能把每个箭头都标一次相同消耗。'
+    },
+    {
+      title: '05｜温室经营要看净收入',
+      minutes: 8,
+      prompt: '先保持其他条件不变，只改光照；再改CO₂。光合为零与净交换为零是一回事吗？',
+      expected: '净光合=总光合−呼吸；补偿点净值为零时，总光合仍可大于零并恰好补偿呼吸。',
+      detail: '无光时总光合按模型为零，叶片呼吸使净CO₂交换表现为释放。曲线固定呼吸及其余条件，不包含气孔动态、光呼吸、光抑制与不同物种适应。请使用“本模型”“该条件下”，不把相对参数解释成真实温室配方。'
+    },
+    {
+      title: '06｜用解释完成出站',
+      minutes: 4,
+      prompt: '请操作员选择、证据员指图、解释员用“场所—物质—能量—条件”四个词口述整个过程。',
+      expected: '光反应与暗反应相互联系；能解释O₂来源、ATP/NADPH作用、C₅再生以及净光合。',
+      detail: '8题均为本课原创情境题，非高考原题。可选4题当堂检查，其余作为学生自主复习；鼓励学生纠正图与文字的过度简化。'
+    }
+  ]
+};
+</script><script>(function (global) {
+  'use strict';
+  const C = { ink:'#173e32', green:'#3e8a5f', pale:'#e7edce', stroma:'#edf1d8', lime:'#dce4a7', yellow:'#e2b948', coral:'#d77958', paper:'#f7f5ed', grey:'#6b7f6d' };
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const text = (x,y,s,size=19,fill=C.ink,anchor='start',extra='') => `<text x="${x}" y="${y}" fill="${fill}" font-size="${size}" text-anchor="${anchor}" font-family="'Segoe UI','Microsoft YaHei',sans-serif" ${extra}>${esc(s)}</text>`;
+  const line = (d,color=C.green,width=2.4,marker=true,extra='') => `<path d="${d}" fill="none" stroke="${color}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round" ${marker?'marker-end="url(#ps-arrow-'+(color===C.yellow?'gold':color===C.coral?'coral':'green')+')"':''} ${extra}/>`;
+  const tag = (x,y,w,label,color=C.green,fill=C.paper,size=17) => `<g><rect x="${x}" y="${y}" width="${w}" height="34" rx="17" fill="${fill}" stroke="${color}" stroke-width="1.4"/>${text(x+w/2,y+23,label,size,color,'middle','font-weight="650"')}</g>`;
+  const granum = (cx,top,r,count,active) => {
+    let out='';
+    // Each closed flattened sac is a thylakoid. The narrow front face represents its enclosed lumen.
+    for(let i=count-1;i>=0;i--){
+      const y=top+i*14;
+      out+=`<g><path d="M${cx-r},${y} Q${cx},${y-15} ${cx+r},${y} L${cx+r},${y+8} Q${cx},${y+24} ${cx-r},${y+8} Z" fill="${active?'#6b985c':'#82a66a'}" stroke="#315f42" stroke-width="2"/><ellipse cx="${cx}" cy="${y}" rx="${r}" ry="10" fill="url(#ps-disc)" stroke="#315f42" stroke-width="2"/><path d="M${cx-r+5},${y+8} Q${cx},${y+21} ${cx+r-5},${y+8}" fill="none" stroke="${active?'#f0dd86':'#cfdb9c'}" stroke-width="2.3"/></g>`;
+    }
+    return out;
+  };
+  function network(active){
+    const opacity=active?1:0.88;
+    return `<g opacity="${opacity}">
+      <g fill="#8faa70" stroke="#426e45" stroke-width="2">
+        <path d="M155 237 C192 236 233 292 283 309 L287 321 C229 307 194 250 155 249 Z"/>
+        <path d="M153 250 C247 261 343 236 428 238 L428 250 C340 248 252 275 153 262 Z"/>
+        <path d="M285 340 C334 343 368 285 428 257 L432 269 C378 298 344 358 285 352 Z"/>
+        <path d="M284 352 C332 376 388 365 453 365 L453 377 C390 378 333 390 284 364 Z"/>
+      </g>
+      ${granum(158,197,48,4,active)}${granum(283,293,51,5,active)}${granum(429,193,48,5,active)}${granum(452,349,39,3,active)}
+    </g>`;
+  }
+  function defs(){return `<defs>
+    <linearGradient id="ps-stroma" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f3f4df"/><stop offset="1" stop-color="#e5edcf"/></linearGradient>
+    <linearGradient id="ps-disc" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b9ce85"/><stop offset="1" stop-color="#64935b"/></linearGradient>
+    <radialGradient id="ps-glow"><stop stop-color="#f4df89" stop-opacity=".55"/><stop offset="1" stop-color="#f4df89" stop-opacity="0"/></radialGradient>
+    <filter id="ps-shadow" x="-20%" y="-40%" width="140%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#294b2f" flood-opacity=".09"/></filter>
+    ${[['green',C.green],['gold',C.yellow],['coral',C.coral]].map(([id,color])=>`<marker id="ps-arrow-${id}" markerWidth="8" markerHeight="8" refX="6.8" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L7 3.5 L0 7 Z" fill="${color}"/></marker>`).join('')}
+  </defs>`;}
+  function envelope(){return `<g filter="url(#ps-shadow)">
+    <path d="M53 285 C53 159 237 94 478 98 C724 96 943 160 950 286 C958 414 748 493 492 494 C233 496 54 419 53 285Z" fill="#dfe5bd" stroke="#3f6f4a" stroke-width="2.3"/>
+    <path d="M68 286 C68 172 243 108 479 111 C715 109 928 172 935 286 C941 402 739 478 491 479 C241 481 69 408 68 286Z" fill="url(#ps-stroma)" stroke="#75925c" stroke-width="2.3"/>
+  </g>`;}
+  function structure(){return `
+    ${text(115,154,'基粒',22,C.ink,'start','font-weight="700"')}${text(115,178,'多个类囊体堆叠',15,C.grey)}
+    ${line('M172 180 L172 191',C.green,1.6,false)}
+    ${text(667,67,'双层被膜',21,C.ink,'middle','font-weight="700"')}${line('M668 77 L683 112',C.green,1.6,false)}
+    <circle cx="683" cy="112" r="3" fill="${C.green}"/>
+    ${text(706,271,'基质',34,C.green,'middle','font-weight="700"')}${text(706,301,'类囊体之外、内膜之内',17,C.grey,'middle')}
+    ${text(706,339,'多种酶参与 CO₂ 的固定与还原',17,C.ink,'middle')}
+    ${line('M195 520 L237 408 L283 365',C.green,1.5,false)}${text(194,544,'类囊体膜',19,C.ink,'middle','font-weight="700"')}
+    ${line('M401 519 L381 419 L362 374',C.green,1.5,false)}${text(401,544,'基质片层联系各基粒',18,C.ink,'middle')}
+    <circle cx="283" cy="365" r="4" fill="${C.yellow}" stroke="${C.ink}"/><circle cx="362" cy="374" r="4" fill="${C.yellow}" stroke="${C.ink}"/>
+    ${tag(654,380,190,'光反应 → 类囊体膜',C.green,'#f7f5ed',16)}
+  `;}
+  function sunlight(animate){return `<g>
+    <circle cx="325" cy="159" r="87" fill="url(#ps-glow)"/>
+    <path d="M318 42 L301 83 L328 83 L311 130 L360 130 L402 199" fill="none" stroke="${C.yellow}" stroke-width="4" stroke-linejoin="round" marker-end="url(#ps-arrow-gold)"/>
+    ${text(344,77,'光',22,C.ink,'start','font-weight="700"')}
+    ${animate?`<circle r="4.5" fill="${C.yellow}"><animateMotion dur="2.6s" repeatCount="indefinite" path="M318 42 L301 83 L328 83 L311 130 L360 130 L402 199"/></circle>`:''}
+  </g>`;}
+  function lightReaction(step,animate){const selected=step===1;return `
+    ${sunlight(animate)}
+    ${tag(90,297,91,'H₂O',C.green,'#f7f5ed',20)}${line('M181 314 C202 313 213 274 233 262',C.green,2.8)}
+    ${line('M194 235 C241 214 250 172 219 143',C.coral,2.8)}${tag(166,108,88,'O₂',C.coral,'#f7f5ed',20)}
+    ${text(323,420,'光反应',26,C.ink,'middle','font-weight="750"')}${text(323,446,'场所：类囊体薄膜',18,C.grey,'middle')}
+    ${line('M476 260 C505 259 519 277 542 277',C.yellow,3)}
+    ${line('M476 277 C504 279 519 317 542 317',C.coral,3)}
+    ${tag(516,257,98,'ATP',C.yellow,'#fff6d9',18)}${tag(516,299,98,'NADPH',C.coral,'#fbece3',18)}
+    ${selected?`${text(727,252,'把光能转入',27,C.ink,'middle','font-weight="700"')}${text(727,290,'两类化学载体',27,C.ink,'middle','font-weight="700"')}${text(727,330,'ATP：供能',19,C.ink,'middle')}${text(727,359,'NADPH：供能并提供还原力',18,C.ink,'middle')}${line('M621 281 L647 281',C.yellow,2.3)}${line('M621 321 L647 321',C.coral,2.3)}${text(724,410,'载体供基质中的反应利用',17,C.grey,'middle')}`:''}
+  `;}
+  function cycle(step){const fixing=step===2;return `<g>
+    <path d="M816 260 C867 289 867 365 813 391 C759 418 687 396 660 356" fill="none" stroke="#c6d5a4" stroke-width="16" stroke-linecap="round"/>
+    ${tag(764,218,102,'C₅',C.green,'#f7f5ed',21)}${tag(621,218,102,'2 C₃',fixing?C.coral:C.green,fixing?'#fbece3':'#f7f5ed',21)}
+    ${line('M759 235 L730 235',fixing?C.coral:C.green,3)}${text(744,214,'固定',17,fixing?C.coral:C.green,'middle','font-weight="700"')}
+    ${tag(704,139,86,'CO₂',C.green,'#f7f5ed',20)}${line('M747 178 L747 228',C.green,2.6)}
+    ${line('M671 261 L671 311',fixing?C.green:C.coral,3)}${text(697,295,'还原',18,fixing?C.grey:C.coral)}
+    ${tag(619,324,132,'三碳化合物',C.green,'#f7f5ed',16)}
+    ${line('M749 342 C813 371 843 320 822 263',C.green,2.8)}
+    ${step===3?`${tag(833,287,94,'ATP参与',C.yellow,'#fff6d9',16)}${line('M834 315 L824 323',C.yellow,2.3)}`:''}
+    ${text(844,367,'再生 C₅',18,C.green,'middle','font-weight="650"')}
+    ${line('M697 363 L697 415',C.green,2.5)}${text(697,439,'部分碳用于糖等有机物的合成',17,C.ink,'middle')}
+    ${text(769,91,fixing?'先固定 CO₂，再还原 C₃':'还原与再生，维持循环',20,C.ink,'middle','font-weight="700"')}
+    ${line('M615 275 L643 304',C.yellow,2.5)}${line('M615 316 L646 329',C.coral,2.5)}
+    ${step===3?`${line('M636 369 C598 399 555 395 510 365',C.green,1.8,true,'stroke-dasharray="5 5"')}${text(566,416,'ADP＋Pi / NADP⁺',15,C.grey,'middle')}`:''}
+    ${fixing?`${text(106,521,'追踪碳：1 个 CO₂（1C）＋1 个 C₅（5C）→ 2 个 C₃（共 6C）',20,C.ink,'start','font-weight="600"')}${text(106,550,'注意：固定不是直接生成葡萄糖。图中只展示物质关系，未按真实分子比例绘制。',15,C.grey)}`:`${text(106,521,'ATP、NADPH 参与 C₃ 还原；ATP 也参与 C₅ 再生。',20,C.ink,'start','font-weight="600"')}${text(106,550,'“暗反应”表示不直接需要光，不表示只能在黑暗中进行。',16,C.grey)}`}
+  </g>`;}
+  function chloroplast(step,opts={}){
+    const s=Math.max(0,Math.min(3,Math.floor(Number(step)||0)));
+    const animate=opts.animate===true;
+    return `<title>叶绿体结构与光合作用分区：${['总览','光反应','二氧化碳固定','还原与再生'][s]}</title>${defs()}
+      ${envelope()}${network(s>0)}
+      ${s===0?structure():lightReaction(s,animate)}${s>=2?cycle(s):''}
+      ${s===1?`${text(106,521,'水参与光反应，释放的 O₂ 来自水。ATP 与 NADPH 连接两个阶段。',20,C.ink,'start','font-weight="600"')}${text(106,550,'结构、颜色与流向为教学示意；真实叶绿体的膜网络更为复杂。',15,C.grey)}`:''}
+      ${s!==0?text(89,91,'叶绿体',18,C.green,'start','font-weight="650"'):''}
+    `;
+  }
+  global.PhotoScene={chloroplast};
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>(function(g){'use strict';const ink='#173e32',green='#3e8a5f',yellow='#e2b948',coral='#d77958',muted='#708278';const text=(x,y,s,size=18,c=ink,a='start')=>`<text x="${x}" y="${y}" fill="${c}" font-size="${size}" text-anchor="${a}" font-family="Microsoft YaHei,sans-serif">${s}</text>`;const line=(d,c=green,w=2,extra='')=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${extra}/>`;
+const pigments=[{name:'胡萝卜素',color:'#df9c37',tone:'橙黄色'},{name:'叶黄素',color:'#d8bf40',tone:'黄色'},{name:'叶绿素 a',color:'#348c75',tone:'蓝绿色'},{name:'叶绿素 b',color:'#8eaa49',tone:'黄绿色'}];
+function leaf(light){const color={white:'#d8bd62',blue:'#707bc7',green:'#69a36a',red:'#ca7965'}[light],absorbed={white:'红光与蓝紫光吸收较强',blue:'叶绿素与类胡萝卜素均可吸收',green:'吸收相对较弱，仍可利用部分',red:'叶绿素对红光吸收较强'}[light];let s=`<defs><linearGradient id="leaf-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9bbd6c"/><stop offset="1" stop-color="#2e704c"/></linearGradient><pattern id="fine-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#708278" stroke-opacity=".08"/></pattern></defs><rect width="700" height="490" fill="url(#fine-grid)"/><circle cx="366" cy="248" r="184" fill="none" stroke="#a8b79b" stroke-dasharray="2 9"/><circle cx="366" cy="248" r="157" fill="none" stroke="#bbc8aa"/>`;
+ for(let i=0;i<4;i++)s+=line(`M${32+i*17} ${117+i*30} L${196+i*14} ${169+i*25}`,color,4,'class="flow"');
+ s+=`<path d="M220 363 C158 177 336 89 518 95 C536 278 438 415 220 363 Z" fill="url(#leaf-fill)" stroke="#39744a" stroke-width="2"/><path d="M206 405 C267 289 365 184 489 117" fill="none" stroke="#d7e3b3" stroke-width="5"/>`;
+ for(let i=0;i<5;i++){let x=248+i*38,y=339-i*40;s+=line(`M${x} ${y} Q${x-39} ${y-30} ${x-55} ${y-77}`,'#b6d294',2)+line(`M${x} ${y} Q${x+54} ${y+13} ${x+105} ${y-11}`,'#b6d294',2);}
+ const reflected=light==='white'?'#72a268':color,lightNote=light==='white'?'白光下，绿色成分相对较多':light==='green'?'部分绿光也可被叶片吸收':'反射 / 透过光仍为入射光色';
+ s+=line('M467 234 Q561 203 644 166',reflected,3,'class="flow"')+line('M474 281 Q572 283 643 312',reflected,3,'class="flow"')+text(84,87,light==='white'?'入射白光':{blue:'蓝紫光',green:'绿光',red:'红光'}[light],17,color,'middle')+text(580,140,'部分光反射 / 透过',14,reflected,'middle')+text(580,344,lightNote,12,muted,'middle')+text(352,451,absorbed,17,ink,'middle');return s;}
+function chromatography(revealed,animate){let s=`<defs><linearGradient id="glass" x1="0" x2="1"><stop stop-color="#ffffff" stop-opacity=".2"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".6"/><stop offset="1" stop-color="#ffffff" stop-opacity=".15"/></linearGradient></defs><path d="M85 68 V482 Q85 503 108 503 H570 Q592 503 592 482 V68" fill="url(#glass)" stroke="#82967d" stroke-width="2"/><path d="M91 467 H586 V481 Q586 497 570 497 H108 Q91 497 91 481Z" fill="#c4d0b6"/><rect x="214" y="79" width="146" height="405" rx="1" fill="#fffdf3" stroke="#d9dcc8"/><path d="M214 434 H360" stroke="#5b6b56" stroke-width="1.5" stroke-dasharray="5 5"/>`;
+ if(revealed){for(let i=0;i<4;i++){const y=[123,192,281,352][i],p=pigments[i];s+=`<g class="${animate?'chrom-band':''}" style="--travel:${434-y}px"><path d="M226 ${y} Q285 ${y-7} 349 ${y+1}" stroke="${p.color}" fill="none" stroke-width="${[13,10,18,14][i]}" opacity=".9"/>${line(`M363 ${y} H400`,'#9ba78b',1)}${text(410,y+6,p.name,17)}</g>`;}s+=line('M214 101 H360','#8ba07b',1,'stroke-dasharray="3 4"')+text(411,101,'溶剂前沿',14,muted);}else s+=`<path d="M227 434 H349" stroke="#4f8661" stroke-width="8"/>`;
+ s+=text(173,47,'纸层析观察窗',20)+line('M179 435 H124','#82967d',1)+text(123,425,'点样线',14,muted,'middle')+line('M364 468 H421','#82967d',1)+text(430,473,'液面低于点样线',14,muted)+text(340,545,revealed?'教材典型条件下的理想四带；不是实测距离。':'先作排序预测，再展开观察。',15,muted,'middle');return s;}
+function isotope(group,reveal){const water=group===0;let s=text(290,39,water?'H₂¹⁸O + 普通 CO₂':'普通 H₂O + C¹⁸O₂',21,ink,'middle')+`<circle cx="94" cy="99" r="26" fill="#e6c85e"/>`;
+ for(let i=0;i<3;i++)s+=line(`M${126+i*12} ${108+i*19} L${202+i*12} ${147+i*19}`,yellow,3,'class="flow"');
+ s+=`<path d="M256 90 V143 L178 282 Q164 310 193 310 H388 Q417 310 402 282 L325 143 V90" fill="#f9fcf3" stroke="#7e9f7c" stroke-width="2.5"/><path d="M213 215 H368 L399 284 Q411 304 387 304 H194 Q171 304 183 283Z" fill="#b5cca0"/><path d="M252 90 H329" stroke="#647e60" stroke-width="5"/>`;
+ for(let i=0;i<10;i++)s+=`<ellipse cx="${210+(i%5)*34}" cy="${248+Math.floor(i/5)*33}" rx="11" ry="15" transform="rotate(${i*23} ${210+(i%5)*34} ${248+Math.floor(i/5)*33})" fill="#639363" opacity=".85"/>`;
+ if(reveal){s+=`<g class="enter"><circle cx="289" cy="125" r="13" fill="${water?coral:'#73956c'}"/><circle cx="311" cy="125" r="13" fill="${water?coral:'#73956c'}"/>`+text(301,75,water?'释放的 O₂ 显著富集 ¹⁸O':'释放的 O₂ 无明显额外富集',16,water?coral:green,'middle')+text(290,355,water?'标记随水，进入新释放的氧。':'标记 CO₂，未得到同样的产氧标记。',16,water?coral:green,'middle')+'</g>';}else s+=text(290,355,'你的预测：新释放的氧会富集标记吗？',15,muted,'middle');
+ return s+text(290,389,'短时、忽略氧交换的理想对照；非100%纯标记。',12,muted,'middle');}
+function exchange({light=65,carbon=60,temperature='fit'}={}){const L=Math.max(0,Math.min(100,Number(light)||0)),C=Math.max(0,Math.min(100,Number(carbon)||0));const conf={cool:{capacity:7,resp:1},fit:{capacity:14,resp:2},hot:{capacity:9,resp:4}}[temperature]||{capacity:14,resp:2};const caps=[L*.16,C*.16,conf.capacity],raw=Math.min(...caps),gross=Math.round(raw),respiration=conf.resp;const labels=['光照','CO₂ 供应','温度相关容量'];const limits=labels.filter((_,i)=>caps[i]<=raw+.05);return{gross,respiration,net:gross-respiration,limit:limits.join(' 与 '),light:L,carbon:C,temperature};}
+function chart(params){const a=exchange(params),X=n=>72+n*6.55,Y=n=>325-(n+5)*12.1;let s=text(72,29,'模型相对速率',14,muted)+text(727,391,'相对光强 →',14,muted,'end');for(const y of[-5,0,5,10,15])s+=line(`M72 ${Y(y)} H727`,y===0?'#7c9275':'#dce2d1',y===0?1.7:1)+text(58,Y(y)+4,y,12,muted,'end');s+=line(`M72 71 V325 H727`,'#839b79',1);for(const x of[0,20,40,60,80,100])s+=text(X(x),350,x,12,muted,'middle');
+ for(const key of['gross','net']){const d=Array.from({length:101},(_,L)=>{const v=exchange({...params,light:L})[key];return`${L?'L':'M'}${X(L)} ${Y(v)}`;}).join(' ');s+=line(d,key==='gross'?yellow:green,key==='gross'?2.5:3.5,key==='gross'?'stroke-dasharray="7 5"':'');}
+ s+=line(`M${X(a.light)} ${Y(-5)} V${Y(a.net)}`,'#92aa86',1,'stroke-dasharray="4 5"')+`<circle cx="${X(a.light)}" cy="${Y(a.net)}" r="7" fill="${a.net<0?coral:green}" stroke="#fffdf4" stroke-width="3"/>`+text(727,58,'固定当前 CO₂ 档位与温度条件',12,muted,'end');return s;}
+g.PhotoDraw={pigments,leaf,chromatography,isotope,exchange,chart};
+})(window);
+</script><script>(function(){'use strict';const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const rooms=['光谱画室','色素工作台','叶绿体剧场','氧气侦探','温室控制室','课堂沙龙'];const english=['A LEAF MEETS THE LIGHT','THE COLOURS WITHIN','INSIDE THE CHLOROPLAST','FOLLOW THE OXYGEN','THE GREENHOUSE NOTEBOOK','EXPLAIN WHAT YOU KNOW'];
+const s={room:0,light:'white',order:[],revealed:false,bandMotion:false,step:0,stepsAnswers:[null,null,null,null],playing:false,prediction:null,evidence:false,L:65,C:60,T:'fit',task:0,records:[],q:0,answers:Array(PhotoContent.quiz.length).fill(null),finished:false,focus:false};let timer=null;
+const btn=(action,label,cls='',extra='')=>`<button data-do="${action}" class="${cls}" ${extra}>${label}</button>`;
+const svg=(body,vb,label,cls='')=>`<svg class="${cls}" viewBox="${vb}" role="img" aria-label="${label}">${body}</svg>`;
+const choice=(items,action,selected,answer,cls='',show=true)=>`<div class="choices ${cls}">${items.map((x,i)=>`<button data-do="${action}" data-n="${i}" aria-pressed="${selected===i}" class="${show&&selected!==null?(i===answer?'correct':i===selected?'wrong':''):''}">${String.fromCharCode(65+i)}. ${esc(x)}</button>`).join('')}</div>`;
+const heading=(no,title,desc)=>`<div class="eyeline"><span class="label">FIELD NOTE ${no} / ${english[s.room]}</span></div><div class="chapter-head"><div><h1>${title}</h1><p class="intro">${desc}</p></div><span class="chapter-no">${no}</span></div>`;
+function lightRoom(){const observation={white:['一束白光，含有不同波长的光。','叶绿素主要吸收红光和蓝紫光，绿光吸收相对较少；部分绿光被反射或透过，使叶片呈绿色。'],blue:['蓝紫光可以被多类光合色素吸收。','叶绿素与类胡萝卜素共同参与吸收。图中不比较真实光强或每个光子的利用效率。'],green:['较少，不等于没有。','完整叶片仍可利用部分绿光。色素溶液的吸收光谱，不等同于完整叶片的光合作用作用光谱。'],red:['红光是叶绿素的重要吸收区域。','不能由某类色素的吸收特性，直接推出所有植物在各种环境下的最佳补光配方。']}[s.light];return `<div class="eyeline"><span class="label">FIELD NOTE 01 / A LEAF MEETS THE LIGHT</span></div><div class="hero"><div class="hero-copy"><span class="label">光合作用与能量转化</span><h1>把一束光，<br>变成<em>生长</em>的<br>可能。</h1><p class="intro">呼吸让有机物中的能量参与生命活动。<br>现在追问：有机物最初怎样形成？<br>先给这片叶子换一束光。</p><div class="light-select">${[['white','白光','#d8bd62'],['blue','蓝紫光','#707bc7'],['green','绿光','#69a36a'],['red','红光','#ca7965']].map(([k,n,c])=>btn('light',`<i class="swatch" style="background:${c}"></i>${n}`,'',`data-key="${k}" aria-pressed="${s.light===k}"`)).join('')}</div><div class="observation"><b>${observation[0]}</b><p>${observation[1]}</p></div></div><div class="hero-art"><span class="art-label">A BOTANICAL STUDY / 01</span>${svg(PhotoDraw.leaf(s.light),'0 0 700 490','入射光被叶片吸收及部分反射透过的定性示意','hero-svg')}<div class="spectrum-strip"></div><div class="art-caption">定性光路示意，不表示实测吸收率或速率；叶片固定绿色配色，不模拟单色光下的实际观感。</div></div></div><div class="route-cards"><div class="route-card"><span>01</span><div><h3>物质从哪里来？</h3><p>CO₂和水提供物质来源；光提供能量。</p></div></div><div class="route-card"><span>02</span><div><h3>在哪里转换？</h3><p>类囊体膜与基质，各有分工。</p></div></div><div class="route-card"><span>03</span><div><h3>怎样形成证据？</h3><p>从颜色、同位素和气体交换作出有条件的解释。</p></div></div></div><div class="equation">CO₂ + H₂O — 光能 / 叶绿体 → 有机物 + O₂<small>概念式，未配平；光是能量来源，不是构成有机物的原子来源。以绿色植物放氧光合作用为主模型。</small></div>`;}
+function pigmentRoom(){const p=PhotoDraw.pigments,correct=s.order.every((x,i)=>x===i);return heading('02','绿叶里，藏着不止一种颜色。','先把四张色素卡按“典型条件下由上到下”的顺序放好，再让层析结果检验你的预测。')+`<div class="split-work"><div class="chrom-paper"><div class="instrument-top"><span>PAPER CHROMATOGRAPHY</span><span>↑ 展开方向</span></div>${svg(PhotoDraw.chromatography(s.revealed,s.bandMotion),'0 0 690 570','点样线高于液面，四种典型色素带随展开分离') }</div><div class="paper"><span class="numbered">先预测 / 点击卡片，依次填入</span><h2 style="margin:12px 0 17px">谁会走得更远？</h2><div class="pigment-cards">${[2,0,3,1].map(i=>btn('pigment',`<i style="background:${p[i].color}"></i>${p[i].name}<small style="display:block;color:var(--muted);font-size:10px">${p[i].tone}</small>`,'',`data-n="${i}" ${s.order.includes(i)||s.revealed?'disabled':''}`)).join('')}</div><div class="order-list">${Array.from({length:4},(_,i)=>btn('remove',`<span>${i===0?'上 / 最远':i===3?'下 / 最近':'0'+(i+1)}</span>${s.order[i]===undefined?'点击上方色素填入':p[s.order[i]].name}`,'order-slot',`data-n="${i}" ${s.order[i]===undefined||s.revealed?'disabled':''}`)).join('')}</div><div class="action-row">${btn('develop','展开层析 →','primary',s.order.length<4||s.revealed?'disabled':'')}${btn('pigment-reset','重新预测 ↻')}</div>${s.revealed?`<p class="feedback ${correct?'':'wrong'}">${correct?'✓ 你的顺序符合教材典型条件。':'观察结果与预测有差异，请对照左图重新解释。'} 从上到下：胡萝卜素、叶黄素、叶绿素 a、叶绿素 b。</p>`:'<p class="mini-note">点击已填的行可以撤回。屏幕排序是你的预测，不会改变真实的分离规律。</p>'}<div class="definition"><b>不是“谁更轻，谁跑得快”。</b>迁移受色素对流动相与固定相的相对亲和性影响。教材典型纸层析主要用层析液中溶解度差异解释；样品、溶剂和操作会改变实际色带。</div></div></div><details><summary>把操作也变成一道问题：点样线为什么必须高于液面？</summary><p>如果滤液细线被液面淹没，色素可能直接溶入液体，影响正常分离。实际操作常用少量多次点样、每次待干，以使细线集中。提取、分离会使用相应试剂，应在教师指导和学校实验规范下进行。</p><p>图中四带是课本条件下的理想概括，不表示所有绿色叶片恰好只有四种色素分子，不提供固定 Rf 值。</p></details>`;}
+const stageText=[['先认清三个膜系统。','外膜、内膜形成叶绿体被膜；内部类囊体膜另成系统，类囊体堆叠形成基粒，并有基质片层联系。'],['在类囊体薄膜，把光能转入化学载体。','水参与反应并释放 O₂；形成 ATP 与 NADPH，供给基质中的碳同化。NADPH 不是 NADH。'],['在基质，先把无机碳固定下来。','CO₂ 与 C₅ 结合，形成两个 C₃。碳数关系是 1＋5＝2×3，固定本身不是一步合成葡萄糖。'],['还原、输出、再生，构成循环。','ATP 与 NADPH 参与还原；部分碳用于糖等有机物合成，多数中间物参与 C₅ 再生。ATP 也用于再生过程。']];
+const stageQuestions=[['主要光反应直接定位在哪个膜系统？',['叶绿体外膜','类囊体薄膜','细胞核核膜'],1,'叶绿体双层被膜与内部类囊体膜要分开辨认。'],['连接光反应与基质中碳同化的是？',['ATP 与 NADPH','O₂ 与乳酸','酒精与 CO₂'],0,'ATP提供能量，NADPH提供还原力并参与能量转化。'],['固定1分子 CO₂ 的教材碳数账应怎样写？',['1C + 5C = 1个6C葡萄糖','1C + 5C = 1个3C，另一半消失','1C + 5C = 2个3C'],2,'生成两个三碳中间物不等于每次固定都净输出两个三碳糖。'],['为什么 C₅ 必须再生？',['它会变成 O₂ 排出','它是后续继续固定 CO₂ 所需的受体','有再生就不再需要能量'],1,'C₅再生维持循环，仍需要相关酶和ATP参与。']];
+function theaterRoom(){const [q,options,answer,why]=stageQuestions[s.step],chosen=s.stepsAnswers[s.step];return heading('03','一片叶绿体，两段相连的工作。','沿着四个场景推进。让一位同学操作，另一位指出“场所—物质—能量”的联系。')+`<div class="theater"><div class="theater-top"><div class="stage-buttons">${['结构总览','光反应','CO₂ 固定','还原与再生'].map((t,i)=>btn('step',t,'',`data-n="${i}" aria-pressed="${s.step===i}"`)).join('')}</div><span>${btn('play',s.playing?'暂停 Ⅱ':'按顺序演示 ▶','small-button',`aria-pressed="${s.playing}"`)}</span></div>${svg(PhotoScene.chloroplast(s.step,{animate:s.playing}),'0 0 1000 570','叶绿体膜结构、光反应、二氧化碳固定与还原再生的分区','chloroplast')}<div class="theater-bottom"><div class="theater-caption"><span class="label">SCENE 0${s.step+1}</span><h3>${stageText[s.step][0]}</h3><p>${stageText[s.step][1]}</p></div><div class="theater-question"><p class="question">${q}</p>${choice(options,'stage-answer',chosen,answer)}${chosen!==null?`<p class="mini-note">${chosen===answer?'✓ 解释正确。':'再对照图中箭头。'}${why}</p>`:''}</div></div></div><div class="equation">光反应：类囊体薄膜　⇄　暗反应：叶绿体基质<small>“暗反应”在这里指卡尔文循环 / 碳反应，不是“夜间专属”。正常情况下依赖光反应持续提供ATP与NADPH；完全断光后不能长期按原速率运行。</small></div><details><summary>进阶碳账：为何不是固定一次，就输出一分子葡萄糖？</summary><p>固定 3 个 CO₂，形成 6 个三碳中间物。经还原后，相当于净输出 1 个三碳糖磷酸，其余 5 个三碳单位用于再生 3 个 C₅。三碳糖磷酸可进一步参与糖类等有机物合成。真实过程有多步酶促反应，图中箭头只表示物质联系，未按分子比例、反应次数或真实时间绘制。</p><p>ATP、NADPH在这里的主要流向是基质碳同化；不能把叶绿体光反应的ATP画成所有细胞活动都可直接使用的无限公共电池。绿色植物也同时进行细胞呼吸。</p></details>`;}
+function evidenceRoom(){const prediction=['A 组的产氧明显富集 ¹⁸O','B 组的产氧明显富集 ¹⁸O','两组一定得到相同富集'];return heading('04','释放的氧，究竟来自谁？','总反应式告诉你“有氧产生”，同位素对照才能帮助追踪氧原子的来源。先作预测，再揭示观察。')+`<div class="evidence-grid"><article class="evidence-card"><h3><span>GROUP A</span>只把水的氧富集标记</h3>${svg(PhotoDraw.isotope(0,s.evidence),'0 0 580 400','A组用富集氧18的水和普通二氧化碳进行短时示踪','evidence-svg')}</article><article class="evidence-card"><h3><span>GROUP B</span>只把 CO₂ 的氧富集标记</h3>${svg(PhotoDraw.isotope(1,s.evidence),'0 0 580 400','B组用普通水和富集氧18的二氧化碳进行短时示踪','evidence-svg')}</article></div><div class="prediction"><p class="question">只比较新释放的 O₂，哪一组会出现明显的额外 ¹⁸O 富集？</p>${choice(prediction,'prediction',s.prediction,0,'',s.evidence)}<div class="action-row" style="justify-content:center">${btn('reveal-evidence','揭示观察 →','primary',s.prediction===null||s.evidence?'disabled':'')}${btn('reset-evidence','再推理一次 ↻')}</div>${s.evidence?`<p class="feedback ${s.prediction===0?'':'wrong'}">${s.prediction===0?'✓ 预测与证据相符。':'证据提示修正预测。'}新释放的氧随水的标记而富集，支持放氧光合作用释放的 O₂ 来自水。光提供能量，并不变成氧原子。</p>`:'<p class="mini-note">¹⁸O 是稳定同位素，不是放射性同位素。两组应保持其他适宜条件可比。</p>'}</div><div class="evidence-conclusion"><b>¹⁸O</b><p>这是基于氧同位素示踪逻辑的定性教学再现，不是某次历史实验的原始记录。对比短时新释放的 O₂，简化了背景氧、后期水与CO₂间同位素交换及取样问题；“富集”不表示采样气体是100%纯¹⁸O₂。标记水中的氧也并非全部都进入释放的O₂。<br>研究思路：先提出来源假说，再选择可区分假说的标记对照。</p></div>`;}
+function greenhouseRoom(){return heading('05','经营温室，先看“净收入”。','先保持其他条件不变，只改变一个变量。你看到的是一个虚拟植物模型，不是实际作物的种植配方。')+`<div class="greenhouse"><aside class="controls"><span class="label">CONDITIONS / 相对档位</span><h3 style="margin:10px 0 0">改变一个条件。</h3><div class="controls-grid"><div class="control"><label for="lightRange">相对光强 <output id="lightOutput">${s.L}</output></label><input id="lightRange" data-param="L" type="range" min="0" max="100" step="1" value="${s.L}"></div><div class="control"><label for="carbonRange">CO₂ 供应档位 <output id="carbonOutput">${s.C}</output></label><input id="carbonRange" data-param="C" type="range" min="0" max="100" step="1" value="${s.C}"></div></div><div class="control"><label>虚拟温度条件</label><div class="temperature">${[['cool','偏低'],['fit','适宜'],['hot','偏高']].map(([k,t])=>btn('temperature',t,'',`data-key="${k}" aria-pressed="${s.T===k}"`)).join('')}</div></div><p>温度改变本模型的光合容量和呼吸设定，不代表所有植物共用一个最适温度。</p>${btn('dark','关灯试试')}${btn('greenhouse-reset','恢复条件','', 'style="margin-left:7px"')}<p id="limitText"></p></aside><div class="chart-paper"><div class="chart-legend"><span><i></i>净光合</span><span><i style="background:var(--yellow)"></i>总光合（虚线）</span><span>● 当前光强</span></div><div id="exchangeChart"></div><div class="metric-equation" id="metrics"></div><p class="mini-note">所有速率都是整数相对单位；整条光响应曲线固定当前CO₂与温度，只改变相对光强。无光时总光合为0，但叶片呼吸仍在。</p></div></div><div class="greenhouse-tasks">${btn('task','挑战一：找到补偿点','',`data-n="1" aria-pressed="${s.task===1}"`)}${btn('task','挑战二：加光没用，怎么办？','',`data-n="2" aria-pressed="${s.task===2}"`)}${btn('record','记录当前条件','',s.records.length>=6?'disabled':'')}${btn('clear-records','清空记录')}</div><p class="feedback" id="taskFeedback"></p><div class="record-area" id="records"></div><details><summary>模型说明：曲线从哪里来？哪些过程没有模拟？</summary><p>模型设光照容量＝0.16×相对光强，CO₂容量＝0.16×供应档位。偏低/适宜/偏高温度的容量分别设为7/14/9，呼吸设为1/2/4；总光合取三个容量中的最小值并四舍五入，净光合＝总光合−呼吸。它是可检查的教学规则，不是拟合真实物种的生理模型；曲线的台阶来自整数显示。</p><p>采用同一叶片、同一时段、同一CO₂计量基准，省略光呼吸、内部CO₂再固定、气孔动态、强光抑制与长期适应。CO₂供应档位为0时，本模型总光合为0；真实植物还涉及内部碳源与交换。补偿点净值0不表示光合或呼吸停止；黑暗呼吸值也不能无条件代替真实光下呼吸值。</p></details>`;}
+function updateGreenhouse(){if(s.room!==4)return;const a=PhotoDraw.exchange({light:s.L,carbon:s.C,temperature:s.T});$('#lightOutput').textContent=s.L;$('#carbonOutput').textContent=s.C;$('#exchangeChart').innerHTML=svg(PhotoDraw.chart({light:s.L,carbon:s.C,temperature:s.T}),'0 0 800 400','固定当前二氧化碳供应和温度条件的总光合与净光合模型曲线');$('#metrics').innerHTML=`<div><b>${a.gross}</b><small>总光合固定 CO₂</small></div><span>−</span><div><b>${a.respiration}</b><small>呼吸释放 CO₂</small></div><span>＝</span><div><b style="color:${a.net<0?'var(--coral)':'var(--green)'}">${a.net}</b><small>净值 / ${a.net>0?'净吸收':a.net<0?'净释放':'净交换为零'}</small></div>`;$('#limitText').textContent='当前模型中限制最明显的条件：'+a.limit+'。';let msg='先记录一组，再只改变一个条件，比较净值的变化。';if(s.task===1)msg=a.net===0&&a.gross>0?'✓ 找到了模型的补偿状态：总光合仍在进行，恰好补偿呼吸。':'挑战一：只改变光强，把净光合调到 0；同时说明总光合是否也为 0。';if(s.task===2)msg=a.net>=10?'✓ 净光合达到 10 个相对单位。请比较哪一次操作真正提高了平台。':'挑战二：初始光强很高但 CO₂ 很低。先试继续加光，再改变一个限制条件，让净光合达到 10。';$('#taskFeedback').textContent=msg;$('#records').innerHTML=s.records.length?`<h3>温室观察簿 <small style="font-weight:400;color:var(--muted)">最多6条 · 虚拟模型输出</small></h3><table class="record-table"><thead><tr><th>记录</th><th>光强</th><th>CO₂档位</th><th>温度</th><th>总光合</th><th>呼吸</th><th>净值</th></tr></thead><tbody>${s.records.map((a,i)=>`<tr><td>0${i+1}</td><td>${a.light}</td><td>${a.carbon}</td><td>${{cool:'偏低',fit:'适宜',hot:'偏高'}[a.temperature]}</td><td>${a.gross}</td><td>${a.respiration}</td><td>${a.net}</td></tr>`).join('')}</tbody></table>`:'';}
+function salonRoom(){const q=PhotoContent.quiz[s.q],answer=s.answers[s.q];return heading('06','把图讲清楚，才算真正抵达。','任选一题，由学生先独立判断，再邀请同伴解释错误选项的问题。')+`<div class="salon"><aside class="reflection"><span class="label">THE FOUR-WORD EXPLANATION</span><h2 style="margin-top:15px">给这束光，<br>写一段说明。</h2><p>试着不用背诵整段定义，只用四个关键词，讲清光合作用。</p><div class="line">① 场所：膜与基质怎样分工？</div><div class="line">② 物质：水、CO₂各去了哪里？</div><div class="line">③ 能量：ATP和NADPH如何连接？</div><div class="line">④ 条件：为什么光强不是越大越好？</div><p class="mini-note">八题均为原创课堂情境题，未冒称高考原题。可选四题当堂，其余留作学生自主复习。</p></aside><article class="quiz">${s.finished?`<span class="label">TODAY’S FIELD NOTES / COMPLETE</span><h2>完成八次解释。</h2><p>本轮判断正确 ${s.answers.filter((a,i)=>a===PhotoContent.quiz[i].answer).length} / ${PhotoContent.quiz.length} 题。</p><div class="callout">最后一句：能量可以被转化，原子需要被追踪。</div><p class="mini-note">再选一张图，由同学用“因为……所以……但这个模型没有……”作结。</p>${btn('quiz-reset','再挑战一次 ↻','primary')}`:`<span class="label">CLASSROOM CONVERSATION / 0${s.q+1} OF 08</span><h2>${esc(q.stem)}</h2>${choice(q.options,'quiz-answer',answer,q.answer,'two-col')}${answer!==null?`<p class="feedback ${answer===q.answer?'':'wrong'}">${answer===q.answer?'✓ 判断正确。':'正确选项是 '+String.fromCharCode(65+q.answer)+'。'}${esc(q.explanation)}</p>`:'<p class="mini-note">你的依据是什么？请先指出对应的图或实验条件。</p>'}<div class="quiz-actions">${btn('quiz-prev','← 上一题','',s.q===0?'disabled':'')}${btn('quiz-next',s.q===7?'完成本轮 →':'下一题 →','primary',answer===null?'disabled':'')}</div><div class="quiz-dots">${s.answers.map(a=>`<i class="${a===null?'':'done'}"></i>`).join('')}</div>`}</article></div>`;}
+function render(){const previous=document.activeElement?.dataset,action=previous?.do,num=previous?.n,key=previous?.key;$('#chapterNav').innerHTML=rooms.map((n,i)=>btn('room',`<span>0${i+1}</span>${n}`,'',`data-n="${i}" ${s.room===i?'aria-current="page"':''}`)).join('');$('#room').innerHTML=[lightRoom,pigmentRoom,theaterRoom,evidenceRoom,greenhouseRoom,salonRoom][s.room]();$('#roomCount').textContent=`0${s.room+1} / 06`;$('[data-do="previous"]').disabled=s.room===0;$('[data-do="next"]').disabled=s.room===5;if(s.room===4)updateGreenhouse();if(action){const e=[...document.querySelectorAll('[data-do]')].find(e=>e.dataset.do===action&&e.dataset.n===num&&e.dataset.key===key);if(e&&!e.disabled)e.focus({preventScroll:true});}}
+function stop(){clearInterval(timer);timer=null;s.playing=false;}
+function room(n){stop();s.bandMotion=false;s.room=Math.max(0,Math.min(5,n));render();}
+function play(){if(s.playing){stop();render();return;}if(s.step===3)s.step=0;s.playing=true;render();timer=setInterval(()=>{s.step++;if(s.step>=3){s.step=3;stop();}render();},3600);}
+function dialog(type){stop();render();const guide=type==='guide';$('#modalLabel').textContent=guide?'A CLASSROOM FIELD GUIDE':'SCIENCE & ORIGINAL MODELS';$('#modalTitle').textContent=guide?'让学生成为解释者。':'科学依据与模型边界';$('#modalBody').innerHTML=guide?`<p class="callout">当前区域：${rooms[s.room]}。请让学生先说预测，再操作，最后解释“观察能支持什么”。</p><h3>这次换一种课堂组织</h3><p>它是一册可操作的温室观察簿：选光、排序、看剧场、作预测、调条件、开沙龙。可按两个课时展开，或走45分钟核心路线：色素8分钟、叶绿体过程18分钟、氧来源7分钟、净光合8分钟、归纳4分钟。</p><h3>三人协作，角色轮换</h3><ul><li>操作员：选择条件与步骤，操作前先预测。</li><li>证据员：指图、读现象或记录模型输出。</li><li>解释员：用场所、物质、能量和条件说明结论，再说一个边界。</li></ul><h3>各知识点教师提示</h3>${PhotoContent.teacherNotes.map(n=>`<details><summary>${esc(n.title)}</summary><p><b>追问：</b>${esc(n.prompt)}</p><p><b>期望解释：</b>${esc(n.expected)}</p><p>${esc(n.detail)}</p></details>`).join('')}<p>左右方向键切换学习区域。焦点位于按钮、滑条等控件或对话框中时保留原操作。切换区域、打开资料或页面进入后台时，过程演示自动暂停；学习状态仅在本次打开期间保留。</p>`:`<p class="callout">${esc(PhotoContent.scopeNote)}</p><h3>本课怎样简化科学过程？</h3><ul><li>所有二维图形与交互独立绘制，没有把课本截图作为结构模型。真实叶绿体膜网络更复杂，尺寸、颜色、箭头、图标与秒数均为示意。</li><li>选灯只作吸收、反射与透过的定性解释，不用光线粗细比较真实光子通量；也不把色素吸收光谱等同完整叶片的作用光谱。绿光利用不为零。</li><li>层析图只概括教材典型条件下的四条色带，不提供固定Rf值。分离与样品、溶剂、固定相及操作有关，不按分子质量简单排序。</li><li>光反应形成ATP、NADPH。暗反应以卡尔文循环为主，ATP也参与C₅再生；“部分碳输出”不是固定一次CO₂就净输出一个C₃。详见剧场进阶碳账。</li><li>氧同位素图是短时证据逻辑的示意；¹⁸O稳定、非放射性，不承诺100%标记或无同位素交换。实验并非图中几个气泡就可定量重建。</li><li>温室是明确规则的整数相对模型，净＝总−呼吸；参数完全为教学设定。计量基准一致，并省略光呼吸等过程，不把模型结果用于真实产量预测。</li></ul><h3>教材与科学参考</h3><ul class="source-list">${PhotoContent.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)} ↗</a><small>${esc(r.note)}</small></li>`).join('')}<li><a href="https://edu.rsc.org/mixtures-and-separation/leaf-chromatography/389.article" target="_blank" rel="noopener">Royal Society of Chemistry · Leaf chromatography ↗</a><small>核对固定相、流动相与色素迁移的关系。</small></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5933133/" target="_blank" rel="noopener">Gauthier 等 · H₂¹⁸O 标记与光合气体交换，2018 ↗</a><small>原始研究：水标记与产氧、总/净交换的联系。未借用其测量数字。</small></li></ul><h3>教学组织参考</h3><ul class="source-list"><li><a href="https://www.biointeractive.org/classroom-resources/photosynthesis" target="_blank" rel="noopener">HHMI BioInteractive · Photosynthesis ↗</a><small>参考从叶片到叶绿体、再联系能量流的多尺度组织。未嵌入其原图或动画。</small></li><li><a href="https://www.saps.org.uk/teaching-resources/resources/827/video-clip-plant-adaptations-to-overcome-environmental-limitations/" target="_blank" rel="noopener">SAPS · Plant adaptations and environmental limitations ↗</a><small>参考改变单一环境条件、解释限制因素的课堂探究方式。</small></li></ul><p class="mini-note">单文件离线运行。以上链接只在查阅资料时需联网。题目为原创，旧版课件全部保留，新文件为独立v1.0。</p>`;$('#dialog').showModal();}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-do]');if(!b||b.disabled)return;const a=b.dataset.do,n=Number(b.dataset.n),k=b.dataset.key;s.bandMotion=false;switch(a){case'room':room(n);return;case'previous':room(s.room-1);return;case'next':room(s.room+1);return;case'guide':case'sources':dialog(a);return;case'close':$('#dialog').close();return;case'focus':s.focus=!s.focus;document.body.classList.toggle('focus',s.focus);$('#focusButton').setAttribute('aria-pressed',s.focus);$('#focusButton').textContent=s.focus?'恢复字号 Aa':'放大字号 Aa';return;case'light':s.light=k;break;case'pigment':if(!s.order.includes(n)&&s.order.length<4)s.order.push(n);break;case'remove':s.order.splice(n,1);break;case'develop':s.revealed=true;s.bandMotion=true;break;case'pigment-reset':s.order=[];s.revealed=false;break;case'step':stop();s.step=n;break;case'play':play();return;case'stage-answer':s.stepsAnswers[s.step]=n;break;case'prediction':s.prediction=n;break;case'reveal-evidence':s.evidence=true;break;case'reset-evidence':s.evidence=false;s.prediction=null;break;case'temperature':s.T=k;break;case'dark':s.L=0;break;case'greenhouse-reset':s.L=65;s.C=60;s.T='fit';s.task=0;break;case'task':s.task=n;s.T='fit';s.C=n===1?60:20;s.L=n===1?0:90;break;case'record':if(s.records.length<6)s.records.push(PhotoDraw.exchange({light:s.L,carbon:s.C,temperature:s.T}));break;case'clear-records':s.records=[];break;case'quiz-answer':s.answers[s.q]=n;break;case'quiz-prev':s.q=Math.max(0,s.q-1);break;case'quiz-next':if(s.q<7)s.q++;else s.finished=true;break;case'quiz-reset':s.q=0;s.answers.fill(null);s.finished=false;break;}render();});
+document.addEventListener('input',e=>{const param=e.target.dataset.param;if(!param)return;s[param]=Number(e.target.value);updateGreenhouse();});document.addEventListener('visibilitychange',()=>{document.body.classList.toggle('paused',document.hidden);if(document.hidden&&s.playing){stop();render();}});document.addEventListener('keydown',e=>{if($('#dialog').open||e.ctrlKey||e.metaKey||e.altKey||e.shiftKey||/^(BUTTON|INPUT|SELECT|TEXTAREA|A|SUMMARY)$/.test(document.activeElement.tagName)||document.activeElement.isContentEditable||window.getSelection()?.toString())return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();room(s.room+(e.key==='ArrowRight'?1:-1));}});render();
+})();
+</script></body></html>

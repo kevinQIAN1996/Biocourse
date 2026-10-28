@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>细胞呼吸 · 碳的旅程 v1.0</title><meta name="description" content="高中生物细胞呼吸互动课：有氧呼吸、两类无氧呼吸、酵母菌对比实验与情境挑战。单文件离线课件。"><style>:root{--bg:#0b1022;--panel:#111a30;--panel2:#15223b;--line:#2b3854;--ink:#f0f3fa;--muted:#9baac5;--cyan:#62ded7;--coral:#ff936f;--purple:#aab3ff;--paper:#f2f1eb;--dark:#192539;--radius:22px;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 65% -15%,#243252 0,transparent 45%),var(--bg);color:var(--ink);font-size:15px;line-height:1.65}button,a,input,select{touch-action:manipulation}button,select{font:inherit;color:inherit}button{cursor:pointer;border:1px solid var(--line);background:transparent;border-radius:9px;padding:8px 14px;transition:background .18s,border-color .18s,transform .18s}button:hover{background:#ffffff0c;border-color:#7586a5}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}button:disabled{opacity:.4;cursor:default}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}[hidden]{display:none!important}header{min-height:98px;padding:19px 32px;display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);background:#0b1022aa}header .brand{display:flex;align-items:center;gap:13px;color:var(--ink);font-weight:700;font-size:20px;letter-spacing:2px;text-decoration:none}.brandmark{border:1px solid #62ded76b;width:51px;height:51px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:32px;color:var(--cyan);position:relative}.brandmark span{font:11px monospace;position:absolute;right:8px;bottom:7px}.brand small{font:9px monospace;display:block;color:var(--muted);letter-spacing:2px;margin-top:1px}.course{border-left:1px solid var(--line);padding-left:25px;font-size:13px;color:#c5cfe0}.course small{display:block;color:var(--muted);font-size:11px}.top-actions{margin-left:auto;display:flex;align-items:center;gap:8px}.top-actions button{font-size:12px}.version{font:11px monospace;color:var(--muted);margin-left:10px}.shell{display:grid;grid-template-columns:210px minmax(0,1fr);max-width:1820px;margin:auto;min-height:calc(100vh - 98px)}.rail{padding:32px 17px 25px;border-right:1px solid var(--line);display:flex;flex-direction:column}.rail-label{font-size:12px;font-weight:700;padding:0 10px 25px;color:#d7dff0}.rail-label small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:6px}nav{display:grid;gap:9px}nav button{border:1px solid transparent;text-align:left;display:flex;align-items:center;gap:12px;padding:13px 12px;color:var(--muted);font-size:13px}nav button .num{font:11px monospace;color:#637596}nav button[aria-current=step]{background:#62ded70b;border-color:#62ded73b;color:var(--cyan)}nav button[aria-current=step] .num{color:var(--cyan)}nav button small{display:block;font-size:9px;letter-spacing:1px;color:#7e8ca7}.rail-bottom{margin-top:auto;padding:45px 10px 0;color:var(--muted);font-size:12px}.rail-bottom span{font-size:10px;color:#72829e}.orbit{font:20px Georgia,serif;letter-spacing:3px;color:var(--cyan);padding:14px 0;border-top:1px solid var(--line)}main{padding:30px 34px 0;min-width:0}.heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}.eyebrow{font:10px monospace;letter-spacing:2.5px;color:var(--cyan)}h1{font-size:clamp(25px,2.4vw,38px);font-weight:600;line-height:1.3;letter-spacing:1px;margin:10px 0 9px}.heading p{color:var(--muted);margin:0;font-size:13px}.big-number{font:65px Georgia,serif;color:#283653;line-height:1}.workbench{display:grid;grid-template-columns:minmax(0,1fr) 290px;align-items:stretch;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px #0002}.display{min-width:0;background:radial-gradient(ellipse at 55% 50%,#1b2b46 0,#111a30 68%);display:flex;flex-direction:column}.display-head{display:flex;justify-content:space-between;gap:12px;padding:17px 23px;border-bottom:1px solid #2a3854;font-size:11px;color:var(--muted);letter-spacing:.5px}.display-head span:first-child{color:#cdd9ec}.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:8px}.scene{width:100%;height:auto;aspect-ratio:960/580;display:block;max-height:570px;overflow:visible}.scene text{font-family:"Microsoft YaHei",sans-serif}.scene-controls{padding:15px 22px;display:flex;flex-wrap:wrap;gap:9px;align-items:center;border-top:1px solid #25324c}.primary{background:var(--cyan);border-color:var(--cyan);color:#102629;font-weight:700}.primary:hover{background:#8aeee8;color:#102629}.primary[aria-pressed=true]{background:var(--coral);border-color:var(--coral)}.status{font-size:11px;color:var(--muted);margin-left:auto}.model-note{font-size:10px;line-height:1.7;color:#8494b0;padding:0 22px 15px;margin-top:auto}.notes{background:var(--paper);color:var(--dark);padding:26px 24px;min-width:0;display:flex;flex-direction:column;color-scheme:light}.note-tag{font:10px monospace;color:#53706c;letter-spacing:1.6px;margin-bottom:12px}.notes h2{font-size:25px;line-height:1.45;letter-spacing:1px;margin:0 0 16px;font-weight:600}.notes p{font-size:13px;margin:0 0 15px;line-height:1.85}.notes .question{font-size:13px;font-weight:700;margin-bottom:10px}.choices{display:grid;gap:8px}.choices button{text-align:left;color:var(--dark);background:#fff7;border-color:#ced4d0;font-size:12px;padding:10px 12px;line-height:1.65}.choices button:hover{background:#fff;border-color:#5f8f88}.choices button.correct,.choices button[aria-pressed=true]{border-color:#247d70;background:#d9ebe4}.choices button.wrong{border-color:#bc755e;background:#fae5d9}.feedback{font-size:12px!important;margin:14px 0!important;color:#3c665c;min-height:26px}.feedback.bad{color:#9a563c}.insight{margin-top:auto;border-top:1px solid #ccd3d0;padding-top:18px}.insight b{display:block;font-size:12px;margin-bottom:6px}.insight p{font-size:11px;color:#5a686d;margin:0}.small{font-size:11px;color:var(--muted)}.steps{display:flex;gap:5px;flex-wrap:wrap;padding:14px 20px 0}.steps button{font-size:11px;color:var(--muted);padding:7px 11px;border-radius:30px}.steps button.active{color:var(--cyan);border-color:#62ded75c;background:#62ded711}.equation{background:#0b1324;border:1px solid #2b3c57;border-radius:12px;padding:15px 20px;font-size:17px;line-height:1.9;color:#e2eafb;font-family:Georgia,"Microsoft YaHei",serif;margin:0 22px 16px;overflow-wrap:anywhere}.equation small{display:block;font:10px/1.8 "Microsoft YaHei",sans-serif;color:var(--muted)}.accent{color:var(--cyan)}.coral{color:var(--coral)}.purple{color:var(--purple)}.pill{font-size:10px;padding:4px 9px;border:1px solid #3e526e;border-radius:20px;display:inline-block;color:var(--muted)}.pill.active{color:var(--cyan);border-color:#62ded750}.ledger{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 22px 17px}.ledger div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#101b2f}.ledger b{display:block;color:var(--cyan);font:22px Georgia,serif;line-height:1.5}.ledger small{font-size:10px;color:var(--muted)}.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:16px 22px 0}.tabs button{font-size:12px}.tabs button[aria-pressed=true]{border-color:var(--coral);color:var(--coral);background:#ff936f0a}.checkline{display:flex;align-items:center;gap:9px;font-size:12px;color:#c4d2e6;cursor:pointer}.checkline input{accent-color:var(--cyan);width:16px;height:16px}.experiment-config{display:grid;gap:10px;padding:18px 22px 8px}.notes .table{width:100%;border-collapse:collapse;font-size:11px;line-height:1.8;margin-bottom:16px}.notes th,.notes td{text-align:left;padding:9px 4px;border-bottom:1px solid #ced4d0;vertical-align:top}.notes td{color:#506365}.notes .light-button{color:var(--dark);border-color:#a5b6ae;background:#fff6;font-size:12px;margin-top:10px}.wide-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px}.brief{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:25px;min-width:0}.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:20px}.case-card{padding:20px;text-align:left;min-height:130px;border-radius:15px;background:#15213a;border-color:#2d3c59}.case-card span{display:block;font:10px monospace;color:var(--cyan);letter-spacing:1px}.case-card b{display:block;font-size:18px;font-weight:500;margin:9px 0}.case-card small{display:block;color:var(--muted);font-size:11px}.case-card[aria-pressed=true]{border-color:var(--cyan);background:#19333e}.case-scene{padding:24px;background:#0b1428;border-radius:15px;border:1px solid #273954}.case-scene h2{font-size:25px;font-weight:500;margin:8px 0}.case-scene p{color:var(--muted);font-size:13px;max-width:620px;margin-bottom:0}.answer-counter{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:20px}.done-dot{width:9px;height:9px;background:#354460;border-radius:50%}.done-dot.done{background:var(--cyan)}.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:20px 0}.summary-card{padding:19px;border:1px solid var(--line);border-radius:15px;background:#14213a}.summary-card b{display:block;font-size:17px;color:var(--cyan);font-weight:500}.summary-card p{color:var(--muted);font-size:12px;margin-bottom:0}.quiz-box{padding:22px 25px;border-radius:17px;background:var(--paper);color:var(--dark);color-scheme:light}.quiz-box .choices button{font-size:13px}.quiz-box h3{font-size:17px;line-height:1.8;font-weight:600;margin:12px 0 18px}.quiz-box .eyebrow{color:#54736d}.quiz-box .feedback{color:#346759}.quiz-buttons{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.quiz-buttons button{color:var(--dark);border-color:#9aada4;font-size:12px}.result{padding:24px;border-radius:16px;border:1px solid #62ded74d;background:#62ded70b}.result h2{color:var(--cyan)}details{border:1px solid var(--line);border-radius:12px;padding:14px 17px;margin:15px 0;font-size:13px}summary{cursor:pointer;color:var(--cyan)}details p,details li{color:var(--muted);font-size:12px}footer{display:flex;align-items:center;gap:20px;padding:24px 0 25px;color:var(--muted);font-size:11px}.pager{display:flex;align-items:center;gap:13px;flex-shrink:0}.pager button{border-radius:50%;width:34px;height:34px;padding:0}.pager span{font:11px monospace}.text-button{border:none;padding:5px;color:var(--muted);font-size:11px;margin-left:auto}footer p{margin:0}dialog{background:#111b30;color:var(--ink);border:1px solid #4b5c77;border-radius:24px;max-width:920px;width:calc(100% - 40px);max-height:88vh;padding:0;box-shadow:0 30px 100px #0008}dialog::backdrop{background:#050916ca;backdrop-filter:blur(7px)}.dialog-head{position:sticky;top:0;background:#111b30;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:25px 30px 20px;border-bottom:1px solid var(--line);z-index:1}.dialog-head h2{font-size:24px;font-weight:500;margin:8px 0 0}.dialog-head button{border-radius:50%;width:36px;height:36px;padding:0;font-size:20px}.dialog-body{padding:12px 30px 28px;font-size:13px;color:#becce0}.dialog-body h3{color:var(--cyan);font-size:15px;font-weight:500;margin-top:25px}.dialog-body li{margin:12px 0}.dialog-body small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.callout{padding:15px 18px;background:#62ded70b;border-left:2px solid var(--cyan);border-radius:0 8px 8px 0;color:#ccebe5}.pace{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pace div{padding:15px;border:1px solid var(--line);border-radius:12px}.pace b{display:block;font-weight:500;color:var(--ink)}.pace span{color:var(--muted);font-size:11px}.reference-list{list-style:none;padding:0}.reference-list li{padding:13px 0;border-bottom:1px solid var(--line)}.reference-list a{overflow-wrap:anywhere}.classroom header .course,.classroom .version,.classroom .rail-bottom{display:none}.classroom header{min-height:72px;padding:12px 25px}.classroom .shell{grid-template-columns:178px minmax(0,1fr)}.classroom main{padding:22px 26px 0}.classroom .notes p,.classroom .choices button{font-size:14px}.classroom .rail{padding:25px 12px}.classroom .scene{max-height:650px}.classroom .notes{padding:24px}.classroom .workbench{grid-template-columns:minmax(0,1fr) 315px}.enter{animation:enter .55s ease both}.flow-line{stroke-dasharray:8 7;animation:flow 1.4s linear infinite}.pulse{animation:pulse 2.2s ease-in-out infinite}.pause-motion *{animation-play-state:paused!important}@keyframes enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@keyframes flow{to{stroke-dashoffset:-30}}@keyframes pulse{50%{opacity:.4}}@media(min-width:1650px){main{padding:36px 45px 0}.workbench{grid-template-columns:minmax(0,1fr) 325px}.notes{padding:30px}.notes p,.choices button{font-size:14px}}@media(max-width:1200px){.course{display:none}.shell{grid-template-columns:175px minmax(0,1fr)}main{padding:24px 23px 0}.rail{padding:27px 11px}.workbench{grid-template-columns:minmax(0,1fr) 260px}.notes{padding:21px 19px}.notes h2{font-size:23px}.wide-layout{grid-template-columns:1fr 290px}.status{width:100%;margin-left:0}}@media(max-width:980px){header{padding:15px 22px}.shell,.classroom .shell{grid-template-columns:1fr}.rail{display:block;padding:13px 20px;border-right:none;border-bottom:1px solid var(--line)}.rail-label,.rail-bottom{display:none}nav{display:flex;overflow-x:auto;gap:7px;padding:2px 2px 6px}nav button{flex-shrink:0;gap:8px;padding:9px 12px}nav button small{display:none}.workbench,.classroom .workbench{grid-template-columns:minmax(0,1fr) 280px}.wide-layout{grid-template-columns:1fr}.notes h2 br{display:none}.big-number{font-size:52px}.classroom .rail{padding:10px 20px}}@media(max-width:720px){header .brand{font-size:17px}.brandmark{width:40px;height:40px;font-size:26px}.brand small{font-size:7px}.top-actions{gap:4px}.top-actions button{font-size:10px;padding:7px 8px}.top-actions button[data-act=teacher],.version{display:none}header{gap:12px;padding:14px 15px;min-height:78px}main,.classroom main{padding:21px 15px 0}.heading{margin-bottom:18px}.heading p{font-size:12px}.eyebrow{font-size:8px}.big-number{font-size:42px}.workbench,.classroom .workbench{grid-template-columns:1fr}.display-head{padding:14px 16px;font-size:10px}.display-head span:last-child{display:none}.scene-controls{padding:13px 16px}.scene-controls button{font-size:12px}.equation{font-size:15px;margin:0 15px 15px;padding:13px 15px}.model-note{padding:0 16px 15px}.notes{padding:22px}.notes h2{font-size:23px;margin-bottom:10px}.notes p,.choices button{font-size:13px}.insight{margin-top:17px}.ledger{padding:0 15px 16px;gap:7px}.ledger div{padding:10px}.ledger b{font-size:19px}.ledger small{font-size:9px}.tabs{padding:14px 15px 0}.steps{padding:14px 15px 0}.experiment-config{padding:17px 15px 5px}.checkline{font-size:11px}.case-grid{gap:9px}.case-card{padding:14px;min-height:120px}.case-card b{font-size:16px}.brief{padding:17px}.case-scene{padding:18px}.case-scene h2{font-size:22px}.summary-grid{grid-template-columns:1fr;gap:9px}.summary-card{padding:14px}.summary-card p{margin:6px 0}.quiz-box{padding:19px}.pace{grid-template-columns:1fr 1fr}.dialog-head{padding:23px 22px 18px}.dialog-head h2{font-size:21px}.dialog-body{padding:10px 22px 24px}footer{gap:10px;flex-wrap:wrap;padding:19px 0}footer p{display:none}.text-button{font-size:10px}.scene{min-height:210px}.classroom .notes p{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style></head><body>
+<header><a class="brand" href="#"><span class="brandmark">C<span>6</span></span><div>碳的旅程<small>THE RESPIRATION ATLAS</small></div></a><div class="course">高中生物学 · 必修1<small>第5章 第3节 / 细胞呼吸的原理和应用</small></div><div class="top-actions"><button data-act="teacher">教师导航</button><button data-act="sources">资料与模型</button><button data-act="classroom" id="classButton" aria-pressed="false">投屏模式 ⤢</button><span class="version">v1.0</span></div></header>
+<div class="shell"><aside class="rail"><div class="rail-label">一次追踪，六个现场<small>建议 2 课时 · 可自由选用</small></div><nav id="nav" aria-label="课程环节"></nav><div class="rail-bottom"><div class="orbit">C → CO₂</div><p>追踪物质的去向。<br>解释能量的转移。</p><span>操作员 × 追踪员 × 解释员</span></div></aside><main><div class="heading"><div><span class="eyebrow" id="kicker"></span><h1 id="title"></h1><p id="subtitle"></p></div><span id="stageNumber" class="big-number"></span></div><section id="content"></section><footer><div class="pager"><button data-act="prev" aria-label="上一环节">←</button><span id="counter"></span><button data-act="next" aria-label="下一环节">→</button></div><p id="prompt"></p><button data-act="teacher" class="text-button">本环节怎么讲 ↗</button></footer></main></div>
+<dialog id="infoDialog"><div class="dialog-head"><div><span class="eyebrow" id="dialogKicker"></span><h2 id="dialogTitle"></h2></div><button data-act="close" aria-label="关闭资料窗">×</button></div><div id="dialogBody" class="dialog-body"></div></dialog>
+<script>/* Original classroom questions. Correct answers use zero-based indexes. */
+window.RespContent = {
+  scopeNote: "对应人教版高中生物学必修1第5章第3节《细胞呼吸的原理和应用》。以真核细胞分解葡萄糖为主模型，围绕总体碳数、还原型辅酶、氧气去向和ATP形成展开。沿用教材有氧呼吸三阶段与两类常见无氧分解的框架；所有题目、解释与教学模型独立创作，不冒称高考原题。核查日期：2026-10-23；具体教材印次未从版权页确认，不宣称“2026新版”。",
+  references: [
+    {
+      title: "国家智慧教育平台 · 人教版必修1电子教材",
+      url: "https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/9d522562-b529-446c-9b5b-084812beee6e.pkg/pdf.pdf",
+      note: "官方教材资源，公开索引可核对节题和教材应用内容；本次PDF正文访问受限，因此不据此核定具体印次。模型未复制教材图片。"
+    },
+    {
+      title: "人民教育出版社 · 必修1新教材介绍讲义",
+      url: "https://www.pep.com.cn/xw/zt/xkzt/swpxhkj/hyzl/202105/W020210526306605422940.pdf",
+      note: "官方培训资料列出新旧目录，确认现行体系该节题为《细胞呼吸的原理和应用》，包括酵母菌呼吸方式探究。"
+    },
+    {
+      title: "Alberts等 · How Cells Obtain Energy from Food",
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK26882/",
+      note: "NCBI Bookshelf公开原教材：糖酵解、丙酮酸后续去向、发酵再生NAD⁺，以及细胞质和线粒体中的分工。"
+    },
+    {
+      title: "Alberts等 · The Mitochondrion",
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK26894/",
+      note: "公开原教材：线粒体基质与内膜中的过程、糖酵解净形成2ATP，以及ATP产量的估算条件。"
+    },
+    {
+      title: "Alberts等 · Electron-Transport Chains",
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK26904/",
+      note: "公开原教材：电子传递、氧的最终受体作用，以及跨膜梯度与ATP形成的联系。"
+    },
+    {
+      title: "OpenStax Microbiology · Cellular Respiration",
+      url: "https://openstax.org/books/microbiology/pages/8-3-cellular-respiration",
+      note: "原教材说明有氧与严格微生物学意义的厌氧呼吸及电子传递链；只用于核对术语，不把其特定假设下的ATP理论数当通用产量。"
+    },
+    {
+      title: "OpenStax Microbiology · Fermentation",
+      url: "https://openstax.org/books/microbiology/pages/8-4-fermentation",
+      note: "原教材区分发酵与厌氧呼吸，说明常见乳酸、酒精发酵中还原型辅酶再氧化与糖酵解继续进行的联系。"
+    },
+    {
+      title: "Schwane等 · 乳酸与延迟性肌肉酸痛实验",
+      url: "https://pubmed.ncbi.nlm.nih.gov/27409551/",
+      note: "1983年原始人体运动实验比较平路与下坡跑、血乳酸与后续酸痛，结果不支持用运动乳酸解释延迟性肌肉酸痛。"
+    }
+  ],
+  quiz: [
+    {
+      stem: "按教材的有氧呼吸三阶段模型，某真核细胞以葡萄糖为底物。下列关于场所和产物的配对正确的是？",
+      options: [
+        "第一阶段在线粒体基质中把葡萄糖直接变为CO₂",
+        "第二阶段在线粒体基质中产生CO₂；第三阶段在线粒体内膜上利用O₂并形成水",
+        "第三阶段在细胞质基质中把丙酮酸变为酒精"
+      ],
+      answer: 1,
+      explanation: "第一阶段主要指细胞质基质中的糖酵解；教材第二阶段概括丙酮酸氧化及三羧酸循环，发生于线粒体基质并释放CO₂；第三阶段涉及内膜上的电子传递与ATP形成。该场所表述适用于本课的真核细胞模型，不直接套用到原核细胞。"
+    },
+    {
+      stem: "向正在进行有氧呼吸的细胞提供¹⁸O₂，只考察氧气作为最终电子受体的直接反应产物，最先应追踪哪种物质？",
+      options: [
+        "带有¹⁸O的水",
+        "带有¹⁸O的丙酮酸",
+        "第二阶段直接由¹⁸O₂与碳结合生成的CO₂"
+      ],
+      answer: 0,
+      explanation: "氧气在电子传递链末端接受电子并与质子形成水。不能因总反应同时出现O₂和CO₂，就把两者连成直接的原子去向。本题限定直接反应，避免把后续代谢与氧同位素交换混为一谈。"
+    },
+    {
+      stem: "仅考虑教材中的葡萄糖酒精发酵和乳酸发酵，下列碳数记账正确的是？",
+      options: [
+        "两者都把一个6碳葡萄糖变成6个CO₂",
+        "乳酸发酵产生两个3碳乳酸并同时产生两个CO₂",
+        "酒精发酵生成两个2碳酒精与两个CO₂；乳酸发酵生成两个3碳乳酸而不产生CO₂"
+      ],
+      answer: 2,
+      explanation: "酒精途径的总体碳数为6＝2×2＋2×1；乳酸途径为6＝2×3。两者都属于有机物的不彻底氧化，产物中仍保留较多能量；不是所有无氧分解都释放CO₂。"
+    },
+    {
+      stem: "一个葡萄糖经常见糖酵解途径形成两个丙酮酸，随后转为乳酸。关于ATP来源，哪项判断正确？",
+      options: [
+        "糖酵解净得2ATP，转为乳酸的后续步骤又净得2ATP",
+        "全程净得的2ATP来自糖酵解；后续转为乳酸主要帮助再生NAD⁺，不另外形成ATP",
+        "只要不消耗氧气，就完全不能形成ATP"
+      ],
+      answer: 1,
+      explanation: "常见糖酵解先消耗2ATP、后形成4ATP，净得2ATP。后续发酵步骤使NADH再氧化为NAD⁺，帮助糖酵解持续进行，本身不再增加ATP。酒精发酵也遵循本题所讲的这一基本能量账。"
+    },
+    {
+      stem: "同学把呼吸简图中的[H]画成一串H₂气泡，从线粒体基质飘向内膜。这种表达应怎样修正？",
+      options: [
+        "[H]概括相关还原性载体所携带的还原力，应通过电子和氢的转移理解，不能当成H₂气体",
+        "[H]就是大量游离氢气，只是细胞内看不见气泡",
+        "[H]与能量转化无关，只用来凑平反应式"
+      ],
+      answer: 0,
+      explanation: "教材[H]是简化符号，具体涉及NADH、FADH₂等还原型辅酶及其携带的电子与氢。它不是细胞里产生和燃烧的氢气。还原型辅酶在后续电子传递和ATP形成中起重要作用。"
+    },
+    {
+      stem: "资料甲按一组假设估算每个葡萄糖完全有氧氧化的ATP产量，资料乙采用不同的跨膜转运与耦联条件，得到另一数值。最恰当的结论是？",
+      options: [
+        "所有细胞都必须固定产生38ATP，其他数值一定错误",
+        "ATP数值不同就说明葡萄糖碳数不守恒",
+        "ATP产量与具体机制和条件有关，应先比较假设；本课重点是有氧氧化比两类常见发酵形成更多ATP"
+      ],
+      answer: 2,
+      explanation: "跨膜转运、还原当量传递方式和膜耦联效率等会影响ATP估算。不要把某个历史理论值或某一体系的常用估计当成所有细胞的固定整数。ATP数值与碳原子守恒是不同层面的账。"
+    },
+    {
+      stem: "某时段酵母只以葡萄糖为底物，且仅有完全有氧氧化和教材酒精发酵两条分解途径。全部产物均被准确测得且未再利用：共生成12mmol CO₂、6mmol酒精。经有氧途径分解的葡萄糖占总消耗量的比例为？",
+      options: ["1/4", "1/2", "3/4"],
+      answer: 0,
+      explanation: "酒精6mmol对应发酵消耗葡萄糖3mmol，并生成CO₂ 6mmol；剩余CO₂ 6mmol来自有氧分解葡萄糖1mmol。因此比例为1÷(1＋3)＝1/4。本题数据是原创理想化情境，结论依赖题干给出的途径与测量条件。"
+    },
+    {
+      stem: "某研究中，平路跑时血乳酸明显升高，但之后酸痛不明显；下坡跑时乳酸未明显升高，却出现延迟性酸痛。仅据这些证据，哪种解读更稳妥？",
+      options: [
+        "只要没有乳酸升高，肌肉就不可能出现酸痛",
+        "结果不支持把次日酸痛直接归因于乳酸堆积",
+        "乳酸会在肌肉中永久积累，运动后不再被利用"
+      ],
+      answer: 1,
+      explanation: "血乳酸升高与延迟性酸痛在这些条件下并不对应，因此不能用“乳酸堆积”简单解释次日酸痛。也不能从该结果推出所有肌肉不适的唯一成因。乳酸可以参与后续代谢，并非永远滞留的废物。"
+    }
+  ],
+  teacherNotes: [
+    "本课按人教版三阶段组织真核细胞有氧呼吸：细胞质基质中的糖酵解；线粒体基质中的丙酮酸氧化与三羧酸循环；线粒体内膜上的电子传递与氧化磷酸化。它与某些大学教材四步划分可对应，不应把不同分段方式误认为科学矛盾。",
+    "碳图是总体记账：一个6碳葡萄糖先成为两个3碳丙酮酸，经后续充分氧化最终形成6个CO₂。真实循环中，刚进入的乙酰基碳并不在第一圈立即全部释放；教学动画不声称逐一追踪真实原子位置。",
+    "氧气在教材第三阶段对应的电子传递链末端作为最终电子受体形成水。第二阶段产生CO₂，第三阶段不再形成含碳终产物。若做同位素题，应明确直接产物与后续交换的区别。",
+    "第二阶段也有水参与反应；总反应可写成未约去水的式子或净反应式，水的系数看起来不同不一定矛盾。比较时要检查是否约去了反应两侧的水，不能把所有水都当作来自O₂的同一批分子。",
+    "[H]是课程层面的简写，不是H₂气体。模型可用还原型辅酶的小载体表示电子和氢的转移；不要画出氢气燃烧、气泡喷射或ATP直接接收游离氢气。",
+    "两类教材常见无氧途径都在细胞质基质中完成：酒精途径形成酒精和CO₂；乳酸途径形成乳酸而不放出CO₂。两者经常见糖酵解途径，每葡萄糖净得2ATP；后续还原步骤再生NAD⁺，不另生成ATP。",
+    "教材无氧呼吸的乳酸和酒精例子，在严格微生物学用语中通常属于发酵；微生物学的厌氧呼吸另指利用电子传递链、以非氧物质作最终电子受体的呼吸。课堂以教材用语为主，在资料说明中交代术语范围，不把两者混为同一个机制。",
+    "不将38ATP或任何单一估值固定到所有细胞。常见有氧氧化形成大量ATP，糖酵解及教材第二阶段形成较少ATP，主要ATP来自第三阶段。能量也以热等形式散失，不会全部转为ATP。",
+    "糖酵解不直接消耗氧气，但这不等于它仅能在无氧时发生。第一、第二阶段对氧的依赖还体现为整体途径中还原型辅酶的再氧化；不能把停氧后的瞬态结果简单当作每个步骤是否直接用氧的证明。",
+    "不要把线粒体画成直接吞入葡萄糖的唯一反应箱；主模型先在细胞质基质形成丙酮酸再进入线粒体。原核细胞没有线粒体，某些原核细胞仍能有氧呼吸，其相关位置另作说明。",
+    "肌肉在有氧条件下也可以形成乳酸；乳酸既可被氧化利用，也可进入其他代谢途径。教材缺氧情境可用于认识乳酸途径，但不宜扩展为“有乳酸就一定没有氧”或“次日酸痛来自乳酸堆积”。",
+    "酵母CO₂检测不能单独判定有氧或无氧，因为两条教材途径都可产CO₂。比较呼吸方式需结合氧气条件、酒精等指标和合适空白；实际通气也不意味着酵母绝不会发酵。",
+    "应用中，适度降温和控制氧含量可减弱果蔬呼吸、减少有机物消耗，但不是越冷、越无氧越好；过低温可能造成冷害，长时间严重缺氧也可能引起发酵等品质变化。课堂讨论需要注明对象和条件。",
+    "动画时间、ATP图标数量和相对速率为教学示意；八道题均为原创情境题，其中研究素材改述自所列原始研究，不标成湖北高考真题。"
+  ]
+};
+</script><script>(function (global) {
+  'use strict';
+
+  const CYAN = '#62ded7', CORAL = '#ff936f', LAVENDER = '#aab3ff';
+  const OUTER = 'M390 128 C468 82 717 82 825 122 C889 149 922 216 914 291 C915 366 871 420 806 443 C703 476 499 475 397 438 C347 420 323 366 329 303 C319 225 336 168 390 128 Z';
+  // One closed inner-membrane contour. Every crista is an inward fold of this
+  // same boundary: no detached sinusoid is used as a substitute for a crista.
+  const INNER = 'M405 158 C427 143 449 136 475 133 C484 132 490 139 490 148 L490 228 C490 246 505 255 516 246 C522 241 522 234 520 223 L510 151 C508 139 513 130 524 130 C548 129 568 128 589 130 C600 130 604 140 604 150 L600 264 C599 282 614 289 624 277 C629 272 629 262 628 251 L623 151 C622 138 628 131 640 133 C661 136 680 140 698 145 C709 148 711 156 707 167 L689 226 C683 244 695 256 707 247 C714 243 716 234 718 224 L732 177 C736 164 745 159 756 164 C778 172 795 180 806 190 C848 214 863 249 860 290 C857 344 831 383 794 400 C775 411 754 417 733 421 C723 423 714 418 713 407 L708 331 C707 313 692 308 682 319 C676 325 677 335 679 346 L689 416 C690 429 684 435 672 435 C647 437 625 437 603 435 C591 434 587 427 588 415 L594 345 C595 328 582 318 570 327 C563 331 563 340 563 352 L565 417 C565 430 557 434 547 433 C521 431 495 428 473 422 C461 419 458 409 462 398 L479 347 C486 329 475 315 462 324 C455 329 454 336 452 347 L438 396 C433 408 423 410 413 402 C378 373 362 320 365 269 C359 218 376 176 405 158 Z';
+  let sequence = 0;
+  const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const number = value => Number.isFinite(Number(value)) ? Number(value) : 0;
+  const text = (x, y, value, size = 20, fill = '#dceaf0', anchor = 'start', weight = 500) => '<text x="' + x + '" y="' + y + '" fill="' + fill + '" font-size="' + size + '" font-weight="' + weight + '" text-anchor="' + anchor + '">' + escape(value) + '</text>';
+  const path = (d, stroke, width = 2, extra = '') => '<path d="' + d + '" fill="none" stroke="' + stroke + '" stroke-width="' + width + '" stroke-linecap="round" stroke-linejoin="round" ' + extra + '/>';
+  const circle = (x, y, r, fill, stroke = 'none', width = 1) => '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '"/>';
+  const box = (x, y, w, h, fill, stroke, radius = 10) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + radius + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="1.2"/>';
+  const pill = (cx, cy, label, color, width = 88, font = 21) => box(cx - width / 2, cy - 18, width, 36, '#102d40', color, 18) + text(cx, cy + 7, label, font, color, 'middle', 600);
+
+  function carbons(cx, cy, count, color, gap = 17, radius = 5.6) {
+    let s = '';
+    for (let n = 0; n < count; n++) s += circle(cx + (n - (count - 1) / 2) * gap, cy, radius, color, '#def0f1', 0.6);
+    return s;
+  }
+
+  function stageMarker(x, y, n, color, active) {
+    return circle(x, y, active ? 19 : 16, '#10283b', color, active ? 2.5 : 1.6) + text(x, y + 6.5, n, 19, color, 'middle', 700);
+  }
+
+  function aerobic(step, opts = {}) {
+    const current = Math.max(0, Math.min(3, Math.round(number(step))));
+    const time = number(opts.time);
+    const labels = opts.labels !== false;
+    const id = 'resp-aerobic-' + (++sequence);
+    const selectedColor = [CYAN, CYAN, CORAL, LAVENDER][current];
+    const titles = ['一份葡萄糖的有氧呼吸', '第一阶段 · 葡萄糖的初步分解', '第二阶段 · 丙酮酸的彻底分解', '第三阶段 · 氧参与形成水'];
+    const subtitles = [
+      '真核细胞模型：先定位三个阶段，再追踪碳、[H]与ATP。',
+      '细胞质基质：1个六碳葡萄糖形成2个三碳丙酮酸，并产生[H]和少量ATP。',
+      '线粒体基质：丙酮酸与水参与，生成6 CO₂和[H]，形成少量ATP。',
+      '线粒体内膜：[H]与O₂参与形成水，这一阶段形成大量ATP。'
+    ];
+    let s = '<defs><linearGradient id="' + id + '-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102d43"/><stop offset="1" stop-color="#081b2d"/></linearGradient><linearGradient id="' + id + '-matrix" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#183e51"/><stop offset="1" stop-color="#102b40"/></linearGradient>';
+    [CYAN, CORAL, LAVENDER].forEach((color, i) => { s += '<marker id="' + id + '-arrow-' + i + '" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M2 1 L8 5 L2 9" fill="none" stroke="' + color + '" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>'; });
+    s += '</defs>' + box(0, 0, 960, 580, 'url(#' + id + '-bg)', 'none', 18);
+    s += text(32, 39, titles[current], 26, '#dbeef1', 'start', 650) + text(32, 69, subtitles[current], 16.5, '#8faebf');
+    s += path('M299 133 V452', '#7d9bb1', 1, 'stroke-opacity=".16" stroke-dasharray="3 8"');
+    if (labels) s += text(42, 118, '细胞质基质', 23, current === 1 ? CYAN : '#a5c5d3', 'start', 600);
+
+    // The intermembrane space is the region between these two closed curves.
+    s += '<path data-membrane="outer" d="' + OUTER + '" fill="#1c3c55" stroke="#7298b2" stroke-width="4.5" stroke-linejoin="round"/>';
+    s += '<path data-membrane="inner" d="' + INNER + '" fill="url(#' + id + '-matrix)" stroke="' + (current === 3 ? '#b8c1ff' : '#96b9cb') + '" stroke-width="5.2" stroke-linejoin="round"/>';
+    s += '<path d="' + INNER + '" fill="none" stroke="#d9e5f0" stroke-width="1" stroke-opacity=".3" stroke-linejoin="round"/>';
+    if (labels) {
+      s += text(790, 106, '线粒体', 22, '#bdd4df', 'middle', 600) + path('M790 112 L818 127', '#9db8c8', 1.1) + circle(818, 127, 2, '#b7d1df');
+      s += text(557, 491, '内膜（内陷形成嵴）', 17, current === 3 ? LAVENDER : '#94afc1', 'middle') + path('M557 470 L588 415', '#a5b8ca', 1.1) + circle(588, 415, 2.3, LAVENDER);
+      s += text(853, 491, '外膜', 18, '#91acbf', 'middle') + path('M853 470 L881 404', '#8ca8bf', 1.1) + circle(881, 404, 2.3, '#a5c5d4');
+    }
+
+    // Stage 1. The dots encode carbon counts only, rather than molecular shape.
+    const alpha1 = current === 0 || current === 1 ? 1 : 0.3;
+    s += '<g opacity="' + alpha1 + '" data-stage="1">';
+    s += stageMarker(43, 202, 1, CYAN, current === 1) + text(134, 168, '1个葡萄糖 · 6C', 20, CYAN, 'middle', 600);
+    s += box(70, 183, 128, 75, '#123a49', '#487f8b', 12) + carbons(134, 205, 3, CYAN, 28, 7) + carbons(134, 236, 3, CYAN, 28, 7);
+    s += path('M134 268 V291 L86 314', CYAN, 2.2, 'marker-end="url(#' + id + '-arrow-0)"') + path('M134 291 L210 314', CYAN, 2.2, 'marker-end="url(#' + id + '-arrow-0)"');
+    s += box(44, 319, 83, 32, '#123a49', '#487f8b', 16) + carbons(85.5, 335, 3, CYAN, 18, 5.8);
+    s += box(170, 319, 83, 32, '#123a49', '#487f8b', 16) + carbons(211.5, 335, 3, CYAN, 18, 5.8);
+    s += text(148, 380, '2个丙酮酸 · 各3C', 19, '#aedcd9', 'middle');
+    s += pill(112, 423, '少量ATP', CYAN, 116, 19) + pill(226, 423, '[H]', CYAN, 65, 22);
+    s += '</g>';
+
+    // Pyruvate enters mitochondria; the schematic does not depict transporters.
+    if (current === 0 || current === 2) {
+      s += path('M260 333 C315 333 349 306 409 302', CORAL, 2.1, 'marker-end="url(#' + id + '-arrow-1)"');
+      if (labels) s += text(313, 370, '丙酮酸进入', 15, '#aaadb3', 'middle');
+    }
+
+    if (current === 0 || current === 2) {
+      s += '<g data-stage="2">' + stageMarker(439, 239, 2, CORAL, current === 2);
+      s += carbons(438, 279, 3, CORAL, 17, 5.6) + carbons(438, 314, 3, CORAL, 17, 5.6);
+      s += path('M481 296 C540 316 624 316 690 296', CORAL, 2.1, 'marker-end="url(#' + id + '-arrow-1)"');
+      // A separate water input keeps stage 2 from silently omitting water.
+      s += pill(555, 212, 'H₂O', '#9fc4d3', 58, 19) + path('M555 233 V264', '#9fc4d3', 1.5);
+      for (let row = 0; row < 2; row++) for (let col = 0; col < 3; col++) {
+        const x = 730 + col * 43, y = 246 + row * 42;
+        s += box(x - 19, y - 14, 38, 28, '#3b3b47', '#ba8575', 7) + text(x, y + 6, 'CO₂', 17, '#ffc1a9', 'middle', 550);
+      }
+      s += text(774, 337, '6 CO₂', 27, CORAL, 'middle', 650) + pill(628, 331, '[H]', CORAL, 65, 21);
+      if (labels) s += text(779, 376, '线粒体基质', 18, '#9fbccb', 'middle');
+      s += '</g>';
+    }
+
+    // Anchor stage 3 exactly on the lower turn of a continuous inner fold.
+    const pulse = current === 3 ? 0.16 + 0.06 * Math.sin(time * 1.6) : 0.08;
+    s += '<g data-stage="3">' + circle(613, 281, 31, LAVENDER, 'none') .replace('stroke="none"', 'opacity="' + pulse.toFixed(3) + '" stroke="none"');
+    s += stageMarker(613, 281, 3, LAVENDER, current === 3);
+    if (current === 3) {
+      s += pill(506, 290, '[H]', CORAL, 68, 23) + path('M544 290 L589 284', CORAL, 2.1, 'marker-end="url(#' + id + '-arrow-1)"');
+      s += pill(784, 245, 'O₂', LAVENDER, 78, 24) + path('M740 245 C696 245 659 263 637 276', LAVENDER, 2.1, 'marker-end="url(#' + id + '-arrow-2)"');
+      s += path('M637 286 C671 287 705 293 731 300', LAVENDER, 2.1, 'marker-end="url(#' + id + '-arrow-2)"') + pill(784, 303, 'H₂O', LAVENDER, 88, 24);
+      s += path('M635 278 C678 267 715 291 727 337 V347', LAVENDER, 1.9, 'stroke-dasharray="3 6" marker-end="url(#' + id + '-arrow-2)"') + pill(779, 370, '大量ATP', LAVENDER, 106, 20);
+    }
+    s += '</g>';
+
+    // Location and qualitative ATP yield are kept legible in a fixed key.
+    const keyLabels = ['细胞质基质', '线粒体基质', '线粒体内膜'];
+    const keyColors = [CYAN, CORAL, LAVENDER];
+    for (let i = 0; i < 3; i++) {
+      const x = 32 + i * 309, on = current === 0 || current === i + 1;
+      s += box(x, 511, 278, 42, on ? '#17394a' : '#0f293a', on ? keyColors[i] : '#2b485a', 10);
+      s += text(x + 15, 538, (i + 1) + '  ' + keyLabels[i], 18, on ? keyColors[i] : '#708a9c', 'start', 600);
+      s += text(x + 262, 538, i === 2 ? '大量ATP' : '少量ATP', 16, on ? '#c3d4de' : '#657d8e', 'end');
+    }
+    s += text(480, 575, '碳点仅表示碳数；[H]为教材简写。图中结构、比例及过程均经简化，非原子尺度。', 12.5, '#6f8fa3', 'middle');
+    return s;
+  }
+
+  function overview() { return aerobic(0); }
+  global.RespScene = Object.assign(global.RespScene || {}, { aerobic: aerobic, overview: overview });
+})(window);
+</script><script>(function(g){'use strict';
+const C='#62ded7',R='#ff936f',P='#aab3ff',M='#9baac5',W='#e4eaf8';
+const t=(x,y,s,size=18,c=W,a='start')=>`<text x="${x}" y="${y}" fill="${c}" font-size="${size}" text-anchor="${a}">${s}</text>`;
+const line=(d,c=C,width=2,extra='')=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round" ${extra}/>`;
+const rect=(x,y,w,h,c='#152840',s='#3c526f',r=15)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${c}" stroke="${s}"/>`;
+const circle=(x,y,r,c,s='none')=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" stroke="${s}"/>`;
+const dots=(x,y,n,c=C,gap=23)=>Array.from({length:n},(_,i)=>circle(x+(i-(n-1)/2)*gap,y,8,c)).join('');
+const arrow=(d,c=C)=>line(d,c,2,'class="flow-line"')+'';
+const defs=`<defs><linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25576b"/><stop offset="1" stop-color="#111b30"/></linearGradient></defs>`;
+function map(route='aerobic'){
+ let s=defs+`<circle cx="216" cy="282" r="151" fill="none" stroke="#2a3d59" stroke-dasharray="2 12"/><circle cx="216" cy="282" r="124" fill="url(#orb)" stroke="#4b7f8d"/><circle cx="216" cy="282" r="104" fill="none" stroke="#3a6677"/>`;
+ for(let i=0;i<6;i++){const a=i*Math.PI/3-Math.PI/2;s+=circle(216+82*Math.cos(a),282+82*Math.sin(a),10,C);}
+ s+=t(216,279,'C₆',54,C,'middle')+t(216,314,'一份葡萄糖',19,W,'middle')+t(216,474,'不是“吸一口气”，而是一系列酶促反应。',16,M,'middle');
+ const ys=[135,289,443],names=['有氧呼吸','酒精发酵','乳酸发酵'],keys=['aerobic','ethanol','lactate'],colors=[C,R,P],out=['6 CO₂ + 水 / 大量 ATP','2 酒精 + 2 CO₂ / 少量 ATP','2 乳酸 / 少量 ATP'];
+ for(let i=0;i<3;i++){const on=route===keys[i],c=colors[i];s+=`<g opacity="${on?1:.38}">`+line(`M342 282 C430 282 422 ${ys[i]} 495 ${ys[i]}`,c,on?3:1.5,on?'class="flow-line"':'')+circle(495,ys[i],4,c)+rect(520,ys[i]-57,385,112,on?'#1b3047':'#131f34',on?c:'#33415d',18)+t(547,ys[i]-22,`0${i+1} / ${i===0?'AEROBIC':'FERMENTATION'}`,11,c)+t(547,ys[i]+9,names[i],25,W)+t(547,ys[i]+37,out[i],16,c)+'</g>';}
+ return s+t(37,43,'同一个起点，不同的物质去向。',23,W)+t(37,72,'以葡萄糖为底物 · 两类教材常见无氧途径',14,M)+t(927,551,'图标和圆点表示概念与碳数，不代表分子外形。',12,M,'end');
+}
+function molecule(x,y,n,label,c=C){return `<g class="enter">`+rect(x-82,y-44,164,87,'#152a42',c)+dots(x,y-10,n,c)+t(x,y+26,label,18,W,'middle')+'</g>';}
+function ferment(type,step){
+ const alcohol=type==='ethanol',color=alcohol?R:P;let s=t(40,43,alcohol?'酒精途径 / 碳分成 2＋1':'乳酸途径 / 三碳骨架保留',25,W)+t(40,75,'全过程位于细胞质基质 · 分阶段展示总体碳数',15,M);
+ s+=rect(34,105,892,377,'#122039','#2d415d',24)+t(62,139,'CYTOSOL / 细胞质基质',12,M);
+ s+=molecule(164,276,6,'葡萄糖 · 6C',C);
+ s+=line('M257 276 H328',step>=1?C:'#40516b',2.5,step>=1?'class="flow-line"':'')+t(290,250,'酶',14,M,'middle')+t(290,309,'第一阶段',14,C,'middle');
+ if(step>=1){s+=molecule(435,217,3,'丙酮酸 · 3C',C)+molecule(435,345,3,'丙酮酸 · 3C',C)+rect(350,416,175,38,'#1a3b43',C,19)+t(437,442,'糖酵解净得 2 ATP',16,C,'middle');}
+ else{s+=rect(350,185,175,195,'#142239','#33415c')+t(437,277,'先进行糖酵解',19,M,'middle');}
+ s+=line('M531 217 H615 M531 345 H615',step>=2?color:'#40516b',2.5,step>=2?'class="flow-line"':'')+t(574,282,'第二阶段',14,color,'middle');
+ if(step>=2){
+  if(alcohol){for(const y of[217,345]){s+=molecule(720,y,2,step===2?'乙醛 · 2C':'酒精 · 2C',color)+circle(866,y-6,22,'#34324a',R)+t(866,y+1,'CO₂',15,R,'middle');}}
+  else for(const y of[217,345])s+=molecule(748,y,3,step===2?'丙酮酸 · 3C':'乳酸 · 3C',color);
+  s+=t(745,423,step===2?'[H] / NADH 参与还原':'NAD⁺ 再生，糖酵解得以继续',16,color,'middle')+t(745,451,'后续步骤不再增加 ATP',14,M,'middle');
+ }else s+=t(748,279,'等待后续转化',19,M,'middle');
+ s+=t(480,523,alcohol?'最终碳账：6 = 2 × 2 + 2 × 1':'最终碳账：6 = 2 × 3；该途径不释放 CO₂',25,color,'middle');
+ s+=t(480,559,'先看碳数，再看 ATP：产物保留较多能量，有机物未被彻底氧化。',15,M,'middle');return s;
+}
+function flask(cx,y,name,liquid,color,kind,phase){
+ let s='';const d=`M${cx-16} ${y} V${y+36} L${cx-60} ${y+130} Q${cx-66} ${y+149} ${cx-45} ${y+150} H${cx+45} Q${cx+66} ${y+149} ${cx+60} ${y+130} L${cx+16} ${y+36} V${y}`;
+ s+=`<path d="M${cx-41} ${y+100} L${cx-56} ${y+133} Q${cx-61} ${y+145} ${cx-43} ${y+146} H${cx+43} Q${cx+61} ${y+145} ${cx+56} ${y+133} L${cx+41} ${y+100} Z" fill="${color}" opacity="${color==='none'?0:.38}"/>`+line(d,'#91adc9',2.4)+line(`M${cx-19} ${y} H${cx+19}`,'#91adc9',4)+t(cx,y+177,name,18,W,'middle')+t(cx,y+200,liquid,13,M,'middle');
+ if(kind==='yeast')for(let i=0;i<9;i++)s+=`<ellipse cx="${cx-35+(i%5)*17}" cy="${y+116+Math.floor(i/5)*16}" rx="4" ry="6" fill="#e4c89a" opacity=".8"/>`;
+ if(phase>=1&&kind==='yeast')for(let i=0;i<4;i++)s+=circle(cx-7+(i%2)*15,y+89-i*13,3,'none',C);
+ if(kind==='detector')s+=t(cx,y+135,phase>=2?'CO₂ +':'待观察',14,phase>=2?'#e3db7e':W,'middle');return s;
+}
+function experiment(phase,cfg){
+ let s=t(35,35,'对比培养条件，分别检测产物。',25,W)+t(35,64,'定性教学模拟 · 时间与颜色不是实测数据',14,M);
+ const y=105,c2=phase>=2?'#c7c960':'#66afff';
+ s+=t(35,y+14,'A',31,C)+t(35,y+43,'持续供氧',16,C)+rect(37,y+73,65,38,'#1d3447','#4a6d82',9)+t(69,y+98,'气泵',16,W,'middle');
+ s+=flask(200,y,cfg.scrub?'NaOH 吸收瓶':'空的洗气瓶',cfg.scrub?'去除进气中的 CO₂':'空气 CO₂ 可通过',cfg.scrub?'#82bbd6':'none','scrub',phase);
+ s+=flask(430,y,'酵母培养液','同批活酵母 + 葡萄糖','#e5c18e','yeast',phase);
+ s+=flask(670,y,'BTB 检测瓶','气体检验：CO₂',c2,'detector',phase);
+ s+=line(`M102 ${y+92} H133 V${y-14} H193 V${y+132}`,C,2.5)+line(`M208 ${y+61} V${y-24} H423 V${y+132}`,C,2.5)+line(`M438 ${y+61} V${y-13} H663 V${y+132}`,C,2.5)+line(`M678 ${y+61} V${y-13} H763`,C,2.5)+t(759,y+17,'排气 →',13,C,'end');
+ const by=338;
+ s+=t(35,by+14,'B',31,R)+t(35,by+43,'密封观察',16,R)+t(120,by+85,cfg.wait?'先预培养':'未预培养',16,cfg.wait?C:R)+t(120,by+112,cfg.wait?'假定观察窗残氧已耗尽':'初期仍可能有氧',13,M);
+ s+=flask(430,by,'密封培养液',cfg.wait?'观察后续缺氧阶段':'存在过渡期干扰','#e5c18e','yeast',phase)+flask(670,by,'BTB 检测瓶','气体检验：CO₂',c2,'detector',phase);
+ s+=line(`M438 ${by+61} V${by-13} H663 V${by+132}`,C,2.5)+line(`M678 ${by+61} V${by-13} H763`,C,2.5)+t(759,by+17,'排气 →',13,C,'end');
+ for(const [i,yy] of[[0,y],[1,by]]){const positive=i===1&&phase>=3;const col=phase<3?'#697c98':positive?'#8da293':'#dfaa6d';s+=line(`M817 ${yy+48} V${yy+126} Q817 ${yy+144} 834 ${yy+144} Q851 ${yy+144} 851 ${yy+126} V${yy+48}`,'#95aac5',2)+`<path d="M821 ${yy+94} H847 V${yy+126} Q847 ${yy+140} 834 ${yy+140} Q821 ${yy+140} 821 ${yy+126} Z" fill="${col}" opacity=".7"/>`+t(835,yy+30,'另取培养液',13,M,'middle')+t(835,yy+176,phase>=3?(positive?'灰绿色':'未检出酒精'):'待检测酒精',14,positive?C:M,'middle')+t(835,yy+199,'酸性重铬酸钾',12,M,'middle');}
+ return s;
+}
+g.RespDraw={map,ferment,experiment};
+})(window);
+</script><script>(function(){'use strict';
+const $=s=>document.querySelector(s),escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stages=[
+ {short:'先看全局',en:'THE BIG PICTURE',title:'一份葡萄糖，三种去向。',sub:'从 ATP 回到它的主要来源：细胞怎样分解有机物，释放能量？',prompt:'先预测：有没有氧气，最终的碳产物会一样吗？',time:5},
+ {short:'有氧三阶段',en:'THE AEROBIC ROUTE',title:'把反应，放回正确的位置。',sub:'定位细胞质基质、线粒体基质与内膜，再追踪碳、氧和 ATP。',prompt:'请追踪员解释：CO₂ 在哪里产生？氧气又在哪里直接参与？',time:18},
+ {short:'无氧两条路',en:'WHEN OXYGEN IS LIMITED',title:'没有氧气，故事还没结束。',sub:'比较酒精和乳酸两类教材常见无氧途径；先数碳，再看 ATP。',prompt:'少量 ATP 来自哪个阶段？为什么产物里还保留较多能量？',time:12},
+ {short:'酵母实验室',en:'EVIDENCE BEFORE CONCLUSIONS',title:'看到气泡，就能下结论吗？',sub:'设置对比条件、分别检测 CO₂ 和酒精，审查证据能支持到哪一步。',prompt:'让解释员说清：观察到了什么？排除了什么？还不能证明什么？',time:20},
+ {short:'生活决策局',en:'MAKE A REASONED CHOICE',title:'让呼吸原理，解释真实情境。',sub:'四个现场：先作选择，再用条件、反应和产物解释你的判断。',prompt:'不只报答案：用“因为……所以……”完整解释一次。',time:10},
+ {short:'归纳与挑战',en:'BUILD YOUR EXPLANATION',title:'把一条路线，讲成一段证据。',sub:'八道原创情境题与一张比较表，检验你是否真正读懂了过程。',prompt:'离开前，用三个关键词概括两类途径的共同点与差异。',time:15}
+];
+const state={stage:0,route:'aerobic',aerobic:0,location:null,oxygen:false,ferment:'ethanol',fstep:0,fanswer:null,exp:0,scrub:true,wait:true,equal:true,eanswer:null,case:0,caseAnswers:[null,null,null,null],quiz:0,answers:Array(RespContent.quiz.length).fill(null),finished:false,classroom:false};let timer=null,playing=null;
+const svg=(body,label)=>`<svg class="scene" viewBox="0 0 960 580" role="img" aria-label="${label}">${body}</svg>`;
+const button=(act,label,cls='',extra='')=>`<button data-act="${act}" class="${cls}" ${extra}>${label}</button>`;
+const opts=(items,act,selected,correct,disabled=false)=>`<div class="choices">${items.map((s,i)=>`<button data-act="${act}" data-value="${i}" ${disabled?'disabled':''} ${selected!==null?`class="${i===correct?'correct':i===selected?'wrong':''}"`:''} aria-pressed="${selected===i}">${String.fromCharCode(65+i)}. ${s}</button>`).join('')}</div>`;
+const feedback=(selected,correct,yes,no)=>selected===null?'':`<p class="feedback ${selected===correct?'':'bad'}" role="status">${selected===correct?'✓ '+yes:'再想一步：'+no}</p>`;
+const note=(tag,title,body)=>`<aside class="notes"><div class="note-tag">${tag}</div><h2>${title}</h2>${body}</aside>`;
+function bench(scene,controls,model,aside,head='交互观察台',extra=''){return `<div class="workbench"><div class="display"><div class="display-head"><span><i class="live-dot"></i>${head}</span><span>先预测 · 再操作 · 后解释</span></div>${extra}${scene}<div class="scene-controls">${controls}</div><div class="model-note">${model}</div></div>${aside}</div>`;}
+function playButton(mode,label){return button('play-'+mode,playing===mode?'暂停演示 Ⅱ':label,'primary',`aria-pressed="${playing===mode}"`);}
+function mission(){const names={aerobic:'有氧呼吸',ethanol:'酒精发酵',lactate:'乳酸发酵'},info={aerobic:'葡萄糖被彻底氧化，形成 CO₂ 和水，释放较多能量；其中一部分用于形成 ATP。',ethanol:'酵母菌等可沿这一途径形成酒精和 CO₂。有机物未被彻底氧化，形成的 ATP 较少。',lactate:'某些细胞可把丙酮酸还原成乳酸。该教材途径不产生 CO₂，但同样可以靠糖酵解形成少量 ATP。'};
+ const tabs=`<div class="tabs">${Object.entries(names).map(([k,v])=>button('route',v,'',`data-value="${k}" aria-pressed="${state.route===k}"`)).join('')}</div>`;
+ return bench(svg(RespDraw.map(state.route),'同一葡萄糖经有氧氧化、酒精发酵或乳酸发酵的总体去向'),button('goto-aerobic','开始追踪有氧路线 →','primary')+button('goto-ferment','比较无氧路线 →'), '以葡萄糖为底物的总体模式，未展示所有中间反应。ATP 是能量转移分子；图中箭头不表示葡萄糖分子直接变成 ATP。',note('FOLLOW THE CARBON',names[state.route],`<p>${info[state.route]}</p><p class="question">先带着三个问题进入路线：</p><p>① 反应发生在哪里？<br>② 碳最后去了哪里？<br>③ 能量怎样联系 ATP？</p><div class="insight"><b>给全班的第一条线索</b><p>细胞呼吸是细胞内有机物逐步分解、释放能量的过程，与肺的通气和气体交换相联系，但不是同一过程。植物的活细胞也进行细胞呼吸。</p></div>`),'路线总览 / 以碳数为线索',tabs);
+}
+const aerobicInfo=[
+ ['先定位，再追踪。','有氧呼吸并非全部在线粒体里发生。先把葡萄糖分解的起点找出来。','葡萄糖最先在哪个场所初步分解？',0],
+ ['第一阶段：<br>先分成两个三碳。','糖酵解使葡萄糖形成两个丙酮酸，生成[H]，并形成少量 ATP。该阶段不直接消耗 O₂。','第一阶段位于哪里？',0],
+ ['第二阶段：<br>碳最终成为 CO₂。','教材第二阶段概括丙酮酸氧化与三羧酸循环，水参与其中；产生 CO₂、[H]并形成少量 ATP。','教材第二阶段的主要场所？',1],
+ ['第三阶段：<br>氧最终形成水。','内膜上的电子传递与 ATP 形成相联系。O₂ 是末端电子受体；本阶段形成大量 ATP。','第三阶段定位在什么结构？',2]
+];
+function aerobic(){const i=state.aerobic,a=aerobicInfo[i];const tabs=`<div class="steps">${['总览','① 初步分解','② 彻底分解','③ 氧参与'].map((s,k)=>button('astep',s,k===i?'active':'',`data-value="${k}" aria-pressed="${i===k}"`)).join('')}</div>`;
+ let eq=['净反应：C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + 能量','C₆H₁₂O₆ → 2 丙酮酸 + [H] + 少量能量','2 丙酮酸 + H₂O → CO₂ + [H] + 少量能量','[H] + O₂ → H₂O + 大量能量'][i];
+ let detail=i===0?'全部过程由酶催化；释放的能量部分用于合成 ATP，部分以热等形式散失。':'阶段简图省略部分系数和中间步骤；箭头上的酶、ADP和Pi等未逐一画出。';
+ let side=note('LOCATE → TRACE → EXPLAIN',a[0],`<p>${a[1]}</p><p class="question">${a[2]}</p>${opts(['细胞质基质','线粒体基质','线粒体内膜'],'location',state.location,a[3])}${feedback(state.location,a[3],'位置正确。请指出图中对应区域。','观察内膜和基质的边界，再选择。')}<div class="insight"><b>${state.oxygen?'追踪氧的直接去向':'[H] 不是 H₂ 气体'}</b><p>${state.oxygen?(i===0||i===3?'O₂ 在第三阶段接受电子并形成水。CO₂ 的碳来自有机物，不能把 O₂ 直接连到 CO₂。':'这一阶段不直接消耗 O₂。完整有氧途径仍依赖末端反应使载体再氧化，不能据此说整体不需要氧。'):'[H] 是教材简写，具体涉及 NADH、FADH₂ 等还原型辅酶所携带的还原力。不是氢气气泡。'}</p></div>`);
+ return bench(svg(RespScene.aerobic(i),'真核细胞有氧呼吸三个阶段的区室、碳数、氧气与ATP形成'),playButton('aerobic',i===3?'从头演示 ▶':'自动演示 ▶')+button('anext','下一阶段 →','',i===3?'disabled':'')+button('areset','重置 ↻')+`<label class="checkline"><input type="checkbox" data-change="oxygen" ${state.oxygen?'checked':''}>追问 O₂ 去向</label>`,`三阶段是真核细胞的教材总体模型；圆点只表示碳数，不是 TCA 首圈的逐原子轨迹。内膜内陷形成嵴，膜线并非磷脂双层的分子放大图。`,side,'三阶段 / 反应位置与物质去向',tabs)+`<div class="equation" style="margin:16px 0 0">${eq}<small>${detail}</small></div><details><summary>展开：总反应中的水，为什么有两种写法？</summary><p>未约去水：C₆H₁₂O₆ + 6 H₂O + 6 O₂ → 6 CO₂ + 12 H₂O + 能量。约去两侧各 6 H₂O 后，净反应为 C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + 能量。第二阶段也有水参与；净系数不等于逐个水分子的原子来源。不同资料的阶段划分可有差别，不改变基本机制。</p><p>ATP 产量受物种、穿梭和跨膜转运、膜耦联等条件影响，本课不把“38 ATP”或任何单个估计写成所有细胞的固定产量。原核细胞没有线粒体，部分仍能进行有氧呼吸，其反应场所不能直接套用这张真核图。</p></details>`;
+}
+function ferment(){let k=state.fstep,alcohol=state.ferment==='ethanol';const tabs=`<div class="tabs">${button('ferment','酒精途径','',`data-value="ethanol" aria-pressed="${alcohol}"`)}${button('ferment','乳酸途径','',`data-value="lactate" aria-pressed="${!alcohol}"`)}</div>`;
+ let side=note('COUNT CARBON, THEN ATP',alcohol?'两个二碳，<br>加两个一碳。':'两个三碳，<br>没有 CO₂。',`<p>${alcohol?'酵母菌等可进行酒精发酵。先由三碳丙酮酸脱去 CO₂，形成二碳中间物乙醛，再还原成酒精。':'动物肌细胞等可形成乳酸；马铃薯块茎等某些植物组织也可走乳酸途径，不能把所有植物的无氧产物都说成酒精。'}</p><p class="question">后续转为酒精或乳酸，还会另外形成 ATP 吗？</p>${opts(['会，第二阶段再形成大量 ATP','不会；全程净得的 2 ATP 来自糖酵解','不会，所以全程没有 ATP'],'fanswer',state.fanswer,1)}${feedback(state.fanswer,1,'对。后续步骤帮助再生 NAD⁺，使糖酵解可以继续。','把“后续不产 ATP”与“全过程不产 ATP”分开。')}<div class="insight"><b>不要只记“缺氧”两个字</b><p>糖酵解在有氧条件下也会发生。细胞采用哪条后续途径，还取决于细胞类型和代谢状态。乳酸形成并不等于环境完全无氧。</p></div>`);
+ return bench(svg(RespDraw.ferment(state.ferment,k),'葡萄糖经丙酮酸形成酒精与二氧化碳或乳酸的碳数比较'),playButton('ferment',k===3?'重新演示 ▶':'演示这条路线 ▶')+button('fnext','下一步 →','',k===3?'disabled':'')+button('freset','重置 ↻')+`<span class="status">${['起点 / 葡萄糖','糖酵解 / 净得 2 ATP','后续转化 / 不另产 ATP','产物形成 / 再生 NAD⁺'][k]}</span>`,`常见糖酵解先投入 2 ATP、后形成 4 ATP，净得 2 ATP。颜色与移动只是阶段示意，非原子机理。乳酸在细胞内通常以乳酸根形式存在。`,side,'两类常见无氧途径 / 总体碳数账',tabs)+`<div class="equation" style="margin:16px 0 0">${alcohol?'C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂ + 少量能量':'C₆H₁₂O₆ → 2 C₃H₆O₃ + 少量能量'}<small>由相应酶催化。此处沿用高中教材“无氧呼吸”框架；严格微生物学用语中，这两类过程通常称为发酵。</small></div>`;
+}
+function experiment(){const p=state.exp,valid=state.scrub&&state.wait&&state.equal;let caution=[];if(!state.scrub)caution.push('A 组未去除空气 CO₂，不能把指示剂变化全部归因于酵母。');if(!state.wait)caution.push('B 组未经预培养，初期残氧及过渡期会干扰“无氧”归因。');if(!state.equal)caution.push('A 组接种量加倍，改变了供氧以外的条件，比较存在混杂。');
+ const config=`<div class="experiment-config"><label class="checkline"><input data-change="scrub" type="checkbox" ${state.scrub?'checked':''}>A 组进气先通过 NaOH，吸收空气中的 CO₂</label><label class="checkline"><input data-change="wait" type="checkbox" ${state.wait?'checked':''}>B 组先封口预培养，模型假定观察窗开始时残氧已耗尽</label><label class="checkline"><input data-change="equal" type="checkbox" ${state.equal?'checked':''}>保持同批酵母、接种量、糖浓度、体积、温度和观察时段一致</label></div>`;
+ const side=note('OBSERVATION ≠ CONCLUSION','先看现象，<br>再审查证据。',`<p>${['准备装置，先预测两组是否都能产生 CO₂。取消一个条件，试试会影响哪条推论。','模拟培养：A 持续供气；B 不主动补气。气泡只示意有气体通过，不是气量计。','两组 BTB 由蓝趋黄。本模型排除其他酸碱干扰，指示 CO₂ 进入试剂。','另取培养液检测酒精：B 出现灰绿色；A 在本次预设中低于检测限。'][p]}</p>${caution.length?`<p class="feedback bad">${caution.join('<br>')}</p>`:'<p class="feedback">✓ 对比条件已具备；结论仍须结合检测和模型假设。</p>'}<p class="question">仅凭两组 CO₂ 检测均为阳性，能判断呼吸方式吗？</p>${opts(['能，有 CO₂ 就是有氧呼吸','不能，两条酵母分解途径都可产生 CO₂','能，气泡较少就是纯无氧呼吸'],'eanswer',state.eanswer,1)}${feedback(state.eanswer,1,'正确。还要结合供氧条件、酒精等指标及合适空白。','气体的存在与形成它的途径不是一一对应。')}<div class="insight"><b>${valid?'结论的适用范围':'当前设计有待改进'}</b><p>${valid?'这组预设结果支持缺氧观察阶段发生酒精发酵。不能由此推广为“有氧酵母永不发酵”；菌株、糖浓度和供氧等都会影响结果。':'请先指出控制缺口，再解释它影响了哪条结论。产物信号可能仍然出现，但证据不够充分。'}</p></div>`);
+ return bench(svg(RespDraw.experiment(p,state),'持续供氧组经NaOH洗气、酵母培养液、BTB，密封组先预培养，另取培养液检测酒精'),playButton('experiment',p===3?'重新观察 ▶':'运行模拟 ▶')+button('enext','下一步观察 →','',p===3?'disabled':'')+button('ereset','重置观察 ↻')+`<span class="status">${p+1} / 4 · ${['准备','培养','检验 CO₂','检验酒精'][p]}</span>`,`固定的定性情境，不是实验记录。A 组设定供氧适宜、糖条件下酒精低于本次检测限，并非绝对为零。BTB 是 pH 指示剂；两组颜色不用于定量比较 CO₂ 或呼吸速率。`,side,'酵母菌对比实验 / 培养与检测分开',config)+`<details><summary>实验解释卡：每一步排除了什么？</summary><p>NaOH 放在培养瓶上游，吸收进气原有的 CO₂，不去除 O₂；NaOH 不能进入培养液。若放在培养瓶下游，会吸收需要检测的 CO₂。长进气管深入液体、短出气管取上部气体；BTB 检验与另取培养液检测酒精分开。</p><p>封口不代表瞬间无氧；预培养用于减少残氧干扰，本模型只解释之后的观察窗，不把预培养阶段的所有气体都算作无氧产物。真实实验需结合气路空白、试剂空白及合适的阳性对照，排查漏气、试剂状态与其他还原性物质干扰。</p><p>取消最后一项时，本情境把 A 组接种量加倍，其余不变。无论是否保持一致，画面都不生成虚构的毫升数或速率曲线；若要比较真实速率，须取得可靠的时间、底物消耗和气体收集数据。</p></details>`;
+}
+const cases=[
+ {tag:'01 / POSTHARVEST',name:'果蔬保鲜库',hint:'氧气越少，保存越好吗？',title:'库里的果实，依旧是活的。',body:'一种果实在适宜低温、适度低氧条件下呼吸减弱。有人建议把氧彻底除尽、长期密封，认为这样就能“零消耗”。',q:'怎样评价这个方案？',choices:['可以，所有活细胞只要无氧就停止代谢','应控制在适宜范围，长期严重缺氧可能引起发酵和品质变化','温度越低越好，所有果实都应冰冻'],answer:1,why:'适度抑制呼吸可减少有机物消耗；但严重缺氧可能引起酒精发酵，过低温也可能损伤某些果实。具体条件取决于品种，不能给所有果蔬一套数值。'},
+ {tag:'02 / FERMENTATION',name:'酵母发酵罐',hint:'有氧，就一定没酒精吗？',title:'气泵开着，证据仍需检测。',body:'同学在连续通气的酿酒酵母培养体系里检测到了酒精。仅因为“通了气”，另一位同学就判定检测必定出错。',q:'哪种解释更严谨？',choices:['有酒精就证明整个装置从始至终无氧','有气泵就证明每个细胞都只进行有氧呼吸','需核查供氧、糖浓度和检测条件；某些酵母在有氧高糖条件下也可发酵'],answer:2,why:'培养条件不是呼吸途径的直接开关。通气、溶氧、细胞状态和菌株都会影响代谢；酒精阳性支持存在酒精发酵，但不排除同时有有氧呼吸。'},
+ {tag:'03 / MUSCLE CELLS',name:'运动肌细胞',hint:'乳酸是永远堆着的废物？',title:'短时供能，不只有一条路。',body:'运动时肌细胞的 ATP 需求迅速增加。糖酵解和乳酸生成可增加，但这不意味着细胞完全没有氧，也不意味着有氧呼吸停止。',q:'乳酸途径中，后续反应的重要意义是？',choices:['再生 NAD⁺，使糖酵解继续形成少量 ATP','把所有有机物变成 CO₂ 和水','给第二阶段额外制造大量 ATP'],answer:0,why:'丙酮酸接受还原力形成乳酸，使 NADH 再氧化为 NAD⁺。乳酸也可继续被代谢利用，不能把次日酸痛简单归因于乳酸堆积。'},
+ {tag:'04 / ROOT ENVIRONMENT',name:'积水中的根系',hint:'植物也需要有氧呼吸？',title:'根细胞也要合成 ATP。',body:'土壤长时间积水，气体扩散受到限制，根细胞供氧不足。有人认为“植物会光合作用，所以根系不用氧气”。',q:'应怎样解释长期积水的影响？',choices:['植物有叶绿体，所有部位都能靠光照补足 ATP','根的有氧呼吸可能受限；长期供氧不足会影响正常代谢','没有氧时根会转向酒精发酵，ATP产量一定增加'],answer:1,why:'根细胞通常依靠呼吸供能，不能用叶片的光合作用替代根细胞中的全部 ATP 供应。低氧可改变代谢，耐受程度因物种、组织与时间而异。'}
+];
+function decisions(){const c=cases[state.case],answer=state.caseAnswers[state.case];return `<div class="wide-layout"><div class="brief"><div class="case-grid">${cases.map((c,i)=>`<button class="case-card" data-act="case" data-value="${i}" aria-pressed="${state.case===i}"><span>${c.tag}</span><b>${c.name}</b><small>${c.hint}</small></button>`).join('')}</div><div class="case-scene enter"><span class="eyebrow">${c.tag}</span><h2>${c.title}</h2><p>${c.body}</p><div class="answer-counter">${state.caseAnswers.map((a,i)=>`<span class="done-dot ${a===cases[i].answer?'done':''}"></span>`).join('')}<span>已解释 ${state.caseAnswers.filter((a,i)=>a===cases[i].answer).length} / 4 个情境</span></div></div></div>${note('REASON, NOT JUST AN ANSWER','让每个选择，<br>都带上理由。',`<p class="question">${c.q}</p>${opts(c.choices,'caseanswer',answer,c.answer)}${feedback(answer,c.answer,c.why,'先判断题干的对象与条件，避免“所有”“一定”“完全”等过度推论。')}<div class="insight"><b>学生讲解句式</b><p>“在……条件下，……反应受到影响；因此……。但这个结论不能直接推广到……。”</p></div>`)}</div>`;}
+function review(){const q=RespContent.quiz[state.quiz],answer=state.answers[state.quiz];return `<div class="wide-layout"><div class="brief"><span class="eyebrow">ONE GLUCOSE · THREE OUTCOMES</span><h2 style="font-size:26px;font-weight:500;margin:10px 0">分解有机物，释放能量。</h2><p class="small">共同起点是糖酵解；后续路线决定碳的去向与 ATP 的形成特点。</p><div class="summary-grid"><div class="summary-card"><b>有氧呼吸</b><p>细胞质基质 → 线粒体<br>彻底氧化 → CO₂ 和水<br>形成较多 ATP</p></div><div class="summary-card"><b>酒精途径</b><p>细胞质基质<br>酒精 + CO₂<br>全程净得 2 ATP</p></div><div class="summary-card"><b>乳酸途径</b><p>细胞质基质<br>乳酸，无 CO₂<br>全程净得 2 ATP</p></div></div><div class="callout">请学生用一句话解释：<br><b>“O₂ 并不是用来直接把碳变成 CO₂ 的。”</b></div><details><summary>展开本课结论与边界</summary><p>① 物质的变化要结合位置：第一阶段细胞质基质、教材第二阶段线粒体基质、第三阶段内膜。<br>② O₂ 的直接还原产物是水，CO₂ 在教材第二阶段产生。<br>③ 部分能量联系 ATP 合成，部分以热等形式散失；ATP 图标数量不是实际总产量。<br>④ 两类发酵都不彻底分解有机物，后续步骤主要再生 NAD⁺；ATP 来自糖酵解。<br>⑤ 观察 CO₂ 不足以单独区分酵母的呼吸方式，应结合条件与其他检测证据。</p><p>本课只选常见途径。严格微生物学中的“厌氧呼吸”还包括利用电子传递链、以非氧物质作最终电子受体的过程，与这里的发酵机制不同。</p></details><p class="small">全为原创情境题，不标为湖北或其他省份高考原题。计算题为题干限定条件下的理想模型。</p></div><div class="quiz-box">${state.finished?`<span class="eyebrow">MISSION COMPLETE</span><h2>完成八次证据判断。</h2><p>本轮答对 ${state.answers.filter((a,i)=>a===RespContent.quiz[i].answer).length} / ${RespContent.quiz.length} 题。</p><p style="font-size:13px;color:#53716b">请任选一题，由学生解释“错误选项错在哪里”。</p>${button('quizreset','重新挑战 ↻')}`:`<span class="eyebrow">课堂挑战 / ${state.quiz+1} OF ${RespContent.quiz.length}</span><h3>${escape(q.stem)}</h3>${opts(q.options.map(escape),'quizanswer',answer,q.answer)}${answer!==null?`<p class="feedback ${answer===q.answer?'':'bad'}">${answer===q.answer?'✓ 判断正确。':'正确选项：'+String.fromCharCode(65+q.answer)+'。'} ${escape(q.explanation)}</p>`:'<p class="feedback">先独立判断，再请同伴说明依据。</p>'}<div class="quiz-buttons">${button('quizprev','← 上一题','',state.quiz===0?'disabled':'')}${button('quiznext',state.quiz===RespContent.quiz.length-1?'查看完成情况 →':'下一题 →','',answer===null?'disabled':'')}</div><div class="answer-counter">${state.answers.map((a,i)=>`<span class="done-dot ${a!==null?'done':''}" title="第${i+1}题"></span>`).join('')}</div>`}</div></div>`;}
+function render(){const focus=document.activeElement?.dataset,focusedAct=focus?.act,focusedValue=focus?.value;$('#nav').innerHTML=stages.map((s,i)=>`<button data-act="stage" data-value="${i}" ${state.stage===i?'aria-current="step"':''}><span class="num">0${i+1}</span><span>${s.short}<small>${s.en}</small></span></button>`).join('');const s=stages[state.stage];$('#kicker').textContent=`CHAPTER 05 / ${s.en}`;$('#title').textContent=s.title;$('#subtitle').textContent=s.sub;$('#stageNumber').textContent=`0${state.stage+1}`;$('#counter').textContent=`0${state.stage+1} / 06`;$('#prompt').textContent=s.prompt;$('#content').innerHTML=[mission,aerobic,ferment,experiment,decisions,review][state.stage]();document.querySelector('[data-act="prev"]').disabled=state.stage===0;document.querySelector('[data-act="next"]').disabled=state.stage===5;if(focusedAct){const candidate=[...document.querySelectorAll('[data-act]')].find(e=>e.dataset.act===focusedAct&&e.dataset.value===focusedValue);if(candidate&&!candidate.disabled)candidate.focus({preventScroll:true});}}
+function stop(){clearInterval(timer);timer=null;playing=null;}
+function goto(index){stop();state.stage=Math.max(0,Math.min(5,index));render();}
+function play(mode){if(playing===mode){stop();render();return;}stop();const key={aerobic:'aerobic',ferment:'fstep',experiment:'exp'}[mode];if(state[key]===3)state[key]=0;playing=mode;render();timer=setInterval(()=>{state[key]=Math.min(3,state[key]+1);if(mode==='aerobic')state.location=null;if(state[key]===3)stop();render();},3400);}
+function showDialog(kind){stop();render();const teacher=kind==='teacher';$('#dialogKicker').textContent=teacher?'TEACHER’S ROUTE MAP':'SCIENCE & MODEL NOTES';$('#dialogTitle').textContent=teacher?'让每次操作，都有一句解释。':'依据、来源与简化边界';const st=stages[state.stage];$('#dialogBody').innerHTML=teacher?`<p class="callout">当前环节：${st.short}<br>${st.prompt}</p><h3>建议 2 课时，共约 80 分钟</h3><p>第一课时：总览、有氧与无氧路线；第二课时：实验、应用与挑战。也可择取环节用于复习，不要求一次讲完。</p><div class="pace">${stages.map(s=>`<div><b>${s.short}</b><span>建议 ${s.time} 分钟</span></div>`).join('')}</div><h3>三人协作，轮流上台</h3><ol><li>操作员：先说预测，再点击、改变条件或推进动画。</li><li>追踪员：指出反应区室，数清碳数，追踪氧气的直接去向。</li><li>解释员：把现象变成有条件的结论，指出模型没有证明的部分。</li></ol><h3>本课目标</h3><ul><li>描述有氧呼吸的三个阶段及主要场所，联系物质变化与 ATP 形成。</li><li>比较两类常见无氧途径的产物、ATP 来源与碳数。</li><li>设计与审查酵母菌对比实验，区分观察、解释与过度推论。</li></ul><details><summary>科学教学提示</summary><ol>${RespContent.teacherNotes.map(s=>`<li>${escape(s)}</li>`).join('')}</ol></details><p class="small">左右方向键切环节；焦点位于控件、文本选择或对话框中时保留原有键盘功能。切环节、打开资料或切到后台时，自动演示暂停。学习记录只在本次打开期间保留。</p>`:`<p class="callout">${escape(RespContent.scopeNote)}</p><h3>模型是什么，省略了什么？</h3><ul><li>全部图形与动画均为原创二维教学示意，非电子显微照片或原子结构模型。参考国外互动教学的“总览—局部—证据”组织方式，未复制其动画或图片。</li><li>碳点是总体碳数记账，不逐个追踪真实原子在三羧酸循环中的位置；圆点大小、动画秒数、ATP标签都不是测量数据。</li><li>三阶段图以真核细胞为对象。教材第二阶段包含丙酮酸氧化与三羧酸循环；第三阶段概括内膜上的电子传递及与ATP合成的耦联。</li><li>阶段式省略系数、部分底物和中间物；[H]代表相关还原性载体携带的还原力，不能当作H₂。完整净反应已配平；水的净系数与原子来源不能混为一谈。</li><li>发酵后续反应再生NAD⁺，不再额外形成ATP。课内常见糖酵解模型每葡萄糖净得2ATP；不将有氧产量固定为一个通用整数。</li><li>酵母试验是预设的定性情境：A组酒精低于本次检测限；B组有CO₂和酒精信号。未建真实生长动力学、检出限曲线或CO₂速率模型。有氧条件不排除某些酵母发生酒精发酵。</li><li>酸性重铬酸钾在适当对照下用于酒精检测，也可受其他还原性物质干扰；BTB为pH指示剂，本模型假定其变化来自CO₂。实际实验需按学校规范进行。</li></ul><h3>教材与科学资料</h3><ul class="reference-list">${RespContent.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${escape(r.title)} ↗</a><small>${escape(r.note)}</small></li>`).join('')}<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC184133/" target="_blank" rel="noopener">Postma 等 · 酿酒酵母有氧代谢与 Crabtree 效应 ↗</a><small>原始研究；核对“有氧”与“绝不产生酒精”不能画等号。</small></li><li><a href="https://ucanr.edu/datastoreFiles/608-411.pdf" target="_blank" rel="noopener">UC ANR · 果蔬采后品质与控制气氛 ↗</a><small>核对适度控制氧气与严重缺氧导致发酵的不同后果，不据此给所有果实同一套储藏参数。</small></li></ul><h3>优秀教学案例 · 推荐教师联网拓展</h3><ul class="reference-list"><li><a href="https://www.biointeractive.org/classroom-resources/cellular-respiration-hub" target="_blank" rel="noopener">HHMI BioInteractive · Cellular Respiration Hub ↗</a><small>参考全局路线与局部机制相互联系的学习组织。原资源与本课件独立，未嵌入其图片或动画。</small></li><li><a href="https://www.wehi.edu.au/wehi-tv/respiration-teacher-resources/" target="_blank" rel="noopener">WEHI TV · Respiration teacher resources ↗</a><small>可作课后分子尺度拓展，细节超出本课必修范围。</small></li><li><a href="https://learn.genetics.utah.edu/content/metabolism/pathways/" target="_blank" rel="noopener">University of Utah · Metabolic Pathways ↗</a><small>参考代谢区室、燃料与细胞类型相联系的可视化组织。</small></li></ul><p class="small">正文、问题与二维图形原创。单文件离线运行，资料链接仅供联网查阅；未嵌入外部运行资源。新建独立 v1.0，已有课件全部保留。</p>`;$('#infoDialog').showModal();}
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const act=el.dataset.act,v=el.dataset.value,n=Number(v);switch(act){case'stage':goto(n);return;case'prev':goto(state.stage-1);return;case'next':goto(state.stage+1);return;case'goto-aerobic':goto(1);return;case'goto-ferment':goto(2);return;case'teacher':case'sources':showDialog(act);return;case'close':$('#infoDialog').close();return;case'classroom':state.classroom=!state.classroom;document.body.classList.toggle('classroom',state.classroom);$('#classButton').textContent=state.classroom?'退出投屏 ↙':'投屏模式 ⤢';$('#classButton').setAttribute('aria-pressed',state.classroom);return;case'route':state.route=v;break;case'astep':stop();state.aerobic=n;state.location=null;break;case'anext':stop();state.aerobic=Math.min(3,state.aerobic+1);state.location=null;break;case'areset':stop();state.aerobic=0;state.location=null;break;case'location':state.location=n;break;case'ferment':stop();state.ferment=v;state.fstep=0;state.fanswer=null;break;case'fnext':stop();state.fstep=Math.min(3,state.fstep+1);break;case'freset':stop();state.fstep=0;break;case'fanswer':state.fanswer=n;break;case'enext':stop();state.exp=Math.min(3,state.exp+1);break;case'ereset':stop();state.exp=0;state.eanswer=null;break;case'eanswer':state.eanswer=n;break;case'case':state.case=n;break;case'caseanswer':state.caseAnswers[state.case]=n;break;case'quizanswer':state.answers[state.quiz]=n;break;case'quiznext':if(state.quiz<RespContent.quiz.length-1)state.quiz++;else state.finished=true;break;case'quizprev':state.quiz=Math.max(0,state.quiz-1);break;case'quizreset':state.quiz=0;state.answers.fill(null);state.finished=false;break;default:if(act.startsWith('play-')){play(act.slice(5));return;}}render();});
+document.addEventListener('change',e=>{const key=e.target.dataset.change;if(!key)return;state[key]=e.target.checked;if(key!=='oxygen'){stop();state.exp=0;state.eanswer=null;}render();});
+document.addEventListener('keydown',e=>{if($('#infoDialog').open||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||/^(INPUT|TEXTAREA|SELECT|BUTTON|A|SUMMARY)$/.test(document.activeElement.tagName)||document.activeElement.isContentEditable||window.getSelection()?.toString())return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();goto(state.stage+(e.key==='ArrowRight'?1:-1));}});
+document.addEventListener('visibilitychange',()=>{document.body.classList.toggle('pause-motion',document.hidden);if(document.hidden&&playing){stop();render();}});render();
+})();
+</script></body></html>
