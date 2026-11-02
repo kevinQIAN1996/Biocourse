@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="人教版必修2 DNA的结构。用工程建模、反向平行焊接、DNA熔解与卡伽夫计算开展探究式课堂。">
+  <title>1953卡文迪许分子制图局 · DNA双螺旋工程蓝图</title>
+  <script src="https://cdn.tailwindcss.com" async onload="if(window.tailwind)window.tailwind.config={corePlugins:{preflight:false}}"></script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer onload="window.lucide&&window.lucide.createIcons()"></script>
+  <style>
+    :root { --paper:#f4f3ef; --ink:#152c40; --blue:#0f2942; --cobalt:#2563eb; --cyan:#8fe3ee; --line:#233f5529; --muted:#637484; --a:#e11d48; --t:#d97706; --g:#059669; --c:#7c3aed; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background-color:var(--paper); background-image:radial-gradient(#8a9bab55 .7px,transparent .7px); background-size:16px 16px; font:15px/1.65 Inter,"Segoe UI","Microsoft YaHei",sans-serif; }
+    button,input,select { font:inherit; }
+    button,summary { cursor:pointer; }
+    button { transition:background .2s,transform .2s,border-color .2s; }
+    button:hover:not(:disabled) { transform:translateY(-2px); }
+    button:active:not(:disabled) { transform:translateY(1px); }
+    button:disabled { opacity:.4; cursor:not-allowed; }
+    :focus-visible { outline:3px solid #e7a52f; outline-offset:4px; }
+    [hidden] { display:none!important; }
+    svg { display:block; width:100%; height:auto; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font-size:clamp(34px,4.3vw,65px); line-height:1.14; letter-spacing:-2.5px; font-weight:800; }
+    h2 { font-size:clamp(23px,2.6vw,34px); line-height:1.3; letter-spacing:-.7px; }
+    h3 { font-size:17px; line-height:1.4; }
+    a { color:#1954a7; text-underline-offset:4px; }
+    .mono,.eyebrow,.number { font-family:Consolas,"Courier New",monospace; }
+    .eyebrow { font-size:10px; letter-spacing:1.7px; text-transform:uppercase; }
+    .small { font-size:12px; }.tiny { font-size:10px; }.muted { color:var(--muted); }
+    .row { display:flex; gap:9px; flex-wrap:wrap; align-items:center; }.spread { justify-content:space-between; }
+    .stack { display:grid; gap:13px; }.grid { display:grid; gap:20px; }.two { grid-template-columns:1fr 1fr; }
+    .btn { border:1px solid #798d9c66; border-radius:2px; padding:10px 15px; background:#fff9; color:var(--ink); display:inline-flex; align-items:center; justify-content:center; gap:7px; font-size:12px; font-weight:650; line-height:1.5; }
+    .btn svg { width:15px; height:15px; }.btn.primary { background:var(--blue); color:white; border-color:var(--blue); }.btn.active { background:#dce9f6; color:#133e70; border-color:#2563eb; box-shadow:inset 3px 0 #2563eb; }.btn.compact { padding:6px 10px; font-size:11px; }
+    .tag { display:inline-block; border:1px solid currentColor; padding:3px 7px; font:10px Consolas,monospace; letter-spacing:.5px; }.tag.gold { color:#99620b; background:#fff0cc; }.tag.good { color:#067f5c; background:#dbf7e9; }
+    .topbar { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--line); background:#f4f3eff0; backdrop-filter:blur(14px); }
+    .topinner { max-width:1420px; margin:auto; padding:12px 30px; display:flex; gap:15px; align-items:center; }
+    .brand { display:flex; align-items:center; gap:11px; flex:1; }.brandmark { width:35px; height:35px; border:1px solid var(--ink); display:grid; place-items:center; font:700 19px Georgia,serif; }.brand strong { display:block; font-size:13px; }.brand small { display:block; font:8px Consolas,monospace; letter-spacing:1.2px; color:var(--muted); }
+    .wrap { max-width:1420px; margin:auto; padding:0 30px 130px; }
+    .hero { padding:35px 0 28px; display:grid; grid-template-columns:1fr 220px; gap:35px; align-items:end; }.hero .eyebrow { margin-bottom:13px; color:#556e84; }.hero em { font-style:normal; color:var(--cobalt); }.hero p { margin-top:15px; max-width:760px; color:#5b6f7d; font-size:13px; }
+    .titleblock { border:1px solid var(--ink); display:grid; grid-template-columns:1fr 1fr; background:#f4f3ef; }.titleblock div { padding:9px 12px; border-bottom:1px solid var(--line); }.titleblock small { display:block; font:8px Consolas,monospace; color:var(--muted); }.titleblock b { font:21px Consolas,monospace; }.titleblock .wide { grid-column:1/-1; font-size:10px; border:0; }
+    .navtabs { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--ink); margin-bottom:30px; background:var(--paper); }.navtab { border:0; border-right:1px solid var(--ink); text-align:left; padding:14px 17px; background:transparent; color:var(--muted); display:flex; gap:14px; align-items:center; }.navtab:last-child { border-right:0; }.navtab b { font:23px Consolas,monospace; }.navtab strong { display:block; font-size:13px; }.navtab small { display:block; font:8px Consolas,monospace; letter-spacing:.5px; margin-top:3px; }.navtab.active { background:var(--blue); color:white; }.navtab.done b:after { content:'✓'; font-size:11px; color:#49d0ab; }
+    .sectionhead { display:flex; gap:20px; justify-content:space-between; align-items:flex-start; margin-bottom:20px; }.sectionhead .eyebrow { color:var(--cobalt); margin-bottom:7px; }.sectionhead p { max-width:850px; margin-top:8px; font-size:13px; color:#5b6f7d; }
+    .sheet { border:1px solid var(--line); background:#fffdf8e8; min-width:0; }.sheethead { border-bottom:1px solid var(--line); padding:16px 20px; display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }.sheethead p { margin-top:5px; font-size:11px; color:var(--muted); }.sheetbody { padding:20px; }
+    .blueprint { background-color:var(--blue); background-image:linear-gradient(#8fe3ee08 1px,transparent 1px),linear-gradient(90deg,#8fe3ee08 1px,transparent 1px); background-size:24px 24px; color:#dceef9; position:relative; overflow:hidden; }.blueprint .sheethead { border-color:#8fe3ee33; }.blueprint .sheethead p,.blueprint .muted { color:#8ca9bc; }.blueprint .btn { border-color:#91c9e266; background:#ffffff09; color:#dceef9; }.blueprint .btn.active { background:#8fe3ee22; border-color:var(--cyan); color:white; }.blueprint .tag { color:#8fe3ee; }
+    .historygrid { grid-template-columns:minmax(270px,.75fr) minmax(0,1.45fr); }.photo { max-width:270px; margin:0 auto 15px; background:#091b2a; }.evidence { display:grid; grid-template-columns:30px 1fr; gap:7px; padding:10px 0; border-top:1px solid var(--line); font-size:12px; }.evidence b { font:17px Consolas,monospace; color:#2d6f91; }
+    .schemebuttons { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-bottom:15px; }.schemebuttons .btn { text-align:left; justify-content:flex-start; align-items:flex-start; padding:10px; }.schemebuttons b { font:18px Consolas,monospace; }.schemebuttons span { font-size:11px; }
+    .scene { position:relative; }.scene svg { max-height:455px; }.scenehud { position:absolute; left:22px; top:16px; pointer-events:none; font:10px Consolas,monospace; color:#74b8c9; }.scenefine { border-top:1px solid #8fe3ee33; padding:11px 20px; font-size:10px; color:#8ca9bc; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .validation { display:grid; grid-template-columns:repeat(3,1fr); margin:13px 0; gap:8px; }.validation div { border:1px solid var(--line); padding:11px; background:#fff8; font-size:11px; }.validation b { display:block; font-size:15px; margin-bottom:3px; }.pass { color:#07825e; }.fail { color:#c83653; }
+    .feedback { border-left:3px solid var(--cobalt); background:#e8eff5; padding:12px 15px; font-size:12px; color:#345269; line-height:1.8; }.feedback.gold { border-color:#d58c16; background:#fff1d5; color:#7c531b; }.feedback.good { border-color:#059669; background:#e1f5eb; color:#24604d; }.feedback.bad { border-color:#e11d48; background:#fbe7eb; color:#873547; }
+    .controls { border-top:1px solid var(--line); padding:15px 20px; }.sliderline { display:grid; grid-template-columns:1fr 60px; gap:15px; align-items:center; }.sliderline input { width:100%; margin:8px 0; accent-color:var(--cobalt); }.sliderline output { font:bold 17px Consolas,monospace; text-align:right; }.fieldlabel { font-size:12px; display:flex; align-items:center; gap:7px; justify-content:space-between; }
+    .cadgrid { grid-template-columns:minmax(0,1.7fr) minmax(260px,.75fr); }.cadstage svg { max-height:560px; }.legend { display:flex; gap:13px; flex-wrap:wrap; padding:12px 20px; font-size:10px; border-top:1px solid #8fe3ee33; }.legend i { display:inline-block; width:7px; height:7px; margin-right:5px; }.countgrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }.count { border:1px solid var(--line); padding:13px; }.count strong { font:36px Consolas,monospace; display:block; color:var(--cobalt); }.count span { font-size:11px; color:var(--muted); }.probe { display:grid; gap:8px; }.probe button { justify-content:flex-start; text-align:left; }.fact { border-top:1px solid var(--line); padding-top:13px; font-size:12px; margin-top:15px; }.fact b { display:block; margin-bottom:5px; }
+    .base-key { display:flex; gap:7px; flex-wrap:wrap; margin-top:12px; }.base-key span { padding:3px 7px; color:white; font:11px Consolas,monospace; }
+    .thermalgrid { grid-template-columns:1fr 1.1fr; }.thermalcontrols { padding:18px 20px; }.thermalmetrics { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }.thermalmetrics div { padding:12px 15px; border-right:1px solid var(--line); }.thermalmetrics div:last-child { border:0; }.thermalmetrics strong { display:block; font:25px Consolas,monospace; color:var(--cobalt); }.thermalmetrics span { font-size:10px; color:var(--muted); }
+    .thermalview svg { max-height:230px; }.chart svg { width:100%; }.calcsliders { display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; }.calctable { width:100%; border-collapse:collapse; font-size:12px; font-family:Consolas,"Microsoft YaHei",monospace; }.calctable th,.calctable td { border-bottom:1px solid var(--line); padding:10px 6px; text-align:center; }.calctable th:first-child,.calctable td:first-child { text-align:left; }.calctable th { color:var(--muted); font-weight:400; }.calctable td { font-size:16px; }.calctable td:first-child { font:11px system-ui,sans-serif; }.golden { border:1px solid #c3983b; padding:15px; background:#fff4d8; margin-top:15px; }.golden strong { font:32px Consolas,monospace; }.invariant { display:flex; justify-content:space-between; gap:9px; align-items:center; }.ratios { display:grid; grid-template-columns:repeat(3,1fr); margin-top:12px; border:1px solid var(--line); }.ratios div { padding:12px 8px; text-align:center; border-right:1px solid var(--line); }.ratios div:last-child { border:0; }.ratios strong { display:block; font:20px Consolas,monospace; }.ratios span { font-size:10px; color:var(--muted); }
+    .quizgrid { grid-template-columns:minmax(0,1.5fr) minmax(260px,.7fr); }.quiznumber { font:80px/1 Consolas,monospace; color:#bfced6; }.quizoptions { display:grid; gap:10px; margin:24px 0; }.quizoption { text-align:left; justify-content:flex-start; padding:14px; font-weight:400; font-size:14px; }.quizoption b { width:24px; color:#477394; }.quizoption.correct { border-color:#059669; background:#e1f5eb; }.quizoption.wrong { border-color:#e11d48; background:#fbe7eb; }.quizdots { display:flex; gap:6px; }.quizdots button { width:29px; height:29px; border:1px solid var(--line); background:#fff8; color:var(--ink); font:12px Consolas,monospace; }.quizdots button.active { background:var(--blue); color:white; }.quizdots button.solved { border-bottom:3px solid #059669; }
+    .stamp { border:4px double #059669; color:#059669; padding:10px; font:bold 22px Consolas,"Microsoft YaHei",sans-serif; transform:rotate(-8deg); display:inline-block; animation:stamp .35s ease-out; }.stamp.wait { color:#a38135; border-color:#a38135; }.progressline { height:4px; background:#d5dce0; margin:12px 0; }.progressline div { background:var(--cobalt); height:100%; transition:width .4s; }.checklist { padding:0; list-style:none; font-size:12px; }.checklist li { margin:11px 0; display:flex; gap:9px; }.checklist li span { color:#8b9dab; }.checklist li.done span { color:#059669; }.footer { margin-top:30px; border-top:1px solid var(--ink); padding-top:18px; font-size:11px; color:var(--muted); }.footer summary { font-size:12px; }.footer ul { padding-left:18px; }.footer li { margin:5px 0; }
+    .assistant { position:fixed; left:0; right:0; bottom:0; background:#f4f3eff5; border-top:1px solid var(--ink); backdrop-filter:blur(15px); z-index:25; }.assistantinner { max-width:1420px; padding:12px 30px; margin:auto; display:grid; grid-template-columns:110px 1fr auto; gap:17px; align-items:center; }.assistantlabel { font:10px Consolas,monospace; color:#36627b; }.assistantlabel b { display:block; font:13px system-ui,sans-serif; color:var(--ink); margin-top:3px; }.assistant p { font-size:12px; line-height:1.6; }
+    .modal { position:fixed; inset:0; background:#06132299; backdrop-filter:blur(5px); z-index:70; display:flex; justify-content:flex-end; }.dialog { width:min(620px,100%); max-height:100dvh; overflow:auto; background:var(--paper); padding:28px; box-shadow:-20px 0 90px #0003; }.dialoghead { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; padding-bottom:18px; border-bottom:1px solid var(--ink); }.dialog h3 { margin-top:22px; }.dialog p { margin-top:8px; font-size:13px; }.formula { font:18px/1.9 Consolas,"Microsoft YaHei",monospace; padding:14px; background:#e4ebf1; margin:12px 0; overflow-wrap:anywhere; }.awardmodal { justify-content:center; align-items:center; padding:20px; }.awardmodal .dialog { width:min(850px,100%); }.certificate { padding:28px; border:1px solid var(--blue); background:#fffdf7; margin-top:20px; text-align:center; background-image:linear-gradient(#2563eb08 1px,transparent 1px),linear-gradient(90deg,#2563eb08 1px,transparent 1px); background-size:18px 18px; }.certificate h2 { font-family:serif; font-size:34px; margin:15px 0; }.certificate .student { font:30px serif; color:var(--cobalt); border-bottom:1px solid var(--cobalt); display:inline-block; padding:0 20px; }.input { border:1px solid #8da0ad; border-radius:0; background:#fff; padding:9px; color:var(--ink); max-width:100%; }
+    .shake { animation:shake .45s ease; }.flash { animation:flash .7s ease; }.bond { transition:opacity .5s,stroke-width .3s; }.molecular { animation:appear .5s ease; }.ring-turn { transition:transform .85s cubic-bezier(.4,.1,.2,1); }.focusmode .hero { display:none; }.focusmode .navtabs { margin-top:20px; }
+    @keyframes shake { 20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)} }
+    @keyframes appear { from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:translateY(0)} }
+    @keyframes stamp { from{transform:scale(1.5) rotate(-8deg);opacity:0}to{transform:scale(1) rotate(-8deg);opacity:1} }
+    @keyframes flash { 50%{filter:drop-shadow(0 0 9px #8fe3ee)} }
+    @media(max-width:1050px) { .historygrid { grid-template-columns:.8fr 1.2fr; }.cadgrid { grid-template-columns:1.4fr 1fr; }.thermalgrid { grid-template-columns:1fr; }.hero { grid-template-columns:1fr 180px; }.navtab { padding:12px; gap:9px; }.navtab small { display:none; } }
+    @media(max-width:760px) { .wrap { padding:0 16px 155px; }.topinner { padding:10px 16px; }.brand small { display:none; }.topinner .btn { padding:7px 9px; }.hero { grid-template-columns:1fr; gap:18px; padding:25px 0; }.titleblock { display:none; }.historygrid,.cadgrid,.quizgrid { grid-template-columns:1fr; }.navtabs { grid-template-columns:1fr 1fr; }.navtab:nth-child(2) { border-right:0; }.navtab:nth-child(-n+2) { border-bottom:1px solid var(--ink); }.navtab b { font-size:19px; }.sectionhead { display:block; }.sectionhead>.tag { margin-top:10px; }.schemebuttons .btn { padding:8px; gap:5px; }.schemebuttons span { font-size:10px; }.assistantinner { padding:10px 16px; grid-template-columns:1fr auto; gap:9px; }.assistantlabel { display:none; }.assistant p { font-size:11px; }.sheetbody { padding:16px; }.two { grid-template-columns:1fr; }.dialog { padding:20px; }.validation div { padding:9px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+    @media print { @page { size:A4 landscape; margin:15mm; } body { background:white; } body>*:not(#awardModal) { display:none!important; } #awardModal { position:static; display:block!important; background:white; padding:0; } #awardModal .dialog { width:100%; max-height:none; padding:0; overflow:visible; box-shadow:none; } #awardModal .noprint { display:none; }.certificate { margin:0; min-height:165mm; display:flex; flex-direction:column; justify-content:center; } }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="topinner">
+    <div class="brand"><div class="brandmark">D.</div><div><strong>卡文迪许分子制图局</strong><small>CAVENDISH / MOLECULAR DRAWING OFFICE</small></div></div>
+    <button class="btn compact" id="focusButton" aria-pressed="false"><i data-lucide="scan"></i>课堂专注</button>
+    <button class="btn primary compact" data-open="manualModal"><i data-lucide="book-open"></i>工程手册</button>
+  </div></header>
+  <main class="wrap">
+    <div class="hero">
+      <div><div class="eyebrow">人教版 · 必修2 · 第3章第2节 / DNA 的结构</div><h1>用一把分子尺，<br>丈量生命的<em>双螺旋。</em></h1><p>1953 卡文迪许分子制图局。你将担任分子模型工程师，检查每一条骨架、每一次配对和每一个分母，让证据为蓝图签字。</p></div>
+      <aside class="titleblock"><div><small>PROJECT</small><b>1953</b></div><div><small>DRAWINGS</small><b>04</b></div><div><small>DIAMETER</small><b>2.0</b></div><div><small>UNIT</small><b>nm</b></div><div class="wide">B-DNA · 教学近似尺寸<br>v2.0 / 2026.10.31</div></aside>
+    </div>
+    <nav class="navtabs" aria-label="四个工程工作台">
+      <button class="navtab active" data-tab="0" aria-selected="true"><b>01</b><span><strong>证据与试错</strong><small>EVIDENCE / MODEL</small></span></button>
+      <button class="navtab" data-tab="1" aria-selected="false"><b>02</b><span><strong>反向平行焊接</strong><small>TOPOLOGY / BONDS</small></span></button>
+      <button class="navtab" data-tab="2" aria-selected="false"><b>03</b><span><strong>热熔与计算</strong><small>MELTING / CHARGAFF</small></span></button>
+      <button class="navtab" data-tab="3" aria-selected="false"><b>04</b><span><strong>总工程师审图</strong><small>REVIEW / CERTIFICATE</small></span></button>
+    </nav>
+
+    <section id="bench0" class="bench" aria-labelledby="title0">
+      <div class="sectionhead"><div><div class="eyebrow">DRAWING 01 / FROM DIFFRACTION TO A MODEL</div><h2 id="title0">一个漂亮模型，要通过几道证据检验？</h2><p>先选择方案、预测检验结果，再按下测试键。三个方案是基于科学史问题重构的教学模型。</p></div><span class="tag">MISSION 01</span></div>
+      <div class="grid historygrid">
+        <article class="sheet"><div class="sheethead"><div><h3>证据底片 / No. 51</h3><p>向富兰克林与戈斯林的衍射研究致敬</p></div><span class="tag">1952</span></div><div class="sheetbody">
+          <svg class="photo" id="photoSvg" viewBox="0 0 300 290" aria-label="以十字衍射特征为灵感的教学重绘"></svg>
+          <p class="tiny muted">SVG 衍射特征示意，非实验原底片。X 形图样支持螺旋结构，需要结合化学与组成数据建立完整模型。</p>
+          <div class="evidence"><b>01</b><div>规则的衍射特征 → 螺旋与重复间距线索</div></div>
+          <div class="evidence"><b>02</b><div>碱基组成数据 → A≈T、G≈C</div></div>
+          <div class="evidence"><b>03</b><div>化学结构与水合信息 → 检查骨架位置与配对几何</div></div>
+          <details class="small" style="margin-top:10px"><summary>打开科学史档案</summary><p style="margin-top:8px">1952年，富兰克林与戈斯林在伦敦国王学院获得照片51。1953年沃森、克里克提出双螺旋模型，同期发表的衍射研究提供关键证据。1962年诺贝尔生理学或医学奖由沃森、克里克、威尔金斯分享。</p></details>
+        </div></article>
+        <div class="stack">
+          <article class="sheet blueprint"><div class="sheethead"><div><h3>三维结构校验台</h3><p>拖动观察角，检验双螺旋的周期性</p></div><span class="tag" id="schemeBadge">MODEL A</span></div>
+            <div class="sheetbody" style="padding-bottom:0"><div class="schemebuttons">
+              <button class="btn active" data-scheme="0"><b>A</b><span>骨架在内<br>碱基朝外</span></button>
+              <button class="btn" data-scheme="1"><b>B</b><span>骨架在外<br>同种碱基配对</span></button>
+              <button class="btn" data-scheme="2"><b>C</b><span>骨架在外<br>反向平行互补</span></button>
+            </div></div>
+            <div class="scene"><div class="scenehud" id="modelHud">RECONSTRUCTION / UNTESTED</div><svg id="modelSvg" viewBox="0 0 680 350" aria-label="三种分子构型的工程示意"></svg></div>
+            <div class="controls"><div class="row spread"><button class="btn" id="testScheme"><i data-lucide="ruler"></i>执行结构测试</button><label class="small">观察角 <input id="rotationSlider" type="range" min="0" max="360" value="25" aria-label="模型观察角" style="vertical-align:middle;width:120px"></label><button class="btn compact" id="rotatePlay" aria-pressed="false">自动转动</button></div></div>
+            <div class="scenefine"><span>B-DNA 几何示意 · 分子球棍简化</span><span>尺标为教学近似值</span></div>
+          </article>
+          <div class="validation" id="validation"><div><b>—</b>骨架与水环境</div><div><b>—</b>恒定直径</div><div><b>—</b>配对与方向</div></div>
+          <div class="feedback" id="modelFeedback" role="status">工程师，先测试方案 A。哪些带电基团挤在了分子轴线附近？</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bench1" class="bench" hidden aria-labelledby="title1">
+      <div class="sectionhead"><div><div class="eyebrow">DRAWING 02 / ATOMIC CONNECTIONS & TOPOLOGY</div><h2 id="title1">旋转一条链，让碳位与方向对齐。</h2><p>图中选定每条链的 5′ 端带一个磷酸、3′ 端为羟基。先修正方向，再比较闭合前后的末端与连接数。</p></div><span class="tag">MISSION 02</span></div>
+      <div class="grid cadgrid">
+        <article class="sheet blueprint"><div class="sheethead"><div><h3>四碱基对 / 平面展开蓝图</h3><p>图示省略部分 O、H 与立体化学，保留用于识别连接关系的碳位</p></div><span class="tag" id="cadBadge">DIRECTION ERROR</span></div>
+          <div class="cadstage"><svg id="cadSvg" viewBox="0 0 830 565" aria-label="带糖碳位编号的四碱基对DNA连接示意"></svg></div>
+          <div class="legend"><span><i style="background:#2563eb"></i>糖—磷酸骨架</span><span><i style="background:#e11d48"></i>A 双环</span><span><i style="background:#059669"></i>G 双环</span><span><i style="background:#d97706"></i>T 单环</span><span><i style="background:#7c3aed"></i>C 单环</span></div>
+          <div class="scenefine"><span>链的翻转以整条链在平面内旋转 180° 示意</span><span>连接拓扑图 / 非原子比例</span></div>
+        </article>
+        <aside class="sheet"><div class="sheethead"><div><h3>方向、封口与化学键探针</h3><p>比较结果中的数字，再向同伴解释计数与前提</p></div></div><div class="sheetbody stack">
+          <button class="btn primary" id="flipChain" aria-pressed="false">将右侧链旋转 180°</button>
+          <div class="row"><button class="btn active" data-topology="linear">线性双链</button><button class="btn" data-topology="circular">共价闭合环状</button></div>
+          <div class="countgrid"><div class="count"><strong id="terminalP">2</strong><span>未被两个糖酯化的末端磷酸</span></div><div class="count"><strong id="singleSugar">2</strong><span>仅连接一个磷酸的糖</span></div></div>
+          <p class="tiny muted" id="endNote">本图规定 5′-P / 3′-OH。末端磷酸仍连接着一个糖。</p>
+          <div class="probe"><button class="btn" data-probe="hydrogen">探针 ① · 碱基间氢键</button><button class="btn" data-probe="internal">探针 ② · 5′ 侧酯键</button><button class="btn" data-probe="bridge">探针 ③ · 3′ 侧酯键与磷酸二酯桥</button></div>
+          <div class="feedback" id="cadFeedback" role="status">右侧链当前与左链同向，而且碱基向外。试着转动整个右链，看两个末端怎样交换位置。</div>
+          <div class="fact"><b>一个磷酸二酯桥，包含两条酯键。</b><p>内部磷酸分别与两个糖的 3′-O、5′-O 相连。把探针②和③一起看，才能看见完整的 3′—O—P—O—5′ 连接。</p></div>
+          <div class="row"><button class="btn compact" id="cadReset">重置错误蓝图</button><button class="btn compact" data-open="manualModal">查看末端前提</button></div>
+        </div></aside>
+      </div>
+    </section>
+
+    <section id="bench2" class="bench" hidden aria-labelledby="title2">
+      <div class="sectionhead"><div><div class="eyebrow">DRAWING 03 / THERMAL RESPONSE & CONSERVED RATIOS</div><h2 id="title2">让温度变化，让不变量自己显现。</h2><p>左边的“长度”以碱基对计，右边的百分比以各自那条链的全部碱基计。两台设备可以独立实验。</p></div><span class="tag">MISSION 03</span></div>
+      <div class="grid thermalgrid">
+        <article class="sheet"><div class="sheethead"><div><h3>氢键热熔炉</h3><p>固定盐浓度 50 mmol/L Na⁺ · 完全匹配 DNA 的经验估计</p></div><span class="tag gold">MODEL</span></div>
+          <div class="thermalcontrols stack">
+            <div><label class="fieldlabel" for="tempSlider">加热温度 <span class="mono" id="tempLabel">70 °C</span></label><div class="sliderline"><input id="tempSlider" type="range" min="50" max="100" step="0.1" value="70"><output id="tempValue">70.0</output></div></div>
+            <div class="grid two"><div><label class="fieldlabel" for="lengthSlider">DNA 长度 / bp</label><div class="sliderline"><input id="lengthSlider" type="range" min="60" max="500" step="10" value="100"><output id="lengthValue">100</output></div></div><div><label class="fieldlabel" for="gcSlider">G–C 碱基对占比</label><div class="sliderline"><input id="gcSlider" type="range" min="10" max="80" value="50"><output id="gcValue">50%</output></div></div></div>
+          </div>
+          <div class="thermalmetrics"><div><strong id="hCount">250</strong><span>完全配对时总氢键 H</span></div><div><strong id="tmValue">75.2°</strong><span>经验 Tm / °C</span></div><div><strong id="meltValue">14%</strong><span>教学曲线中的熔解比例</span></div></div>
+          <div class="blueprint thermalview"><svg id="meltSvg" viewBox="0 0 500 205" aria-label="DNA双链熔解与氢键连接示意"></svg></div>
+          <div class="sheetbody"><div class="chart"><svg id="meltChart" viewBox="0 0 500 170" aria-label="熔解比例与温度的关系曲线"></svg></div><div class="formula small" id="hFormula"></div><p class="tiny muted">Tm 是一半双链发生熔解的温度。曲线宽度与逐段开链顺序为教学设定。真实熔解具有协同性，受邻近碱基堆积、序列与溶液条件影响，不能仅按单个碱基对断键先后判断。</p><button class="btn compact" id="thermalChallenge" style="margin-top:12px">提交观察 · 同条件下 GC 更高会怎样？</button><div id="thermalChoices" hidden class="row" style="margin-top:8px"><button class="btn compact" data-thermal-answer="up">Tm 通常升高</button><button class="btn compact" data-thermal-answer="down">Tm 通常降低</button></div><p class="small" id="thermalFeedback" role="status" style="margin-top:10px"></p></div>
+        </article>
+        <article class="sheet"><div class="sheethead"><div><h3>卡伽夫多米诺推演尺</h3><p>改变一个比例后，另外三项按原比例重新分配，确保总和为100%</p></div><span class="tag">α → β → 双链</span></div><div class="sheetbody">
+          <div class="calcsliders" id="compositionSliders"></div>
+          <div class="row" style="margin:13px 0"><button class="btn compact" id="presetNormal">常规样本</button><button class="btn compact" id="presetAsym">不对称样本</button><button class="btn compact" id="presetEdge">边界样本 · 全A</button></div>
+          <table class="calctable"><thead><tr><th>统计对象</th><th style="color:var(--a)">A</th><th style="color:var(--t)">T / U</th><th style="color:var(--g)">G</th><th style="color:var(--c)">C</th></tr></thead><tbody id="compositionTable"></tbody></table>
+          <div class="row spread" style="margin-top:14px"><label class="small" for="templateSelect">转录模板链 <select class="input" id="templateSelect" style="padding:4px"><option value="alpha">α 链</option><option value="beta">β 链</option></select></label><span class="tiny muted">假定整个所示片段被转录</span></div>
+          <div class="golden"><div class="invariant"><div><span class="eyebrow">GOLDEN INVARIANT</span><br><span class="small">DNA 的 A＋T ＝ RNA 的 A＋U</span></div><strong id="atInvariant">50%</strong></div><p class="tiny" style="margin-top:8px">α、β、完整双链的 A＋T 占比相同。完整对应转录片段的 RNA 应统计 A＋U；成熟 mRNA 若经历剪接，须重新统计。</p></div>
+          <div class="ratios"><div><span>α · (A＋G)/(T＋C)</span><strong id="ratioAlpha">1.00</strong></div><div><span>β · (A＋G)/(T＋C)</span><strong id="ratioBeta">1.00</strong></div><div><span>双链 · 嘌呤/嘧啶</span><strong>1.00</strong></div></div>
+          <div class="feedback" id="ratioFeedback" style="margin-top:14px">两条链上的嘌呤与嘧啶互相换位。k 与 1/k 的关系，要求两个分母均非零。</div>
+          <div class="fact"><b>先预测，再切换模板链。</b><p class="small">mRNA 的 A、U、G、C 各自会怎样变化？哪一个“合并比例”仍然保持？</p></div>
+          <button class="btn compact" id="confirmCalc" style="margin-top:14px">记录这组不变量</button>
+        </div></article>
+      </div>
+    </section>
+
+    <section id="bench3" class="bench" hidden aria-labelledby="title3">
+      <div class="sectionhead"><div><div class="eyebrow">DRAWING 04 / FINAL ENGINEERING REVIEW</div><h2 id="title3">给一张经得起追问的图纸盖章。</h2><p>五道原创高考风格题，重点审查题设条件与统计范围。允许重审，答对只计一次。</p></div><span class="tag">MISSION 04</span></div>
+      <div class="grid quizgrid">
+        <article class="sheet"><div class="sheethead"><div><span class="eyebrow muted">CHIEF ENGINEER / DRAWING AUDIT</span><h3 style="margin-top:7px">总工程师图纸审查</h3></div><div class="quizdots" id="quizDots"></div></div><div class="sheetbody"><div class="row spread"><div class="quiznumber" id="quizNumber">01</div><span class="tag" id="quizTopic">题设检查</span></div><h3 id="quizQuestion" style="font-size:20px;margin-top:16px"></h3><div class="quizoptions" id="quizOptions"></div><div class="feedback" id="quizFeedback" role="status">审图时先找“已知是DNA”“完整双链”“全部碱基”等限定词。</div><div class="row spread" style="margin-top:22px"><div id="stampArea"></div><button class="btn primary" id="nextQuiz">下一张图纸 →</button></div></div></article>
+        <aside class="sheet"><div class="sheethead"><h3>工程师履历</h3><span class="tag" id="scoreLabel">0 / 5</span></div><div class="sheetbody"><div class="eyebrow muted">CERTIFICATION PROGRESS</div><h2 style="margin-top:12px" id="rankLabel">见习制图员</h2><div class="progressline"><div id="scoreBar" style="width:0"></div></div><ul class="checklist" id="missionList"></ul><p class="small muted">四个工作台都完成后，可领取“分子蓝图总工程师”认证；也可以随时领取本次课堂参与纪念。</p><button class="btn primary" data-open="awardModal" style="width:100%;margin-top:18px">签发姓名奖状</button></div></aside>
+      </div>
+    </section>
+
+    <footer class="footer"><div class="row spread"><span class="mono">DRAWING SET DNA-032 / v2.0 / 2026.10.31</span><span>所有分子与衍射图均为内嵌 SVG 教学示意</span></div><details style="margin-top:12px"><summary>科学依据与模型条件</summary><ul><li>科学史与模型骨架参考 <a href="https://doi.org/10.1038/171737a0" target="_blank" rel="noopener">Watson & Crick，Nature，1953</a>；照片51来源参考 <a href="https://www.kcl.ac.uk/the-story-behind-photograph-51" target="_blank" rel="noopener">伦敦国王学院档案说明</a>。三种方案为教学重构，保留关键约束。</li><li>诺贝尔奖年份与获奖者参考 <a href="https://www.nobelprize.org/prizes/medicine/1962/summary/" target="_blank" rel="noopener">诺贝尔奖官方档案</a>。蓝图尺寸为经典 B-DNA 近似值，实际螺距与每圈碱基对数随条件变化。</li><li>熔解温度采用长片段经验公式 Tm＝81.5＋16.6 log₁₀([Na⁺]/(1＋0.7[Na⁺]))＋0.41×GC%－500/N，见 <a href="https://www.ebi.ac.uk/biomodels/tools/melting/melting4.pdf" target="_blank" rel="noopener">EMBL-EBI MELTING 文档</a>。此处固定[Na⁺]＝0.05 mol/L。熔解曲线的形状为教学模型。</li><li>5′末端磷酸计数依赖末端化学状态。本图使用5′单磷酸、3′羟基与无缺口双链。闭环省略连接所需底物与酶的细节。环状图只表示两条链各自闭合。</li><li>助教为本地规则反馈。姓名与操作记录保存在当前页面会话中。五题为原创教学题，奖状依据课堂完成记录生成。</li></ul></details></footer>
+  </main>
+  <aside class="assistant" aria-label="工程助教"><div class="assistantinner"><div class="assistantlabel">DESK ASSISTANT<b>工程助教</b></div><p id="assistantText" role="status" aria-live="polite">先预测，再测试。若模型失败，你能指出是哪条证据否决了它吗？</p><button class="btn compact" id="nextBench">下一工作台 →</button></div></aside>
+
+  <div class="modal" id="manualModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="manualTitle" tabindex="-1"><div class="dialoghead"><div><div class="eyebrow muted">MOLECULAR ENGINEERING CODE</div><h2 id="manualTitle" style="margin-top:7px">DNA工程规范与计算手册</h2></div><button class="btn compact" data-close>关闭 ×</button></div>
+    <h3>01 / 糖的编号从连接碱基的碳开始</h3><svg id="manualSugar" viewBox="0 0 460 190" aria-label="脱氧核糖一至五撇碳位编号示意"></svg><p>五元环由四个碳和一个氧组成。5′-碳位于环外。碱基通过 N-糖苷键连在1′-碳，DNA 的2′-碳为脱氧位点。</p>
+    <h3>02 / 认清三个连接关系</h3><p>碱基之间是氢键。核苷酸链的磷酸二酯桥连接两个糖的3′-O与5′-O。解旋酶促使双链分开；限制酶切断特定位置的磷酸二酯键；DNA聚合酶延伸链，DNA连接酶封闭链上的缺口。</p>
+    <h3>03 / 氢键极速公式</h3><div class="formula">N＝碱基对数<br>G＝整个双链中 G 的个数＝G–C 对数<br>A＝整个双链中 A 的个数＝A–T 对数<br>H＝2N＋G＝3N－A</div><p>若整个双链含 m 个碱基，A 占 x（小数），则 C＝m(½－x)，H＝m(1.5－x)。这里 m＝2N，x 的分母是整个双链。</p>
+    <h3>04 / 卡伽夫关系有统计范围</h3><div class="formula">完整互补双链中 A＝T，G＝C<br>(A＋T)α＝(A＋T)β＝(A＋T)双链<br>完整对应 RNA 中 (A＋U) 占比同上<br>嘌呤/嘧啶：α 为 k，β 为 1/k<br>完整双链中嘌呤/嘧啶恒为 1</div><p>倒数关系要求分母非零。RNA 行假定完整对应转录，无剪接、无删减。</p>
+    <h3>05 / 末端与热稳定性</h3><p>线性双链若规定5′-P、3′-OH，末端单酯磷酸共2个，仅连接一个磷酸的糖共2个。无缺口共价闭环时两项均为0。5′-OH等其他末端化学状态须重新计数。</p><p>同长度、同溶液等条件下，GC比例较高的DNA通常更稳定。氢键与碱基堆积共同贡献稳定性，精确 Tm 还受序列与盐等因素影响。</p>
+  </div></div>
+  <div class="modal awardmodal" id="awardModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="awardTitle" tabindex="-1"><div class="dialoghead noprint"><div><div class="eyebrow muted">CERTIFICATE OF MOLECULAR DRAFTING</div><h2 id="awardTitle">为本次探究署名</h2></div><button class="btn compact" data-close>关闭 ×</button></div><div class="row noprint" style="margin-top:18px"><label for="studentName">学生姓名</label><input class="input" id="studentName" maxlength="24" autocomplete="off" placeholder="请输入姓名"><button class="btn primary" id="generateAward">生成奖状</button><button class="btn" id="printAward" disabled>打印 / 存为PDF</button></div><p class="small noprint" id="awardFeedback" style="margin-top:12px">输入姓名，记录你在DNA结构探究中的工程思维。</p><div class="certificate" id="certificateSheet" hidden><div class="eyebrow">1953 CAVENDISH / MOLECULAR DRAWING OFFICE</div><h2>DNA分子制图荣誉证书</h2><p>恭喜</p><p class="student" id="certificateName"></p><p style="margin-top:15px">在《DNA的结构》探究中观察模型、检查连接、推导比例</p><h3 id="certificateRank" style="margin:15px 0;color:#2563eb">分子蓝图观察员</h3><p class="small" id="certificateRecord"></p><div class="row spread" style="margin-top:25px;border-top:1px solid #152c4055;padding-top:15px"><span class="mono small" id="certificateDate"></span><span class="mono small">DRAWING SET DNA-032 · v2.0</span></div></div></div></div>
+  <script>
+  'use strict';
+  const byId = id => document.getElementById(id);
+  const all = selector => Array.from(document.querySelectorAll(selector));
+  const colors = { A:'#e11d48', T:'#d97706', G:'#059669', C:'#7c3aed' };
+  const complement = { A:'T', T:'A', G:'C', C:'G' };
+  const state = {
+    tab:0, scheme:0, angle:25, tested:new Set(), rotating:false,
+    flipped:false, circular:false, probe:'', probes:new Set(), topologies:new Set(['linear']),
+    temperature:70, length:100, gc:50, thermalAnswer:false, calcRecorded:false,
+    composition:[30,20,20,30], template:'alpha', quiz:0, solved:new Set(), choices:{},
+    done:[false,false,false,false]
+  };
+  let rotationFrame = 0;
+  let previousRotationTime = 0;
+  let returnFocus = null;
+
+  function assistant(message) {
+    byId('assistantText').textContent = message;
+  }
+
+  function svgText(x, y, value, size=12, fill='#dceef9', extra='') {
+    return `<text x="${x}" y="${y}" fill="${fill}" font-size="${size}" font-family="Consolas,Microsoft YaHei,monospace" ${extra}>${value}</text>`;
+  }
+
+  function svgLine(x1, y1, x2, y2, color='#8fe3ee', width=1, extra='') {
+    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" ${extra}/>`;
+  }
+
+  function baseWidth(letter) {
+    return letter === 'A' || letter === 'G' ? 74 : 48;
+  }
+
+  // 嘌呤采用一个六元环与一个五元环稠合，嘧啶采用一个六元环。
+  function baseBlock(letter, x, y, textAngle=0) {
+    const color = colors[letter];
+    const purine = letter === 'A' || letter === 'G';
+    const secondRing = purine ? `<path d="M36 0 L51 -17 L74 -6 L69 16 L48 20 Z" fill="${color}" fill-opacity=".28" stroke="${color}" stroke-width="2.3"/>` : '';
+    return `<g transform="translate(${x} ${y-12})">
+      <path d="M0 20 L12 0 L36 0 L48 20 L36 40 L12 40 Z" fill="${color}" fill-opacity=".24" stroke="${color}" stroke-width="2.3"/>
+      ${secondRing}
+      ${svgText(24,26,letter,18,'#fff',`text-anchor="middle" transform="rotate(${textAngle} 24 20)"`)}
+    </g>`;
+  }
+
+  function renderPhoto() {
+    let drawing = `<defs><radialGradient id="film"><stop stop-color="#334453"/><stop offset="1" stop-color="#061320"/></radialGradient><filter id="filmGlow"><feGaussianBlur stdDeviation="1.4"/></filter></defs><rect x="12" y="12" width="276" height="266" fill="url(#film)"/>`;
+    for (let n=-5; n<=5; n++) {
+      const y=145+n*21;
+      drawing += svgLine(38,y,262,y,'#b9cbd7',.6,'opacity=".15"');
+      if (n !== 0) {
+        const spread = Math.abs(n)*18;
+        drawing += `<ellipse cx="${150-spread}" cy="${y}" rx="${5+Math.abs(n)}" ry="3" fill="#c6d8e4" opacity=".64" filter="url(#filmGlow)"/><ellipse cx="${150+spread}" cy="${y}" rx="${5+Math.abs(n)}" ry="3" fill="#c6d8e4" opacity=".64" filter="url(#filmGlow)"/>`;
+      }
+    }
+    drawing += `<path d="M56 38 L244 252 M244 38 L56 252" stroke="#cee1ed" stroke-width="10" opacity=".13" filter="url(#filmGlow)"/><circle cx="150" cy="145" r="12" fill="#02101c"/>`;
+    drawing += svgText(26,31,'DIFFRACTION / STUDY',8,'#9db2c0');
+    drawing += svgText(26,265,'No.51 · 教学特征重绘',10,'#9db2c0');
+    byId('photoSvg').innerHTML = drawing;
+  }
+
+  function renderModel() {
+    let drawing = svgLine(340,25,340,300,'#8fe3ee',1,'stroke-dasharray="3 7" opacity=".25"');
+    if (state.scheme === 0) {
+      for (let n=0;n<7;n++) {
+        const y=65+n*29;
+        drawing += svgLine(322,y-18,322,y+18,'#60a5fa',5);
+        drawing += svgLine(358,y-18,358,y+18,'#60a5fa',5);
+        drawing += `<circle cx="322" cy="${y}" r="10" fill="#2563eb"/>${svgText(322,y+4,'−',14,'white','text-anchor="middle"')}<circle cx="358" cy="${y}" r="10" fill="#2563eb"/>${svgText(358,y+4,'−',14,'white','text-anchor="middle"')}`;
+        drawing += svgLine(310,y,258,y,'#648eb0',2) + baseBlock(n%2?'T':'A',200,y-8);
+        drawing += svgLine(370,y,420,y,'#648eb0',2) + baseBlock(n%2?'C':'G',430,y-8);
+      }
+      drawing += svgText(190,293,'碱基暴露在外',11,'#eab7ba') + svgText(305,48,'负电磷酸聚集',11,'#9fcbff');
+    } else if (state.scheme === 1) {
+      const left=[], right=[];
+      ['A','T','G','C','A','T'].forEach((base,n) => {
+        const y=55+n*40;
+        const width=baseWidth(base)*2+22;
+        const lx=340-width/2-10, rx=340+width/2+10;
+        left.push(`${lx},${y}`); right.push(`${rx},${y}`);
+        drawing += baseBlock(base,lx+12,y-6);
+        drawing += `<g transform="translate(${rx-12} ${y+8}) rotate(180)">${baseBlock(base,0,0,180)}</g>`;
+        drawing += svgLine(lx,y,lx+8,y,'#8db9ff',3) + svgLine(rx-8,y,rx,y,'#8db9ff',3);
+      });
+      drawing += `<polyline points="${left.join(' ')}" fill="none" stroke="#60a5fa" stroke-width="4"/><polyline points="${right.join(' ')}" fill="none" stroke="#60a5fa" stroke-width="4"/>`;
+      drawing += svgText(280,317,'同种配对 → 宽窄起伏',12,'#eac67f');
+    } else {
+      const pieces=[];
+      for (let n=0;n<60;n++) {
+        const phase=state.angle*Math.PI/180-n/60*Math.PI*2;
+        const nextPhase=state.angle*Math.PI/180-(n+1)/60*Math.PI*2;
+        const y=40+n*4, y2=y+4;
+        const x=340+70.6*Math.cos(phase), x2=340+70.6*Math.cos(nextPhase);
+        const other=680-x, other2=680-x2;
+        const front=Math.sin(phase)>0;
+        pieces.push({depth:Math.sin(phase),svg:svgLine(x,y,x2,y2,front?'#a0d5ff':'#37618a',front?5:3)});
+        pieces.push({depth:-Math.sin(phase),svg:svgLine(other,y,other2,y2,front?'#37618a':'#a0d5ff',front?3:5)});
+        if (n%6===0) {
+          const base=['A','G','T','C'][n/6%4];
+          const mid=(x+other)/2;
+          pieces.push({depth:0,svg:svgLine(x,y,mid,y,colors[base],3)+svgLine(mid,y,other,y,colors[complement[base]],3)});
+        }
+      }
+      drawing += pieces.sort((a,b)=>a.depth-b.depth).map(piece=>piece.svg).join('');
+      drawing += svgText(208,30,'5′',13,'#a3d5ff') + svgText(455,30,'3′',13,'#a3d5ff');
+      drawing += svgText(208,300,'3′',13,'#a3d5ff') + svgText(455,300,'5′',13,'#a3d5ff');
+      drawing += svgLine(269.4,320,410.6,320,'#8fe3ee',1) + svgLine(269.4,314,269.4,326) + svgLine(410.6,314,410.6,326);
+      drawing += svgText(340,339,'2.0 nm 直径',11,'#8fe3ee','text-anchor="middle"');
+      drawing += svgLine(535,40,535,280) + svgLine(529,40,541,40) + svgLine(529,280,541,280);
+      drawing += svgText(548,160,'3.4 nm',11,'#8fe3ee') + svgText(548,177,'螺距 ≈ 10 bp',10,'#8ca9bc');
+      drawing += svgLine(147,80,147,104) + svgLine(141,80,153,80) + svgLine(141,104,153,104);
+      drawing += svgText(50,96,'0.34 nm',11,'#8fe3ee') + svgText(49,113,'相邻碱基对',10,'#8ca9bc');
+    }
+    byId('modelSvg').innerHTML = drawing;
+    byId('schemeBadge').textContent = 'MODEL '+['A','B','C'][state.scheme];
+    byId('modelHud').textContent = state.scheme===2 ? 'B-DNA / PARAMETRIC PROJECTION' : 'TEACHING RECONSTRUCTION / '+['A','B'][state.scheme];
+    all('[data-scheme]').forEach(button=>button.classList.toggle('active',Number(button.dataset.scheme)===state.scheme));
+    byId('rotationSlider').disabled = state.scheme!==2;
+    byId('rotatePlay').disabled = state.scheme!==2;
+  }
+
+  function validateScheme() {
+    const checks = [[false,false,false],[true,false,false],[true,true,true]][state.scheme];
+    byId('validation').innerHTML = checks.map((pass,index)=>`<div><b class="${pass?'pass':'fail'}">${pass?'PASS ✓':'FAIL ×'}</b>${['骨架与水环境','恒定直径','配对与方向'][index]}</div>`).join('');
+    const messages = [
+      '模型 A 未通过。磷酸富集在中心带来静电排斥与水合困难，碱基朝外也不利于该模型的稳定。请把骨架移到外侧再检验。',
+      '模型 B 未通过。A–A、G–G 的双嘌呤组合偏宽，T–T、C–C 的双嘧啶组合偏窄。仅把骨架移到外侧，还不能获得合适的配对几何。',
+      '模型 C 通过。骨架在外、链反向平行、A–T 与 G–C 互补，满足这组工程约束。1953 双螺旋蓝图已解锁。'
+    ];
+    byId('modelFeedback').textContent = messages[state.scheme];
+    byId('modelFeedback').className = 'feedback '+(state.scheme===2?'good':'bad');
+    byId('modelSvg').classList.remove('shake','flash');
+    void byId('modelSvg').getBoundingClientRect();
+    byId('modelSvg').classList.add(state.scheme===2?'flash':'shake');
+    state.tested.add(state.scheme);
+    state.done[0] = state.tested.size===3;
+    assistant(state.scheme===2 ? '嘌呤配嘧啶满足宽度约束，还需要正确的氢键位点。问问同伴，为什么不能随便把 A 与 C 配在一起？' : messages[state.scheme]);
+    updateProgress();
+  }
+
+  function stopRotation() {
+    state.rotating=false;
+    cancelAnimationFrame(rotationFrame);
+    previousRotationTime=0;
+    byId('rotatePlay').textContent='自动转动';
+    byId('rotatePlay').setAttribute('aria-pressed','false');
+  }
+
+  function rotationTick(time) {
+    if (!state.rotating) return;
+    if (previousRotationTime) state.angle=(state.angle+Math.min(time-previousRotationTime,50)*.018)%360;
+    previousRotationTime=time;
+    byId('rotationSlider').value=state.angle;
+    renderModel();
+    rotationFrame=requestAnimationFrame(rotationTick);
+  }
+
+  function bondStyle(kind) {
+    const selected=state.probe===kind;
+    return { color:selected?'#fcd45c':kind==='hydrogen'?'#9ebcca':'#6da2ff', width:selected?4:2, opacity:state.probe && !selected ? .25 : 1 };
+  }
+
+  function sugarNucleotide(y, base, right=false) {
+    const angle=right&&state.flipped?180:0;
+    const inside=bondStyle('internal'), bridge=bondStyle('bridge');
+    let drawing=`<path d="M0 ${y-24} L27 ${y-5} L17 ${y+24} L-17 ${y+24} L-28 ${y-5} Z" fill="#2563eb25" stroke="#6da2ff" stroke-width="2"/>`;
+    drawing += svgLine(-28,y-5,-43,y-27,'#6da2ff',2);
+    drawing += svgLine(-50,y-45,-43,y-27,inside.color,inside.width,`opacity="${inside.opacity}" class="bond"`);
+    drawing += svgLine(27,y-5,65,y-5,'#abc4d8',2);
+    drawing += baseBlock(base,65,y-13,angle);
+    drawing += `<circle cx="-50" cy="${y-45}" r="10" fill="#2563eb" stroke="#96bbff"/>`;
+    drawing += svgText(-50,y-41,'P',12,'white',`text-anchor="middle" transform="rotate(${angle} -50 ${y-45})"`);
+    const labels=[['O',0,y-20],['1′',39,y-1],['2′',22,y+42],['3′',-19,y+42],['4′',-44,y+1],['5′',-54,y-24]];
+    labels.forEach(([label,x,ly]) => {
+      drawing += svgText(x,ly,label,label==='O'?12:9,label==='O'?'#8fe3ee':'#9bb9cf',`text-anchor="middle" transform="rotate(${angle} ${x} ${ly-4})"`);
+    });
+    if (y>-150) drawing += svgLine(-17,y-76,-50,y-45,bridge.color,bridge.width,`opacity="${bridge.opacity}" class="bond"`);
+    return drawing;
+  }
+
+  function renderCad(animate=false) {
+    const hydrogen=bondStyle('hydrogen');
+    const leftBases=['A','T','G','C'];
+    const rightBases=['G','C','A','T'];
+    let drawing=svgLine(400,40,400,495,'#8fe3ee',1,'opacity=".2" stroke-dasharray="3 8"');
+    drawing+=svgText(37,28,'DETAIL A / FOUR BASE-PAIR SAMPLE',10,'#83b3cc');
+    if (state.flipped) {
+      leftBases.forEach((base,index) => {
+        const y=115+index*100;
+        const start=210+65+baseWidth(base), end=540-65-baseWidth(complement[base]);
+        const count=base==='A'||base==='T'?2:3;
+        for (let n=0;n<count;n++) {
+          const hy=y-13+(n-(count-1)/2)*8;
+          drawing += svgLine(start+2,hy,end-2,hy,hydrogen.color,hydrogen.width,`stroke-dasharray="4 5" opacity="${hydrogen.opacity}" class="bond"`);
+        }
+        drawing+=svgText((start+end)/2,y+24,count+' H键',9,'#7c9aaf','text-anchor="middle"');
+      });
+    } else {
+      drawing+=svgText(400,255,'方向待校正',16,'#f0a4aa','text-anchor="middle"');
+      drawing+=svgText(400,278,'右侧碱基仍朝外 →',10,'#f0a4aa','text-anchor="middle"');
+    }
+    let left='',right='';
+    leftBases.forEach((base,index)=>left+=sugarNucleotide(-150+index*100,base));
+    rightBases.forEach((base,index)=>right+=sugarNucleotide(-150+index*100,base,true));
+    const closure=bondStyle('bridge');
+    if (state.circular) {
+      const path=`<path d="M-17 174 C-185 234 -185 -270 -50 -195" fill="none" stroke="${closure.color}" stroke-width="${closure.width}" opacity="${closure.opacity}" stroke-dasharray="7 4"/>`;
+      left=path+left;
+      right=path+right;
+      drawing+=svgText(32,529,'虚线闭合连接代表省略的大段 DNA；四对只是局部抽样符号',10,'#9bb9cf');
+    } else {
+      left+=svgText(-55,-216,'5′-P',13,'#fcd45c')+svgText(-24,199,'3′-OH',13,'#fcd45c');
+      const labelTransform=state.flipped?'transform="rotate(180 -45 -218)"':'';
+      right+=svgText(-45,-216,'5′-P',13,'#fcd45c',labelTransform);
+      right+=svgText(-24,199,'3′-OH',13,'#fcd45c',state.flipped?'transform="rotate(180 -24 195)"':'');
+    }
+    drawing+=`<g transform="translate(210 265)">${left}</g>`;
+    const initial=animate?(state.flipped?0:180):(state.flipped?180:0);
+    drawing+=`<g transform="translate(540 265)"><g id="rightChain" class="ring-turn" style="transform:rotate(${initial}deg)">${right}</g></g>`;
+    drawing+=svgText(210,554,'α 链',11,'#a0c6e0','text-anchor="middle"')+svgText(540,554,'β 链',11,'#a0c6e0','text-anchor="middle"');
+    byId('cadSvg').innerHTML=drawing;
+    if (animate) requestAnimationFrame(()=>requestAnimationFrame(()=>byId('rightChain').style.transform=`rotate(${state.flipped?180:0}deg)`));
+    byId('cadBadge').textContent=state.flipped?(state.circular?'COVALENTLY CLOSED':'ANTIPARALLEL / PASS'):'DIRECTION ERROR';
+    byId('terminalP').textContent=state.circular?'0':'2';
+    byId('singleSugar').textContent=state.circular?'0':'2';
+    byId('flipChain').textContent=state.flipped?'已反向平行 · 再次翻转':'将右侧链旋转 180°';
+    byId('flipChain').setAttribute('aria-pressed',String(state.flipped));
+    byId('endNote').textContent=state.circular?'两条链各自无缺口共价闭合。虚线表示省略的长片段，不能把本图理解为4 bp质粒。':'本图规定5′-P / 3′-OH。末端磷酸只与一个糖成酯，3′端的糖仅连接上游一个磷酸。';
+    all('[data-topology]').forEach(button=>button.classList.toggle('active',(button.dataset.topology==='circular')===state.circular));
+    all('[data-probe]').forEach(button=>button.classList.toggle('active',button.dataset.probe===state.probe));
+    state.done[1]=state.flipped&&state.topologies.size===2&&state.probes.size===3;
+    updateProgress();
+  }
+
+  function meltingData() {
+    const gcPairs=Math.round(state.length*state.gc/100);
+    const actualGC=100*gcPairs/state.length;
+    const tm=81.5+16.6*Math.log10(.05/(1+.7*.05))+.41*actualGC-500/state.length;
+    const melt=1/(1+Math.exp(-(state.temperature-tm)/2.8));
+    return { gcPairs, atPairs:state.length-gcPairs, actualGC, tm, melt, hydrogen:2*state.length+gcPairs };
+  }
+
+  function renderThermal() {
+    const data=meltingData();
+    byId('tempLabel').textContent=state.temperature.toFixed(1)+' °C';
+    byId('tempValue').textContent=state.temperature.toFixed(1);
+    byId('lengthValue').textContent=state.length;
+    byId('gcValue').textContent=state.gc+'%';
+    byId('hCount').textContent=data.hydrogen;
+    byId('tmValue').textContent=data.tm.toFixed(1)+'°';
+    byId('meltValue').textContent=Math.round(data.melt*100)+'%';
+    byId('hFormula').textContent=`N=${state.length}，G=${data.gcPairs}，A=${data.atPairs}\n实际GC占比=${data.actualGC.toFixed(1)}%（按整数对计）\nH=2×${state.length}+${data.gcPairs}=${data.hydrogen}\n  =3×${state.length}−${data.atPairs}`;
+    byId('hFormula').style.whiteSpace='pre-line';
+    const symbols=20;
+    const gcSymbols=Math.round(symbols*data.actualGC/100);
+    const opened=Math.round(symbols*data.melt);
+    let diagram='';
+    const left=[],right=[];
+    for (let n=0;n<symbols;n++) {
+      const isGC=n>=symbols-gcSymbols;
+      const open=n<opened;
+      const separation=open?42:15;
+      const x=25+n*23.5;
+      left.push(`${x},${96-separation}`);
+      right.push(`${x},${96+separation}`);
+      const color=isGC?'#059669':'#e11d48';
+      diagram+=svgLine(x,96-separation,x,89,color,3,'class="bond"');
+      diagram+=svgLine(x,103,x,96+separation,isGC?'#a388ff':'#e6a549',3,'class="bond"');
+      const bonds=isGC?3:2;
+      for(let h=0;h<bonds;h++) diagram+=svgLine(x-4+h*4,90,x-4+h*4,102,'#c0d9e5',1.2,`stroke-dasharray="2 2" opacity="${open?0:1}" class="bond"`);
+    }
+    diagram=`<polyline points="${left.join(' ')}" fill="none" stroke="#6da2ff" stroke-width="3"/><polyline points="${right.join(' ')}" fill="none" stroke="#6da2ff" stroke-width="3"/>`+diagram;
+    diagram+=svgText(22,25,'AT-RICH → GC-RICH / SORTED TEACHING SYMBOLS',9,'#9ab7c8');
+    diagram+=svgText(24,176,'符号排序呈现富AT区较易熔解的趋势；骨架保持连接',10,'#9ab7c8');
+    byId('meltSvg').innerHTML=diagram;
+    const xMap=t=>45+(t-50)/50*420, yMap=m=>132-m*105;
+    let curve='';
+    for(let t=50;t<=100;t+=.5) curve+=(t===50?'M':'L')+xMap(t).toFixed(2)+' '+yMap(1/(1+Math.exp(-(t-data.tm)/2.8))).toFixed(2)+' ';
+    let chart=svgLine(45,22,45,132,'#8a9eae')+svgLine(45,132,470,132,'#8a9eae');
+    [0,.5,1].forEach(v=>chart+=svgLine(45,yMap(v),470,yMap(v),'#bccbd5',.5,'stroke-dasharray="3 4"')+svgText(33,yMap(v)+4,Math.round(v*100)+'%',9,'#637484','text-anchor="end"'));
+    [50,60,70,80,90,100].forEach(t=>chart+=svgText(xMap(t),152,t,10,'#637484','text-anchor="middle"'));
+    chart+=`<path d="${curve}" fill="none" stroke="#2563eb" stroke-width="2.5"/>`;
+    chart+=svgLine(xMap(data.tm),22,xMap(data.tm),132,'#d18e21',1,'stroke-dasharray="4 4"')+svgText(xMap(data.tm)+4,19,'Tm',10,'#966314');
+    chart+=svgLine(xMap(state.temperature),26,xMap(state.temperature),132,'#e11d48',1);
+    chart+=`<circle cx="${xMap(state.temperature)}" cy="${yMap(data.melt)}" r="4" fill="#e11d48"/>`;
+    chart+=svgText(470,166,'温度 / °C',9,'#637484','text-anchor="end"');
+    byId('meltChart').innerHTML=chart;
+  }
+
+  function normalizedComposition(index, value) {
+    const result=[0,0,0,0];
+    result[index]=value;
+    const others=[0,1,2,3].filter(n=>n!==index);
+    const total=others.reduce((sum,n)=>sum+state.composition[n],0);
+    const raw=others.map(n=>(100-value)*(total?state.composition[n]/total:1/3));
+    others.forEach((n,j)=>result[n]=Math.floor(raw[j]));
+    let remainder=100-result.reduce((sum,n)=>sum+n,0);
+    const order=others.map((n,j)=>({n,fraction:raw[j]-Math.floor(raw[j])})).sort((a,b)=>b.fraction-a.fraction);
+    for(let n=0;n<remainder;n++) result[order[n].n]++;
+    return result;
+  }
+
+  function complementaryComposition(values) {
+    return [values[1],values[0],values[3],values[2]];
+  }
+
+  function ratioDisplay(numerator, denominator) {
+    return denominator===0?'∞':(numerator/denominator).toFixed(2);
+  }
+
+  function renderComposition() {
+    const alpha=state.composition;
+    const beta=complementaryComposition(alpha);
+    const double=alpha.map((value,index)=>(value+beta[index])/2);
+    const template=state.template==='alpha'?alpha:beta;
+    const rna=complementaryComposition(template);
+    const rows=[['α 单链',alpha],['β 单链',beta],['完整双链',double],['RNA（T列为U）',rna]];
+    byId('compositionTable').innerHTML=rows.map(([name,values])=>`<tr><td>${name}</td>${values.map(value=>`<td>${Number.isInteger(value)?value:value.toFixed(1)}<span class="tiny">%</span></td>`).join('')}</tr>`).join('');
+    ['A','T','G','C'].forEach((letter,index)=>{
+      byId('composition'+letter).value=alpha[index];
+      byId('value'+letter).textContent=alpha[index]+'%';
+    });
+    const alphaPurine=alpha[0]+alpha[2], alphaPyrimidine=alpha[1]+alpha[3];
+    byId('atInvariant').textContent=(alpha[0]+alpha[1])+'%';
+    byId('ratioAlpha').textContent=ratioDisplay(alphaPurine,alphaPyrimidine);
+    byId('ratioBeta').textContent=ratioDisplay(alphaPyrimidine,alphaPurine);
+    byId('ratioFeedback').textContent=alphaPurine===0||alphaPyrimidine===0?'边界样本中，一条链的分母为0，普通实数比值未定义（图中以∞标示）；另一条链比值为0。此时不做0×∞运算，完整双链的嘌呤与嘧啶数仍相等。':`α 的比值为 ${ratioDisplay(alphaPurine,alphaPyrimidine)}，β 为 ${ratioDisplay(alphaPyrimidine,alphaPurine)}。精确值互为倒数，屏幕保留两位小数会产生舍入差异。`;
+  }
+
+  const quizzes=[
+    {
+      topic:'先审查核酸类型',
+      question:'已知某病毒的遗传物质是DNA，且完整基因组中 A≠T。在高中标准互补配对模型下，最合理的判断是？',
+      options:['它是单链DNA','它一定是RNA','它是双链DNA，但G≠C','它一定没有遗传效应'],
+      answer:0,
+      explanation:'题设先给定DNA。完整互补双链必满足A=T，故A≠T可排除该双链模型。若题目只说“核酸”，还须辨别RNA等可能；单链DNA也可能偶然A=T。'
+    },
+    {
+      topic:'分母是完整双链',
+      question:'一个完整双链DNA有1000个碱基，其中A占20%。胞嘧啶C的个数与总氢键数依次为？',
+      options:['200，1200','300，1300','300，1500','400，1400'],
+      answer:1,
+      explanation:'N=1000÷2=500对。A=T=200，G=C=300。H=2N+G=1000+300=1300。通式C=m(½−x)，H=m(1.5−x)，其中x用小数。'
+    },
+    {
+      topic:'结构与信息',
+      question:'当DNA长度相同时，能够形成大量不同遗传信息的直接结构基础是什么？',
+      options:['每条DNA都换一种磷酸','骨架一条链用核糖，一条链用脱氧核糖','碱基对的排列顺序具有多样性','A与T的配对规则随物种变化'],
+      answer:2,
+      explanation:'固定长度仍可有许多碱基序列，序列差异承载不同信息。若限定N对、方向和链身份均已指定，常用理论序列数为4ᴺ；若再规定组成或对称等条件，需要重新计数。'
+    },
+    {
+      topic:'末端化学状态',
+      question:'无缺口线性双链DNA，两条链均为5′单磷酸、3′羟基末端。仅与一个磷酸相连的脱氧核糖有几个？',
+      options:['0个','1个','2个','每个都是'],
+      answer:2,
+      explanation:'每条链3′端的糖只连接一个上游磷酸，共2个。5′端的糖连接自身5′端磷酸及下游桥连磷酸。若去掉5′端磷酸，端部糖计数会改变。'
+    },
+    {
+      topic:'RNA中的不变量',
+      question:'α链中A、T、G、C依次占40%、10%、30%、20%。完整转录该片段，所得RNA的(A+U)%以及β链的(A+G)/(T+C)分别为？',
+      options:['50%，3/7','50%，7/3','70%，3/7','40%，1'],
+      answer:0,
+      explanation:'A+T在α链为50%，完整对应RNA的A+U也为50%。α嘌呤/嘧啶=70/30=7/3，β互补后为3/7。无论选哪条链作模板，这两个合并比例的结论保持。'
+    }
+  ];
+
+  function renderQuiz() {
+    const quiz=quizzes[state.quiz];
+    byId('quizNumber').textContent=String(state.quiz+1).padStart(2,'0');
+    byId('quizTopic').textContent=quiz.topic;
+    byId('quizQuestion').textContent=quiz.question;
+    byId('quizDots').innerHTML='';
+    quizzes.forEach((item,index)=>{
+      const button=document.createElement('button');
+      button.textContent=index+1;
+      button.classList.toggle('active',index===state.quiz);
+      button.classList.toggle('solved',state.solved.has(index));
+      button.setAttribute('aria-label','审查第'+(index+1)+'题');
+      button.onclick=()=>{state.quiz=index;renderQuiz();};
+      byId('quizDots').append(button);
+    });
+    byId('quizOptions').innerHTML='';
+    quiz.options.forEach((option,index)=>{
+      const button=document.createElement('button');
+      button.className='btn quizoption';
+      const letter=document.createElement('b');
+      letter.textContent=String.fromCharCode(65+index);
+      const text=document.createElement('span');
+      text.textContent=option;
+      button.append(letter,text);
+      if(state.choices[state.quiz]===index) button.classList.add(index===quiz.answer?'correct':'wrong');
+      button.onclick=()=>answerQuiz(index);
+      byId('quizOptions').append(button);
+    });
+    const answered=Object.hasOwn(state.choices,state.quiz);
+    const correct=state.choices[state.quiz]===quiz.answer;
+    byId('quizFeedback').textContent=answered?(correct?'审查通过。':'图纸退回修订。')+quiz.explanation:'先写清楚题设范围，再动手算。工程师的第一支笔用来圈条件。';
+    byId('quizFeedback').className='feedback '+(answered?(correct?'good':'gold'):'');
+    byId('stampArea').innerHTML=answered?`<span class="stamp ${correct?'':'wait'}">${correct?'APPROVED / 通过':'REVISE / 重审'}</span>`:'';
+    byId('nextQuiz').textContent=state.quiz===quizzes.length-1?'回到第1题 ↺':'下一张图纸 →';
+  }
+
+  function answerQuiz(index) {
+    state.choices[state.quiz]=index;
+    if(index===quizzes[state.quiz].answer) state.solved.add(state.quiz);
+    state.done[3]=state.solved.size===quizzes.length;
+    renderQuiz();
+    updateProgress();
+    assistant(index===quizzes[state.quiz].answer?'审图通过。试着不用选项，向同伴解释你的分母和推理链。':'再审一次题设。'+quizzes[state.quiz].explanation);
+  }
+
+  function updateProgress() {
+    const missions=['测试三个模型并比较证据','校正方向、比较环线、扫描三类键','完成热稳定性判断与比例记录','五张图纸全部审查通过'];
+    all('[data-tab]').forEach(button=>button.classList.toggle('done',state.done[Number(button.dataset.tab)]));
+    byId('missionList').innerHTML=missions.map((item,index)=>`<li class="${state.done[index]?'done':''}"><span>${state.done[index]?'✓':'□'}</span>${item}</li>`).join('');
+    byId('scoreLabel').textContent=state.solved.size+' / 5';
+    byId('scoreBar').style.width=state.solved.size/5*100+'%';
+    byId('rankLabel').textContent=state.done.every(Boolean)?'分子蓝图总工程师':state.solved.size>=3?'分子结构审查员':'见习制图员';
+  }
+
+  function tab(index) {
+    state.tab=index;
+    if(index!==0) stopRotation();
+    all('.bench').forEach((section,n)=>section.hidden=n!==index);
+    all('[data-tab]').forEach((button,n)=>{
+      button.classList.toggle('active',n===index);
+      button.setAttribute('aria-selected',String(n===index));
+    });
+    byId('nextBench').textContent=index===3?'回到建模台 ↺':'下一工作台 →';
+    assistant([
+      '先预测，再测试。若模型失败，你能指出是哪条证据否决了它吗？',
+      '看糖的碳位与两个末端。分子图可以换朝向，连接关系必须保持。',
+      '先决定百分比的分母属于一条链还是完整双链，再比较数值。',
+      '开始审图。五道题都允许重试，请把错因变成可以向同伴解释的理由。'
+    ][index]);
+  }
+
+  function showModal(id) {
+    stopRotation();
+    returnFocus=document.activeElement;
+    byId(id).hidden=false;
+    document.body.style.overflow='hidden';
+    byId(id).querySelector('.dialog').focus();
+  }
+
+  function closeModal(modal) {
+    modal.hidden=true;
+    document.body.style.overflow='';
+    returnFocus?.focus();
+  }
+
+  function generateAward() {
+    const name=byId('studentName').value.trim();
+    if(!name) {
+      byId('awardFeedback').textContent='先写下姓名，奖状就能准确送达。';
+      byId('studentName').focus();
+      return;
+    }
+    byId('certificateName').textContent=name;
+    byId('certificateRank').textContent=state.done.every(Boolean)?'分子蓝图总工程师':'分子蓝图观察员';
+    byId('certificateRecord').textContent=`完成 ${state.done.filter(Boolean).length}/4 个工作台，审图通过 ${state.solved.size}/5 题。`;
+    byId('certificateDate').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    byId('certificateSheet').hidden=false;
+    byId('printAward').disabled=false;
+    byId('awardFeedback').textContent='奖状已生成，可使用浏览器打印并选择“另存为PDF”。';
+  }
+
+  all('[data-tab]').forEach(button=>button.onclick=()=>tab(Number(button.dataset.tab)));
+  byId('nextBench').onclick=()=>tab((state.tab+1)%4);
+  all('[data-scheme]').forEach(button=>button.onclick=()=>{
+    stopRotation();
+    state.scheme=Number(button.dataset.scheme);
+    renderModel();
+    byId('validation').innerHTML=['骨架与水环境','恒定直径','配对与方向'].map(item=>`<div><b>待测</b>${item}</div>`).join('');
+    byId('modelFeedback').className='feedback';
+    byId('modelFeedback').textContent='先预测这套方案的测试结果，再执行结构测试。';
+  });
+  byId('testScheme').onclick=validateScheme;
+  byId('rotationSlider').oninput=event=>{stopRotation();state.angle=Number(event.target.value);renderModel();};
+  byId('rotatePlay').onclick=()=>{
+    if(state.rotating) { stopRotation(); return; }
+    state.rotating=true;
+    byId('rotatePlay').textContent='暂停转动';
+    byId('rotatePlay').setAttribute('aria-pressed','true');
+    rotationFrame=requestAnimationFrame(rotationTick);
+  };
+  byId('flipChain').onclick=()=>{
+    state.flipped=!state.flipped;
+    renderCad(true);
+    byId('cadFeedback').textContent=state.flipped?'方向校正通过。左链从上到下5′→3′，右链从上到下3′→5′。氢键连接互补碱基，链内的共价键仍保持连续。':'链再次回到同向状态。观察右侧的碱基、5′端磷酸和3′端羟基，找出不符合配对蓝图的位置。';
+    byId('cadFeedback').className='feedback '+(state.flipped?'good':'bad');
+    assistant('转动改变画面的朝向，5′与3′取决于糖的碳位连接。现在沿着一条链指给同伴看。');
+  };
+  all('[data-topology]').forEach(button=>button.onclick=()=>{
+    if(button.dataset.topology==='circular'&&!state.flipped) {
+      byId('cadFeedback').textContent='先校正反向平行方向，再封闭两条链的末端。';
+      assistant('封口前先审方向。哪条链还没有面向它的互补伙伴？');
+      return;
+    }
+    state.circular=button.dataset.topology==='circular';
+    state.topologies.add(button.dataset.topology);
+    renderCad();
+    byId('cadFeedback').textContent=state.circular?'两条链的5′-P和3′-OH分别连成磷酸二酯桥。末端单酯磷酸消失，每个糖都与两个磷酸相连。':'线性双链恢复。末端单酯磷酸2个，3′端仅连接一个磷酸的糖2个。计数依赖当前选定的末端化学状态。';
+    assistant(byId('endNote').textContent);
+  });
+  const probeNotes={
+    hydrogen:'探针①：A–T之间2个氢键，G–C之间3个。解旋酶促使互补链分开。请把“解开配对”与“剪断链内骨架”区分清楚。',
+    internal:'探针②：高亮核苷酸5′侧的糖—磷酸酯键。内部桥连磷酸还与上一个糖的3′侧相连，二者共同组成磷酸二酯桥。',
+    bridge:'探针③：高亮相邻糖之间的3′侧连接与闭环连接。限制酶切骨架，聚合酶延伸链，连接酶封口，相关共价连接均属于磷酸二酯键体系。'
+  };
+  all('[data-probe]').forEach(button=>button.onclick=()=>{
+    state.probe=button.dataset.probe;
+    state.probes.add(state.probe);
+    renderCad();
+    byId('cadFeedback').textContent=probeNotes[state.probe];
+    assistant(probeNotes[state.probe]);
+  });
+  byId('cadReset').onclick=()=>{
+    state.flipped=false;state.circular=false;state.probe='';
+    state.done[1]=false;
+    renderCad();
+    byId('cadFeedback').textContent='重新从错误蓝图出发。先校正右链，再比较末端和连接。';
+  };
+  ['temp','length','gc'].forEach(name=>byId(name+'Slider').oninput=event=>{
+    state[{temp:'temperature',length:'length',gc:'gc'}[name]]=Number(event.target.value);
+    renderThermal();
+    assistant('把长度与盐条件保持一致，比较GC比例变化时的Tm。总氢键统计的是完全配对状态，不随加热改写公式中的组成。');
+  });
+  byId('thermalChallenge').onclick=()=>byId('thermalChoices').hidden=false;
+  all('[data-thermal-answer]').forEach(button=>button.onclick=()=>{
+    state.thermalAnswer=button.dataset.thermalAnswer==='up';
+    byId('thermalFeedback').textContent=state.thermalAnswer?'观察成立。同长度、同盐等条件下，GC比例增加通常使Tm升高。接着去记录右侧的不变量。':'再保持长度不变，把GC从10%推到80%，观察曲线的中点往哪边移。';
+    state.done[2]=state.thermalAnswer&&state.calcRecorded;
+    updateProgress();
+    assistant(byId('thermalFeedback').textContent);
+  });
+  ['A','T','G','C'].forEach((letter,index)=>{
+    const holder=document.createElement('div');
+    holder.innerHTML=`<label class="fieldlabel" style="color:${colors[letter]}" for="composition${letter}">α链 ${letter}<span class="tiny muted">占本链全部碱基</span></label><div class="sliderline"><input id="composition${letter}" type="range" min="0" max="100" value="${state.composition[index]}"><output id="value${letter}">${state.composition[index]}%</output></div>`;
+    byId('compositionSliders').append(holder);
+    byId('composition'+letter).oninput=event=>{
+      state.composition=normalizedComposition(index,Number(event.target.value));
+      renderComposition();
+      assistant('α链的四个百分比总和必须为100%。观察β链如何换位，再比较完整双链和RNA的合并比例。');
+    };
+  });
+  const presets={presetNormal:[30,20,20,30],presetAsym:[40,10,30,20],presetEdge:[100,0,0,0]};
+  Object.entries(presets).forEach(([id,values])=>byId(id).onclick=()=>{state.composition=[...values];renderComposition();});
+  byId('templateSelect').onchange=event=>{state.template=event.target.value;renderComposition();assistant('模板链切换后，RNA的各碱基比例可能改变。请指出A＋U合并比例为何保持。');};
+  byId('confirmCalc').onclick=()=>{
+    state.calcRecorded=true;
+    state.done[2]=state.thermalAnswer;
+    updateProgress();
+    assistant('不变量已记录。记得把RNA的T改写为U，并明确完整对应转录、无剪接这一前提。');
+    byId('confirmCalc').textContent='✓ 不变量已记录';
+  };
+  byId('nextQuiz').onclick=()=>{state.quiz=(state.quiz+1)%quizzes.length;renderQuiz();};
+  all('[data-open]').forEach(button=>button.onclick=()=>showModal(button.dataset.open));
+  all('[data-close]').forEach(button=>button.onclick=()=>closeModal(button.closest('.modal')));
+  all('.modal').forEach(modal=>modal.onclick=event=>{if(event.target===modal)closeModal(modal);});
+  document.addEventListener('keydown',event=>{
+    const modal=all('.modal').find(element=>!element.hidden);
+    if(!modal)return;
+    if(event.key==='Escape')closeModal(modal);
+    if(event.key==='Tab'){
+      const focusable=Array.from(modal.querySelectorAll('button:not(:disabled),input,select,a[href]')).filter(element=>element.offsetParent!==null);
+      if(event.shiftKey&&document.activeElement===focusable[0]){event.preventDefault();focusable.at(-1)?.focus();}
+      else if(!event.shiftKey&&document.activeElement===focusable.at(-1)){event.preventDefault();focusable[0]?.focus();}
+    }
+  });
+  byId('generateAward').onclick=generateAward;
+  byId('printAward').onclick=()=>window.print();
+  byId('studentName').onkeydown=event=>{if(event.key==='Enter')generateAward();};
+  byId('focusButton').onclick=()=>{
+    const active=document.body.classList.toggle('focusmode');
+    byId('focusButton').setAttribute('aria-pressed',String(active));
+    byId('focusButton').lastChild.textContent=active?'退出专注':'课堂专注';
+  };
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopRotation();});
+
+  byId('manualSugar').style.background='#0f2942';
+  byId('manualSugar').innerHTML=`<g transform="translate(190 78) scale(1.15)">${sugarNucleotide(0,'A')}</g>${svgText(265,150,'2′-C：DNA 为 –CH₂–',11,'#b6d7e8')}${svgText(35,179,'糖碳编号与连接示意；省略部分 O 与 H',10,'#9bb9cf')}`;
+  renderPhoto();
+  renderModel();
+  renderCad();
+  renderThermal();
+  renderComposition();
+  renderQuiz();
+  updateProgress();
+  window.BlueprintLab={state,meltingData,normalizedComposition,complementaryComposition,tab,stopRotation};
+  </script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/dna-structure/blueprint-v2/" data-file="lessons/必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

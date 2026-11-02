@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="生命交响曲的指挥家，以豌豆、CFTR、柳穿鱼、表观遗传与温敏毛色模型探究基因表达与性状的关系。">
+<title>生命交响曲的指挥家 · 基因表达与性状的关系</title>
+<script src="https://cdn.tailwindcss.com" async onload="if(window.tailwind)window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer onload="window.lucide&&window.lucide.createIcons()"></script>
+<style>
+  :root { --paper:#faf7f0; --ink:#132a21; --muted:#778278; --line:#132a212d; --gold:#d97706; --green:#059669; --red:#e11d48; --purple:#7c3aed; --cold:#0284c7; }
+  * { box-sizing:border-box; }[hidden] { display:none!important; }body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.75 Inter,"Segoe UI","Microsoft YaHei",sans-serif; background-image:radial-gradient(#53745f11 .7px,transparent .7px); background-size:6px 6px; }
+  h1,h2,h3,p { margin:0; }h1,h2,.serif { font-family:Georgia,"Songti SC","SimSun",serif; font-weight:500; }h1 { font-size:clamp(33px,4.3vw,63px); letter-spacing:-1.6px; line-height:1.24; }h2 { font-size:clamp(26px,3vw,38px); line-height:1.3; }h3 { font-size:17px; line-height:1.4; font-weight:650; }button,input,select { font:inherit; }button,summary { cursor:pointer; }button { transition:background .2s,border-color .2s,transform .2s; }button:hover:not(:disabled) { transform:translateY(-2px); }button:active:not(:disabled) { transform:translateY(1px); }button:disabled { opacity:.4;cursor:not-allowed; }svg { display:block;width:100%;height:auto; }a { color:#166c50;text-underline-offset:4px; }:focus-visible { outline:3px solid var(--gold);outline-offset:4px; }
+  .mono,.eyebrow { font-family:Consolas,"Courier New",monospace; }.eyebrow { font-size:9px;letter-spacing:1.8px; }.muted { color:var(--muted); }.small { font-size:12px; }.tiny { font-size:10px; }.row { display:flex;align-items:center;flex-wrap:wrap;gap:9px; }.spread { justify-content:space-between; }.grid { display:grid;gap:23px; }.two { grid-template-columns:1fr 1fr; }.stack { display:grid;gap:13px; }
+  .btn { border:1px solid #758d7b77;background:#fffaf0;color:#385642;padding:9px 14px;border-radius:2px;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:600;line-height:1.55; }.btn svg { width:15px;height:15px; }.btn.primary { background:var(--ink);border-color:var(--ink);color:#fffdf5; }.btn.active { background:#e4eee2;border-color:#598867;box-shadow:inset 0 -2px #598867; }.btn.gold { background:#fff0d9;border-color:#d5a05b;color:#966216; }.btn.compact { padding:6px 10px;font-size:10px; }.badge { font:9px Consolas,monospace;letter-spacing:.5px;color:#5c7862;border:1px solid #7f998466;padding:4px 7px;display:inline-block;white-space:nowrap; }
+  .topbar { position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);background:#faf7f0f0;backdrop-filter:blur(15px); }.topinner { max-width:1430px;margin:auto;padding:12px 32px;display:flex;align-items:center;gap:16px; }.brand { flex:1;display:flex;align-items:center;gap:11px; }.brandmark { font:32px Georgia,serif;line-height:1;border-left:1px solid var(--ink);padding-left:10px; }.brand strong { font:15px Georgia,"SimSun",serif;display:block; }.brand small { font:8px Consolas,monospace;letter-spacing:1.3px;color:#8a9487;display:block;margin-top:4px; }
+  .wrap { max-width:1430px;margin:auto;padding:0 32px 140px; }.hero { display:grid;grid-template-columns:1fr 260px;gap:45px;align-items:center;padding:33px 0 28px;border-bottom:1px solid var(--ink); }.hero .eyebrow { color:#8a8068;margin-bottom:13px; }.hero em { font-style:normal;color:#8d6450; }.hero p { color:#7c8578;font-size:13px;max-width:780px;margin-top:14px; }.heroart { border-left:1px solid var(--line);padding-left:24px; }.heroart svg { max-height:220px; }.heroart .caption { font:9px Consolas,monospace;letter-spacing:1.4px;text-align:center;color:#8b947e; }
+  .tabs { display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--ink);margin-bottom:28px; }.tab { border:0;border-right:1px solid var(--line);background:transparent;color:#7a8b7b;display:flex;gap:13px;align-items:center;text-align:left;padding:18px 14px; }.tab:last-child { border:0; }.tab b { font:30px Georgia,serif;color:#a9b59e; }.tab strong { font-size:12px;display:block; }.tab small { font:8px Consolas,monospace;letter-spacing:1px;display:block;margin-top:4px; }.tab.active { background:#e9eee2;color:var(--ink);box-shadow:inset 0 -3px #132a21; }.tab.active b { color:#426f51; }.tab.done b:after { content:'·';color:#059669; }
+  .sectionhead { display:flex;justify-content:space-between;gap:25px;align-items:flex-start;margin-bottom:22px; }.sectionhead .eyebrow { color:#a37941;margin-bottom:8px; }.sectionhead p { margin-top:8px;max-width:860px;font-size:13px;color:#7c8878; }.panel { background:#fffdf7;border:1px solid var(--line);min-width:0;overflow:hidden; }.panelhead { display:flex;align-items:flex-start;justify-content:space-between;gap:15px;padding:18px 21px;border-bottom:1px solid var(--line); }.panelhead p { font-size:11px;color:#7b8b7b;margin-top:6px; }.panelbody { padding:21px; }.figure { background:#edf0e3;background-image:linear-gradient(#667a5910 1px,transparent 1px);background-size:100% 29px;position:relative; }.figure svg { max-height:270px; }.figcaption { border-top:1px solid var(--line);padding:9px 17px;font-size:10px;color:#7d8c73; }.note { border-left:2px solid #92a986;background:#eef2e6;padding:12px 15px;color:#556d4d;font-size:12px;line-height:1.85; }.note.gold { border-color:#d49a45;background:#fff1db;color:#91652b; }.note.rose { border-color:#d68b95;background:#fae9ec;color:#a25164; }.divider { height:1px;background:var(--line);margin:17px 0; }
+  .dominoes { display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:17px 0; }.domino { border:1px solid #b7c6b0;padding:12px 7px;background:#f1f4e9;min-height:80px;font-size:11px;transition:transform .5s,background .5s; }.domino b { display:block;font:9px Consolas,monospace;color:#8da180;margin-bottom:7px; }.domino.on { background:#fae7da;border-color:#d9ad8c;transform:rotate(-3deg); }.domino.on:last-child { transform:rotate(0); }.metrics { display:grid;grid-template-columns:repeat(3,1fr);gap:10px; }.metric label { font-size:10px;color:#7f8e74; }.metric strong { display:block;font-size:13px;color:#3b6848; }.bar { height:5px;background:#dbe3d3;margin-top:6px; }.bar span { display:block;height:100%;background:#79976b;transition:width .7s; }.metric.sugar .bar span { background:#c69152; }.mutated .seedround { opacity:0; }.mutated .seedwrinkle { opacity:1; }.seedround,.seedwrinkle { transition:opacity .8s,transform .8s; }.seedwrinkle { opacity:0; }.peeled { transform:scale(.94);transform-origin:center; }
+  #peaSvg .seedround { transition:r .8s,opacity .8s; }#peaWater,#peaWrinkleLines { transition:opacity .8s; }
+  .comparegrid { grid-template-columns:.8fr 1.2fr;margin-top:21px; }.caseimage svg { max-height:200px; }.casebuttons { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px; }.cftrflow { stroke-dasharray:5 5;animation:transport 2s linear infinite; }.cftrmutant .cftrflow { animation:none;opacity:.15; }.cftrmutant .channel { opacity:.15; }.channel,.mucus,.cftrprotein { transition:opacity .8s,transform .8s; }.cftrmutant .mucus { opacity:.9; }.mucus { opacity:.15; }.cftrmutant .cftrprotein { transform:translate(-5px,10px) rotate(12deg);transform-origin:230px 160px; }.cftrmutant .ionmoving { animation:ionbounce 2s infinite; }.ionmoving { animation:ionflow 2s linear infinite; }
+  .epigrid { grid-template-columns:minmax(0,1.7fr) minmax(285px,.7fr); }.toolstrip { display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:17px; }.toolstrip .btn { text-align:left;justify-content:flex-start;align-items:flex-start;padding:11px; }.toolstrip b { font:19px Georgia,serif; }.toolstrip span { font-size:11px; }.score { background:#f4f0df; }.score svg { max-height:370px; }.scorehud { display:flex;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding:13px 18px;font-size:10px;color:#6a7e58; }.scorehud b { font:19px Consolas,monospace;color:#52764c;display:block; }.scorehud div { flex:1;min-width:95px; }.sequencebox { font:11px/2 Consolas,"Microsoft YaHei",monospace;padding:13px 16px;background:#edf1e6;border:1px solid #c7d0bd;margin-top:16px;overflow-wrap:anywhere; }.toolcontrols { margin-bottom:15px; }.specimen svg { max-height:280px; }.specimen { background:#f4eee3; }.specimen-label { font:14px Georgia,"SimSun",serif;text-align:center;padding:9px; }.petal { transition:transform .8s,opacity .8s; }.polymerase { animation:polrun 3.4s infinite ease-in-out; }.polymerase.blocked { animation:polbounce 2.1s infinite ease-in-out; }.polpaused .polymerase { animation-play-state:paused; }.newflower { animation:bloom .6s ease; }.seal { animation:seal .5s ease; }.mirna { animation:bind .6s ease; }
+  .cellgrid { grid-template-columns:.9fr 1.2fr; }.cellbuttons { display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px; }.expressiontable { width:100%;border-collapse:collapse;font-size:12px; }.expressiontable th,.expressiontable td { padding:11px 7px;border-bottom:1px solid var(--line);text-align:left; }.expressiontable th { color:#7f8b73;font-size:10px;font-weight:400; }.light { display:inline-block;width:9px;height:9px;border-radius:50%;background:#d3dbc9;margin-right:6px; }.light.on { background:#059669;box-shadow:0 0 8px #05966930; }.light.special { background:#e11d48;box-shadow:0 0 8px #e11d4830; }.rbcwarn { border:1px solid #dca2a7;background:#fae9e8;padding:12px;color:#a35b64;font-size:12px;margin-top:15px; }
+  .rabbitfigure svg { max-height:300px; }.steps { display:flex;gap:7px;margin:16px 0; }.step { flex:1;padding:9px;border-top:2px solid #b7c5ac;color:#8a977d;font-size:10px; }.step.done { border-color:#5a8e5c;color:#456d47; }.tempbuttons { display:flex;gap:8px;flex-wrap:wrap; }.btn.cold { border-color:#79b2c6;color:#28728c;background:#e2f0f2; }.btn.warm { border-color:#d8a37e;color:#a16b43;background:#fbecdb; }.chart svg { max-height:170px; }.rabbitpatch { transition:fill 1s,opacity .7s; }.samplecards { display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:21px; }.samplecards svg { max-height:190px; }.samplecards .panelhead { padding:14px 17px; }.samplecards .panelbody { padding:17px; }
+  .quizgrid { grid-template-columns:1.4fr .65fr; }.quizdots { display:flex;gap:6px; }.quizdots button { width:28px;height:28px;border:1px solid #b4c5a9;background:#fffaf0;color:#7c906e;font:11px Consolas,monospace; }.quizdots button.active { background:#dae7d2;color:#34563b;border-color:#6f966b; }.quizdots button.done { border-bottom:3px solid #059669; }.quizoptions { display:grid;gap:9px;margin:20px 0; }.quizoption { justify-content:flex-start;text-align:left;font-size:13px;font-weight:400;padding:14px; }.quizoption.correct { border-color:#69a379;background:#e3f3e5; }.quizoption.wrong { border-color:#d68b95;background:#fae9ec; }.stamp { display:inline-block;border:3px double #568558;color:#568558;padding:7px 12px;font:16px Georgia,"SimSun",serif;transform:rotate(-7deg);animation:seal .3s ease; }.answer-template { padding:15px 17px;background:#f1ebdc;border-top:1px solid #d5c7a6;margin-top:18px;font-size:12px;color:#7d6b4e; }.rank { font:26px Georgia,"SimSun",serif;line-height:1.4;color:#536e47;margin:15px 0; }.missionlist { font-size:11px;color:#7b8a73;display:grid;gap:13px;margin:18px 0; }
+  .footer { margin-top:30px;border-top:1px solid var(--ink);padding-top:17px;font-size:10px;color:#859077; }.footer summary { cursor:pointer;font-size:11px; }.footer li { margin:7px 0; }.footer ul { padding-left:18px; }.assistant { position:fixed;bottom:0;left:0;right:0;background:#faf7f0f2;border-top:1px solid #132a2144;backdrop-filter:blur(14px);z-index:25; }.assistantinner { max-width:1430px;padding:12px 32px;margin:auto;display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center; }.assistantlabel { font:9px Consolas,monospace;color:#8c967e;letter-spacing:1px; }.assistantlabel b { display:block;font:13px Georgia,"SimSun",serif;color:#4a704a;margin-top:4px; }.assistant p { font-size:12px;color:#677d59; }
+  .modal { position:fixed;inset:0;z-index:70;background:#132a2177;backdrop-filter:blur(6px);display:flex;justify-content:flex-end; }.dialog { width:min(650px,100%);max-height:100dvh;overflow:auto;background:#faf7f0;padding:28px;color:#435b3c;box-shadow:-25px 0 80px #0003; }.dialoghead { display:flex;justify-content:space-between;align-items:flex-start;gap:18px;border-bottom:1px solid #9fb093;padding-bottom:18px; }.dialog h3 { margin-top:22px; }.dialog p { font-size:13px;margin-top:9px; }.manualtable { width:100%;border-collapse:collapse;font-size:11px;margin-top:14px; }.manualtable td,.manualtable th { padding:10px 6px;border-bottom:1px solid #c4ceb9;text-align:left;vertical-align:top; }.manualtable th { color:#819173;font-weight:400; }.awardmodal { justify-content:center;align-items:center;padding:20px; }.awardmodal .dialog { width:min(850px,100%); }.input { padding:9px 11px;border:1px solid #aabb9c;background:#fffdf4;color:#3d5634;max-width:100%; }.certificate { margin-top:22px;border:1px solid #7f9b6b;padding:30px;text-align:center;background:#fffdf4;position:relative; }.certificate:before { content:'';position:absolute;inset:8px;border:1px solid #cbd5bb;pointer-events:none; }.certificate h2 { font-size:34px;margin:20px 0; }.certificate .student { font:30px Georgia,"SimSun",serif;color:#9b6f34;border-bottom:1px solid #b3925a;display:inline-block;padding:0 20px; }.focusmode .hero { display:none; }.focusmode .tabs { margin-top:15px; }
+  @keyframes transport { to{stroke-dashoffset:-30} }@keyframes ionflow { 0%{transform:translateY(23px);opacity:0}30%{opacity:1}100%{transform:translateY(-45px);opacity:0} }@keyframes ionbounce { 0%,100%{transform:translateY(23px)}50%{transform:translateY(5px)} }
+  @keyframes polrun { 0%{transform:translateX(0)}80%{transform:translateX(330px)}100%{transform:translateX(0)} }@keyframes polbounce { 0%,100%{transform:translateX(0)}55%{transform:translateX(40px)}70%{transform:translateX(22px)} }
+  @keyframes bloom { from{opacity:.35;transform:scale(.94)}to{opacity:1;transform:scale(1)} }@keyframes seal { from{opacity:0;transform:scale(1.3) rotate(-7deg)}to{opacity:1;transform:scale(1) rotate(-7deg)} }@keyframes bind { from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)} }
+  @media(max-width:1100px) { .epigrid { grid-template-columns:1.45fr .8fr; }.cellgrid { grid-template-columns:1fr 1.2fr; }.wrap { padding:0 24px 145px; }.topinner { padding:12px 24px; }.hero { grid-template-columns:1fr 210px; }.dominoes { gap:6px; }.domino { font-size:10px; } }
+  @media(max-width:850px) { .two,.epigrid,.cellgrid,.comparegrid,.quizgrid { grid-template-columns:1fr; }.hero { grid-template-columns:1fr 160px;gap:20px; }.heroart { padding-left:10px; }.tab small { display:none; }.tab { gap:8px;padding:15px 10px; }.toolstrip { gap:6px; }.toolstrip .btn { padding:9px; }.figure svg { max-height:300px; } }
+  @media(max-width:600px) { .wrap { padding:0 15px 160px; }.topinner { padding:10px 15px;gap:8px; }.brand small { display:none; }.brand strong { font-size:12px; }.topinner .btn { font-size:10px;padding:6px 9px; }.hero { grid-template-columns:1fr;padding:25px 0; }.heroart { display:none; }.tabs { grid-template-columns:1fr 1fr; }.tab:nth-child(2) { border-right:0; }.tab:nth-child(-n+2) { border-bottom:1px solid var(--line); }.tab b { font-size:25px; }.sectionhead { display:block; }.sectionhead>.badge { margin-top:10px; }.panelbody { padding:16px; }.panelhead { padding:15px 16px; }.toolstrip .btn span { font-size:10px; }.dominoes { grid-template-columns:1fr 1fr; }.samplecards { grid-template-columns:1fr; }.assistantinner { padding:10px 15px;grid-template-columns:1fr auto;gap:9px; }.assistantlabel { display:none; }.assistant p { font-size:11px; }.dialog { padding:20px; } }
+  @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important;transition:none!important;scroll-behavior:auto!important; } }
+  @media print { @page { size:A4 landscape;margin:15mm; }body { background:white; }body>*:not(#awardModal) { display:none!important; }#awardModal { position:static;display:block!important;background:white;padding:0; }#awardModal .dialog { width:100%;padding:0;max-height:none;overflow:visible;box-shadow:none; }#awardModal .noprint { display:none; }.certificate { margin:0;min-height:165mm;display:flex;flex-direction:column;justify-content:center; } }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topinner"><div class="brand"><div class="brandmark">𝄞</div><div><strong>生命交响曲的指挥家</strong><small>THE EXPRESSION ATLAS / A SCIENTIFIC SCORE</small></div></div><button class="btn compact" id="focusButton" aria-pressed="false">课堂专注</button><button class="btn primary compact" data-open="manualModal"><i data-lucide="notebook-pen"></i>满分法典</button></div></header>
+<main class="wrap">
+  <div class="hero"><div><div class="eyebrow">科学画刊 · 人教版必修2 · 第4章第2节《基因表达与性状的关系》</div><h1>生命交响曲的指挥家。<br><em>从基因的谱，到性状的形。</em></h1><p>在不改写音符时改变演奏，也能听见不同的生命旋律。以四个互动乐章，追踪基因表达、表观调控与环境共同塑造表型的过程。</p></div><div class="heroart"><svg id="heroSvg" viewBox="0 0 240 220" aria-label="花朵与乐谱的博物学示意"></svg><div class="caption">EXPRESSION / EPIGENETICS / PHENOTYPE</div></div></div>
+  <nav class="tabs" aria-label="四个互动乐章"><button class="tab active" data-tab="0" aria-selected="true"><b>I</b><span><strong>基因怎样影响性状</strong><small>CAUSAL PATHWAYS</small></span></button><button class="tab" data-tab="1" aria-selected="false"><b>II</b><span><strong>表观总谱批注</strong><small>EPIGENETIC SCORE</small></span></button><button class="tab" data-tab="2" aria-selected="false"><b>III</b><span><strong>细胞与环境重塑</strong><small>CELLS & ENVIRONMENT</small></span></button><button class="tab" data-tab="3" aria-selected="false"><b>IV</b><span><strong>首席指挥家乐评</strong><small>EVIDENCE & REVIEW</small></span></button></nav>
+
+  <section class="movement" id="movement0" aria-labelledby="title0"><div class="sectionhead"><div><div class="eyebrow">I / TWO ROUTES FROM GENES TO PHENOTYPES</div><h2 id="title0">打断一环，观察性状怎样改变。</h2><p>左轨追踪酶影响代谢，右轨追踪膜蛋白结构与功能。基因通常通过表达产物参与性状形成，多条途径也可能相互联系。</p></div><span class="badge">观察 → 干预 → 追踪因果</span></div>
+    <div class="grid two"><article class="panel"><div class="panelhead"><div><h3>间接路径 / 豌豆的圆与皱</h3><p>比较RR与rr；rr两份相关等位基因均受插入影响</p></div><span class="badge">GENE → ENZYME</span></div><div class="figure"><svg id="peaSvg" viewBox="0 0 600 240" aria-label="豌豆成熟前后水分与皱缩的关系"></svg></div><div class="panelbody"><div class="row"><button class="btn primary" id="mutatePea">切换rr模型 · 追踪插入效应</button><button class="btn" id="peaNext">单步追踪 →</button><button class="btn compact" id="peaReset">恢复圆粒模型</button></div><div class="dominoes" id="peaDominoes"></div><div class="metrics" id="peaMetrics"></div><div class="note" id="peaFeedback" style="margin-top:17px" role="status">先预测：皱粒种子为什么会在发育期吸水更多，却在干燥后缩得更明显？</div><p class="tiny muted" style="margin-top:11px">分支酶受影响使淀粉合成减少，并非糖向淀粉的全部代谢途径都被彻底切断。刻度为相对趋势示意。</p></div></article>
+    <article class="panel"><div class="panelhead"><div><h3>直接路径 / CFTR膜蛋白</h3><p>在气道上皮情境中观察F508del的加工与运输异常</p></div><span class="badge">GENE → PROTEIN</span></div><div class="figure" id="cftrFigure"><svg id="cftrSvg" viewBox="0 0 600 240" aria-label="CFTR折叠运输与氯离子转运示意"></svg></div><div class="panelbody"><div class="row"><button class="btn primary" id="cftrMutation">模拟3 bp缺失 · F508del</button><button class="btn compact" id="cftrReset">正常模型</button></div><div class="dominoes" id="cftrDominoes"></div><div class="note" id="cftrFeedback" role="status">正常折叠的CFTR可到达膜表面，参与Cl⁻等离子转运，并影响气道表面液体状态。</div><p class="tiny muted" style="margin-top:12px">F508del使第508位苯丙氨酸缺失，主要引起折叠、加工与转运问题。三个碱基对缺失属于此基因序列变化，不等同于整个基因被敲除。</p></div></article></div>
+    <article class="panel" style="margin-top:22px"><div class="panelhead"><div><h3>旁注 / 同样是色素或外形改变，因果路径一样吗？</h3><p>白化病以TYR相关类型为例，白发与镰状细胞另作比较</p></div></div><div class="panelbody"><div class="casebuttons"><button class="btn active" data-case="albinism">TYR相关白化病</button><button class="btn" data-case="grey">衰老相关白发</button><button class="btn" data-case="sickle">镰状细胞贫血</button></div><div class="grid comparegrid"><div class="caseimage"><svg id="caseSvg" viewBox="0 0 360 160" aria-label="不同色素与细胞表型的示意"></svg></div><div><h3 id="caseHeading"></h3><p class="small muted" id="caseText" style="margin-top:10px"></p><div class="note gold" id="caseInference" style="margin-top:14px"></div></div></div></div></article>
+  </section>
+
+  <section class="movement" id="movement1" hidden aria-labelledby="title1"><div class="sectionhead"><div><div class="eyebrow">II / ANNOTATIONS ON AN UNCHANGED SCORE</div><h2 id="title1">音符未改，为什么演奏发生变化？</h2><p>以DNA甲基化解释柳穿鱼案例，再独立观察组蛋白乙酰化和miRNA的通用调控模型。切换工具时采用单因素比较。</p></div><span class="badge">序列 · 调控 · 表达产物</span></div>
+    <div class="toolstrip"><button class="btn active" data-tool="methyl"><b>A</b><span>DNA甲基化<br>启动子相关转录调控</span></button><button class="btn" data-tool="acetyl"><b>B</b><span>组蛋白乙酰化<br>染色质可及性</span></button><button class="btn" data-tool="mirna"><b>C</b><span>miRNA互补识别<br>转录后调控</span></button></div>
+    <div class="grid epigrid"><article class="panel"><div class="panelhead"><div><h3 id="scoreTitle">Lcyc总谱 / 甲基化状态比较</h3><p>锁扣与碰撞是调控效果的视觉隐喻</p></div><button class="btn compact" id="pausePol" aria-pressed="false">暂停分子动画</button></div><div class="panelbody"><div class="row toolcontrols" id="toolControls"></div></div><div class="score" id="scoreFigure"><svg id="scoreSvg" viewBox="0 0 800 365" aria-label="染色质、启动子、聚合酶与RNA调控乐谱"></svg></div><div class="scorehud" id="scoreReadouts"></div><div class="panelbody" style="padding-top:0"><div class="note" id="scoreFeedback" role="status"></div><div class="sequencebox">植株A · 示意窗口 5′-ATGCCGTACGTT-3′<br>植株B · 示意窗口 5′-ATGCCGTACGTT-3′<br><b>本模型序列保持相同；比较的是修饰与表达状态。</b><br><span class="tiny muted">短序列为教学示意，不能由这个窗口断言全基因组完全相同。</span></div><div class="row" style="margin-top:14px"><button class="btn" id="replicateDNA">复制一轮 · 观察修饰维持</button><span class="small muted" id="replicationNote">当前DNA分子数 1</span></div><p class="tiny muted" style="margin-top:10px">此处设定DNA可复制、相关甲基化状态可维持。转录受抑不等于DNA聚合酶被封锁。</p></div></article>
+    <aside class="panel"><div class="panelhead"><div><h3>表型观察册</h3><p id="specimenSubtitle">柳穿鱼 Lcyc / DNA甲基化证据</p></div></div><div class="panelbody"><div class="row" id="specimenButtons" style="margin-bottom:15px"><button class="btn compact active" data-specimen="flower">柳穿鱼</button><button class="btn compact" data-specimen="mouse">Aᵛʸ小鼠</button></div><div class="specimen"><svg id="specimenSvg" viewBox="0 0 340 300" aria-label="花朵对称性或小鼠毛色观察"></svg><div class="specimen-label" id="specimenLabel"></div></div><div class="note gold" id="specimenNote" style="margin-top:15px"></div><div class="divider"></div><p class="small muted">甲基化状态差异可形成表观等位状态。是否可遗传、维持多久，需要后代或细胞谱系证据；不能仅凭一次表达变化作结论。</p></div></aside></div>
+  </section>
+
+  <section class="movement" id="movement2" hidden aria-labelledby="title2"><div class="sectionhead"><div><div class="eyebrow">III / THE SAME GENOME IN DIFFERENT CONTEXTS</div><h2 id="title2">同一份谱，在不同细胞和环境中演奏。</h2><p>先比较细胞的选择性表达，再在虚拟毛囊中改变局部条件。新生毛色与原有毛干的颜色分别观察。</p></div><span class="badge">基因表达 × 细胞状态 × 环境</span></div>
+    <div class="grid cellgrid"><article class="panel"><div class="panelhead"><h3>细胞分化 / 表达调音台</h3></div><div class="panelbody"><div class="cellbuttons"><button class="btn active" data-cell="0">有核幼红细胞</button><button class="btn" data-cell="1">哺乳动物成熟红细胞</button><button class="btn" data-cell="2">胰岛B细胞</button><button class="btn" data-cell="3">神经细胞</button></div><table class="expressiontable"><thead><tr><th>核基因轨道</th><th>本模型mRNA信号</th></tr></thead><tbody id="expressionRows"></tbody></table><div class="rbcwarn" id="rbcWarning" hidden></div><div class="note" id="cellFeedback" style="margin-top:17px"></div><p class="tiny muted" style="margin-top:12px">共同表达不要求所有细胞的表达量相同。面板只选取少数核基因；成熟红细胞仍可依靠糖酵解获得ATP。</p></div></article>
+    <article class="panel"><div class="panelhead"><div><h3>喜马拉雅兔 / 新生毛色实验</h3><p>15°C与35°C为局部毛囊条件的教学设定</p></div><button class="btn compact" id="rabbitReset">重置</button></div><div class="figure rabbitfigure"><svg id="rabbitSvg" viewBox="0 0 600 260" aria-label="喜马拉雅兔剃毛局部处理与新毛颜色"></svg></div><div class="panelbody"><div class="steps" id="rabbitSteps"></div><div class="tempbuttons"><button class="btn primary" id="shaveRabbit">① 剃去背部旧毛</button><button class="btn cold" data-temperature="15" disabled>② 15°C冷敷模型</button><button class="btn warm" data-temperature="35" disabled>② 35°C温敷模型</button><button class="btn" id="growFur" disabled>③ 快进新毛生长</button></div><div class="chart" style="margin-top:17px"><svg id="temperatureChart" viewBox="0 0 530 155" aria-label="温敏酪氨酸酶活性与温度的示意曲线"></svg></div><div class="note" id="rabbitFeedback" role="status">先剃去旧毛。为什么需要观察新长出的毛，而不是期待原有白毛立刻变黑？</div><p class="tiny muted" style="margin-top:11px">曲线表达温敏酶的定性趋势，数值与曲线形状未作实验拟合，不能用于推算真实最适温度。</p></div></article></div>
+    <div class="samplecards"><article class="panel"><div class="panelhead"><h3>植物旁注 / 水毛茛异形叶</h3><span class="badge">环境可塑性</span></div><div class="figure"><svg id="leafSvg" viewBox="0 0 530 170" aria-label="水毛茛水上叶与水下叶的简化对比"></svg></div><div class="panelbody"><div class="row"><button class="btn compact active" data-leaf="air">水上环境 · 展宽叶</button><button class="btn compact" data-leaf="water">水下环境 · 丝状叶</button></div><p class="small muted" id="leafFeedback" style="margin-top:12px">在适宜的水上发育条件下，新生叶片可表现为较宽的形态。</p></div></article><article class="panel"><div class="panelhead"><h3>一因多效 / 水稻Ghd7</h3><span class="badge">多性状关联</span></div><div class="figure"><svg id="riceSvg" viewBox="0 0 530 170" aria-label="Ghd7影响抽穗期株高与穗粒数的关系"></svg></div><div class="panelbody"><button class="btn compact" id="ghdButton">追踪一个基因的多条路径</button><p class="small muted" id="ghdFeedback" style="margin-top:12px">Ghd7可影响抽穗期、株高与每穗粒数等性状；作用还与遗传背景和光周期等条件相关。</p></div></article></div>
+  </section>
+
+  <section class="movement" id="movement3" hidden aria-labelledby="title3"><div class="sectionhead"><div><div class="eyebrow">IV / THE CONDUCTOR'S FINAL REVIEW</div><h2 id="title3">把因果链，写成经得起追问的长句。</h2><p>五道原创新高考风格题，按证据判断；每题提供可迁移的规范表达模板。</p></div><span class="badge">判断 · 解释 · 规范表述</span></div><div class="grid quizgrid"><article class="panel"><div class="panelhead"><div><h3>首席指挥家 / 终极乐评</h3><p>答错可再审，答对每题只记一次</p></div><div class="quizdots" id="quizDots"></div></div><div class="panelbody"><span class="eyebrow muted" id="quizTopic"></span><h3 id="quizQuestion" style="font-size:20px;margin-top:15px"></h3><div class="quizoptions" id="quizOptions"></div><div class="note" id="quizFeedback" role="status"></div><div class="answer-template" id="answerTemplate" hidden></div><div class="row spread" style="margin-top:20px"><span id="quizStamp"></span><button class="btn primary" id="nextQuiz">下一乐评 →</button></div></div></article><aside class="panel"><div class="panelhead"><h3>本次演出 / 探究档案</h3><span class="badge" id="scoreLabel">0 / 5</span></div><div class="panelbody"><div class="eyebrow muted">CONDUCTOR'S HONOURS</div><div class="rank" id="rankLabel">生命乐谱观察员</div><div class="bar"><span id="progressBar" style="width:0"></span></div><div class="missionlist" id="missionList"></div><button class="btn primary" data-open="awardModal">签发本课姓名奖状</button><p class="tiny muted" style="margin-top:13px">完成全部乐章晋升“生命交响曲指挥家”。奖状可打印或保存为PDF。</p></div></aside></div></section>
+  <footer class="footer"><div class="row spread"><span class="mono">THE EXPRESSION ATLAS / B2-04-02 / v2.0</span><span>原生SVG教学示意 · 本地规则助教 · 2026.11.01</span></div><details style="margin-top:12px"><summary>科学来源、模型前提与教学说明</summary><ul><li>豌豆SBEI插入与皱粒机制参考 <a href="https://pubmed.ncbi.nlm.nih.gov/2153053/" target="_blank" rel="noopener">Bhattacharyya等，Cell，1990</a>及 <a href="https://www.jic.ac.uk/advances/a-history-of-wrinkled-seeded-research-in-pea/" target="_blank" rel="noopener">John Innes Centre</a>。发育期吸水增加，干燥时失水较多。模型刻度只表示相对趋势。</li><li>F508del的折叠、加工与膜运输异常参考 <a href="https://www.cff.org/research-clinical-trials/types-cftr-mutations" target="_blank" rel="noopener">Cystic Fibrosis Foundation</a>。白发多因素机制参考 <a href="https://www.nature.com/articles/s41586-023-05960-6" target="_blank" rel="noopener">Nature，2023</a>。</li><li>柳穿鱼Lcyc甲基化参考 <a href="https://pubmed.ncbi.nlm.nih.gov/10490023/" target="_blank" rel="noopener">Cubas等，Nature，1999</a>。研究支持修饰与转录沉默关联。页面短序列为教学窗口，不能代表全基因组测序。</li><li>Aᵛʸ小鼠的插入元件甲基化参考 <a href="https://pubmed.ncbi.nlm.nih.gov/12861015/" target="_blank" rel="noopener">Waterland与Jirtle，2003</a>。小鼠表型切换只用于甲基化工具，不据通用乙酰化或miRNA模型直接推断真实毛色。</li><li>组蛋白与miRNA为独立通用模型，表达刻度与聚合酶“撞锁”为视觉比喻。miRNA可促进mRNA降解或抑制翻译；一次调控现象本身不足以证明可跨代遗传。</li><li>兔毛色为温敏酶局部作用的概念模拟，不改变DNA序列，不把曲线当真实温度测定。Ghd7多效性参考 <a href="https://www.nature.com/articles/ng.143" target="_blank" rel="noopener">Xue等，Nature Genetics，2008</a>。细胞面板与植物外形均为简化示意。</li><li>题目为原创高考风格题。姓名仅在本页处理。外部CDN增强Tailwind与Lucide图标，核心内容由内联CSS、JS、SVG实现。</li></ul></details></footer>
+</main>
+<aside class="assistant"><div class="assistantinner"><div class="assistantlabel">MARGIN NOTES<b>指挥家旁注</b></div><p id="assistantText" role="status" aria-live="polite">观察两个路径。改变基因序列，与改变表达状态，会留下怎样不同的证据？</p><button class="btn compact" id="nextMovement">下一乐章 →</button></div></aside>
+<div class="modal" id="manualModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="manualTitle" tabindex="-1"><div class="dialoghead"><div><div class="eyebrow muted">THE CONDUCTOR'S FIELD NOTES</div><h2 id="manualTitle">基因表达与表观遗传满分法典</h2></div><button class="btn compact" data-close>关闭 ×</button></div><h3>Ⅰ / 两种控制路径</h3><table class="manualtable"><thead><tr><th>路径</th><th>例子与连接</th></tr></thead><tbody><tr><td>经酶影响代谢</td><td>基因表达→酶→代谢过程→性状，如豌豆淀粉合成、TYR相关色素合成。</td></tr><tr><td>蛋白质结构与功能</td><td>基因表达→蛋白质结构/功能→性状，如CFTR加工与离子转运、血红蛋白结构。</td></tr></tbody></table><p>CFTR属于膜蛋白。高中“直接路径”侧重蛋白质结构与功能，不宜把所有例子都称为结构蛋白。</p><h3>Ⅱ / 调控工具的作用层次</h3><table class="manualtable"><thead><tr><th>机制</th><th>常见作用与结果</th></tr></thead><tbody><tr><td>启动子相关甲基化</td><td>可通过调控因子与染色质状态降低转录，效应依位点和背景而异。</td></tr><tr><td>组蛋白乙酰化</td><td>常与较开放的染色质和转录活跃相关。它不把组蛋白从DNA上全部剥离。</td></tr><tr><td>miRNA</td><td>互补识别靶mRNA，促进降解或抑制翻译，属于转录后调控。</td></tr></tbody></table><h3>Ⅲ / 表观遗传的证据链</h3><p>在相关DNA序列未发生改变的情况下，基因表达及表型可因修饰等因素改变；判断其可遗传性，还要考察细胞分裂后或后代中的维持。相同DNA序列可处于不同表观状态。</p><h3>Ⅳ / 可以迁移的长句</h3><div class="note gold" style="margin-top:13px">相关基因序列未检测到改变，但启动子区域甲基化程度不同，可能改变其转录活性，进而影响表达产物及性状；若该修饰状态在细胞谱系或后代中得到维持，则可为表观遗传提供证据。</div><p>环境可通过酶活性或基因表达等影响性状。观察新毛颜色变化时，应同时说明温度、毛囊内色素合成与新生毛干的关系。</p><h3>Ⅴ / 四个常见边界</h3><p>皱粒种子发育期较高的糖浓度促使吸水，干燥失水后皱缩。F508del是基因内3 bp缺失，主要涉及加工与运输。成熟哺乳动物红细胞无核、无核糖体，已存留的血红蛋白不代表仍在转录翻译。表型出现分离，也不能单凭此现象断言必有DNA序列突变。</p></div></div>
+<div class="modal awardmodal" id="awardModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="awardTitle" tabindex="-1"><div class="dialoghead noprint"><div><div class="eyebrow muted">THE EXPRESSION ATLAS / CERTIFICATE</div><h2 id="awardTitle">为本次探究署名</h2></div><button class="btn compact" data-close>关闭 ×</button></div><div class="row noprint" style="margin-top:18px"><label for="studentName">学生姓名</label><input class="input" id="studentName" maxlength="24" placeholder="请输入姓名" autocomplete="off"><button class="btn primary" id="generateAward">签发奖状</button><button class="btn" id="printAward" disabled>打印 / 存为PDF</button></div><p class="small noprint" id="awardFeedback" style="margin-top:10px">以证据理解生命，以推理完成乐章。</p><div class="certificate" id="certificateSheet" hidden><div class="eyebrow">THE EXPRESSION ATLAS / A SCIENTIFIC SYMPHONY</div><h2>生命交响曲探究荣誉证书</h2><p>恭喜</p><p class="student" id="certificateName"></p><p style="margin-top:15px">在《基因表达与性状的关系》探究中</p><p>追踪分子因果 · 比较表达状态 · 解释环境效应</p><h3 id="certificateRank" style="margin:19px 0;color:#7b864e">生命乐谱观察员</h3><p class="small" id="certificateRecord"></p><div class="row spread" style="border-top:1px solid #c1cbb2;padding-top:17px;margin-top:25px"><span class="mono tiny" id="certificateDate"></span><span class="mono tiny">B2-04-02 / v2.0</span></div></div></div></div>
+<script>
+'use strict';
+const get = id => document.getElementById(id);
+const all = selector => Array.from(document.querySelectorAll(selector));
+const state = {
+  tab:0, peaStep:0, peaFinished:false, cftr:false, cftrTested:false,
+  example:'albinism', examples:new Set(['albinism']),
+  tool:'methyl', methyl:false, acetyl:true, mirna:false, mirnaMethod:'decay',
+  specimen:'flower', mouseViewed:false, epiSeen:new Set(), dnaCopies:1, replicationSeen:false, paused:false,
+  cell:0, cells:new Set([0]), rabbitPhase:0, temperature:null, treatments:new Set(),
+  leaf:'air', leaves:new Set(['air']), ghdViewed:false,
+  quiz:0, solved:new Set(), choices:{}, done:[false,false,false,false]
+};
+let peaTimer;
+let previousFocus;
+
+function say(message) { get('assistantText').textContent=message; }
+function svgText(x,y,value,size=12,color='#5f7958',extra='') {
+  return `<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-family="Consolas,Microsoft YaHei,monospace" ${extra}>${value}</text>`;
+}
+
+function flowerDrawing(radial=false, scale=1) {
+  let drawing='<path d="M0 22 C-3 65 8 94 0 123" fill="none" stroke="#597d4d" stroke-width="3"/><path d="M1 82 Q-55 41 -51 69 Q-24 101 1 91 M1 103 Q48 61 52 85 Q34 111 1 111" fill="#9cae7a" stroke="#6b8856" stroke-width="1"/>';
+  if(radial){
+    for(let n=0;n<5;n++)drawing+=`<path d="M0 4 C-45 -11 -40 -62 -7 -64 Q29 -64 30 -37 Q25 -11 0 4" fill="#ecd693" stroke="#b7a46c" stroke-width="1.5" transform="rotate(${n*72})"/>`;
+    drawing+='<circle cx="0" cy="0" r="14" fill="#d99865"/><circle cx="0" cy="0" r="7" fill="#a25248"/>';
+  }else{
+    drawing+='<path d="M-5 0 C-49 -21 -38 -76 -14 -69 Q-1 -57 -2 -15 C2 -62 23 -81 38 -61 Q55 -29 11 1" fill="#edda9f" stroke="#b6a775" stroke-width="1.5"/><path d="M-3 1 C-69 -9 -65 36 -35 40 Q-21 69 1 43 Q35 66 48 35 Q71 16 24 -1 Z" fill="#f1dfa9" stroke="#b6a775" stroke-width="1.5"/><path d="M-25 5 Q1 -6 27 7 Q10 28 -17 23 Z" fill="#d18b5d"/><path d="M-10 5 Q0 0 12 6" fill="none" stroke="#9d5248" stroke-width="3"/>';
+  }
+  return `<g transform="scale(${scale})">${drawing}</g>`;
+}
+
+function renderHero() {
+  let svg='';
+  for(let n=0;n<5;n++)svg+=`<line x1="5" x2="235" y1="${75+n*10}" y2="${75+n*10}" stroke="#6c816340" stroke-width=".7"/>`;
+  svg+=`<g transform="translate(125 91) scale(.83)">${flowerDrawing(false)}</g>`;
+  svg+=svgText(14,194,'Lcyc / expression',9,'#96a186')+svgText(223,29,'Op. 04—02',9,'#96a186','text-anchor="end"');
+  get('heroSvg').innerHTML=svg;
+}
+
+const peaMessages=[
+  '参考RR种子具有正常SBEI功能。其淀粉合成、可溶性糖和水分变化共同决定成熟形态。',
+  '切换为rr模型，两份相关等位基因均受插入影响。这是基因内部序列的改变。不能把一个正常杂合子的一份拷贝改变，直接等同于整个皱粒表型。',
+  'SBEI正常功能受损，淀粉尤其相关支链结构的形成减少。其他代谢过程仍存在，并非所有糖都完全无法转为淀粉。',
+  '发育中胚的蔗糖水平较高，可促进渗透吸水，种子鲜重与体积增加。注意这里是吸水较多，而非立即“保水力暴跌”。',
+  '成熟干燥时，先前较多的水分散失，体积缩小，形成明显皱缩。完成“基因→酶→代谢与水分→性状”的因果链。'
+];
+function renderPea() {
+  const step=state.peaStep;
+  const changed=step>0;
+  if(!get('peaSvg').dataset.built){
+  let svg='<defs><radialGradient id="seedGreen"><stop stop-color="#b2c991"/><stop offset="1" stop-color="#607d48"/></radialGradient></defs>';
+  svg+=svgText(25,25,'RR / REFERENCE MODEL',9,'#849276','id="peaStageLabel"');
+  svg+='<path d="M35 188 Q40 52 240 63 Q380 77 374 133 Q352 215 95 212 Z" fill="#c9d6ab" stroke="#8da16b" stroke-width="1.5"/>';
+  svg+='<path d="M43 183 Q125 165 206 174 Q285 181 364 132" fill="none" stroke="#98ad77" stroke-width="1"/>';
+  for(let n=0;n<4;n++){
+    const x=103+n*63,y=139-Math.sin(n*.8)*14;
+    svg+=`<circle cx="${x}" cy="${y}" r="29" fill="url(#seedGreen)" stroke="#7e965b"/>`;
+  }
+  svg+='<g transform="translate(476 128)"><circle id="peaRound" class="seedround" cx="0" cy="0" r="58" fill="url(#seedGreen)" stroke="#6d844e" stroke-width="2"/><path id="peaWrinkle" class="seedwrinkle" d="M-53 -20 Q-48 -49 -20 -45 Q0 -62 19 -44 Q49 -43 48 -16 Q66 7 45 26 Q41 55 14 47 Q-15 64 -31 43 Q-61 35 -47 9 Q-64 -3 -53 -20 Z" fill="#849762" stroke="#5e7246" stroke-width="2"/><g id="peaWrinkleLines" style="opacity:0" stroke="#5e7246" fill="none" stroke-width="1.5"><path d="M-25 -31 Q-42 -8 -19 7 Q-3 19 -15 37 M12 -37 Q-7 -9 15 6 Q36 17 22 36 M-38 14 Q-8 -7 34 -16"/></g></g><g id="peaWater" style="opacity:0">';
+  for(let n=0;n<5;n++)svg+=`<path d="M${407+n*28} 58 Q${401+n*28} 70 ${407+n*28} 74 Q${417+n*28} 70 ${407+n*28} 58" fill="#69a6b8" opacity=".65"/>`;
+  svg+='</g>'+svgText(475,218,'成熟形态示意',11,'#6d8257','text-anchor="middle" id="peaCaption"');
+  get('peaSvg').innerHTML=svg;
+  const labels=['基因内插入','SBEI功能受损','糖与吸水增加','干燥后皱缩'];
+  get('peaDominoes').innerHTML=labels.map((label,index)=>`<div class="domino"><b>0${index+1}</b>${label}</div>`).join('');
+  get('peaMetrics').innerHTML=['SBEI功能','淀粉积累','可溶性糖'].map((label,index)=>`<div class="metric ${index===2?'sugar':''}"><label>${label}</label><strong></strong><div class="bar"><span style="width:0"></span></div></div>`).join('');
+  get('peaSvg').dataset.built='true';
+  }
+  get('peaStageLabel').textContent=changed?'rr / SBEI INSERTION MODEL':'RR / REFERENCE MODEL';
+  get('peaRound').style.r=(step===3?69:step===4?48:58)+'px';
+  get('peaRound').style.opacity=step===4?'0':'1';
+  get('peaWrinkle').style.opacity=step===4?'1':'0';
+  get('peaWrinkleLines').style.opacity=step===4?'1':'0';
+  get('peaWater').style.opacity=step===3?'1':'0';
+  get('peaCaption').textContent=step===4?'干燥后 · 皱缩':step===3?'发育期 · 吸水增多':'成熟形态示意';
+  all('#peaDominoes .domino').forEach((element,index)=>element.classList.toggle('on',step>index));
+  const metrics=[['SBEI功能',step>=2?'降低':'正常',step>=2?15:90,''],['淀粉积累',step>=2?'相对减少':'参照',step>=2?35:80,''],['可溶性糖',step>=3?'相对较高':'参照',step>=3?90:35,'sugar']];
+  all('#peaMetrics .metric').forEach((element,index)=>{element.querySelector('strong').textContent=metrics[index][1];element.querySelector('.bar span').style.width=metrics[index][2]+'%';});
+  get('peaFeedback').textContent=peaMessages[step];
+  get('mutatePea').textContent=step?'重播rr模型的因果链':'切换rr模型 · 追踪插入效应';
+  get('peaNext').disabled=step===4;
+  if(step===4)state.peaFinished=true;
+  updateProgress();
+}
+function stopPea() { clearInterval(peaTimer);peaTimer=null; }
+function startPea() {
+  stopPea();state.peaStep=1;renderPea();say(peaMessages[1]);
+  peaTimer=setInterval(()=>{state.peaStep++;renderPea();say(peaMessages[state.peaStep]);if(state.peaStep===4)stopPea();},1400);
+}
+
+function initCFTR() {
+  get('cftrSvg').innerHTML=`<rect x="0" y="0" width="600" height="87" fill="#e7ede0"/>
+    <path d="M280 58 Q340 43 405 56 Q470 35 570 57 L570 82 L280 82 Z" class="mucus" fill="#bc9a64"/>
+    <path d="M280 97 L572 97 M280 119 L572 119" stroke="#7f9c76" stroke-width="5"/>
+    ${svgText(300,28,'气道管腔 / 表面液体',11,'#7d8e70')}${svgText(300,219,'上皮细胞内',10,'#7d8e70')}
+    <path d="M45 132 C85 105 128 146 158 128 M45 151 C85 124 128 165 158 147 M45 170 C85 143 128 184 158 166" fill="none" stroke="#b0b99a" stroke-width="8"/>
+    ${svgText(45,196,'内质网质控',10,'#7d8e70')}
+    <g class="cftrprotein"><path d="M187 157 Q204 127 218 157 Q234 180 245 151 Q260 125 271 160 Q259 181 239 173 Q207 190 187 157" fill="#c1a67d" stroke="#a07e52" stroke-width="2"/></g>
+    <path d="M273 158 Q336 159 372 125" class="cftrflow" fill="none" stroke="#059669" stroke-width="2"/>
+    <g class="channel"><rect x="368" y="83" width="15" height="51" rx="6" fill="#7ba88a" stroke="#447854"/><rect x="400" y="83" width="15" height="51" rx="6" fill="#7ba88a" stroke="#447854"/></g>
+    <rect x="474" y="91" width="7" height="36" rx="3" fill="#a8b99a" opacity=".4"/>
+    <g class="ionmoving"><circle cx="392" cy="103" r="12" fill="#cae6eb" stroke="#62a7b5"/>${svgText(392,107,'Cl⁻',9,'#287087','text-anchor="middle"')}</g>
+    <circle cx="445" cy="159" r="11" fill="#cae6eb" stroke="#62a7b5"/>${svgText(445,163,'Cl⁻',9,'#287087','text-anchor="middle"')}
+    ${svgText(27,26,'CFTR / FOLDING → TRAFFICKING → TRANSPORT',9,'#849276')}`;
+}
+function renderCFTR() {
+  get('cftrFigure').classList.toggle('cftrmutant',state.cftr);
+  get('cftrDominoes').innerHTML=(state.cftr?['3 bp缺失','Phe508缺失','加工与膜运输受损','离子与液体调节异常']:['正常CFTR序列','正常折叠','运输至细胞膜','支持离子转运']).map((label,index)=>`<div class="domino ${state.cftr?'on':''}"><b>0${index+1}</b>${label}</div>`).join('');
+  get('cftrFeedback').textContent=state.cftr?'F508del导致Phe508缺失，突变蛋白易折叠异常并被质控处理，到达膜表面的有效CFTR减少，气道液体调节受损，黏液可变稠。示意的是突变蛋白加工，不能仅凭一份拷贝推断个体病情。':'正常折叠的CFTR可到达膜表面，参与Cl⁻等离子转运，并影响气道表面液体状态。';
+  get('cftrFeedback').className='note '+(state.cftr?'rose':'');
+  get('cftrMutation').classList.toggle('active',state.cftr);
+  updateProgress();
+}
+
+const examples={
+  albinism:{title:'TYR相关白化病 / 通过酶影响色素合成',text:'以TYR相关类型为例，基因变化可使酪氨酸酶缺失或活性降低，黑色素合成受影响。白化病具有遗传异质性，并非所有类型都由TYR变化造成。',inference:'追踪基因→酶→色素代谢→性状。基因型、功能与具体疾病类型要一起判断。'},
+  grey:{title:'衰老相关白发 / 色素细胞体系的变化',text:'衰老相关白发可涉及黑素细胞与其干细胞的数量、功能及色素合成状态变化。不能仅凭白发就推断一定发生TYR基因突变，也不宜把所有白发都归为同一种酶活性变化。',inference:'相似的可见性状可以由不同层次的原因引起。基因序列、表达、细胞数量与环境都可能提供线索。'},
+  sickle:{title:'镰状细胞贫血 / 蛋白质结构与状态',text:'相关HBB变异可使β珠蛋白特定位点的谷氨酸被缬氨酸替换。含HbS的血红蛋白在缺氧等条件下易聚合，影响红细胞形态与功能。',inference:'基因→蛋白质结构/功能→性状。缺氧条件是因果链的一部分，不能省去环境与分子状态。'}
+};
+function renderExample() {
+  const item=examples[state.example];get('caseHeading').textContent=item.title;get('caseText').textContent=item.text;get('caseInference').textContent=item.inference;
+  let svg='';
+  if(state.example==='sickle'){
+    svg+='<ellipse cx="97" cy="77" rx="54" ry="36" fill="#c57879" stroke="#9b5b63"/><ellipse cx="97" cy="77" rx="28" ry="17" fill="#e5b2aa"/><path d="M230 38 Q319 36 299 115 Q280 84 251 80 Q222 72 230 38" fill="#ad626c" stroke="#894d59"/>';
+    svg+=svgText(97,139,'常规圆盘示意',11,'#8c7c71','text-anchor="middle"')+svgText(267,139,'缺氧条件下示意',11,'#8c7c71','text-anchor="middle"');
+  }else{
+    svg+='<path d="M68 145 Q42 90 67 39 Q80 10 105 32 Q128 59 108 139" fill="#e0c3aa" stroke="#b2a082"/><path d="M238 145 Q212 90 237 39 Q250 10 275 32 Q298 59 278 139" fill="#e0c3aa" stroke="#b2a082"/>';
+    svg+='<path d="M81 130 Q67 40 95 9 M251 130 Q237 40 265 9" fill="none" stroke="#eee7d9" stroke-width="9" stroke-linecap="round"/>';
+    const pigment=state.example==='grey'?2:5;
+    for(let n=0;n<pigment;n++)svg+=`<circle cx="${state.example==='grey'?73+n*20:65+n*10}" cy="${115+Math.sin(n)*8}" r="4" fill="${state.example==='grey'?'#8d8d77':'#cfb5a3'}"/>`;
+    svg+=svgText(82,159,state.example==='grey'?'色素细胞功能变化':'色素合成受阻',10,'#8c7c71','text-anchor="middle"')+svgText(257,159,'白色毛干示意',10,'#8c7c71','text-anchor="middle"');
+  }
+  get('caseSvg').innerHTML=svg;all('[data-case]').forEach(button=>button.classList.toggle('active',button.dataset.case===state.example));updateProgress();
+}
+
+function epigeneticData() {
+  let transcription=100,rna=100,protein=100,blocked=false;
+  if(state.tool==='methyl'&&state.methyl){transcription=8;rna=8;protein=8;blocked=true;}
+  if(state.tool==='acetyl'&&!state.acetyl){transcription=18;rna=18;protein=18;blocked=true;}
+  if(state.tool==='mirna'&&state.mirna){rna=state.mirnaMethod==='decay'?20:100;protein=15;}
+  return {transcription,rna,protein,blocked};
+}
+function recordEpigeneticCondition() {
+  const enabled=state.tool==='methyl'?state.methyl:state.tool==='acetyl'?state.acetyl:state.mirna;
+  state.epiSeen.add(state.tool+':'+(enabled?'on':'off'));
+}
+function renderToolControls() {
+  const tools={
+    methyl:[['低甲基化 / 表达参照',false],['高甲基化 / 加CH₃封条',true]],
+    acetyl:[['乙酰化 / 较开放',true],['去乙酰化 / 较紧密',false]],
+    mirna:[['无此miRNA干预',false],['加入靶向miRNA',true]]
+  };
+  get('toolControls').innerHTML='';
+  tools[state.tool].forEach(([label,value])=>{
+    const button=document.createElement('button');button.className='btn';button.textContent=label;
+    const current=state.tool==='methyl'?state.methyl:state.tool==='acetyl'?state.acetyl:state.mirna;
+    button.classList.toggle('active',current===value);button.dataset.condition=String(value);
+    button.onclick=()=>{
+      state[state.tool]=value;state.dnaCopies=1;recordEpigeneticCondition();renderEpigenetic();
+    };get('toolControls').append(button);
+  });
+  if(state.tool==='mirna'&&state.mirna){
+    ['decay','translation'].forEach(method=>{
+      const button=document.createElement('button');button.className='btn compact'+(state.mirnaMethod===method?' active':'');button.textContent=method==='decay'?'观察mRNA降解':'观察翻译抑制';button.dataset.mirnaMethod=method;button.onclick=()=>{state.mirnaMethod=method;renderEpigenetic();};get('toolControls').append(button);
+    });
+  }
+}
+
+function renderScore() {
+  const data=epigeneticData();
+  const methylated=state.tool==='methyl'&&state.methyl;
+  const compact=state.tool==='acetyl'&&!state.acetyl;
+  const previousCompact=get('scoreSvg').dataset.compact;
+  let svg='';
+  for(let n=0;n<5;n++)svg+=`<line x1="35" x2="765" y1="${119+n*10}" y2="${119+n*10}" stroke="#83906d" stroke-width=".5" opacity=".22"/>`;
+  svg+=svgText(28,25,{'methyl':'Lcyc / PROMOTER-ASSOCIATED METHYLATION','acetyl':'GENERAL MODEL / CHROMATIN ACCESSIBILITY','mirna':'GENERAL MODEL / POST-TRANSCRIPTIONAL CONTROL'}[state.tool],10,'#8a937b');
+  let dnaPath='';
+  for(let n=0;n<6;n++){
+    const x=compact?285+n*40:95+n*110;
+    if(n===0)dnaPath=`M${x-35} 65 `;
+    dnaPath+=`Q${x} 18 ${x+34} 65 `;
+    svg+=`<g class="histone" data-index="${n}"><ellipse cx="${x}" cy="65" rx="23" ry="17" fill="#bbc49c" stroke="#82956f"/>`;
+    if(state.tool==='acetyl'&&state.acetyl)svg+=`<circle cx="${x+20}" cy="43" r="11" fill="#d3eadb" stroke="#059669"/>`+svgText(x+20,47,'Ac',8,'#059669','text-anchor="middle"');
+    svg+='</g>';
+  }
+  svg+=`<path id="chromatinPath" d="${dnaPath}" fill="none" stroke="#809a80" stroke-width="2"/>`;
+  svg+=svgText(45,94,compact?'染色质较紧密 · 可及性降低':'DNA与组蛋白 / 包装与可及性示意',10,'#819371');
+  svg+='<rect x="145" y="126" width="151" height="38" fill="#dfc898" stroke="#c3a66a"/><rect x="296" y="126" width="408" height="38" fill="#d5dfbb" stroke="#9cab7c"/>';
+  svg+=svgText(220,180,'启动子相关区域',10,'#a0824f','text-anchor="middle"')+svgText(500,180,'被观察的转录单元',10,'#7e9566','text-anchor="middle"');
+  const sequence='ATGCCGTACGTT';
+  [...sequence].forEach((base,n)=>svg+=svgText(327+n*28,151,base,16,'#3b624d','text-anchor="middle"'));
+  if(methylated){
+    for(let n=0;n<4;n++){
+      const x=177+n*31;
+      svg+=`<g class="seal"><path d="M${x-6} 128 v-7 a6 6 0 0 1 12 0 v7" fill="none" stroke="#d97706" stroke-width="2"/><rect x="${x-9}" y="128" width="18" height="18" rx="3" fill="#d99840"/>${svgText(x,114,'CH₃',9,'#a06b24','text-anchor="middle"')}</g>`;
+    }
+  }
+  svg+=`<g transform="translate(133 109)"><g class="polymerase ${data.blocked?'blocked':''}"><ellipse cx="0" cy="0" rx="34" ry="17" fill="${data.blocked?'#c5b48a':'#80a88b'}" stroke="#5c8061"/>${svgText(0,4,'RNA Pol',9,'#345744','text-anchor="middle"')}</g></g>`;
+  svg+=svgText(38,231,'mRNA',11,'#7b8b6a');
+  const rnaOpacity=Math.max(.2,data.rna/100);
+  svg+=`<g opacity="${rnaOpacity}"><path d="M140 223 Q180 211 220 223 T300 223 T380 223 T460 223 T540 223 T620 223" fill="none" stroke="#8a9d65" stroke-width="2"/>`;
+  svg+=svgText(145,246,'5′-AUGCCGUACGUU-3′',13,'#667f4d');
+  if(state.tool==='mirna'&&state.mirna){
+    svg+=`<g class="mirna"><rect x="324" y="251" width="259" height="28" rx="6" fill="#ece3fa" stroke="#a98acb"/>${svgText(453,270,'3′-UACGGCAUGCAA-5′',12,'#7c3aed','text-anchor="middle"')}`;
+    for(let n=0;n<10;n++)svg+=`<line x1="${335+n*24}" x2="${335+n*24}" y1="230" y2="251" stroke="#a98acb" stroke-dasharray="2 3"/>`;
+    svg+='</g>';
+    if(state.mirnaMethod==='decay')svg+='<path d="M450 209 l15 20 m0 -20 l-15 20" stroke="#7c3aed" stroke-width="2"/>';
+  }
+  svg+='</g>';
+  const ribosomeOpacity=data.rna>30?1:.3;
+  svg+=`<ellipse cx="650" cy="221" rx="29" ry="20" fill="#c8d5b2" stroke="#91a87a" opacity="${ribosomeOpacity}"/>`+svgText(650,225,'核糖体',9,'#6a8055','text-anchor="middle"');
+  svg+=svgText(38,320,'蛋白质产物',11,'#7b8b6a');
+  for(let n=0;n<8;n++)svg+=`<circle cx="${181+n*32}" cy="314" r="10" fill="#b66a76" opacity="${data.protein/100}"/><line x1="${191+n*32}" x2="${203+n*32}" y1="314" y2="314" stroke="#bd8b8e" opacity="${data.protein/100}"/>`;
+  svg+=svgText(455,320,'相对表达量为模型刻度',10,'#9aa187');
+  get('scoreSvg').innerHTML=svg;get('scoreFigure').classList.toggle('polpaused',state.paused);
+  get('scoreSvg').dataset.compact=String(compact);
+  if(previousCompact!==undefined&&previousCompact!==String(compact)&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    let oldPath='';
+    all('#scoreSvg .histone').forEach((element,index)=>{
+      const fromX=previousCompact==='true'?285+index*40:95+index*110;
+      const toX=compact?285+index*40:95+index*110;
+      element.animate([{transform:`translateX(${fromX-toX}px)`},{transform:'translateX(0px)'}],{duration:800,easing:'ease-in-out'});
+      if(index===0)oldPath=`M${fromX-35} 65 `;
+      oldPath+=`Q${fromX} 18 ${fromX+34} 65 `;
+    });
+    get('chromatinPath').animate([{d:`path("${oldPath}")`},{d:`path("${dnaPath}")`}],{duration:800,easing:'ease-in-out'});
+  }
+  get('scoreReadouts').innerHTML=[['转录活性',data.transcription],['mRNA存量',data.rna],['蛋白质产物',data.protein]].map(([label,value])=>`<div>${label}<b>${value}<span class="tiny"> /100</span></b></div>`).join('');
+}
+
+function renderSpecimen() {
+  const actualCase=state.tool==='methyl';
+  get('specimenButtons').hidden=!actualCase;
+  if(!actualCase){
+    const data=epigeneticData();
+    get('specimenSvg').dataset.kind='generic';
+    get('specimenSvg').innerHTML=svgText(170,48,'GENERIC REPORTER',12,'#9a987d','text-anchor="middle"')+`<rect x="69" y="80" width="202" height="28" fill="#cdd9b5" stroke="#9bad7c"/><rect x="69" y="143" width="${data.rna/100*202}" height="28" fill="#c9ba91"/><rect x="69" y="206" width="${data.protein/100*202}" height="28" fill="#b47783"/>`+svgText(170,98,'DNA序列保持',12,'#506843','text-anchor="middle"')+svgText(69,136,'mRNA相对量',10,'#9b8f6d')+svgText(69,199,'蛋白质相对量',10,'#9b8f6d');
+    get('specimenSubtitle').textContent='通用调控模型 / 非柳穿鱼直接实证';
+    get('specimenLabel').textContent=state.tool==='acetyl'?'染色质可及性与转录':'RNA存量与翻译输出';
+    get('specimenNote').textContent=state.tool==='acetyl'?'乙酰化常与较开放的染色质、较活跃转录相关。本示意不把它直接当作柳穿鱼真实花型的实验结果。':'miRNA作用于靶RNA，结果可为RNA降解或翻译抑制。转录后调控本身不自动证明具有跨代遗传。';
+    return;
+  }
+  const kind=state.specimen;
+  if(get('specimenSvg').dataset.kind!==kind){
+    if(kind==='flower'){
+      get('specimenSvg').innerHTML=`<g transform="translate(170 132)"><g class="petal" id="bilateralFlower">${flowerDrawing(false,.95)}</g><g class="petal" id="radialFlower" style="opacity:0">${flowerDrawing(true,.95)}</g></g>`;
+    }else{
+      get('specimenSvg').innerHTML='<path d="M81 170 C26 167 31 229 9 230" fill="none" stroke="#b08e61" stroke-width="5"/><ellipse id="agoutiBody" cx="157" cy="157" rx="80" ry="51" fill="#d4b04c" style="transition:fill .9s"/><path id="agoutiHead" d="M207 130 Q264 99 298 152 Q311 173 277 184 L207 188" fill="#d4b04c" style="transition:fill .9s"/><ellipse cx="232" cy="120" rx="18" ry="25" fill="#d2b497" stroke="#ad8760"/><circle cx="273" cy="146" r="4" fill="#4d4938"/><path d="M117 194 L99 219 L132 219 M188 194 L208 218 L234 218" fill="none" stroke="#ae9069" stroke-width="8" stroke-linecap="round"/>';
+    }
+    get('specimenSvg').dataset.kind=kind;
+  }
+  if(kind==='flower'){
+    get('bilateralFlower').style.opacity=state.methyl?'0':'1';get('radialFlower').style.opacity=state.methyl?'1':'0';
+    get('specimenSubtitle').textContent='柳穿鱼Lcyc / 甲基化案例';
+    get('specimenLabel').textContent=state.methyl?'高甲基化 · 辐射对称花':'较低甲基化 · 两侧对称花';
+    get('specimenNote').textContent='甲基化程度与Lcyc转录沉默、花型变化相关。不同修饰状态可称表观等位状态，不应把普通DNA序列未变说成所有遗传状态都相同。';
+  }else{
+    const color=state.methyl?'#776044':'#d4b04c';get('agoutiBody').setAttribute('fill',color);get('agoutiHead').setAttribute('fill',color);
+    get('specimenSubtitle').textContent='同一Aᵛʸ模型的插入元件修饰状态';
+    get('specimenLabel').textContent=state.methyl?'较高IAP甲基化 · 棕色倾向':'较低IAP甲基化 · 黄色倾向';
+    get('specimenNote').textContent='此例观察插入元件相关异位启动子的甲基化。较高甲基化可抑制异常异位Agouti表达，使毛色偏棕。并非给任意基因甲基化都能使小鼠变棕。';
+  }
+  all('[data-specimen]').forEach(button=>button.classList.toggle('active',button.dataset.specimen===state.specimen));
+}
+
+function renderEpigenetic() {
+  renderToolControls();renderScore();renderSpecimen();
+  get('scoreTitle').textContent={methyl:'Lcyc总谱 / 甲基化状态比较',acetyl:'通用总谱 / 组蛋白乙酰化',mirna:'通用总谱 / miRNA转录后调控'}[state.tool];
+  let note='';
+  if(state.tool==='methyl')note=state.methyl?'启动子相关甲基化较高，在本模型中降低转录。金色封条和聚合酶弹回是调控效果的比喻，真实过程涉及结合因子和染色质。DNA序列保持，复制仍可进行。':'较低甲基化参考状态，Lcyc可表达。比较相同示意序列上的不同修饰，观察花型变化。';
+  if(state.tool==='acetyl')note=state.acetyl?'乙酰化通常与较开放的染色质和转录活跃相关。这里降低包装紧密程度，不把组蛋白全部移走。':'去乙酰化状态在本模型中使可及性降低，转录量减少。这个通用单因素模型不等于所有基因在所有条件下都有相同响应。';
+  if(state.tool==='mirna')note=state.mirna?(state.mirnaMethod==='decay'?'转录仍发生，miRNA复合体通过靶向识别促进mRNA降解，RNA存量和蛋白质输出下降。':'转录仍发生，当前模型中miRNA抑制翻译，RNA存量保留而蛋白质输出减少。'):'尚无所示miRNA干预。加入工具后比较转录量、RNA存量和蛋白质产物三个层次。';
+  get('scoreFeedback').textContent=note;get('scoreFeedback').className='note '+(state.tool==='methyl'&&state.methyl?'gold':'');
+  get('replicationNote').textContent='当前DNA分子数 '+state.dnaCopies+(state.dnaCopies===2?'；本模型维持相关修饰状态':'');
+  get('replicateDNA').disabled=state.dnaCopies===2;
+  all('[data-tool]').forEach(button=>button.classList.toggle('active',button.dataset.tool===state.tool));
+  say(note);updateProgress();
+}
+
+const expressionTracks=['ATP合成酶核编码亚基','呼吸酶核编码基因','血红蛋白基因','胰岛素基因'];
+const cellSignals=[[7,7,10,0],[0,0,0,0],[8,8,0,10],[8,8,0,0]];
+function renderCell() {
+  const mature=state.cell===1;
+  get('expressionRows').innerHTML=expressionTracks.map((name,index)=>{
+    const level=cellSignals[state.cell][index];
+    return `<tr><td>${name}</td><td><span class="light ${level?'on':''} ${level&&index>1?'special':''}"></span>${mature?'不再转录':level?'可检测（示意）':'低 / 未检出（示意）'}</td></tr>`;
+  }).join('');
+  get('rbcWarning').hidden=!mature;
+  get('rbcWarning').textContent='哺乳动物成熟红细胞已无细胞核、无核糖体及线粒体等结构，当前模型中不再转录翻译。已有血红蛋白主要在幼红细胞等前体阶段合成，仍发挥功能。';
+  get('cellFeedback').textContent=mature?'基因表达灯熄灭，不等于血红蛋白存量为零，也不等于不能获得ATP。成熟红细胞可用糖酵解获得能量。':'三个有核细胞的核基因组成通常基本相同，功能差异与基因选择性表达有关。共同表达轨与细胞特异轨并存；神经元还表达本表未列出的神经功能基因。';
+  all('[data-cell]').forEach(button=>button.classList.toggle('active',Number(button.dataset.cell)===state.cell));updateProgress();
+}
+
+function initRabbit() {
+  get('rabbitSvg').innerHTML='<ellipse cx="278" cy="166" rx="136" ry="70" fill="#eee9da" stroke="#b9bda4" stroke-width="1.5"/><circle cx="147" cy="153" r="25" fill="#f5f0e3" stroke="#b9bda4"/><ellipse cx="422" cy="91" rx="19" ry="69" transform="rotate(-10 422 91)" fill="#e8e3d4" stroke="#b9bda4"/><ellipse cx="456" cy="92" rx="17" ry="66" transform="rotate(12 456 92)" fill="#e8e3d4" stroke="#b9bda4"/><ellipse cx="419" cy="63" rx="15" ry="37" transform="rotate(-10 419 63)" fill="#31473e"/><ellipse cx="461" cy="64" rx="13" ry="34" transform="rotate(12 461 64)" fill="#31473e"/><ellipse cx="435" cy="150" rx="50" ry="44" fill="#eee9da" stroke="#b9bda4"/><ellipse cx="478" cy="158" rx="18" ry="12" fill="#31473e"/><circle cx="450" cy="137" r="4" fill="#7b3f48"/><ellipse cx="220" cy="220" rx="48" ry="16" fill="#31473e"/><ellipse cx="396" cy="220" rx="39" ry="13" fill="#31473e"/><ellipse id="furPatch" class="rabbitpatch" cx="282" cy="143" rx="67" ry="37" fill="#eee9da"/><g id="treatmentPack" style="transition:opacity .5s" opacity="0"><rect id="packRect" x="246" y="60" width="79" height="41" rx="6" fill="#b6dce6" stroke="#6aa5b5"/><path d="M253 72 h64 M253 81 h64 M253 90 h64" stroke="#6aa5b5" opacity=".5"/><text id="packText" x="285" y="86" text-anchor="middle" font-size="13" fill="#2d7284" font-family="Consolas">15°C</text></g>'+svgText(23,26,'LOCAL FOLLICLE / TEMPERATURE-SENSITIVE TYROSINASE',9,'#8b987d')+svgText(26,235,'原有末端黑毛保留，背部观察新毛',10,'#8b987d');
+}
+function enzymeActivity(temperature) {
+  return Math.exp(-Math.pow((temperature-18)/16,2))/(1+Math.exp((temperature-28)/1.8));
+}
+function renderTemperatureChart() {
+  const x=t=>45+t/45*450,y=a=>119-a*88;
+  let curve='';
+  for(let t=0;t<=45;t+=.5)curve+=(t===0?'M':'L')+x(t).toFixed(1)+' '+y(enzymeActivity(t)).toFixed(1)+' ';
+  let svg=`<line x1="45" x2="495" y1="119" y2="119" stroke="#a8b499"/><line x1="45" x2="45" y1="22" y2="119" stroke="#a8b499"/><path d="${curve}" fill="none" stroke="#7d9b64" stroke-width="2"/>`;
+  svg+=svgText(35,36,'高',9,'#96a385','text-anchor="end"')+svgText(35,118,'低',9,'#96a385','text-anchor="end"')+svgText(46,15,'温敏酶活性 · 定性示意',9,'#96a385');
+  [0,15,25,35,45].forEach(t=>svg+=svgText(x(t),138,t+'°',9,'#96a385','text-anchor="middle"'));
+  [15,35].forEach(t=>{
+    const active=state.temperature===t;
+    svg+=`<line x1="${x(t)}" x2="${x(t)}" y1="25" y2="119" stroke="${t===15?'#0284c7':'#d97706'}" stroke-dasharray="3 4" opacity="${active?1:.25}"/>`;
+    if(active)svg+=`<circle cx="${x(t)}" cy="${y(enzymeActivity(t))}" r="4" fill="${t===15?'#0284c7':'#d97706'}"/>`;
+  });
+  get('temperatureChart').innerHTML=svg;
+}
+function renderRabbit() {
+  const phase=state.rabbitPhase;
+  const color=phase===1||phase===2?'#dfb7a5':phase===3&&state.temperature===15?'#273e34':'#eee9da';
+  get('furPatch').setAttribute('fill',color);
+  get('furPatch').setAttribute('stroke',phase===1||phase===2?'#c09c87':'none');
+  get('treatmentPack').style.opacity=phase===2?'1':'0';
+  get('packRect').setAttribute('fill',state.temperature===35?'#efd1ac':'#b6dce6');
+  get('packText').textContent=(state.temperature||15)+'°C';
+  get('rabbitSteps').innerHTML=['剃去旧毛','维持局部条件','观察新毛'].map((label,index)=>`<div class="step ${phase>index?'done':''}">0${index+1} / ${label}</div>`).join('');
+  all('[data-temperature]').forEach(button=>{
+    button.disabled=phase===0||phase===3;
+    button.classList.toggle('active',Number(button.dataset.temperature)===state.temperature);
+  });
+  get('growFur').disabled=phase!==2;
+  let message='先剃去旧毛。为什么要观察新长出的毛，而不是期待原有白毛立刻变黑？';
+  if(phase===1)message='已剃去背部旧毛，露出局部皮肤。选择15°C或35°C毛囊条件，在相同基因型下比较新毛。';
+  if(phase===2)message=state.temperature===15?'局部条件设为15°C。在本模型中温敏酪氨酸酶活性相对较高，快进观察新毛色素。':'局部条件设为35°C。在本模型中温敏酪氨酸酶活性相对较低，快进观察新毛色素。';
+  if(phase===3)message=state.temperature===15?'冷条件下新生毛色变深。局部温度影响酶活性与黑色素形成，未改写DNA序列。若要比较暖条件，先重新剃去毛。':'暖条件下新生毛保持较浅。比较冷敷记录可见，同一基因型在不同局部条件下可呈不同表型。';
+  get('rabbitFeedback').textContent=message;get('rabbitFeedback').className='note '+(phase===3?'gold':'');
+  renderTemperatureChart();updateProgress();
+}
+
+function renderLeaves() {
+  let svg='<path d="M265 158 C266 111 270 70 265 30" fill="none" stroke="#769565" stroke-width="3"/>';
+  const water=state.leaf==='water';
+  if(water){
+    svg+='<rect x="0" y="0" width="530" height="170" fill="#c5e4e2" opacity=".18"/>';
+    for(const direction of [-1,1])for(let n=0;n<4;n++){
+      const y=55+n*26;
+      svg+=`<path d="M265 ${y+15} Q${265+direction*70} ${y-20} ${265+direction*122} ${y-18} M${265+direction*50} ${y-2} l${direction*22} -25 M${265+direction*78} ${y-10} l${direction*30} 18 M${265+direction*95} ${y-14} l${direction*15} -17" fill="none" stroke="#6d9474" stroke-width="1.4"/>`;
+    }
+  }else{
+    svg+='<path d="M265 88 C212 112 169 81 185 58 Q158 31 190 26 Q198 0 222 25 Q258 11 267 55 Q277 20 302 23 Q326 1 338 28 Q370 33 346 58 Q360 89 311 101 Z" fill="#a0b88b" stroke="#718f5d"/><path d="M267 116 Q213 148 189 118 Q165 96 197 88 Q222 63 260 96 M268 117 Q319 146 340 117 Q363 91 329 90 Q303 64 271 99" fill="#a0b88b" stroke="#718f5d"/>';
+  }
+  svg+=svgText(22,25,water?'SUBMERGED DEVELOPMENT':'AERIAL DEVELOPMENT',9,'#8a9b7b');get('leafSvg').innerHTML=svg;
+  get('leafFeedback').textContent=water?'水下发育的新叶可呈丝状或细裂形态。比较的是不同发育环境中形成的新叶，不能据此断言已成熟叶片瞬间改形或基因序列改变。':'在适宜的水上发育条件下，新生叶片可表现为较宽的形态。环境与发育状态共同参与形成表型。';
+  all('[data-leaf]').forEach(button=>button.classList.toggle('active',button.dataset.leaf===state.leaf));updateProgress();
+}
+function renderRice() {
+  const color=state.ghdViewed?'#b68a45':'#b1b59d';
+  let svg='<rect x="52" y="65" width="92" height="39" fill="#dfd7b5" stroke="#ad9c69"/>'+svgText(98,90,'Ghd7',17,'#7e7950','text-anchor="middle"');
+  [[340,40,'抽穗期'],[408,90,'株高'],[340,139,'每穗粒数']].forEach(([x,y,label])=>{
+    svg+=`<path d="M144 85 Q220 85 ${x-35} ${y}" fill="none" stroke="${color}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="18" fill="#e9e3cd" stroke="${color}"/>`+svgText(x+29,y+4,label,12,'#82845d');
+  });
+  svg+=svgText(22,157,'一因多效 / 背景与光周期等条件会影响表现',9,'#8a9b7b');get('riceSvg').innerHTML=svg;
+}
+
+const quizzes=[
+  {topic:'柳穿鱼后代的性状差异',question:'柳穿鱼杂交后代出现不同花型，相关区域未检测到导致花型差异的DNA序列改变，但甲基化与表达状态不同。哪项解释更适当？',options:['见到性状分离即可证明新基因突变','可考虑修饰状态的传递与改变影响Lcyc表达，不能只凭分离现象断言序列突变','只要序列相同，任何条件下花型都必相同','甲基化一定使染色体数目翻倍'],answer:1,note:'表型分离本身不足以判定原因。结合序列、甲基化、表达及谱系证据，可支持表观遗传解释。',template:'相关基因序列未检测到致因改变，但甲基化状态差异与表达及花型相关；该状态在谱系或后代中维持可为表观遗传提供证据。'},
+  {topic:'甲基化与作用过程',question:'在本模型中，启动子相关甲基化增强使mRNA减少，但DNA仍能复制。最直接受抑的过程是？',options:['DNA复制，且DNA聚合酶必定永久失活','翻译形成所有细胞的所有蛋白质','相关基因的转录，涉及启动子调控与RNA聚合酶等','染色体的所有碱基被替换'],answer:2,note:'本模型把启动子相关调控定位在转录层面。不能把转录受抑等同于DNA复制被封锁。',template:'启动子相关甲基化可影响转录调控因子结合或染色质状态，降低相应基因转录活性，进而减少表达产物。'},
+  {topic:'成熟红细胞特例',question:'哺乳动物成熟红细胞含有血红蛋白，但通常已不再转录翻译。对此哪项解释正确？',options:['血红蛋白必由细胞外DNA现场翻译而来','血红蛋白主要在前体阶段合成，成熟细胞保留蛋白质且仍可进行糖酵解','既无核就绝对不能产生ATP','只要有血红蛋白就必有活跃的血红蛋白基因转录'],answer:1,note:'已有蛋白质存量与当前表达活动不同。成熟红细胞无核、无核糖体，但仍能获得ATP。',template:'应区分表达产物的存留与当前合成活动；成熟红细胞的血红蛋白主要形成于前体阶段。'},
+  {topic:'两条性状控制路径',question:'TYR相关白化病与CFTR F508del的典型因果链，哪项对照适当？',options:['前者经酶影响色素代谢，后者涉及膜蛋白折叠运输与离子转运功能','前者只改变染色体数目，后者只改变DNA甲基化','CFTR不属于蛋白质','基因影响性状都必须先改变一种代谢酶'],answer:0,note:'两类模型分别突出酶与代谢，以及蛋白质结构/功能。CFTR F508del的重要影响包括加工与膜运输。',template:'基因可通过控制酶影响代谢，也可通过蛋白质结构和功能参与性状形成，具体途径须依据表达产物与功能判断。'},
+  {topic:'序列、表达与遗传证据',question:'关于组蛋白乙酰化、miRNA与基因突变，哪项表述最严谨？',options:['只要mRNA量改变就必定发生DNA序列突变','miRNA促进靶RNA降解或抑制翻译，单次调控现象本身不证明可跨代遗传','组蛋白乙酰化必使DNA碱基顺序重排','所有甲基化差异都必然永久传给所有后代'],answer:1,note:'调控层次与可遗传性需要分开判定。序列变化、修饰变化和转录后调控不能混为一谈。',template:'应先区分DNA序列、染色质修饰与RNA层面的调控，再结合细胞谱系或后代中的维持证据判断遗传性。'}
+];
+function renderQuiz() {
+  const quiz=quizzes[state.quiz];get('quizTopic').textContent='0'+(state.quiz+1)+' / '+quiz.topic;get('quizQuestion').textContent=quiz.question;
+  get('quizDots').innerHTML='';quizzes.forEach((item,index)=>{
+    const button=document.createElement('button');button.textContent=index+1;button.classList.toggle('active',index===state.quiz);button.classList.toggle('done',state.solved.has(index));button.setAttribute('aria-label','第'+(index+1)+'题');button.onclick=()=>{state.quiz=index;renderQuiz();};get('quizDots').append(button);
+  });
+  get('quizOptions').innerHTML='';quiz.options.forEach((option,index)=>{
+    const button=document.createElement('button');button.className='btn quizoption';button.textContent=String.fromCharCode(65+index)+'  '+option;
+    if(state.choices[state.quiz]===index)button.classList.add(index===quiz.answer?'correct':'wrong');
+    button.onclick=()=>{state.choices[state.quiz]=index;if(index===quiz.answer)state.solved.add(state.quiz);renderQuiz();updateProgress();say(quiz.note);};get('quizOptions').append(button);
+  });
+  const answered=Object.hasOwn(state.choices,state.quiz),correct=state.choices[state.quiz]===quiz.answer;
+  get('quizFeedback').textContent=answered?(correct?'乐评通过。':'请再审证据。')+quiz.note:'先说明操作改变了什么，再判断哪条因果链得到证据支持。';
+  get('quizFeedback').className='note '+(answered?(correct?'':'rose'):'');get('answerTemplate').hidden=!answered;get('answerTemplate').textContent='规范表达 · '+quiz.template;
+  get('quizStamp').innerHTML=correct?'<span class="stamp">证据审阅 · 通过</span>':'';get('nextQuiz').textContent=state.quiz===4?'重审第1乐评 ↺':'下一乐评 →';
+}
+
+function updateProgress() {
+  state.done[0]=state.peaFinished&&state.cftrTested&&state.examples.size===3;
+  state.done[1]=state.epiSeen.size===6&&state.replicationSeen&&state.mouseViewed;
+  state.done[2]=state.cells.size===4&&state.treatments.size===2&&state.leaves.size===2&&state.ghdViewed;
+  state.done[3]=state.solved.size===5;
+  all('[data-tab]').forEach(button=>button.classList.toggle('done',state.done[Number(button.dataset.tab)]));
+  const missions=['完成皱粒因果链、CFTR与三个对比案例','对比三类工具、复制观察与小鼠案例','四细胞、冷热新毛、水叶与Ghd7','五项乐评全部通过'];
+  get('missionList').innerHTML=missions.map((message,index)=>`<div>${state.done[index]?'✓':'□'} ${message}</div>`).join('');get('scoreLabel').textContent=state.solved.size+' / 5';get('progressBar').style.width=state.done.filter(Boolean).length/4*100+'%';get('rankLabel').textContent=state.done.every(Boolean)?'生命交响曲指挥家':state.solved.size>=3?'基因表达研究员':'生命乐谱观察员';
+}
+function tab(index) {
+  stopPea();state.tab=index;all('.movement').forEach((section,n)=>section.hidden=n!==index);all('[data-tab]').forEach((button,n)=>{button.classList.toggle('active',n===index);button.setAttribute('aria-selected',String(n===index));});get('nextMovement').textContent=index===3?'返回序曲 ↺':'下一乐章 →';
+  say(['观察两个路径。改变基因序列，与改变表达状态，会留下怎样不同的证据？','音符未改，演奏可以改变。先区分转录调控、RNA降解与翻译抑制。','同一份基因信息，要结合细胞状态与环境，才能解释性状。','写下结论前，先指出证据、比较条件和适用范围。'][index]);
+}
+function openModal(id) {previousFocus=document.activeElement;get(id).hidden=false;document.body.style.overflow='hidden';get(id).querySelector('.dialog').focus();}
+function closeModal(modal) {modal.hidden=true;document.body.style.overflow='';previousFocus?.focus();}
+function generateAward() {
+  const name=get('studentName').value.trim();if(!name){get('awardFeedback').textContent='请先写下姓名，再为本次探究签发记录。';get('studentName').focus();return;}
+  get('certificateName').textContent=name;get('certificateRank').textContent=state.done.every(Boolean)?'生命交响曲指挥家':'生命乐谱观察员';get('certificateRecord').textContent=`完成 ${state.done.filter(Boolean).length}/4 个乐章，乐评通过 ${state.solved.size}/5 题。`;
+  get('certificateDate').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());get('certificateSheet').hidden=false;get('printAward').disabled=false;get('awardFeedback').textContent='奖状已签发，可打印或选择“另存为PDF”。';
+}
+
+all('[data-tab]').forEach(button=>button.onclick=()=>tab(Number(button.dataset.tab)));get('nextMovement').onclick=()=>tab((state.tab+1)%4);
+get('mutatePea').onclick=startPea;get('peaNext').onclick=()=>{stopPea();state.peaStep=Math.min(4,state.peaStep+1);renderPea();say(peaMessages[state.peaStep]);};get('peaReset').onclick=()=>{stopPea();state.peaStep=0;renderPea();};
+get('cftrMutation').onclick=()=>{state.cftr=true;state.cftrTested=true;renderCFTR();say(get('cftrFeedback').textContent);};get('cftrReset').onclick=()=>{state.cftr=false;renderCFTR();};
+all('[data-case]').forEach(button=>button.onclick=()=>{state.example=button.dataset.case;state.examples.add(state.example);renderExample();say(examples[state.example].inference);});
+all('[data-tool]').forEach(button=>button.onclick=()=>{
+  state.tool=button.dataset.tool;state.methyl=false;state.acetyl=true;state.mirna=false;state.dnaCopies=1;recordEpigeneticCondition();renderEpigenetic();
+});
+all('[data-specimen]').forEach(button=>button.onclick=()=>{state.specimen=button.dataset.specimen;if(state.specimen==='mouse')state.mouseViewed=true;renderSpecimen();updateProgress();});
+get('replicateDNA').onclick=()=>{state.dnaCopies=2;state.replicationSeen=true;get('replicationNote').textContent='DNA已复制成2个分子；本模型中相关修饰得以维持';get('replicateDNA').disabled=true;updateProgress();say('DNA可被复制，相关修饰在本模型中被维持。转录受抑与复制被阻断不是同一个判断。');};
+get('pausePol').onclick=()=>{state.paused=!state.paused;get('scoreFigure').classList.toggle('polpaused',state.paused);get('pausePol').textContent=state.paused?'恢复分子动画':'暂停分子动画';get('pausePol').setAttribute('aria-pressed',String(state.paused));};
+all('[data-cell]').forEach(button=>button.onclick=()=>{state.cell=Number(button.dataset.cell);state.cells.add(state.cell);renderCell();say(get('cellFeedback').textContent);});
+get('shaveRabbit').onclick=()=>{state.rabbitPhase=1;state.temperature=null;renderRabbit();say(get('rabbitFeedback').textContent);};
+all('[data-temperature]').forEach(button=>button.onclick=()=>{if(state.rabbitPhase===0||state.rabbitPhase===3)return;state.temperature=Number(button.dataset.temperature);state.rabbitPhase=2;renderRabbit();say(get('rabbitFeedback').textContent);});
+get('growFur').onclick=()=>{if(state.rabbitPhase!==2)return;state.rabbitPhase=3;state.treatments.add(state.temperature);renderRabbit();say(get('rabbitFeedback').textContent);};get('rabbitReset').onclick=()=>{state.rabbitPhase=0;state.temperature=null;renderRabbit();};
+all('[data-leaf]').forEach(button=>button.onclick=()=>{state.leaf=button.dataset.leaf;state.leaves.add(state.leaf);renderLeaves();say(get('leafFeedback').textContent);});
+get('ghdButton').onclick=()=>{state.ghdViewed=true;renderRice();get('ghdFeedback').textContent='高亮的三条路径关联抽穗期、株高与穗粒数，展示一因多效。多性状受到同一调控节点影响，不能据此断言每个性状只由一个基因决定。';say(get('ghdFeedback').textContent);updateProgress();};
+get('nextQuiz').onclick=()=>{state.quiz=(state.quiz+1)%quizzes.length;renderQuiz();};
+get('focusButton').onclick=()=>{const active=document.body.classList.toggle('focusmode');get('focusButton').textContent=active?'退出专注':'课堂专注';get('focusButton').setAttribute('aria-pressed',String(active));};
+all('[data-open]').forEach(button=>button.onclick=()=>openModal(button.dataset.open));all('[data-close]').forEach(button=>button.onclick=()=>closeModal(button.closest('.modal')));all('.modal').forEach(modal=>modal.onclick=event=>{if(event.target===modal)closeModal(modal);});
+document.addEventListener('keydown',event=>{
+  const modal=all('.modal').find(element=>!element.hidden);if(!modal)return;if(event.key==='Escape')closeModal(modal);
+  if(event.key==='Tab'){const focusable=Array.from(modal.querySelectorAll('button:not(:disabled),input,select,a[href]')).filter(element=>element.offsetParent!==null);if(event.shiftKey&&document.activeElement===focusable[0]){event.preventDefault();focusable.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===focusable.at(-1)){event.preventDefault();focusable[0]?.focus();}}
+});
+get('generateAward').onclick=generateAward;get('printAward').onclick=()=>window.print();get('studentName').onkeydown=event=>{if(event.key==='Enter')generateAward();};document.addEventListener('visibilitychange',()=>{if(document.hidden)stopPea();});
+renderHero();renderPea();initCFTR();renderCFTR();renderExample();recordEpigeneticCondition();renderEpigenetic();renderCell();initRabbit();renderRabbit();renderLeaves();renderRice();renderQuiz();updateProgress();say('观察两个路径。改变基因序列，与改变表达状态，会留下怎样不同的证据？');
+window.ExpressionAtlas={state,epigeneticData,enzymeActivity,tab,stopPea};
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/expression-trait/symphony-v2/" data-file="lessons/必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>

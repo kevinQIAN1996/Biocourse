@@ -1,5 +1,235 @@
 [
   {
+    "id": "cell-basics",
+    "title": "细胞是生命活动的基本单位",
+    "category": "cell",
+    "summary": "修复细胞学说档案，验证病毒宿主依赖，再建立卧龙生命系统模型。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "PBL策展版",
+        "file": "lessons/必修1_01-01_细胞是生命活动的基本单位_PBL生命边界策展工程_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "修复细胞学说档案，验证病毒宿主依赖，再建立卧龙生命系统模型。",
+        "features": [
+          "历史透镜、细胞分裂证据与同行评审",
+          "T2宿主比较和同位素标记顺序",
+          "三物种层级塔、生态采样判定与PBL结项报告"
+        ],
+        "approach": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/cell-basics/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "9d1ce2c2eb7000c401169808ed10968b45782a90f0539d086e4cb273393c0093",
+        "sourceFilename": "必修1_01-01_细胞是生命活动的基本单位_PBL生命边界策展工程_v1.0.html",
+        "bytes": 109610
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 1,
+      "chapterTitle": "走近细胞",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞是生命活动的基本单位"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第1节"
+    }
+  },
+  {
+    "id": "cell-diversity",
+    "title": "细胞的多样性和统一性",
+    "category": "cell",
+    "summary": "在镜检与物种分拣中辨认原核、真核和非细胞结构的边界。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "镜检海关版",
+        "file": "lessons/必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "在镜检与物种分拣中辨认原核、真核和非细胞结构的边界。",
+        "features": [
+          "高低倍镜切换、移片方向与视野计数",
+          "八种生物扫描与分类通关",
+          "蓝细菌、支原体情境及统一性快问快答"
+        ],
+        "approach": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/cell-diversity/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "ead050f079e16b9e208eb99fdd8988e5876113880ac35b602c54457d35da7177",
+        "sourceFilename": "必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
+        "bytes": 97411
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 1,
+      "chapterTitle": "走近细胞",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞的多样性和统一性"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第2节"
+    }
+  },
+  {
+    "id": "elements",
+    "title": "细胞中的元素和化合物",
+    "category": "cell",
+    "summary": "从质量守恒到分子显色，以试错与对照解释物质鉴定实验。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "包豪斯实验版",
+        "file": "lessons/必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从质量守恒到分子显色，以试错与对照解释物质鉴定实验。",
+        "features": [
+          "鲜干重守恒模型与大量、微量元素分拣",
+          "真实食材本底与纯物质对照",
+          "斐林、双缩脲、苏丹III实操及稀释校准"
+        ],
+        "approach": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/elements/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "66ea28d5c68e080f842f7bcd52c2c95a00701f232c84b4e8754bfa11afe1d52f",
+        "sourceFilename": "必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
+        "bytes": 99634
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 2,
+      "chapterTitle": "组成细胞的分子",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞中的元素和化合物"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第1节"
+    }
+  },
+  {
+    "id": "inorganics",
+    "title": "细胞中的无机物",
+    "category": "cell",
+    "summary": "通过水分子、抗逆调节和缺素回补实验理解水与无机盐的功能。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "深空维生版",
+        "file": "lessons/必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "通过水分子、抗逆调节和缺素回补实验理解水与无机盐的功能。",
+        "features": [
+          "水分子极性、氢键及种子失水观察",
+          "自由水与结合水、生理状态联动",
+          "离子功能诊断与植物缺素回补实验"
+        ],
+        "approach": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/inorganics/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "fd21130485832507ef0726c9ebe331365883388bb56ec4539360e755c7ea1433",
+        "sourceFilename": "必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
+        "bytes": 80032
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 2,
+      "chapterTitle": "组成细胞的分子",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞中的无机物"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第2节"
+    }
+  },
+  {
+    "id": "carbohydrate-lipid",
+    "title": "细胞中的糖类和脂质",
+    "category": "cell",
+    "summary": "用分子拼装、等质量氧化比较和种子时间轴探究糖类与脂质。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "能量造物版",
+        "file": "lessons/必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "用分子拼装、等质量氧化比较和种子时间轴探究糖类与脂质。",
+        "features": [
+          "单糖拼装、糖类分类及显色对照",
+          "脂肪酸结构与等质量氧化比较",
+          "油料种子曲线、糖脂转化和闯关题"
+        ],
+        "approach": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/carbohydrate-lipid/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "d1e7922d138c016175a10837ecaff2dc79cca0fb462fb5000f51272e26ac822f",
+        "sourceFilename": "必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
+        "bytes": 82135
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 2,
+      "chapterTitle": "组成细胞的分子",
+      "sections": [
+        {
+          "number": 3,
+          "title": "细胞中的糖类和脂质"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第3节"
+    }
+  },
+  {
     "id": "protein",
     "title": "蛋白质",
     "category": "cell",
@@ -21,12 +251,15 @@
         "approach": "先辨认组成，再连接与折叠，最后让学生用结构证据解释功能。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/protein/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 182665,
-        "contentSha256": "e2060804751dbdf58688a8ee6b76cfb04fa23d7ced0250766cf418e7ec09d894"
+        "platformUpdated": "2026-11-02",
+        "bytes": 190544,
+        "contentSha256": "6670bda8055c06c24a33b543adb00055b8093ebb44039ecdbb9281e2f9c52587",
+        "sourceFilename": "必修1_02-04_蛋白质生命架构实验室.html"
       }
     ],
     "curriculum": {
@@ -66,12 +299,15 @@
         "approach": "两人分别担任构建员与校验员，从单位组成推进到序列与结构。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/nucleic/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 93973,
-        "contentSha256": "480007a2f3f50a39ff454c034b07edef7cdf17f734d749706e6aa8083236a743"
+        "platformUpdated": "2026-11-02",
+        "bytes": 101843,
+        "contentSha256": "150a355b28c7f592d674a95b28aa5608fbfaa411d2e542cecd81c7d9de7b473c",
+        "sourceFilename": "必修1_02-05_核酸训练实验室.html"
       }
     ],
     "curriculum": {
@@ -87,120 +323,6 @@
       ],
       "integrated": false,
       "label": "第2章 · 第5节"
-    }
-  },
-  {
-    "id": "membrane",
-    "title": "细胞膜",
-    "category": "cell",
-    "summary": "用膜结构、流动性与信号交流解释细胞边界。",
-    "versions": [
-      {
-        "id": "original",
-        "label": "1.0",
-        "edition": "原版",
-        "file": "细胞膜_边界研究所_v1.0.html",
-        "published": "2026-10-27",
-        "dateNote": "本站首次公开日期；不等同于课件创作日期",
-        "summary": "用膜结构、流动性与信号交流解释细胞边界。",
-        "features": [
-          "完整与受损细胞膜对照",
-          "膜分子搭建和标记蛋白混合演示",
-          "可溶性信号、直接接触和胞间连丝情境"
-        ],
-        "approach": "先讨论功能，再用实验认识结构，最后检验结构与功能的联系。",
-        "changes": [
-          "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
-        ],
-        "route": "courses/membrane/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 91877,
-        "contentSha256": "b334daded1c941098e515c0d7e93e79a12c13d771744e894e1285805628d86cc"
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 3,
-      "chapterTitle": "细胞的基本结构",
-      "sections": [
-        {
-          "number": 1,
-          "title": "细胞膜的结构和功能"
-        }
-      ],
-      "integrated": false,
-      "label": "第3章 · 第1节"
-    }
-  },
-  {
-    "id": "organelles",
-    "title": "细胞器",
-    "category": "cell",
-    "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
-    "versions": [
-      {
-        "id": "workbuddy",
-        "label": "2.0",
-        "edition": "WorkBuddy 版",
-        "file": "workbuddy/3.2细胞器之间的分工合作.html",
-        "published": "2026-10-28",
-        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
-        "summary": "以细胞工厂为情境，串联细胞器分工、离心实验与协作。",
-        "features": [
-          "细胞器图鉴与分工探索",
-          "差速离心分步操作",
-          "分泌蛋白动画、生物膜系统和练习"
-        ],
-        "approach": "先认识各部门，再用分离实验区分结构，最后追踪协作路线。",
-        "changes": [
-          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
-        ],
-        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
-        "route": "courses/organelles/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 83112,
-        "contentSha256": "d6344f2a4aefa5e22f1912c77f6eb0eae8a808f12d0d19d518341264dc41cab7"
-      },
-      {
-        "id": "original",
-        "label": "1.0",
-        "edition": "原版",
-        "file": "细胞器图鉴_2D互动版_v1.0.html",
-        "published": "2026-10-27",
-        "dateNote": "本站首次公开日期；不等同于课件创作日期",
-        "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
-        "features": [
-          "2D 图鉴逐项观察与结构标注",
-          "膜结构分类归档任务",
-          "结构比较和情境推理练习"
-        ],
-        "approach": "先看结构再讲功能，以分类和比较代替孤立记忆。",
-        "changes": [
-          "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
-        ],
-        "route": "courses/organelles/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 70052,
-        "contentSha256": "fd32066c5a7ae644820ffdd20b7a7c0da637027b2b4b405794a6fda1df01e5c7"
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 3,
-      "chapterTitle": "细胞的基本结构",
-      "sections": [
-        {
-          "number": 2,
-          "title": "细胞器之间的分工合作"
-        }
-      ],
-      "integrated": false,
-      "label": "第3章 · 第2节"
     }
   },
   {
@@ -225,12 +347,15 @@
         "approach": "用研究员和工程师角色完成边界、协作、控制三项建造任务。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/cell-stem/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 4471529,
-        "contentSha256": "a65c359b96dae2eacbaa0fd6ee588ce25183a5c4d87ecde04dc24e4197961410"
+        "platformUpdated": "2026-11-02",
+        "bytes": 4479409,
+        "contentSha256": "119a4091906aa4dd1995cf49e438043504ab37a2119b52418fcacb0815aa2ad3",
+        "sourceFilename": "拓展_细胞工程_细胞工程局_STEM探索课.html"
       }
     ],
     "curriculum": {
@@ -254,6 +379,54 @@
       ],
       "integrated": true,
       "label": "第3章 · 第1—3节综合"
+    }
+  },
+  {
+    "id": "membrane",
+    "title": "细胞膜",
+    "category": "cell",
+    "summary": "用膜结构、流动性与信号交流解释细胞边界。",
+    "versions": [
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞膜_边界研究所_v1.0.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "用膜结构、流动性与信号交流解释细胞边界。",
+        "features": [
+          "完整与受损细胞膜对照",
+          "膜分子搭建和标记蛋白混合演示",
+          "可溶性信号、直接接触和胞间连丝情境"
+        ],
+        "approach": "先讨论功能，再用实验认识结构，最后检验结构与功能的联系。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+        ],
+        "route": "courses/membrane/original/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 99757,
+        "contentSha256": "81f3c2eabbc38c4cd1cd9579e56f2aedcda1daff6c3cce7d98b424a4c272b366",
+        "sourceFilename": "必修1_03-01_细胞膜_边界研究所_v1.0.html"
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞膜的结构和功能"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第1节"
     }
   },
   {
@@ -278,12 +451,15 @@
         "approach": "先让学生指认位置，再用证据说明结构功能，最后串联运输过程。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/textbook-atlas/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 38576134,
-        "contentSha256": "135814c9e576b61abd9073a6ff504a117ef196674bb3359bb87831590e3a09fc"
+        "platformUpdated": "2026-11-02",
+        "bytes": 94349,
+        "contentSha256": "3b29727ccd7aa56f98eb5779117dc2cc238924e9f9ac2533d742d8cf16c89d79",
+        "sourceFilename": "必修1_03-00_细胞结构图谱_教材原图交互版.html"
       }
     ],
     "curriculum": {
@@ -310,6 +486,80 @@
     }
   },
   {
+    "id": "organelles",
+    "title": "细胞器",
+    "category": "cell",
+    "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "2.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/3.2细胞器之间的分工合作.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "以细胞工厂为情境，串联细胞器分工、离心实验与协作。",
+        "features": [
+          "细胞器图鉴与分工探索",
+          "差速离心分步操作",
+          "分泌蛋白动画、生物膜系统和练习"
+        ],
+        "approach": "先认识各部门，再用分离实验区分结构，最后追踪协作路线。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/organelles/workbuddy/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 83337,
+        "contentSha256": "d6344f2a4aefa5e22f1912c77f6eb0eae8a808f12d0d19d518341264dc41cab7",
+        "sourceFilename": "3.2细胞器之间的分工合作.html"
+      },
+      {
+        "id": "original",
+        "label": "1.0",
+        "edition": "原版",
+        "file": "细胞器图鉴_2D互动版_v1.0.html",
+        "published": "2026-10-27",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
+        "features": [
+          "2D 图鉴逐项观察与结构标注",
+          "膜结构分类归档任务",
+          "结构比较和情境推理练习"
+        ],
+        "approach": "先看结构再讲功能，以分类和比较代替孤立记忆。",
+        "changes": [
+          "独立课件归档上线。",
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+        ],
+        "route": "courses/organelles/original/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 77936,
+        "contentSha256": "b884dd05ccd9d582fbc6dfeb5e86f8b554dbc2961b6efe37813cff9516301066",
+        "sourceFilename": "必修1_03-02_细胞器图鉴_2D互动版_v1.0.html"
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 2,
+          "title": "细胞器之间的分工合作"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
+    }
+  },
+  {
     "id": "secretion",
     "title": "分泌蛋白",
     "category": "cell",
@@ -331,12 +581,15 @@
         "approach": "以预测—观察—解释循环推进运输过程，重点观察区室关系。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/secretion/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 64702,
-        "contentSha256": "4e9650d7bdb03802620c81fd0177e82e9cf40479c1699e2b72b97fe2d72e74da"
+        "platformUpdated": "2026-11-02",
+        "bytes": 72583,
+        "contentSha256": "376c97b3e068fbd93eb7dffba4b9a75532dcbcf095c901a6a1babc7ef882c124",
+        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.1.html"
       },
       {
         "id": "legacy",
@@ -353,12 +606,15 @@
         ],
         "approach": "先完整观看运输路线，再逐步暂停讨论各区室的作用。",
         "changes": [
-          "保留早期交互流程，支持与新版对照。"
+          "保留早期交互流程，支持与新版对照。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/secretion/legacy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 47359,
-        "contentSha256": "f94a36ab1bd61359da153670dcfe300e54f7ef1ba5582a94af9291fe6a5261b5"
+        "platformUpdated": "2026-11-02",
+        "bytes": 55238,
+        "contentSha256": "6d4a2d7188889b0efd89d26957740b149fcbf8e10fd7eeb0791bfa25a35d6adb",
+        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.0.html"
       }
     ],
     "curriculum": {
@@ -374,6 +630,102 @@
       ],
       "integrated": false,
       "label": "第3章 · 第2节"
+    }
+  },
+  {
+    "id": "nucleus",
+    "title": "细胞核的结构和功能",
+    "category": "cell",
+    "summary": "用经典实验与结构观察，解释细胞核的功能。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "1.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/3.3细胞核的结构和功能.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "用经典实验与结构观察，解释细胞核的功能。",
+        "features": [
+          "核移植、横缢、切割、伞藻四类实验",
+          "细胞核模型热点观察",
+          "染色质与染色体转化及练习"
+        ],
+        "approach": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/nucleus/workbuddy/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 54068,
+        "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad",
+        "sourceFilename": "3.3细胞核的结构和功能.html"
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 3,
+      "chapterTitle": "细胞的基本结构",
+      "sections": [
+        {
+          "number": 3,
+          "title": "细胞核的结构和功能"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第3节"
+    }
+  },
+  {
+    "id": "passive",
+    "title": "被动运输",
+    "category": "cell",
+    "summary": "在水分侦探情境中理解渗透与被动运输。",
+    "versions": [
+      {
+        "id": "workbuddy",
+        "label": "1.0",
+        "edition": "WorkBuddy 版",
+        "file": "workbuddy/4.1被动运输.html",
+        "published": "2026-10-28",
+        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
+        "summary": "在水分侦探情境中理解渗透与被动运输。",
+        "features": [
+          "渗透作用实验与预测题",
+          "动物细胞吸失水、植物质壁分离与复原",
+          "自由扩散、载体和通道介导运输比较"
+        ],
+        "approach": "由水的运动推理细胞变化，再比较被动运输的不同方式。",
+        "changes": [
+          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+        ],
+        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
+        "route": "courses/passive/workbuddy/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 53737,
+        "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3",
+        "sourceFilename": "4.1被动运输.html"
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 1 · 分子与细胞",
+      "chapter": 4,
+      "chapterTitle": "细胞的物质输入和输出",
+      "sections": [
+        {
+          "number": 1,
+          "title": "被动运输"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第1节"
     }
   },
   {
@@ -398,13 +750,15 @@
         "approach": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。",
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/active/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 51908,
-        "contentSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad"
+        "platformUpdated": "2026-11-02",
+        "bytes": 52126,
+        "contentSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad",
+        "sourceFilename": "4.2主动运输与胞吞胞吐.html"
       },
       {
         "id": "original",
@@ -422,12 +776,15 @@
         "approach": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/active/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 86460,
-        "contentSha256": "7aed332de029fe5f415a6086900cb328dbe84d5598bce51ed60d9dd6947daafa"
+        "platformUpdated": "2026-11-02",
+        "bytes": 94356,
+        "contentSha256": "9cbfaa6f61d9c6b6e5d64925a07ef251c7a14bb9266bb2d7102c2110ec478418",
+        "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_细胞物流港_v1.0.html"
       }
     ],
     "curriculum": {
@@ -467,13 +824,15 @@
         "approach": "先做条件对照，再用能量曲线解释催化，最后讨论酶的本质。",
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/enzyme/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 50022,
-        "contentSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3"
+        "platformUpdated": "2026-11-02",
+        "bytes": 50243,
+        "contentSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3",
+        "sourceFilename": "5.1降低化学反应的活化能.html"
       },
       {
         "id": "original",
@@ -491,12 +850,15 @@
         "approach": "从实验现象提出解释，再改变一个条件建立有依据的判断。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/enzyme/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 249248,
-        "contentSha256": "5793cad69cceccce1831f4615b348dee4c88669f7f50e0a72cbc4059fef72e22"
+        "platformUpdated": "2026-11-02",
+        "bytes": 257135,
+        "contentSha256": "bfeca034492985b933f37ff7c9722cac695e0f3648e9039dcaceeb47e68dbfe2",
+        "sourceFilename": "必修1_05-01_降低活化能的酶_催化现场_v1.0.html"
       }
     ],
     "curriculum": {
@@ -537,13 +899,15 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "修正 ATP 水解供能说明：区分断键与整体反应的自由能变化，并标明标准条件。"
+          "修正 ATP 水解供能说明：区分断键与整体反应的自由能变化，并标明标准条件。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
         ],
         "note": "教学辨析：ATP 水解的整体反应释放能量，不能把“断开一根化学键本身”理解为能量来源；约 30.5 kJ/mol 对应标准条件，细胞内实际数值受条件影响。",
         "route": "courses/atp/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 40937,
-        "contentSha256": "baeacb637aae47d1d62577ef9cddb3f7359b3d6e36bb36d628d0fbecbce1738d"
+        "platformUpdated": "2026-11-02",
+        "bytes": 41149,
+        "contentSha256": "baeacb637aae47d1d62577ef9cddb3f7359b3d6e36bb36d628d0fbecbce1738d",
+        "sourceFilename": "5.2细胞的能量货币ATP.html"
       },
       {
         "id": "original",
@@ -561,12 +925,15 @@
         "approach": "先分清组成，再观察整体反应与做功耦联，最后理解少量库存的快速周转。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/atp/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 228297,
-        "contentSha256": "b01031743baf54451e85d90469fe8fe31f1fcfc8d74ca9d360565847b6cea2a3"
+        "platformUpdated": "2026-11-02",
+        "bytes": 236172,
+        "contentSha256": "45e9fc071128a7361e57c22b3f0751a43d7c3c5e6d8a3ed459acc72c160bc571",
+        "sourceFilename": "必修1_05-02_ATP_细胞能量交换站_v1.0.html"
       }
     ],
     "curriculum": {
@@ -606,13 +973,15 @@
         "approach": "先根据检测结果判断呼吸方式，再分区追踪过程并迁移到应用。",
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
+          "接入平台导航、打开次数、主题评论与版本记录。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/respiration/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 46592,
-        "contentSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb"
+        "platformUpdated": "2026-11-02",
+        "bytes": 46818,
+        "contentSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb",
+        "sourceFilename": "5.3细胞呼吸的原理和应用.html"
       },
       {
         "id": "original",
@@ -630,12 +999,15 @@
         "approach": "沿碳的去向组织过程，再比较氧条件下的差异。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/respiration/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 79203,
-        "contentSha256": "cb2cc8ed45a8d616ae0d1db5c5353a4b63f8e193351758fd5ee3db3b16267456"
+        "platformUpdated": "2026-11-02",
+        "bytes": 87086,
+        "contentSha256": "42a4ea0d5788955d4730761f1adcfdbbbe04c42bd19792a676c28dc9e396ce54",
+        "sourceFilename": "必修1_05-03_细胞呼吸_碳的旅程_v1.0.html"
       }
     ],
     "curriculum": {
@@ -675,12 +1047,15 @@
         "approach": "通过结构、示踪和变量控制三个角度建立解释，让学生报告观察证据。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/photosynthesis/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 75593,
-        "contentSha256": "5251b886f98ec27a06bc81db8e6ba0b9044ce4b28763ebd8cec7d889acd4c9e9"
+        "platformUpdated": "2026-11-02",
+        "bytes": 83485,
+        "contentSha256": "56e57fe5263e68a9f150d5c4ea8635108c92d46f829f30a64e2383e2084c7260",
+        "sourceFilename": "必修1_05-04_光合作用_一束光的温室_v1.0.html"
       }
     ],
     "curriculum": {
@@ -720,12 +1095,15 @@
         "approach": "先看动态过程，再核算数量，最后把显微观察结果讲成证据。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/division/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 95979,
-        "contentSha256": "5a4b0c1fdfab4cada914ad6853c250b63066ede7f7ba8fa553315424482db43d"
+        "platformUpdated": "2026-11-02",
+        "bytes": 103871,
+        "contentSha256": "5b3f7ea59262bedc119a373298402adad4e0471c02c4337100074750cb901dd7",
+        "sourceFilename": "必修1_06-01_细胞的增殖_一分为二放映室_v1.0.html"
       }
     ],
     "curriculum": {
@@ -765,12 +1143,15 @@
         "approach": "从相同起点提出疑问，以表达差异解释分工，再讨论发育潜能。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/differentiation/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 91911,
-        "contentSha256": "41d2b325522d9f8c0e63ef0875025c2c4a6c59035536b73edf2fcfd300971e06"
+        "platformUpdated": "2026-11-02",
+        "bytes": 99804,
+        "contentSha256": "dee7f4a11a9714ba885316f3f324df3b864a9723b899fd205787fd5b6e5736f4",
+        "sourceFilename": "必修1_06-02_细胞的分化_同源异职展_v1.0.html"
       }
     ],
     "curriculum": {
@@ -810,12 +1191,15 @@
         "approach": "从观察到解释，要求学生区分现象、推断和结论适用范围。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/aging/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 80487,
-        "contentSha256": "37029b2185746c4b91d61d22a0c45f40883b5f8a5a82f2d65e8bd2360d904572"
+        "platformUpdated": "2026-11-02",
+        "bytes": 88382,
+        "contentSha256": "6a5882905caa3f39dfd7fd59c7f956a5bf877f1e88f4a412a6d03abbfb77dde4",
+        "sourceFilename": "必修1_06-03_细胞的衰老和死亡_生命维护现场_v1.0.html"
       }
     ],
     "curriculum": {
@@ -855,12 +1239,15 @@
         "approach": "沿问题—假说—预测—验证路线，理解比例产生的条件。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/mendel/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 95718,
-        "contentSha256": "db1e6d6c904293bafbcc5d4bd3e5042cafc535a85f243c3095c9586783cf0597"
+        "platformUpdated": "2026-11-02",
+        "bytes": 103617,
+        "contentSha256": "47b31ed8873841460db1f3ff706a39dc1b0e994e4c2b74c3d3ee7dc99480f5f1",
+        "sourceFilename": "必修2_01-01_孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html"
       }
     ],
     "curriculum": {
@@ -880,6 +1267,52 @@
       ],
       "integrated": true,
       "label": "第1章 · 第1—2节综合"
+    }
+  },
+  {
+    "id": "meiosis",
+    "title": "减数分裂和受精作用",
+    "category": "gene",
+    "summary": "沿荧光时间轴追踪染色体行为，联动数量曲线并分析异常配子。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "荧光细胞剧场版",
+        "file": "lessons/必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "沿荧光时间轴追踪染色体行为，联动数量曲线并分析异常配子。",
+        "features": [
+          "八时期染色体动画、互换与精卵形成切换",
+          "染色体、DNA及每条染色体DNA数量联动",
+          "分裂图像诊断、异常配子逆推和挑战题"
+        ],
+        "approach": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/meiosis/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "62e229d9a574c044ac385da746fa93272d5728f244d53b98831264900a51ffcf",
+        "sourceFilename": "必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
+        "bytes": 110700
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 2,
+      "chapterTitle": "基因和染色体的关系",
+      "sections": [
+        {
+          "number": 1,
+          "title": "减数分裂和受精作用"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第1节"
     }
   },
   {
@@ -904,12 +1337,15 @@
         "approach": "先区分类比与证明，再设计能区分两种解释的实验。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/chromosome/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 96735,
-        "contentSha256": "addf3552ce2895a62d1ab1d639df9fa08a9e6fa0ac4acc40df592a9c8ca4184e"
+        "platformUpdated": "2026-11-02",
+        "bytes": 104635,
+        "contentSha256": "34c56364a77a1e966ed17588b06a79fce61569309f91a247ee9306faecd5508d",
+        "sourceFilename": "必修2_02-02_基因在染色体上_果蝇遗传调查室_v1.0.html"
       }
     ],
     "curriculum": {
@@ -925,6 +1361,52 @@
       ],
       "integrated": false,
       "label": "第2章 · 第2节"
+    }
+  },
+  {
+    "id": "sex-linked",
+    "title": "伴性遗传",
+    "category": "gene",
+    "summary": "用杂交沙盒与系谱图逐步推理，辨清联合概率与条件概率。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "基因侦探版",
+        "file": "lessons/必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "用杂交沙盒与系谱图逐步推理，辨清联合概率与条件概率。",
+        "features": [
+          "X/Y区段与经典杂交比较",
+          "三关系谱图、个体基因型标记与证据扫描",
+          "患病男孩与男孩患病的样本空间矩阵"
+        ],
+        "approach": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/sex-linked/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "596da914860593aedad43c1e7c2f2cf39411f81e3cf87ed357ca4766939e7346",
+        "sourceFilename": "必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
+        "bytes": 63531
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 2,
+      "chapterTitle": "基因和染色体的关系",
+      "sections": [
+        {
+          "number": 3,
+          "title": "伴性遗传"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第3节"
     }
   },
   {
@@ -949,12 +1431,15 @@
         "approach": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/dna-evidence/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 94866,
-        "contentSha256": "a5c4685e855f647a1cd3697e7cc4f017343c3a34bddf0b663f483cdd78b8262b"
+        "platformUpdated": "2026-11-02",
+        "bytes": 102780,
+        "contentSha256": "ebcd4f01ac89ce1a803e7ef33c9ae9a6aae241283b82971e0d16ec609e1eaa65",
+        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html"
       },
       {
         "id": "legacy",
@@ -971,12 +1456,15 @@
         ],
         "approach": "从猜想开始，通过每一站的对照结果修正判断。",
         "changes": [
-          "保留早期交互流程，支持与新版对照。"
+          "保留早期交互流程，支持与新版对照。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/dna-evidence/legacy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 95366,
-        "contentSha256": "20b7265f65f74c6582707346a850958bad09cedb0ee695b1e585a7c365436aa8"
+        "platformUpdated": "2026-11-02",
+        "bytes": 103263,
+        "contentSha256": "05a96bfc8f9fead6149eeea2b423225f8bc7fdc7512ecd6172f3c4d9f198adf5",
+        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_证据接力_v1.0.html"
       }
     ],
     "curriculum": {
@@ -992,6 +1480,76 @@
       ],
       "integrated": false,
       "label": "第3章 · 第1节"
+    }
+  },
+  {
+    "id": "dna-structure",
+    "title": "DNA的结构",
+    "category": "gene",
+    "summary": "在配对、平面结构校验和比例计算中建立DNA双螺旋模型。",
+    "versions": [
+      {
+        "id": "blueprint-v2",
+        "label": "2.0",
+        "edition": "1953工程蓝图版",
+        "file": "lessons/必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "在配对、平面结构校验和比例计算中建立DNA双螺旋模型。",
+        "features": [
+          "互补配对与反向平行方向判断",
+          "糖磷酸骨架、碱基与氢键比较",
+          "结构证据与碱基比例推理"
+        ],
+        "approach": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/dna-structure/blueprint-v2/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "4fe764499a855c9bbec22663f707bf36f93e887658216fba5613b3bf7727a0c5",
+        "sourceFilename": "必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
+        "bytes": 74743
+      },
+      {
+        "id": "repair-notes-v1",
+        "label": "1.0",
+        "edition": "双螺旋修复简版",
+        "features": [
+          "模板链互补配对操作",
+          "反向平行方向提示",
+          "碱基比例选择题与课堂奖状"
+        ],
+        "file": "lessons/必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "在配对、平面结构校验和比例计算中建立DNA双螺旋模型。",
+        "approach": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/dna-structure/repair-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "5708833a64c316c3d7409ac32a291eabcd897811f6d45e6e82710611e9a262db",
+        "sourceFilename": "必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
+        "bytes": 6004
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 3,
+      "chapterTitle": "基因的本质",
+      "sections": [
+        {
+          "number": 2,
+          "title": "DNA的结构"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
     }
   },
   {
@@ -1016,12 +1574,14 @@
         "approach": "先预测实验差异，再配对新链，把模型推理与结构机制联系起来。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
         ],
         "route": "courses/replication/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 87565,
-        "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c"
+        "platformUpdated": "2026-11-02",
+        "bytes": 87780,
+        "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c",
+        "sourceFilename": "必修2_03-03_DNA的复制_双链蓝图工坊_v1.0.html"
       }
     ],
     "curriculum": {
@@ -1037,6 +1597,511 @@
       ],
       "integrated": false,
       "label": "第3章 · 第3节"
+    }
+  },
+  {
+    "id": "gene-fragment",
+    "title": "基因通常是有遗传效应的DNA片段",
+    "category": "gene",
+    "summary": "用片段功能验证、遗传信息容量与DNA指纹建立基因概念。",
+    "versions": [
+      {
+        "id": "bio-synth-v3",
+        "label": "3.0",
+        "edition": "生命胶片剪辑版",
+        "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "用片段功能验证、遗传信息容量与DNA指纹建立基因概念。",
+        "features": [
+          "基因与非基因片段的功能对照",
+          "染色体、DNA、基因与核苷酸关系",
+          "序列多样性、表达差异或指纹比对探究"
+        ],
+        "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/gene-fragment/bio-synth-v3/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "8728d79ce0ea81948dcaa49a05f55b92cf9ca014c5c716e036e7e5449eb5a726",
+        "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
+        "bytes": 76505
+      },
+      {
+        "id": "csi-v2",
+        "label": "2.0",
+        "edition": "CSI密码破译版",
+        "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "用片段功能验证、遗传信息容量与DNA指纹建立基因概念。",
+        "features": [
+          "基因与非基因片段的功能对照",
+          "染色体、DNA、基因与核苷酸关系",
+          "序列多样性、表达差异或指纹比对探究"
+        ],
+        "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/gene-fragment/csi-v2/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "e408e44c2b3ac125d6ab4e23da82ef423e314016daddbaea7a648db2ebc2c404",
+        "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
+        "bytes": 76644
+      },
+      {
+        "id": "annotation-notes-v1",
+        "label": "1.0",
+        "edition": "基因组标注简版",
+        "features": [
+          "片段删除与回补功能对照",
+          "基因遗传效应的判读",
+          "概念练习与课堂奖状"
+        ],
+        "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "用片段功能验证、遗传信息容量与DNA指纹建立基因概念。",
+        "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/gene-fragment/annotation-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "41b23ab7402d602c9b74a8b9ad8ec622ddd86173585ac145c0d191c0dffbb0a3",
+        "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
+        "bytes": 6319
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 3,
+      "chapterTitle": "基因的本质",
+      "sections": [
+        {
+          "number": 4,
+          "title": "基因通常是有遗传效应的DNA片段"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第4节"
+    }
+  },
+  {
+    "id": "expression",
+    "title": "基因指导蛋白质的合成",
+    "category": "gene",
+    "summary": "从RNA结构到转录与翻译，调度核糖核苷酸和tRNA破译遗传信息。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "生命密码破译版",
+        "file": "lessons/必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从RNA结构到转录与翻译，调度核糖核苷酸和tRNA破译遗传信息。",
+        "features": [
+          "DNA与RNA组成对比及核苷酸组装",
+          "转录步骤控制与模板配对",
+          "密码子查询、tRNA调度及多聚核糖体探究"
+        ],
+        "approach": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+        ],
+        "route": "courses/expression/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "e9770568f6ba930b8a1551c6432f521f6081cc7f3eaf2503d9c5a126a905e7f3",
+        "sourceFilename": "必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
+        "bytes": 106465
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 4,
+      "chapterTitle": "基因的表达",
+      "sections": [
+        {
+          "number": 1,
+          "title": "基因指导蛋白质的合成"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第1节"
+    }
+  },
+  {
+    "id": "expression-trait",
+    "title": "基因表达与性状的关系",
+    "category": "gene",
+    "summary": "比较表达调控、环境作用及不同控制途径，解释基因与表型的关系。",
+    "versions": [
+      {
+        "id": "symphony-v2",
+        "label": "2.0",
+        "edition": "生命交响曲版",
+        "file": "lessons/必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "比较表达调控、环境作用及不同控制途径，解释基因与表型的关系。",
+        "features": [
+          "基因经酶或蛋白质影响性状的案例",
+          "表观遗传与基因序列变化辨析",
+          "细胞表达差异、温敏性状与情境推理"
+        ],
+        "approach": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/expression-trait/symphony-v2/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "e7914046fff670580795796ad130ae4cda05ddda92c06adc59dfec814d5043b4",
+        "sourceFilename": "必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
+        "bytes": 83207
+      },
+      {
+        "id": "cat-notes-v1",
+        "label": "1.0",
+        "edition": "猫毛颜色观察简版",
+        "features": [
+          "不同温度下的温敏酶与新毛颜色比较",
+          "基因型不变、环境改变的情境",
+          "概念练习与课堂奖状"
+        ],
+        "file": "lessons/必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "比较表达调控、环境作用及不同控制途径，解释基因与表型的关系。",
+        "approach": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/expression-trait/cat-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "b9ddd086a6de9a788755b758cd4e2fd8bbe20ab301c2687b754a1acf03b5314f",
+        "sourceFilename": "必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
+        "bytes": 6285
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 4,
+      "chapterTitle": "基因的表达",
+      "sections": [
+        {
+          "number": 2,
+          "title": "基因表达与性状的关系"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第2节"
+    }
+  },
+  {
+    "id": "mutation-recombination",
+    "title": "基因突变和基因重组",
+    "category": "gene",
+    "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+    "versions": [
+      {
+        "id": "swiss-v2-1",
+        "label": "2.1",
+        "edition": "SWISS活字印刷版",
+        "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+        "features": [
+          "替换、插入、缺失及阅读框变化",
+          "基因突变特点或癌变情境推理",
+          "基因重组、互换与易位的边界比较"
+        ],
+        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/mutation-recombination/swiss-v2-1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "c7679099b0e9b8d0c8290b9354d6eb7c36961f2fc3b192942c20e7ccb6af0758",
+        "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
+        "bytes": 82735
+      },
+      {
+        "id": "swiss-v2",
+        "label": "2.0",
+        "edition": "SWISS活字印刷版",
+        "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+        "features": [
+          "替换、插入、缺失及阅读框变化",
+          "基因突变特点或癌变情境推理",
+          "基因重组、互换与易位的边界比较"
+        ],
+        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/mutation-recombination/swiss-v2/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "82e6ce34629473f9e4723400dc201f1c6ae896924d9cb34c10946779a593c70c",
+        "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
+        "bytes": 76035
+      },
+      {
+        "id": "mutation-detective-v1",
+        "label": "1.0",
+        "edition": "基因突变侦探版",
+        "features": [
+          "镰状细胞模型与碱基变化",
+          "替换、增添、缺失联动沙盒",
+          "诱变因子与环境选择探究"
+        ],
+        "file": "lessons/必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+        ],
+        "route": "courses/mutation-recombination/mutation-detective-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "0081b1b857a1b520d18080948f7c5051914f4e555ac4abca02b6aeda2a11bd33",
+        "sourceFilename": "必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
+        "bytes": 98733
+      },
+      {
+        "id": "recombination-notes-v1",
+        "label": "1.0",
+        "edition": "配子组合简版",
+        "features": [
+          "同源染色体分离与配子组合展示",
+          "已有等位基因重新组合的辨析",
+          "单项概念练习与课堂奖状"
+        ],
+        "file": "lessons/必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/mutation-recombination/recombination-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
+        "sourceFilename": "必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
+        "bytes": 6209
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 5,
+      "chapterTitle": "基因突变及其他变异",
+      "sections": [
+        {
+          "number": 1,
+          "title": "基因突变和基因重组"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第1节"
+    }
+  },
+  {
+    "id": "chromosome-variation",
+    "title": "染色体变异",
+    "category": "gene",
+    "summary": "通过染色体组建模、育种路线与结构编辑辨析染色体变异。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "育种工程实验室版",
+        "file": "lessons/必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "通过染色体组建模、育种路线与结构编辑辨析染色体变异。",
+        "features": [
+          "非同源染色体组分拣与倍性判定",
+          "无子西瓜、单倍体育种与低温诱导",
+          "缺失、重复、倒位、易位及互换比较"
+        ],
+        "approach": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+        ],
+        "route": "courses/chromosome-variation/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "52be23f4ad1d96d4d4a3bd1d6e4cd54daf81926677e4e7afcf8fab94245b2cfb",
+        "sourceFilename": "必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
+        "bytes": 78957
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 5,
+      "chapterTitle": "基因突变及其他变异",
+      "sections": [
+        {
+          "number": 2,
+          "title": "染色体变异"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第2节"
+    }
+  },
+  {
+    "id": "genetic-disease",
+    "title": "人类遗传病",
+    "category": "gene",
+    "summary": "从病例分诊与人群调查，到遗传咨询与检测边界的循证判断。",
+    "versions": [
+      {
+        "id": "nordic-v2",
+        "label": "2.0",
+        "edition": "NORDIC遗传咨询版",
+        "file": "lessons/必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从病例分诊与人群调查，到遗传咨询与检测边界的循证判断。",
+        "features": [
+          "单基因、多基因与染色体异常分类",
+          "患病率调查和遗传方式调查比较",
+          "遗传咨询、检测选择与综合题"
+        ],
+        "approach": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/genetic-disease/nordic-v2/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "a8e624202743abe847f1fc64e10a37f9fd41319b148e4e8076397d4ee8dd81e3",
+        "sourceFilename": "必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
+        "bytes": 109648
+      },
+      {
+        "id": "survey-notes-v1",
+        "label": "1.0",
+        "edition": "人群调查简版",
+        "features": [
+          "患病率模拟与样本选择",
+          "人群随机调查与家系调查辨析",
+          "单项练习与课堂奖状"
+        ],
+        "file": "lessons/必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从病例分诊与人群调查，到遗传咨询与检测边界的循证判断。",
+        "approach": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/genetic-disease/survey-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "9f18f3b562fcae5ec09bffd7bc8a98c74214af458dfcf030b0cbee07816e98d9",
+        "sourceFilename": "必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
+        "bytes": 6368
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 5,
+      "chapterTitle": "基因突变及其他变异",
+      "sections": [
+        {
+          "number": 3,
+          "title": "人类遗传病"
+        }
+      ],
+      "integrated": false,
+      "label": "第5章 · 第3节"
+    }
+  },
+  {
+    "id": "evolution",
+    "title": "生物的进化",
+    "category": "gene",
+    "summary": "操纵选择、交配与隔离条件，用种群数据理解进化和物种形成。",
+    "versions": [
+      {
+        "id": "interactive-v1-0",
+        "label": "1.0",
+        "edition": "达尔文沙盘版",
+        "file": "lessons/必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "操纵选择、交配与隔离条件，用种群数据理解进化和物种形成。",
+        "features": [
+          "变异在前、选择在后的种群模拟",
+          "哈迪—温伯格、自交与淘汰重算",
+          "隔离、协同进化和生物多样性辨析"
+        ],
+        "approach": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/evolution/interactive-v1-0/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "d4b65ef153639fd6ec44eefa4df01b895186b195352423a4db783fc5bba9ca02",
+        "sourceFilename": "必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
+        "bytes": 117141
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "必修 2 · 遗传与进化",
+      "chapter": 6,
+      "chapterTitle": "生物的进化",
+      "sections": [
+        {
+          "number": 1,
+          "title": "生物有共同祖先的证据"
+        },
+        {
+          "number": 2,
+          "title": "自然选择与适应的形成"
+        },
+        {
+          "number": 3,
+          "title": "种群基因组成的变化与物种的形成"
+        },
+        {
+          "number": 4,
+          "title": "协同进化与生物多样性的形成"
+        }
+      ],
+      "integrated": true,
+      "label": "第6章 · 第1—4节综合"
     }
   },
   {
@@ -1061,12 +2126,15 @@
         "approach": "先解决怎样数，再解释为何变，并检验模型的适用条件。",
         "changes": [
           "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。"
+          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
         ],
         "route": "courses/population/original/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 92583,
-        "contentSha256": "231395781bf882234bf2151e20f4f9c34089e4dae8d63981fc9fb1d5d8068a89"
+        "platformUpdated": "2026-11-02",
+        "bytes": 100477,
+        "contentSha256": "56f3cd026e1d30a0e08e62711070bf799a29734656b6ff11a00b667af088b072",
+        "sourceFilename": "必修2_06-02_种群及其动态_山野调查手记_v1.0.html"
       }
     ],
     "curriculum": {
@@ -1090,98 +2158,6 @@
       ],
       "integrated": true,
       "label": "第1章 · 第1—3节综合"
-    }
-  },
-  {
-    "id": "nucleus",
-    "title": "细胞核的结构和功能",
-    "category": "cell",
-    "summary": "用经典实验与结构观察，解释细胞核的功能。",
-    "versions": [
-      {
-        "id": "workbuddy",
-        "label": "1.0",
-        "edition": "WorkBuddy 版",
-        "file": "workbuddy/3.3细胞核的结构和功能.html",
-        "published": "2026-10-28",
-        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
-        "summary": "用经典实验与结构观察，解释细胞核的功能。",
-        "features": [
-          "核移植、横缢、切割、伞藻四类实验",
-          "细胞核模型热点观察",
-          "染色质与染色体转化及练习"
-        ],
-        "approach": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。",
-        "changes": [
-          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
-        ],
-        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
-        "route": "courses/nucleus/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 53849,
-        "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad"
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 3,
-      "chapterTitle": "细胞的基本结构",
-      "sections": [
-        {
-          "number": 3,
-          "title": "细胞核的结构和功能"
-        }
-      ],
-      "integrated": false,
-      "label": "第3章 · 第3节"
-    }
-  },
-  {
-    "id": "passive",
-    "title": "被动运输",
-    "category": "cell",
-    "summary": "在水分侦探情境中理解渗透与被动运输。",
-    "versions": [
-      {
-        "id": "workbuddy",
-        "label": "1.0",
-        "edition": "WorkBuddy 版",
-        "file": "workbuddy/4.1被动运输.html",
-        "published": "2026-10-28",
-        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
-        "summary": "在水分侦探情境中理解渗透与被动运输。",
-        "features": [
-          "渗透作用实验与预测题",
-          "动物细胞吸失水、植物质壁分离与复原",
-          "自由扩散、载体和通道介导运输比较"
-        ],
-        "approach": "由水的运动推理细胞变化，再比较被动运输的不同方式。",
-        "changes": [
-          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。"
-        ],
-        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
-        "route": "courses/passive/workbuddy/",
-        "platformUpdated": "2026-10-28",
-        "bytes": 53533,
-        "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3"
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 4,
-      "chapterTitle": "细胞的物质输入和输出",
-      "sections": [
-        {
-          "number": 1,
-          "title": "被动运输"
-        }
-      ],
-      "integrated": false,
-      "label": "第4章 · 第1节"
     }
   }
 ]

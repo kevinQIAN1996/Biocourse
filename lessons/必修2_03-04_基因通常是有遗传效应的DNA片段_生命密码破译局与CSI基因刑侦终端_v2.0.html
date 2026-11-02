@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="以基因组编辑、序列枚举、DNA指纹比对和概念建模探究基因的本质。人教版高中生物必修2第3章第4节。">
+<title>生命密码破译局 · CSI基因刑侦终端</title>
+<script src="https://cdn.tailwindcss.com" async onload="if(window.tailwind)window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer onload="window.lucide&&window.lucide.createIcons()"></script>
+<style>
+  :root { --bg:#0b0f17; --panel:#111b28; --line:#83b5d326; --ink:#d9e7f1; --muted:#8196ab; --green:#10b981; --cyan:#06b6d4; --purple:#a855f7; --paper:#f8fafc; --dark:#172637; }
+  * { box-sizing:border-box; } [hidden] { display:none!important; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.65 Inter,"Segoe UI","Microsoft YaHei",sans-serif; background-image:radial-gradient(ellipse at 80% 0%,#093c502e,transparent 45%); }
+  button,input,select { font:inherit; }button,summary { cursor:pointer; }button { transition:transform .18s,background .2s,border-color .2s; }button:hover:not(:disabled) { transform:translateY(-2px); }button:active:not(:disabled) { transform:translateY(1px); }button:disabled { opacity:.35; cursor:not-allowed; }
+  :focus-visible { outline:3px solid #e4b45b; outline-offset:4px; }svg { width:100%; height:auto; display:block; }h1,h2,h3,p { margin:0; }h1 { font-size:clamp(31px,4vw,55px); line-height:1.2; letter-spacing:-1.5px; }h2 { font-size:clamp(23px,2.6vw,33px); line-height:1.35; letter-spacing:-.5px; }h3 { font-size:17px; line-height:1.4; }a { color:#67def1; text-underline-offset:4px; }
+  .mono,.eyebrow { font-family:Consolas,"Courier New",monospace; }.eyebrow { font-size:10px; letter-spacing:1.7px; }.muted { color:var(--muted); }.small { font-size:12px; }.tiny { font-size:10px; }.row { display:flex; flex-wrap:wrap; align-items:center; gap:9px; }.spread { justify-content:space-between; }.grid { display:grid; gap:18px; }.two { grid-template-columns:1fr 1fr; }.stack { display:grid; gap:13px; }
+  .btn { border:1px solid #7091a44d; border-radius:6px; background:#ffffff06; color:#c5d7e5; padding:10px 14px; font-size:12px; font-weight:650; line-height:1.5; display:inline-flex; gap:7px; align-items:center; justify-content:center; }.btn svg { width:15px; height:15px; }.btn.primary { background:var(--green); border-color:var(--green); color:#032017; }.btn.active { background:#06b6d41c; border-color:#22d3ee; color:#aff2fc; box-shadow:inset 0 -2px #22d3ee; }.btn.compact { padding:6px 10px; font-size:11px; }.btn.danger { border-color:#fb71855c; color:#fda4af; background:#fb71850a; }.tag { border:1px solid #68badb55; color:#88d5e9; padding:3px 7px; display:inline-block; font:9px Consolas,monospace; letter-spacing:.6px; }.tag.green { color:#6ee7b7; border-color:#10b98166; }.tag.purple { color:#d4b2ff; border-color:#a855f766; }
+  .topbar { position:sticky; top:0; background:#0b0f17ec; border-bottom:1px solid var(--line); backdrop-filter:blur(15px); z-index:25; }.topinner { max-width:1430px; padding:12px 30px; margin:auto; display:flex; gap:12px; align-items:center; }.brand { flex:1; display:flex; align-items:center; gap:11px; }.brandmark { width:35px; height:35px; border:1px solid #10b98177; background:#10b9810b; display:grid; place-items:center; border-radius:7px; color:#6ee7b7; font:22px Consolas,monospace; }.brand strong { display:block; font-size:13px; }.brand small { display:block; color:#66869e; font:8px Consolas,monospace; letter-spacing:1.5px; }
+  .wrap { max-width:1430px; margin:auto; padding:0 30px 145px; }.hero { display:grid; grid-template-columns:1fr 270px; gap:40px; align-items:center; padding:30px 0 26px; }.hero .eyebrow { color:#42bcac; margin-bottom:10px; }.hero em { font-style:normal; color:#48d7be; }.hero p { color:#8ca5b9; font-size:13px; margin-top:12px; max-width:740px; }.herodata { border:1px solid var(--line); border-left:2px solid var(--green); background:#111d2780; padding:16px 18px; }.herodata code { color:#79d1ce; display:block; font:11px/2 Consolas,monospace; }.herodata span { color:#4e7f94; }
+  .tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:27px; }.tab { border:1px solid var(--line); border-radius:8px; padding:14px; text-align:left; display:flex; align-items:center; gap:12px; color:#6d889d; background:#101a26; }.tab b { font:22px Consolas,monospace; color:#3d697d; }.tab strong { display:block; font-size:13px; }.tab small { display:block; font:8px Consolas,monospace; letter-spacing:1px; margin-top:3px; }.tab.active { background:linear-gradient(120deg,#10372f,#0e2630); border-color:#10b98177; color:#b8f3df; }.tab.active b { color:#34d399; }.tab.done b:after { content:'✓'; color:#34d399; font-size:9px; }
+  .sectionhead { display:flex; gap:20px; justify-content:space-between; align-items:flex-start; margin-bottom:20px; }.sectionhead .eyebrow { color:#3db7c6; margin-bottom:7px; }.sectionhead p { font-size:13px; color:#8aa1b4; margin-top:8px; max-width:850px; }
+  .panel { border:1px solid var(--line); border-radius:12px; background:linear-gradient(130deg,#132030,#101822); min-width:0; overflow:hidden; }.panelhead { display:flex; gap:16px; justify-content:space-between; align-items:flex-start; border-bottom:1px solid var(--line); padding:17px 20px; }.panelhead p { font-size:11px; color:var(--muted); margin-top:5px; }.panelbody { padding:20px; }.silver { background:var(--paper); color:var(--dark); border-color:#cbd5e1; }.silver .panelhead { border-color:#cbd5e1; }.silver .panelhead p,.silver .muted { color:#63768a; }.silver .btn { color:#274659; border-color:#a1b6c5; background:#e8eff5; }.silver .btn.active { border-color:#0891b2; background:#d8f1f5; box-shadow:inset 0 -2px #0891b2; }.silver .btn.primary { background:#0b6855; color:white; border-color:#0b6855; }.silver .tag { color:#0c7189; border-color:#a5c5cf; }
+  .editorgrid { grid-template-columns:minmax(0,1.65fr) minmax(290px,.7fr); }.trackcanvas { background:repeating-linear-gradient(90deg,transparent,transparent 79px,#83b5d30c 79px,#83b5d30c 80px); padding:22px 20px 10px; }.trackcanvas svg { min-height:180px; }.trackstats { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }.trackstats div { padding:14px 20px; border-right:1px solid var(--line); }.trackstats strong { display:block; font:26px Consolas,monospace; color:#69e2bc; }.trackstats span { font-size:10px; color:#7793a9; }.trackstats div:last-child { border:0; }.genelegend { font-size:10px; color:#89a0b3; padding:12px 20px; display:flex; flex-wrap:wrap; gap:14px; }.genelegend i { display:inline-block; width:7px; height:7px; margin-right:5px; }.genecontrols { display:flex; flex-wrap:wrap; gap:8px; padding:17px 20px; }.genecontrols .btn { font-size:11px; }.phenotype { background:#061320; position:relative; border-radius:8px; overflow:hidden; }.phenotype svg { max-height:220px; }.phenotype:after { content:''; position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg,transparent,transparent 3px,#0000000c 3px,#0000000c 4px); }.fluorescence { transition:opacity .8s,filter .8s; }.bubble { animation:float 6s infinite ease-in-out; }.statusdot { width:6px; height:6px; border-radius:50%; display:inline-block; background:#10b981; box-shadow:0 0 10px #10b981; margin-right:6px; }
+  .feedback { border-left:3px solid #06b6d4; background:#06b6d40d; padding:12px 15px; color:#b5d9e3; font-size:12px; line-height:1.8; }.feedback.good { border-color:#10b981; background:#10b9810e; }.feedback.warn { border-color:#e9ae51; background:#e9ae510b; color:#e9cf9c; }.silver .feedback { color:#29566b; background:#e3f1f5; }.silver .feedback.good { color:#25644e; background:#dff4e9; }.silver .feedback.warn { color:#86591e; background:#fff0d6; }.divider { height:1px; background:var(--line); margin:17px 0; }.silver .divider { background:#cbd5e1; }
+  .archive { margin-top:18px; }.archivegrid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }.archiveitem { border:1px solid #203d5520; padding:14px; background:#fff; }.archiveitem b { font-size:14px; display:block; }.archiveitem p { font-size:12px; color:#5b7182; margin-top:6px; }.rna-icon { color:#8b5cf6; }.dna-icon { color:#059669; }
+  .wheelgrid { grid-template-columns:.85fr 1.35fr; }.capacity { font:clamp(22px,3.2vw,40px) Consolas,monospace; letter-spacing:-1px; color:#6ee7b7; overflow-wrap:anywhere; }.rolling { animation:numberglow .35s ease; }.reels { display:flex; gap:10px; margin:23px 0 16px; }.reel { flex:1; height:115px; border:1px solid #06b6d477; border-radius:8px; background:linear-gradient(#09121f,#143645,#09121f); display:grid; place-items:center; position:relative; overflow:hidden; }.reel:before,.reel:after { position:absolute; left:0; right:0; text-align:center; font:15px Consolas,monospace; opacity:.25; }.reel:before { content:attr(data-before); top:5px; }.reel:after { content:attr(data-after); bottom:5px; }.reel strong { font:43px Consolas,monospace; color:#9ff4d8; }.sliderline { display:grid; grid-template-columns:1fr 65px; align-items:center; gap:13px; }.sliderline input { width:100%; accent-color:#10b981; }.sliderline output { text-align:right; font:19px Consolas,monospace; }.bar { height:7px; background:#243343; margin:12px 0; border-radius:5px; overflow:hidden; }.bar span { height:100%; display:block; width:0; background:linear-gradient(90deg,#10b981,#06b6d4); transition:width .4s; }.formula { font:16px/1.8 Consolas,"Microsoft YaHei",monospace; padding:14px; background:#0b1622; border:1px solid var(--line); }.silver .formula { color:#244b60; background:#e8f0f5; border-color:#cbd5e1; }.sequencegrid { display:grid; grid-template-columns:repeat(8,1fr); gap:6px; margin-top:18px; }.sequence { border:1px solid #afc0cd; border-radius:4px; padding:6px 0; background:white; color:#204c59; text-align:center; font:13px Consolas,monospace; transition:opacity .45s,transform .45s,background .45s; }.sequence.filtered { opacity:.13; transform:scale(.92); }.sequence.kept { background:#dbf4e7; border-color:#34ad84; }.sequence.selected { outline:2px solid #0891b2; outline-offset:1px; }.bigcount { font:43px Consolas,monospace; color:#08795e; }.formula span { color:#059669; }
+  .casebuttons { display:flex; gap:9px; margin-bottom:16px; flex-wrap:wrap; }.gelgrid { grid-template-columns:minmax(0,1.5fr) minmax(300px,.8fr); }.gelwrap { background:radial-gradient(ellipse at 50% 40%,#0b2338,#050c15); padding:8px 12px 0; }.gelwrap svg { max-height:550px; touch-action:none; }.gelband { transition:opacity .45s,fill .45s; }.gelcontrols { display:flex; gap:12px; align-items:center; flex-wrap:wrap; padding:13px 18px; border-top:1px solid var(--line); }.gelcontrols input { accent-color:#06b6d4; max-width:180px; }.caseanswer { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:14px 0; }.caseanswer .btn { justify-content:flex-start; }.evidencetable { width:100%; border-collapse:collapse; font:11px Consolas,"Microsoft YaHei",monospace; }.evidencetable th,.evidencetable td { padding:8px 5px; border-bottom:1px solid #ccd9e1; text-align:center; }.evidencetable th { color:#617689; font-weight:400; }.evidencetable td.bad { color:#c43954; background:#fce7ec; }.evidencetable td.good { color:#05795b; background:#e0f5e9; }.followups { display:grid; gap:7px; margin-top:10px; }.followups .btn { justify-content:flex-start; text-align:left; font-weight:400; }.lanetags { display:flex; gap:5px; flex-wrap:wrap; }.lanetags span { font:10px Consolas,monospace; border:1px solid #cbd5e1; padding:3px 6px; }
+  .conceptgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }.conceptslot { border:1px dashed #607d96; padding:14px 7px; min-height:85px; text-align:center; background:#06121d; }.conceptslot strong { display:block; font-size:14px; color:#73e3c0; margin-top:5px; }.conceptslot small { font:10px Consolas,monospace; color:#557b92; }.conceptslot.over { background:#0d3a36; border-color:#10b981; }.conceptpool { display:flex; gap:9px; flex-wrap:wrap; margin-top:14px; }.conceptpool button { border-color:#10b98166; color:#9fe7d1; }.quizgrid { grid-template-columns:1.35fr .65fr; }.quizoptions { display:grid; gap:9px; margin:19px 0; }.quizoption { justify-content:flex-start; text-align:left; padding:14px; font-size:13px; font-weight:400; }.quizoption.correct { border-color:#10b981; background:#10b98113; }.quizoption.wrong { border-color:#fb7185; background:#fb718510; }.quizdots { display:flex; gap:5px; }.quizdots button { width:26px; height:26px; border:1px solid #8196ab4d; background:#0b1725; color:#8facbf; font:11px Consolas,monospace; }.quizdots button.active { border-color:#10b981; color:#6ee7b7; }.quizdots button.solved { background:#10b98122; }.rank { font-size:28px; line-height:1.3; margin:15px 0; color:#75edc9; }.missionlist { padding:0; list-style:none; font-size:12px; color:#7c9aaf; }.missionlist li { margin:13px 0; }.missionlist li.done { color:#75ddbd; }.stamp { display:inline-block; border:2px solid #10b981; padding:6px 10px; color:#6ee7b7; font:15px Consolas,monospace; transform:rotate(-5deg); animation:stamp .3s ease; }
+  .footer { margin-top:30px; border-top:1px solid var(--line); padding-top:17px; font-size:10px; color:#68869b; }.footer summary { cursor:pointer; font-size:11px; }.footer li { margin:7px 0; }.footer ul { padding-left:18px; }.assistant { position:fixed; bottom:0; left:0; right:0; z-index:24; background:#0b111aef; backdrop-filter:blur(15px); border-top:1px solid #10b98142; }.assistantinner { max-width:1430px; margin:auto; display:grid; grid-template-columns:105px 1fr auto; gap:17px; align-items:center; padding:12px 30px; }.assistantlabel { font:9px Consolas,monospace; letter-spacing:1px; color:#4c9d9c; }.assistantlabel b { display:block; font:13px system-ui,sans-serif; color:#a5e5d0; margin-top:3px; }.assistant p { font-size:12px; color:#9fb7ca; }
+  .modal { position:fixed; inset:0; z-index:65; background:#020911b8; backdrop-filter:blur(6px); display:flex; justify-content:flex-end; }.dialog { width:min(640px,100%); padding:27px; max-height:100dvh; overflow:auto; background:#f8fafc; color:#172637; box-shadow:-30px 0 100px #0006; }.dialog .btn { color:#2b4d61; background:#e5eef5; border-color:#acbfce; }.dialoghead { display:flex; justify-content:space-between; gap:16px; border-bottom:1px solid #cbd5e1; padding-bottom:18px; }.dialog h3 { margin-top:22px; }.dialog p { font-size:13px; margin-top:8px; }.dialog .formula { background:#e4eef5; color:#27495c; border-color:#b6cad9; }.dialog table { width:100%; border-collapse:collapse; margin-top:12px; font-size:12px; }.dialog th,.dialog td { padding:9px 5px; border-bottom:1px solid #cbd5e1; text-align:left; }.awardmodal { justify-content:center; align-items:center; padding:20px; }.awardmodal .dialog { width:min(820px,100%); }.input { background:white; border:1px solid #a1b3c3; padding:9px 11px; color:#172637; border-radius:5px; max-width:100%; }.certificate { padding:28px; border:1px solid #087966; background:linear-gradient(135deg,#f7fffb,#eef7fb); margin-top:20px; text-align:center; position:relative; }.certificate:before,.certificate:after { content:''; position:absolute; width:38px; height:38px; border-color:#087966; border-style:solid; }.certificate:before { top:8px; left:8px; border-width:2px 0 0 2px; }.certificate:after { bottom:8px; right:8px; border-width:0 2px 2px 0; }.certificate h2 { font:34px Georgia,"SimSun",serif; margin:18px 0; }.certificate .student { display:inline-block; border-bottom:1px solid #087966; font:30px Georgia,"SimSun",serif; color:#087966; padding:0 20px; }.focusmode .hero { display:none; }.focusmode .tabs { margin-top:20px; }
+  @keyframes float { 50% { transform:translateY(-7px); } }@keyframes numberglow { 50% { text-shadow:0 0 17px #10b981aa; } }@keyframes stamp { from { transform:scale(1.4) rotate(-5deg); opacity:0; }to { transform:scale(1) rotate(-5deg); opacity:1; } }@keyframes cut { from { opacity:1; }to { opacity:.15; } }.removed { opacity:.15; transition:opacity .65s; }.trackhit { cursor:pointer; }.trackhit:hover { filter:brightness(1.35); }
+  @media(max-width:1100px) { .editorgrid { grid-template-columns:1.4fr .8fr; }.wheelgrid { grid-template-columns:1fr 1.2fr; }.gelgrid { grid-template-columns:1.3fr 1fr; }.hero { grid-template-columns:1fr 230px; }.sequencegrid { grid-template-columns:repeat(8,1fr); }.tab { padding:12px; gap:8px; }.tab small { display:none; } }
+  @media(max-width:850px) { .editorgrid,.gelgrid,.wheelgrid,.quizgrid { grid-template-columns:1fr; }.archivegrid { grid-template-columns:1fr; }.hero { grid-template-columns:1fr; gap:18px; }.herodata { display:none; }.panelbody { padding:17px; }.gelwrap svg { max-height:610px; } }
+  @media(max-width:600px) { .wrap { padding:0 15px 150px; }.topinner { padding:10px 15px; }.brand small { display:none; }.topinner .btn { padding:6px 8px; font-size:10px; }.hero { padding:24px 0; }.tabs { grid-template-columns:1fr 1fr; }.tab b { font-size:18px; }.tab { padding:10px; }.tab strong { font-size:12px; }.sectionhead { display:block; }.sectionhead>.tag { margin-top:10px; }.trackstats div { padding:12px; }.trackstats strong { font-size:22px; }.trackcanvas { padding:12px 7px 0; }.sequencegrid { grid-template-columns:repeat(8,1fr); gap:4px; }.sequence { font-size:10px; padding:7px 0; }.conceptgrid { grid-template-columns:1fr 1fr; }.assistantinner { grid-template-columns:1fr auto; gap:9px; padding:10px 15px; }.assistantlabel { display:none; }.assistant p { font-size:11px; }.dialog { padding:20px; }.gelwrap { padding:4px; }.two { grid-template-columns:1fr; } }
+  @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+  @media print { @page { size:A4 landscape; margin:15mm; }body { background:white; }body>*:not(#awardModal) { display:none!important; }#awardModal { display:block!important; position:static; padding:0; background:white; }#awardModal .dialog { width:100%; max-height:none; padding:0; overflow:visible; box-shadow:none; }#awardModal .noprint { display:none; }.certificate { margin:0; min-height:165mm; display:flex; flex-direction:column; justify-content:center; } }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topinner"><div class="brand"><div class="brandmark">⌘</div><div><strong>生命密码破译局</strong><small>GENOME INTELLIGENCE / CSI TERMINAL</small></div></div><button class="btn compact" id="soundButton" aria-pressed="false">音效 OFF</button><button class="btn compact" id="focusButton" aria-pressed="false">专注模式</button><button class="btn primary compact" data-open="manualModal"><i data-lucide="fingerprint"></i>破译手册</button></div></header>
+<main class="wrap">
+  <div class="hero"><div><div class="eyebrow">人教版必修2 / 第3章第4节 / 基因通常是有遗传效应的DNA片段</div><h1>在序列里读懂基因，<br>在条带里<em>寻找证据。</em></h1><p>从一段会发光的DNA，到一个需要追加检测的亲子案。每个终端都由你操作，每个结论都要说明它的证据与适用条件。</p></div><div class="herodata"><code><span>&gt; DNA_TRACK</span> 10,000 bp</code><code><span>&gt; GENE_REGIONS</span> 03</code><code><span>&gt; SEQUENCE_SPACE</span> 4ⁿ</code><code><span>&gt; CASE_STATUS</span> OPEN_</code></div></div>
+  <nav class="tabs" aria-label="四个互动终端"><button class="tab active" data-tab="0" aria-selected="true"><b>01</b><span><strong>基因组剪辑台</strong><small>GENOME EDITOR</small></span></button><button class="tab" data-tab="1" aria-selected="false"><b>02</b><span><strong>生命密码轮</strong><small>SEQUENCE ENGINE</small></span></button><button class="tab" data-tab="2" aria-selected="false"><b>03</b><span><strong>CSI电泳比对</strong><small>FORENSIC PROFILE</small></span></button><button class="tab" data-tab="3" aria-selected="false"><b>04</b><span><strong>首席密码官考核</strong><small>FINAL DECRYPTION</small></span></button></nav>
+
+  <section class="bench" id="bench0" aria-labelledby="title0"><div class="sectionhead"><div><div class="eyebrow">TERMINAL 01 / WHAT COUNTS AS A GENE?</div><h2 id="title0">删掉哪一段，绿色荧光会消失？</h2><p>这是虚构的10,000 bp教学DNA构建体。区段长度为建模设定，三个基因模块保留表达所需条件，实验仅改变所选靶点。</p></div><span class="tag green">PREDICT → EDIT → OBSERVE</span></div>
+    <div class="grid editorgrid"><article class="panel"><div class="panelhead"><div><h3>Genome Track Editor</h3><p>点击基因区段读取功能；按钮操作每次从完整构建体出发</p></div><span class="tag" id="editBadge">REFERENCE</span></div><div class="trackcanvas"><svg id="trackSvg" viewBox="0 0 900 240" aria-label="一万碱基对的基因和间隔区段"></svg></div><div class="genelegend"><span><i style="background:#10b981"></i>Gene-1 / GFP</span><span><i style="background:#06b6d4"></i>Gene-2 / 生长激素</span><span><i style="background:#a855f7"></i>Gene-3 / tRNA</span><span><i style="background:#48586c"></i>基因间隔区</span></div><div class="trackstats"><div><strong id="totalBp">10,000</strong><span>当前DNA长度 / bp</span></div><div><strong id="geneBp">2,200</strong><span>当前基因区段总长 / bp</span></div><div><strong id="genePercent">22.0%</strong><span>基因区段占比</span></div></div><div class="genecontrols"><button class="btn" data-edit="neutral">剪除中性间隔 600 bp</button><button class="btn danger" data-edit="gene">切除 Gene-1 / 800 bp</button><button class="btn" data-edit="control">剪除上游调控区 200 bp</button><button class="btn compact" data-edit="reset">恢复完整DNA</button></div><div class="panelbody" style="padding-top:0"><div class="feedback" id="editFeedback" role="status">先预测：灰色区域中，已验证的中性间隔与启动调控区被删除，会产生相同的结果吗？</div><p class="tiny muted" style="margin-top:12px">基因区段总长按每条双链的长度计，单位为bp；总碱基个数是碱基对数的2倍。22%仅是本构建体的设定。</p></div></article>
+    <aside class="panel silver"><div class="panelhead"><div><h3>表型监测 / 虚拟荧光报告</h3><p>在同等激发光条件下观察GFP荧光</p></div></div><div class="panelbody"><div class="phenotype"><svg id="jellySvg" viewBox="0 0 360 240" aria-label="虚拟水母荧光报告"></svg></div><div class="row spread" style="margin:15px 0"><span class="small" id="glowStatus">GFP信号 · 可检测</span><span class="tag" id="gfpReadout">ON</span></div><div class="feedback" id="geneReadout">Gene-1 → mRNA → GFP蛋白 → 绿色荧光。</div><div class="divider"></div><p class="small" id="selectedGene">点击轨道中紫色的tRNA基因，看看“有遗传效应”是否都要经过翻译。</p><p class="tiny muted" style="margin-top:12px">水母轮廓为报告界面的艺术示意，构建体与表型响应均为课堂模型。</p></div></aside></div>
+    <article class="panel silver archive"><div class="panelhead"><div><h3>机密档案 / 标题为什么说“通常”？</h3><p>把遗传物质类型与基因所在位置分开检查</p></div><button class="btn compact" id="archiveButton" aria-expanded="false">解密档案 ↓</button></div><div class="panelbody" id="archiveBody" hidden><div class="row" style="margin-bottom:15px"><button class="btn active" data-archive="material">DNA与RNA档案</button><button class="btn" data-archive="location">基因位置档案</button></div><div class="archivegrid" id="archiveCards"></div><div class="feedback" id="archiveNote" style="margin-top:15px"></div></div></article>
+  </section>
+
+  <section class="bench" id="bench1" hidden aria-labelledby="title1"><div class="sectionhead"><div><div class="eyebrow">TERMINAL 02 / COMBINATORIAL SEQUENCE ENGINE</div><h2 id="title1">四个字母，能写出多少种序列？</h2><p>约定一条参照链的5′→3′方向和起点，每个位置可选四种碱基；互补链由配对规则唯一确定。</p></div><span class="tag purple">SEQUENCE ≠ EXPRESSED TRAIT</span></div>
+    <div class="grid wheelgrid"><article class="panel"><div class="panelhead"><h3>恩尼格玛生命密码轮</h3><span class="tag">4 CHOICES / POSITION</span></div><div class="panelbody"><div class="row spread"><label for="lengthSlider" class="small">片段长度 / n个碱基对</label><span class="tag green" id="lengthTag">n = 10</span></div><div class="sliderline" style="margin:13px 0"><input id="lengthSlider" type="range" min="1" max="20" value="10"><output id="lengthValue">10 bp</output></div><p class="small muted">方向、起点已指定的理论序列数</p><div class="capacity" id="capacity">1,048,576</div><div class="formula" id="powerFormula" style="margin-top:13px">4¹⁰</div><div class="bar"><span id="populationBar"></span></div><p class="tiny muted" id="populationNote">比较基准固定为80亿，用于感受数量级。</p><div class="reels" id="reels"></div><div class="row spread"><button class="btn" id="spinButton">拨动三个示例密码轮</button><span class="mono small" id="reelSequence">5′-ATG-3′</span></div><div class="feedback" style="margin-top:18px">片段的长度和碱基排列顺序构成信息差异的基础。4ⁿ描述满足约定的序列空间，不能直接当作蛋白质或生物个体种数。</div></div></article>
+    <article class="panel silver"><div class="panelhead"><div><h3>把“比例不限”改成“数量已知”</h3><p>完整枚举n=3的全部64种参照链序列</p></div><span class="tag">3 bp / 6 bases</span></div><div class="panelbody"><div class="row"><button class="btn active" data-seqmode="free">模式A · 配对种类不限</button><button class="btn" data-seqmode="limited">模式B · 2对AT＋1对GC</button></div><div class="row spread" style="margin-top:18px"><div><span class="small muted">符合条件的序列</span><div class="bigcount" id="sequenceCount">64</div></div><div class="formula" id="restrictionFormula">4³ = 64</div></div><div class="sequencegrid" id="sequenceGrid" aria-label="全部三碱基序列"></div><div class="feedback" id="sequenceFeedback" style="margin-top:16px">点击任意一个序列，检查配对种类如何由参照链确定。</div><p class="tiny muted" style="margin-top:12px">固定2对AT与1对GC，仍允许每对的朝向改变。因此数目为C(3,1)×2³=24。对称或反向互补等价等额外约定会改变计数。</p></div></article></div>
+  </section>
+
+  <section class="bench" id="bench2" hidden aria-labelledby="title2"><div class="sectionhead"><div><div class="eyebrow">TERMINAL 03 / FORENSIC ELECTROPHORESIS</div><h2 id="title2">条带对齐以后，证据允许你说到哪一步？</h2><p>采用人工STR等位片段数据模拟凝胶显示，忽略突变、混样与检测误差。短片段迁移更远，同一位点要分别比较。</p></div><span class="tag">SYNTHETIC CASE FILES</span></div>
+    <div class="casebuttons"><button class="btn active" data-case="identity">案件01 · 博物馆血迹来源比对</button><button class="btn" data-case="parentage">案件02 · 遗产案亲缘证据</button></div>
+    <div class="grid gelgrid"><article class="panel"><div class="panelhead"><div><h3 id="caseTitle">CASE 01 / 样本来源比对</h3><p id="caseSubtitle">现场单一来源血迹与四份参考样本，比较三个虚拟STR位点。</p></div><span class="tag green" id="gelBadge">3 LOCI</span></div><div class="gelwrap"><svg id="gelSvg" viewBox="0 0 820 570" aria-label="带样本名称与位点分区的DNA指纹条带"></svg></div><div class="gelcontrols"><button class="btn compact" id="laserButton" aria-pressed="false">激光对齐尺 OFF</button><label class="tiny muted" for="laserSlider">上下移动标尺</label><input id="laserSlider" type="range" min="85" max="490" value="250" disabled><button class="btn compact" id="maternalButton" hidden aria-pressed="false">高亮母源条带</button></div><div class="panelbody" style="padding-top:0"><p class="tiny muted">视觉模拟保留凝胶条带风格。现代法医STR检测常使用毛细管电泳与荧光峰图；本图所有长度和位点均为教学构造。</p></div></article>
+    <aside class="panel silver"><div class="panelhead"><div><h3>证据记录与结论签发</h3><p id="casePrompt">请选择与现场样本所有已测位点一致的参考样本。</p></div></div><div class="panelbody"><div class="caseanswer" id="caseAnswers"></div><div class="feedback" id="caseFeedback" role="status">开启激光尺，把每条现场条带水平对齐到候选泳道。</div><div class="divider"></div><table class="evidencetable"><thead id="evidenceHead"></thead><tbody id="evidenceBody"></tbody></table><div id="identityFollowup" hidden><h3 style="margin-top:18px;font-size:14px">追问 / 毛囊与口腔上皮细胞</h3><div class="followups"><button class="btn" data-tissue="same">所测核DNA位点通常相同，mRNA谱可不同</button><button class="btn" data-tissue="different">它们的核DNA通常完全不同</button><button class="btn" data-tissue="rna">核DNA相同，所以mRNA谱必完全相同</button></div><p class="small" id="tissueFeedback" style="margin-top:10px"></p></div><div id="parentageTools" hidden><button class="btn primary" id="extraLocus" style="width:100%;margin-top:18px">申请追加检测 · L4位点</button><p class="tiny muted" style="margin-top:10px">课堂模型中，一处不相容即可触发排除。真实亲缘鉴定须考虑突变、复核、多位点统计及规范。</p></div></div></aside></div>
+  </section>
+
+  <section class="bench" id="bench3" hidden aria-labelledby="title3"><div class="sectionhead"><div><div class="eyebrow">TERMINAL 04 / CONCEPT MAPPING & FINAL REVIEW</div><h2 id="title3">把概念归位，再让结论接受审查。</h2><p>先以未复制的真核核染色体为例建立关系，再挑战五道原创高考风格题。</p></div><span class="tag purple">CHIEF CRYPTOGRAPHER</span></div>
+    <article class="panel" style="margin-bottom:18px"><div class="panelhead"><div><h3>四级关系建模</h3><p>从载体层次到基本单位；点击卡片依次放入，也可拖放到目标框</p></div><button class="btn compact" id="conceptReset">重新排序</button></div><div class="panelbody"><div class="conceptgrid" id="conceptSlots"></div><div class="conceptpool" id="conceptPool"></div><div class="row" style="margin-top:15px"><button class="btn primary" id="conceptCheck">检查关系</button><span class="small muted">点击已填的格子，可将概念退回候选池。</span></div><div class="feedback" id="conceptFeedback" style="margin-top:15px">染色体含DNA和蛋白质；基因是具有遗传效应的片段，脱氧核苷酸是DNA的基本单位。</div></div></article>
+    <div class="grid quizgrid"><article class="panel"><div class="panelhead"><div><h3>首席密码官 / 五层解密考核</h3><p>重试不扣分，答对每题只计一次</p></div><div class="quizdots" id="quizDots"></div></div><div class="panelbody"><span class="tag" id="quizTopic"></span><h3 id="quizQuestion" style="font-size:20px;margin-top:17px"></h3><div class="quizoptions" id="quizOptions"></div><div class="feedback" id="quizFeedback" role="status">先识别材料类型与题设范围，再下结论。</div><div class="row spread" style="margin-top:18px"><span id="quizStamp"></span><button class="btn" id="nextQuiz">下一题 →</button></div></div></article>
+    <aside class="panel"><div class="panelhead"><h3>密码官认证档案</h3><span class="tag green" id="scoreTag">0 / 5</span></div><div class="panelbody"><div class="eyebrow muted">DECRYPTION RANK</div><div class="rank" id="rankLabel">见习序列观察员</div><div class="bar"><span id="progressBar"></span></div><ul class="missionlist" id="missionList"></ul><button class="btn primary" data-open="awardModal" style="width:100%">签发本课姓名奖状</button><p class="tiny muted" style="margin-top:12px">认证依据本次页面中的操作记录。可打印或保存为PDF。</p></div></aside></div>
+  </section>
+  <footer class="footer"><div class="row spread"><span class="mono">GENOME INTELLIGENCE / B2-03-04 / v2.0</span><span>人工序列 · 人工物证 · 本地规则助教</span></div><details style="margin-top:12px"><summary>展开科学依据与模型说明</summary><ul><li>DNA指纹用途与结论范围参考 <a href="https://www.genome.gov/genetics-glossary/DNA-Fingerprinting" target="_blank" rel="noopener">NHGRI · DNA Fingerprinting</a>。本课只比较少量教学位点，DNA相容结论用于来源线索。</li><li>STR与亲子位点传递参考 <a href="https://nij.ojp.gov/topics/articles/dna-evidence-basics-analyzing" target="_blank" rel="noopener">美国司法研究所 · DNA Evidence</a>。现代电泳检测形式参考 <a href="https://www.yourgenome.org/theme/what-is-dna-profiling/" target="_blank" rel="noopener">Wellcome Connecting Science</a>。亲子判读依据每个位点的等位基因传递。</li><li>细菌染色体与质粒参考 <a href="https://www.ncbi.nlm.nih.gov/books/NBK21120/" target="_blank" rel="noopener">NCBI Bookshelf · Genome Anatomies</a>。HIV逆转录与前病毒阶段参考 <a href="https://hivinfo.nih.gov/understanding-hiv/fact-sheets/hiv-life-cycle" target="_blank" rel="noopener">NIH · HIV Life Cycle</a>。</li><li>10,000 bp构建体、800/1200/200 bp基因区段和剪切靶点均为课堂设定。非编码DNA可参与调控。本课只把已验证的600 bp间隔设为中性。</li><li>4ⁿ要求长度、参照链方向和起点已确定，且不限制组成。80亿为固定数量级比较基准。姓名只在本页处理，助教不调用在线AI。</li></ul></details></footer>
+</main>
+<aside class="assistant"><div class="assistantinner"><div class="assistantlabel">CASE ASSISTANT<b>证据助教</b></div><p id="assistantText" role="status" aria-live="polite">先预测再剪辑。若一段DNA不翻译成蛋白质，它还能有遗传效应吗？</p><button class="btn compact" id="nextTerminal">下一终端 →</button></div></aside>
+
+<div class="modal" id="manualModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="manualTitle" tabindex="-1"><div class="dialoghead"><div><div class="eyebrow muted">GENOME DECRYPTION / FIELD MANUAL</div><h2 id="manualTitle">基因密码破译速查手册</h2></div><button class="btn compact" data-close>关闭 ×</button></div><h3>01 / 四级关系先看对象</h3><div class="formula">真核核染色体<br>↓ 含DNA与蛋白质<br>DNA分子<br>↓ 含有多个具有遗传效应的片段<br>基因<br>↓ 组成DNA的基本单位<br>脱氧核苷酸</div><p>未复制的一条核染色体通常含一个DNA双链分子；复制后有两条姐妹染色单体，对应两个DNA分子。一个DNA分子可含多个基因及其他区段。</p><h3>02 / 基因的物质基础与产物</h3><table><thead><tr><th>对象</th><th>遗传物质与基因</th></tr></thead><tbody><tr><td>细胞生物</td><td>DNA；基因通常是有遗传效应的DNA片段</td></tr><tr><td>T2等DNA病毒</td><td>DNA；基因位于DNA上</td></tr><tr><td>TMV、SARS-CoV-2等RNA病毒</td><td>RNA；基因位于RNA上</td></tr></tbody></table><p>HIV病毒颗粒以RNA为基因组，进入宿主后可逆转录并以DNA前病毒形式整合。tRNA等功能RNA基因的产物无需翻译，也可发挥遗传效应。</p><h3>03 / “在染色体上”要说明哪种染色体</h3><p>真核核基因在核染色体DNA上呈线性排列。细菌拟核中的主要DNA称细菌染色体，质粒是独立的遗传元件。线粒体和叶绿体也有自己的DNA与基因。</p><h3>04 / 理论排列数</h3><div class="formula">固定方向、起点，n个碱基对<br>组成不限 → 4ⁿ<br>2对AT＋1对GC，n=3<br>→ C(3,1)×2³ = 24</div><p>每对可以是AT、TA、GC、CG，互补链由参照链决定。基因多样性与特异性体现在相应碱基序列等结构差异中。</p><h3>05 / DNA指纹判读</h3><p>同体比对逐位点检查全部等位片段。亲子比对检查孩子每个位点的一份等位基因能来自母亲，另一份能来自父亲。相同大小的条带可能由双方共同拥有，不能机械地按总条带数平分。</p><p>有限位点全相同可以提示来源相容。它本身不能断定犯罪，也不能证明同卵双胞胎或克隆。亲子鉴定还需多位点、群体频率与统计评价。本课用追加位点展示排除推理。</p></div></div>
+<div class="modal awardmodal" id="awardModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="awardTitle" tabindex="-1"><div class="dialoghead noprint"><div><div class="eyebrow muted">GENOME INTELLIGENCE / CERTIFICATE</div><h2 id="awardTitle">签署本次破译记录</h2></div><button class="btn compact" data-close>关闭 ×</button></div><div class="row noprint" style="margin-top:17px"><label for="studentName">学生姓名</label><input class="input" id="studentName" maxlength="24" autocomplete="off" placeholder="请输入姓名"><button class="btn" id="generateAward">生成奖状</button><button class="btn" id="printAward" disabled>打印 / 保存PDF</button></div><p id="awardFeedback" class="small noprint" style="margin-top:10px">把每个结论与证据对应，记录你的科学推理。</p><div class="certificate" id="certificateSheet" hidden><div class="eyebrow">GENOME INTELLIGENCE / CSI FORENSIC TERMINAL</div><h2>生命密码破译荣誉证书</h2><p>恭喜</p><p class="student" id="certificateName"></p><p style="margin-top:15px">在《基因通常是有遗传效应的DNA片段》探究中</p><p>完成序列观察、模型比较与物证推理</p><h3 id="certificateRank" style="color:#087966;margin:18px 0">基因证据观察员</h3><p class="small" id="certificateRecord"></p><div class="row spread" style="margin-top:25px;border-top:1px solid #08796655;padding-top:15px"><span class="mono small" id="certificateDate"></span><span class="mono small">B2-03-04 / v2.0</span></div></div></div></div>
+<script>
+'use strict';
+const get = id => document.getElementById(id);
+const queryAll = selector => Array.from(document.querySelectorAll(selector));
+const state = {
+  tab:0, edit:'reset', edits:new Set(), selectedGene:0, readRNA:false,
+  archiveOpen:false, archive:'material', archives:new Set(),
+  length:10, sequenceMode:'free', modes:new Set(['free']), reels:['A','T','G'],
+  case:'identity', laser:false, laserY:250, maternal:false, extra:false,
+  identitySolved:false, tissueSolved:false, initialParentage:false, finalParentage:false,
+  selectedLane:-1, concepts:[null,null,null,null], conceptSolved:false,
+  quiz:0, choices:{}, solved:new Set(), done:[false,false,false,false], sound:false
+};
+const baseColor = { A:'#36d399', T:'#fbbf24', G:'#06b6d4', C:'#c084fc' };
+const pairing = { A:'T', T:'A', G:'C', C:'G' };
+let audioContext;
+let returnFocus;
+
+function assistant(message) {
+  get('assistantText').textContent = message;
+}
+
+function successSound() {
+  if (!state.sound) return;
+  const AudioClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioClass) return;
+  try {
+    audioContext ||= new AudioClass();
+    audioContext.resume();
+    [440,554.37,659.25].forEach((frequency,index) => {
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      const start = audioContext.currentTime + index * .07;
+      oscillator.type = 'sine';
+      oscillator.frequency.value = frequency;
+      gain.gain.setValueAtTime(0,start);
+      gain.gain.linearRampToValueAtTime(.055,start+.015);
+      gain.gain.exponentialRampToValueAtTime(.001,start+.2);
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start(start);
+      oscillator.stop(start+.21);
+    });
+  } catch (error) {
+    state.sound = false;
+    get('soundButton').textContent = '音效不可用';
+    get('soundButton').setAttribute('aria-pressed','false');
+  }
+}
+
+function svgText(x,y,text,size=12,fill='#b7d9e9',extra='') {
+  return `<text x="${x}" y="${y}" fill="${fill}" font-size="${size}" font-family="Consolas,Microsoft YaHei,monospace" ${extra}>${text}</text>`;
+}
+
+const genes = [
+  { start:1000, end:1800, name:'Gene-1', short:'GFP', color:'#10b981', note:'Gene-1是本模型的GFP基因区段。它通过转录与翻译形成荧光蛋白，在合适激发光下可产生绿色荧光。' },
+  { start:4000, end:5200, name:'Gene-2', short:'GH', color:'#06b6d4', note:'Gene-2是生长激素基因区段，产物为蛋白质。删除其他中性间隔，不改变本模型中它的遗传效应。' },
+  { start:7000, end:7200, name:'Gene-3', short:'tRNA', color:'#a855f7', note:'Gene-3转录产生功能性tRNA，经加工后参与翻译。它本身无需被翻译成蛋白质，仍有遗传效应。200 bp为包含转录加工信息的教学区段长度。' }
+];
+
+function deletionInterval() {
+  if (state.edit === 'neutral') return [2000,2600];
+  if (state.edit === 'gene') return [1000,1800];
+  if (state.edit === 'control') return [800,1000];
+  return [0,0];
+}
+
+function editedPosition(position) {
+  const [start,end] = deletionInterval();
+  return position - Math.max(0,Math.min(position,end)-start);
+}
+
+function genomeStats() {
+  const [start,end] = deletionInterval();
+  const total = 10000 - (end-start);
+  const geneTotal = state.edit === 'gene' ? 1400 : 2200;
+  return { total, geneTotal, percentage:geneTotal/total*100, glowing:state.edit!=='gene'&&state.edit!=='control' };
+}
+
+function renderTrack() {
+  const stats = genomeStats();
+  const x = position => 45 + position * .081;
+  let svg = svgText(45,23,'REFERENCE / 10,000 bp',10,'#5c8ca4') + svgText(855,23,'5′ → 3′ 参照坐标',10,'#5c8ca4','text-anchor="end"');
+  for (let position=0;position<=10000;position+=1000) {
+    svg += `<line x1="${x(position)}" x2="${x(position)}" y1="32" y2="44" stroke="#44637c"/>`;
+    svg += svgText(x(position),57,position/1000+'k',9,'#6889a0','text-anchor="middle"');
+  }
+  svg += `<rect x="45" y="69" width="810" height="10" rx="3" fill="#48586c" opacity=".5"/>`;
+  genes.forEach(gene => svg += `<rect x="${x(gene.start)}" y="69" width="${(gene.end-gene.start)*.081}" height="10" fill="${gene.color}" opacity=".6"/>`);
+  const currentWidth = stats.total*.081;
+  svg += `<rect x="45" y="111" width="${currentWidth}" height="37" rx="4" fill="#48586c"/>`;
+  genes.forEach((gene,index) => {
+    const start = editedPosition(gene.start);
+    const width = (editedPosition(gene.end)-start)*.081;
+    if (width > 0) {
+      svg += `<g class="trackhit" data-gene="${index}" tabindex="0" role="button" aria-label="${gene.name} ${gene.short}"><rect x="${x(start)}" y="111" width="${width}" height="37" rx="3" fill="${gene.color}" fill-opacity=".7" stroke="${gene.color}" stroke-width="${state.selectedGene===index?3:1}"/><line x1="${x(start)+width/2}" x2="${x(start)+width/2}" y1="150" y2="170" stroke="${gene.color}"/>${svgText(x(start)+width/2,186,gene.name,11,gene.color,'text-anchor="middle"')}</g>`;
+    }
+  });
+  if (state.edit !== 'control') svg += `<rect x="${x(editedPosition(800))}" y="106" width="16.2" height="47" fill="none" stroke="#fbbf24" stroke-dasharray="3 3"/>`;
+  if (state.edit !== 'neutral') svg += `<rect x="${x(editedPosition(2000))}" y="116" width="48.6" height="27" fill="none" stroke="#bacbd9" stroke-dasharray="4 4"/>`;
+  svg += svgText(45,213,'虚线靶点：金色=上游调控区 / 灰白=已验证中性间隔',10,'#7a9aaf');
+  if (state.edit !== 'reset') {
+    const cut = x(editedPosition(deletionInterval()[0]));
+    svg += `<path d="M${cut-5} 98 L${cut+5} 160 M${cut+5} 98 L${cut-5} 160" stroke="#fb7185" stroke-width="2"/>`;
+    svg += svgText(855,213,'REMOVED '+(10000-stats.total)+' bp',10,'#fda4af','text-anchor="end"');
+  }
+  get('trackSvg').innerHTML = svg;
+  queryAll('[data-gene]').forEach(element => {
+    const choose = () => selectGene(Number(element.dataset.gene));
+    element.onclick = choose;
+    element.onkeydown = event => { if(event.key==='Enter'||event.key===' '){event.preventDefault();choose();} };
+  });
+  get('totalBp').textContent = stats.total.toLocaleString('en-US');
+  get('geneBp').textContent = stats.geneTotal.toLocaleString('en-US');
+  get('genePercent').textContent = stats.percentage.toFixed(1)+'%';
+  get('editBadge').textContent = {reset:'REFERENCE',neutral:'NEUTRAL SPACER CUT',gene:'GENE-1 DELETED',control:'REGULATOR DELETED'}[state.edit];
+  queryAll('[data-edit]').forEach(button => button.classList.toggle('active',button.dataset.edit===state.edit));
+  get('gfpSignal').style.opacity = stats.glowing ? '1' : '.08';
+  get('glowStatus').textContent = stats.glowing ? 'GFP信号 · 可检测' : 'GFP信号 · 降至模型背景';
+  get('gfpReadout').textContent = stats.glowing ? 'ON' : 'OFF';
+  get('geneReadout').textContent = state.edit==='gene' ? 'Gene-1被删除，缺少合成GFP的序列信息。' : state.edit==='control' ? 'Gene-1序列仍在，但必需的上游调控区被删除，本模型中GFP转录关闭。' : 'Gene-1 → mRNA → GFP蛋白 → 绿色荧光。';
+}
+
+function selectGene(index) {
+  state.selectedGene=index;
+  if(index===2)state.readRNA=true;
+  get('selectedGene').textContent=genes[index].note;
+  renderTrack();
+  assistant(genes[index].note);
+  updateProgress();
+}
+
+function editGenome(mode) {
+  state.edit=mode;
+  if(mode!=='reset')state.edits.add(mode);
+  const messages={
+    reset:'完整构建体恢复。三个基因区段合计2200 bp，占10000 bp的22%。灰色间隔中既可有中性片段，也可有调控信息。',
+    neutral:'删去已验证的600 bp中性间隔后，荧光保留。基因区段仍为2200 bp，DNA总长变为9400 bp。不能把这一结果推广到所有灰色区段。',
+    gene:'删去800 bp的Gene-1后，模型荧光关闭。剩余两个基因区段合计1400 bp，DNA总长9200 bp。序列的存在与功能相联系。',
+    control:'删去200 bp上游调控区，Gene-1本体仍在，但模型中转录无法启动。非编码区也可影响遗传效应，请把“非编码”与“无功能”分开判断。'
+  };
+  get('editFeedback').textContent=messages[mode];
+  renderTrack();
+  assistant(messages[mode]);
+  updateProgress();
+}
+
+function renderJelly() {
+  get('jellySvg').innerHTML=`<defs><filter id="gfpGlow"><feGaussianBlur stdDeviation="5"/></filter><radialGradient id="gfpFill"><stop stop-color="#b5ffdb" stop-opacity=".7"/><stop offset="1" stop-color="#10b981" stop-opacity=".14"/></radialGradient></defs>
+    <circle class="bubble" cx="45" cy="55" r="3" fill="#164757"/><circle class="bubble" cx="294" cy="145" r="5" fill="#164757"/>
+    <path d="M105 122 C100 28 260 28 255 122 Q180 150 105 122" fill="#0e2837" stroke="#29536a"/>
+    <g stroke="#294c63" fill="none" stroke-width="2"><path d="M130 130 C105 170 155 185 128 220"/><path d="M160 136 C190 165 135 193 169 227"/><path d="M194 136 C170 181 220 192 196 229"/><path d="M224 132 C255 170 213 192 235 215"/></g>
+    <g id="gfpSignal" class="fluorescence"><path d="M105 122 C100 28 260 28 255 122 Q180 150 105 122" fill="url(#gfpFill)" stroke="#39e9b7" stroke-width="2"/><path d="M110 115 C115 38 245 38 250 115" fill="none" stroke="#26efb3" stroke-width="7" opacity=".7" filter="url(#gfpGlow)"/><path d="M134 127 C135 171 157 178 151 211 M180 133 C195 173 170 195 185 224 M220 129 C205 170 236 187 223 212" fill="none" stroke="#37d8a5" stroke-width="2"/><circle cx="166" cy="95" r="8" fill="#8bf3c0" opacity=".7"/><circle cx="193" cy="99" r="8" fill="#8bf3c0" opacity=".7"/></g>
+    ${svgText(17,22,'GFP / EXCITATION ON',9,'#628c9f')}${svgText(344,220,'VIRTUAL REPORTER',8,'#42657a','text-anchor="end"')}`;
+}
+
+function renderArchive() {
+  const material=[
+    ['细胞生物','DNA','真核、细菌与古菌的遗传物质为DNA。功能RNA也可由DNA基因转录产生。'],
+    ['T2噬菌体','DNA','T2以DNA为遗传物质，基因位于DNA中。病毒不能一概归为RNA遗传。'],
+    ['TMV / 新冠病毒 / HIV','RNA','这些病毒颗粒的基因组为RNA。HIV进入宿主后还会经过DNA前病毒阶段。']
+  ];
+  const location=[
+    ['真核核基因','核染色体DNA','多个基因在一条染色体的DNA上呈线性排列。非编码序列也可参与功能。'],
+    ['细菌拟核与质粒','细菌染色体 / 质粒DNA','拟核中主要DNA常称细菌染色体。质粒为独立遗传元件，不能笼统说原核基因都不在染色体上。'],
+    ['线粒体与叶绿体','细胞器DNA','细胞器中也有DNA与基因。它们位于核染色体之外。']
+  ];
+  const cards=state.archive==='material'?material:location;
+  get('archiveCards').innerHTML=cards.map(([title,label,note])=>`<div class="archiveitem"><b>${title}</b><span class="mono small ${label==='RNA'?'rna-icon':'dna-icon'}">${label}</span><p>${note}</p></div>`).join('');
+  get('archiveNote').textContent=state.archive==='material'?'基因的本质要结合遗传物质类型。具有遗传效应的RNA片段可构成RNA病毒的基因。':'课堂所说“核染色体”与细菌染色体有结构区别。描述位置时明确对象，避免只凭“染色体”三个字判断对错。';
+  queryAll('[data-archive]').forEach(button=>button.classList.toggle('active',button.dataset.archive===state.archive));
+}
+
+const sequences=[];
+for(const first of ['A','T','G','C'])for(const second of ['A','T','G','C'])for(const third of ['A','T','G','C'])sequences.push(first+second+third);
+
+function limitedSequence(sequence) {
+  return [...sequence].filter(base=>base==='G'||base==='C').length===1;
+}
+
+function renderCapacity() {
+  const count=4n**BigInt(state.length);
+  get('lengthTag').textContent='n = '+state.length;
+  get('lengthValue').textContent=state.length+' bp';
+  get('capacity').textContent=count.toLocaleString('en-US');
+  get('capacity').classList.remove('rolling');
+  void get('capacity').getBoundingClientRect();
+  get('capacity').classList.add('rolling');
+  get('powerFormula').textContent=`4^${state.length} = ${count.toLocaleString('en-US')}`;
+  const ratio=Number(count)/8000000000;
+  get('populationBar').style.width=Math.min(100,ratio*100)+'%';
+  get('populationNote').textContent=ratio>=1 ? `已超过固定80亿比较基准的 ${ratio.toFixed(2)} 倍。此处只比较数量级。` : `约为固定80亿比较基准的 ${(ratio*100).toFixed(ratio<.001?6:2)}%。`;
+}
+
+function renderReels() {
+  const alphabet=['A','T','G','C'];
+  get('reels').innerHTML=state.reels.map(base=>{
+    const index=alphabet.indexOf(base);
+    return `<div class="reel" data-before="${alphabet[(index+3)%4]}" data-after="${alphabet[(index+1)%4]}"><strong style="color:${baseColor[base]}">${base}</strong></div>`;
+  }).join('');
+  get('reelSequence').textContent='5′-'+state.reels.join('')+'-3′';
+}
+
+function inspectSequence(sequence) {
+  get('sequenceFeedback').textContent=`参照链5′-${sequence}-3′，互补链3′-${[...sequence].map(base=>pairing[base]).join('')}-5′。包含 ${3-[...sequence].filter(base=>base==='G'||base==='C').length} 对AT与 ${[...sequence].filter(base=>base==='G'||base==='C').length} 对GC。`;
+  queryAll('.sequence').forEach(button=>button.classList.toggle('selected',button.textContent===sequence));
+}
+
+function renderSequences() {
+  const limited=state.sequenceMode==='limited';
+  get('sequenceCount').textContent=limited?'24':'64';
+  get('restrictionFormula').textContent=limited?'C(3,1) × 2³ = 24':'4³ = 64';
+  queryAll('.sequence').forEach((button,index)=>{
+    const kept=!limited||limitedSequence(sequences[index]);
+    button.classList.toggle('filtered',!kept);
+    button.classList.toggle('kept',limited&&kept);
+    button.setAttribute('aria-label',sequences[index]+(kept?'，符合条件':'，不符合限定条件'));
+  });
+  queryAll('[data-seqmode]').forEach(button=>button.classList.toggle('active',button.dataset.seqmode===state.sequenceMode));
+  get('sequenceFeedback').textContent=limited?'只保留恰好一个位置为G或C的序列。选GC位置有3种，每个位点的碱基对朝向各有2种，合计24种。':'组成不限时，三个位置各有4种选择，合计64种。点击序列检查它的互补链。';
+  updateProgress();
+}
+
+// 每个位点使用互不重叠的虚拟片段长度范围，便于课堂逐位点判读。
+const identityProfiles=[
+  [[108,120],[184,200],[264,280]],
+  [[108,116],[184,200],[264,280]],
+  [[108,120],[184,200],[264,280]],
+  [[104,120],[180,196],[264,284]],
+  [[112,120],[184,204],[260,280]]
+];
+const parentProfiles=[
+  [[108,120],[184,200],[264,280],[344,360]],
+  [[108,112],[184,196],[264,268],[344,348]],
+  [[116,120],[188,200],[268,276],[352,360]],
+  [[116,120],[192,200],[272,280],[352,360]],
+  [[108,120],[184,200],[264,280],[340,352]]
+];
+
+function locusCompatible(mother,child,father) {
+  return mother.some(maternal=>father.some(paternal=>[maternal,paternal].sort((a,b)=>a-b).join(',')===[...child].sort((a,b)=>a-b).join(',')));
+}
+
+function candidateCompatible(candidate, loci) {
+  return Array.from({length:loci},(_,locus)=>locusCompatible(parentProfiles[1][locus],parentProfiles[0][locus],parentProfiles[candidate+1][locus])).every(Boolean);
+}
+
+const gelY=bp=>500-(bp-90)*1.35;
+const laneX=index=>160+index*135;
+
+function renderGel() {
+  const parentage=state.case==='parentage';
+  const profiles=parentage?parentProfiles:identityProfiles;
+  const names=parentage?['孩子','母亲','男子1号','男子2号','男子3号']:['现场血迹','参考甲','参考乙','参考丙','参考丁'];
+  const loci=parentage&&state.extra?4:3;
+  let svg=`<defs><filter id="bandGlow"><feGaussianBlur stdDeviation="2.3"/></filter><linearGradient id="gelFilm" x2="0" y2="1"><stop stop-color="#0d2437" stop-opacity=".6"/><stop offset="1" stop-color="#091421"/></linearGradient></defs><rect x="103" y="64" width="667" height="438" rx="6" fill="url(#gelFilm)" stroke="#264359"/>`;
+  svg+=svgText(34,48,'bp',10,'#7696ad');
+  [364,340,284,260,204,180,124,100].forEach(bp=>{
+    svg+=`<line x1="92" x2="770" y1="${gelY(bp)}" y2="${gelY(bp)}" stroke="#39576e" stroke-width=".5" opacity=".35"/>`;
+    svg+=svgText(75,gelY(bp)+4,bp,10,'#6c8ea5','text-anchor="end"');
+    svg+=`<rect x="34" y="${gelY(bp)-2}" width="22" height="4" fill="#8691b4" opacity=".8"/>`;
+  });
+  for(let locus=0;locus<4;locus++){
+    const y=gelY(112+locus*80);
+    svg+=svgText(790,y+4,'L'+(locus+1),11,'#7094ac');
+    if(locus===3&&loci===3)svg+=svgText(440,y,'L4 尚未检测 / EVIDENCE PENDING',11,'#47677d','text-anchor="middle"');
+  }
+  if(parentage&&state.maternal){
+    parentProfiles[0].slice(0,loci).forEach((bands,locus)=>bands.forEach(bp=>{
+      const maternal=parentProfiles[1][locus].includes(bp);
+      if(!maternal)svg+=`<line x1="${laneX(0)+25}" x2="${laneX(4)+30}" y1="${gelY(bp)}" y2="${gelY(bp)}" stroke="#22d3ee" stroke-width="1" stroke-dasharray="5 6" opacity=".65"/>`;
+    }));
+  }
+  profiles.forEach((profile,index)=>{
+    const x=laneX(index);
+    const selected=state.selectedLane===index;
+    svg+=`<rect x="${x-36}" y="69" width="72" height="425" rx="3" fill="${selected?'#10b98110':'#ffffff02'}" stroke="${selected?'#10b98177':'#27445a44'}"/><rect x="${x-24}" y="75" width="48" height="9" fill="#030910" stroke="#365265"/>`;
+    svg+=svgText(x,37,names[index],12,index===0?'#b3f8ea':'#9db9cc','text-anchor="middle"');
+    svg+=svgText(x,54,'LANE '+String(index+1).padStart(2,'0'),8,'#446b84','text-anchor="middle"');
+    profile.slice(0,loci).forEach((bands,locus)=>bands.forEach(bp=>{
+      let color='#69e6dc',opacity=1;
+      if(parentage&&state.maternal&&index===0&&parentProfiles[1][locus].includes(bp)){color='#f472b6';opacity=.45;}
+      if(parentage&&state.maternal&&index===1){color='#f472b6';opacity=.8;}
+      const y=gelY(bp);
+      svg+=`<g class="gelband" opacity="${opacity}"><rect x="${x-24}" y="${y-3}" width="48" height="6" rx="2" fill="${color}" opacity=".8" filter="url(#bandGlow)"/><rect x="${x-23}" y="${y-1.7}" width="46" height="3.4" rx="1" fill="${color}"/></g>`;
+    }));
+  });
+  svg+=`<g id="laserLine" opacity="${state.laser?1:0}"><line x1="93" x2="772" y1="${state.laserY}" y2="${state.laserY}" stroke="#a7f3d0" stroke-width="1.5"/><circle cx="93" cy="${state.laserY}" r="3" fill="#a7f3d0"/></g>`;
+  svg+=svgText(105,529,'− 加样端',10,'#7795a9')+svgText(769,529,'迁移方向 ↓ 正极 +',10,'#7795a9','text-anchor="end"');
+  svg+=svgText(105,550,'短片段迁移更远 · 位点L1至L4的长度区间按教学需要错开',9,'#506d83');
+  get('gelSvg').innerHTML=svg;
+  get('gelBadge').textContent=loci+' LOCI / '+(state.extra&&parentage?'EXTENDED':'INITIAL');
+  get('laserButton').textContent='激光对齐尺 '+(state.laser?'ON':'OFF');
+  get('laserButton').setAttribute('aria-pressed',String(state.laser));
+  get('laserSlider').disabled=!state.laser;
+  get('maternalButton').hidden=!parentage;
+  get('maternalButton').classList.toggle('active',state.maternal);
+  get('maternalButton').setAttribute('aria-pressed',String(state.maternal));
+}
+
+function renderCase() {
+  const parentage=state.case==='parentage';
+  get('caseTitle').textContent=parentage?'CASE 02 / 亲缘证据评估':'CASE 01 / 样本来源比对';
+  get('caseSubtitle').textContent=parentage?'每个位点，孩子一份等位基因来自母亲，另一份来自父亲。':'现场单一来源血迹与四份参考样本，比较三个虚拟STR位点。';
+  get('casePrompt').textContent=parentage?(state.extra?'追加L4后，在所给候选中哪些仍与传递模型相容？':'初测只有三个STR位点。哪些候选仍可能提供孩子的父源等位基因？'):'请选择与现场样本所有已测位点一致的参考样本。';
+  get('parentageTools').hidden=!parentage;
+  get('identityFollowup').hidden=parentage||!state.identitySolved;
+  get('extraLocus').disabled=state.extra;
+  get('extraLocus').textContent=state.extra?'✓ L4追加检测已完成':'申请追加检测 · L4位点';
+  get('caseAnswers').innerHTML='';
+  const answers=parentage?['仅1号','仅2号','仅3号','2号与3号均相容']:['参考甲','参考乙','参考丙','参考丁'];
+  answers.forEach((label,index)=>{
+    const button=document.createElement('button');button.className='btn';button.textContent=label;
+    button.onclick=()=>answerCase(index);get('caseAnswers').append(button);
+  });
+  get('caseFeedback').textContent=parentage?(state.extra?'L4中，孩子的360 bp片段不能由母亲提供。看看各候选是否具有该等位片段。':'3号的初测条带与孩子完全相同。先逐位点检查传递关系，再判断能否排除。'):'开启激光尺，逐条比较。所有已测条带匹配可以支持样本来源相容。';
+  get('caseFeedback').className='feedback';
+  queryAll('[data-case]').forEach(button=>button.classList.toggle('active',button.dataset.case===state.case));
+  renderGel();renderEvidence();
+}
+
+function renderEvidence() {
+  if(state.case==='identity'){
+    get('evidenceHead').innerHTML='<tr><th>位点</th><th>现场</th><th>甲</th><th>乙</th><th>丙</th><th>丁</th></tr>';
+    get('evidenceBody').innerHTML=[0,1,2].map(locus=>`<tr><td>L${locus+1}</td>${identityProfiles.map((profile,index)=>`<td class="${index?profile[locus].join(',')===identityProfiles[0][locus].join(',')?'good':'bad':''}">${profile[locus].join('/')}</td>`).join('')}</tr>`).join('');
+  }else{
+    get('evidenceHead').innerHTML='<tr><th>位点</th><th>孩子</th><th>母亲</th><th>1号</th><th>2号</th><th>3号</th></tr>';
+    const loci=state.extra?4:3;
+    get('evidenceBody').innerHTML=Array.from({length:loci},(_,locus)=>`<tr><td>L${locus+1}</td>${parentProfiles.map((profile,index)=>`<td class="${index>=2?locusCompatible(parentProfiles[1][locus],parentProfiles[0][locus],profile[locus])?'good':'bad':''}">${profile[locus].join('/')}</td>`).join('')}</tr>`).join('');
+  }
+}
+
+function answerCase(index) {
+  let correct=false,message='';
+  if(state.case==='identity'){
+    correct=index===1;
+    state.selectedLane=index+1;
+    if(correct){
+      state.identitySolved=true;
+      message='参考乙与现场样本在已测三个STR位点相符。模型中乙是相容来源；判断谁实施盗窃还需要其他案情证据。请继续回答不同组织细胞的追问。';
+    }else message='逐位点比对，不只看“多数条带相像”。甲在L1、丙在多个位点、丁在L1等处与现场数据不符。';
+    get('identityFollowup').hidden=!state.identitySolved;
+  }else{
+    correct=state.extra?index===1:index===3;
+    state.selectedLane=index<3?index+2:-1;
+    if(correct&&!state.extra){
+      state.initialParentage=true;
+      message='证据判断正确。2号与3号均能提供120、200、280 bp等父源等位片段。3号的三个已测位点与孩子相同，无法据此排除，也无法推定同卵或克隆。申请L4检测吧。';
+    }else if(correct){
+      state.finalParentage=true;
+      message='追加L4后，3号缺少孩子所需的360 bp父源片段，在本模型前提下被排除。2号在四个位点均相容。真实鉴定仍需多位点统计与复核。';
+    }else message=state.extra?'L4必须能由母亲和候选各贡献一份。母亲没有360 bp，3号也没有，2号有。':'请先保留所有相容候选。条带与孩子相同，本身不构成亲子关系的排除理由。用孩子每个位点的一母一父传递规则检查。';
+  }
+  get('caseFeedback').textContent=message;
+  get('caseFeedback').className='feedback '+(correct?'good':'warn');
+  renderGel();
+  assistant(message);
+  if(correct)successSound();
+  updateProgress();
+}
+
+const conceptNames=['染色体','DNA','基因','脱氧核苷酸'];
+function renderConcepts() {
+  get('conceptSlots').innerHTML='';
+  state.concepts.forEach((concept,index)=>{
+    const slot=document.createElement('button');slot.className='conceptslot';slot.dataset.slot=index;
+    slot.innerHTML=`<small>LEVEL 0${index+1}</small><strong>${concept||'点击或拖入'}</strong>`;
+    slot.onclick=()=>{if(state.concepts[index]){state.concepts[index]=null;renderConcepts();}};
+    slot.ondragover=event=>{event.preventDefault();slot.classList.add('over');};
+    slot.ondragleave=()=>slot.classList.remove('over');
+    slot.ondrop=event=>{
+      event.preventDefault();
+      const value=event.dataTransfer.getData('text/plain');
+      if(!conceptNames.includes(value))return;
+      const old=state.concepts.indexOf(value);
+      if(old>=0)state.concepts[old]=null;
+      state.concepts[index]=value;
+      renderConcepts();
+    };
+    get('conceptSlots').append(slot);
+  });
+  get('conceptPool').innerHTML='';
+  ['基因','脱氧核苷酸','染色体','DNA'].filter(name=>!state.concepts.includes(name)).forEach(name=>{
+    const button=document.createElement('button');button.className='btn';button.textContent=name;button.draggable=true;
+    button.ondragstart=event=>event.dataTransfer.setData('text/plain',name);
+    button.onclick=()=>{const index=state.concepts.indexOf(null);if(index>=0){state.concepts[index]=name;renderConcepts();}};
+    get('conceptPool').append(button);
+  });
+}
+
+const quizzes=[
+  { topic:'tRNA基因的遗传效应', question:'某DNA片段转录产生tRNA，经加工后参与蛋白质合成。该片段应如何理解？', options:['不产生蛋白质，所以一定不是基因','它可以是具有遗传效应的功能RNA基因','tRNA是蛋白质，所以它是蛋白质编码基因','所有非蛋白质编码区都没有遗传效应'], answer:1, note:'遗传效应不要求产物一定是蛋白质。tRNA本身为功能RNA，参与翻译。' },
+  { topic:'“染色体”所指对象', question:'哪项描述对基因位置的表达更准确？', options:['所有生物的所有基因都在真核核染色体上','原核基因全部在质粒上','细菌拟核中主要DNA可称细菌染色体，质粒还可携带其他基因','线粒体有蛋白质，所以没有DNA'], answer:2, note:'位置判断要区分真核核染色体、细菌染色体、质粒与细胞器DNA。' },
+  { topic:'限定组成后的排列数', question:'指定参照链方向与起点，一个3 bp完整双链DNA必须含2对AT与1对GC，可有多少种参照链序列？', options:['12','24','32','64'], answer:1, note:'GC所在位置有3种选择，每个碱基对有两种朝向，所以是3×2³=24。' },
+  { topic:'有限DNA指纹的结论', question:'孩子与男子3号在三个STR位点的条带完全相同。这一结果能直接支持哪项结论？', options:['3号必为孩子的克隆','3号必不可能是父亲','必须逐位点检验遗传相容性，必要时追加检测','3号必为孩子的同卵双胞胎'], answer:2, note:'少量位点相同不能推出全基因组相同，更不能单凭这一点排除亲子关系。追加位点可以提供新的区分证据。' },
+  { topic:'“通常”与RNA病毒', question:'哪项说法正确？', options:['烟草花叶病毒的基因组为RNA，HIV生活史还可出现DNA前病毒','HIV遗传物质始终只有DNA','细胞生物的基因都是RNA片段','T2噬菌体与新冠病毒都以RNA为基因组'], answer:0, note:'细胞生物与DNA病毒的基因位于DNA，RNA病毒的基因位于RNA。逆转录病毒的生活史包含DNA阶段。' }
+];
+
+function renderQuiz() {
+  const question=quizzes[state.quiz];
+  get('quizTopic').textContent='0'+(state.quiz+1)+' / '+question.topic;
+  get('quizQuestion').textContent=question.question;
+  get('quizDots').innerHTML='';
+  quizzes.forEach((item,index)=>{
+    const button=document.createElement('button');button.textContent=index+1;
+    button.classList.toggle('active',index===state.quiz);button.classList.toggle('solved',state.solved.has(index));
+    button.setAttribute('aria-label','第'+(index+1)+'题');button.onclick=()=>{state.quiz=index;renderQuiz();};get('quizDots').append(button);
+  });
+  get('quizOptions').innerHTML='';
+  question.options.forEach((option,index)=>{
+    const button=document.createElement('button');button.className='btn quizoption';button.textContent=String.fromCharCode(65+index)+'  '+option;
+    if(state.choices[state.quiz]===index)button.classList.add(index===question.answer?'correct':'wrong');
+    button.onclick=()=>{
+      state.choices[state.quiz]=index;
+      if(index===question.answer){state.solved.add(state.quiz);successSound();}
+      renderQuiz();updateProgress();assistant(question.note);
+    };
+    get('quizOptions').append(button);
+  });
+  const answered=Object.hasOwn(state.choices,state.quiz);
+  const correct=state.choices[state.quiz]===question.answer;
+  get('quizFeedback').textContent=answered?(correct?'解密成功。':'再检查一次证据。')+question.note:'先识别材料类型与题设范围，再下结论。';
+  get('quizFeedback').className='feedback '+(answered?(correct?'good':'warn'):'');
+  get('quizStamp').innerHTML=correct?'<span class="stamp">DECRYPTED / 已破译</span>':'';
+  get('nextQuiz').textContent=state.quiz===4?'重审第1题 ↺':'下一题 →';
+}
+
+function updateProgress() {
+  state.done[0]=state.edits.size===3&&state.readRNA&&state.archives.size===2;
+  state.done[1]=state.modes.size===2;
+  state.done[2]=state.identitySolved&&state.tissueSolved&&state.initialParentage&&state.finalParentage;
+  state.done[3]=state.conceptSolved&&state.solved.size===5;
+  queryAll('[data-tab]').forEach(button=>button.classList.toggle('done',state.done[Number(button.dataset.tab)]));
+  const missions=['剪切三靶点、读取tRNA并解密两类档案','比较64种与24种序列空间','来源比对、组织追问与亲缘追加检测','完成四级关系与五道考核题'];
+  get('missionList').innerHTML=missions.map((label,index)=>`<li class="${state.done[index]?'done':''}">${state.done[index]?'✓':'□'} ${label}</li>`).join('');
+  get('scoreTag').textContent=state.solved.size+' / 5';
+  get('progressBar').style.width=state.done.filter(Boolean).length/4*100+'%';
+  get('rankLabel').textContent=state.done.every(Boolean)?'首席生命密码官':state.solved.size>=3?'基因证据分析员':'见习序列观察员';
+}
+
+function tab(index) {
+  state.tab=index;
+  queryAll('.bench').forEach((section,n)=>section.hidden=n!==index);
+  queryAll('[data-tab]').forEach((button,n)=>{button.classList.toggle('active',n===index);button.setAttribute('aria-selected',String(n===index));});
+  get('nextTerminal').textContent=index===3?'返回基因轨道 ↺':'下一终端 →';
+  assistant(['先预测再剪辑。若一段DNA不翻译成蛋白质，它还能有遗传效应吗？','方向、起点、组成限制都明确之后，再计算序列种数。','每个结论都要对应可见证据。先比较位点，再决定排除谁、保留谁。','概念关系搭好以后，用题设条件检查每一个判断。'][index]);
+}
+
+function openModal(id) {
+  returnFocus=document.activeElement;get(id).hidden=false;document.body.style.overflow='hidden';get(id).querySelector('.dialog').focus();
+}
+function closeModal(modal) {
+  modal.hidden=true;document.body.style.overflow='';returnFocus?.focus();
+}
+
+function generateAward() {
+  const name=get('studentName').value.trim();
+  if(!name){get('awardFeedback').textContent='请先输入姓名，再签发本次记录。';get('studentName').focus();return;}
+  get('certificateName').textContent=name;
+  get('certificateRank').textContent=state.done.every(Boolean)?'首席生命密码官':'基因证据观察员';
+  get('certificateRecord').textContent=`完成 ${state.done.filter(Boolean).length}/4 个终端，考核通过 ${state.solved.size}/5 题。`;
+  get('certificateDate').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  get('certificateSheet').hidden=false;get('printAward').disabled=false;get('awardFeedback').textContent='奖状已生成，可打印或选择另存为PDF。';
+}
+
+queryAll('[data-tab]').forEach(button=>button.onclick=()=>tab(Number(button.dataset.tab)));
+get('nextTerminal').onclick=()=>tab((state.tab+1)%4);
+queryAll('[data-edit]').forEach(button=>button.onclick=()=>editGenome(button.dataset.edit));
+get('archiveButton').onclick=()=>{
+  state.archiveOpen=!state.archiveOpen;get('archiveBody').hidden=!state.archiveOpen;
+  get('archiveButton').setAttribute('aria-expanded',String(state.archiveOpen));get('archiveButton').textContent=state.archiveOpen?'收起档案 ↑':'解密档案 ↓';
+  if(state.archiveOpen){state.archives.add(state.archive);renderArchive();updateProgress();}
+};
+queryAll('[data-archive]').forEach(button=>button.onclick=()=>{state.archive=button.dataset.archive;state.archives.add(state.archive);renderArchive();updateProgress();});
+get('lengthSlider').oninput=event=>{state.length=Number(event.target.value);renderCapacity();assistant('指定参照链后，互补链不再独立任选。每增加一个碱基对，理论序列种数乘4。');};
+get('spinButton').onclick=()=>{state.reels=Array.from({length:3},()=>['A','T','G','C'][Math.floor(Math.random()*4)]);renderReels();inspectSequence(state.reels.join(''));successSound();};
+sequences.forEach(sequence=>{
+  const button=document.createElement('button');button.className='sequence';button.textContent=sequence;button.onclick=()=>inspectSequence(sequence);get('sequenceGrid').append(button);
+});
+queryAll('[data-seqmode]').forEach(button=>button.onclick=()=>{state.sequenceMode=button.dataset.seqmode;state.modes.add(state.sequenceMode);renderSequences();assistant(get('sequenceFeedback').textContent);});
+queryAll('[data-case]').forEach(button=>button.onclick=()=>{state.case=button.dataset.case;state.selectedLane=-1;renderCase();});
+get('laserButton').onclick=()=>{state.laser=!state.laser;renderGel();};
+function setLaser(y) {
+  state.laserY=Math.max(85,Math.min(490,y));get('laserSlider').value=state.laserY;
+  const line=get('laserLine');if(!line)return;
+  line.querySelector('line').setAttribute('y1',state.laserY);line.querySelector('line').setAttribute('y2',state.laserY);line.querySelector('circle').setAttribute('cy',state.laserY);
+}
+get('laserSlider').oninput=event=>setLaser(Number(event.target.value));
+get('gelSvg').onpointermove=event=>{
+  if(!state.laser)return;
+  const point=get('gelSvg').createSVGPoint();point.x=event.clientX;point.y=event.clientY;
+  const transformed=point.matrixTransform(get('gelSvg').getScreenCTM().inverse());setLaser(transformed.y);
+};
+get('maternalButton').onclick=()=>{state.maternal=!state.maternal;renderGel();assistant('粉色表示可由母亲提供的片段。本例中剩余片段的父源方向明确；一般判读仍须逐位点检查，不能把总条带数简单分半。');};
+get('extraLocus').onclick=()=>{
+  if(!state.initialParentage){get('caseFeedback').textContent='先提交初测的完整结论。哪些候选目前仍然相容？';get('caseFeedback').className='feedback warn';return;}
+  state.extra=true;renderCase();assistant('新增L4。先找孩子中母亲没有的360 bp片段，再查候选能否提供它。');
+};
+queryAll('[data-tissue]').forEach(button=>button.onclick=()=>{
+  const correct=button.dataset.tissue==='same';
+  if(correct)state.tissueSolved=true;
+  get('tissueFeedback').textContent=correct?'判断正确。同一个体不同有核体细胞的所测核DNA位点通常一致，mRNA谱可因选择性表达不同。血迹中的核DNA主要来自有核白细胞。':'把DNA序列与表达产物分开。不同组织选择性表达的基因可不同，而所测核DNA位点通常一致。';
+  assistant(get('tissueFeedback').textContent);if(correct)successSound();updateProgress();
+});
+get('conceptReset').onclick=()=>{state.concepts=[null,null,null,null];renderConcepts();};
+get('conceptCheck').onclick=()=>{
+  const correct=conceptNames.every((name,index)=>state.concepts[index]===name);
+  if(correct)state.conceptSolved=true;
+  get('conceptFeedback').textContent=correct?'关系成立。一个未复制的真核核染色体通常含一个DNA双链分子，DNA上可有多个基因，基因序列由脱氧核苷酸构成。它们属于不同层次，不能用同一种“大小倍数”替代关系。':'沿着“载体含DNA → DNA含功能片段 → 片段由基本单位组成”逐步检查。染色体还含蛋白质。';
+  get('conceptFeedback').className='feedback '+(correct?'good':'warn');if(correct)successSound();assistant(get('conceptFeedback').textContent);updateProgress();
+};
+get('nextQuiz').onclick=()=>{state.quiz=(state.quiz+1)%quizzes.length;renderQuiz();};
+get('soundButton').onclick=()=>{state.sound=!state.sound;get('soundButton').textContent='音效 '+(state.sound?'ON':'OFF');get('soundButton').setAttribute('aria-pressed',String(state.sound));if(state.sound)successSound();};
+get('focusButton').onclick=()=>{const active=document.body.classList.toggle('focusmode');get('focusButton').textContent=active?'退出专注':'专注模式';get('focusButton').setAttribute('aria-pressed',String(active));};
+queryAll('[data-open]').forEach(button=>button.onclick=()=>openModal(button.dataset.open));
+queryAll('[data-close]').forEach(button=>button.onclick=()=>closeModal(button.closest('.modal')));
+queryAll('.modal').forEach(modal=>modal.onclick=event=>{if(event.target===modal)closeModal(modal);});
+document.addEventListener('keydown',event=>{
+  const modal=queryAll('.modal').find(element=>!element.hidden);if(!modal)return;
+  if(event.key==='Escape')closeModal(modal);
+  if(event.key==='Tab'){
+    const focusable=Array.from(modal.querySelectorAll('button:not(:disabled),input,select,a[href]')).filter(element=>element.offsetParent!==null);
+    if(event.shiftKey&&document.activeElement===focusable[0]){event.preventDefault();focusable.at(-1)?.focus();}
+    else if(!event.shiftKey&&document.activeElement===focusable.at(-1)){event.preventDefault();focusable[0]?.focus();}
+  }
+});
+get('generateAward').onclick=generateAward;get('printAward').onclick=()=>window.print();
+get('studentName').onkeydown=event=>{if(event.key==='Enter')generateAward();};
+renderJelly();renderTrack();renderArchive();renderCapacity();renderReels();renderSequences();renderCase();renderConcepts();renderQuiz();updateProgress();
+window.GenomeCSI={state,genomeStats,sequences,limitedSequence,parentProfiles,identityProfiles,locusCompatible,candidateCompatible,tab};
+</script>
+<!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/gene-fragment/csi-v2/" data-file="lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body>
+</html>
