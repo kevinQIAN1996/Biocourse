@@ -27,7 +27,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "9d1ce2c2eb7000c401169808ed10968b45782a90f0539d086e4cb273393c0093",
         "sourceFilename": "必修1_01-01_细胞是生命活动的基本单位_PBL生命边界策展工程_v1.0.html",
-        "bytes": 109610
+        "bytes": 109610,
+        "preview": {
+          "image": "assets/previews/cell-basics--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/cell-basics--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞是生命活动的基本单位 · PBL策展版 v1.0真实课件画面：让证据，覆盖一张错误的手稿。",
+          "scene": "让证据，覆盖一张错误的手稿。"
+        }
       }
     ],
     "curriculum": {
@@ -43,7 +51,21 @@
       ],
       "integrated": false,
       "label": "第1章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/cell-basics--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/cell-basics--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞是生命活动的基本单位 · PBL策展版 v1.0真实课件画面：让证据，覆盖一张错误的手稿。",
+      "scene": "让证据，覆盖一张错误的手稿。",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "生命的边界，能用什么证据说明？",
+    "activities": [
+      "证据修正",
+      "层级建模"
+    ]
   },
   {
     "id": "cell-diversity",
@@ -73,7 +95,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "ead050f079e16b9e208eb99fdd8988e5876113880ac35b602c54457d35da7177",
         "sourceFilename": "必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
-        "bytes": 97411
+        "bytes": 97411,
+        "preview": {
+          "image": "assets/previews/cell-diversity--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/cell-diversity--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞的多样性和统一性 · 镜检海关版 v1.0真实课件画面：你的手向左，物像往哪走？",
+          "scene": "你的手向左，物像往哪走？"
+        }
       }
     ],
     "curriculum": {
@@ -89,7 +119,21 @@
       ],
       "integrated": false,
       "label": "第1章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/cell-diversity--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/cell-diversity--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞的多样性和统一性 · 镜检海关版 v1.0真实课件画面：你的手向左，物像往哪走？",
+      "scene": "你的手向左，物像往哪走？",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "名字会骗人，细胞结构会吗？",
+    "activities": [
+      "镜检实操",
+      "物种分拣"
+    ]
   },
   {
     "id": "elements",
@@ -119,7 +163,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "66ea28d5c68e080f842f7bcd52c2c95a00701f232c84b4e8754bfa11afe1d52f",
         "sourceFilename": "必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
-        "bytes": 99634
+        "bytes": 99634,
+        "preview": {
+          "image": "assets/previews/elements--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/elements--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞中的元素和化合物 · 包豪斯实验版 v1.0真实课件画面：拿走的是水，为什么元素会换座？",
+          "scene": "拿走的是水，为什么元素会换座？"
+        }
       }
     ],
     "curriculum": {
@@ -135,7 +187,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/elements--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/elements--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞中的元素和化合物 · 包豪斯实验版 v1.0真实课件画面：拿走的是水，为什么元素会换座？",
+      "scene": "拿走的是水，为什么元素会换座？",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "抽走水分，元素排名为什么会变？",
+    "activities": [
+      "元素称量",
+      "显色实验"
+    ]
   },
   {
     "id": "inorganics",
@@ -165,7 +231,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "fd21130485832507ef0726c9ebe331365883388bb56ec4539360e755c7ea1433",
         "sourceFilename": "必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
-        "bytes": 80032
+        "bytes": 80032,
+        "preview": {
+          "image": "assets/previews/inorganics--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/inorganics--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞中的无机物 · 深空维生版 v1.0真实课件画面：水的“引力魔术”，先从正负两端开始。",
+          "scene": "水的“引力魔术”，先从正负两端开始。"
+        }
       }
     ],
     "curriculum": {
@@ -181,7 +255,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/inorganics--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/inorganics--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞中的无机物 · 深空维生版 v1.0真实课件画面：水的“引力魔术”，先从正负两端开始。",
+      "scene": "水的“引力魔术”，先从正负两端开始。",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "一滴水，怎样维持生命的平衡？",
+    "activities": [
+      "微观观察",
+      "缺素探究"
+    ]
   },
   {
     "id": "carbohydrate-lipid",
@@ -211,7 +299,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "d1e7922d138c016175a10837ecaff2dc79cca0fb462fb5000f51272e26ac822f",
         "sourceFilename": "必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
-        "bytes": 82135
+        "bytes": 82135,
+        "preview": {
+          "image": "assets/previews/carbohydrate-lipid--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/carbohydrate-lipid--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞中的糖类和脂质 · 能量造物版 v1.0真实课件画面：糖类，不只是“甜甜的一块”。",
+          "scene": "糖类，不只是“甜甜的一块”。"
+        }
       }
     ],
     "curriculum": {
@@ -227,7 +323,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/carbohydrate-lipid--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/carbohydrate-lipid--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞中的糖类和脂质 · 能量造物版 v1.0真实课件画面：糖类，不只是“甜甜的一块”。",
+      "scene": "糖类，不只是“甜甜的一块”。",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "同样储存能量，糖和脂肪有何不同？",
+    "activities": [
+      "分子拼装",
+      "曲线推演"
+    ]
   },
   {
     "id": "protein",
@@ -259,7 +369,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 190544,
         "contentSha256": "6670bda8055c06c24a33b543adb00055b8093ebb44039ecdbb9281e2f9c52587",
-        "sourceFilename": "必修1_02-04_蛋白质生命架构实验室.html"
+        "sourceFilename": "必修1_02-04_蛋白质生命架构实验室.html",
+        "preview": {
+          "image": "assets/previews/protein--original.webp",
+          "thumbnail": "assets/previews/protein--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "蛋白质 · 原版 v1.0真实课件画面：蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
+          "scene": "蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。"
+        }
       }
     ],
     "curriculum": {
@@ -275,7 +393,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第4节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/protein--original.webp",
+      "thumbnail": "assets/previews/protein--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "蛋白质 · 原版 v1.0真实课件画面：蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
+      "scene": "蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
+      "versionId": "original"
+    },
+    "inquiry": "一条肽链，怎样折叠出不同功能？",
+    "activities": [
+      "结构探索",
+      "脱水缩合"
+    ]
   },
   {
     "id": "nucleic",
@@ -307,7 +439,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 101843,
         "contentSha256": "150a355b28c7f592d674a95b28aa5608fbfaa411d2e542cecd81c7d9de7b473c",
-        "sourceFilename": "必修1_02-05_核酸训练实验室.html"
+        "sourceFilename": "必修1_02-05_核酸训练实验室.html",
+        "preview": {
+          "image": "assets/previews/nucleic--original.webp",
+          "thumbnail": "assets/previews/nucleic--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "核酸 · 原版 v1.0真实课件画面：从平面，走向双螺旋",
+          "scene": "从平面，走向双螺旋"
+        }
       }
     ],
     "curriculum": {
@@ -323,7 +463,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第5节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/nucleic--original.webp",
+      "thumbnail": "assets/previews/nucleic--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "核酸 · 原版 v1.0真实课件画面：从平面，走向双螺旋",
+      "scene": "从平面，走向双螺旋",
+      "versionId": "original"
+    },
+    "inquiry": "四种碱基，如何写下生命的信息？",
+    "activities": [
+      "亲手组装",
+      "互补配对"
+    ]
   },
   {
     "id": "cell-stem",
@@ -355,7 +509,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 4479409,
         "contentSha256": "119a4091906aa4dd1995cf49e438043504ab37a2119b52418fcacb0815aa2ad3",
-        "sourceFilename": "拓展_细胞工程_细胞工程局_STEM探索课.html"
+        "sourceFilename": "拓展_细胞工程_细胞工程局_STEM探索课.html",
+        "preview": {
+          "image": "assets/previews/cell-stem--original.webp",
+          "thumbnail": "assets/previews/cell-stem--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞结构探索 · 原版 v1.0真实课件画面：没有单打独斗的生命。",
+          "scene": "没有单打独斗的生命。"
+        }
       }
     ],
     "curriculum": {
@@ -379,7 +541,21 @@
       ],
       "integrated": true,
       "label": "第3章 · 第1—3节综合"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/cell-stem--original.webp",
+      "thumbnail": "assets/previews/cell-stem--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞结构探索 · 原版 v1.0真实课件画面：没有单打独斗的生命。",
+      "scene": "没有单打独斗的生命。",
+      "versionId": "original"
+    },
+    "inquiry": "细胞里的部门，怎样协同工作？",
+    "activities": [
+      "结构观察",
+      "系统建模"
+    ]
   },
   {
     "id": "membrane",
@@ -411,7 +587,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 99757,
         "contentSha256": "81f3c2eabbc38c4cd1cd9579e56f2aedcda1daff6c3cce7d98b424a4c272b366",
-        "sourceFilename": "必修1_03-01_细胞膜_边界研究所_v1.0.html"
+        "sourceFilename": "必修1_03-01_细胞膜_边界研究所_v1.0.html",
+        "preview": {
+          "image": "assets/previews/membrane--original.webp",
+          "thumbnail": "assets/previews/membrane--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
+          "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。"
+        }
       }
     ],
     "curriculum": {
@@ -427,7 +611,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/membrane--original.webp",
+      "thumbnail": "assets/previews/membrane--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
+      "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
+      "versionId": "original"
+    },
+    "inquiry": "一道边界，怎样做到有进有出？",
+    "activities": [
+      "证据建模",
+      "膜的流动性"
+    ]
   },
   {
     "id": "textbook-atlas",
@@ -459,7 +657,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 94349,
         "contentSha256": "3b29727ccd7aa56f98eb5779117dc2cc238924e9f9ac2533d742d8cf16c89d79",
-        "sourceFilename": "必修1_03-00_细胞结构图谱_教材原图交互版.html"
+        "sourceFilename": "必修1_03-00_细胞结构图谱_教材原图交互版.html",
+        "preview": {
+          "image": "assets/previews/textbook-atlas--original.webp",
+          "thumbnail": "assets/previews/textbook-atlas--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞结构图谱 · 原版 v1.0真实课件画面：从教材原图，读懂生命结构。；细胞全景；膜与边界",
+          "scene": "从教材原图，读懂生命结构。；细胞全景；膜与边界"
+        }
       }
     ],
     "curriculum": {
@@ -483,7 +689,21 @@
       ],
       "integrated": true,
       "label": "第3章 · 第1—3节综合"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/textbook-atlas--original.webp",
+      "thumbnail": "assets/previews/textbook-atlas--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞结构图谱 · 原版 v1.0真实课件画面：从教材原图，读懂生命结构。；细胞全景；膜与边界",
+      "scene": "从教材原图，读懂生命结构。；细胞全景；膜与边界",
+      "versionId": "original"
+    },
+    "inquiry": "对照教材，找出结构之间的联系。",
+    "activities": [
+      "教材对照",
+      "指图挑战"
+    ]
   },
   {
     "id": "organelles",
@@ -515,7 +735,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 83337,
         "contentSha256": "d6344f2a4aefa5e22f1912c77f6eb0eae8a808f12d0d19d518341264dc41cab7",
-        "sourceFilename": "3.2细胞器之间的分工合作.html"
+        "sourceFilename": "3.2细胞器之间的分工合作.html",
+        "preview": {
+          "image": "assets/previews/organelles--workbuddy.webp",
+          "thumbnail": "assets/previews/organelles--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞器 · WorkBuddy 版 v2.0真实课件画面：环节一「工厂部门」大盘点 —— 细胞器的分工",
+          "scene": "环节一「工厂部门」大盘点 —— 细胞器的分工"
+        }
       },
       {
         "id": "original",
@@ -541,7 +769,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 77936,
         "contentSha256": "b884dd05ccd9d582fbc6dfeb5e86f8b554dbc2961b6efe37813cff9516301066",
-        "sourceFilename": "必修1_03-02_细胞器图鉴_2D互动版_v1.0.html"
+        "sourceFilename": "必修1_03-02_细胞器图鉴_2D互动版_v1.0.html",
+        "preview": {
+          "image": "assets/previews/organelles--original.webp",
+          "thumbnail": "assets/previews/organelles--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞器 · 原版 v1.0真实课件画面：微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
+          "scene": "微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。"
+        }
       }
     ],
     "curriculum": {
@@ -557,7 +793,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/organelles--workbuddy.webp",
+      "thumbnail": "assets/previews/organelles--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞器 · WorkBuddy 版 v2.0真实课件画面：环节一「工厂部门」大盘点 —— 细胞器的分工",
+      "scene": "环节一「工厂部门」大盘点 —— 细胞器的分工",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "不同细胞器，如何分工又合作？",
+    "activities": [
+      "结构比较",
+      "协作追踪"
+    ]
   },
   {
     "id": "secretion",
@@ -589,7 +839,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 72583,
         "contentSha256": "376c97b3e068fbd93eb7dffba4b9a75532dcbcf095c901a6a1babc7ef882c124",
-        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.1.html"
+        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.1.html",
+        "preview": {
+          "image": "assets/previews/secretion--original.webp",
+          "thumbnail": "assets/previews/secretion--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
+          "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入"
+        }
       },
       {
         "id": "legacy",
@@ -614,7 +872,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 55238,
         "contentSha256": "6d4a2d7188889b0efd89d26957740b149fcbf8e10fd7eeb0791bfa25a35d6adb",
-        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.0.html"
+        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.0.html",
+        "preview": {
+          "image": "assets/previews/secretion--legacy.webp",
+          "thumbnail": "assets/previews/secretion--legacy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "分泌蛋白 · 历史原版 v1.0真实课件画面：一条蛋白质，如何走出细胞？；边合成，边进入。",
+          "scene": "一条蛋白质，如何走出细胞？；边合成，边进入。"
+        }
       }
     ],
     "curriculum": {
@@ -630,7 +896,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/secretion--original.webp",
+      "thumbnail": "assets/previews/secretion--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
+      "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
+      "versionId": "original"
+    },
+    "inquiry": "一条蛋白质，如何走出细胞？",
+    "activities": [
+      "过程预测",
+      "膜的协作"
+    ]
   },
   {
     "id": "nucleus",
@@ -662,7 +942,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 54068,
         "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad",
-        "sourceFilename": "3.3细胞核的结构和功能.html"
+        "sourceFilename": "3.3细胞核的结构和功能.html",
+        "preview": {
+          "image": "assets/previews/nucleus--workbuddy.webp",
+          "thumbnail": "assets/previews/nucleus--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
+          "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型"
+        }
       }
     ],
     "curriculum": {
@@ -678,7 +966,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/nucleus--workbuddy.webp",
+      "thumbnail": "assets/previews/nucleus--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
+      "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "谁在调度细胞的生命活动？",
+    "activities": [
+      "经典实验",
+      "结构观察"
+    ]
   },
   {
     "id": "passive",
@@ -710,7 +1012,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 53737,
         "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3",
-        "sourceFilename": "4.1被动运输.html"
+        "sourceFilename": "4.1被动运输.html",
+        "preview": {
+          "image": "assets/previews/passive--workbuddy.webp",
+          "thumbnail": "assets/previews/passive--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
+          "scene": "🧅 植物细胞的质壁分离与复原"
+        }
       }
     ],
     "curriculum": {
@@ -726,7 +1036,21 @@
       ],
       "integrated": false,
       "label": "第4章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/passive--workbuddy.webp",
+      "thumbnail": "assets/previews/passive--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
+      "scene": "🧅 植物细胞的质壁分离与复原",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "水往哪里走，细胞会怎样变化？",
+    "activities": [
+      "渗透实验",
+      "质壁分离"
+    ]
   },
   {
     "id": "active",
@@ -758,7 +1082,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 52126,
         "contentSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad",
-        "sourceFilename": "4.2主动运输与胞吞胞吐.html"
+        "sourceFilename": "4.2主动运输与胞吞胞吐.html",
+        "preview": {
+          "image": "assets/previews/active--workbuddy.webp",
+          "thumbnail": "assets/previews/active--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
+          "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）"
+        }
       },
       {
         "id": "original",
@@ -784,7 +1116,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 94356,
         "contentSha256": "9cbfaa6f61d9c6b6e5d64925a07ef251c7a14bb9266bb2d7102c2110ec478418",
-        "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_细胞物流港_v1.0.html"
+        "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_细胞物流港_v1.0.html",
+        "preview": {
+          "image": "assets/previews/active--original.webp",
+          "thumbnail": "assets/previews/active--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "主动运输与胞吞胞吐 · 原版 v1.0真实课件画面：过一道膜，有多少种办法？",
+          "scene": "过一道膜，有多少种办法？"
+        }
       }
     ],
     "curriculum": {
@@ -800,7 +1140,21 @@
       ],
       "integrated": false,
       "label": "第4章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/active--workbuddy.webp",
+      "thumbnail": "assets/previews/active--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
+      "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "逆着浓度差，细胞靠什么运输？",
+    "activities": [
+      "膜上运输",
+      "能量耦联"
+    ]
   },
   {
     "id": "enzyme",
@@ -832,7 +1186,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 50243,
         "contentSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3",
-        "sourceFilename": "5.1降低化学反应的活化能.html"
+        "sourceFilename": "5.1降低化学反应的活化能.html",
+        "preview": {
+          "image": "assets/previews/enzyme--workbuddy.webp",
+          "thumbnail": "assets/previews/enzyme--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "降低活化能的酶 · WorkBuddy 版 v2.0真实课件画面：🧪 比较过氧化氢在不同条件下的分解",
+          "scene": "🧪 比较过氧化氢在不同条件下的分解"
+        }
       },
       {
         "id": "original",
@@ -858,7 +1220,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 257135,
         "contentSha256": "bfeca034492985b933f37ff7c9722cac695e0f3648e9039dcaceeb47e68dbfe2",
-        "sourceFilename": "必修1_05-01_降低活化能的酶_催化现场_v1.0.html"
+        "sourceFilename": "必修1_05-01_降低活化能的酶_催化现场_v1.0.html",
+        "preview": {
+          "image": "assets/previews/enzyme--original.webp",
+          "thumbnail": "assets/previews/enzyme--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "降低活化能的酶 · 原版 v1.0真实课件画面：气泡多，不等于答案完整；先选一组，再说出理由。",
+          "scene": "气泡多，不等于答案完整；先选一组，再说出理由。"
+        }
       }
     ],
     "curriculum": {
@@ -874,7 +1244,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/enzyme--workbuddy.webp",
+      "thumbnail": "assets/previews/enzyme--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "降低活化能的酶 · WorkBuddy 版 v2.0真实课件画面：🧪 比较过氧化氢在不同条件下的分解",
+      "scene": "🧪 比较过氧化氢在不同条件下的分解",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "同样的反应，为什么快慢不同？",
+    "activities": [
+      "对照实验",
+      "变量探究"
+    ]
   },
   {
     "id": "atp",
@@ -907,7 +1291,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 41149,
         "contentSha256": "baeacb637aae47d1d62577ef9cddb3f7359b3d6e36bb36d628d0fbecbce1738d",
-        "sourceFilename": "5.2细胞的能量货币ATP.html"
+        "sourceFilename": "5.2细胞的能量货币ATP.html",
+        "preview": {
+          "image": "assets/previews/atp--workbuddy.webp",
+          "thumbnail": "assets/previews/atp--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "ATP · WorkBuddy 版 v2.0.1真实课件画面：🔬 拆开 ATP：一枚\"现金\"的内部构造",
+          "scene": "🔬 拆开 ATP：一枚\"现金\"的内部构造"
+        }
       },
       {
         "id": "original",
@@ -933,7 +1325,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 236172,
         "contentSha256": "45e9fc071128a7361e57c22b3f0751a43d7c3c5e6d8a3ed459acc72c160bc571",
-        "sourceFilename": "必修1_05-02_ATP_细胞能量交换站_v1.0.html"
+        "sourceFilename": "必修1_05-02_ATP_细胞能量交换站_v1.0.html",
+        "preview": {
+          "image": "assets/previews/atp--original.webp",
+          "thumbnail": "assets/previews/atp--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "ATP · 原版 v1.0真实课件画面：细胞怎样支付每一次工作？；选对角色，再解释“货币”。",
+          "scene": "细胞怎样支付每一次工作？；选对角色，再解释“货币”。"
+        }
       }
     ],
     "curriculum": {
@@ -949,7 +1349,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/atp--workbuddy.webp",
+      "thumbnail": "assets/previews/atp--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "ATP · WorkBuddy 版 v2.0.1真实课件画面：🔬 拆开 ATP：一枚\"现金\"的内部构造",
+      "scene": "🔬 拆开 ATP：一枚\"现金\"的内部构造",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "细胞怎样支付每一次工作？",
+    "activities": [
+      "分子拆解",
+      "能量耦联"
+    ]
   },
   {
     "id": "respiration",
@@ -981,7 +1395,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 46818,
         "contentSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb",
-        "sourceFilename": "5.3细胞呼吸的原理和应用.html"
+        "sourceFilename": "5.3细胞呼吸的原理和应用.html",
+        "preview": {
+          "image": "assets/previews/respiration--workbuddy.webp",
+          "thumbnail": "assets/previews/respiration--workbuddy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
+          "scene": "参观主车间：有氧呼吸三阶段"
+        }
       },
       {
         "id": "original",
@@ -1007,7 +1429,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 87086,
         "contentSha256": "42a4ea0d5788955d4730761f1adcfdbbbe04c42bd19792a676c28dc9e396ce54",
-        "sourceFilename": "必修1_05-03_细胞呼吸_碳的旅程_v1.0.html"
+        "sourceFilename": "必修1_05-03_细胞呼吸_碳的旅程_v1.0.html",
+        "preview": {
+          "image": "assets/previews/respiration--original.webp",
+          "thumbnail": "assets/previews/respiration--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞呼吸 · 原版 v1.0真实课件画面：把反应，放回正确的位置。；先定位，再追踪。",
+          "scene": "把反应，放回正确的位置。；先定位，再追踪。"
+        }
       }
     ],
     "curriculum": {
@@ -1023,7 +1453,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/respiration--workbuddy.webp",
+      "thumbnail": "assets/previews/respiration--workbuddy-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
+      "scene": "参观主车间：有氧呼吸三阶段",
+      "versionId": "workbuddy"
+    },
+    "inquiry": "葡萄糖中的能量，去了哪里？",
+    "activities": [
+      "过程追踪",
+      "比较解释"
+    ]
   },
   {
     "id": "photosynthesis",
@@ -1055,7 +1499,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 83485,
         "contentSha256": "56e57fe5263e68a9f150d5c4ea8635108c92d46f829f30a64e2383e2084c7260",
-        "sourceFilename": "必修1_05-04_光合作用_一束光的温室_v1.0.html"
+        "sourceFilename": "必修1_05-04_光合作用_一束光的温室_v1.0.html",
+        "preview": {
+          "image": "assets/previews/photosynthesis--original.webp",
+          "thumbnail": "assets/previews/photosynthesis--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "光合作用 · 原版 v1.0真实课件画面：把一束光，变成生长的可能。",
+          "scene": "把一束光，变成生长的可能。"
+        }
       }
     ],
     "curriculum": {
@@ -1071,7 +1523,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第4节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/photosynthesis--original.webp",
+      "thumbnail": "assets/previews/photosynthesis--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "光合作用 · 原版 v1.0真实课件画面：把一束光，变成生长的可能。",
+      "scene": "把一束光，变成生长的可能。",
+      "versionId": "original"
+    },
+    "inquiry": "一束光，怎样转化为生长的可能？",
+    "activities": [
+      "反应建模",
+      "条件探究"
+    ]
   },
   {
     "id": "division",
@@ -1103,7 +1569,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 103871,
         "contentSha256": "5b3f7ea59262bedc119a373298402adad4e0471c02c4337100074750cb901dd7",
-        "sourceFilename": "必修1_06-01_细胞的增殖_一分为二放映室_v1.0.html"
+        "sourceFilename": "必修1_06-01_细胞的增殖_一分为二放映室_v1.0.html",
+        "preview": {
+          "image": "assets/previews/division--original.webp",
+          "thumbnail": "assets/previews/division--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞的增殖 · 原版 v1.0真实课件画面：分裂放映室",
+          "scene": "分裂放映室"
+        }
       }
     ],
     "curriculum": {
@@ -1119,7 +1593,21 @@
       ],
       "integrated": false,
       "label": "第6章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/division--original.webp",
+      "thumbnail": "assets/previews/division--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞的增殖 · 原版 v1.0真实课件画面：分裂放映室",
+      "scene": "分裂放映室",
+      "versionId": "original"
+    },
+    "inquiry": "一次分裂，如何分好两份遗传信息？",
+    "activities": [
+      "分裂观察",
+      "数量推演"
+    ]
   },
   {
     "id": "differentiation",
@@ -1151,7 +1639,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 99804,
         "contentSha256": "dee7f4a11a9714ba885316f3f324df3b864a9723b899fd205787fd5b6e5736f4",
-        "sourceFilename": "必修1_06-02_细胞的分化_同源异职展_v1.0.html"
+        "sourceFilename": "必修1_06-02_细胞的分化_同源异职展_v1.0.html",
+        "preview": {
+          "image": "assets/previews/differentiation--original.webp",
+          "thumbnail": "assets/previews/differentiation--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞的分化 · 原版 v1.0真实课件画面：同源。异职。；从相同的起点，走向不同的分工。",
+          "scene": "同源。异职。；从相同的起点，走向不同的分工。"
+        }
       }
     ],
     "curriculum": {
@@ -1167,7 +1663,21 @@
       ],
       "integrated": false,
       "label": "第6章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/differentiation--original.webp",
+      "thumbnail": "assets/previews/differentiation--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞的分化 · 原版 v1.0真实课件画面：同源。异职。；从相同的起点，走向不同的分工。",
+      "scene": "同源。异职。；从相同的起点，走向不同的分工。",
+      "versionId": "original"
+    },
+    "inquiry": "相同的起点，为什么走向不同分工？",
+    "activities": [
+      "表达比较",
+      "证据推理"
+    ]
   },
   {
     "id": "aging",
@@ -1199,7 +1709,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 88382,
         "contentSha256": "6a5882905caa3f39dfd7fd59c7f956a5bf877f1e88f4a412a6d03abbfb77dde4",
-        "sourceFilename": "必修1_06-03_细胞的衰老和死亡_生命维护现场_v1.0.html"
+        "sourceFilename": "必修1_06-03_细胞的衰老和死亡_生命维护现场_v1.0.html",
+        "preview": {
+          "image": "assets/previews/aging--original.webp",
+          "thumbnail": "assets/previews/aging--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞的衰老和死亡 · 原版 v1.0真实课件画面：变老，留下了哪些线索？",
+          "scene": "变老，留下了哪些线索？"
+        }
       }
     ],
     "curriculum": {
@@ -1215,7 +1733,21 @@
       ],
       "integrated": false,
       "label": "第6章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/aging--original.webp",
+      "thumbnail": "assets/previews/aging--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞的衰老和死亡 · 原版 v1.0真实课件画面：变老，留下了哪些线索？",
+      "scene": "变老，留下了哪些线索？",
+      "versionId": "original"
+    },
+    "inquiry": "细胞的老去，留下了哪些线索？",
+    "activities": [
+      "线索观察",
+      "概念辨析"
+    ]
   },
   {
     "id": "mendel",
@@ -1247,7 +1779,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 103617,
         "contentSha256": "47b31ed8873841460db1f3ff706a39dc1b0e994e4c2b74c3d3ee7dc99480f5f1",
-        "sourceFilename": "必修2_01-01_孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html"
+        "sourceFilename": "必修2_01-01_孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html",
+        "preview": {
+          "image": "assets/previews/mendel--original.webp",
+          "thumbnail": "assets/previews/mendel--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "孟德尔的豌豆杂交实验 · 原版 v1.0真实课件画面：矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
+          "scene": "矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？"
+        }
       }
     ],
     "curriculum": {
@@ -1267,7 +1807,21 @@
       ],
       "integrated": true,
       "label": "第1章 · 第1—2节综合"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/mendel--original.webp",
+      "thumbnail": "assets/previews/mendel--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "孟德尔的豌豆杂交实验 · 原版 v1.0真实课件画面：矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
+      "scene": "矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
+      "versionId": "original"
+    },
+    "inquiry": "消失的性状，会在下一代重现吗？",
+    "activities": [
+      "提出假说",
+      "杂交验证"
+    ]
   },
   {
     "id": "meiosis",
@@ -1297,7 +1851,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "62e229d9a574c044ac385da746fa93272d5728f244d53b98831264900a51ffcf",
         "sourceFilename": "必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
-        "bytes": 110700
+        "bytes": 110700,
+        "preview": {
+          "image": "assets/previews/meiosis--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/meiosis--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "减数分裂和受精作用 · 荧光细胞剧场版 v1.0真实课件画面：先分同源，再分姐妹。",
+          "scene": "先分同源，再分姐妹。"
+        }
       }
     ],
     "curriculum": {
@@ -1313,7 +1875,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/meiosis--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/meiosis--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "减数分裂和受精作用 · 荧光细胞剧场版 v1.0真实课件画面：先分同源，再分姐妹。",
+      "scene": "先分同源，再分姐妹。",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "同源与姐妹，分别在哪一步分开？",
+    "activities": [
+      "时间轴导演",
+      "数量联动"
+    ]
   },
   {
     "id": "chromosome",
@@ -1345,7 +1921,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 104635,
         "contentSha256": "34c56364a77a1e966ed17588b06a79fce61569309f91a247ee9306faecd5508d",
-        "sourceFilename": "必修2_02-02_基因在染色体上_果蝇遗传调查室_v1.0.html"
+        "sourceFilename": "必修2_02-02_基因在染色体上_果蝇遗传调查室_v1.0.html",
+        "preview": {
+          "image": "assets/previews/chromosome--original.webp",
+          "thumbnail": "assets/previews/chromosome--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因在染色体上 · 原版 v1.0真实课件画面：设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
+          "scene": "设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因"
+        }
       }
     ],
     "curriculum": {
@@ -1361,7 +1945,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/chromosome--original.webp",
+      "thumbnail": "assets/previews/chromosome--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因在染色体上 · 原版 v1.0真实课件画面：设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
+      "scene": "设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
+      "versionId": "original"
+    },
+    "inquiry": "怎样证明基因位于染色体上？",
+    "activities": [
+      "设计杂交",
+      "比较假说"
+    ]
   },
   {
     "id": "sex-linked",
@@ -1391,7 +1989,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "596da914860593aedad43c1e7c2f2cf39411f81e3cf87ed357ca4766939e7346",
         "sourceFilename": "必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
-        "bytes": 63531
+        "bytes": 63531,
+        "preview": {
+          "image": "assets/previews/sex-linked--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/sex-linked--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "伴性遗传 · 基因侦探版 v1.0真实课件画面：让亲本说话，看看基因传给了谁。",
+          "scene": "让亲本说话，看看基因传给了谁。"
+        }
       }
     ],
     "curriculum": {
@@ -1407,7 +2013,21 @@
       ],
       "integrated": false,
       "label": "第2章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/sex-linked--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/sex-linked--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "伴性遗传 · 基因侦探版 v1.0真实课件画面：让亲本说话，看看基因传给了谁。",
+      "scene": "让亲本说话，看看基因传给了谁。",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "跟着性别走的遗传，怎样推理？",
+    "activities": [
+      "杂交推演",
+      "系谱破案"
+    ]
   },
   {
     "id": "dna-evidence",
@@ -1439,7 +2059,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 102780,
         "contentSha256": "ebcd4f01ac89ce1a803e7ef33c9ae9a6aae241283b82971e0d16ec609e1eaa65",
-        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html"
+        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html",
+        "preview": {
+          "image": "assets/previews/dna-evidence--original.webp",
+          "thumbnail": "assets/previews/dna-evidence--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "DNA 是主要的遗传物质 · 原版 v2.0真实课件画面：发生了转化。但，还不能抢发结论。；活 R 型菌",
+          "scene": "发生了转化。但，还不能抢发结论。；活 R 型菌"
+        }
       },
       {
         "id": "legacy",
@@ -1464,7 +2092,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 103263,
         "contentSha256": "05a96bfc8f9fead6149eeea2b423225f8bc7fdc7512ecd6172f3c4d9f198adf5",
-        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_证据接力_v1.0.html"
+        "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_证据接力_v1.0.html",
+        "preview": {
+          "image": "assets/previews/dna-evidence--legacy.webp",
+          "thumbnail": "assets/previews/dna-evidence--legacy-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "DNA 是主要的遗传物质 · 历史原版 v1.0真实课件画面：如果拿走一种成分，转化还会发生吗？",
+          "scene": "如果拿走一种成分，转化还会发生吗？"
+        }
       }
     ],
     "curriculum": {
@@ -1480,7 +2116,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/dna-evidence--original.webp",
+      "thumbnail": "assets/previews/dna-evidence--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "DNA 是主要的遗传物质 · 原版 v2.0真实课件画面：发生了转化。但，还不能抢发结论。；活 R 型菌",
+      "scene": "发生了转化。但，还不能抢发结论。；活 R 型菌",
+      "versionId": "original"
+    },
+    "inquiry": "遗传物质的身份，靠什么证据确认？",
+    "activities": [
+      "控制变量",
+      "证据接力"
+    ]
   },
   {
     "id": "dna-structure",
@@ -1510,7 +2160,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "4fe764499a855c9bbec22663f707bf36f93e887658216fba5613b3bf7727a0c5",
         "sourceFilename": "必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
-        "bytes": 74743
+        "bytes": 74743,
+        "preview": {
+          "image": "assets/previews/dna-structure--blueprint-v2.webp",
+          "thumbnail": "assets/previews/dna-structure--blueprint-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "DNA的结构 · 1953工程蓝图版 v2.0真实课件画面：一个漂亮模型，要通过几道证据检验？",
+          "scene": "一个漂亮模型，要通过几道证据检验？"
+        }
       },
       {
         "id": "repair-notes-v1",
@@ -1534,7 +2192,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "5708833a64c316c3d7409ac32a291eabcd897811f6d45e6e82710611e9a262db",
         "sourceFilename": "必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
-        "bytes": 6004
+        "bytes": 6004,
+        "preview": {
+          "image": "assets/previews/dna-structure--repair-notes-v1.webp",
+          "thumbnail": "assets/previews/dna-structure--repair-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "DNA的结构 · 双螺旋修复简版 v1.0真实课件画面：双螺旋修复室；给模板链补上一条反向平行的链。",
+          "scene": "双螺旋修复室；给模板链补上一条反向平行的链。"
+        }
       }
     ],
     "curriculum": {
@@ -1550,7 +2216,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/dna-structure--blueprint-v2.webp",
+      "thumbnail": "assets/previews/dna-structure--blueprint-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "DNA的结构 · 1953工程蓝图版 v2.0真实课件画面：一个漂亮模型，要通过几道证据检验？",
+      "scene": "一个漂亮模型，要通过几道证据检验？",
+      "versionId": "blueprint-v2"
+    },
+    "inquiry": "双螺旋的每一处，藏着什么规律？",
+    "activities": [
+      "模型校验",
+      "比例计算"
+    ]
   },
   {
     "id": "replication",
@@ -1581,7 +2261,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 87780,
         "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c",
-        "sourceFilename": "必修2_03-03_DNA的复制_双链蓝图工坊_v1.0.html"
+        "sourceFilename": "必修2_03-03_DNA的复制_双链蓝图工坊_v1.0.html",
+        "preview": {
+          "image": "assets/previews/replication--original.webp",
+          "thumbnail": "assets/previews/replication--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "DNA 的复制 · 原版 v1.0真实课件画面：一份蓝图，如何复制成两份？",
+          "scene": "一份蓝图，如何复制成两份？"
+        }
       }
     ],
     "curriculum": {
@@ -1597,7 +2285,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/replication--original.webp",
+      "thumbnail": "assets/previews/replication--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "DNA 的复制 · 原版 v1.0真实课件画面：一份蓝图，如何复制成两份？",
+      "scene": "一份蓝图，如何复制成两份？",
+      "versionId": "original"
+    },
+    "inquiry": "一份 DNA，怎样复制成两份？",
+    "activities": [
+      "提出假说",
+      "用证据判断"
+    ]
   },
   {
     "id": "gene-fragment",
@@ -1627,7 +2329,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "8728d79ce0ea81948dcaa49a05f55b92cf9ca014c5c716e036e7e5449eb5a726",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
-        "bytes": 76505
+        "bytes": 76505,
+        "preview": {
+          "image": "assets/previews/gene-fragment--bio-synth-v3.webp",
+          "thumbnail": "assets/previews/gene-fragment--bio-synth-v3-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因通常是有遗传效应的DNA片段 · 生命胶片剪辑版 v3.0真实课件画面：哪一帧胶片，能让小鼠亮起来？",
+          "scene": "哪一帧胶片，能让小鼠亮起来？"
+        }
       },
       {
         "id": "csi-v2",
@@ -1651,7 +2361,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "e408e44c2b3ac125d6ab4e23da82ef423e314016daddbaea7a648db2ebc2c404",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
-        "bytes": 76644
+        "bytes": 76644,
+        "preview": {
+          "image": "assets/previews/gene-fragment--csi-v2.webp",
+          "thumbnail": "assets/previews/gene-fragment--csi-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因通常是有遗传效应的DNA片段 · CSI密码破译版 v2.0真实课件画面：删掉哪一段，绿色荧光会消失？",
+          "scene": "删掉哪一段，绿色荧光会消失？"
+        }
       },
       {
         "id": "annotation-notes-v1",
@@ -1675,7 +2393,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "41b23ab7402d602c9b74a8b9ad8ec622ddd86173585ac145c0d191c0dffbb0a3",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
-        "bytes": 6319
+        "bytes": 6319,
+        "preview": {
+          "image": "assets/previews/gene-fragment--annotation-notes-v1.webp",
+          "thumbnail": "assets/previews/gene-fragment--annotation-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因通常是有遗传效应的DNA片段 · 基因组标注简版 v1.0真实课件画面：基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？",
+          "scene": "基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？"
+        }
       }
     ],
     "curriculum": {
@@ -1691,7 +2417,21 @@
       ],
       "integrated": false,
       "label": "第3章 · 第4节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/gene-fragment--bio-synth-v3.webp",
+      "thumbnail": "assets/previews/gene-fragment--bio-synth-v3-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因通常是有遗传效应的DNA片段 · 生命胶片剪辑版 v3.0真实课件画面：哪一帧胶片，能让小鼠亮起来？",
+      "scene": "哪一帧胶片，能让小鼠亮起来？",
+      "versionId": "bio-synth-v3"
+    },
+    "inquiry": "一段 DNA，怎样才算有遗传效应？",
+    "activities": [
+      "胶片剪辑",
+      "信息解码"
+    ]
   },
   {
     "id": "expression",
@@ -1722,7 +2462,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "e9770568f6ba930b8a1551c6432f521f6081cc7f3eaf2503d9c5a126a905e7f3",
         "sourceFilename": "必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
-        "bytes": 106465
+        "bytes": 106465,
+        "preview": {
+          "image": "assets/previews/expression--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/expression--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因指导蛋白质的合成 · 生命密码破译版 v1.0真实课件画面：DNA 能亲自出核吗？",
+          "scene": "DNA 能亲自出核吗？"
+        }
       }
     ],
     "curriculum": {
@@ -1738,7 +2486,21 @@
       ],
       "integrated": false,
       "label": "第4章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/expression--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/expression--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因指导蛋白质的合成 · 生命密码破译版 v1.0真实课件画面：DNA 能亲自出核吗？",
+      "scene": "DNA 能亲自出核吗？",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "生命密码，如何变成一条多肽链？",
+    "activities": [
+      "转录配对",
+      "翻译调度"
+    ]
   },
   {
     "id": "expression-trait",
@@ -1768,7 +2530,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "e7914046fff670580795796ad130ae4cda05ddda92c06adc59dfec814d5043b4",
         "sourceFilename": "必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
-        "bytes": 83207
+        "bytes": 83207,
+        "preview": {
+          "image": "assets/previews/expression-trait--symphony-v2.webp",
+          "thumbnail": "assets/previews/expression-trait--symphony-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因表达与性状的关系 · 生命交响曲版 v2.0真实课件画面：打断一环，观察性状怎样改变。",
+          "scene": "打断一环，观察性状怎样改变。"
+        }
       },
       {
         "id": "cat-notes-v1",
@@ -1792,7 +2562,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "b9ddd086a6de9a788755b758cd4e2fd8bbe20ab301c2687b754a1acf03b5314f",
         "sourceFilename": "必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
-        "bytes": 6285
+        "bytes": 6285,
+        "preview": {
+          "image": "assets/previews/expression-trait--cat-notes-v1.webp",
+          "thumbnail": "assets/previews/expression-trait--cat-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因表达与性状的关系 · 猫毛颜色观察简版 v1.0真实课件画面：猫毛颜色观测站；相同基因型，为什么毛色深浅不同？",
+          "scene": "猫毛颜色观测站；相同基因型，为什么毛色深浅不同？"
+        }
       }
     ],
     "curriculum": {
@@ -1808,7 +2586,21 @@
       ],
       "integrated": false,
       "label": "第4章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/expression-trait--symphony-v2.webp",
+      "thumbnail": "assets/previews/expression-trait--symphony-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因表达与性状的关系 · 生命交响曲版 v2.0真实课件画面：打断一环，观察性状怎样改变。",
+      "scene": "打断一环，观察性状怎样改变。",
+      "versionId": "symphony-v2"
+    },
+    "inquiry": "基因相同，性状为什么仍会不同？",
+    "activities": [
+      "因果推演",
+      "环境探究"
+    ]
   },
   {
     "id": "mutation-recombination",
@@ -1838,7 +2630,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "c7679099b0e9b8d0c8290b9354d6eb7c36961f2fc3b192942c20e7ccb6af0758",
         "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
-        "bytes": 82735
+        "bytes": 82735,
+        "preview": {
+          "image": "assets/previews/mutation-recombination--swiss-v2-1.webp",
+          "thumbnail": "assets/previews/mutation-recombination--swiss-v2-1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.1真实课件画面：先换一个字，再看看整行发生了什么。",
+          "scene": "先换一个字，再看看整行发生了什么。"
+        }
       },
       {
         "id": "swiss-v2",
@@ -1862,7 +2662,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "82e6ce34629473f9e4723400dc201f1c6ae896924d9cb34c10946779a593c70c",
         "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
-        "bytes": 76035
+        "bytes": 76035,
+        "preview": {
+          "image": "assets/previews/mutation-recombination--swiss-v2.webp",
+          "thumbnail": "assets/previews/mutation-recombination--swiss-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.0真实课件画面：先换一个字，再看看整行发生了什么。",
+          "scene": "先换一个字，再看看整行发生了什么。"
+        }
       },
       {
         "id": "mutation-detective-v1",
@@ -1887,7 +2695,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "0081b1b857a1b520d18080948f7c5051914f4e555ac4abca02b6aeda2a11bd33",
         "sourceFilename": "必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
-        "bytes": 98733
+        "bytes": 98733,
+        "preview": {
+          "image": "assets/previews/mutation-recombination--mutation-detective-v1.webp",
+          "thumbnail": "assets/previews/mutation-recombination--mutation-detective-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因突变和基因重组 · 基因突变侦探版 v1.0真实课件画面：镰状细胞贫血：一个字母的线索",
+          "scene": "镰状细胞贫血：一个字母的线索"
+        }
       },
       {
         "id": "recombination-notes-v1",
@@ -1911,7 +2727,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
         "sourceFilename": "必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
-        "bytes": 6209
+        "bytes": 6209,
+        "preview": {
+          "image": "assets/previews/mutation-recombination--recombination-notes-v1.webp",
+          "thumbnail": "assets/previews/mutation-recombination--recombination-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因突变和基因重组 · 配子组合简版 v1.0真实课件画面：配子组合印刷所；两个亲本没有的组合，怎样进入配子？",
+          "scene": "配子组合印刷所；两个亲本没有的组合，怎样进入配子？"
+        }
       }
     ],
     "curriculum": {
@@ -1927,7 +2751,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第1节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/mutation-recombination--swiss-v2-1.webp",
+      "thumbnail": "assets/previews/mutation-recombination--swiss-v2-1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.1真实课件画面：先换一个字，再看看整行发生了什么。",
+      "scene": "先换一个字，再看看整行发生了什么。",
+      "versionId": "swiss-v2-1"
+    },
+    "inquiry": "改一个字与重新洗牌，有何不同？",
+    "activities": [
+      "阅读框试验",
+      "变异辨析"
+    ]
   },
   {
     "id": "chromosome-variation",
@@ -1958,7 +2796,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "52be23f4ad1d96d4d4a3bd1d6e4cd54daf81926677e4e7afcf8fab94245b2cfb",
         "sourceFilename": "必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
-        "bytes": 78957
+        "bytes": 78957,
+        "preview": {
+          "image": "assets/previews/chromosome-variation--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/chromosome-variation--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "染色体变异 · 育种工程实验室版 v1.0真实课件画面：把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
+          "scene": "把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘"
+        }
       }
     ],
     "curriculum": {
@@ -1974,7 +2820,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第2节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/chromosome-variation--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/chromosome-variation--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "染色体变异 · 育种工程实验室版 v1.0真实课件画面：把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
+      "scene": "把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "多一套、少一段，遗传会怎样改变？",
+    "activities": [
+      "动手分拣",
+      "育种推演"
+    ]
   },
   {
     "id": "genetic-disease",
@@ -2004,7 +2864,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "a8e624202743abe847f1fc64e10a37f9fd41319b148e4e8076397d4ee8dd81e3",
         "sourceFilename": "必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
-        "bytes": 109648
+        "bytes": 109648,
+        "preview": {
+          "image": "assets/previews/genetic-disease--nordic-v2.webp",
+          "thumbnail": "assets/previews/genetic-disease--nordic-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "人类遗传病 · NORDIC遗传咨询版 v2.0真实课件画面：病名之后，哪一层遗传信息变了？",
+          "scene": "病名之后，哪一层遗传信息变了？"
+        }
       },
       {
         "id": "survey-notes-v1",
@@ -2028,7 +2896,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "9f18f3b562fcae5ec09bffd7bc8a98c74214af458dfcf030b0cbee07816e98d9",
         "sourceFilename": "必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
-        "bytes": 6368
+        "bytes": 6368,
+        "preview": {
+          "image": "assets/previews/genetic-disease--survey-notes-v1.webp",
+          "thumbnail": "assets/previews/genetic-disease--survey-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "人类遗传病 · 人群调查简版 v1.0真实课件画面：人群调查编辑部；同一份调查记录，为什么会算出两个患病率？",
+          "scene": "人群调查编辑部；同一份调查记录，为什么会算出两个患病率？"
+        }
       }
     ],
     "curriculum": {
@@ -2044,7 +2920,21 @@
       ],
       "integrated": false,
       "label": "第5章 · 第3节"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/genetic-disease--nordic-v2.webp",
+      "thumbnail": "assets/previews/genetic-disease--nordic-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "人类遗传病 · NORDIC遗传咨询版 v2.0真实课件画面：病名之后，哪一层遗传信息变了？",
+      "scene": "病名之后，哪一层遗传信息变了？",
+      "versionId": "nordic-v2"
+    },
+    "inquiry": "面对一个病例，怎样作出遗传判断？",
+    "activities": [
+      "临床分诊",
+      "调查设计"
+    ]
   },
   {
     "id": "evolution",
@@ -2074,7 +2964,15 @@
         "platformUpdated": "2026-11-02",
         "contentSha256": "d4b65ef153639fd6ec44eefa4df01b895186b195352423a4db783fc5bba9ca02",
         "sourceFilename": "必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
-        "bytes": 117141
+        "bytes": 117141,
+        "preview": {
+          "image": "assets/previews/evolution--interactive-v1-0.webp",
+          "thumbnail": "assets/previews/evolution--interactive-v1-0-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生物的进化 · 达尔文沙盘版 v1.0真实课件画面：抗生素是命令，还是一道筛子？",
+          "scene": "抗生素是命令，还是一道筛子？"
+        }
       }
     ],
     "curriculum": {
@@ -2102,7 +3000,21 @@
       ],
       "integrated": true,
       "label": "第6章 · 第1—4节综合"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/evolution--interactive-v1-0.webp",
+      "thumbnail": "assets/previews/evolution--interactive-v1-0-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生物的进化 · 达尔文沙盘版 v1.0真实课件画面：抗生素是命令，还是一道筛子？",
+      "scene": "抗生素是命令，还是一道筛子？",
+      "versionId": "interactive-v1-0"
+    },
+    "inquiry": "环境是一道命令，还是一道筛子？",
+    "activities": [
+      "频率推演",
+      "自然选择"
+    ]
   },
   {
     "id": "population",
@@ -2134,7 +3046,15 @@
         "platformUpdated": "2026-11-02",
         "bytes": 100477,
         "contentSha256": "56f3cd026e1d30a0e08e62711070bf799a29734656b6ff11a00b667af088b072",
-        "sourceFilename": "必修2_06-02_种群及其动态_山野调查手记_v1.0.html"
+        "sourceFilename": "必修2_06-02_种群及其动态_山野调查手记_v1.0.html",
+        "preview": {
+          "image": "assets/previews/population--original.webp",
+          "thumbnail": "assets/previews/population--original-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "种群及其动态 · 原版 v1.0真实课件画面：别只挑花最多的地方。",
+          "scene": "别只挑花最多的地方。"
+        }
       }
     ],
     "curriculum": {
@@ -2158,6 +3078,20 @@
       ],
       "integrated": true,
       "label": "第1章 · 第1—3节综合"
-    }
+    },
+    "preview": {
+      "image": "assets/previews/population--original.webp",
+      "thumbnail": "assets/previews/population--original-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "种群及其动态 · 原版 v1.0真实课件画面：别只挑花最多的地方。",
+      "scene": "别只挑花最多的地方。",
+      "versionId": "original"
+    },
+    "inquiry": "怎样从一块样方，认识一个种群？",
+    "activities": [
+      "野外采样",
+      "数量建模"
+    ]
   }
 ]
