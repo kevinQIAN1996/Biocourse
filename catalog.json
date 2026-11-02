@@ -35,7 +35,10 @@
           "height": 800,
           "alt": "细胞是生命活动的基本单位 · PBL策展版 v1.0真实课件画面：让证据，覆盖一张错误的手稿。",
           "scene": "让证据，覆盖一张错误的手稿。"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T13:56:54.764Z",
+        "sourceSha256": "9d1ce2c2eb7000c401169808ed10968b45782a90f0539d086e4cb273393c0093",
+        "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。"
       }
     ],
     "curriculum": {
@@ -65,7 +68,10 @@
     "activities": [
       "证据修正",
       "层级建模"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。"
   },
   {
     "id": "cell-diversity",
@@ -103,7 +109,10 @@
           "height": 800,
           "alt": "细胞的多样性和统一性 · 镜检海关版 v1.0真实课件画面：你的手向左，物像往哪走？",
           "scene": "你的手向左，物像往哪走？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T14:20:17.965Z",
+        "sourceSha256": "ead050f079e16b9e208eb99fdd8988e5876113880ac35b602c54457d35da7177",
+        "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。"
       }
     ],
     "curriculum": {
@@ -133,7 +142,10 @@
     "activities": [
       "镜检实操",
       "物种分拣"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。"
   },
   {
     "id": "elements",
@@ -171,7 +183,10 @@
           "height": 800,
           "alt": "细胞中的元素和化合物 · 包豪斯实验版 v1.0真实课件画面：拿走的是水，为什么元素会换座？",
           "scene": "拿走的是水，为什么元素会换座？"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T13:25:31.416Z",
+        "sourceSha256": "66ea28d5c68e080f842f7bcd52c2c95a00701f232c84b4e8754bfa11afe1d52f",
+        "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。"
       }
     ],
     "curriculum": {
@@ -201,7 +216,10 @@
     "activities": [
       "元素称量",
       "显色实验"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。"
   },
   {
     "id": "inorganics",
@@ -239,7 +257,10 @@
           "height": 800,
           "alt": "细胞中的无机物 · 深空维生版 v1.0真实课件画面：水的“引力魔术”，先从正负两端开始。",
           "scene": "水的“引力魔术”，先从正负两端开始。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T11:00:11.801Z",
+        "sourceSha256": "fd21130485832507ef0726c9ebe331365883388bb56ec4539360e755c7ea1433",
+        "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。"
       }
     ],
     "curriculum": {
@@ -269,7 +290,10 @@
     "activities": [
       "微观观察",
       "缺素探究"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。"
   },
   {
     "id": "carbohydrate-lipid",
@@ -307,7 +331,10 @@
           "height": 800,
           "alt": "细胞中的糖类和脂质 · 能量造物版 v1.0真实课件画面：糖类，不只是“甜甜的一块”。",
           "scene": "糖类，不只是“甜甜的一块”。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T10:27:58.790Z",
+        "sourceSha256": "d1e7922d138c016175a10837ecaff2dc79cca0fb462fb5000f51272e26ac822f",
+        "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。"
       }
     ],
     "curriculum": {
@@ -337,7 +364,10 @@
     "activities": [
       "分子拼装",
       "曲线推演"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。"
   },
   {
     "id": "protein",
@@ -377,7 +407,10 @@
           "height": 800,
           "alt": "蛋白质 · 原版 v1.0真实课件画面：蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
           "scene": "蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.755Z",
+        "sourceSha256": "f24c0312e80c1973655386526b7f75a322a7c5d7ca9c7f1b6e146a5b51ca5b50",
+        "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。"
       }
     ],
     "curriculum": {
@@ -407,7 +440,10 @@
     "activities": [
       "结构探索",
       "脱水缩合"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。"
   },
   {
     "id": "nucleic",
@@ -447,7 +483,10 @@
           "height": 800,
           "alt": "核酸 · 原版 v1.0真实课件画面：从平面，走向双螺旋",
           "scene": "从平面，走向双螺旋"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.750Z",
+        "sourceSha256": "2467608e378042f2b92cada1ad333285eee9e3c922cf59ecfe77533fd59d1a1c",
+        "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。"
       }
     ],
     "curriculum": {
@@ -477,7 +516,10 @@
     "activities": [
       "亲手组装",
       "互补配对"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。"
   },
   {
     "id": "membrane",
@@ -517,7 +559,10 @@
           "height": 800,
           "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
           "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.753Z",
+        "sourceSha256": "f62f37d6cbf1e185ec4970731d69e7536196004ce238e86da67a119046caa043",
+        "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。"
       }
     ],
     "curriculum": {
@@ -547,7 +592,10 @@
     "activities": [
       "证据建模",
       "膜的流动性"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。"
   },
   {
     "id": "organelles",
@@ -587,7 +635,10 @@
           "height": 800,
           "alt": "细胞器 · 原版 v1.0真实课件画面：微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
           "scene": "微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.751Z",
+        "sourceSha256": "82200ed4ad127c31d52804917be8107a9107b1cba5d01e2b916a440178531cd9",
+        "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
       }
     ],
     "curriculum": {
@@ -617,7 +668,10 @@
     "activities": [
       "2D结构观察",
       "分类比较"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
   },
   {
     "id": "secretion",
@@ -657,7 +711,10 @@
           "height": 800,
           "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
           "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.748Z",
+        "sourceSha256": "326c13ce99c6d410908be3d22b501e589c73f965f6ef4f7b674a5615d45a8a87",
+        "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
       },
       {
         "id": "legacy",
@@ -690,7 +747,10 @@
           "height": 800,
           "alt": "分泌蛋白 · 历史原版 v1.0真实课件画面：一条蛋白质，如何走出细胞？；边合成，边进入。",
           "scene": "一条蛋白质，如何走出细胞？；边合成，边进入。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.746Z",
+        "sourceSha256": "973c474276c33f08bc878670eb186feb3dbc9e22f87c408109bc662b0f812fa0",
+        "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
       }
     ],
     "curriculum": {
@@ -720,14 +780,53 @@
     "activities": [
       "过程预测",
       "膜的协作"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
   },
   {
     "id": "nucleus",
     "title": "细胞核的结构和功能",
     "category": "cell",
-    "summary": "用经典实验与结构观察，解释细胞核的功能。",
+    "summary": "用四类经典实验、核孔通行和核仁调校，装配一颗能够解释的细胞核。",
     "versions": [
+      {
+        "id": "prometheus-v1",
+        "label": "1.0",
+        "edition": "PBL普罗米修斯版",
+        "file": "lessons/必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "用四类经典实验、核孔通行和核仁调校，装配一颗能够解释的细胞核。",
+        "features": [
+          "美西螈、蝾螈、变形虫与伞藻实验及对照质询",
+          "核孔进出方向、穿膜层数和原核特例",
+          "核仁与合成活动联动、染色质折叠和PBL证书"
+        ],
+        "approach": "先执行实验并补齐对照，再为分子编写通行指令；将结构、功能和证据逐步汇成工程答辩。",
+        "design": "以合成细胞金库为主线，把经典实验、核孔选择性与核仁功能拆成可操作的工程验收。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "sourceFilename": "必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T04:19:19.919Z",
+        "sourceSha256": "204d2a5570f28bcf621c257c32652681d4bb8f8a19601f2c039fcf16e7fcfa3c",
+        "contentSha256": "204d2a5570f28bcf621c257c32652681d4bb8f8a19601f2c039fcf16e7fcfa3c",
+        "route": "courses/nucleus/prometheus-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 115100,
+        "preview": {
+          "image": "assets/previews/nucleus--prometheus-v1.webp",
+          "thumbnail": "assets/previews/nucleus--prometheus-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞核的结构和功能 · PBL普罗米修斯版 v1.0真实课件画面",
+          "scene": "用四类经典实验、核孔通行和核仁调校，装配一颗能够解释的细胞核。"
+        }
+      },
       {
         "id": "workbuddy",
         "label": "1.0",
@@ -760,7 +859,10 @@
           "height": 800,
           "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
           "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T11:31:27.940Z",
+        "sourceSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad",
+        "design": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。"
       }
     ],
     "curriculum": {
@@ -778,26 +880,65 @@
       "label": "第3章 · 第3节"
     },
     "preview": {
-      "image": "assets/previews/nucleus--workbuddy.webp",
-      "thumbnail": "assets/previews/nucleus--workbuddy-640.webp",
+      "image": "assets/previews/nucleus--prometheus-v1.webp",
+      "thumbnail": "assets/previews/nucleus--prometheus-v1-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
-      "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型",
-      "versionId": "workbuddy"
+      "alt": "细胞核的结构和功能 · PBL普罗米修斯版 v1.0真实课件画面",
+      "scene": "用四类经典实验、核孔通行和核仁调校，装配一颗能够解释的细胞核。",
+      "versionId": "prometheus-v1"
     },
-    "inquiry": "谁在调度细胞的生命活动？",
+    "inquiry": "细胞核的控制作用，怎样用实验验证？",
     "activities": [
-      "经典实验",
-      "结构观察"
-    ]
+      "逆向实验",
+      "核孔安检"
+    ],
+    "latestVersionId": "prometheus-v1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以合成细胞金库为主线，把经典实验、核孔选择性与核仁功能拆成可操作的工程验收。"
   },
   {
     "id": "passive",
     "title": "被动运输",
     "category": "cell",
-    "summary": "在水分侦探情境中理解渗透与被动运输。",
+    "summary": "调节渗透装置、抢救紫洋葱，比较通道与载体介导的被动运输。",
     "versions": [
+      {
+        "id": "oasis-v1",
+        "label": "1.0",
+        "edition": "PBL绿洲仿生膜版",
+        "file": "lessons/必修1_04-01_被动运输_PBL绿洲与仿生膜工程_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "调节渗透装置、抢救紫洋葱，比较通道与载体介导的被动运输。",
+        "features": [
+          "长颈漏斗、U形管与渗透平衡判断",
+          "紫洋葱质壁分离、复原及溶质进入追踪",
+          "通道与载体对比、浓度差—速率曲线和工程证书"
+        ],
+        "approach": "先预测水流和液面，再调节溶液观察细胞；通过总工质询修正直觉，用补充实验与适用条件解释运输。",
+        "design": "将农业急救与仿生膜研发串联，以预测—操作—审稿质询的节奏建立渗透与被动运输概念。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "sourceFilename": "必修1_04-01_被动运输_PBL绿洲与仿生膜工程_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T05:51:15.813Z",
+        "sourceSha256": "cc66a9c5d1e474bdb29f7a9fd473304fdc083c2716de7e1beb0c74295715d0d1",
+        "contentSha256": "cc66a9c5d1e474bdb29f7a9fd473304fdc083c2716de7e1beb0c74295715d0d1",
+        "route": "courses/passive/oasis-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 132438,
+        "preview": {
+          "image": "assets/previews/passive--oasis-v1.webp",
+          "thumbnail": "assets/previews/passive--oasis-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "被动运输 · PBL绿洲仿生膜版 v1.0真实课件画面",
+          "scene": "调节渗透装置、抢救紫洋葱，比较通道与载体介导的被动运输。"
+        }
+      },
       {
         "id": "workbuddy",
         "label": "1.0",
@@ -830,7 +971,10 @@
           "height": 800,
           "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
           "scene": "🧅 植物细胞的质壁分离与复原"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T12:15:55.394Z",
+        "sourceSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3",
+        "design": "由水的运动推理细胞变化，再比较被动运输的不同方式。"
       }
     ],
     "curriculum": {
@@ -848,26 +992,65 @@
       "label": "第4章 · 第1节"
     },
     "preview": {
-      "image": "assets/previews/passive--workbuddy.webp",
-      "thumbnail": "assets/previews/passive--workbuddy-640.webp",
+      "image": "assets/previews/passive--oasis-v1.webp",
+      "thumbnail": "assets/previews/passive--oasis-v1-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
-      "scene": "🧅 植物细胞的质壁分离与复原",
-      "versionId": "workbuddy"
+      "alt": "被动运输 · PBL绿洲仿生膜版 v1.0真实课件画面",
+      "scene": "调节渗透装置、抢救紫洋葱，比较通道与载体介导的被动运输。",
+      "versionId": "oasis-v1"
     },
-    "inquiry": "水往哪里走，细胞会怎样变化？",
+    "inquiry": "液面不再上升，为什么浓度未必相等？",
     "activities": [
-      "渗透实验",
-      "质壁分离"
-    ]
+      "渗透预测",
+      "对照质询"
+    ],
+    "latestVersionId": "oasis-v1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "将农业急救与仿生膜研发串联，以预测—操作—审稿质询的节奏建立渗透与被动运输概念。"
   },
   {
     "id": "active",
     "title": "主动运输与胞吞胞吐",
     "category": "cell",
-    "summary": "围绕条件、方向与膜变化比较运输方式。",
+    "summary": "驱动离子泵、协同转运和囊泡运输，再用氧气曲线与培养液数据检验解释。",
     "versions": [
+      {
+        "id": "counterflow-v2",
+        "label": "2.0",
+        "edition": "逆流引擎与囊泡工坊版",
+        "file": "lessons/必修1_04-02_主动运输与胞吞胞吐_跨膜逆流引擎与液态囊泡工坊_v2.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "驱动离子泵、协同转运和囊泡运输，再用氧气曲线与培养液数据检验解释。",
+        "features": [
+          "小肠上皮三运输装置与Na⁺梯度联动",
+          "胞吞胞吐、膜蛋白参与及膜面积变化",
+          "氧气与运输曲线、水稻番茄培养液及四维判别"
+        ],
+        "approach": "先区分直接与间接能量耦联，再追踪膜形变；用抑制处理、曲线和水盐相对变化校验判断。",
+        "design": "以机械水坝呈现离子势能，以液态膜动画呈现囊泡拓扑，让学生先操作再用曲线与证据判别。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_跨膜逆流引擎与液态囊泡工坊_v2.0.html",
+        "sourceModifiedAt": "2026-11-02T07:29:26.951Z",
+        "sourceSha256": "a6f653e34fd735a91b60e81f7deb0504556450480253b18edcdf55317db0c885",
+        "contentSha256": "a6f653e34fd735a91b60e81f7deb0504556450480253b18edcdf55317db0c885",
+        "route": "courses/active/counterflow-v2/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 120992,
+        "preview": {
+          "image": "assets/previews/active--counterflow-v2.webp",
+          "thumbnail": "assets/previews/active--counterflow-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "主动运输与胞吞胞吐 · 逆流引擎与囊泡工坊版 v2.0真实课件画面",
+          "scene": "驱动离子泵、协同转运和囊泡运输，再用氧气曲线与培养液数据检验解释。"
+        }
+      },
       {
         "id": "workbuddy",
         "label": "2.0",
@@ -900,7 +1083,10 @@
           "height": 800,
           "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
           "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T12:28:19.471Z",
+        "sourceSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad",
+        "design": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。"
       },
       {
         "id": "original",
@@ -934,7 +1120,10 @@
           "height": 800,
           "alt": "主动运输与胞吞胞吐 · 原版 v1.0真实课件画面：过一道膜，有多少种办法？",
           "scene": "过一道膜，有多少种办法？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.743Z",
+        "sourceSha256": "05749df8a1fc87c2f3a74443d677baedb09c63a0b425c49c6422ef02b602f50d",
+        "design": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。"
       }
     ],
     "curriculum": {
@@ -952,25 +1141,28 @@
       "label": "第4章 · 第2节"
     },
     "preview": {
-      "image": "assets/previews/active--workbuddy.webp",
-      "thumbnail": "assets/previews/active--workbuddy-640.webp",
+      "image": "assets/previews/active--counterflow-v2.webp",
+      "thumbnail": "assets/previews/active--counterflow-v2-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
-      "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
-      "versionId": "workbuddy"
+      "alt": "主动运输与胞吞胞吐 · 逆流引擎与囊泡工坊版 v2.0真实课件画面",
+      "scene": "驱动离子泵、协同转运和囊泡运输，再用氧气曲线与培养液数据检验解释。",
+      "versionId": "counterflow-v2"
     },
-    "inquiry": "逆着浓度差，细胞靠什么运输？",
+    "inquiry": "不直接用ATP，葡萄糖也能逆流进入吗？",
     "activities": [
-      "膜上运输",
-      "能量耦联"
-    ]
+      "协同转运",
+      "囊泡追踪"
+    ],
+    "latestVersionId": "counterflow-v2",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以机械水坝呈现离子势能，以液态膜动画呈现囊泡拓扑，让学生先操作再用曲线与证据判别。"
   },
   {
     "id": "enzyme",
     "title": "降低活化能的酶",
     "category": "cell",
-    "summary": "通过对照实验与能量路径理解酶的催化作用。",
+    "summary": "用四管实验与闯关比喻解释活化能降低。",
     "versions": [
       {
         "id": "workbuddy",
@@ -1004,7 +1196,10 @@
           "height": 800,
           "alt": "降低活化能的酶 · WorkBuddy 版 v2.0真实课件画面：🧪 比较过氧化氢在不同条件下的分解",
           "scene": "🧪 比较过氧化氢在不同条件下的分解"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T12:41:28.515Z",
+        "sourceSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3",
+        "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
       },
       {
         "id": "original",
@@ -1038,7 +1233,10 @@
           "height": 800,
           "alt": "降低活化能的酶 · 原版 v1.0真实课件画面：气泡多，不等于答案完整；先选一组，再说出理由。",
           "scene": "气泡多，不等于答案完整；先选一组，再说出理由。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:59.007Z",
+        "sourceSha256": "4ee9ed321410236a621d66d3191158b91036765f6976f97507d44639d430d6b8",
+        "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
       }
     ],
     "curriculum": {
@@ -1068,13 +1266,16 @@
     "activities": [
       "对照实验",
       "变量探究"
-    ]
+    ],
+    "latestVersionId": "workbuddy",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
   },
   {
     "id": "atp",
     "title": "ATP",
     "category": "cell",
-    "summary": "辨认结构，追踪反应，解释能量耦联。",
+    "summary": "以细胞银行为情境认识 ATP 结构和周转。",
     "versions": [
       {
         "id": "workbuddy",
@@ -1109,7 +1310,10 @@
           "height": 800,
           "alt": "ATP · WorkBuddy 版 v2.0.1真实课件画面：🔬 拆开 ATP：一枚\"现金\"的内部构造",
           "scene": "🔬 拆开 ATP：一枚\"现金\"的内部构造"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T12:50:44.708Z",
+        "sourceSha256": "33bfa45babe84d6fb084b8eebce4c5d6310f8c6fca768973ebfb444025daed77",
+        "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
       },
       {
         "id": "original",
@@ -1143,7 +1347,10 @@
           "height": 800,
           "alt": "ATP · 原版 v1.0真实课件画面：细胞怎样支付每一次工作？；选对角色，再解释“货币”。",
           "scene": "细胞怎样支付每一次工作？；选对角色，再解释“货币”。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.463Z",
+        "sourceSha256": "bdde21c1ad6e5f74011c28e99ab46b902974b4748a71bd49de24f6dde44b74a1",
+        "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
       }
     ],
     "curriculum": {
@@ -1173,13 +1380,16 @@
     "activities": [
       "分子拆解",
       "能量耦联"
-    ]
+    ],
+    "latestVersionId": "workbuddy",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
   },
   {
     "id": "respiration",
     "title": "细胞呼吸",
     "category": "cell",
-    "summary": "追踪物质与能量，比较有氧和无氧途径。",
+    "summary": "从酵母菌实验到呼吸途径，再走向生活应用。",
     "versions": [
       {
         "id": "workbuddy",
@@ -1213,7 +1423,10 @@
           "height": 800,
           "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
           "scene": "参观主车间：有氧呼吸三阶段"
-        }
+        },
+        "sourceModifiedAt": "2026-10-19T13:25:23.219Z",
+        "sourceSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb",
+        "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
       },
       {
         "id": "original",
@@ -1247,7 +1460,10 @@
           "height": 800,
           "alt": "细胞呼吸 · 原版 v1.0真实课件画面：把反应，放回正确的位置。；先定位，再追踪。",
           "scene": "把反应，放回正确的位置。；先定位，再追踪。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.769Z",
+        "sourceSha256": "e28b0632b97a4dea899d1c414b38a97d54d3d234f0df85e59b92044c7009b1a8",
+        "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
       }
     ],
     "curriculum": {
@@ -1277,7 +1493,10 @@
     "activities": [
       "过程追踪",
       "比较解释"
-    ]
+    ],
+    "latestVersionId": "workbuddy",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
   },
   {
     "id": "photosynthesis",
@@ -1317,7 +1536,10 @@
           "height": 800,
           "alt": "光合作用 · 原版 v1.0真实课件画面：把一束光，变成生长的可能。",
           "scene": "把一束光，变成生长的可能。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.745Z",
+        "sourceSha256": "50dfce0384f34f523106f3aa1acfe4f20987411de2398d240fb6bc8f4415b72c",
+        "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。"
       }
     ],
     "curriculum": {
@@ -1347,7 +1569,10 @@
     "activities": [
       "反应建模",
       "条件探究"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。"
   },
   {
     "id": "division",
@@ -1387,7 +1612,10 @@
           "height": 800,
           "alt": "细胞的增殖 · 原版 v1.0真实课件画面：分裂放映室",
           "scene": "分裂放映室"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.796Z",
+        "sourceSha256": "28768d46182d4f8cc3dd5b9b7f9a34a36b54fb61fee78a0c81e60b5a6094718c",
+        "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。"
       }
     ],
     "curriculum": {
@@ -1417,7 +1645,10 @@
     "activities": [
       "分裂观察",
       "数量推演"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。"
   },
   {
     "id": "differentiation",
@@ -1457,7 +1688,10 @@
           "height": 800,
           "alt": "细胞的分化 · 原版 v1.0真实课件画面：同源。异职。；从相同的起点，走向不同的分工。",
           "scene": "同源。异职。；从相同的起点，走向不同的分工。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.794Z",
+        "sourceSha256": "6f91b4becc6d9f41d09863cd9ff2ef7fd10a5b5dea6743c17cd27321aff830d5",
+        "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。"
       }
     ],
     "curriculum": {
@@ -1487,7 +1721,10 @@
     "activities": [
       "表达比较",
       "证据推理"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。"
   },
   {
     "id": "aging",
@@ -1527,7 +1764,10 @@
           "height": 800,
           "alt": "细胞的衰老和死亡 · 原版 v1.0真实课件画面：变老，留下了哪些线索？",
           "scene": "变老，留下了哪些线索？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.797Z",
+        "sourceSha256": "28fdb8c6b6b16a150ee0850e149efc27cda046372cbc44c7892cff8d9d81d6b7",
+        "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。"
       }
     ],
     "curriculum": {
@@ -1557,7 +1797,10 @@
     "activities": [
       "线索观察",
       "概念辨析"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。"
   },
   {
     "id": "mendel",
@@ -1597,7 +1840,10 @@
           "height": 800,
           "alt": "孟德尔的豌豆杂交实验 · 原版 v1.0真实课件画面：矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
           "scene": "矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.763Z",
+        "sourceSha256": "e51089d6d7db814be0c83269b16aec8b565ebff5a5f19047e59aa57ecab19a71",
+        "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。"
       }
     ],
     "curriculum": {
@@ -1631,7 +1877,10 @@
     "activities": [
       "提出假说",
       "杂交验证"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。"
   },
   {
     "id": "meiosis",
@@ -1669,7 +1918,10 @@
           "height": 800,
           "alt": "减数分裂和受精作用 · 荧光细胞剧场版 v1.0真实课件画面：先分同源，再分姐妹。",
           "scene": "先分同源，再分姐妹。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T16:11:45.571Z",
+        "sourceSha256": "62e229d9a574c044ac385da746fa93272d5728f244d53b98831264900a51ffcf",
+        "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。"
       }
     ],
     "curriculum": {
@@ -1699,7 +1951,10 @@
     "activities": [
       "时间轴导演",
       "数量联动"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。"
   },
   {
     "id": "chromosome",
@@ -1739,7 +1994,10 @@
           "height": 800,
           "alt": "基因在染色体上 · 原版 v1.0真实课件画面：设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
           "scene": "设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.758Z",
+        "sourceSha256": "0c68840f6d4e9f19296f0a8f55fa69e2a081b397fe48e6715ba29dd7e8f3ee0d",
+        "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。"
       }
     ],
     "curriculum": {
@@ -1769,7 +2027,10 @@
     "activities": [
       "设计杂交",
       "比较假说"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。"
   },
   {
     "id": "sex-linked",
@@ -1807,7 +2068,10 @@
           "height": 800,
           "alt": "伴性遗传 · 基因侦探版 v1.0真实课件画面：让亲本说话，看看基因传给了谁。",
           "scene": "让亲本说话，看看基因传给了谁。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T09:04:08.836Z",
+        "sourceSha256": "596da914860593aedad43c1e7c2f2cf39411f81e3cf87ed357ca4766939e7346",
+        "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。"
       }
     ],
     "curriculum": {
@@ -1837,7 +2101,10 @@
     "activities": [
       "杂交推演",
       "系谱破案"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。"
   },
   {
     "id": "dna-evidence",
@@ -1877,7 +2144,10 @@
           "height": 800,
           "alt": "DNA 是主要的遗传物质 · 原版 v2.0真实课件画面：发生了转化。但，还不能抢发结论。；活 R 型菌",
           "scene": "发生了转化。但，还不能抢发结论。；活 R 型菌"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.467Z",
+        "sourceSha256": "d6a48920938f3dd47bd4303051c6d7421ab9dfba6b91b7114d31741824453899",
+        "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。"
       },
       {
         "id": "legacy",
@@ -1910,7 +2180,10 @@
           "height": 800,
           "alt": "DNA 是主要的遗传物质 · 历史原版 v1.0真实课件画面：如果拿走一种成分，转化还会发生吗？",
           "scene": "如果拿走一种成分，转化还会发生吗？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.465Z",
+        "sourceSha256": "fa02408953050cfec61a33948aa02214494968f450fabd09f80ceadcb2a5a2d8",
+        "design": "从猜想开始，通过每一站的对照结果修正判断。"
       }
     ],
     "curriculum": {
@@ -1940,7 +2213,10 @@
     "activities": [
       "控制变量",
       "证据接力"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。"
   },
   {
     "id": "dna-structure",
@@ -1978,7 +2254,10 @@
           "height": 800,
           "alt": "DNA的结构 · 1953工程蓝图版 v2.0真实课件画面：一个漂亮模型，要通过几道证据检验？",
           "scene": "一个漂亮模型，要通过几道证据检验？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-31T02:59:50.824Z",
+        "sourceSha256": "4fe764499a855c9bbec22663f707bf36f93e887658216fba5613b3bf7727a0c5",
+        "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
       },
       {
         "id": "repair-notes-v1",
@@ -2010,7 +2289,10 @@
           "height": 800,
           "alt": "DNA的结构 · 双螺旋修复简版 v1.0真实课件画面：双螺旋修复室；给模板链补上一条反向平行的链。",
           "scene": "双螺旋修复室；给模板链补上一条反向平行的链。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T22:10:37.249Z",
+        "sourceSha256": "5708833a64c316c3d7409ac32a291eabcd897811f6d45e6e82710611e9a262db",
+        "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
       }
     ],
     "curriculum": {
@@ -2040,7 +2322,10 @@
     "activities": [
       "模型校验",
       "比例计算"
-    ]
+    ],
+    "latestVersionId": "blueprint-v2",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
   },
   {
     "id": "replication",
@@ -2079,7 +2364,10 @@
           "height": 800,
           "alt": "DNA 的复制 · 原版 v1.0真实课件画面：一份蓝图，如何复制成两份？",
           "scene": "一份蓝图，如何复制成两份？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-27T01:07:13.400Z",
+        "sourceSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c",
+        "design": "先预测三种复制模型的结果，再用条带与配对检验解释。"
       }
     ],
     "curriculum": {
@@ -2109,7 +2397,10 @@
     "activities": [
       "提出假说",
       "用证据判断"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先预测三种复制模型的结果，再用条带与配对检验解释。"
   },
   {
     "id": "gene-fragment",
@@ -2147,7 +2438,10 @@
           "height": 800,
           "alt": "基因通常是有遗传效应的DNA片段 · 生命胶片剪辑版 v3.0真实课件画面：哪一帧胶片，能让小鼠亮起来？",
           "scene": "哪一帧胶片，能让小鼠亮起来？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-31T09:40:31.052Z",
+        "sourceSha256": "8728d79ce0ea81948dcaa49a05f55b92cf9ca014c5c716e036e7e5449eb5a726",
+        "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       },
       {
         "id": "csi-v2",
@@ -2179,7 +2473,10 @@
           "height": 800,
           "alt": "基因通常是有遗传效应的DNA片段 · CSI密码破译版 v2.0真实课件画面：删掉哪一段，绿色荧光会消失？",
           "scene": "删掉哪一段，绿色荧光会消失？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-31T03:16:00.763Z",
+        "sourceSha256": "e408e44c2b3ac125d6ab4e23da82ef423e314016daddbaea7a648db2ebc2c404",
+        "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       },
       {
         "id": "annotation-notes-v1",
@@ -2211,7 +2508,10 @@
           "height": 800,
           "alt": "基因通常是有遗传效应的DNA片段 · 基因组标注简版 v1.0真实课件画面：基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？",
           "scene": "基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T22:10:38.964Z",
+        "sourceSha256": "41b23ab7402d602c9b74a8b9ad8ec622ddd86173585ac145c0d191c0dffbb0a3",
+        "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       }
     ],
     "curriculum": {
@@ -2241,7 +2541,10 @@
     "activities": [
       "胶片剪辑",
       "信息解码"
-    ]
+    ],
+    "latestVersionId": "bio-synth-v3",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
   },
   {
     "id": "expression",
@@ -2280,7 +2583,10 @@
           "height": 800,
           "alt": "基因指导蛋白质的合成 · 生命密码破译版 v1.0真实课件画面：DNA 能亲自出核吗？",
           "scene": "DNA 能亲自出核吗？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.759Z",
+        "sourceSha256": "b6cc05d24e0a2e51d00733b3499673e02620087c8afa2581db6e147f027723e5",
+        "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。"
       }
     ],
     "curriculum": {
@@ -2310,7 +2616,10 @@
     "activities": [
       "转录配对",
       "翻译调度"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。"
   },
   {
     "id": "expression-trait",
@@ -2348,7 +2657,10 @@
           "height": 800,
           "alt": "基因表达与性状的关系 · 生命交响曲版 v2.0真实课件画面：打断一环，观察性状怎样改变。",
           "scene": "打断一环，观察性状怎样改变。"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T09:20:42.774Z",
+        "sourceSha256": "e7914046fff670580795796ad130ae4cda05ddda92c06adc59dfec814d5043b4",
+        "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
       },
       {
         "id": "cat-notes-v1",
@@ -2380,7 +2692,10 @@
           "height": 800,
           "alt": "基因表达与性状的关系 · 猫毛颜色观察简版 v1.0真实课件画面：猫毛颜色观测站；相同基因型，为什么毛色深浅不同？",
           "scene": "猫毛颜色观测站；相同基因型，为什么毛色深浅不同？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T22:10:40.300Z",
+        "sourceSha256": "b9ddd086a6de9a788755b758cd4e2fd8bbe20ab301c2687b754a1acf03b5314f",
+        "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
       }
     ],
     "curriculum": {
@@ -2410,7 +2725,10 @@
     "activities": [
       "因果推演",
       "环境探究"
-    ]
+    ],
+    "latestVersionId": "symphony-v2",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
   },
   {
     "id": "mutation-recombination",
@@ -2448,7 +2766,10 @@
           "height": 800,
           "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.1真实课件画面：先换一个字，再看看整行发生了什么。",
           "scene": "先换一个字，再看看整行发生了什么。"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T10:02:34.187Z",
+        "sourceSha256": "c7679099b0e9b8d0c8290b9354d6eb7c36961f2fc3b192942c20e7ccb6af0758",
+        "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       },
       {
         "id": "swiss-v2",
@@ -2480,7 +2801,45 @@
           "height": 800,
           "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.0真实课件画面：先换一个字，再看看整行发生了什么。",
           "scene": "先换一个字，再看看整行发生了什么。"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T09:06:52.758Z",
+        "sourceSha256": "82e6ce34629473f9e4723400dc201f1c6ae896924d9cb34c10946779a593c70c",
+        "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+      },
+      {
+        "id": "recombination-notes-v1",
+        "label": "1.0",
+        "edition": "配子组合简版",
+        "features": [
+          "同源染色体分离与配子组合展示",
+          "已有等位基因重新组合的辨析",
+          "单项概念练习与课堂奖状"
+        ],
+        "file": "lessons/必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同原始创作日期。",
+        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
+        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+        "changes": [
+          "本次从本机课堂目录同步上线，保留其他版本。",
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+        ],
+        "route": "courses/mutation-recombination/recombination-notes-v1/",
+        "platformUpdated": "2026-11-02",
+        "contentSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
+        "sourceFilename": "必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
+        "bytes": 6209,
+        "preview": {
+          "image": "assets/previews/mutation-recombination--recombination-notes-v1.webp",
+          "thumbnail": "assets/previews/mutation-recombination--recombination-notes-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因突变和基因重组 · 配子组合简版 v1.0真实课件画面：配子组合印刷所；两个亲本没有的组合，怎样进入配子？",
+          "scene": "配子组合印刷所；两个亲本没有的组合，怎样进入配子？"
+        },
+        "sourceModifiedAt": "2026-10-30T22:10:42.451Z",
+        "sourceSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
+        "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       },
       {
         "id": "mutation-detective-v1",
@@ -2513,39 +2872,10 @@
           "height": 800,
           "alt": "基因突变和基因重组 · 基因突变侦探版 v1.0真实课件画面：镰状细胞贫血：一个字母的线索",
           "scene": "镰状细胞贫血：一个字母的线索"
-        }
-      },
-      {
-        "id": "recombination-notes-v1",
-        "label": "1.0",
-        "edition": "配子组合简版",
-        "features": [
-          "同源染色体分离与配子组合展示",
-          "已有等位基因重新组合的辨析",
-          "单项概念练习与课堂奖状"
-        ],
-        "file": "lessons/必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
-        "published": "2026-11-02",
-        "dateNote": "本站首次公开日期，不等同原始创作日期。",
-        "summary": "从阅读框与细胞增殖到配子组合，比较造出新等位基因和重排已有组合。",
-        "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
-        "changes": [
-          "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
-        ],
-        "route": "courses/mutation-recombination/recombination-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
-        "sourceFilename": "必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
-        "bytes": 6209,
-        "preview": {
-          "image": "assets/previews/mutation-recombination--recombination-notes-v1.webp",
-          "thumbnail": "assets/previews/mutation-recombination--recombination-notes-v1-640.webp",
-          "width": 1280,
-          "height": 800,
-          "alt": "基因突变和基因重组 · 配子组合简版 v1.0真实课件画面：配子组合印刷所；两个亲本没有的组合，怎样进入配子？",
-          "scene": "配子组合印刷所；两个亲本没有的组合，怎样进入配子？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.761Z",
+        "sourceSha256": "69cb261ed7d85aaeee7ee01100e528b38b106b405604443e8349f0fd5aba0c49",
+        "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       }
     ],
     "curriculum": {
@@ -2575,7 +2905,10 @@
     "activities": [
       "阅读框试验",
       "变异辨析"
-    ]
+    ],
+    "latestVersionId": "swiss-v2-1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
   },
   {
     "id": "chromosome-variation",
@@ -2614,7 +2947,10 @@
           "height": 800,
           "alt": "染色体变异 · 育种工程实验室版 v1.0真实课件画面：把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
           "scene": "把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.764Z",
+        "sourceSha256": "cdfba38094d1b62df58ff8b12341d579f803d5a015d1523c12a097eb727ec3c6",
+        "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。"
       }
     ],
     "curriculum": {
@@ -2644,7 +2980,10 @@
     "activities": [
       "动手分拣",
       "育种推演"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。"
   },
   {
     "id": "genetic-disease",
@@ -2682,7 +3021,10 @@
           "height": 800,
           "alt": "人类遗传病 · NORDIC遗传咨询版 v2.0真实课件画面：病名之后，哪一层遗传信息变了？",
           "scene": "病名之后，哪一层遗传信息变了？"
-        }
+        },
+        "sourceModifiedAt": "2026-11-01T11:21:10.221Z",
+        "sourceSha256": "a8e624202743abe847f1fc64e10a37f9fd41319b148e4e8076397d4ee8dd81e3",
+        "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
       },
       {
         "id": "survey-notes-v1",
@@ -2714,7 +3056,10 @@
           "height": 800,
           "alt": "人类遗传病 · 人群调查简版 v1.0真实课件画面：人群调查编辑部；同一份调查记录，为什么会算出两个患病率？",
           "scene": "人群调查编辑部；同一份调查记录，为什么会算出两个患病率？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T22:10:44.482Z",
+        "sourceSha256": "9f18f3b562fcae5ec09bffd7bc8a98c74214af458dfcf030b0cbee07816e98d9",
+        "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
       }
     ],
     "curriculum": {
@@ -2744,7 +3089,10 @@
     "activities": [
       "临床分诊",
       "调查设计"
-    ]
+    ],
+    "latestVersionId": "nordic-v2",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
   },
   {
     "id": "evolution",
@@ -2782,7 +3130,10 @@
           "height": 800,
           "alt": "生物的进化 · 达尔文沙盘版 v1.0真实课件画面：抗生素是命令，还是一道筛子？",
           "scene": "抗生素是命令，还是一道筛子？"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T15:11:31.708Z",
+        "sourceSha256": "d4b65ef153639fd6ec44eefa4df01b895186b195352423a4db783fc5bba9ca02",
+        "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。"
       }
     ],
     "curriculum": {
@@ -2824,7 +3175,339 @@
     "activities": [
       "频率推演",
       "自然选择"
-    ]
+    ],
+    "latestVersionId": "interactive-v1-0",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。"
+  },
+  {
+    "id": "extracellular",
+    "title": "细胞生活的环境",
+    "category": "physiology",
+    "summary": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。",
+    "versions": [
+      {
+        "id": "microcirculation-v1",
+        "label": "1.0",
+        "edition": "微循环活体剧场版",
+        "file": "lessons/选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。",
+        "features": [
+          "微循环与淋巴回流动态模型及多种水肿情境",
+          "氧气跨膜计数与细胞专属内环境定位",
+          "内外腔道、成分安检与渗透压和缓冲实验"
+        ],
+        "approach": "从组织液形成与去向出发，改变病理条件比较净流向；逐层计数膜结构，并区分模型简化与生理边界。",
+        "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "curriculum": {
+          "publisher": "人民教育出版社",
+          "book": "选择性必修 1 · 稳态与调节",
+          "chapter": 1,
+          "chapterTitle": "人体的内环境与稳态",
+          "sections": [
+            {
+              "number": 1,
+              "title": "细胞生活的环境"
+            }
+          ],
+          "integrated": false,
+          "label": "第1章 · 第1节"
+        },
+        "sourceFilename": "选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T09:11:03.962Z",
+        "sourceSha256": "eaf981bbc052ade83538e402bf28730ea9292a18c8c2891c9cd095ba55bd2d74",
+        "contentSha256": "eaf981bbc052ade83538e402bf28730ea9292a18c8c2891c9cd095ba55bd2d74",
+        "route": "courses/extracellular/microcirculation-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 139015,
+        "preview": {
+          "image": "assets/previews/extracellular--microcirculation-v1.webp",
+          "thumbnail": "assets/previews/extracellular--microcirculation-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "细胞生活的环境 · 微循环活体剧场版 v1.0真实课件画面",
+          "scene": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。"
+        }
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 1 · 稳态与调节",
+      "chapter": 1,
+      "chapterTitle": "人体的内环境与稳态",
+      "sections": [
+        {
+          "number": 1,
+          "title": "细胞生活的环境"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第1节"
+    },
+    "latestVersionId": "microcirculation-v1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。",
+    "inquiry": "同样是水肿，水为什么留在了组织间隙？",
+    "activities": [
+      "粒子追踪",
+      "病因比较"
+    ],
+    "preview": {
+      "image": "assets/previews/extracellular--microcirculation-v1.webp",
+      "thumbnail": "assets/previews/extracellular--microcirculation-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞生活的环境 · 微循环活体剧场版 v1.0真实课件画面",
+      "scene": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。",
+      "versionId": "microcirculation-v1"
+    }
+  },
+  {
+    "id": "homeostasis",
+    "title": "内环境的稳态",
+    "category": "physiology",
+    "summary": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。",
+    "versions": [
+      {
+        "id": "icu-v1",
+        "label": "1.0",
+        "edition": "ICU生命稳态版",
+        "file": "lessons/选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。",
+        "features": [
+          "呼吸、消化、泌尿、循环粒子联动及病理冲击",
+          "血浆酸碱缓冲反应过程与清除路径",
+          "三烧杯同步滴定曲线、对照分析和限度测试"
+        ],
+        "approach": "先施加生理冲击观察变量联动，再追踪分子缓冲，最后用滴定曲线检验稳态的相对性与限度。",
+        "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "curriculum": {
+          "publisher": "人民教育出版社",
+          "book": "选择性必修 1 · 稳态与调节",
+          "chapter": 1,
+          "chapterTitle": "人体的内环境与稳态",
+          "sections": [
+            {
+              "number": 2,
+              "title": "内环境的稳态"
+            }
+          ],
+          "integrated": false,
+          "label": "第1章 · 第2节"
+        },
+        "sourceFilename": "选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T09:47:10.553Z",
+        "sourceSha256": "3456b8599323716b9a50ccb9a212de68cadb761b76f40bb1eb8ee42b907262d3",
+        "contentSha256": "3456b8599323716b9a50ccb9a212de68cadb761b76f40bb1eb8ee42b907262d3",
+        "route": "courses/homeostasis/icu-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 115635,
+        "preview": {
+          "image": "assets/previews/homeostasis--icu-v1.webp",
+          "thumbnail": "assets/previews/homeostasis--icu-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "内环境的稳态 · ICU生命稳态版 v1.0真实课件画面",
+          "scene": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。"
+        }
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 1 · 稳态与调节",
+      "chapter": 1,
+      "chapterTitle": "人体的内环境与稳态",
+      "sections": [
+        {
+          "number": 2,
+          "title": "内环境的稳态"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第2节"
+    },
+    "latestVersionId": "icu-v1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。",
+    "inquiry": "稳态是固定数值，还是持续调整的平衡？",
+    "activities": [
+      "器官联动",
+      "滴定实验"
+    ],
+    "preview": {
+      "image": "assets/previews/homeostasis--icu-v1.webp",
+      "thumbnail": "assets/previews/homeostasis--icu-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "内环境的稳态 · ICU生命稳态版 v1.0真实课件画面",
+      "scene": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。",
+      "versionId": "icu-v1"
+    }
+  },
+  {
+    "id": "neural-reflex",
+    "title": "神经调节的结构基础与基本方式",
+    "category": "physiology",
+    "summary": "以脊髓灰白质、背根神经节和运动终板定位为依据，比较膝跳、缩手与条件反射。",
+    "versions": [
+      {
+        "id": "anatomical-atlas-v1",
+        "label": "1.0",
+        "edition": "神经解剖动态图谱版",
+        "file": "lessons/选择性必修1_02-02_神经调节的基本方式_奈特神经解剖与电生理动态图谱_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "以脊髓灰白质、背根神经节和运动终板定位为依据，比较膝跳、缩手与条件反射。",
+        "features": [
+          "H形灰质、T形感觉神经元与运动终板放大探针",
+          "膝跳与缩手双模式、病灶节段及时相判断",
+          "犬脑解剖与功能投影、八例分类及六题识图终审"
+        ],
+        "approach": "先定位胞体与突触，再追踪脉冲并改变损伤条件；分开解剖切面与功能模型，用分类和答辩巩固判断。",
+        "design": "以暖色医学图谱强化位置约束，配合可暂停脉冲与局部放大；犬脑功能投影可关闭，帮助区分结构与解释。",
+        "scopeNote": "最新版聚焦第2节“基本方式”的解剖与反射专题；第1节和自主神经内容请选综合模拟版。",
+        "displayTitle": "神经调节的基本方式",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "curriculum": {
+          "publisher": "人民教育出版社",
+          "book": "选择性必修 1 · 稳态与调节",
+          "chapter": 2,
+          "chapterTitle": "神经调节",
+          "sections": [
+            {
+              "number": 2,
+              "title": "神经调节的基本方式"
+            }
+          ],
+          "integrated": false,
+          "label": "第2章 · 第2节"
+        },
+        "sourceFilename": "选择性必修1_02-02_神经调节的基本方式_奈特神经解剖与电生理动态图谱_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T11:23:15.079Z",
+        "sourceSha256": "fda3871938cbb67fb880666c0b9853eefe0e3071985d3d8eb72f1e64a4b9ad4d",
+        "contentSha256": "fda3871938cbb67fb880666c0b9853eefe0e3071985d3d8eb72f1e64a4b9ad4d",
+        "route": "courses/neural-reflex/anatomical-atlas-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 140135,
+        "preview": {
+          "image": "assets/previews/neural-reflex--anatomical-atlas-v1.webp",
+          "thumbnail": "assets/previews/neural-reflex--anatomical-atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "神经调节的基本方式 · 神经解剖动态图谱版 v1.0真实课件画面",
+          "scene": "以脊髓灰白质、背根神经节和运动终板定位为依据，比较膝跳、缩手与条件反射。"
+        }
+      },
+      {
+        "id": "neuralink-v1",
+        "label": "1.0",
+        "edition": "NEURALINK综合模拟版",
+        "file": "lessons/选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
+        "published": "2026-11-02",
+        "dateNote": "本站首次公开日期，不等同于课件创作日期。",
+        "summary": "比较自主神经调控、损伤反射弧和条件反射学习的动态过程。",
+        "features": [
+          "反射弧刺激与阻断及真假反射判断",
+          "交感与副交感的器官响应比较",
+          "条件反射建立、消退、重建与结构功能辨析"
+        ],
+        "approach": "从刺激点沿通路追踪结果，再比较内脏调控与训练试次；每一步区分模型、现象和推断。",
+        "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。",
+        "scopeNote": "第2章第1—2节综合课；可补充新版解剖专题未展开的自主神经与结构基础。",
+        "changes": [
+          "同步本机课件，新增独立版本入口、实景封面及设计思路。",
+          "保留原有版本、统计地址及公开反馈通道。",
+          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+        ],
+        "curriculum": {
+          "publisher": "人民教育出版社",
+          "book": "选择性必修 1 · 稳态与调节",
+          "chapter": 2,
+          "chapterTitle": "神经调节",
+          "sections": [
+            {
+              "number": 1,
+              "title": "神经调节的结构基础"
+            },
+            {
+              "number": 2,
+              "title": "神经调节的基本方式"
+            }
+          ],
+          "integrated": true,
+          "label": "第2章 · 第1—2节综合"
+        },
+        "sourceFilename": "选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
+        "sourceModifiedAt": "2026-11-02T10:21:35.148Z",
+        "sourceSha256": "9fbc817c8497557eec6de153d0cfc2bacba1b5c6765d238bd09ba9a89ce21fb3",
+        "contentSha256": "9fbc817c8497557eec6de153d0cfc2bacba1b5c6765d238bd09ba9a89ce21fb3",
+        "route": "courses/neural-reflex/neuralink-v1/",
+        "platformUpdated": "2026-11-02",
+        "bytes": 120132,
+        "preview": {
+          "image": "assets/previews/neural-reflex--neuralink-v1.webp",
+          "thumbnail": "assets/previews/neural-reflex--neuralink-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "神经调节的结构基础与基本方式 · NEURALINK综合模拟版 v1.0真实课件画面",
+          "scene": "比较自主神经调控、损伤反射弧和条件反射学习的动态过程。"
+        }
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 1 · 稳态与调节",
+      "chapter": 2,
+      "chapterTitle": "神经调节",
+      "sections": [
+        {
+          "number": 1,
+          "title": "神经调节的结构基础"
+        },
+        {
+          "number": 2,
+          "title": "神经调节的基本方式"
+        }
+      ],
+      "integrated": true,
+      "label": "第2章 · 第1—2节综合"
+    },
+    "latestVersionId": "anatomical-atlas-v1",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "以暖色医学图谱强化位置约束，配合可暂停脉冲与局部放大；犬脑功能投影可关闭，帮助区分结构与解释。",
+    "inquiry": "胞体和突触在哪里，如何决定反射路径？",
+    "activities": [
+      "双反射识图",
+      "脑区环路"
+    ],
+    "scopeNote": "最新版为第2节解剖专题；第1—2节综合内容保留在另一版本。",
+    "preview": {
+      "image": "assets/previews/neural-reflex--anatomical-atlas-v1.webp",
+      "thumbnail": "assets/previews/neural-reflex--anatomical-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经调节的基本方式 · 神经解剖动态图谱版 v1.0真实课件画面",
+      "scene": "以脊髓灰白质、背根神经节和运动终板定位为依据，比较膝跳、缩手与条件反射。",
+      "versionId": "anatomical-atlas-v1"
+    }
   },
   {
     "id": "population",
@@ -2864,7 +3547,10 @@
           "height": 800,
           "alt": "种群及其动态 · 原版 v1.0真实课件画面：别只挑花最多的地方。",
           "scene": "别只挑花最多的地方。"
-        }
+        },
+        "sourceModifiedAt": "2026-10-30T07:14:58.766Z",
+        "sourceSha256": "dececda8b759f97ae17e02eb978fc5b83b359718bcb94cb338ce85876fec17b7",
+        "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
       }
     ],
     "curriculum": {
@@ -2902,6 +3588,9 @@
     "activities": [
       "野外采样",
       "数量建模"
-    ]
+    ],
+    "latestVersionId": "original",
+    "latestPolicy": "优先版本号；相同版本号时按源文件最后修改时间。版本名称和范围另行标明。",
+    "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
   }
 ]

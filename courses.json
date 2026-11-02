@@ -10,7 +10,10 @@
       "height": 800,
       "alt": "细胞是生命活动的基本单位 · PBL策展版 v1.0真实课件画面：让证据，覆盖一张错误的手稿。",
       "scene": "让证据，覆盖一张错误的手稿。"
-    }
+    },
+    "latest": true,
+    "route": "courses/cell-basics/interactive-v1-0/",
+    "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。"
   },
   {
     "file": "lessons/必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
@@ -23,7 +26,10 @@
       "height": 800,
       "alt": "细胞的多样性和统一性 · 镜检海关版 v1.0真实课件画面：你的手向左，物像往哪走？",
       "scene": "你的手向左，物像往哪走？"
-    }
+    },
+    "latest": true,
+    "route": "courses/cell-diversity/interactive-v1-0/",
+    "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。"
   },
   {
     "file": "lessons/必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
@@ -36,7 +42,10 @@
       "height": 800,
       "alt": "细胞中的元素和化合物 · 包豪斯实验版 v1.0真实课件画面：拿走的是水，为什么元素会换座？",
       "scene": "拿走的是水，为什么元素会换座？"
-    }
+    },
+    "latest": true,
+    "route": "courses/elements/interactive-v1-0/",
+    "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。"
   },
   {
     "file": "lessons/必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
@@ -49,7 +58,10 @@
       "height": 800,
       "alt": "细胞中的无机物 · 深空维生版 v1.0真实课件画面：水的“引力魔术”，先从正负两端开始。",
       "scene": "水的“引力魔术”，先从正负两端开始。"
-    }
+    },
+    "latest": true,
+    "route": "courses/inorganics/interactive-v1-0/",
+    "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。"
   },
   {
     "file": "lessons/必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
@@ -62,7 +74,10 @@
       "height": 800,
       "alt": "细胞中的糖类和脂质 · 能量造物版 v1.0真实课件画面：糖类，不只是“甜甜的一块”。",
       "scene": "糖类，不只是“甜甜的一块”。"
-    }
+    },
+    "latest": true,
+    "route": "courses/carbohydrate-lipid/interactive-v1-0/",
+    "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。"
   },
   {
     "file": "蛋白质生命架构实验室.html",
@@ -75,7 +90,10 @@
       "height": 800,
       "alt": "蛋白质 · 原版 v1.0真实课件画面：蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
       "scene": "蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。"
-    }
+    },
+    "latest": true,
+    "route": "courses/protein/original/",
+    "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。"
   },
   {
     "file": "核酸训练实验室.html",
@@ -88,7 +106,10 @@
       "height": 800,
       "alt": "核酸 · 原版 v1.0真实课件画面：从平面，走向双螺旋",
       "scene": "从平面，走向双螺旋"
-    }
+    },
+    "latest": true,
+    "route": "courses/nucleic/original/",
+    "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。"
   },
   {
     "file": "细胞膜_边界研究所_v1.0.html",
@@ -101,7 +122,10 @@
       "height": 800,
       "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
       "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。"
-    }
+    },
+    "latest": true,
+    "route": "courses/membrane/original/",
+    "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。"
   },
   {
     "file": "细胞器图鉴_2D互动版_v1.0.html",
@@ -114,7 +138,10 @@
       "height": 800,
       "alt": "细胞器 · 原版 v1.0真实课件画面：微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
       "scene": "微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。"
-    }
+    },
+    "latest": true,
+    "route": "courses/organelles/original/",
+    "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
   },
   {
     "file": "分泌蛋白_膜上旅程_v1.1.html",
@@ -127,7 +154,10 @@
       "height": 800,
       "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
       "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入"
-    }
+    },
+    "latest": true,
+    "route": "courses/secretion/original/",
+    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
   },
   {
     "file": "分泌蛋白_膜上旅程_v1.0.html",
@@ -140,7 +170,26 @@
       "height": 800,
       "alt": "分泌蛋白 · 历史原版 v1.0真实课件画面：一条蛋白质，如何走出细胞？；边合成，边进入。",
       "scene": "一条蛋白质，如何走出细胞？；边合成，边进入。"
-    }
+    },
+    "latest": false,
+    "route": "courses/secretion/legacy/",
+    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
+  },
+  {
+    "file": "lessons/必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_v1.0.html",
+    "title": "细胞核的结构和功能 PBL普罗米修斯版 1.0",
+    "category": "cell",
+    "preview": {
+      "image": "assets/previews/nucleus--prometheus-v1.webp",
+      "thumbnail": "assets/previews/nucleus--prometheus-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞核的结构和功能 · PBL普罗米修斯版 v1.0真实课件画面",
+      "scene": "用四类经典实验、核孔通行和核仁调校，装配一颗能够解释的细胞核。"
+    },
+    "latest": true,
+    "route": "courses/nucleus/prometheus-v1/",
+    "design": "以合成细胞金库为主线，把经典实验、核孔选择性与核仁功能拆成可操作的工程验收。"
   },
   {
     "file": "workbuddy/3.3细胞核的结构和功能.html",
@@ -153,7 +202,26 @@
       "height": 800,
       "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
       "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型"
-    }
+    },
+    "latest": false,
+    "route": "courses/nucleus/workbuddy/",
+    "design": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。"
+  },
+  {
+    "file": "lessons/必修1_04-01_被动运输_PBL绿洲与仿生膜工程_v1.0.html",
+    "title": "被动运输 PBL绿洲仿生膜版 1.0",
+    "category": "cell",
+    "preview": {
+      "image": "assets/previews/passive--oasis-v1.webp",
+      "thumbnail": "assets/previews/passive--oasis-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "被动运输 · PBL绿洲仿生膜版 v1.0真实课件画面",
+      "scene": "调节渗透装置、抢救紫洋葱，比较通道与载体介导的被动运输。"
+    },
+    "latest": true,
+    "route": "courses/passive/oasis-v1/",
+    "design": "将农业急救与仿生膜研发串联，以预测—操作—审稿质询的节奏建立渗透与被动运输概念。"
   },
   {
     "file": "workbuddy/4.1被动运输.html",
@@ -166,7 +234,26 @@
       "height": 800,
       "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
       "scene": "🧅 植物细胞的质壁分离与复原"
-    }
+    },
+    "latest": false,
+    "route": "courses/passive/workbuddy/",
+    "design": "由水的运动推理细胞变化，再比较被动运输的不同方式。"
+  },
+  {
+    "file": "lessons/必修1_04-02_主动运输与胞吞胞吐_跨膜逆流引擎与液态囊泡工坊_v2.0.html",
+    "title": "主动运输与胞吞胞吐 逆流引擎与囊泡工坊版 2.0",
+    "category": "cell",
+    "preview": {
+      "image": "assets/previews/active--counterflow-v2.webp",
+      "thumbnail": "assets/previews/active--counterflow-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "主动运输与胞吞胞吐 · 逆流引擎与囊泡工坊版 v2.0真实课件画面",
+      "scene": "驱动离子泵、协同转运和囊泡运输，再用氧气曲线与培养液数据检验解释。"
+    },
+    "latest": true,
+    "route": "courses/active/counterflow-v2/",
+    "design": "以机械水坝呈现离子势能，以液态膜动画呈现囊泡拓扑，让学生先操作再用曲线与证据判别。"
   },
   {
     "file": "workbuddy/4.2主动运输与胞吞胞吐.html",
@@ -179,7 +266,10 @@
       "height": 800,
       "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
       "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）"
-    }
+    },
+    "latest": false,
+    "route": "courses/active/workbuddy/",
+    "design": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。"
   },
   {
     "file": "主动运输与胞吞胞吐_细胞物流港_v1.0.html",
@@ -192,7 +282,10 @@
       "height": 800,
       "alt": "主动运输与胞吞胞吐 · 原版 v1.0真实课件画面：过一道膜，有多少种办法？",
       "scene": "过一道膜，有多少种办法？"
-    }
+    },
+    "latest": false,
+    "route": "courses/active/original/",
+    "design": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。"
   },
   {
     "file": "workbuddy/5.1降低化学反应的活化能.html",
@@ -205,7 +298,10 @@
       "height": 800,
       "alt": "降低活化能的酶 · WorkBuddy 版 v2.0真实课件画面：🧪 比较过氧化氢在不同条件下的分解",
       "scene": "🧪 比较过氧化氢在不同条件下的分解"
-    }
+    },
+    "latest": true,
+    "route": "courses/enzyme/workbuddy/",
+    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
   },
   {
     "file": "降低活化能的酶_催化现场_v1.0.html",
@@ -218,7 +314,10 @@
       "height": 800,
       "alt": "降低活化能的酶 · 原版 v1.0真实课件画面：气泡多，不等于答案完整；先选一组，再说出理由。",
       "scene": "气泡多，不等于答案完整；先选一组，再说出理由。"
-    }
+    },
+    "latest": false,
+    "route": "courses/enzyme/original/",
+    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
   },
   {
     "file": "workbuddy/5.2细胞的能量货币ATP.html",
@@ -231,7 +330,10 @@
       "height": 800,
       "alt": "ATP · WorkBuddy 版 v2.0.1真实课件画面：🔬 拆开 ATP：一枚\"现金\"的内部构造",
       "scene": "🔬 拆开 ATP：一枚\"现金\"的内部构造"
-    }
+    },
+    "latest": true,
+    "route": "courses/atp/workbuddy/",
+    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
   },
   {
     "file": "ATP_细胞能量交换站_v1.0.html",
@@ -244,7 +346,10 @@
       "height": 800,
       "alt": "ATP · 原版 v1.0真实课件画面：细胞怎样支付每一次工作？；选对角色，再解释“货币”。",
       "scene": "细胞怎样支付每一次工作？；选对角色，再解释“货币”。"
-    }
+    },
+    "latest": false,
+    "route": "courses/atp/original/",
+    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
   },
   {
     "file": "workbuddy/5.3细胞呼吸的原理和应用.html",
@@ -257,7 +362,10 @@
       "height": 800,
       "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
       "scene": "参观主车间：有氧呼吸三阶段"
-    }
+    },
+    "latest": true,
+    "route": "courses/respiration/workbuddy/",
+    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
   },
   {
     "file": "细胞呼吸_碳的旅程_v1.0.html",
@@ -270,7 +378,10 @@
       "height": 800,
       "alt": "细胞呼吸 · 原版 v1.0真实课件画面：把反应，放回正确的位置。；先定位，再追踪。",
       "scene": "把反应，放回正确的位置。；先定位，再追踪。"
-    }
+    },
+    "latest": false,
+    "route": "courses/respiration/original/",
+    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
   },
   {
     "file": "光合作用_一束光的温室_v1.0.html",
@@ -283,7 +394,10 @@
       "height": 800,
       "alt": "光合作用 · 原版 v1.0真实课件画面：把一束光，变成生长的可能。",
       "scene": "把一束光，变成生长的可能。"
-    }
+    },
+    "latest": true,
+    "route": "courses/photosynthesis/original/",
+    "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。"
   },
   {
     "file": "细胞的增殖_一分为二放映室_v1.0.html",
@@ -296,7 +410,10 @@
       "height": 800,
       "alt": "细胞的增殖 · 原版 v1.0真实课件画面：分裂放映室",
       "scene": "分裂放映室"
-    }
+    },
+    "latest": true,
+    "route": "courses/division/original/",
+    "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。"
   },
   {
     "file": "细胞的分化_同源异职展_v1.0.html",
@@ -309,7 +426,10 @@
       "height": 800,
       "alt": "细胞的分化 · 原版 v1.0真实课件画面：同源。异职。；从相同的起点，走向不同的分工。",
       "scene": "同源。异职。；从相同的起点，走向不同的分工。"
-    }
+    },
+    "latest": true,
+    "route": "courses/differentiation/original/",
+    "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。"
   },
   {
     "file": "细胞的衰老和死亡_生命维护现场_v1.0.html",
@@ -322,7 +442,10 @@
       "height": 800,
       "alt": "细胞的衰老和死亡 · 原版 v1.0真实课件画面：变老，留下了哪些线索？",
       "scene": "变老，留下了哪些线索？"
-    }
+    },
+    "latest": true,
+    "route": "courses/aging/original/",
+    "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。"
   },
   {
     "file": "孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html",
@@ -335,7 +458,10 @@
       "height": 800,
       "alt": "孟德尔的豌豆杂交实验 · 原版 v1.0真实课件画面：矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
       "scene": "矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？"
-    }
+    },
+    "latest": true,
+    "route": "courses/mendel/original/",
+    "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。"
   },
   {
     "file": "lessons/必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
@@ -348,7 +474,10 @@
       "height": 800,
       "alt": "减数分裂和受精作用 · 荧光细胞剧场版 v1.0真实课件画面：先分同源，再分姐妹。",
       "scene": "先分同源，再分姐妹。"
-    }
+    },
+    "latest": true,
+    "route": "courses/meiosis/interactive-v1-0/",
+    "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。"
   },
   {
     "file": "基因在染色体上_果蝇遗传调查室_v1.0.html",
@@ -361,7 +490,10 @@
       "height": 800,
       "alt": "基因在染色体上 · 原版 v1.0真实课件画面：设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
       "scene": "设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因"
-    }
+    },
+    "latest": true,
+    "route": "courses/chromosome/original/",
+    "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。"
   },
   {
     "file": "lessons/必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
@@ -374,7 +506,10 @@
       "height": 800,
       "alt": "伴性遗传 · 基因侦探版 v1.0真实课件画面：让亲本说话，看看基因传给了谁。",
       "scene": "让亲本说话，看看基因传给了谁。"
-    }
+    },
+    "latest": true,
+    "route": "courses/sex-linked/interactive-v1-0/",
+    "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。"
   },
   {
     "file": "DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html",
@@ -387,7 +522,10 @@
       "height": 800,
       "alt": "DNA 是主要的遗传物质 · 原版 v2.0真实课件画面：发生了转化。但，还不能抢发结论。；活 R 型菌",
       "scene": "发生了转化。但，还不能抢发结论。；活 R 型菌"
-    }
+    },
+    "latest": true,
+    "route": "courses/dna-evidence/original/",
+    "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。"
   },
   {
     "file": "DNA是主要的遗传物质_证据接力_v1.0.html",
@@ -400,7 +538,10 @@
       "height": 800,
       "alt": "DNA 是主要的遗传物质 · 历史原版 v1.0真实课件画面：如果拿走一种成分，转化还会发生吗？",
       "scene": "如果拿走一种成分，转化还会发生吗？"
-    }
+    },
+    "latest": false,
+    "route": "courses/dna-evidence/legacy/",
+    "design": "从猜想开始，通过每一站的对照结果修正判断。"
   },
   {
     "file": "lessons/必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
@@ -413,7 +554,10 @@
       "height": 800,
       "alt": "DNA的结构 · 1953工程蓝图版 v2.0真实课件画面：一个漂亮模型，要通过几道证据检验？",
       "scene": "一个漂亮模型，要通过几道证据检验？"
-    }
+    },
+    "latest": true,
+    "route": "courses/dna-structure/blueprint-v2/",
+    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
   },
   {
     "file": "lessons/必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
@@ -426,7 +570,10 @@
       "height": 800,
       "alt": "DNA的结构 · 双螺旋修复简版 v1.0真实课件画面：双螺旋修复室；给模板链补上一条反向平行的链。",
       "scene": "双螺旋修复室；给模板链补上一条反向平行的链。"
-    }
+    },
+    "latest": false,
+    "route": "courses/dna-structure/repair-notes-v1/",
+    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
   },
   {
     "file": "DNA的复制_双链蓝图工坊_v1.0.html",
@@ -439,7 +586,10 @@
       "height": 800,
       "alt": "DNA 的复制 · 原版 v1.0真实课件画面：一份蓝图，如何复制成两份？",
       "scene": "一份蓝图，如何复制成两份？"
-    }
+    },
+    "latest": true,
+    "route": "courses/replication/original/",
+    "design": "先预测三种复制模型的结果，再用条带与配对检验解释。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
@@ -452,7 +602,10 @@
       "height": 800,
       "alt": "基因通常是有遗传效应的DNA片段 · 生命胶片剪辑版 v3.0真实课件画面：哪一帧胶片，能让小鼠亮起来？",
       "scene": "哪一帧胶片，能让小鼠亮起来？"
-    }
+    },
+    "latest": true,
+    "route": "courses/gene-fragment/bio-synth-v3/",
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
@@ -465,7 +618,10 @@
       "height": 800,
       "alt": "基因通常是有遗传效应的DNA片段 · CSI密码破译版 v2.0真实课件画面：删掉哪一段，绿色荧光会消失？",
       "scene": "删掉哪一段，绿色荧光会消失？"
-    }
+    },
+    "latest": false,
+    "route": "courses/gene-fragment/csi-v2/",
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
@@ -478,7 +634,10 @@
       "height": 800,
       "alt": "基因通常是有遗传效应的DNA片段 · 基因组标注简版 v1.0真实课件画面：基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？",
       "scene": "基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？"
-    }
+    },
+    "latest": false,
+    "route": "courses/gene-fragment/annotation-notes-v1/",
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
   },
   {
     "file": "lessons/必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
@@ -491,7 +650,10 @@
       "height": 800,
       "alt": "基因指导蛋白质的合成 · 生命密码破译版 v1.0真实课件画面：DNA 能亲自出核吗？",
       "scene": "DNA 能亲自出核吗？"
-    }
+    },
+    "latest": true,
+    "route": "courses/expression/interactive-v1-0/",
+    "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。"
   },
   {
     "file": "lessons/必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
@@ -504,7 +666,10 @@
       "height": 800,
       "alt": "基因表达与性状的关系 · 生命交响曲版 v2.0真实课件画面：打断一环，观察性状怎样改变。",
       "scene": "打断一环，观察性状怎样改变。"
-    }
+    },
+    "latest": true,
+    "route": "courses/expression-trait/symphony-v2/",
+    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
   },
   {
     "file": "lessons/必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
@@ -517,7 +682,10 @@
       "height": 800,
       "alt": "基因表达与性状的关系 · 猫毛颜色观察简版 v1.0真实课件画面：猫毛颜色观测站；相同基因型，为什么毛色深浅不同？",
       "scene": "猫毛颜色观测站；相同基因型，为什么毛色深浅不同？"
-    }
+    },
+    "latest": false,
+    "route": "courses/expression-trait/cat-notes-v1/",
+    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
   },
   {
     "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
@@ -530,7 +698,10 @@
       "height": 800,
       "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.1真实课件画面：先换一个字，再看看整行发生了什么。",
       "scene": "先换一个字，再看看整行发生了什么。"
-    }
+    },
+    "latest": true,
+    "route": "courses/mutation-recombination/swiss-v2-1/",
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
   },
   {
     "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
@@ -543,20 +714,10 @@
       "height": 800,
       "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.0真实课件画面：先换一个字，再看看整行发生了什么。",
       "scene": "先换一个字，再看看整行发生了什么。"
-    }
-  },
-  {
-    "file": "lessons/必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
-    "title": "基因突变和基因重组 基因突变侦探版 1.0",
-    "category": "gene",
-    "preview": {
-      "image": "assets/previews/mutation-recombination--mutation-detective-v1.webp",
-      "thumbnail": "assets/previews/mutation-recombination--mutation-detective-v1-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "基因突变和基因重组 · 基因突变侦探版 v1.0真实课件画面：镰状细胞贫血：一个字母的线索",
-      "scene": "镰状细胞贫血：一个字母的线索"
-    }
+    },
+    "latest": false,
+    "route": "courses/mutation-recombination/swiss-v2/",
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
   },
   {
     "file": "lessons/必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
@@ -569,7 +730,26 @@
       "height": 800,
       "alt": "基因突变和基因重组 · 配子组合简版 v1.0真实课件画面：配子组合印刷所；两个亲本没有的组合，怎样进入配子？",
       "scene": "配子组合印刷所；两个亲本没有的组合，怎样进入配子？"
-    }
+    },
+    "latest": false,
+    "route": "courses/mutation-recombination/recombination-notes-v1/",
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+  },
+  {
+    "file": "lessons/必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
+    "title": "基因突变和基因重组 基因突变侦探版 1.0",
+    "category": "gene",
+    "preview": {
+      "image": "assets/previews/mutation-recombination--mutation-detective-v1.webp",
+      "thumbnail": "assets/previews/mutation-recombination--mutation-detective-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因突变和基因重组 · 基因突变侦探版 v1.0真实课件画面：镰状细胞贫血：一个字母的线索",
+      "scene": "镰状细胞贫血：一个字母的线索"
+    },
+    "latest": false,
+    "route": "courses/mutation-recombination/mutation-detective-v1/",
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
   },
   {
     "file": "lessons/必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
@@ -582,7 +762,10 @@
       "height": 800,
       "alt": "染色体变异 · 育种工程实验室版 v1.0真实课件画面：把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
       "scene": "把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘"
-    }
+    },
+    "latest": true,
+    "route": "courses/chromosome-variation/interactive-v1-0/",
+    "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。"
   },
   {
     "file": "lessons/必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
@@ -595,7 +778,10 @@
       "height": 800,
       "alt": "人类遗传病 · NORDIC遗传咨询版 v2.0真实课件画面：病名之后，哪一层遗传信息变了？",
       "scene": "病名之后，哪一层遗传信息变了？"
-    }
+    },
+    "latest": true,
+    "route": "courses/genetic-disease/nordic-v2/",
+    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
   },
   {
     "file": "lessons/必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
@@ -608,7 +794,10 @@
       "height": 800,
       "alt": "人类遗传病 · 人群调查简版 v1.0真实课件画面：人群调查编辑部；同一份调查记录，为什么会算出两个患病率？",
       "scene": "人群调查编辑部；同一份调查记录，为什么会算出两个患病率？"
-    }
+    },
+    "latest": false,
+    "route": "courses/genetic-disease/survey-notes-v1/",
+    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
   },
   {
     "file": "lessons/必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
@@ -621,7 +810,74 @@
       "height": 800,
       "alt": "生物的进化 · 达尔文沙盘版 v1.0真实课件画面：抗生素是命令，还是一道筛子？",
       "scene": "抗生素是命令，还是一道筛子？"
-    }
+    },
+    "latest": true,
+    "route": "courses/evolution/interactive-v1-0/",
+    "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。"
+  },
+  {
+    "file": "lessons/选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
+    "title": "细胞生活的环境 微循环活体剧场版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/extracellular--microcirculation-v1.webp",
+      "thumbnail": "assets/previews/extracellular--microcirculation-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞生活的环境 · 微循环活体剧场版 v1.0真实课件画面",
+      "scene": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。"
+    },
+    "latest": true,
+    "route": "courses/extracellular/microcirculation-v1/",
+    "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。"
+  },
+  {
+    "file": "lessons/选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
+    "title": "内环境的稳态 ICU生命稳态版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/homeostasis--icu-v1.webp",
+      "thumbnail": "assets/previews/homeostasis--icu-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "内环境的稳态 · ICU生命稳态版 v1.0真实课件画面",
+      "scene": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。"
+    },
+    "latest": true,
+    "route": "courses/homeostasis/icu-v1/",
+    "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-02_神经调节的基本方式_奈特神经解剖与电生理动态图谱_v1.0.html",
+    "title": "神经调节的结构基础与基本方式 神经解剖动态图谱版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-reflex--anatomical-atlas-v1.webp",
+      "thumbnail": "assets/previews/neural-reflex--anatomical-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经调节的基本方式 · 神经解剖动态图谱版 v1.0真实课件画面",
+      "scene": "以脊髓灰白质、背根神经节和运动终板定位为依据，比较膝跳、缩手与条件反射。"
+    },
+    "latest": true,
+    "route": "courses/neural-reflex/anatomical-atlas-v1/",
+    "design": "以暖色医学图谱强化位置约束，配合可暂停脉冲与局部放大；犬脑功能投影可关闭，帮助区分结构与解释。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
+    "title": "神经调节的结构基础与基本方式 NEURALINK综合模拟版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-reflex--neuralink-v1.webp",
+      "thumbnail": "assets/previews/neural-reflex--neuralink-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经调节的结构基础与基本方式 · NEURALINK综合模拟版 v1.0真实课件画面",
+      "scene": "比较自主神经调控、损伤反射弧和条件反射学习的动态过程。"
+    },
+    "latest": false,
+    "route": "courses/neural-reflex/neuralink-v1/",
+    "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。"
   },
   {
     "file": "种群及其动态_山野调查手记_v1.0.html",
@@ -634,6 +890,9 @@
       "height": 800,
       "alt": "种群及其动态 · 原版 v1.0真实课件画面：别只挑花最多的地方。",
       "scene": "别只挑花最多的地方。"
-    }
+    },
+    "latest": true,
+    "route": "courses/population/original/",
+    "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
   }
 ]
