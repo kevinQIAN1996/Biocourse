@@ -480,84 +480,6 @@
     ]
   },
   {
-    "id": "cell-stem",
-    "title": "细胞结构探索",
-    "category": "cell",
-    "summary": "把细胞看成相互协作的生命系统。",
-    "versions": [
-      {
-        "id": "original",
-        "label": "1.0",
-        "edition": "原版",
-        "file": "细胞工程局_STEM探索课.html",
-        "published": "2026-10-28",
-        "dateNote": "本站首次公开日期；不等同于课件创作日期",
-        "summary": "把细胞看成相互协作的生命系统。",
-        "features": [
-          "膜结构工坊及模型视角操作",
-          "动物与叶肉细胞比较和分泌蛋白路线",
-          "伞藻证据讨论、工程验收与学习记录"
-        ],
-        "approach": "用研究员和工程师角色完成边界、协作、控制三项建造任务。",
-        "changes": [
-          "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
-        ],
-        "route": "courses/cell-stem/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 4479409,
-        "contentSha256": "119a4091906aa4dd1995cf49e438043504ab37a2119b52418fcacb0815aa2ad3",
-        "sourceFilename": "拓展_细胞工程_细胞工程局_STEM探索课.html",
-        "preview": {
-          "image": "assets/previews/cell-stem--original.webp",
-          "thumbnail": "assets/previews/cell-stem--original-640.webp",
-          "width": 1280,
-          "height": 800,
-          "alt": "细胞结构探索 · 原版 v1.0真实课件画面：没有单打独斗的生命。",
-          "scene": "没有单打独斗的生命。"
-        }
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 3,
-      "chapterTitle": "细胞的基本结构",
-      "sections": [
-        {
-          "number": 1,
-          "title": "细胞膜的结构和功能"
-        },
-        {
-          "number": 2,
-          "title": "细胞器之间的分工合作"
-        },
-        {
-          "number": 3,
-          "title": "细胞核的结构和功能"
-        }
-      ],
-      "integrated": true,
-      "label": "第3章 · 第1—3节综合"
-    },
-    "preview": {
-      "image": "assets/previews/cell-stem--original.webp",
-      "thumbnail": "assets/previews/cell-stem--original-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "细胞结构探索 · 原版 v1.0真实课件画面：没有单打独斗的生命。",
-      "scene": "没有单打独斗的生命。",
-      "versionId": "original"
-    },
-    "inquiry": "细胞里的部门，怎样协同工作？",
-    "activities": [
-      "结构观察",
-      "系统建模"
-    ]
-  },
-  {
     "id": "membrane",
     "title": "细胞膜",
     "category": "cell",
@@ -628,123 +550,11 @@
     ]
   },
   {
-    "id": "textbook-atlas",
-    "title": "细胞结构图谱",
-    "category": "cell",
-    "summary": "对照教材图示，练习定位、观察和解释。",
-    "versions": [
-      {
-        "id": "original",
-        "label": "1.0",
-        "edition": "原版",
-        "file": "细胞结构图谱_教材原图交互版.html",
-        "published": "2026-10-28",
-        "dateNote": "本站首次公开日期；不等同于课件创作日期",
-        "summary": "对照教材图示，练习定位、观察和解释。",
-        "features": [
-          "教材原图缩放与结构定位",
-          "指图挑战与名称显隐",
-          "分泌蛋白追踪、科学史和课堂任务"
-        ],
-        "approach": "先让学生指认位置，再用证据说明结构功能，最后串联运输过程。",
-        "changes": [
-          "独立课件归档上线。",
-          "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
-        ],
-        "route": "courses/textbook-atlas/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 94349,
-        "contentSha256": "3b29727ccd7aa56f98eb5779117dc2cc238924e9f9ac2533d742d8cf16c89d79",
-        "sourceFilename": "必修1_03-00_细胞结构图谱_教材原图交互版.html",
-        "preview": {
-          "image": "assets/previews/textbook-atlas--original.webp",
-          "thumbnail": "assets/previews/textbook-atlas--original-640.webp",
-          "width": 1280,
-          "height": 800,
-          "alt": "细胞结构图谱 · 原版 v1.0真实课件画面：从教材原图，读懂生命结构。；细胞全景；膜与边界",
-          "scene": "从教材原图，读懂生命结构。；细胞全景；膜与边界"
-        }
-      }
-    ],
-    "curriculum": {
-      "publisher": "人民教育出版社",
-      "book": "必修 1 · 分子与细胞",
-      "chapter": 3,
-      "chapterTitle": "细胞的基本结构",
-      "sections": [
-        {
-          "number": 1,
-          "title": "细胞膜的结构和功能"
-        },
-        {
-          "number": 2,
-          "title": "细胞器之间的分工合作"
-        },
-        {
-          "number": 3,
-          "title": "细胞核的结构和功能"
-        }
-      ],
-      "integrated": true,
-      "label": "第3章 · 第1—3节综合"
-    },
-    "preview": {
-      "image": "assets/previews/textbook-atlas--original.webp",
-      "thumbnail": "assets/previews/textbook-atlas--original-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "细胞结构图谱 · 原版 v1.0真实课件画面：从教材原图，读懂生命结构。；细胞全景；膜与边界",
-      "scene": "从教材原图，读懂生命结构。；细胞全景；膜与边界",
-      "versionId": "original"
-    },
-    "inquiry": "对照教材，找出结构之间的联系。",
-    "activities": [
-      "教材对照",
-      "指图挑战"
-    ]
-  },
-  {
     "id": "organelles",
     "title": "细胞器",
     "category": "cell",
     "summary": "比较细胞器结构，理解细胞内部的分工与协作。",
     "versions": [
-      {
-        "id": "workbuddy",
-        "label": "2.0",
-        "edition": "WorkBuddy 版",
-        "file": "workbuddy/3.2细胞器之间的分工合作.html",
-        "published": "2026-10-28",
-        "dateNote": "本站导入日期；编号用于区分讲授方案，不代表全面替代原版",
-        "summary": "以细胞工厂为情境，串联细胞器分工、离心实验与协作。",
-        "features": [
-          "细胞器图鉴与分工探索",
-          "差速离心分步操作",
-          "分泌蛋白动画、生物膜系统和练习"
-        ],
-        "approach": "先认识各部门，再用分离实验区分结构，最后追踪协作路线。",
-        "changes": [
-          "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
-          "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
-        ],
-        "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
-        "route": "courses/organelles/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 83337,
-        "contentSha256": "d6344f2a4aefa5e22f1912c77f6eb0eae8a808f12d0d19d518341264dc41cab7",
-        "sourceFilename": "3.2细胞器之间的分工合作.html",
-        "preview": {
-          "image": "assets/previews/organelles--workbuddy.webp",
-          "thumbnail": "assets/previews/organelles--workbuddy-640.webp",
-          "width": 1280,
-          "height": 800,
-          "alt": "细胞器 · WorkBuddy 版 v2.0真实课件画面：环节一「工厂部门」大盘点 —— 细胞器的分工",
-          "scene": "环节一「工厂部门」大盘点 —— 细胞器的分工"
-        }
-      },
       {
         "id": "original",
         "label": "1.0",
@@ -795,18 +605,18 @@
       "label": "第3章 · 第2节"
     },
     "preview": {
-      "image": "assets/previews/organelles--workbuddy.webp",
-      "thumbnail": "assets/previews/organelles--workbuddy-640.webp",
+      "image": "assets/previews/organelles--original.webp",
+      "thumbnail": "assets/previews/organelles--original-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "细胞器 · WorkBuddy 版 v2.0真实课件画面：环节一「工厂部门」大盘点 —— 细胞器的分工",
-      "scene": "环节一「工厂部门」大盘点 —— 细胞器的分工",
-      "versionId": "workbuddy"
+      "alt": "细胞器 · 原版 v1.0真实课件画面：微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
+      "scene": "微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
+      "versionId": "original"
     },
-    "inquiry": "不同细胞器，如何分工又合作？",
+    "inquiry": "看见结构，怎样理解细胞器的分工？",
     "activities": [
-      "结构比较",
-      "协作追踪"
+      "2D结构观察",
+      "分类比较"
     ]
   },
   {

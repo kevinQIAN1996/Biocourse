@@ -91,19 +91,6 @@
     }
   },
   {
-    "file": "细胞工程局_STEM探索课.html",
-    "title": "细胞结构探索 原版 1.0",
-    "category": "cell",
-    "preview": {
-      "image": "assets/previews/cell-stem--original.webp",
-      "thumbnail": "assets/previews/cell-stem--original-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "细胞结构探索 · 原版 v1.0真实课件画面：没有单打独斗的生命。",
-      "scene": "没有单打独斗的生命。"
-    }
-  },
-  {
     "file": "细胞膜_边界研究所_v1.0.html",
     "title": "细胞膜 原版 1.0",
     "category": "cell",
@@ -114,32 +101,6 @@
       "height": 800,
       "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
       "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。"
-    }
-  },
-  {
-    "file": "细胞结构图谱_教材原图交互版.html",
-    "title": "细胞结构图谱 原版 1.0",
-    "category": "cell",
-    "preview": {
-      "image": "assets/previews/textbook-atlas--original.webp",
-      "thumbnail": "assets/previews/textbook-atlas--original-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "细胞结构图谱 · 原版 v1.0真实课件画面：从教材原图，读懂生命结构。；细胞全景；膜与边界",
-      "scene": "从教材原图，读懂生命结构。；细胞全景；膜与边界"
-    }
-  },
-  {
-    "file": "workbuddy/3.2细胞器之间的分工合作.html",
-    "title": "细胞器 WorkBuddy 版 2.0",
-    "category": "cell",
-    "preview": {
-      "image": "assets/previews/organelles--workbuddy.webp",
-      "thumbnail": "assets/previews/organelles--workbuddy-640.webp",
-      "width": 1280,
-      "height": 800,
-      "alt": "细胞器 · WorkBuddy 版 v2.0真实课件画面：环节一「工厂部门」大盘点 —— 细胞器的分工",
-      "scene": "环节一「工厂部门」大盘点 —— 细胞器的分工"
     }
   },
   {
