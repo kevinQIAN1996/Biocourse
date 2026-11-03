@@ -880,6 +880,54 @@
     "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。"
   },
   {
+    "file": "lessons/选择性必修1_02-03_神经冲动的产生和传导_神经电生理与突触药理高精工作站_v1.0.html",
+    "title": "神经冲动的产生和传导 神经电生理高可读版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-impulse--electrophysiology-v1.webp",
+      "thumbnail": "assets/previews/neural-impulse--electrophysiology-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经冲动的产生和传导 · 神经电生理高可读版 v1.0真实课件画面",
+      "scene": "联动离子通道、动作电位、检流计和突触靶点，在分步操作中解释神经信号。"
+    },
+    "latest": true,
+    "route": "courses/neural-impulse/electrophysiology-v1/",
+    "design": "把离子流、记录位置与电位曲线同步展示，让学生先区分测量对象，再用刺激与靶点对照检验解释。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-04_神经系统的分级调节_临床神经分级调控与泌尿动力学仿真工作站_v1.0.html",
+    "title": "神经系统的分级调节 分级调控与泌尿动力学版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-hierarchy--hierarchical-control-v1.webp",
+      "thumbnail": "assets/previews/neural-hierarchy--hierarchical-control-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经系统的分级调节 · 分级调控与泌尿动力学版 v1.0真实课件画面",
+      "scene": "比较运动皮层代表区与排尿分级回路，分别判断尿意、意识控制和局部反射。"
+    },
+    "latest": true,
+    "route": "courses/neural-hierarchy/hierarchical-control-v1/",
+    "design": "用可暂停的神经脉冲连接解剖位置和器官响应，把感觉、随意控制与有效排空拆成独立判据。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-05_人脑的高级功能_人脑高级认知与临床神经药理工作站_v1.0.html",
+    "title": "人脑的高级功能 高级认知与5-HT靶点版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/higher-brain--cognition-v1.webp",
+      "thumbnail": "assets/previews/higher-brain--cognition-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "人脑的高级功能 · 高级认知与5-HT靶点版 v1.0真实课件画面",
+      "scene": "对照言语区与初级感觉皮层，操作记忆阀门、海马损伤条件与5-HT药理靶点。"
+    },
+    "latest": true,
+    "route": "courses/higher-brain/cognition-v1/",
+    "design": "把基础感觉、语言加工、即时保持、长期巩固和药理机制逐层拆开，用对照揭示每个模型能解释什么。"
+  },
+  {
     "file": "种群及其动态_山野调查手记_v1.0.html",
     "title": "种群及其动态 原版 1.0",
     "category": "eco",
