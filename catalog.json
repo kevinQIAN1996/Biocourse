@@ -21,13 +21,14 @@
         "approach": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/cell-basics/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "9d1ce2c2eb7000c401169808ed10968b45782a90f0539d086e4cb273393c0093",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "6144bea6bbb22424cddf7e67b1c95c18bf2730da7bb5b1c0946c53875cedd1de",
         "sourceFilename": "必修1_01-01_细胞是生命活动的基本单位_PBL生命边界策展工程_v1.0.html",
-        "bytes": 109610,
+        "bytes": 119916,
         "preview": {
           "image": "assets/previews/cell-basics--interactive-v1-0.webp",
           "thumbnail": "assets/previews/cell-basics--interactive-v1-0-640.webp",
@@ -36,8 +37,8 @@
           "alt": "细胞是生命活动的基本单位 · PBL策展版 v1.0真实课件画面：让证据，覆盖一张错误的手稿。",
           "scene": "让证据，覆盖一张错误的手稿。"
         },
-        "sourceModifiedAt": "2026-11-01T13:56:54.764Z",
-        "sourceSha256": "9d1ce2c2eb7000c401169808ed10968b45782a90f0539d086e4cb273393c0093",
+        "sourceModifiedAt": "2026-11-03T08:48:21.999Z",
+        "sourceSha256": "6144bea6bbb22424cddf7e67b1c95c18bf2730da7bb5b1c0946c53875cedd1de",
         "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。"
       }
     ],
@@ -95,13 +96,14 @@
         "approach": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/cell-diversity/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "ead050f079e16b9e208eb99fdd8988e5876113880ac35b602c54457d35da7177",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "18c006542284a9f4d6ad707c5be47099860e795928ec1a668b44ce60609f2439",
         "sourceFilename": "必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
-        "bytes": 97411,
+        "bytes": 107717,
         "preview": {
           "image": "assets/previews/cell-diversity--interactive-v1-0.webp",
           "thumbnail": "assets/previews/cell-diversity--interactive-v1-0-640.webp",
@@ -110,8 +112,8 @@
           "alt": "细胞的多样性和统一性 · 镜检海关版 v1.0真实课件画面：你的手向左，物像往哪走？",
           "scene": "你的手向左，物像往哪走？"
         },
-        "sourceModifiedAt": "2026-10-30T14:20:17.965Z",
-        "sourceSha256": "ead050f079e16b9e208eb99fdd8988e5876113880ac35b602c54457d35da7177",
+        "sourceModifiedAt": "2026-11-03T08:48:22.005Z",
+        "sourceSha256": "18c006542284a9f4d6ad707c5be47099860e795928ec1a668b44ce60609f2439",
         "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。"
       }
     ],
@@ -169,13 +171,14 @@
         "approach": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/elements/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "66ea28d5c68e080f842f7bcd52c2c95a00701f232c84b4e8754bfa11afe1d52f",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "78003bdac45aa077decdc9131fc796d3ebb1d5df64573886e8f3724e2f971d26",
         "sourceFilename": "必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
-        "bytes": 99634,
+        "bytes": 109940,
         "preview": {
           "image": "assets/previews/elements--interactive-v1-0.webp",
           "thumbnail": "assets/previews/elements--interactive-v1-0-640.webp",
@@ -184,8 +187,8 @@
           "alt": "细胞中的元素和化合物 · 包豪斯实验版 v1.0真实课件画面：拿走的是水，为什么元素会换座？",
           "scene": "拿走的是水，为什么元素会换座？"
         },
-        "sourceModifiedAt": "2026-11-01T13:25:31.416Z",
-        "sourceSha256": "66ea28d5c68e080f842f7bcd52c2c95a00701f232c84b4e8754bfa11afe1d52f",
+        "sourceModifiedAt": "2026-11-03T08:48:22.010Z",
+        "sourceSha256": "78003bdac45aa077decdc9131fc796d3ebb1d5df64573886e8f3724e2f971d26",
         "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。"
       }
     ],
@@ -243,13 +246,14 @@
         "approach": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/inorganics/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "fd21130485832507ef0726c9ebe331365883388bb56ec4539360e755c7ea1433",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "048da202714abb092418e9129c5a57944c954421edf506363d8f03840a619474",
         "sourceFilename": "必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
-        "bytes": 80032,
+        "bytes": 90338,
         "preview": {
           "image": "assets/previews/inorganics--interactive-v1-0.webp",
           "thumbnail": "assets/previews/inorganics--interactive-v1-0-640.webp",
@@ -258,8 +262,8 @@
           "alt": "细胞中的无机物 · 深空维生版 v1.0真实课件画面：水的“引力魔术”，先从正负两端开始。",
           "scene": "水的“引力魔术”，先从正负两端开始。"
         },
-        "sourceModifiedAt": "2026-10-30T11:00:11.801Z",
-        "sourceSha256": "fd21130485832507ef0726c9ebe331365883388bb56ec4539360e755c7ea1433",
+        "sourceModifiedAt": "2026-11-03T08:48:22.014Z",
+        "sourceSha256": "048da202714abb092418e9129c5a57944c954421edf506363d8f03840a619474",
         "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。"
       }
     ],
@@ -317,13 +321,14 @@
         "approach": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/carbohydrate-lipid/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "d1e7922d138c016175a10837ecaff2dc79cca0fb462fb5000f51272e26ac822f",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "49f91a3aa77c47332fc9dbe6af181e84513a96e8d3f036f215186025b43fc59a",
         "sourceFilename": "必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
-        "bytes": 82135,
+        "bytes": 92441,
         "preview": {
           "image": "assets/previews/carbohydrate-lipid--interactive-v1-0.webp",
           "thumbnail": "assets/previews/carbohydrate-lipid--interactive-v1-0-640.webp",
@@ -332,8 +337,8 @@
           "alt": "细胞中的糖类和脂质 · 能量造物版 v1.0真实课件画面：糖类，不只是“甜甜的一块”。",
           "scene": "糖类，不只是“甜甜的一块”。"
         },
-        "sourceModifiedAt": "2026-10-30T10:27:58.790Z",
-        "sourceSha256": "d1e7922d138c016175a10837ecaff2dc79cca0fb462fb5000f51272e26ac822f",
+        "sourceModifiedAt": "2026-11-03T08:48:22.018Z",
+        "sourceSha256": "49f91a3aa77c47332fc9dbe6af181e84513a96e8d3f036f215186025b43fc59a",
         "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。"
       }
     ],
@@ -393,12 +398,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/protein/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 190544,
-        "contentSha256": "6670bda8055c06c24a33b543adb00055b8093ebb44039ecdbb9281e2f9c52587",
+        "platformUpdated": "2026-11-03",
+        "bytes": 200850,
+        "contentSha256": "a7e194353e629fb88859fbeb891e02a8485f759e7b785d09b78f30f2676ee8dd",
         "sourceFilename": "必修1_02-04_蛋白质生命架构实验室.html",
         "preview": {
           "image": "assets/previews/protein--original.webp",
@@ -408,8 +414,8 @@
           "alt": "蛋白质 · 原版 v1.0真实课件画面：蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。",
           "scene": "蛋白质 是生命活动的主要承担者；相连之后，还需要空间秩序。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.755Z",
-        "sourceSha256": "f24c0312e80c1973655386526b7f75a322a7c5d7ca9c7f1b6e146a5b51ca5b50",
+        "sourceModifiedAt": "2026-11-03T08:48:22.022Z",
+        "sourceSha256": "23c5c0a0d7e86bcf382218e4c8ce18f7127253421a8c498dfe8772b584fa576b",
         "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。"
       }
     ],
@@ -469,12 +475,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/nucleic/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 101843,
-        "contentSha256": "150a355b28c7f592d674a95b28aa5608fbfaa411d2e542cecd81c7d9de7b473c",
+        "platformUpdated": "2026-11-03",
+        "bytes": 112149,
+        "contentSha256": "7e6dbb64829ce8ca79c8d566402298f5b3c3d11fa0c995bec84dd7e06efca524",
         "sourceFilename": "必修1_02-05_核酸训练实验室.html",
         "preview": {
           "image": "assets/previews/nucleic--original.webp",
@@ -484,8 +491,8 @@
           "alt": "核酸 · 原版 v1.0真实课件画面：从平面，走向双螺旋",
           "scene": "从平面，走向双螺旋"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.750Z",
-        "sourceSha256": "2467608e378042f2b92cada1ad333285eee9e3c922cf59ecfe77533fd59d1a1c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.026Z",
+        "sourceSha256": "fe60322d47e3cd6a100cfbf997e58bb5ad30ef5a59e73ef4439ca876ad54f625",
         "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。"
       }
     ],
@@ -545,12 +552,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/membrane/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 99757,
-        "contentSha256": "81f3c2eabbc38c4cd1cd9579e56f2aedcda1daff6c3cce7d98b424a4c272b366",
+        "platformUpdated": "2026-11-03",
+        "bytes": 110063,
+        "contentSha256": "8fd038a4b6e40d9b3e6c27d457e5be584784e354b1d82d6ef8d1ce854b7ba33d",
         "sourceFilename": "必修1_03-01_细胞膜_边界研究所_v1.0.html",
         "preview": {
           "image": "assets/previews/membrane--original.webp",
@@ -560,8 +568,8 @@
           "alt": "细胞膜 · 原版 v1.0真实课件画面：边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。",
           "scene": "边界，并非封闭的墙；它让细胞独立，也让细胞保持联系。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.753Z",
-        "sourceSha256": "f62f37d6cbf1e185ec4970731d69e7536196004ce238e86da67a119046caa043",
+        "sourceModifiedAt": "2026-11-03T08:48:22.031Z",
+        "sourceSha256": "1fb9815fc64876b72203fb098d66140736e1808c1c1c85fb38cac78023676234",
         "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。"
       }
     ],
@@ -621,12 +629,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/organelles/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 77936,
-        "contentSha256": "b884dd05ccd9d582fbc6dfeb5e86f8b554dbc2961b6efe37813cff9516301066",
+        "platformUpdated": "2026-11-03",
+        "bytes": 88242,
+        "contentSha256": "922845ce783ecb9d90f86f4627b5724d7fd64de4b92d7badfb36db3ccf7cb6e0",
         "sourceFilename": "必修1_03-02_细胞器图鉴_2D互动版_v1.0.html",
         "preview": {
           "image": "assets/previews/organelles--original.webp",
@@ -636,8 +645,8 @@
           "alt": "细胞器 · 原版 v1.0真实课件画面：微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。",
           "scene": "微小的结构，各有一份工作。；线粒体；放在一起，差别才清楚。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.751Z",
-        "sourceSha256": "82200ed4ad127c31d52804917be8107a9107b1cba5d01e2b916a440178531cd9",
+        "sourceModifiedAt": "2026-11-03T08:48:22.036Z",
+        "sourceSha256": "3e78daa7688c0d7ce14a9b899f5824ec9f3cae8e7605ede258ffeaf2d2d37921",
         "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
       }
     ],
@@ -697,12 +706,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/secretion/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 72583,
-        "contentSha256": "376c97b3e068fbd93eb7dffba4b9a75532dcbcf095c901a6a1babc7ef882c124",
+        "platformUpdated": "2026-11-03",
+        "bytes": 82889,
+        "contentSha256": "f5d400c016a3fb106a4933ff69b13351075534230030ae2475fde6d1ce900a2e",
         "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.1.html",
         "preview": {
           "image": "assets/previews/secretion--original.webp",
@@ -712,8 +722,8 @@
           "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
           "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.748Z",
-        "sourceSha256": "326c13ce99c6d410908be3d22b501e589c73f965f6ef4f7b674a5615d45a8a87",
+        "sourceModifiedAt": "2026-11-03T08:48:22.040Z",
+        "sourceSha256": "62ee3a332d5ad73748fadd7e5009f55b4c355ce5caa1456872abfb4d5d3ee37b",
         "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
       },
       {
@@ -733,12 +743,13 @@
         "changes": [
           "保留早期交互流程，支持与新版对照。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/secretion/legacy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 55238,
-        "contentSha256": "6d4a2d7188889b0efd89d26957740b149fcbf8e10fd7eeb0791bfa25a35d6adb",
+        "platformUpdated": "2026-11-03",
+        "bytes": 65544,
+        "contentSha256": "9ab012f8c95966aca1bf93d53763860b421cf90914d37d385775a20c49cddf4d",
         "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.0.html",
         "preview": {
           "image": "assets/previews/secretion--legacy.webp",
@@ -748,8 +759,8 @@
           "alt": "分泌蛋白 · 历史原版 v1.0真实课件画面：一条蛋白质，如何走出细胞？；边合成，边进入。",
           "scene": "一条蛋白质，如何走出细胞？；边合成，边进入。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.746Z",
-        "sourceSha256": "973c474276c33f08bc878670eb186feb3dbc9e22f87c408109bc662b0f812fa0",
+        "sourceModifiedAt": "2026-11-03T08:48:22.044Z",
+        "sourceSha256": "d3daceada4cdc4f7ed004001b58271bc6dde0fbaf5ba5ec187fc8ba8aef5066d",
         "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
       }
     ],
@@ -809,15 +820,16 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "sourceFilename": "必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T04:19:19.919Z",
-        "sourceSha256": "204d2a5570f28bcf621c257c32652681d4bb8f8a19601f2c039fcf16e7fcfa3c",
-        "contentSha256": "204d2a5570f28bcf621c257c32652681d4bb8f8a19601f2c039fcf16e7fcfa3c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.049Z",
+        "sourceSha256": "4f079cc92c9b4ba25e413d97359dc9f5f70555a6c3b10aec76c7dca843ed54db",
+        "contentSha256": "4f079cc92c9b4ba25e413d97359dc9f5f70555a6c3b10aec76c7dca843ed54db",
         "route": "courses/nucleus/prometheus-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 115100,
+        "platformUpdated": "2026-11-03",
+        "bytes": 125406,
         "preview": {
           "image": "assets/previews/nucleus--prometheus-v1.webp",
           "thumbnail": "assets/previews/nucleus--prometheus-v1-640.webp",
@@ -844,13 +856,14 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/nucleus/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 54068,
-        "contentSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad",
+        "platformUpdated": "2026-11-03",
+        "bytes": 64374,
+        "contentSha256": "c60d87635a0dacfdf3f2ad4f38355a7faa4698f1fb26842efe522b5aa36302e1",
         "sourceFilename": "3.3细胞核的结构和功能.html",
         "preview": {
           "image": "assets/previews/nucleus--workbuddy.webp",
@@ -860,8 +873,8 @@
           "alt": "细胞核的结构和功能 · WorkBuddy 版 v1.0真实课件画面：环节三拆开\"总控室\" —— 3D 细胞核模型",
           "scene": "环节三拆开\"总控室\" —— 3D 细胞核模型"
         },
-        "sourceModifiedAt": "2026-10-19T11:31:27.940Z",
-        "sourceSha256": "0ebb27c56cadef465e34fbc3e77774ab33913aa31a3221646707af4c87271bad",
+        "sourceModifiedAt": "2026-11-03T08:48:22.052Z",
+        "sourceSha256": "c60d87635a0dacfdf3f2ad4f38355a7faa4698f1fb26842efe522b5aa36302e1",
         "design": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。"
       }
     ],
@@ -921,15 +934,16 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "sourceFilename": "必修1_04-01_被动运输_PBL绿洲与仿生膜工程_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T05:51:15.813Z",
-        "sourceSha256": "cc66a9c5d1e474bdb29f7a9fd473304fdc083c2716de7e1beb0c74295715d0d1",
-        "contentSha256": "cc66a9c5d1e474bdb29f7a9fd473304fdc083c2716de7e1beb0c74295715d0d1",
+        "sourceModifiedAt": "2026-11-03T08:48:22.059Z",
+        "sourceSha256": "2968bfc0d6807e98bcdc9b061e9d2d9c8ccf9fc2afe4b567b7a5aabba06b62ea",
+        "contentSha256": "2968bfc0d6807e98bcdc9b061e9d2d9c8ccf9fc2afe4b567b7a5aabba06b62ea",
         "route": "courses/passive/oasis-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 132438,
+        "platformUpdated": "2026-11-03",
+        "bytes": 142744,
         "preview": {
           "image": "assets/previews/passive--oasis-v1.webp",
           "thumbnail": "assets/previews/passive--oasis-v1-640.webp",
@@ -956,13 +970,14 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/passive/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 53737,
-        "contentSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3",
+        "platformUpdated": "2026-11-03",
+        "bytes": 64043,
+        "contentSha256": "7b210786e25dd3e4294993e341465570ff50388d84bad89b3368e2979f7aa461",
         "sourceFilename": "4.1被动运输.html",
         "preview": {
           "image": "assets/previews/passive--workbuddy.webp",
@@ -972,8 +987,8 @@
           "alt": "被动运输 · WorkBuddy 版 v1.0真实课件画面：🧅 植物细胞的质壁分离与复原",
           "scene": "🧅 植物细胞的质壁分离与复原"
         },
-        "sourceModifiedAt": "2026-10-19T12:15:55.394Z",
-        "sourceSha256": "47b5464fec4be2eec32285630d73f8a6bdecc590c4880ce5199a7af854b99de3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.062Z",
+        "sourceSha256": "7b210786e25dd3e4294993e341465570ff50388d84bad89b3368e2979f7aa461",
         "design": "由水的运动推理细胞变化，再比较被动运输的不同方式。"
       }
     ],
@@ -1033,15 +1048,16 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_跨膜逆流引擎与液态囊泡工坊_v2.0.html",
-        "sourceModifiedAt": "2026-11-02T07:29:26.951Z",
-        "sourceSha256": "a6f653e34fd735a91b60e81f7deb0504556450480253b18edcdf55317db0c885",
-        "contentSha256": "a6f653e34fd735a91b60e81f7deb0504556450480253b18edcdf55317db0c885",
+        "sourceModifiedAt": "2026-11-03T08:48:22.066Z",
+        "sourceSha256": "bd1aa945eec7a9e622147a2c7b768130da3b1e1cb78d910cd14d16a87a620ab9",
+        "contentSha256": "bd1aa945eec7a9e622147a2c7b768130da3b1e1cb78d910cd14d16a87a620ab9",
         "route": "courses/active/counterflow-v2/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 120992,
+        "platformUpdated": "2026-11-03",
+        "bytes": 131298,
         "preview": {
           "image": "assets/previews/active--counterflow-v2.webp",
           "thumbnail": "assets/previews/active--counterflow-v2-640.webp",
@@ -1068,13 +1084,14 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/active/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 52126,
-        "contentSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad",
+        "platformUpdated": "2026-11-03",
+        "bytes": 62432,
+        "contentSha256": "cd2e5b57e28ab6bd2e3803ceb90f5024ccb48016d936704e38b7ad0235f1384b",
         "sourceFilename": "4.2主动运输与胞吞胞吐.html",
         "preview": {
           "image": "assets/previews/active--workbuddy.webp",
@@ -1084,8 +1101,8 @@
           "alt": "主动运输与胞吞胞吐 · WorkBuddy 版 v2.0真实课件画面：🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）",
           "scene": "🔬 明星打工人：钠钾泵（Na⁺-K⁺ 泵）"
         },
-        "sourceModifiedAt": "2026-10-19T12:28:19.471Z",
-        "sourceSha256": "09fdcc0c749951c4cb1365d9478b9daa702f842474444158853d1ccac0cb07ad",
+        "sourceModifiedAt": "2026-11-03T08:48:22.071Z",
+        "sourceSha256": "cd2e5b57e28ab6bd2e3803ceb90f5024ccb48016d936704e38b7ad0235f1384b",
         "design": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。"
       },
       {
@@ -1106,12 +1123,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/active/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 94356,
-        "contentSha256": "9cbfaa6f61d9c6b6e5d64925a07ef251c7a14bb9266bb2d7102c2110ec478418",
+        "platformUpdated": "2026-11-03",
+        "bytes": 104662,
+        "contentSha256": "c779b69b07cb116dabce90bd1ddea0cb0a8ef75c2880248d35abbf0079c827eb",
         "sourceFilename": "必修1_04-02_主动运输与胞吞胞吐_细胞物流港_v1.0.html",
         "preview": {
           "image": "assets/previews/active--original.webp",
@@ -1121,8 +1139,8 @@
           "alt": "主动运输与胞吞胞吐 · 原版 v1.0真实课件画面：过一道膜，有多少种办法？",
           "scene": "过一道膜，有多少种办法？"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.743Z",
-        "sourceSha256": "05749df8a1fc87c2f3a74443d677baedb09c63a0b425c49c6422ef02b602f50d",
+        "sourceModifiedAt": "2026-11-03T08:48:22.075Z",
+        "sourceSha256": "33e65ce950e003e5466bb8eb8f757d3a176e1f20a6f589a7ac60e12c96d37e7b",
         "design": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。"
       }
     ],
@@ -1181,13 +1199,14 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/enzyme/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 50243,
-        "contentSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3",
+        "platformUpdated": "2026-11-03",
+        "bytes": 60549,
+        "contentSha256": "e057e95cc6797ea73f438229e4a6f395202db6ddf10bd15342280e00db2a1e1c",
         "sourceFilename": "5.1降低化学反应的活化能.html",
         "preview": {
           "image": "assets/previews/enzyme--workbuddy.webp",
@@ -1197,8 +1216,8 @@
           "alt": "降低活化能的酶 · WorkBuddy 版 v2.0真实课件画面：🧪 比较过氧化氢在不同条件下的分解",
           "scene": "🧪 比较过氧化氢在不同条件下的分解"
         },
-        "sourceModifiedAt": "2026-10-19T12:41:28.515Z",
-        "sourceSha256": "10aa89f4de79bc743431fd47806dd0775638d2ad45597e69d227e4914ea599a3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.079Z",
+        "sourceSha256": "e057e95cc6797ea73f438229e4a6f395202db6ddf10bd15342280e00db2a1e1c",
         "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
       },
       {
@@ -1219,12 +1238,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/enzyme/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 257135,
-        "contentSha256": "bfeca034492985b933f37ff7c9722cac695e0f3648e9039dcaceeb47e68dbfe2",
+        "platformUpdated": "2026-11-03",
+        "bytes": 267441,
+        "contentSha256": "75f84ca4890f4941ed7c51196411d4abc00ea476b70dcbd43d98e09fbde0d6e4",
         "sourceFilename": "必修1_05-01_降低活化能的酶_催化现场_v1.0.html",
         "preview": {
           "image": "assets/previews/enzyme--original.webp",
@@ -1234,8 +1254,8 @@
           "alt": "降低活化能的酶 · 原版 v1.0真实课件画面：气泡多，不等于答案完整；先选一组，再说出理由。",
           "scene": "气泡多，不等于答案完整；先选一组，再说出理由。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:59.007Z",
-        "sourceSha256": "4ee9ed321410236a621d66d3191158b91036765f6976f97507d44639d430d6b8",
+        "sourceModifiedAt": "2026-11-03T08:48:22.083Z",
+        "sourceSha256": "588930d1a6f6aac2f9ed35113e6561deb3ac533a323c846a9b328ced9de63fab",
         "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
       }
     ],
@@ -1295,13 +1315,14 @@
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
           "修正 ATP 水解供能说明：区分断键与整体反应的自由能变化，并标明标准条件。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "教学辨析：ATP 水解的整体反应释放能量，不能把“断开一根化学键本身”理解为能量来源；约 30.5 kJ/mol 对应标准条件，细胞内实际数值受条件影响。",
         "route": "courses/atp/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 41149,
-        "contentSha256": "baeacb637aae47d1d62577ef9cddb3f7359b3d6e36bb36d628d0fbecbce1738d",
+        "platformUpdated": "2026-11-03",
+        "bytes": 51455,
+        "contentSha256": "7d609289ca5e51a5756ee2562c2fab5102d2b880280135df2bbc19615b747764",
         "sourceFilename": "5.2细胞的能量货币ATP.html",
         "preview": {
           "image": "assets/previews/atp--workbuddy.webp",
@@ -1311,8 +1332,8 @@
           "alt": "ATP · WorkBuddy 版 v2.0.1真实课件画面：🔬 拆开 ATP：一枚\"现金\"的内部构造",
           "scene": "🔬 拆开 ATP：一枚\"现金\"的内部构造"
         },
-        "sourceModifiedAt": "2026-10-19T12:50:44.708Z",
-        "sourceSha256": "33bfa45babe84d6fb084b8eebce4c5d6310f8c6fca768973ebfb444025daed77",
+        "sourceModifiedAt": "2026-11-03T08:48:22.088Z",
+        "sourceSha256": "43fc0d7e64deeb10f3e68920eaa3594cba35a251a3365d14498c25402ec56715",
         "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
       },
       {
@@ -1333,12 +1354,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/atp/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 236172,
-        "contentSha256": "45e9fc071128a7361e57c22b3f0751a43d7c3c5e6d8a3ed459acc72c160bc571",
+        "platformUpdated": "2026-11-03",
+        "bytes": 246478,
+        "contentSha256": "9663581a340329c951b724a167657da02e2b9ee1b0a3e96b28e858ddc45ef6b2",
         "sourceFilename": "必修1_05-02_ATP_细胞能量交换站_v1.0.html",
         "preview": {
           "image": "assets/previews/atp--original.webp",
@@ -1348,8 +1370,8 @@
           "alt": "ATP · 原版 v1.0真实课件画面：细胞怎样支付每一次工作？；选对角色，再解释“货币”。",
           "scene": "细胞怎样支付每一次工作？；选对角色，再解释“货币”。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.463Z",
-        "sourceSha256": "bdde21c1ad6e5f74011c28e99ab46b902974b4748a71bd49de24f6dde44b74a1",
+        "sourceModifiedAt": "2026-11-03T08:48:22.091Z",
+        "sourceSha256": "635aead4c79670b7f13a71d11fddaae91ab9e4ab7dd29aaeb7413c8c3baa70b5",
         "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
       }
     ],
@@ -1408,13 +1430,14 @@
         "changes": [
           "新增 WorkBuddy 讲授方案，保留原版及历史版本。",
           "接入平台导航、打开次数、主题评论与版本记录。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "note": "本版中的闯关、工厂等是教学比喻；动画为简化示意。题目来源和年份请以原始试卷核验为准。",
         "route": "courses/respiration/workbuddy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 46818,
-        "contentSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb",
+        "platformUpdated": "2026-11-03",
+        "bytes": 57124,
+        "contentSha256": "dda17421d6e4ea3aed7c94cd1435bb03e09f86660f22f86a877284f2a2a7a020",
         "sourceFilename": "5.3细胞呼吸的原理和应用.html",
         "preview": {
           "image": "assets/previews/respiration--workbuddy.webp",
@@ -1424,8 +1447,8 @@
           "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
           "scene": "参观主车间：有氧呼吸三阶段"
         },
-        "sourceModifiedAt": "2026-10-19T13:25:23.219Z",
-        "sourceSha256": "ebf700da165162004f113257c6db69b8bdff08d7a846737a95d260ac73fcfecb",
+        "sourceModifiedAt": "2026-11-03T08:48:22.095Z",
+        "sourceSha256": "dda17421d6e4ea3aed7c94cd1435bb03e09f86660f22f86a877284f2a2a7a020",
         "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
       },
       {
@@ -1446,12 +1469,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/respiration/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 87086,
-        "contentSha256": "42a4ea0d5788955d4730761f1adcfdbbbe04c42bd19792a676c28dc9e396ce54",
+        "platformUpdated": "2026-11-03",
+        "bytes": 97392,
+        "contentSha256": "a0cb98b2e251c4d46d1f7686ef015f80d4856628c94dac7f820a18eeced572d3",
         "sourceFilename": "必修1_05-03_细胞呼吸_碳的旅程_v1.0.html",
         "preview": {
           "image": "assets/previews/respiration--original.webp",
@@ -1461,8 +1485,8 @@
           "alt": "细胞呼吸 · 原版 v1.0真实课件画面：把反应，放回正确的位置。；先定位，再追踪。",
           "scene": "把反应，放回正确的位置。；先定位，再追踪。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.769Z",
-        "sourceSha256": "e28b0632b97a4dea899d1c414b38a97d54d3d234f0df85e59b92044c7009b1a8",
+        "sourceModifiedAt": "2026-11-03T08:48:22.098Z",
+        "sourceSha256": "f5132f97dbe9bf672d76ba2fcae00d6ffc063f50df3adb8ef888ab58be6ab5c7",
         "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
       }
     ],
@@ -1522,12 +1546,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/photosynthesis/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 83485,
-        "contentSha256": "56e57fe5263e68a9f150d5c4ea8635108c92d46f829f30a64e2383e2084c7260",
+        "platformUpdated": "2026-11-03",
+        "bytes": 93791,
+        "contentSha256": "e99821dbea8790460b1d065a1d0b91ba352b6fa290cdb7d037d61f448563e9a5",
         "sourceFilename": "必修1_05-04_光合作用_一束光的温室_v1.0.html",
         "preview": {
           "image": "assets/previews/photosynthesis--original.webp",
@@ -1537,8 +1562,8 @@
           "alt": "光合作用 · 原版 v1.0真实课件画面：把一束光，变成生长的可能。",
           "scene": "把一束光，变成生长的可能。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.745Z",
-        "sourceSha256": "50dfce0384f34f523106f3aa1acfe4f20987411de2398d240fb6bc8f4415b72c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.103Z",
+        "sourceSha256": "eb33147743a220d9aac7a0c52105f2072b2ceaaae212e00233d1d8c1148a5ea7",
         "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。"
       }
     ],
@@ -1598,12 +1623,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/division/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 103871,
-        "contentSha256": "5b3f7ea59262bedc119a373298402adad4e0471c02c4337100074750cb901dd7",
+        "platformUpdated": "2026-11-03",
+        "bytes": 114177,
+        "contentSha256": "a1cc066f15b4e9a48158a3ceba192cb9e26bbd4e7cce1fc2493e468596b28d49",
         "sourceFilename": "必修1_06-01_细胞的增殖_一分为二放映室_v1.0.html",
         "preview": {
           "image": "assets/previews/division--original.webp",
@@ -1613,8 +1639,8 @@
           "alt": "细胞的增殖 · 原版 v1.0真实课件画面：分裂放映室",
           "scene": "分裂放映室"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.796Z",
-        "sourceSha256": "28768d46182d4f8cc3dd5b9b7f9a34a36b54fb61fee78a0c81e60b5a6094718c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.106Z",
+        "sourceSha256": "0270191af03ace03a0a7c935cf4dace7a7e27663bdd3235cb7721485694909f2",
         "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。"
       }
     ],
@@ -1674,12 +1700,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/differentiation/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 99804,
-        "contentSha256": "dee7f4a11a9714ba885316f3f324df3b864a9723b899fd205787fd5b6e5736f4",
+        "platformUpdated": "2026-11-03",
+        "bytes": 110110,
+        "contentSha256": "bcf04bbd44eab3b895607b0e22081ee2b0f2e97b580498462f63ac3754ca0815",
         "sourceFilename": "必修1_06-02_细胞的分化_同源异职展_v1.0.html",
         "preview": {
           "image": "assets/previews/differentiation--original.webp",
@@ -1689,8 +1716,8 @@
           "alt": "细胞的分化 · 原版 v1.0真实课件画面：同源。异职。；从相同的起点，走向不同的分工。",
           "scene": "同源。异职。；从相同的起点，走向不同的分工。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.794Z",
-        "sourceSha256": "6f91b4becc6d9f41d09863cd9ff2ef7fd10a5b5dea6743c17cd27321aff830d5",
+        "sourceModifiedAt": "2026-11-03T08:48:22.109Z",
+        "sourceSha256": "bd086999c8cc802f43a4528c55f47c5721031ae919a068cb26d51d7cc9fe93a1",
         "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。"
       }
     ],
@@ -1750,12 +1777,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/aging/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 88382,
-        "contentSha256": "6a5882905caa3f39dfd7fd59c7f956a5bf877f1e88f4a412a6d03abbfb77dde4",
+        "platformUpdated": "2026-11-03",
+        "bytes": 98688,
+        "contentSha256": "f607050fb95c3468764ee48c2e42ba987c9cc809d2ba85fae3734bcb62e8b459",
         "sourceFilename": "必修1_06-03_细胞的衰老和死亡_生命维护现场_v1.0.html",
         "preview": {
           "image": "assets/previews/aging--original.webp",
@@ -1765,8 +1793,8 @@
           "alt": "细胞的衰老和死亡 · 原版 v1.0真实课件画面：变老，留下了哪些线索？",
           "scene": "变老，留下了哪些线索？"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.797Z",
-        "sourceSha256": "28fdb8c6b6b16a150ee0850e149efc27cda046372cbc44c7892cff8d9d81d6b7",
+        "sourceModifiedAt": "2026-11-03T08:48:22.113Z",
+        "sourceSha256": "1c29f91523217e3427b66480678279cdb3a33d1cc66464937492bc50ec18806d",
         "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。"
       }
     ],
@@ -1826,12 +1854,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/mendel/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 103617,
-        "contentSha256": "47b31ed8873841460db1f3ff706a39dc1b0e994e4c2b74c3d3ee7dc99480f5f1",
+        "platformUpdated": "2026-11-03",
+        "bytes": 113923,
+        "contentSha256": "013c6999959961f9226606453346b514b2b3850b8219aa9566b32a11a27c4547",
         "sourceFilename": "必修2_01-01_孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html",
         "preview": {
           "image": "assets/previews/mendel--original.webp",
@@ -1841,8 +1870,8 @@
           "alt": "孟德尔的豌豆杂交实验 · 原版 v1.0真实课件画面：矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？",
           "scene": "矮茎，真的消失了吗？；纯种高茎 × 纯种矮茎；下一代，会不会有矮茎？"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.763Z",
-        "sourceSha256": "e51089d6d7db814be0c83269b16aec8b565ebff5a5f19047e59aa57ecab19a71",
+        "sourceModifiedAt": "2026-11-03T08:48:22.117Z",
+        "sourceSha256": "fd36f8434bb9d8667f78652fcd7987875e5e5c6501a14bc9118f393cd32d73dd",
         "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。"
       }
     ],
@@ -1904,13 +1933,14 @@
         "approach": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/meiosis/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "62e229d9a574c044ac385da746fa93272d5728f244d53b98831264900a51ffcf",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "bdde83efc2f73ecd364d68058cdd94eb6572e703636b2b466f7ed0a7146a35d0",
         "sourceFilename": "必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
-        "bytes": 110700,
+        "bytes": 121006,
         "preview": {
           "image": "assets/previews/meiosis--interactive-v1-0.webp",
           "thumbnail": "assets/previews/meiosis--interactive-v1-0-640.webp",
@@ -1919,8 +1949,8 @@
           "alt": "减数分裂和受精作用 · 荧光细胞剧场版 v1.0真实课件画面：先分同源，再分姐妹。",
           "scene": "先分同源，再分姐妹。"
         },
-        "sourceModifiedAt": "2026-10-30T16:11:45.571Z",
-        "sourceSha256": "62e229d9a574c044ac385da746fa93272d5728f244d53b98831264900a51ffcf",
+        "sourceModifiedAt": "2026-11-03T08:48:22.120Z",
+        "sourceSha256": "bdde83efc2f73ecd364d68058cdd94eb6572e703636b2b466f7ed0a7146a35d0",
         "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。"
       }
     ],
@@ -1980,12 +2010,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/chromosome/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 104635,
-        "contentSha256": "34c56364a77a1e966ed17588b06a79fce61569309f91a247ee9306faecd5508d",
+        "platformUpdated": "2026-11-03",
+        "bytes": 114941,
+        "contentSha256": "bfc24fb6ce2ad1a1d2a0adeeacba746bbf64c2431ee93b35b1ab1e14eeda7177",
         "sourceFilename": "必修2_02-02_基因在染色体上_果蝇遗传调查室_v1.0.html",
         "preview": {
           "image": "assets/previews/chromosome--original.webp",
@@ -1995,8 +2026,8 @@
           "alt": "基因在染色体上 · 原版 v1.0真实课件画面：设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因",
           "scene": "设计一个，能区分解释的实验。；W / w 在常染色体上；W / w 在 X 上，Y 无对应等位基因"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.758Z",
-        "sourceSha256": "0c68840f6d4e9f19296f0a8f55fa69e2a081b397fe48e6715ba29dd7e8f3ee0d",
+        "sourceModifiedAt": "2026-11-03T08:48:22.125Z",
+        "sourceSha256": "8de2c3d34af7049e37c9efbf019caef9e9b7e6328544b220e8d1eeeecc69150f",
         "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。"
       }
     ],
@@ -2054,13 +2085,14 @@
         "approach": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/sex-linked/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "596da914860593aedad43c1e7c2f2cf39411f81e3cf87ed357ca4766939e7346",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "48eda02467bed5c42284e16951807719726109a0f37d4da078d0d907f706603d",
         "sourceFilename": "必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
-        "bytes": 63531,
+        "bytes": 73837,
         "preview": {
           "image": "assets/previews/sex-linked--interactive-v1-0.webp",
           "thumbnail": "assets/previews/sex-linked--interactive-v1-0-640.webp",
@@ -2069,8 +2101,8 @@
           "alt": "伴性遗传 · 基因侦探版 v1.0真实课件画面：让亲本说话，看看基因传给了谁。",
           "scene": "让亲本说话，看看基因传给了谁。"
         },
-        "sourceModifiedAt": "2026-10-30T09:04:08.836Z",
-        "sourceSha256": "596da914860593aedad43c1e7c2f2cf39411f81e3cf87ed357ca4766939e7346",
+        "sourceModifiedAt": "2026-11-03T08:48:22.128Z",
+        "sourceSha256": "48eda02467bed5c42284e16951807719726109a0f37d4da078d0d907f706603d",
         "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。"
       }
     ],
@@ -2130,12 +2162,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/dna-evidence/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 102780,
-        "contentSha256": "ebcd4f01ac89ce1a803e7ef33c9ae9a6aae241283b82971e0d16ec609e1eaa65",
+        "platformUpdated": "2026-11-03",
+        "bytes": 113086,
+        "contentSha256": "89fdb049b8102f99e16ec82c581d3a8a38aa8a9371858cce9d0fe4c32cd7c058",
         "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html",
         "preview": {
           "image": "assets/previews/dna-evidence--original.webp",
@@ -2145,8 +2178,8 @@
           "alt": "DNA 是主要的遗传物质 · 原版 v2.0真实课件画面：发生了转化。但，还不能抢发结论。；活 R 型菌",
           "scene": "发生了转化。但，还不能抢发结论。；活 R 型菌"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.467Z",
-        "sourceSha256": "d6a48920938f3dd47bd4303051c6d7421ab9dfba6b91b7114d31741824453899",
+        "sourceModifiedAt": "2026-11-03T08:48:22.130Z",
+        "sourceSha256": "71c9e95c4bbbef3617406d9fcbd4d79f6556316ca9de6da4a73bfab13e6c16a6",
         "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。"
       },
       {
@@ -2166,12 +2199,13 @@
         "changes": [
           "保留早期交互流程，支持与新版对照。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/dna-evidence/legacy/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 103263,
-        "contentSha256": "05a96bfc8f9fead6149eeea2b423225f8bc7fdc7512ecd6172f3c4d9f198adf5",
+        "platformUpdated": "2026-11-03",
+        "bytes": 113569,
+        "contentSha256": "fbba993efbc9cfc76fd286c0562563f81bada406e30eb78fc78b8ce61d2291b5",
         "sourceFilename": "必修2_03-01_DNA是主要的遗传物质_证据接力_v1.0.html",
         "preview": {
           "image": "assets/previews/dna-evidence--legacy.webp",
@@ -2181,8 +2215,8 @@
           "alt": "DNA 是主要的遗传物质 · 历史原版 v1.0真实课件画面：如果拿走一种成分，转化还会发生吗？",
           "scene": "如果拿走一种成分，转化还会发生吗？"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.465Z",
-        "sourceSha256": "fa02408953050cfec61a33948aa02214494968f450fabd09f80ceadcb2a5a2d8",
+        "sourceModifiedAt": "2026-11-03T08:48:22.135Z",
+        "sourceSha256": "dd6f6e806e7306572f842ac1eecb67dd03e24c254d889962d17cc0b5c045ec28",
         "design": "从猜想开始，通过每一站的对照结果修正判断。"
       }
     ],
@@ -2240,13 +2274,14 @@
         "approach": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/dna-structure/blueprint-v2/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "4fe764499a855c9bbec22663f707bf36f93e887658216fba5613b3bf7727a0c5",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "4f1ac221337b7b5a3195d80aa62bd94f6ff5fbfdae8aa52689785ce47e1c7f88",
         "sourceFilename": "必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
-        "bytes": 74743,
+        "bytes": 85049,
         "preview": {
           "image": "assets/previews/dna-structure--blueprint-v2.webp",
           "thumbnail": "assets/previews/dna-structure--blueprint-v2-640.webp",
@@ -2255,8 +2290,8 @@
           "alt": "DNA的结构 · 1953工程蓝图版 v2.0真实课件画面：一个漂亮模型，要通过几道证据检验？",
           "scene": "一个漂亮模型，要通过几道证据检验？"
         },
-        "sourceModifiedAt": "2026-10-31T02:59:50.824Z",
-        "sourceSha256": "4fe764499a855c9bbec22663f707bf36f93e887658216fba5613b3bf7727a0c5",
+        "sourceModifiedAt": "2026-11-03T08:48:22.139Z",
+        "sourceSha256": "4f1ac221337b7b5a3195d80aa62bd94f6ff5fbfdae8aa52689785ce47e1c7f88",
         "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
       },
       {
@@ -2275,13 +2310,14 @@
         "approach": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/dna-structure/repair-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "5708833a64c316c3d7409ac32a291eabcd897811f6d45e6e82710611e9a262db",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "8f98b8abc0375dbb434eb5f95f8d27632151120e813064cbc7919a40208761cf",
         "sourceFilename": "必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
-        "bytes": 6004,
+        "bytes": 16310,
         "preview": {
           "image": "assets/previews/dna-structure--repair-notes-v1.webp",
           "thumbnail": "assets/previews/dna-structure--repair-notes-v1-640.webp",
@@ -2290,8 +2326,8 @@
           "alt": "DNA的结构 · 双螺旋修复简版 v1.0真实课件画面：双螺旋修复室；给模板链补上一条反向平行的链。",
           "scene": "双螺旋修复室；给模板链补上一条反向平行的链。"
         },
-        "sourceModifiedAt": "2026-10-30T22:10:37.249Z",
-        "sourceSha256": "5708833a64c316c3d7409ac32a291eabcd897811f6d45e6e82710611e9a262db",
+        "sourceModifiedAt": "2026-11-03T08:48:22.145Z",
+        "sourceSha256": "8f98b8abc0375dbb434eb5f95f8d27632151120e813064cbc7919a40208761cf",
         "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
       }
     ],
@@ -2350,12 +2386,13 @@
         "changes": [
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
-          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。"
+          "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/replication/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 87780,
-        "contentSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c",
+        "platformUpdated": "2026-11-03",
+        "bytes": 98086,
+        "contentSha256": "4840f6905db9c3d8d45d6a03a5b94259e668e499176a412a594f0ed8c73294fe",
         "sourceFilename": "必修2_03-03_DNA的复制_双链蓝图工坊_v1.0.html",
         "preview": {
           "image": "assets/previews/replication--original.webp",
@@ -2365,8 +2402,8 @@
           "alt": "DNA 的复制 · 原版 v1.0真实课件画面：一份蓝图，如何复制成两份？",
           "scene": "一份蓝图，如何复制成两份？"
         },
-        "sourceModifiedAt": "2026-10-27T01:07:13.400Z",
-        "sourceSha256": "d47f29d959beafb84a366720fe7cc0e5e1666f07df2058217b0886a69108de6c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.148Z",
+        "sourceSha256": "4840f6905db9c3d8d45d6a03a5b94259e668e499176a412a594f0ed8c73294fe",
         "design": "先预测三种复制模型的结果，再用条带与配对检验解释。"
       }
     ],
@@ -2424,13 +2461,14 @@
         "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/gene-fragment/bio-synth-v3/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "8728d79ce0ea81948dcaa49a05f55b92cf9ca014c5c716e036e7e5449eb5a726",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "cccc1066488fbc4a3468b5c6c91cd35df9cf18d18e223f02327ed62f889ed703",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
-        "bytes": 76505,
+        "bytes": 86811,
         "preview": {
           "image": "assets/previews/gene-fragment--bio-synth-v3.webp",
           "thumbnail": "assets/previews/gene-fragment--bio-synth-v3-640.webp",
@@ -2439,8 +2477,8 @@
           "alt": "基因通常是有遗传效应的DNA片段 · 生命胶片剪辑版 v3.0真实课件画面：哪一帧胶片，能让小鼠亮起来？",
           "scene": "哪一帧胶片，能让小鼠亮起来？"
         },
-        "sourceModifiedAt": "2026-10-31T09:40:31.052Z",
-        "sourceSha256": "8728d79ce0ea81948dcaa49a05f55b92cf9ca014c5c716e036e7e5449eb5a726",
+        "sourceModifiedAt": "2026-11-03T08:48:22.151Z",
+        "sourceSha256": "cccc1066488fbc4a3468b5c6c91cd35df9cf18d18e223f02327ed62f889ed703",
         "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       },
       {
@@ -2459,13 +2497,14 @@
         "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/gene-fragment/csi-v2/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "e408e44c2b3ac125d6ab4e23da82ef423e314016daddbaea7a648db2ebc2c404",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "c6175ae6bfc298b000eaf740afbbca71767aa86e2f8064cd7ea8a67c10e45e8e",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
-        "bytes": 76644,
+        "bytes": 86950,
         "preview": {
           "image": "assets/previews/gene-fragment--csi-v2.webp",
           "thumbnail": "assets/previews/gene-fragment--csi-v2-640.webp",
@@ -2474,8 +2513,8 @@
           "alt": "基因通常是有遗传效应的DNA片段 · CSI密码破译版 v2.0真实课件画面：删掉哪一段，绿色荧光会消失？",
           "scene": "删掉哪一段，绿色荧光会消失？"
         },
-        "sourceModifiedAt": "2026-10-31T03:16:00.763Z",
-        "sourceSha256": "e408e44c2b3ac125d6ab4e23da82ef423e314016daddbaea7a648db2ebc2c404",
+        "sourceModifiedAt": "2026-11-03T08:48:22.155Z",
+        "sourceSha256": "c6175ae6bfc298b000eaf740afbbca71767aa86e2f8064cd7ea8a67c10e45e8e",
         "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       },
       {
@@ -2494,13 +2533,14 @@
         "approach": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/gene-fragment/annotation-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "41b23ab7402d602c9b74a8b9ad8ec622ddd86173585ac145c0d191c0dffbb0a3",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "5fdee5a28df5245b576b146ef1315d0ee6533f458532389c6f20a508bbef23b8",
         "sourceFilename": "必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
-        "bytes": 6319,
+        "bytes": 16625,
         "preview": {
           "image": "assets/previews/gene-fragment--annotation-notes-v1.webp",
           "thumbnail": "assets/previews/gene-fragment--annotation-notes-v1-640.webp",
@@ -2509,8 +2549,8 @@
           "alt": "基因通常是有遗传效应的DNA片段 · 基因组标注简版 v1.0真实课件画面：基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？",
           "scene": "基因组标注室；哪一段 DNA 有证据支持它具有遗传效应？"
         },
-        "sourceModifiedAt": "2026-10-30T22:10:38.964Z",
-        "sourceSha256": "41b23ab7402d602c9b74a8b9ad8ec622ddd86173585ac145c0d191c0dffbb0a3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.159Z",
+        "sourceSha256": "5fdee5a28df5245b576b146ef1315d0ee6533f458532389c6f20a508bbef23b8",
         "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
       }
     ],
@@ -2569,13 +2609,14 @@
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
           "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/expression/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "e9770568f6ba930b8a1551c6432f521f6081cc7f3eaf2503d9c5a126a905e7f3",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "e839bf7d1c4183e1ff4d298b4cedc5125bb0c9c2c2fce6fdeb21ab0f993f32d6",
         "sourceFilename": "必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
-        "bytes": 106465,
+        "bytes": 116771,
         "preview": {
           "image": "assets/previews/expression--interactive-v1-0.webp",
           "thumbnail": "assets/previews/expression--interactive-v1-0-640.webp",
@@ -2584,8 +2625,8 @@
           "alt": "基因指导蛋白质的合成 · 生命密码破译版 v1.0真实课件画面：DNA 能亲自出核吗？",
           "scene": "DNA 能亲自出核吗？"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.759Z",
-        "sourceSha256": "b6cc05d24e0a2e51d00733b3499673e02620087c8afa2581db6e147f027723e5",
+        "sourceModifiedAt": "2026-11-03T08:48:22.161Z",
+        "sourceSha256": "7ada77aa5e9cb748cb71f7bc971156303d412e5ca65c81fa8aa7d7e3b2430f77",
         "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。"
       }
     ],
@@ -2643,13 +2684,14 @@
         "approach": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/expression-trait/symphony-v2/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "e7914046fff670580795796ad130ae4cda05ddda92c06adc59dfec814d5043b4",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "3deb947e4f53a7e531e5c7e7a342f86c4c913564a9484967bf685d9fa4dcb508",
         "sourceFilename": "必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
-        "bytes": 83207,
+        "bytes": 93513,
         "preview": {
           "image": "assets/previews/expression-trait--symphony-v2.webp",
           "thumbnail": "assets/previews/expression-trait--symphony-v2-640.webp",
@@ -2658,8 +2700,8 @@
           "alt": "基因表达与性状的关系 · 生命交响曲版 v2.0真实课件画面：打断一环，观察性状怎样改变。",
           "scene": "打断一环，观察性状怎样改变。"
         },
-        "sourceModifiedAt": "2026-11-01T09:20:42.774Z",
-        "sourceSha256": "e7914046fff670580795796ad130ae4cda05ddda92c06adc59dfec814d5043b4",
+        "sourceModifiedAt": "2026-11-03T08:48:22.165Z",
+        "sourceSha256": "3deb947e4f53a7e531e5c7e7a342f86c4c913564a9484967bf685d9fa4dcb508",
         "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
       },
       {
@@ -2678,13 +2720,14 @@
         "approach": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/expression-trait/cat-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "b9ddd086a6de9a788755b758cd4e2fd8bbe20ab301c2687b754a1acf03b5314f",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "98571b23d8163afeaf2c5a241a3b9605ebbcf2f851fd4a4611857eae6996059d",
         "sourceFilename": "必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
-        "bytes": 6285,
+        "bytes": 16591,
         "preview": {
           "image": "assets/previews/expression-trait--cat-notes-v1.webp",
           "thumbnail": "assets/previews/expression-trait--cat-notes-v1-640.webp",
@@ -2693,8 +2736,8 @@
           "alt": "基因表达与性状的关系 · 猫毛颜色观察简版 v1.0真实课件画面：猫毛颜色观测站；相同基因型，为什么毛色深浅不同？",
           "scene": "猫毛颜色观测站；相同基因型，为什么毛色深浅不同？"
         },
-        "sourceModifiedAt": "2026-10-30T22:10:40.300Z",
-        "sourceSha256": "b9ddd086a6de9a788755b758cd4e2fd8bbe20ab301c2687b754a1acf03b5314f",
+        "sourceModifiedAt": "2026-11-03T08:48:22.168Z",
+        "sourceSha256": "98571b23d8163afeaf2c5a241a3b9605ebbcf2f851fd4a4611857eae6996059d",
         "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
       }
     ],
@@ -2752,13 +2795,14 @@
         "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/mutation-recombination/swiss-v2-1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "c7679099b0e9b8d0c8290b9354d6eb7c36961f2fc3b192942c20e7ccb6af0758",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "b72da14158fb87c0c6d95c5dc15731fc62c693a630f64a6dd9fa26c41867a50b",
         "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
-        "bytes": 82735,
+        "bytes": 93041,
         "preview": {
           "image": "assets/previews/mutation-recombination--swiss-v2-1.webp",
           "thumbnail": "assets/previews/mutation-recombination--swiss-v2-1-640.webp",
@@ -2767,8 +2811,8 @@
           "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.1真实课件画面：先换一个字，再看看整行发生了什么。",
           "scene": "先换一个字，再看看整行发生了什么。"
         },
-        "sourceModifiedAt": "2026-11-01T10:02:34.187Z",
-        "sourceSha256": "c7679099b0e9b8d0c8290b9354d6eb7c36961f2fc3b192942c20e7ccb6af0758",
+        "sourceModifiedAt": "2026-11-03T08:48:22.171Z",
+        "sourceSha256": "b72da14158fb87c0c6d95c5dc15731fc62c693a630f64a6dd9fa26c41867a50b",
         "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       },
       {
@@ -2787,13 +2831,14 @@
         "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/mutation-recombination/swiss-v2/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "82e6ce34629473f9e4723400dc201f1c6ae896924d9cb34c10946779a593c70c",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "fb8634b7095605512a25433f57959c33ea740ada3fb0c06dbe730ba3d24b8c4f",
         "sourceFilename": "必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
-        "bytes": 76035,
+        "bytes": 86341,
         "preview": {
           "image": "assets/previews/mutation-recombination--swiss-v2.webp",
           "thumbnail": "assets/previews/mutation-recombination--swiss-v2-640.webp",
@@ -2802,8 +2847,8 @@
           "alt": "基因突变和基因重组 · SWISS活字印刷版 v2.0真实课件画面：先换一个字，再看看整行发生了什么。",
           "scene": "先换一个字，再看看整行发生了什么。"
         },
-        "sourceModifiedAt": "2026-11-01T09:06:52.758Z",
-        "sourceSha256": "82e6ce34629473f9e4723400dc201f1c6ae896924d9cb34c10946779a593c70c",
+        "sourceModifiedAt": "2026-11-03T08:48:22.175Z",
+        "sourceSha256": "fb8634b7095605512a25433f57959c33ea740ada3fb0c06dbe730ba3d24b8c4f",
         "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       },
       {
@@ -2822,13 +2867,14 @@
         "approach": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/mutation-recombination/recombination-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "ac9237f9e0a9435af58148846a3def580c32c914fb554a9ba125c3ff44e55539",
         "sourceFilename": "必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
-        "bytes": 6209,
+        "bytes": 16515,
         "preview": {
           "image": "assets/previews/mutation-recombination--recombination-notes-v1.webp",
           "thumbnail": "assets/previews/mutation-recombination--recombination-notes-v1-640.webp",
@@ -2837,8 +2883,8 @@
           "alt": "基因突变和基因重组 · 配子组合简版 v1.0真实课件画面：配子组合印刷所；两个亲本没有的组合，怎样进入配子？",
           "scene": "配子组合印刷所；两个亲本没有的组合，怎样进入配子？"
         },
-        "sourceModifiedAt": "2026-10-30T22:10:42.451Z",
-        "sourceSha256": "21dd9c0bb78bf13e56d63f001fa97d1c61dec87f36199a0ce8609e332a4b202d",
+        "sourceModifiedAt": "2026-11-03T08:48:22.178Z",
+        "sourceSha256": "ac9237f9e0a9435af58148846a3def580c32c914fb554a9ba125c3ff44e55539",
         "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       },
       {
@@ -2858,13 +2904,14 @@
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
           "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/mutation-recombination/mutation-detective-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "0081b1b857a1b520d18080948f7c5051914f4e555ac4abca02b6aeda2a11bd33",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "1963493624ecaed8fcf9ddfb66d66294d69f6ca8eec5e65bd992f184b051fd6f",
         "sourceFilename": "必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
-        "bytes": 98733,
+        "bytes": 109039,
         "preview": {
           "image": "assets/previews/mutation-recombination--mutation-detective-v1.webp",
           "thumbnail": "assets/previews/mutation-recombination--mutation-detective-v1-640.webp",
@@ -2873,8 +2920,8 @@
           "alt": "基因突变和基因重组 · 基因突变侦探版 v1.0真实课件画面：镰状细胞贫血：一个字母的线索",
           "scene": "镰状细胞贫血：一个字母的线索"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.761Z",
-        "sourceSha256": "69cb261ed7d85aaeee7ee01100e528b38b106b405604443e8349f0fd5aba0c49",
+        "sourceModifiedAt": "2026-11-03T08:48:22.181Z",
+        "sourceSha256": "9d20fd402e75387583ac1cca552560857ebb4d0e282eaef6f4af081597285c61",
         "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
       }
     ],
@@ -2933,13 +2980,14 @@
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
           "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/chromosome-variation/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "52be23f4ad1d96d4d4a3bd1d6e4cd54daf81926677e4e7afcf8fab94245b2cfb",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "92cab19383e56cbca2c876b72f45c65e796f8a27501cc280ee4ffb3e5e16290c",
         "sourceFilename": "必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
-        "bytes": 78957,
+        "bytes": 89263,
         "preview": {
           "image": "assets/previews/chromosome-variation--interactive-v1-0.webp",
           "thumbnail": "assets/previews/chromosome-variation--interactive-v1-0-640.webp",
@@ -2948,8 +2996,8 @@
           "alt": "染色体变异 · 育种工程实验室版 v1.0真实课件画面：把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘",
           "scene": "把一套遗传信息，装进收纳盒。；模型细胞 · 2n = 8；三法判定仪表盘"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.764Z",
-        "sourceSha256": "cdfba38094d1b62df58ff8b12341d579f803d5a015d1523c12a097eb727ec3c6",
+        "sourceModifiedAt": "2026-11-03T08:48:22.185Z",
+        "sourceSha256": "50772ef16ca2e7bd5f3b26bfaa1fe577fb4851b525c3613ae97a76fc05ec5843",
         "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。"
       }
     ],
@@ -3007,13 +3055,14 @@
         "approach": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/genetic-disease/nordic-v2/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "a8e624202743abe847f1fc64e10a37f9fd41319b148e4e8076397d4ee8dd81e3",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "16dfa9817b0b94cdf966837fafebb69e111a399cb023e0f0ec4d0656d8ecba0e",
         "sourceFilename": "必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
-        "bytes": 109648,
+        "bytes": 119954,
         "preview": {
           "image": "assets/previews/genetic-disease--nordic-v2.webp",
           "thumbnail": "assets/previews/genetic-disease--nordic-v2-640.webp",
@@ -3022,8 +3071,8 @@
           "alt": "人类遗传病 · NORDIC遗传咨询版 v2.0真实课件画面：病名之后，哪一层遗传信息变了？",
           "scene": "病名之后，哪一层遗传信息变了？"
         },
-        "sourceModifiedAt": "2026-11-01T11:21:10.221Z",
-        "sourceSha256": "a8e624202743abe847f1fc64e10a37f9fd41319b148e4e8076397d4ee8dd81e3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.189Z",
+        "sourceSha256": "16dfa9817b0b94cdf966837fafebb69e111a399cb023e0f0ec4d0656d8ecba0e",
         "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
       },
       {
@@ -3042,13 +3091,14 @@
         "approach": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/genetic-disease/survey-notes-v1/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "9f18f3b562fcae5ec09bffd7bc8a98c74214af458dfcf030b0cbee07816e98d9",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "947b5f7e134964eb9eee3ca899d5d23a00fbc29c5b460f68aafad4bbcf814341",
         "sourceFilename": "必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
-        "bytes": 6368,
+        "bytes": 16674,
         "preview": {
           "image": "assets/previews/genetic-disease--survey-notes-v1.webp",
           "thumbnail": "assets/previews/genetic-disease--survey-notes-v1-640.webp",
@@ -3057,8 +3107,8 @@
           "alt": "人类遗传病 · 人群调查简版 v1.0真实课件画面：人群调查编辑部；同一份调查记录，为什么会算出两个患病率？",
           "scene": "人群调查编辑部；同一份调查记录，为什么会算出两个患病率？"
         },
-        "sourceModifiedAt": "2026-10-30T22:10:44.482Z",
-        "sourceSha256": "9f18f3b562fcae5ec09bffd7bc8a98c74214af458dfcf030b0cbee07816e98d9",
+        "sourceModifiedAt": "2026-11-03T08:48:22.192Z",
+        "sourceSha256": "947b5f7e134964eb9eee3ca899d5d23a00fbc29c5b460f68aafad4bbcf814341",
         "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
       }
     ],
@@ -3116,13 +3166,14 @@
         "approach": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。",
         "changes": [
           "本次从本机课堂目录同步上线，保留其他版本。",
-          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。"
+          "接入返回导航、分版访客估算和打开次数、版本记录及公开反馈。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/evolution/interactive-v1-0/",
-        "platformUpdated": "2026-11-02",
-        "contentSha256": "d4b65ef153639fd6ec44eefa4df01b895186b195352423a4db783fc5bba9ca02",
+        "platformUpdated": "2026-11-03",
+        "contentSha256": "641275d219cd7178956d3689b418ddc5ff815078abf96520ca09b8b44f4c3945",
         "sourceFilename": "必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
-        "bytes": 117141,
+        "bytes": 127447,
         "preview": {
           "image": "assets/previews/evolution--interactive-v1-0.webp",
           "thumbnail": "assets/previews/evolution--interactive-v1-0-640.webp",
@@ -3131,8 +3182,8 @@
           "alt": "生物的进化 · 达尔文沙盘版 v1.0真实课件画面：抗生素是命令，还是一道筛子？",
           "scene": "抗生素是命令，还是一道筛子？"
         },
-        "sourceModifiedAt": "2026-10-30T15:11:31.708Z",
-        "sourceSha256": "d4b65ef153639fd6ec44eefa4df01b895186b195352423a4db783fc5bba9ca02",
+        "sourceModifiedAt": "2026-11-03T08:48:22.194Z",
+        "sourceSha256": "641275d219cd7178956d3689b418ddc5ff815078abf96520ca09b8b44f4c3945",
         "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。"
       }
     ],
@@ -3204,7 +3255,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3221,12 +3273,12 @@
           "label": "第1章 · 第1节"
         },
         "sourceFilename": "选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T09:11:03.962Z",
-        "sourceSha256": "eaf981bbc052ade83538e402bf28730ea9292a18c8c2891c9cd095ba55bd2d74",
-        "contentSha256": "eaf981bbc052ade83538e402bf28730ea9292a18c8c2891c9cd095ba55bd2d74",
+        "sourceModifiedAt": "2026-11-03T08:48:22.199Z",
+        "sourceSha256": "b4f8a2005e9592b5e19ed8a6be6d280b788342b0bb832d8a31bc3fb542177208",
+        "contentSha256": "b4f8a2005e9592b5e19ed8a6be6d280b788342b0bb832d8a31bc3fb542177208",
         "route": "courses/extracellular/microcirculation-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 139015,
+        "platformUpdated": "2026-11-03",
+        "bytes": 149321,
         "preview": {
           "image": "assets/previews/extracellular--microcirculation-v1.webp",
           "thumbnail": "assets/previews/extracellular--microcirculation-v1-640.webp",
@@ -3293,7 +3345,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3310,12 +3363,12 @@
           "label": "第1章 · 第2节"
         },
         "sourceFilename": "选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T09:47:10.553Z",
-        "sourceSha256": "3456b8599323716b9a50ccb9a212de68cadb761b76f40bb1eb8ee42b907262d3",
-        "contentSha256": "3456b8599323716b9a50ccb9a212de68cadb761b76f40bb1eb8ee42b907262d3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.204Z",
+        "sourceSha256": "bfaae455330e8c7b60fcb73d570a0a50bd7b8463e7d33e879bb0d186b87b1cf3",
+        "contentSha256": "bfaae455330e8c7b60fcb73d570a0a50bd7b8463e7d33e879bb0d186b87b1cf3",
         "route": "courses/homeostasis/icu-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 115635,
+        "platformUpdated": "2026-11-03",
+        "bytes": 125941,
         "preview": {
           "image": "assets/previews/homeostasis--icu-v1.webp",
           "thumbnail": "assets/previews/homeostasis--icu-v1-640.webp",
@@ -3384,7 +3437,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3401,12 +3455,12 @@
           "label": "第2章 · 第2节"
         },
         "sourceFilename": "选择性必修1_02-02_神经调节的基本方式_奈特神经解剖与电生理动态图谱_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T11:23:15.079Z",
-        "sourceSha256": "fda3871938cbb67fb880666c0b9853eefe0e3071985d3d8eb72f1e64a4b9ad4d",
-        "contentSha256": "fda3871938cbb67fb880666c0b9853eefe0e3071985d3d8eb72f1e64a4b9ad4d",
+        "sourceModifiedAt": "2026-11-03T08:48:22.208Z",
+        "sourceSha256": "d232dbda3892c5983cce8a8b5a423b38c92e4f404b10044a9aab0dfed0818ed7",
+        "contentSha256": "d232dbda3892c5983cce8a8b5a423b38c92e4f404b10044a9aab0dfed0818ed7",
         "route": "courses/neural-reflex/anatomical-atlas-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 140135,
+        "platformUpdated": "2026-11-03",
+        "bytes": 150441,
         "preview": {
           "image": "assets/previews/neural-reflex--anatomical-atlas-v1.webp",
           "thumbnail": "assets/previews/neural-reflex--anatomical-atlas-v1-640.webp",
@@ -3435,7 +3489,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3456,12 +3511,12 @@
           "label": "第2章 · 第1—2节综合"
         },
         "sourceFilename": "选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
-        "sourceModifiedAt": "2026-11-02T10:21:35.148Z",
-        "sourceSha256": "9fbc817c8497557eec6de153d0cfc2bacba1b5c6765d238bd09ba9a89ce21fb3",
-        "contentSha256": "9fbc817c8497557eec6de153d0cfc2bacba1b5c6765d238bd09ba9a89ce21fb3",
+        "sourceModifiedAt": "2026-11-03T08:48:22.213Z",
+        "sourceSha256": "01e43ff3238dc73c8b8467d8580d99ac62609b183020c0bb2424fa3ad6493378",
+        "contentSha256": "01e43ff3238dc73c8b8467d8580d99ac62609b183020c0bb2424fa3ad6493378",
         "route": "courses/neural-reflex/neuralink-v1/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 120132,
+        "platformUpdated": "2026-11-03",
+        "bytes": 130438,
         "preview": {
           "image": "assets/previews/neural-reflex--neuralink-v1.webp",
           "thumbnail": "assets/previews/neural-reflex--neuralink-v1-640.webp",
@@ -3534,7 +3589,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3551,12 +3607,12 @@
           "label": "第2章 · 第3节"
         },
         "sourceFilename": "选择性必修1_02-03_神经冲动的产生和传导_神经电生理与突触药理高精工作站_v1.0.html",
-        "sourceModifiedAt": "2026-11-03T05:40:57.163Z",
-        "sourceSha256": "016838fc540e7ceaba29caad65fdfc7b28321303e2ec1d192e3ebc3c8bf6606b",
-        "contentSha256": "016838fc540e7ceaba29caad65fdfc7b28321303e2ec1d192e3ebc3c8bf6606b",
+        "sourceModifiedAt": "2026-11-03T08:48:22.218Z",
+        "sourceSha256": "6f2740b22b06ccf32621becbb50d774b515335c7fc60a7dd6cda19263a6ca666",
+        "contentSha256": "6f2740b22b06ccf32621becbb50d774b515335c7fc60a7dd6cda19263a6ca666",
         "route": "courses/neural-impulse/electrophysiology-v1/",
         "platformUpdated": "2026-11-03",
-        "bytes": 106267,
+        "bytes": 116573,
         "preview": {
           "image": "assets/previews/neural-impulse--electrophysiology-v1.webp",
           "thumbnail": "assets/previews/neural-impulse--electrophysiology-v1-640.webp",
@@ -3625,7 +3681,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3642,12 +3699,12 @@
           "label": "第2章 · 第4节"
         },
         "sourceFilename": "选择性必修1_02-04_神经系统的分级调节_临床神经分级调控与泌尿动力学仿真工作站_v1.0.html",
-        "sourceModifiedAt": "2026-11-03T06:14:33.525Z",
-        "sourceSha256": "947b4cec326e510916870dc0b022fdec9743b236db5ec73ad40e16b6405e15fa",
-        "contentSha256": "947b4cec326e510916870dc0b022fdec9743b236db5ec73ad40e16b6405e15fa",
+        "sourceModifiedAt": "2026-11-03T08:48:22.222Z",
+        "sourceSha256": "8dd774498fb79821cff9893d07ddace8c4b2ea0e2f0008910dd98b4dabc8aefb",
+        "contentSha256": "8dd774498fb79821cff9893d07ddace8c4b2ea0e2f0008910dd98b4dabc8aefb",
         "route": "courses/neural-hierarchy/hierarchical-control-v1/",
         "platformUpdated": "2026-11-03",
-        "bytes": 114578,
+        "bytes": 124884,
         "preview": {
           "image": "assets/previews/neural-hierarchy--hierarchical-control-v1.webp",
           "thumbnail": "assets/previews/neural-hierarchy--hierarchical-control-v1-640.webp",
@@ -3716,7 +3773,8 @@
         "changes": [
           "同步本机课件，新增独立版本入口、实景封面及设计思路。",
           "保留原有版本、统计地址及公开反馈通道。",
-          "同步本机最新课堂内容；维持既有统计键和历史入口。"
+          "同步本机最新课堂内容；维持既有统计键和历史入口。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "curriculum": {
           "publisher": "人民教育出版社",
@@ -3733,12 +3791,12 @@
           "label": "第2章 · 第5节"
         },
         "sourceFilename": "选择性必修1_02-05_人脑的高级功能_人脑高级认知与临床神经药理工作站_v1.0.html",
-        "sourceModifiedAt": "2026-11-03T06:47:07.364Z",
-        "sourceSha256": "b61163b4e1da76f1fd7a38298ab4d871cc7a1ac499c60b003266c3bebcc27cf0",
-        "contentSha256": "b61163b4e1da76f1fd7a38298ab4d871cc7a1ac499c60b003266c3bebcc27cf0",
+        "sourceModifiedAt": "2026-11-03T08:48:22.227Z",
+        "sourceSha256": "6bd2824f0d2fc5a459364980e7897dd2b0247039d689349b509c9bab959a08e5",
+        "contentSha256": "6bd2824f0d2fc5a459364980e7897dd2b0247039d689349b509c9bab959a08e5",
         "route": "courses/higher-brain/cognition-v1/",
         "platformUpdated": "2026-11-03",
-        "bytes": 120874,
+        "bytes": 131180,
         "preview": {
           "image": "assets/previews/higher-brain--cognition-v1.webp",
           "thumbnail": "assets/previews/higher-brain--cognition-v1-640.webp",
@@ -3805,12 +3863,13 @@
           "独立课件归档上线。",
           "本次增加返回入口、分版统计和评论入口，未重写原有课堂流程。",
           "同步本机当前课堂内容及姓名奖状，保留原版本统计键。",
-          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。"
+          "修复旧奖状脚本的结束标签转义，恢复奖状与网站返回导航。",
+          "改善浅色/深色面板、动态图内标签、按钮与表单文字对比度；原有实验、评分、版本路径及统计标识保持。"
         ],
         "route": "courses/population/original/",
-        "platformUpdated": "2026-11-02",
-        "bytes": 100477,
-        "contentSha256": "56f3cd026e1d30a0e08e62711070bf799a29734656b6ff11a00b667af088b072",
+        "platformUpdated": "2026-11-03",
+        "bytes": 110783,
+        "contentSha256": "f7835ce6ac0a67a2a989babcb54553d39e3cdf638b54c15151422a2cae946628",
         "sourceFilename": "必修2_06-02_种群及其动态_山野调查手记_v1.0.html",
         "preview": {
           "image": "assets/previews/population--original.webp",
@@ -3820,8 +3879,8 @@
           "alt": "种群及其动态 · 原版 v1.0真实课件画面：别只挑花最多的地方。",
           "scene": "别只挑花最多的地方。"
         },
-        "sourceModifiedAt": "2026-10-30T07:14:58.766Z",
-        "sourceSha256": "dececda8b759f97ae17e02eb978fc5b83b359718bcb94cb338ce85876fec17b7",
+        "sourceModifiedAt": "2026-11-03T08:48:22.230Z",
+        "sourceSha256": "05c1df9ab908beacb34aa209c9e0d98bfefc798e725a7feea2de30310c98267a",
         "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
       }
     ],
