@@ -892,8 +892,59 @@
     "id": "secretion",
     "title": "分泌蛋白",
     "category": "cell",
-    "summary": "沿着一条蛋白质，读懂膜的协作。",
+    "summary": "从游离起始与携链停靠开始，观察高尔基体糖链修饰、货物分选及囊泡出芽发送。",
     "versions": [
+      {
+        "id": "signal-golgi-v1-2",
+        "label": "1.2",
+        "edition": "膜上旅程·转位分选修订版",
+        "file": "lessons/必修1_03-02_分泌蛋白_膜上旅程_v1.2.html",
+        "published": "2026-11-04",
+        "dateNote": "本站首次公开日期；不等同于课件创作日期",
+        "summary": "从游离起始与携链停靠开始，观察高尔基体糖链修饰、货物分选及囊泡出芽发送。",
+        "features": [
+          "游离核糖体、mRNA与新生肽链共同移动，停靠内质网后继续合成",
+          "高尔基体修饰糖链与加工前后对照，分选货物并出芽发送",
+          "同步局部放大、100秒可拖动时间轴、四个预测暂停点"
+        ],
+        "approach": "先暂停观察核糖体与新生链的共同位置变化，再比较糖蛋白进出高尔基体的糖链变化，沿出芽与发送确认分泌路线。",
+        "changes": [
+          "补充游离核糖体起始合成、信号肽露出及核糖体—新生肽链复合体共同转移到内质网的动态过程。",
+          "停靠转位通道后继续翻译并入腔，局部放大同步跟随移动中的核糖体与新生链。",
+          "以分泌糖蛋白为例，显示高尔基体对糖链的修剪和添加，并提供修饰前后对照。",
+          "补充分选对照货物，联动加工、分选、出芽包装和发出四阶段；已修饰的货物随囊泡进入胞吐阶段。",
+          "时间轴延长为100秒，原有四个预测点随过程调整；保留全局暂停、拖动、科学说明和既有对比度维护。"
+        ],
+        "route": "courses/secretion/signal-golgi-v1-2/",
+        "platformUpdated": "2026-11-04",
+        "bytes": 85483,
+        "contentSha256": "f55431e71831efa508bbd10291ac902885d67e9d3d139e4948c3082693662c41",
+        "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.2.html",
+        "preview": {
+          "image": "assets/previews/secretion--signal-golgi-v1-2.webp",
+          "thumbnail": "assets/previews/secretion--signal-golgi-v1-2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "分泌蛋白v1.2真实课件画面：高尔基体糖链修饰与前后对照",
+          "scene": "进一步加工与糖链修饰"
+        },
+        "sourceModifiedAt": "2026-11-04T05:54:27.844Z",
+        "sourceSha256": "f55431e71831efa508bbd10291ac902885d67e9d3d139e4948c3082693662c41",
+        "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。",
+        "releaseHistory": [
+          {
+            "date": "2026-11-04",
+            "title": "按课堂建议修订起始合成与高尔基体过程",
+            "changes": [
+              "补充游离核糖体起始合成、信号肽露出及核糖体—新生肽链复合体共同转移到内质网的动态过程。",
+              "停靠转位通道后继续翻译并入腔，局部放大同步跟随移动中的核糖体与新生链。",
+              "以分泌糖蛋白为例，显示高尔基体对糖链的修剪和添加，并提供修饰前后对照。",
+              "补充分选对照货物，联动加工、分选、出芽包装和发出四阶段；已修饰的货物随囊泡进入胞吐阶段。",
+              "时间轴延长为100秒，原有四个预测点随过程调整；保留全局暂停、拖动、科学说明和既有对比度维护。"
+            ]
+          }
+        ]
+      },
       {
         "id": "original",
         "label": "1.1",
@@ -1030,23 +1081,23 @@
       "label": "第3章 · 第2节"
     },
     "preview": {
-      "image": "assets/previews/secretion--original.webp",
-      "thumbnail": "assets/previews/secretion--original-640.webp",
+      "image": "assets/previews/secretion--signal-golgi-v1-2.webp",
+      "thumbnail": "assets/previews/secretion--signal-golgi-v1-2-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
-      "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
-      "versionId": "original"
+      "alt": "分泌蛋白v1.2真实课件画面：高尔基体糖链修饰与前后对照",
+      "scene": "进一步加工与糖链修饰",
+      "versionId": "signal-golgi-v1-2"
     },
-    "inquiry": "一条蛋白质，如何走出细胞？",
+    "inquiry": "核糖体怎样携链停靠，高尔基体怎样加工并发送？",
     "activities": [
-      "过程预测",
-      "膜的协作"
+      "携链转位",
+      "加工分选"
     ],
-    "latestVersionId": "original",
+    "latestVersionId": "signal-golgi-v1-2",
     "latestPolicy": "默认较新版本；同号时比较源文件修改时间。",
-    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。",
-    "preferredVersionId": "original"
+    "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。",
+    "preferredVersionId": "signal-golgi-v1-2"
   },
   {
     "id": "nucleus",

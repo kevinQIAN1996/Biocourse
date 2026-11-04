@@ -144,6 +144,22 @@
     "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
   },
   {
+    "file": "lessons/必修1_03-02_分泌蛋白_膜上旅程_v1.2.html",
+    "title": "分泌蛋白 膜上旅程·转位分选修订版 1.2",
+    "category": "cell",
+    "preview": {
+      "image": "assets/previews/secretion--signal-golgi-v1-2.webp",
+      "thumbnail": "assets/previews/secretion--signal-golgi-v1-2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "分泌蛋白v1.2真实课件画面：高尔基体糖链修饰与前后对照",
+      "scene": "进一步加工与糖链修饰"
+    },
+    "latest": true,
+    "route": "courses/secretion/signal-golgi-v1-2/",
+    "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。"
+  },
+  {
     "file": "分泌蛋白_膜上旅程_v1.1.html",
     "title": "分泌蛋白 原版 1.1",
     "category": "cell",
@@ -155,7 +171,7 @@
       "alt": "分泌蛋白 · 原版 v1.1真实课件画面：沿着一条蛋白质，读懂膜的协作。；边合成，边进入",
       "scene": "沿着一条蛋白质，读懂膜的协作。；边合成，边进入"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/secretion/original/",
     "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
   },
