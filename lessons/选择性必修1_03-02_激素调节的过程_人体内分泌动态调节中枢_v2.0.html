@@ -1,0 +1,551 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1826"><title>激素调节的过程 · ICU 血糖与反馈中枢</title><script defer src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><style>:root{--bg:#edf2f5;--paper:#fff;--ink:#102b3b;--sub:#334e60;--teal:#12576a;--line:#b9cbd7;--dark:#0b1524;--cyan:#6de4f2;--green:#6ee7bc;--gold:#ffd27b;--pink:#ff89a3;--violet:#c4abff;--mono:ui-monospace,Consolas,monospace}*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,'Segoe UI','Microsoft YaHei',sans-serif;padding-bottom:76px}h1,h2,h3,h4,p{margin:0}button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,[role=button]:focus-visible{outline:3px solid #d58a13;outline-offset:4px}button:disabled{cursor:not-allowed;background:#e2e8f0;color:#334155}a{color:#12576a;text-underline-offset:4px}button{transition:transform .15s,background .15s,border-color .15s}button:active{transform:translateY(2px)}.wrap{width:min(1600px,calc(100% - 56px));margin:auto}.top{position:sticky;top:0;z-index:30;background:#f9fcfdf7;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}.top-row{min-height:62px;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:38px;height:38px;border-radius:10px;background:#0b1826;color:#7cebdc;display:grid;place-items:center}.brand-mark svg{width:30px;height:30px}.brand b{font-size:17px;display:block}.brand span{font-size:15px;color:var(--sub);display:block}.tools{display:flex;gap:8px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:8px 13px;min-height:42px;background:#fff;color:#173b4f;border:1px solid #9bb5c7;border-radius:7px;font-size:15px;font-weight:750;line-height:1.5}.btn:hover{background:#e0edf3;border-color:#377c91}.btn svg{width:18px;height:18px}.btn.primary{background:#164e63;color:white;border-color:#164e63}.btn.primary:hover{background:#103d4f}.btn.active{background:#d4edf3;border-color:#236b80;box-shadow:inset 0 0 0 1px #236b80}.btn.small{padding:5px 9px;min-height:34px}.btn.light{background:#d8f5ef;color:#073c41;border-color:#73c4b2}.btn.light.ghost{background:#132b3c;color:#e1f1fb;border-color:#487185}.intro{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:22px 0 18px}.eyebrow{font:750 15px/1.6 var(--mono);letter-spacing:.04em;color:#23495d;display:block}.intro h1{font-size:clamp(29px,2.7vw,42px);font-weight:850;line-height:1.17;letter-spacing:-.04em;margin-top:5px}.intro h1 em{font-style:normal;color:#1c7185}.intro>p{color:var(--sub);max-width:570px;font-size:16px;line-height:1.65}.telemetry{display:flex;align-items:center;border-radius:12px;background:#0b1524;color:#e3f1f9;border:1px solid #294252;overflow:hidden;min-height:76px}.monitor{width:185px;padding:10px 20px;border-right:1px solid #314757}.monitor svg{display:block;width:145px;height:28px}.monitor span{font:700 15px/1.5 var(--mono);color:#c5dfef}.telemetry-values{display:grid;grid-template-columns:repeat(3,1fr);flex:1}.telemetry-values>div{padding:8px 20px;border-right:1px solid #314757;min-width:0}.telemetry-values span{font-size:15px;display:block;color:#c5dfef}.telemetry-values b{font:800 25px/1.35 var(--mono);color:#79e3ed}.telemetry-values small{font-size:15px;margin-left:6px;color:#e2f3ff}.live-status{padding:10px 17px;min-width:170px}.live-status b{font-size:15px;font-weight:750}.live-status span{display:block;font:750 16px var(--mono);margin-top:5px;color:#c5dfef}.live-status i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#6ee7bc;box-shadow:0 0 12px #6ee7bc;margin-right:7px}.nav{display:flex;gap:10px;margin:13px 0 19px}.tabs{display:grid;grid-template-columns:repeat(4,1fr);flex:1;gap:8px}.tab{border:1px solid var(--line);border-radius:8px;background:#f8fafc;color:#173b4f;padding:10px 14px;text-align:left;font-size:16px;font-weight:800;line-height:1.5}.tab small{font:700 15px var(--mono);display:inline-block;margin-right:8px;color:#23495d}.tab[aria-selected=true]{background:#d6edf1;border-color:#6eafbd;box-shadow:inset 0 -3px #25859a}.tab.done:after{content:' ✓';color:#135d49}.score-btn{width:155px;flex:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 13px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;color:#173b4f}.score-btn span{font-size:15px}.score-btn b{font:800 19px var(--mono)}.progress{display:block;width:100%;height:4px;background:#dce8ee;margin-top:8px}.progress i{display:block;background:#1d879a;height:100%;width:0;transition:width .3s}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin:0 0 13px}.section-heading .eyebrow{font-size:15px;margin-bottom:3px}.section-heading h2{font-size:clamp(24px,2.1vw,31px);letter-spacing:-.025em;line-height:1.3}.section-heading>p{max-width:510px;font-size:15px;color:#334e60}.lab-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}.theatre{min-width:0;border:1px solid #344c60;background:radial-gradient(ellipse at 45% 30%,#142c3d,#0b1524 65%);border-radius:14px;overflow:hidden}.scene-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px 5px;color:#c7e4f5;font:700 15px var(--mono);min-height:42px}.scene-tabs{display:flex;gap:6px;flex-wrap:wrap}.scene-tabs button{border:1px solid #527991;background:#112b3e;color:#e9f6ff;border-radius:5px;padding:4px 9px;font-size:15px;font-weight:700}.scene-tabs button.active{background:#c8f3ec;color:#073c41}.scene-window{overflow:auto;background-image:linear-gradient(#6ad7e406 1px,transparent 1px),linear-gradient(90deg,#6ad7e406 1px,transparent 1px);background-size:32px 32px}.scene-window svg{display:block;width:100%;min-width:760px;height:clamp(420px,calc(100vh - 400px),560px);min-height:420px;font-family:Inter,'Microsoft YaHei',sans-serif}.scene-window svg text{font-size:18px;font-weight:650;fill:#eff9ff}.scene-window svg .s-label rect{fill:#102535;stroke:#46657b;stroke-width:1}.scene-window svg .s-label text{dominant-baseline:middle}.scene-window svg .hot{cursor:pointer}.scene-window svg .hot:hover .s-label rect{fill:#20475e;stroke:#8ce6e5}.scene-window svg .hot:focus{outline:2px solid #ffd27b;outline-offset:3px}.scene-bottom{padding:9px 16px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:#c9e1f1;font-size:15px;border-top:1px solid #2b4356}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:15px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{display:inline-block;width:9px;height:9px;border-radius:50%}.playbar{display:flex;align-items:center;gap:8px;padding:12px 15px;background:#142a3b;border-top:1px solid #365166;flex-wrap:wrap;color:#e5f4fc}.playbar label{font-size:15px;font-weight:750;margin-left:auto}.playbar select{background:#102332;color:#f0faff;border-color:#62859a}.playbar>span{font-size:15px;color:#cce3f1;margin-left:4px}.timeline{display:flex;align-items:center;gap:10px;padding:0 16px 13px;background:#142a3b;color:#e8f6ff}.timeline label,.timeline output{font-size:15px;font-weight:750;white-space:nowrap}.timeline input{accent-color:#7de5d0;flex:1;min-width:100px;height:24px}.timeline output{font-family:var(--mono);min-width:45px}.console{border:1px solid var(--line);border-radius:12px;background:#fff;padding:18px;min-width:0}.console h3{font-size:22px;line-height:1.4;margin-top:4px;letter-spacing:-.02em}.console-lead{font-size:15px;color:#334e60;line-height:1.6;margin-top:7px}.case-list{display:grid;gap:7px;margin-top:13px}.case-btn{display:flex;align-items:center;gap:10px;border:1px solid #c1d4df;background:#f4f8fb;color:#183c4f;padding:10px 11px;text-align:left;border-radius:7px;font-size:16px;font-weight:750;line-height:1.5}.case-btn small{display:block;font-size:15px;font-weight:500;color:#334e60;margin-top:2px}.case-btn .n{font:750 15px var(--mono);color:#164457}.case-btn.active{background:#e5f4f7;border-color:#4e9bad;box-shadow:inset 3px 0 #1b849a}.case-btn:hover{background:#e2f0f5}.readout-stack{display:flex;gap:8px;flex-wrap:wrap;padding-top:12px;margin-top:12px;border-top:1px solid #c5d7e2}.readout-stack>div{flex:1;min-width:100px}.readout-stack span{display:block;font-size:15px;color:#334e60}.readout-stack b{font:800 22px/1.5 var(--mono);color:#155d70}.readout-stack small{font-size:15px;color:#334e60}.feedback{font-size:15px;line-height:1.75;color:#163c50;border-left:3px solid #6caec0;background:#edf6fa;padding:10px 12px;margin-top:12px;border-radius:0 5px 5px 0}.record{margin-top:13px;width:100%}.record.recorded{background:#dcf5e9;color:#135b42;border-color:#78b79c}.prediction{border-top:1px solid #c5d7e2;margin-top:12px;padding-top:12px;font-size:15px}.prediction label{font-weight:750;display:block;margin-bottom:6px}.prediction .row{gap:7px}.prediction .btn{font-size:15px;padding:7px 10px;flex:1}select,input[type=text]{padding:7px 9px;color:#173b4f;background:white;border:1px solid #7899ac;border-radius:5px;max-width:100%;font-size:16px;min-height:39px}.extra{padding-top:12px;margin-top:12px;border-top:1px solid #c5d7e2}.extra label{font-size:15px;color:#173b4f;font-weight:750}.extra .range{margin-top:8px}.range{display:flex;align-items:center;gap:9px;font-size:15px}.range input{flex:1;min-width:80px;accent-color:#1d879a;height:25px}.range output{font:750 15px var(--mono);min-width:42px}.switchline{display:flex;align-items:start;gap:8px;margin:9px 0;font-size:15px;color:#173b4f}.switchline input{width:20px;height:20px;accent-color:#1d879a;flex:none;margin-top:4px}.extra .btn{margin-top:7px;font-size:15px}.under-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:18px}.chart-card,.evidence-card{border:1px solid var(--line);border-radius:10px;background:#fff;padding:20px;min-width:0}.chart-card h3,.evidence-card h3{font-size:22px;line-height:1.5}.secondary,.chart-card>p,.evidence-card>p{color:#334e60;font-size:15px;line-height:1.75;margin-top:7px}.evidence-card .eyebrow{margin-bottom:6px}.chart-window{overflow:auto;margin-top:10px}.chart-window svg{display:block;width:100%;min-width:650px;height:auto}.chart-window svg text{font-size:20px;font-weight:650;fill:#173b4f;dominant-baseline:middle}.chart-window svg .s-label rect{fill:#fff;stroke:#b0c7d5;stroke-width:1}.chart-window svg .s-label text{fill:#173b4f}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.between{justify-content:space-between}.chip{display:inline-block;font:700 15px var(--mono);border:1px solid #a7c5d4;border-radius:4px;padding:2px 7px;color:#24566e;background:#f0f7fa}.evidence-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.evidence-metrics span{font-size:15px;color:#1b4c61;border:1px solid #a9c8d6;border-radius:5px;padding:5px 9px;background:#f1f8fa}.evidence-card details{margin-top:16px;border-top:1px solid #c7d8e2;padding-top:12px}.evidence-card summary{font-size:16px;font-weight:750;cursor:pointer;color:#164e63}.evidence-card details p{font-size:15px;color:#334e60;margin-top:10px}.question-drawer{border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:18px;padding:18px 20px}.question-drawer>summary{font-size:18px;font-weight:800;cursor:pointer;color:#183e52}.question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.question{background:#fff;border:1px solid #b4cbd9;border-radius:9px;padding:18px;min-width:0}.question h4{font-size:18px;font-weight:800;line-height:1.65}.options{display:grid;gap:8px;margin-top:12px}.option{font-size:16px;line-height:1.7;text-align:left;font-weight:600;color:#173b4f;background:#f5f9fb;border:1px solid #b8cfdd;border-radius:6px;padding:10px 12px}.option:hover{background:#e7f2f7}.option.correct{border-color:#468c70;background:#e5f6ed;color:#104c35}.option.wrong{border-color:#c7747e;background:#fff0f1;color:#7f2431}.question .result{font-size:15px;color:#334e60;line-height:1.8;margin-top:12px}.exam-banner{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#102535;color:#ecf9ff;padding:24px;border-radius:12px}.exam-banner strong{font-size:27px}.exam-banner p{font-size:16px;margin-top:6px;color:#cee3f1}.exam-banner .btn{background:#c9f1e9;color:#104b40;border-color:#8dd7c7}.table-scroll{overflow:auto;margin-top:12px}table{width:100%;min-width:610px;border-collapse:collapse;font-size:15px}td,th{border:1px solid #b7ccd9;padding:11px;text-align:left;vertical-align:top}th{background:#e9f3f7;font-weight:800}footer{padding:24px 0 35px;color:#334e60;font-size:15px}footer details{padding:15px 18px;background:#f8fbfc;border:1px solid var(--line);border-radius:8px}footer summary{cursor:pointer;font-weight:750;font-size:16px}footer p,footer li{font-size:15px;margin-top:8px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px}.assistant{position:fixed;bottom:0;left:0;right:0;z-index:22;background:#f7fbfdf5;border-top:1px solid #b3ccd9;backdrop-filter:blur(12px)}.assistant>.wrap{display:flex;gap:12px;align-items:center;padding:10px 0}.assistant-icon{width:32px;height:32px;border-radius:9px;background:#164e63;color:#c7f0ee;display:grid;place-items:center;flex:none}.assistant .wrap>div{flex:1;min-width:0}.assistant strong{font-size:15px;display:block;color:#153c50}.assistant p{font-size:15px;color:#334e60;line-height:1.5}.assistant.folded .wrap>div{display:none}.assistant.folded .wrap{justify-content:flex-end}.assistant.folded .assistant-icon{margin-right:auto}.assistant.folded{background:#f7fbfd}.skip{position:fixed;top:-100px;left:15px;z-index:100;padding:12px;background:#164e63;color:#fff}.skip:focus{top:10px}dialog{padding:0;border:1px solid #6e95aa;border-radius:12px;width:min(1100px,calc(100% - 30px));max-height:88vh;background:#fff;color:#173b4f;box-shadow:0 20px 100px #07172466}dialog::backdrop{background:#071523bb}.dialog-head{position:sticky;top:0;z-index:2;background:#f6fafc;border-bottom:1px solid #b8cfdb;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 22px}.dialog-head h2{font-size:24px}.dialog-body{padding:24px}.dialog-body h3{font-size:22px;margin:20px 0 10px}.dialog-body h3:first-child{margin-top:0}.dialog-body p,.dialog-body li{font-size:16px;color:#334e60;line-height:1.85}.award-form{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:20px}.award-form label{font-weight:750;font-size:16px}.award-form input{display:block;margin-top:7px}.certificate{border:4px double #286c7d;text-align:center;padding:35px 25px;background:linear-gradient(135deg,#fff,#f1f9fa);border-radius:5px}.certificate h3{font-size:31px;color:#123d50;margin:25px 0}.certificate-name{font-size:36px;font-weight:850;display:inline-block;border-bottom:2px solid #367c8c;min-width:180px;padding:5px 20px;max-width:100%;overflow-wrap:anywhere}.certificate p{font-size:17px;color:#173b4f;margin-top:16px}.seal{display:inline-block;border:2px solid #2d7b68;padding:9px 18px;font-size:20px;color:#155541;font-weight:800;margin-top:22px}.award-actions{margin-top:20px}.toast{position:fixed;top:80px;right:20px;z-index:100;background:#164e63;color:white;padding:12px 20px;max-width:min(420px,90vw);border:2px solid #e2f6f5;border-radius:9px;font-size:17px;font-weight:750;box-shadow:0 5px 30px #0b192433}.focus .intro{display:none}.focus .telemetry{margin-top:12px}.focus .scene-window svg{height:clamp(430px,calc(100vh - 300px),680px)}.focus footer{display:none}
+@media(min-width:1700px){.lab-layout{grid-template-columns:minmax(0,1fr) 350px}.scene-window svg{height:590px}}@media(max-width:1150px){.wrap{width:calc(100% - 32px)}.intro{align-items:start}.intro>p{max-width:430px}.lab-layout{grid-template-columns:minmax(0,1fr) 290px;gap:13px}.console{padding:14px}.scene-bottom>span{display:none}.scene-window svg{height:480px}.monitor{display:none}.live-status{min-width:135px;padding:10px}.telemetry-values>div{padding:10px 14px}.tools .btn{padding:7px 10px}}@media(max-width:940px){.top-row{flex-wrap:wrap;padding:10px 0}.intro{display:block;padding-top:18px}.intro>p{max-width:none;margin-top:12px}.telemetry{flex-wrap:wrap}.telemetry-values{width:100%}.live-status{width:100%;display:flex;gap:10px;align-items:center;border-top:1px solid #314757;padding:7px 14px}.live-status span{margin:0 0 0 auto}.nav{flex-wrap:wrap}.tabs{width:100%;grid-template-columns:repeat(2,1fr)}.score-btn{width:100%;gap:15px}.score-btn .progress{flex:1;width:auto;margin:0}.lab-layout{grid-template-columns:1fr}.scene-window svg{height:500px}.console .case-list{grid-template-columns:repeat(2,1fr)}.under-grid{grid-template-columns:1fr}.section-heading{display:block}.section-heading>p{margin-top:8px;max-width:none}.question-grid{grid-template-columns:1fr}.tools{gap:6px}.assistant p{display:none}.exam-banner{align-items:start;flex-direction:column}}@media(max-width:560px){body{padding-bottom:65px}.wrap{width:calc(100% - 24px)}.brand b{font-size:16px}.brand span{font-size:15px}.brand-mark{width:34px;height:34px}.tools{width:100%}.tools .btn{flex:1;font-size:15px;padding:7px 8px}.intro h1{font-size:30px}.telemetry-values b{font-size:22px}.telemetry-values>div{padding:10px}.telemetry-values small{display:block;margin:0}.tab{padding:10px;font-size:15px}.tab small{display:block;margin-bottom:3px}.scene-top{flex-wrap:wrap;padding-inline:12px}.scene-window svg{height:490px}.playbar label{margin-left:0}.playbar{padding:10px}.timeline{flex-wrap:wrap;padding-inline:10px}.timeline input{min-width:170px}.scene-bottom{padding:10px}.console .case-list{grid-template-columns:1fr}.console{padding:16px}.chart-card,.evidence-card{padding:16px}.section-heading h2{font-size:25px}.question-drawer{padding:16px}.dialog-head{padding:14px}.dialog-head h2{font-size:21px}.dialog-body{padding:16px}.certificate{padding:25px 14px}.certificate h3{font-size:26px}.certificate-name{font-size:30px}.footer-row{align-items:start;flex-direction:column}.assistant-icon{display:none}.assistant .wrap{gap:10px}.assistant strong{font-size:15px}.assistant .btn{flex:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}@media print{body{background:#fff!important;color:#102b3b!important}body:has(#awardDialog[open])>*:not(#awardDialog){display:none!important}#awardDialog[open]{display:block!important;position:static!important;width:100%!important;max-width:none!important;max-height:none!important;overflow:visible!important;border:0!important;box-shadow:none!important;margin:0!important}#awardDialog .dialog-head,.award-form,.award-actions{display:none!important}.certificate{background:#fff!important;min-height:85vh;padding-top:50px;border-color:#102b3b!important}.certificate *{color:#102b3b!important;border-color:#102b3b!important}}
+
+.launch{width:100%;margin-top:12px}.live-pause{display:flex;align-items:center;gap:2px;background:transparent;border:0;color:#e3f1f9;padding:2px 0;line-height:1.4}.live-pause:hover{color:#92fff0}
+
+.assistant.folded{left:auto;right:18px;bottom:14px;width:188px;border:1px solid #9fbfce;border-radius:11px;box-shadow:0 5px 25px #1025351a}.assistant.folded .wrap{width:auto;padding:7px 10px;margin:0;gap:10px}.assistant.folded .assistant-icon{display:grid}.assistant.folded .btn{flex:1}
+</style></head><body>
+<a class="skip" href="#workspace">跳到工作台</a><header class="top"><div class="wrap top-row"><div class="brand"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M2 17H9L13 6L18 27L22 14H30" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><div><b id="brandTitle"></b><span id="chapter"></span></div></div><div class="tools"><button class="btn" id="focusButton">专注观察</button><button class="btn" id="soundButton" aria-pressed="false">音效关</button><button class="btn" id="awardButton">观察证书</button><button class="btn primary" id="manualButton"><i data-lucide="book-open"></i>满分法典</button></div></div></header>
+<main class="wrap" id="workspace"><div class="intro"><div><span class="eyebrow" id="eyebrow"></span><h1 id="heroTitle"></h1></div><p id="heroCopy"></p></div>
+<div class="telemetry" aria-label="实时模型仪表"><div class="monitor"><svg viewBox="0 0 240 40" aria-hidden="true"><path id="monitorTrace" fill="none" stroke="#62e8c5" stroke-width="2"/></svg><span>LIVE / 教学模型</span></div><div class="telemetry-values" id="telemetryValues"></div><div class="live-status"><button id="globalPause" class="live-pause" aria-label="暂停或继续整个场景"><i id="liveDot"></i><b id="liveLabel">基础循环中</b></button><span id="modelClock">00:00</span></div></div>
+<nav class="nav" aria-label="四个探究工作台"><div class="tabs" id="tabs" role="tablist"></div><button class="score-btn" id="scoreButton"><span>观察档案</span><b id="scoreValue">0 / 100</b><span class="progress"><i id="progressFill"></i></span></button></nav>
+<section id="labSection"><div class="section-heading"><div><span id="sectionKicker" class="eyebrow"></span><h2 id="sectionTitle"></h2></div><p id="sectionLead"></p></div>
+<div class="lab-layout"><article class="theatre"><div class="scene-top"><span id="sceneTag"></span><div class="scene-tabs" id="sceneTabs"></div></div><div class="scene-window"><svg id="scene" viewBox="0 0 1000 640" role="img" aria-label="可交互的生理过程动态场景"></svg></div><div class="scene-bottom"><div id="sceneLegend" class="legend"></div><span id="sceneScale">比例与时程已作教学简化</span></div><div class="playbar"><button class="btn light" id="pauseButton" aria-pressed="false">暂停画面</button><button class="btn light ghost" id="baselineButton">回到基线</button><label for="speed">速度</label><select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><span id="elapsedLabel">基础生理持续运行</span></div><div id="timelineRow" class="timeline"><label for="timeline">回看帧</label><input id="timeline" type="range" min="0" max="1000" value="0"><output id="timelineValue">0%</output><button class="btn small light ghost" id="stepButton">下一帧</button></div></article>
+<aside class="console"><span class="eyebrow">PERTURBATION CONSOLE</span><h3 id="consoleTitle"></h3><p id="consoleLead" class="console-lead"></p><button class="btn primary launch" id="applyButton">施加干预</button><div class="case-list" id="caseList"></div><div id="extraControls"></div><div id="readouts" class="readout-stack"></div><div id="prediction"></div><div class="feedback" id="feedback" role="status" aria-live="polite"></div><button class="btn primary record" id="recordButton">记录本次观察</button></aside></div>
+<div class="under-grid"><article class="chart-card"><div class="row between"><h3 id="chartTitle"></h3><span class="chip">LIVE TRACE</span></div><p id="chartCaption" class="secondary"></p><div class="chart-window"><svg id="chart" viewBox="0 0 1000 300" role="img" aria-label="随过程变化的模型数据曲线"></svg></div></article><article class="evidence-card"><span class="eyebrow">OBSERVE → EXPLAIN</span><h3 id="evidenceTitle"></h3><p id="evidenceCopy"></p><div id="evidenceMetrics"></div><details id="notes"><summary>展开机制与实验边界</summary><div id="mechanismNotes"></div></details></article></div>
+<details class="question-drawer" id="questionDrawer"><summary id="questionSummary">核对推理 · 展开探究问题</summary><div id="stageQuestions" class="question-grid"></div></details></section>
+<section id="examSection" hidden><div class="section-heading"><div><span class="eyebrow">04 / CLINICAL REASONING</span><h2>用证据，完成最后一次会诊。</h2></div><p>高考风格原创题。选错可重新推理，答对后不重复计分。</p></div><div class="exam-banner"><div><strong id="rankText"></strong><p id="learningSummary"></p></div><button class="btn primary" id="examAward">生成学习证书</button></div><div id="examQuestions" class="question-grid"></div></section>
+<footer><details><summary>模型说明、科学校准与参考来源</summary><div id="sources"></div></details><div class="footer-row"><span>仅保存本机进度 · 姓名不上传</span><button class="btn" id="clearProgress">清空本课进度</button></div></footer>
+</main><aside class="assistant folded" id="assistant"><div class="wrap"><span class="assistant-icon" aria-hidden="true">✦</span><div><strong id="assistantTitle">先看生命过程怎样流动。</strong><p id="assistantText">改变一个条件，追踪结构、流动与读数是否共同变化。</p></div><button class="btn small" id="foldAssistant" aria-expanded="false">展开助教</button></div></aside>
+<dialog id="manualDialog" aria-labelledby="manualTitle"><div class="dialog-head"><h2 id="manualTitle">满分法典</h2><button class="btn" data-close="manualDialog">关闭</button></div><div class="dialog-body" id="manualContent"></div></dialog>
+<dialog id="awardDialog" aria-labelledby="awardTitle"><div class="dialog-head"><h2 id="awardTitle">我的观察与推理证书</h2><button class="btn" data-close="awardDialog">关闭</button></div><div class="dialog-body"><div class="award-form"><label>学生姓名<input id="studentName" type="text" maxlength="30" autocomplete="off" placeholder="请输入姓名"></label><button class="btn primary" id="makeAward">生成证书</button></div><div class="certificate" id="certificate"><span class="eyebrow">BIOLOGICAL SIGNALS / EVIDENCE CONNECTED</span><h3 id="certificateTitle">探究学习记录</h3><div class="certificate-name" id="certificateName">观察学习者</div><p id="certificateTopic"></p><p id="certificateScore"></p><p id="certificateDetail"></p><div class="seal" id="certificateRank"></div><p id="certificateDate"></p></div><div class="row award-actions"><button class="btn primary" id="printAward">打印 / 保存 PDF</button><p class="secondary">课堂学习奖励，不属于医学执业资质。</p></div></div></dialog><div id="toast" class="toast" role="status" hidden></div>
+<script>(()=>{'use strict';const LESSON=2,DATA={
+  "glucoseCases": {
+    "fed": {
+      "name": "餐后高血糖",
+      "desc": "8.2 → 胰岛素调节 → 趋近参考范围",
+      "start": 8.2,
+      "end": 5.2,
+      "answer": "down",
+      "ins": 135,
+      "gluc": 35
+    },
+    "fast": {
+      "name": "饥饿/运动低血糖",
+      "desc": "3.3 → 升糖激素协同 → 回升",
+      "start": 3.3,
+      "end": 4.8,
+      "answer": "up",
+      "ins": 25,
+      "gluc": 140
+    },
+    "t1": {
+      "name": "1 型糖尿病",
+      "desc": "B 细胞受损，胰岛素绝对缺乏",
+      "start": 12.8,
+      "end": 15,
+      "answer": "high",
+      "ins": 0,
+      "gluc": 120
+    },
+    "t2": {
+      "name": "2 型糖尿病",
+      "desc": "信号响应变弱，抵抗与分泌障碍并存",
+      "start": 11.2,
+      "end": 12.4,
+      "answer": "high",
+      "ins": 165,
+      "gluc": 95
+    }
+  },
+  "hptCases": {
+    "base": {
+      "name": "正常基线",
+      "desc": "三级轴与反馈相互制衡",
+      "end": [
+        100,
+        100,
+        100
+      ],
+      "size": 1,
+      "sign": [
+        "same",
+        "same",
+        "same"
+      ]
+    },
+    "cold": {
+      "name": "寒冷刺激",
+      "desc": "分级促进，代谢产热增加",
+      "end": [
+        145,
+        165,
+        155
+      ],
+      "size": 1.03,
+      "sign": [
+        "up",
+        "up",
+        "up"
+      ]
+    },
+    "iodine": {
+      "name": "长期缺碘",
+      "desc": "TH 原料不足，反馈减弱，腺体增生",
+      "end": [
+        185,
+        225,
+        35
+      ],
+      "size": 1.38,
+      "sign": [
+        "up",
+        "up",
+        "down"
+      ]
+    },
+    "cut": {
+      "name": "切除甲状腺",
+      "desc": "内源 TH 降低，上级分泌解除抑制",
+      "end": [
+        195,
+        235,
+        4
+      ],
+      "size": 0,
+      "sign": [
+        "up",
+        "up",
+        "down"
+      ]
+    },
+    "exo": {
+      "name": "过量补充 TH",
+      "desc": "外源 TH 增多，TRH 与 TSH 受抑制",
+      "end": [
+        22,
+        16,
+        230
+      ],
+      "size": 0.7,
+      "sign": [
+        "down",
+        "down",
+        "up"
+      ]
+    },
+    "trhA": {
+      "name": "TRH 负荷 · 分支 A",
+      "desc": "原有低 TSH，注射后出现明显反应",
+      "end": [
+        120,
+        130,
+        70
+      ],
+      "size": 1,
+      "sign": [
+        "up",
+        "up",
+        "up"
+      ],
+      "test": true
+    },
+    "trhB": {
+      "name": "TRH 负荷 · 分支 B",
+      "desc": "原有低 TSH，注射后仍低平",
+      "end": [
+        230,
+        15,
+        30
+      ],
+      "size": 1,
+      "sign": [
+        "up",
+        "same",
+        "same"
+      ],
+      "test": true
+    }
+  },
+  "hptRows": [
+    [
+      "寒冷刺激",
+      "↑",
+      "↑",
+      "↑",
+      "教材趋势模型，分级促进并有反馈制约"
+    ],
+    [
+      "长期缺碘",
+      "↑↑",
+      "↑↑",
+      "↓",
+      "TH 合成受限 → 反馈减弱 → TSH 持续刺激腺体增生"
+    ],
+    [
+      "切除甲状腺",
+      "↑↑",
+      "↑↑",
+      "↓↓",
+      "减法干预；保留上级功能、无外源 TH 的前提"
+    ],
+    [
+      "过量补充 TH",
+      "↓↓",
+      "↓↓",
+      "↑↑",
+      "血中总 TH 增多，但自身腺体受抑制可萎缩"
+    ],
+    [
+      "TRH 负荷 A",
+      "外源输入↑",
+      "较低基线明显↑",
+      "随后可↑",
+      "题设排除其他病变时，支持下丘脑异常"
+    ],
+    [
+      "TRH 负荷 B",
+      "外源输入↑",
+      "低平无明显反应",
+      "仍低",
+      "题设排除其他干扰时，支持垂体异常"
+    ]
+  ],
+  "challenges": {
+    "g0": {
+      "group": "g",
+      "pts": 2,
+      "q": "肌糖原能直接分解成葡萄糖，释放到血液中吗？",
+      "opts": [
+        "可以，肝糖原与肌糖原完全相同",
+        "不能直接；主要供肌肉自身利用"
+      ],
+      "a": 1,
+      "ex": "肌肉缺少把葡萄糖-6-磷酸转为可释放葡萄糖的相应酶系统。肝糖原能补充血糖，肌糖原不能直接完成这一过程；乳酸循环等间接联系另当别论。"
+    },
+    "g1": {
+      "group": "g",
+      "pts": 2,
+      "q": "GLUT-4 增加后，葡萄糖经它进入细胞属于哪种方式？",
+      "opts": [
+        "协助扩散；GLUT-4 是载体",
+        "主动运输；因为囊泡上膜耗 ATP",
+        "胞吞；葡萄糖被囊泡包走"
+      ],
+      "a": 0,
+      "ex": "把两个过程分开：囊泡沿骨架转运及融合需要能量；膜上的 GLUT-4 让葡萄糖顺浓度梯度进入，属于载体介导的协助扩散。"
+    },
+    "g2": {
+      "group": "g",
+      "pts": 2,
+      "q": "高血糖伴尿糖、多尿，可直接判断为 ADH 分泌不足吗？",
+      "opts": [
+        "可以，凡多尿都由 ADH 少引起",
+        "不可以，需考虑尿糖造成的渗透性利尿"
+      ],
+      "a": 1,
+      "ex": "葡萄糖滤过负荷超过肾小管重吸收能力 → 尿中葡萄糖增多 → 管液渗透压升高 → 水重吸收减少。脱水可反而刺激 ADH 分泌，ADH 高也不能消除全部渗透性利尿。"
+    },
+    "g3": {
+      "group": "g",
+      "pts": 2,
+      "q": "“胰高血糖素增多促进胰岛素分泌”应怎样理解？",
+      "opts": [
+        "A 细胞永远同时使 B 细胞无限分泌",
+        "在适当血糖及 B 细胞功能等条件下可促进，帮助协调供糖与用糖"
+      ],
+      "a": 1,
+      "ex": "升糖与摄糖不是互不相干。胰高血糖素可通过升高血糖及胰岛内信号促进胰岛素分泌，但低血糖时胰岛素总体受抑制，不能把促进关系当成无条件的固定倍数。"
+    },
+    "h0": {
+      "group": "h",
+      "pts": 6,
+      "q": "缺碘时 TH 低，为什么甲状腺反而肿大？",
+      "opts": [
+        "TH 少会直接使所有腺体肿大",
+        "TH 低 → 反馈减弱 → TSH 持续升高并刺激腺体增生"
+      ],
+      "a": 1,
+      "ex": "碘是 TH 合成原料。TH 减少使对下丘脑和垂体的负反馈减弱，TRH、TSH 增多；TSH 的持续营养性刺激促使甲状腺代偿性肿大，但不能弥补原料不足。"
+    },
+    "h1": {
+      "group": "h",
+      "pts": 6,
+      "q": "低 TH、低 TSH，且题设仅允许“下丘脑异常”或“垂体异常”。TRH 后 TSH 明显升高，支持哪一种？",
+      "opts": [
+        "下丘脑异常；垂体保留对 TRH 的反应",
+        "甲状腺一定完全正常，任何其他检查都不需要",
+        "垂体异常，因为 TSH 增加"
+      ],
+      "a": 0,
+      "ex": "补上游信号后，下一级能响应，支持上游不足。在该二选一且排除干扰的题设中支持下丘脑异常。真实临床还需看基线、反应时程及其他检查，不能用一次结果“100% 定案”。"
+    },
+    "m0": {
+      "group": "m",
+      "pts": 4,
+      "q": "为什么 TSH 流过心肌细胞，图中却不产生对应调节效应？",
+      "opts": [
+        "因为血液自动把 TSH 绕开了心脏",
+        "因为本模型心肌细胞没有能介导该效应的匹配 TSH 受体"
+      ],
+      "a": 1,
+      "ex": "体液运输不具有按靶器官定向导航的性质；靶向作用取决于相应受体及细胞信号响应。看到粒子经过，不等于细胞一定响应。"
+    },
+    "m1": {
+      "group": "m",
+      "pts": 4,
+      "q": "激素发挥调节作用时，主要扮演什么角色？",
+      "opts": [
+        "为靶细胞提供能量并直接催化反应",
+        "作为信使传递信息，再由靶细胞系统产生效应"
+      ],
+      "a": 1,
+      "ex": "激素不是结构材料、能量物质或催化剂。少量激素可经细胞内信号放大引起显著效应；作用后逐步灭活清除，因此需要持续分泌。"
+    },
+    "q0": {
+      "group": "q",
+      "pts": 5,
+      "q": "饥饿时，胰高血糖素升高。可直接增加血糖的主要靶组织与过程是？",
+      "opts": [
+        "骨骼肌：肌糖原直接释放葡萄糖入血",
+        "肝脏：促进肝糖原分解和糖异生",
+        "脂肪：让所有脂肪酸全部直接变为葡萄糖"
+      ],
+      "a": 1,
+      "ex": "抓住“直接补充血糖”。胰高血糖素主要作用于肝脏，促进肝糖原分解及糖异生；肌糖原不能直接补充血糖，脂肪酸也不能无条件全部净转化为葡萄糖。口诀：升糖找肝，肌糖自用。"
+    },
+    "q1": {
+      "group": "q",
+      "pts": 5,
+      "q": "关于 1 型与 2 型糖尿病，哪项表述最准确？",
+      "opts": [
+        "2 型血中胰岛素一定很低，且任何胰岛素治疗都无效",
+        "1 型以胰岛素绝对缺乏为主；2 型可有抵抗、早期代偿偏高与后期分泌不足",
+        "二者都必须由胰岛素受体基因缺失引起"
+      ],
+      "a": 1,
+      "ex": "1 型的关键是 B 细胞破坏导致绝对缺乏。2 型是异质性疾病，可有受体或受体后等多个环节异常；代偿期胰岛素可正常/偏高，病程进展后也可能不足。临床可使用胰岛素。"
+    },
+    "q2": {
+      "group": "q",
+      "pts": 5,
+      "q": "假定上级功能完整且未补充外源 TH，长期缺碘与切除甲状腺共同的趋势是？",
+      "opts": [
+        "TH↓，TRH↑，TSH↑",
+        "TH↑，TRH↓，TSH↓",
+        "TH↓，TRH↓，TSH↓"
+      ],
+      "a": 0,
+      "ex": "TH 合成不足或来源被去除 → 对下丘脑和垂体的负反馈减弱 → TRH、TSH 分泌增加。区别是缺碘可出现 TSH 驱动的腺体肿大，而切除后已无完整腺体可增生。"
+    },
+    "q3": {
+      "group": "q",
+      "pts": 5,
+      "q": "题设已限定下丘脑/垂体二选一：低 TH、低 TSH，注射 TRH 后 TSH 仍低平，支持病变在？",
+      "opts": [
+        "下丘脑",
+        "垂体",
+        "仅凭 TH 低就只能是甲状腺"
+      ],
+      "a": 1,
+      "ex": "TRH 补充后垂体仍不响应，支持垂体异常；若出现明显 TSH 反应则支持下丘脑异常。这是有前提的排除推理，不是脱离题设的一次检测确诊规则。"
+    },
+    "q4": {
+      "group": "q",
+      "pts": 5,
+      "q": "糖尿病患者多尿且脱水，ADH 偏高仍不能完全纠正。最合理解释是？",
+      "opts": [
+        "ADH 会主动把更多水排入尿液",
+        "尿糖增加使肾小管液渗透压升高，抑制水重吸收",
+        "尿液出现葡萄糖就证明肾小球完全破损"
+      ],
+      "a": 1,
+      "ex": "高血糖使葡萄糖滤过负荷增加，超过肾小管重吸收能力可出现尿糖。未重吸收的溶质留住管腔内水，形成渗透性利尿；不是所有多尿都由 ADH 缺乏造成。"
+    },
+    "q5": {
+      "group": "q",
+      "pts": 5,
+      "q": "TSH 作用于甲状腺细胞，说明了什么？",
+      "opts": [
+        "它被定向运输到甲状腺，随后供能",
+        "它随体液流经多处，由匹配受体决定靶向作用，自身不催化反应",
+        "TSH 必须进入细胞核，与 DNA 碱基配对后起作用"
+      ],
+      "a": 1,
+      "ex": "完整表述：垂体分泌 TSH → 经体液运输 → 与甲状腺细胞膜上的特异性受体结合 → 引发细胞内信号和代谢响应。运输广泛，作用有选择；信使传信息，不供能、不催化。"
+    }
+  },
+  "pairs": [
+    {
+      "title": "生长激素 + 甲状腺激素",
+      "effect": "促进生长发育",
+      "a": 0,
+      "ex": "在生长发育这一效应上相互配合。不能脱离具体生理效应，给两种激素贴永久的关系标签。"
+    },
+    {
+      "title": "甲状腺激素 + 肾上腺素",
+      "effect": "增加产热等效应",
+      "a": 0,
+      "ex": "在增加产热等方面协同，机制和时程不同。甲状腺激素的作用通常较持久。"
+    },
+    {
+      "title": "胰高血糖素 + 肾上腺素 + 糖皮质激素",
+      "effect": "升高血糖",
+      "a": 0,
+      "ex": "均可在相应条件下升高血糖；糖皮质激素作用较慢，不能把三者时间曲线画成完全相同。"
+    },
+    {
+      "title": "胰岛素 vs 胰高血糖素",
+      "effect": "调节血糖",
+      "a": 1,
+      "ex": "胰岛素总体降糖、胰高血糖素总体升糖，在这一效应上相抗衡；分泌间仍存在协调与反馈联系。"
+    }
+  ]
+};
+const $=id=>document.getElementById(id),clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*clamp(t),smooth=x=>{x=clamp(x);return x*x*(3-2*x)},phase=(t,a,b)=>smooth((t-a)/(b-a)),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const P={cyan:'#78e8f1',blue:'#6caeff',gold:'#ffd27b',green:'#6fe7bc',pink:'#ff8da7',violet:'#c4abff',ink:'#e8f7ff',sub:'#c5deed',dark:'#102535'};
+const S={stage:0,credits:{},answers:{},observations:{},predictions:{},focus:false,sound:false,view:'overview'};
+const E={clock:0,paused:false,speed:1,t:0,running:false,applied:false,elapsed:0,duration:18,samples:[],sampleClock:0,previous:0};
+let QUESTIONS=[],WEIGHTS={},STORE='biocourse-icu-endocrine-v2-'+LESSON,toastTimer,audioCtx,UIlast=0;
+function setText(id,s){const e=$(id);if(e&&e.textContent!==String(s))e.textContent=s}
+function attr(id,values){const e=$(id);if(e)for(const[k,v]of Object.entries(values))e.setAttribute(k,v)}
+function setTag(id,lines){const e=$(id);if(e)e.querySelectorAll('text').forEach((t,i)=>t.textContent=lines[i]||'')}
+function score(){return Object.entries(WEIGHTS).reduce((n,[k,v])=>n+(S.credits[k]===true?v:0),0)}
+function rank(){const n=score();return n===100?'首席生命信使研究员':n>=70?'动态调控工程师':n>=40?'因果证据分析师':'生命过程观察员'}
+function save(){try{localStorage.setItem(STORE,JSON.stringify({credits:S.credits,answers:S.answers,observations:S.observations}))}catch(e){}}
+function loadProgress(){try{const x=JSON.parse(localStorage.getItem(STORE)||'null');if(x){for(const k of ['credits','answers','observations'])if(x[k]&&typeof x[k]==='object'&&!Array.isArray(x[k]))S[k]=x[k];return}if(LESSON===1){const a=JSON.parse(localStorage.getItem('biocourse:endocrine:nobel-matrix:v1')||'[]');if(Array.isArray(a))for(const k of a)if(WEIGHTS[k])S.credits[k]=true}else{const a=JSON.parse(localStorage.getItem('biocourse-endocrine-process-v1')||'{}');if(a.credits)for(const k of Object.keys(a.credits))if(WEIGHTS[k]&&a.credits[k]===true)S.credits[k]=true}}catch(e){}}
+function feedback(a,b){setText('assistantTitle',a);setText('assistantText',b||'试着把观察到的现象和支持它的证据分别说出来。')}
+function notify(s){setText('toast',s);$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,2200)}
+function sound(){if(!S.sound)return;try{audioCtx??=new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();[523,659,784].forEach((f,i)=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain(),t=audioCtx.currentTime+i*.08;o.frequency.value=f;o.connect(g);g.connect(audioCtx.destination);g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.05,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+.16);o.start(t);o.stop(t+.17)})}catch(e){}}
+function earn(k,label='证据已入档'){if(!WEIGHTS[k]||S.credits[k])return false;S.credits[k]=true;save();renderScore();notify(label+' +'+WEIGHTS[k]+' 分');sound();return true}
+function renderScore(){const n=score();setText('scoreValue',n+' / 100');$('progressFill').style.width=n+'%';setText('rankText',rank());const sums=CONFIG.groups.map(g=>Object.entries(WEIGHTS).filter(([k])=>g.keys(k)).reduce((a,[k,v])=>a+(S.credits[k]?v:0),0));document.querySelectorAll('[data-stage]').forEach((b,i)=>{b.classList.toggle('done',sums[i]===CONFIG.groups[i].max)});setText('learningSummary',CONFIG.groups.map((g,i)=>g.name+' '+sums[i]+'/'+g.max).join(' · '));if($('awardDialog').open)certificate()}
+function registerQuestions(list){QUESTIONS=list;for(const q of list)WEIGHTS[q.id]=q.points}
+function questionHTML(q){const v=S.answers[q.id],answered=Number.isInteger(v),ok=answered&&v===q.a;return '<article class="question" id="question-'+q.id+'"><h4>'+esc(q.q)+' <span class="chip">'+q.points+' 分</span></h4><div class="options">'+q.opts.map((o,i)=>'<button class="option '+(answered&&i===v?(ok?'correct':'wrong'):'')+'" data-answer="'+q.id+'" data-option="'+i+'" aria-pressed="'+(answered&&v===i)+'">'+String.fromCharCode(65+i)+'．'+esc(o)+'</button>').join('')+'</div><p class="result" role="status">'+(answered?(ok?'✓ 证据吻合。':'再核对一条证据：')+esc(q.ex):'作答后查看因果解析，可重新尝试。')+'</p></article>'}
+function renderQuestions(){const stageQ=QUESTIONS.filter(q=>q.stage===S.stage&&!q.exam),examQ=QUESTIONS.filter(q=>q.exam);$('stageQuestions').innerHTML=stageQ.map(questionHTML).join('');$('examQuestions').innerHTML=examQ.map(questionHTML).join('');$('questionDrawer').hidden=stageQ.length===0;setText('questionSummary','核对推理 · '+stageQ.length+' 道机制问答（按需展开）')}
+function answer(id,i){const q=QUESTIONS.find(q=>q.id===id);if(!q)return;S.answers[id]=+i;if(+i===q.a)earn(id,'推理通过');save();renderQuestions();feedback(+i===q.a?'推理通过：把这一条因果链留下来。':'先别急，返回场景找一条支持证据。',q.ex)}
+function caseButton(key,title,sub,index,active){return '<button class="case-btn '+(active?'active':'')+'" data-case="'+esc(key)+'" aria-pressed="'+active+'"><span class="n">'+String(index+1).padStart(2,'0')+'</span><span>'+esc(title)+(sub?'<small>'+esc(sub)+'</small>':'')+'</span></button>'}
+function toggleButton(action,label,active=false){return '<button class="btn '+(active?'active':'')+'" data-action="'+action+'" aria-pressed="'+active+'">'+esc(label)+'</button>'}
+function readout(a,b,c=''){return '<div><span>'+esc(a)+'</span><b>'+esc(b)+'</b>'+(c?'<small>'+esc(c)+'</small>':'')+'</div>'}
+function predictionButtons(options,chosen){return '<div class="prediction"><label>先留下你的预测</label><div class="row">'+options.map(([v,l])=>'<button class="btn '+(chosen===v?'active':'')+'" data-prediction="'+v+'">'+esc(l)+'</button>').join('')+'</div></div>'}
+function table(head,rows){return '<div class="table-scroll"><table><thead><tr>'+head.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'}
+function tag(x,y,lines,{w=220,id='',color=P.ink,bg='#102535',font=18,hot=''}={}){lines=Array.isArray(lines)?lines:[lines];const h=lines.length*25+15;return '<g class="s-label"'+(id?' id="'+id+'"':'')+' transform="translate('+x+' '+y+')"><rect width="'+w+'" height="'+h+'" rx="6" style="fill:'+bg+'"/>'+lines.map((t,i)=>'<text x="12" y="'+(24+i*25)+'" style="fill:'+color+';font-size:'+font+'px">'+esc(t)+'</text>').join('')+'</g>'}
+function line(id,d,color=P.sub,width=2,dash='',marker=''){return '<path id="'+id+'" d="'+d+'" fill="none" stroke="'+color+'" stroke-width="'+width+'" stroke-linecap="round"'+(dash?' stroke-dasharray="'+dash+'"':'')+(marker?' marker-end="url(#'+marker+')"':'')+'/>'}
+function defs(){return '<defs><radialGradient id="organRose"><stop stop-color="#b35c76"/><stop offset="1" stop-color="#6d294d"/></radialGradient><radialGradient id="organGold"><stop stop-color="#c5ab70"/><stop offset="1" stop-color="#786049"/></radialGradient><linearGradient id="vesselRed" x2="0" y2="1"><stop stop-color="#f189a8"/><stop offset=".5" stop-color="#7e294b"/><stop offset="1" stop-color="#d36588"/></linearGradient><radialGradient id="cellBlue"><stop stop-color="#294b66"/><stop offset="1" stop-color="#142c42"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1L9 5L0 9" stroke="#92c4d7" fill="none" stroke-width="1.5"/></marker><marker id="stop" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M8 0V10" stroke="#ff8da7" stroke-width="2"/></marker></defs>'}
+function vessel(id,d,color='#973b5a',width=18){return '<path d="'+d+'" fill="none" stroke="#ef9ab144" stroke-width="'+(width+5)+'" stroke-linecap="round"/>'+line(id,d,color,width)}
+function ball(x,y,r,c,op=1){return '<circle cx="'+x.toFixed(2)+'" cy="'+y.toFixed(2)+'" r="'+r+'" fill="'+c+'" opacity="'+op+'"/>'}
+function rbc(x,y,angle=0){return '<g transform="translate('+x.toFixed(2)+' '+y.toFixed(2)+') rotate('+angle+')"><ellipse rx="7" ry="4.5" fill="#d9698d" stroke="#f5b0c5" stroke-width="1"/><ellipse rx="3.8" ry="2.2" fill="#713550"/></g>'}
+function point(id,u){const p=$(id);if(!p)return {x:0,y:0};return p.getPointAtLength(clamp(u)*p.getTotalLength())}
+function flow(id,time,count=8,color=P.cyan,r=3.4,{speed=.08,offset=0,opacity=1,red=false}={}){let s='';for(let i=0;i<count;i++){const u=((time*speed+i/count+offset)%1+1)%1,p=point(id,u);s+=red?rbc(p.x,p.y,Math.sin(u*7)*16):ball(p.x,p.y,r,color,opacity)}return s}
+function packet(id,t,{count=8,color=P.gold,r=5}={}){if(t<=0||t>=1)return'';let out='';for(let i=0;i<count;i++){const q=t*1.5-i*.075;if(q<=0||q>=1)continue;const p=point(id,q);out+=ball(p.x,p.y,r,color)}return out}
+function updateChart(){const spec=chartSpec(),xs=E.samples.length?E.samples:[{time:0,values:chartValues()}],max=spec.max,min=spec.min||0,left=100,top=55,w=850,h=174;let s='<rect x="99" y="54" width="852" height="176" rx="6" fill="#f3f8fb"/>';for(let i=0;i<4;i++){const v=min+(max-min)*i/3,y=top+h*(1-i/3);s+=line('',`M100 ${y}H950`,'#d6e3eb',1)+tag(10,y-18,[spec.format?spec.format(v):v.toFixed(0)],{w:78,bg:'#fff',color:'#173b4f',font:20})}const first=xs[0].time,last=Math.max(first+10,xs[xs.length-1].time);for(let n=0;n<spec.names.length;n++){const d=xs.map((o,i)=>{const x=left+w*(o.time-first)/(last-first),y=top+h*(1-clamp((o.values[n]-min)/(max-min)));return(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)}).join('');s+=line('trace-'+n,d,spec.colors[n],3)}s+=tag(105,5,[spec.unit],{w:310,bg:'#fff',color:'#173b4f',font:20});s+=tag(620,5,['模型记录 · '+Math.round(E.elapsed)+' s'],{w:330,bg:'#fff',color:'#173b4f',font:20});s+=spec.names.map((n,i)=>tag(100+i*285,248,[n],{w:272,bg:'#fff',color:spec.colors[n],font:20})).join('');$('chart').innerHTML=s}
+function recordSample(dt){E.sampleClock+=dt;if(E.sampleClock<.18)return;E.sampleClock=0;E.samples.push({time:E.elapsed,values:chartValues()});if(E.samples.length>300)E.samples.shift()}
+function drawHud(){const values=hudValues();$('telemetryValues').innerHTML=hudNames().map((n,i)=>'<div><span>'+n+'</span><b>'+esc(values[i][0])+'</b><small>'+esc(values[i][1]||'')+'</small></div>').join('');setText('liveLabel',E.paused?'画面已暂停':E.running?'干预进行中':E.applied?'响应持续中':'基础循环中');$('liveDot').style.background=E.paused?'#ffd27b':'#6ee7bc';setText('modelClock',Math.floor(E.clock/60).toString().padStart(2,'0')+':'+Math.floor(E.clock%60).toString().padStart(2,'0'));const wave=Array.from({length:121},(_,i)=>{const x=i*2,u=(i/120-E.clock*.13+10)%1;const y=23+Math.sin(u*6.28)*2-15*Math.exp(-Math.pow((u-.48)/.013,2))+9*Math.exp(-Math.pow((u-.51)/.015,2))-5*Math.exp(-Math.pow((u-.57)/.04,2));return(i?'L':'M')+x+' '+y.toFixed(2)}).join('');attr('monitorTrace',{d:wave})}
+function syncTransport(){setText('pauseButton',E.paused?'继续画面':'暂停画面');$('pauseButton').setAttribute('aria-pressed',String(E.paused));$('timeline').value=Math.round(E.t*1000);setText('timelineValue',Math.round(E.t*100)+'%');setText('elapsedLabel',E.applied?'已观察 '+Math.floor(E.elapsed)+' s':'基础生理持续运行');$('speed').value=E.speed;setText('applyButton',applyLabel());const can=canRecord();$('recordButton').disabled=!can.allowed&&!can.recorded;$('recordButton').classList.toggle('recorded',!!can.recorded);setText('recordButton',can.recorded?'本项证据已入档 ✓':can.allowed?'记录本次观察':can.wait||'先施加干预并观察')}
+function certificate(){const n=score();setText('certificateName',$('studentName').value.trim()||'观察学习者');setText('certificateTitle',n===100?'生命信使 · 探究结项证书':'生命信使 · 探究学习记录');setText('certificateTopic',CONFIG.topic);setText('certificateScore','当前探究积分 '+n+' / 100');setText('certificateDetail',n===100?'已完成四个工作台的观察与推理证据。':'已保存当前学习进度；继续补齐观察与推理证据。');setText('certificateRank',rank());setText('certificateDate',new Date().toLocaleDateString('zh-CN')+' · 生物课堂学习奖励')}
+
+function heart(x,y,s=1,id='heart'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-8-28C-43-79-88-38-63 6C-46 37-19 56 0 67C21 49 60 27 70-8C80-53 36-73 10-27Z" fill="url(#organRose)" stroke="#ec9cb4" stroke-width="2"/><path d="M-9-30L2 50M-48-20Q-15 6 1 45M44-23Q14 3 2 48" fill="none" stroke="#e594ae" stroke-width="2"/><path d="M-10-27V-64Q0-77 13-65V-31M17-32V-65M32-29V-52" stroke="#c96d8b" stroke-width="10" fill="none" stroke-linecap="round"/></g>'}
+function pancreas(x,y,s=1,id='pancreas'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-177 38C-208 30-205-3-188-17C-205-38-172-60-146-50C-126-75-97-52-80-61C-48-80-22-66 1-73C34-88 60-70 82-78C104-91 138-65 161-73C199-85 222-60 208-46C227-26 192-15 174-22C148-5 135-23 111-13C87 3 68-13 46 2C20 20 1 7-24 24C-46 42-80 18-103 35C-123 56-153 37-177 38Z" fill="url(#organGold)" stroke="#e8c487" stroke-width="2.2"/>';
+for(let i=0;i<41;i++){const px=-168+(i%14)*27,py=-43+Math.floor(i/14)*25+Math.sin(i*2.1)*8;if(px>70&&py>0)continue;a+='<g transform="translate('+px+' '+py+')"><circle r="10" fill="#b59662" stroke="#e1c28a" stroke-width=".8"/>'+[0,1,2,3,4].map(j=>'<path d="M0 0L'+(Math.cos(j*1.26)*9).toFixed(1)+' '+(Math.sin(j*1.26)*9).toFixed(1)+'" stroke="#685340" stroke-width=".7"/>').join('')+'</g>'}a+='<path d="M-181 6Q-116-1-61-16T68-38T196-52" fill="none" stroke="#ffdc84" stroke-width="5"/><path d="M-155-29L-135-1M-104-39L-87-10M-50-45L-32-21M23-56L36-31M91-63L99-40M158-69L167-48" stroke="#ffe4a1" stroke-width="2"/></g>';return a}
+function duodenum(x,y,s=1,id='gut'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M54-140C-63-173-132-86-119 14C-118 103-48 162 35 122L66 90L34 51C-9 92-53 56-57 11C-64-53-30-89 42-72Z" fill="#794b57" stroke="#e3a498" stroke-width="3"/><path d="M44-121C-47-144-99-77-91 12C-86 89-36 131 47 78" fill="none" stroke="#eab398" stroke-width="25"/><path d="M44-121C-47-144-99-77-91 12C-86 89-36 131 47 78" fill="none" stroke="#65404f" stroke-width="14"/>';
+for(let i=0;i<17;i++){const ang=-1.2-i*.23,xx=-10+83*Math.cos(ang),yy=4+105*Math.sin(ang);a+='<path d="M'+xx.toFixed(1)+' '+yy.toFixed(1)+'l'+(-Math.cos(ang)*18).toFixed(1)+' '+(-Math.sin(ang)*18).toFixed(1)+'" stroke="#edc4a4" stroke-width="4" stroke-linecap="round"/>'}a+='</g>';return a}
+function liver(x,y,s=1,id='liver'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-122-30C-109-88-4-98 72-56L128-38C133 1 111 38 67 48L15 24C-33 49-92 58-128 25Z" fill="#895264" stroke="#e7a6a5" stroke-width="2.5"/><path d="M12-71Q-1-27 15 24M-119-9Q-63-7-7-44M24-42Q72-27 107-27M-95 25Q-53 14-8-4" fill="none" stroke="#c37a87" stroke-width="2"/><path d="M18 9C42 1 56 15 37 37C22 56 3 39 18 9Z" fill="#528575" stroke="#91c1a6" stroke-width="2"/>'+line('', 'M-2-13L25-4L57-12', '#a2b7be',4)+'</g>'}
+function muscle(x,y,s=1,id='muscle'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-126 0L-89-18C-31-62 37-60 91-15L126 0L87 15C36 61-33 62-90 18Z" fill="#853d58" stroke="#ed9caf" stroke-width="2.5"/>';for(let i=0;i<7;i++){const yy=-23+i*7.5;a+='<path d="M-88 '+(yy*.4)+'Q0 '+yy+' 88 '+(yy*.4)+'" fill="none" stroke="#c56c89" stroke-width="2"/>'}for(let i=0;i<12;i++){const xx=-70+i*13;a+='<path d="M'+xx+' -26v52" stroke="#d387a0" stroke-width="1" opacity=".7"/>'}return a+'</g>'}
+function fat(x,y,s=1,id='fat'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')">';for(const[xx,yy,r]of [[-43,-12,37],[25,-20,42],[77,13,31],[-12,43,34]])a+='<circle cx="'+xx+'" cy="'+yy+'" r="'+r+'" fill="#577e70" stroke="#a2d6b5" stroke-width="2"/><circle cx="'+(xx+4)+'" cy="'+yy+'" r="'+(r-8)+'" fill="#9cab76" opacity=".8"/><ellipse cx="'+(xx-r+9)+'" cy="'+yy+'" rx="4" ry="7" fill="#c5c8ed"/>';return a+'</g>'}
+function kidney(x,y,s=1,id='kidney'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-14-54C-80-67-85 38-32 57C15 73 49 28 20 15C-6 4-14-6 10-21C36-36 20-54-14-54Z" fill="#89455d" stroke="#e898aa" stroke-width="2.5"/><path d="M-24-36C-54-40-58 29-31 36M-16-23Q-44-2-19 18" fill="none" stroke="#ce7e92" stroke-width="7"/><path d="M14 9Q48 30 46 91" stroke="#e5c178" stroke-width="5" fill="none"/></g>'}
+function adrenal(x,y,s=1,id='adrenal'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-43 13Q-20-43 13-26L47 11Q8 38-43 13Z" fill="#bb9964" stroke="#f3d390" stroke-width="2"/><path d="M-23 8Q-8-17 10-11L28 9Q3 24-23 8Z" fill="#ba697d" stroke="#f7a8b5" stroke-width="2"/></g>'}
+function islet(x,y,s=1,id='islet'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><ellipse rx="86" ry="64" fill="#143c50" stroke="#83b9cd" stroke-width="2"/>';for(let i=0;i<27;i++){const angle=i*2.4,r=Math.sqrt(i/27)*59,xx=Math.cos(angle)*r,yy=Math.sin(angle)*r*.8,b=i<19;a+='<circle class="'+(b?'beta':'alpha')+'" cx="'+xx.toFixed(1)+'" cy="'+yy.toFixed(1)+'" r="10" fill="'+(b?'#568fd1':'#d99a59')+'" stroke="'+(b?'#a6d7ff':'#ffe0a2')+'" stroke-width="1"/><circle cx="'+(xx-1).toFixed(1)+'" cy="'+(yy+1).toFixed(1)+'" r="3.5" fill="#182f45"/>'}a+='<path d="M-90-15Q-41-88 31-60T88 16Q20 86-53 48T-90-15" fill="none" stroke="#c96b91" stroke-width="6"/></g>';return a}
+function brain(x,y,s=1,id='brain'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-72 17C-101-21-52-77-18-61C15-83 71-62 79-31C113-16 94 35 59 36L36 20L21 62L3 61L-7 30C-38 46-63 40-72 17Z" fill="#304559" stroke="#9eb5d3" stroke-width="2"/><path d="M-51-40Q-23-23-52 4M-14-49Q8-27-15 0M28-49Q61-35 40-16M65-18Q43 1 61 21M-45 18Q-15 7-4 21" fill="none" stroke="#6e87a3" stroke-width="2"/><ellipse cx="2" cy="20" rx="13" ry="9" fill="#f6c77d" stroke="#ffdfa0" stroke-width="2"/></g>'}
+function thyroid(x,y,s=1,id='thyroid'){let a='<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-8-28C-47-97-101-57-73 20Q-39 86-8 40H8Q39 86 73 20C101-57 47-97 8-28Z" fill="#467b79" stroke="#9fddd1" stroke-width="2.5"/><path d="M-9-25H9V39H-9Z" fill="#70a595" stroke="#b4e7d6"/>';for(let i=0;i<18;i++){const side=i<9?-1:1,j=i%9,xx=side*(27+(j%3)*13),yy=-32+Math.floor(j/3)*23;a+='<circle cx="'+xx+'" cy="'+yy+'" r="7" fill="#9bc3a3" stroke="#cde5bd" stroke-width="1"/>'}return a+'</g>'}
+function membrane(y,x0=20,x1=980){let a='';for(let x=x0;x<x1;x+=22){a+='<path d="M'+x+' '+(y+7)+'l-6 18 6 13m0-31 6 18-6 13M'+x+' '+(y+65)+'l-6-18 6-13m0 31 6-18-6-13" fill="none" stroke="#8eaabd" stroke-width="1.5"/><circle cx="'+x+'" cy="'+y+'" r="6" fill="#7399b3" stroke="#bfd7e7"/><circle cx="'+x+'" cy="'+(y+72)+'" r="6" fill="#7399b3" stroke="#bfd7e7"/>'}return a}
+function receptor(x,y,id='receptor'){return '<g id="'+id+'" transform="translate('+x+' '+y+')"><path d="M-19-32V44M19-32V44M-36-54Q0 4 36-54M0 4V72" stroke="#7eb8ff" stroke-width="8" fill="none" stroke-linecap="round"/><circle cy="-21" r="11" fill="#174373" stroke="#9ccaff" stroke-width="2"/></g>'}
+function glutCarrier(x,y,scale=1,id='carrier'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+scale+')"><path d="M-15-43C-45-16-9-12-16 0C-35 19-36 34-15 43L-4 25Q-20 10-1 0Q-20-14-4-27Z" fill="#72c3a3" stroke="#b6f2d7" stroke-width="2"/><path d="M15-43C42-19 13-11 16 0C39 15 39 34 15 43L4 25Q22 11 1 0Q21-15 4-27Z" fill="#487f7e" stroke="#a1dfcf" stroke-width="2"/><ellipse rx="12" ry="7" fill="#173c4b" stroke="#b6f2d7" stroke-width="1"/></g>'}
+function human(x,y,s=1,id='human'){return '<g id="'+id+'" transform="translate('+x+' '+y+') scale('+s+')"><path d="M-22-214C-28-255 26-255 23-214L18-187Q17-174 25-164L61-146Q75-139 81-105L104 0L94 8L65-72L58-106L55 20Q47 61 42 94L36 218L12 220L6 101L0 55L-9 102L-14 220L-38 218L-42 92L-57 22L-59-106L-70-69L-93 8L-105 1L-82-105Q-77-138-62-146L-27-163Q-17-173-19-188Z" fill="#274455" fill-opacity=".5" stroke="#85b0c7" stroke-width="2"/><path d="M-42-125Q0-140 42-125M-46-69Q0-53 46-69M-39-26Q0-10 39-26M0-130V46" stroke="#4b6f85" stroke-width="1.4" fill="none"/>'+thyroid(0,-158,.24,'bodyThyroid')+heart(0,-101,.34,'bodyHeart')+liver(0,-47,.3,'bodyLiver')+kidney(-23,-2,.24,'bodyKidneyA')+kidney(24,-2,.24,'bodyKidneyB')+pancreas(0,-16,.2,'bodyPancreas')+'</g>'}
+
+const CONFIG={brand:'ICU · 内分泌动态调控中枢',chapter:'选择性必修 1 · 第 3 章第 2 节 · v2.0',topic:'激素调节的过程：血糖平衡、分级调节与负反馈',kicker:'METABOLIC BALANCE / FLOW · RESPONSE · FEEDBACK',title:'一滴血糖，<em>怎样回到平衡？</em>',copy:'让供糖、摄糖和信号响应共同决定下一秒。放大囊泡，再把视线拉回全身，观察稳态怎样被调节出来。',tabs:['血糖与 GLUT-4','HPT 反馈回路','信使与靶细胞','首席专家终审'],hud:['血糖 / 教学模型','胰岛素 / 有效信号','膜上 GLUT-4 / 示意数量'],groups:[{name:'血糖与转运',max:20,keys:k=>k.startsWith('obs-g-')||/^g\d/.test(k)},{name:'分级与反馈',max:30,keys:k=>k.startsWith('obs-h-')||/^h\d/.test(k)},{name:'信使与配对',max:20,keys:k=>k==='obs-m'||k.startsWith('pair-')||/^m\d/.test(k)},{name:'终审',max:30,keys:k=>/^q\d/.test(k)}],examOnlyStage:true};
+const L={glucose:'fed',view:'overview',rescue:false,t2Phase:'early',hpt:'cold',iodine:1,external:0,block:false,pair:0,hpred:['','','']};
+const B={G:5,I:.75,A:1,eff:.75,mem:.4,input:1.12,uptake:1.12,urine:0,ADH:1,R:1,TSH:1,H:1,size:1,load:0,peakTSH:0,THout:1,msg:20,response:0,bind:0};
+for(const k of Object.keys(DATA.glucoseCases))WEIGHTS['obs-g-'+k]=3;for(const k of ['cold','iodine','cut','exo','trhA','trhB'])WEIGHTS['obs-h-'+k]=3;WEIGHTS['obs-m']=4;DATA.pairs.forEach((p,i)=>WEIGHTS['pair-'+i]=2);
+registerQuestions(Object.entries(DATA.challenges).map(([id,q])=>({id,stage:q.group==='g'?0:q.group==='h'?1:q.group==='m'?2:3,exam:q.group==='q',points:q.pts,q:q.q,opts:q.opts,a:q.a,ex:q.ex})));
+function stageMeta(){return [
+{title:'从供糖到摄糖，追踪一次全身响应。',lead:'先看全身循环，点击局部放大；一条共享过程把信号、囊泡、摄糖和血糖连起来。',tag:'LIVE METABOLIC ENGINE / BLOOD ↔ LIVER → TISSUE',console:'改变条件，不直接改答案。',chart:'供需调节留下的血糖轨迹',caption:'血糖由供糖、摄糖与尿糖丢失的简化平衡方程更新；数值不能用于临床预测。',evidence:'信号不搬糖，载体才完成转运。',copy:'GLUT-4 是载体蛋白。含载体囊泡的运输需要能量，而葡萄糖经 GLUT-4 顺浓度进入属于协助扩散。'},
+{title:'下游的变化，怎样反过来约束上级？',lead:'观察促进路线和两条红色反馈线。外源输入与自身分泌被画成不同路线。',tag:'HPT AXIS / HIERARCHY × NEGATIVE FEEDBACK',console:'给回路一个干预。',chart:'三激素的时序与反馈',caption:'每项以自身正常基线为 1；仅比较相对变化，不能直接比较三种激素的绝对浓度。',evidence:'先辨原料，再辨来源，最后回看反馈。',copy:'缺碘导致 TH 合成受限；外源 TH 增多却可能抑制自身甲状腺。二者都不能只凭“腺体大或小”判断功能。'},
+{title:'流经全身，为什么只在这里起效？',lead:'TSH 会经过所有支流；试着阻断受体，看看运输是否也随之停止。',tag:'HORMONE MESSENGER / CIRCULATION ≠ TARGETING',console:'保持流动，改变识别。',chart:'输入、受体响应与清除',caption:'输入脉冲后逐步清除；不是每个激素分子碰到受体就瞬间被剪断。',evidence:'运输广泛，作用有选择。',copy:'靶向效应来自匹配受体与细胞响应系统。激素传递信息，不充当酶，不供能，也不以结构材料身份发挥作用。'},
+{title:'用证据完成最后一次会诊。',lead:'返回任何一舱寻找依据，重新组织因果链。',tag:'EVIDENCE / FINAL REVIEW',console:'终审',chart:'',caption:'',evidence:'',copy:''}][S.stage]}
+function hPredictionLabel(i,v,t){if(!L.hpt.startsWith('trh'))return t;return i===0?(v==='up'?'外源输入 ↑':v==='same'?'无补充':'减少'):i===1?(v==='up'?'明显升高':v==='same'?'仍低平':'降低'):(v==='up'?'随后回升':v==='same'?'仍偏低':'降低')}
+function lessonControls(){let list='',extra='',pred='';if(S.stage===0){list=Object.entries(DATA.glucoseCases).map(([k,c],i)=>caseButton(k,c.name,c.desc,i,L.glucose===k)).join('');extra='<div class="extra"><label for="mealInput">额外肠道吸收负荷</label><div class="range"><input id="mealInput" type="range" min="0" max="150" value="'+Math.round((L.meal??.8)*100)+'"><output id="mealOutput">'+Math.round((L.meal??.8)*100)+'%</output></div>'+(L.glucose==='t1'||L.glucose==='t2'?'<label class="switchline"><input id="rescue" type="checkbox" '+(L.rescue?'checked':'')+'>'+(L.glucose==='t1'?'外源胰岛素替代信号（理想对照）':'改善受体后信号响应')+'</label>':'')+(L.glucose==='t2'?'<label for="t2Phase">2 型阶段</label><select id="t2Phase"><option value="early" '+(L.t2Phase==='early'?'selected':'')+'>早期代偿偏高</option><option value="late" '+(L.t2Phase==='late'?'selected':'')+'>进展后分泌不足</option></select>':'')+'</div>';pred=predictionButtons([['down','下降趋近范围'],['up','由低值回升'],['high','维持较高水平']],S.predictions['g-'+L.glucose]);$('sceneTabs').innerHTML=[['overview','全身联动'],['micro','GLUT-4 放大'],['renal','肾小管追踪']].map(([k,l])=>'<button data-view="'+k+'" class="'+(L.view===k?'active':'')+'">'+l+'</button>').join('')}
+if(S.stage===1){list=[['cold','寒冷刺激','增加分级促进与产热'],['iodine','长期缺碘','原料不足，反馈减弱'],['cut','切除甲状腺','减法干预'],['exo','过量外源 TH','加法干预'],['trhA','TRH 定位 · 分支 A','TSH 注射后有反应'],['trhB','TRH 定位 · 分支 B','TSH 注射后低平']].map(([k,t,d],i)=>caseButton(k,t,d,i,L.hpt===k)).join('');extra='<div class="extra"><label for="iodineInput">碘原料可用比例</label><div class="range"><input id="iodineInput" type="range" min="0" max="100" value="'+Math.round(L.iodine*100)+'"><output id="iodineOutput">'+Math.round(L.iodine*100)+'%</output></div><p class="secondary">模型允许改变原料，观察新平衡。</p></div>';pred='<div class="prediction"><label>预测最终趋势 / 负荷响应</label><div class="row">'+['TRH','TSH','TH'].map((h,i)=>'<label>'+h+'<select data-hpred="'+i+'"><option value="">选择</option>'+[['up','↑'],['down','↓'],['same','↔']].map(([v,t])=>'<option value="'+v+'" '+(L.hpred[i]===v?'selected':'')+'>'+hPredictionLabel(i,v,t)+'</option>').join('')+'</select></label>').join('')+'</div></div>';$('sceneTabs').innerHTML=''}
+if(S.stage===2){list=[['normal','保持匹配受体','三条支流均有 TSH 经过'],['block','阻断 TSH 受体','运输继续，响应改变']].map(([k,t,d],i)=>caseButton(k,t,d,i,L.block===(k==='block'))).join('');extra='<div class="extra"><label for="pairSelect">激素作用关系验证</label><select id="pairSelect">'+DATA.pairs.map((p,i)=>'<option value="'+i+'" '+(i===L.pair?'selected':'')+'>'+p.title+'</option>').join('')+'</select><p class="secondary">针对：'+esc(DATA.pairs[L.pair].effect)+'</p><div class="row">'+toggleButton('pair:0','协同')+toggleButton('pair:1','相抗衡')+'</div><p id="pairResult" class="secondary">'+(S.answers['pair-'+L.pair]!==undefined?esc(DATA.pairs[L.pair].ex):'先限定生理效应，再判断作用方向。')+'</p></div>';$('sceneTabs').innerHTML=''}
+$('caseList').innerHTML=list;$('extraControls').innerHTML=extra;$('prediction').innerHTML=pred;
+}
+function choose(k){if(S.stage===0){L.glucose=k;L.rescue=false;L.meal=.8}if(S.stage===1){L.hpt=k;L.iodine=k==='iodine'?.15:1;L.hpred=[]}if(S.stage===2)L.block=k==='block';resetEvent();buildScene();lessonControls();renderUI();feedback('条件已装载，先预测再施加干预。','背景循环保持运行；点击“施加干预”才会改变本次模型的生理状态。')}
+function extraAction(k,value){if(k==='view'){L.view=value;buildScene();lessonControls();renderScene();return}if(k==='rescue'){L.rescue=!!value;feedback('补充实验已改变有效信号。','1 型用外源替代信号的理想对照；2 型改善响应。这里不提供剂量或临床疗效预测。')}if(k==='t2Phase')L.t2Phase=value;if(k==='mealInput'){L.meal=+value/100;setText('mealOutput',value+'%')}if(k==='iodineInput'){L.iodine=+value/100;setText('iodineOutput',value+'%')}if(k==='pairSelect'){L.pair=+value;lessonControls()}if(k.startsWith('pair:')){const i=+k.slice(5),p=DATA.pairs[L.pair];S.answers['pair-'+L.pair]=i;if(i===p.a)earn('pair-'+L.pair,'作用关系已核对');save();lessonControls();feedback(i===p.a?'关系判断通过，记得附上效应限定。':'先看这组激素对同一个效应的作用方向。',p.ex)}renderUI()}
+function resetPhysics(){Object.assign(B,{G:5,I:.75,A:1,eff:.75,mem:.4,input:1.12,uptake:1.12,urine:0,ADH:1,R:1,TSH:1,H:1,size:1,load:0,peakTSH:0,THout:1,msg:20,response:0,bind:0})}
+function applyExperiment(){resetPhysics();E.t=0;E.elapsed=0;E.running=true;E.applied=true;E.paused=false;E.samples=[];E.sampleClock=0;E.duration=S.stage===1?42:30;if(S.stage===0){B.G=DATA.glucoseCases[L.glucose].start;if(L.glucose==='t1')B.I=0;if(L.glucose==='t2')B.I=L.t2Phase==='late'?.35:3.2}if(S.stage===1){if(L.hpt==='trhA')Object.assign(B,{R:.25,TSH:.18,H:.25});if(L.hpt==='trhB')Object.assign(B,{R:1.6,TSH:.18,H:.25});L.external=L.hpt==='exo'?2.5:0}if(S.stage===2)B.msg=120;feedback('干预已施加，观察结构、流动与读数的共同响应。','变化不是一个直接指定的终点值；供需与反馈会继续改变下一秒。')}
+function updatePhysics(dt){if(S.stage===0){const applied=E.applied,k=applied?L.glucose:'base',g=B.G,normalI=clamp(.75+(g-5)*.55,.04,3),rescue=L.rescue&&applied;const t1=k==='t1',t2=k==='t2';const targetI=t1?(rescue?normalI:0):t2&&!rescue?(L.t2Phase==='late'?.35:clamp(1.3+.65*(g-5),.4,3.4)):normalI;const targetA=(t1&&!rescue)?1.25:(t2&&!rescue)?1.35:clamp(1+(5-g)*.9,.1,3);B.I+=dt*(targetI-B.I)/2;B.A+=dt*(targetA-B.A)/2;const sens=t2&&!rescue?.18:1;B.eff=B.I*sens;const hepatic=t2&&!rescue?.35:1;const liver=1.45*B.A/(.65+.85*B.eff*hepatic);const food=applied?(L.meal??.8)*Math.exp(-E.elapsed/12)*(k==='fed'?1:.25):0;B.input=liver+food;B.uptake=(.48+.85*B.eff)*(g/5);B.urine=Math.max(0,g-10)*.1;B.G=clamp(g+dt*.11*(B.input-B.uptake-B.urine),2.4,24);B.mem+=dt*(clamp(.12+.45*B.eff,.12,.95)-B.mem)/3;B.ADH=1+B.urine*.8}
+if(S.stage===1){const k=E.applied?L.hpt:'base',cold=k==='cold',a=k==='trhA',b=k==='trhB',capacity=E.applied?(k==='cut'?0:L.iodine):1,exo=k==='exo'?L.external:0,load=(a||b)&&E.applied?1.4*Math.exp(-Math.max(0,E.elapsed-8)/5):0;B.load=load;const drive=a?.22:cold?1.6:1,pit=b?.015:1;const targetR=2*drive/(1+B.H*B.H);B.R+=dt*(targetR-B.R)/4;const targetS=pit*2*(B.R+load)/(1+B.H);B.TSH+=dt*(targetS-B.TSH)/4;B.THout=B.TSH*capacity;B.H+=dt*(B.THout+exo-B.H)/6;const goal=k==='cut'?0:clamp(1+Math.max(0,B.TSH-1)*.18-Math.max(0,1-B.TSH)*.4,.62,1.48);B.size+=dt*(goal-B.size)/8;B.peakTSH=Math.max(B.peakTSH,B.TSH)}
+if(S.stage===2){B.msg+=dt*((E.applied?6:20)-B.msg)/15;B.bind=L.block?0:B.msg/(B.msg+30);B.response+=dt*(B.bind*100-B.response)/3}}
+function onSeek(t){resetPhysics();if(S.stage===0){B.G=DATA.glucoseCases[L.glucose].start;if(L.glucose==='t1')B.I=0;if(L.glucose==='t2')B.I=L.t2Phase==='late'?.35:3.2}if(S.stage===1){if(L.hpt==='trhA')Object.assign(B,{R:.25,TSH:.18,H:.25});if(L.hpt==='trhB')Object.assign(B,{R:1.6,TSH:.18,H:.25});L.external=L.hpt==='exo'?2.5:0}if(S.stage===2)B.msg=120;const duration=S.stage===1?42:30;E.duration=duration;const end=duration*t;E.samples=[];for(let time=0;time<end;time+=.05){E.elapsed=time;updatePhysics(.05);if(Math.round(time*20)%8===0)E.samples.push({time,values:chartValues()})}E.elapsed=end;E.t=t}
+function applyLabel(){return S.stage===0?'施加本组生理干预':S.stage===1?(L.hpt.startsWith('trh')?'注入 TRH · 观察响应':'施加本组轴干预'):'释放一批 TSH'}
+function canRecord(){const key=S.stage===0?'obs-g-'+L.glucose:S.stage===1?'obs-h-'+L.hpt:'obs-m',recorded=S.credits[key]===true;return {recorded,allowed:E.applied&&E.t>=.96,wait:E.applied?'继续观察，或拖动回看帧':'先施加本次干预'}}
+function recordObservation(){if(!canRecord().allowed)return;if(S.stage===0){const actual=DATA.glucoseCases[L.glucose].answer;if(L.rescue){setText('feedback','这是补充对照。请关闭补充条件、重做原工况后核对本项预测；补充对照不重复计分。');return}if(S.predictions['g-'+L.glucose]!==actual){setText('feedback','请依据血糖轨迹修正预测，再将证据入档。');return}earn('obs-g-'+L.glucose,'血糖证据已核对')}if(S.stage===1){if(Math.abs(L.iodine-(L.hpt==='iodine'?.15:1))>.01){setText('feedback','当前改变了碘原料，属于补充实验。恢复本工况的原始比例后再记录标准对照。');return}const expected=DATA.hptCases[L.hpt].sign;if(!expected.every((v,i)=>v===L.hpred[i])){setText('feedback','核对三项预测：负荷试验的 TSH 看是否出现响应，不只看最后一刻。');return}earn('obs-h-'+L.hpt,'分级反馈证据已核对')}if(S.stage===2){if(L.block){setText('feedback','先在受体匹配的正常工况记录，再用阻断对照解释机制。');return}earn('obs-m','体液运输证据已记录')}renderUI()}
+function sceneLegend(){return S.stage===0?[[P.gold,'葡萄糖'],[P.blue,'胰岛素'],['#f3a661','胰高血糖素'],[P.pink,'循环血液']]:S.stage===1?[[P.blue,'TRH'],[P.violet,'TSH'],[P.green,'TH'],[P.pink,'负反馈']]:[[P.violet,'TSH'],[P.pink,'血液灌流'],[P.green,'受体响应']]}
+function hudNames(){return S.stage===0?CONFIG.hud:S.stage===1?['TRH / 含外源负荷','TSH / 相对基线','TH / 含外源输入']:S.stage===2?['TSH / 体液相对信号','靶细胞 / 响应强度','流经支路 / 非定向运输']:['观察档案 / 学习积分','已核对机制 / 原创题','已完成 / 工作台']}
+function hudValues(){return S.stage===0?[[B.G.toFixed(1),'mmol/L'],[(B.eff*100).toFixed(0),'index'],[String(2+Math.round(B.mem*6)),'个']]:S.stage===1?[[(B.R+B.load).toFixed(2),'×'],[B.TSH.toFixed(2),'×'],[B.H.toFixed(2),'×']]:S.stage===2?[[B.msg.toFixed(0),'index'],[B.response.toFixed(0),'%'],['3 / 3','支路']]:[[score(),'/ 100'],[Object.keys(S.credits).filter(k=>/^q/.test(k)).length,'/ 6'],[document.querySelectorAll('.tab.done').length,'/ 4']]}
+function chartValues(){return S.stage===0?[B.G]:S.stage===1?[B.R+B.load,B.TSH,B.H]:[B.msg,B.response]}
+function chartSpec(){return S.stage===0?{max:24,min:0,names:['血糖 mmol/L'],colors:['#155e75'],unit:'正常参考：3.9～6.1 mmol/L',format:v=>v.toFixed(0)}:S.stage===1?{max:4,min:0,names:['TRH（含负荷）','TSH','TH（含外源）'],colors:['#1d4ed8','#6d28d9','#047857'],unit:'各自正常基线 = 1',format:v=>v.toFixed(1)}:{max:130,min:0,names:['间隙 / 体液信使','受体后响应'],colors:['#6d28d9','#047857'],unit:'相对指数'}}
+function updateLessonUI(){if(S.stage===0){$('readouts').innerHTML=readout('供糖 / 摄糖',B.input.toFixed(2)+' / '+B.uptake.toFixed(2),'相对速率')+readout('GLUT-4',2+Math.round(B.mem*6)+' 个','示意数量');setText('feedback',!E.applied?'基础循环已在运行。先预测，再施加餐后、低血糖或病理条件。':L.glucose==='t1'?'B 细胞损伤导致胰岛素绝对缺乏。高尿糖可造成渗透性利尿；ADH 并非一定偏低。':L.glucose==='t2'?'抵抗时信号响应不足；早期可代偿偏高，进展后也可分泌不足。不能断言胰岛素治疗一定无效。':L.glucose==='fast'?'肝糖原分解与糖异生补充血糖。红锁提醒：肌糖原不能直接释放葡萄糖补充血糖。':'胰岛素信号增强，载体上膜，摄糖增加；肝脏供糖也受到抑制。观察二者共同影响下一秒血糖。');$('evidenceMetrics').innerHTML='<div class="evidence-metrics"><span>供糖 '+B.input.toFixed(2)+'</span><span>摄糖 '+B.uptake.toFixed(2)+'</span><span>尿糖丢失 '+B.urine.toFixed(2)+'</span></div>';setText('mechanismNotes','本模型用供糖−摄糖−尿糖丢失更新血糖，用有时延的激素响应形成反馈。系数和时程为教学预设，不预测个体患者。GLUT-4 典型位于肌肉/脂肪细胞，其他组织转运系统不同；运动也可通过不依赖胰岛素的信号促进转位。外源替代信号为理想对照，并非实际给药剂量。')}
+if(S.stage===1){$('readouts').innerHTML=readout('TRH / TSH',(B.R+B.load).toFixed(2)+' / '+B.TSH.toFixed(2))+readout('TH',(B.H).toFixed(2),'正常基线1');setText('feedback',!E.applied?'基础分级轴持续运转；请选择一个干预，观察先变化的指标。':L.hpt==='iodine'?'TH 原料受限 → 反馈减弱 → 上级增强 → 持续 TSH 刺激可使腺体增生。':L.hpt==='cut'?'甲状腺来源被去除后 TH 下降，若上级功能完整且未外源补充，TRH、TSH 上升。':L.hpt==='exo'?'外源 TH 增多使血中总 TH 增多，上级被负反馈抑制，自身分泌反而减少。':L.hpt==='trhA'?'TSH 对外源 TRH 出现明显响应；在限定二选一且排除干扰的题设中支持下丘脑异常。':L.hpt==='trhB'?'TSH 对外源 TRH 仍低平；在限定二选一且排除干扰的题设中支持垂体异常。':'分级促进提高下游效应，升高的 TH 又反馈约束上级，不会无限增强。');$('evidenceMetrics').innerHTML='<div class="evidence-metrics"><span>自身 TH 输出 '+B.THout.toFixed(2)+'</span><span>外源 TH '+(L.hpt==='exo'&&E.applied?L.external:0).toFixed(2)+'</span><span>TSH 响应峰 '+B.peakTSH.toFixed(2)+'</span></div>';setText('mechanismNotes','TRH 定位题的前提：TH 与 TSH 偏低，排除原发甲状腺病变、药物等干扰，题设只比较下丘脑与垂体两种病变。实际临床须结合基线、反应时程和其他检查，不能凭一次结果确诊。TRH 负荷计入外源输入，垂体异常时内源 TRH 不一定也低。所有激素按自身基线归一化。')}
+if(S.stage===2){$('readouts').innerHTML=readout('流经分支','3 / 3','运输不定向')+readout('靶细胞响应',B.response.toFixed(0)+'%');setText('feedback',L.block?'阻断受体后，所有分支仍有 TSH 经过，而对应细胞响应显著减弱。':'TSH 随血液流过三条支路；典型靶细胞靠匹配受体接收信息。激素不亲自提供能量或催化反应。');$('evidenceMetrics').innerHTML='<div class="evidence-metrics"><span>微量、高效</span><span>体液运输</span><span>靶细胞响应</span><span>逐步清除</span></div>';setText('mechanismNotes','为清晰比较，本图三支路流量设为相同；真实灌流量不同。甲状腺滤泡细胞为图中典型 TSH 靶细胞。信使作用后需清除并持续分泌，不表示每个分子一接触受体就瞬间被剪断。激素作用关系须限定在同一生理效应与相应时程。')}
+}
+function buildScene(){if(S.stage===0){if(L.view==='micro')buildGlut();else if(L.view==='renal')buildRenal();else buildGlucose()}if(S.stage===1)buildHpt();if(S.stage===2)buildMessenger()}
+function buildGlucose(){let s=defs()+vessel('gLoop','M344 318C324 232 408 201 482 216C598 192 658 287 629 356C624 442 493 466 416 425C368 409 350 360 344 318Z','#8b3b59',25)+duodenum(157,153,.43,'gGut')+islet(174,320,.7,'gIslet')+liver(796,159,.9,'gLiver')+muscle(223,496,.9,'gMuscle')+fat(875,315,.65,'gFat')+heart(484,316,.55,'gHeart')+brain(401,81,.48,'gBrain')+kidney(598,139,.35,'gKidney')+adrenal(597,109,.55,'gAdrenal');
+s+=line('gAbsorb','M169 181Q246 188 357 275',P.gold,2,'','arrow')+line('gSupply','M704 197Q659 211 602 258',P.gold,3,'','arrow')+line('gGNG','M801 220Q761 270 638 310',P.gold,2,'6 6','arrow')+line('gStore','M626 305Q684 286 727 221',P.cyan,2,'','arrow')+line('gMuscleRoute','M399 415Q323 452 267 480',P.gold,3,'','arrow')+line('gFatRoute','M638 337Q729 333 821 321',P.gold,3,'','arrow')+line('gOxRoute','M482 452V521',P.gold,3,'','arrow')+line('gInsulin','M229 328Q282 348 341 328',P.blue,3,'','arrow')+line('gExternalInsulin','M95 438Q280 420 365 365',P.blue,2,'6 7','arrow')+line('gGlucagon','M220 293Q475 117 721 154','#f6b16b',2,'','arrow')+line('gNerve','M387 117Q264 128 184 263',P.green,2,'5 6')+line('gAdrenalNerve','M430 100Q505 63 580 102',P.green,2,'5 6')+line('gEpinephrine','M615 114Q659 106 701 148',P.pink,2,'','arrow');
+s+='<g transform="translate(285 486)"><path d="M-10 0v-10a10 10 0 0 1 20 0V0" fill="none" stroke="'+P.pink+'" stroke-width="4"/><rect x="-15" width="30" height="26" rx="4" fill="#8a3656" stroke="'+P.pink+'"/><path d="M0 7v12" stroke="#ffb6c6" stroke-width="3"/></g><ellipse cx="483" cy="546" rx="54" ry="32" fill="#284e66" stroke="#92bcd1" stroke-width="2"/><path d="M451 546q10-26 20 0t20 0t20 0" stroke="#72c7cc" fill="none" stroke-width="3"/>';
+s+='<g id="gParticles"></g><rect x="630" y="394" width="343" height="215" rx="10" fill="#112b3c" stroke="#6396ab" stroke-width="1.5"/>'+line('gZoomLeader','M717 357L665 394','#8ad2d8',2,'5 5')+tag(644,404,['GLUT-4 · 局部放大'],{w:309});
+s+=membrane(467,646,958)+glutCarrier(716,503,.45,'insetCarrier0')+glutCarrier(878,503,.45,'insetCarrier1')+'<g id="insetVesicle" transform="translate(802 562)"><circle r="24" fill="#255850" stroke="#a2e1c8"/>'+glutCarrier(0,0,.35,'insetStore')+'</g><g id="insetGlucose"></g>';
+s+=tag(25,22,['小肠：消化吸收'],{w:250})+tag(350,22,['交感 → 肾上腺髓质'],{w:280})+tag(652,22,['肝：糖原动员 / 糖异生'],{w:320})+tag(23,373,['胰岛 B / A 细胞'],{w:270})+tag(737,245,['脂肪组织'],{w:230})+tag(26,555,['肌糖原：不能直接补血糖'],{w:330})+tag(367,578,['氧化分解供能'],{w:245})+tag(374,391,['血糖池','5.0 mmol/L'],{w:234,id:'gPool'});$('scene').innerHTML=s;
+}
+function buildGlut(){let s=defs()+membrane(276)+receptor(160,312,'glutReceptor')+line('glutInsPath','M98 108Q147 174 160 258',P.blue,2,'6 8')+line('glutSignal','M161 382Q203 466 372 481T527 512',P.blue,3,'6 6');for(let i=0;i<6;i++)s+=glutCarrier(380+i*100,312,.76,'glutMem'+i);for(let i=0;i<3;i++)s+='<g id="glutVes'+i+'" transform="translate('+(470+i*170)+' 508)"><circle r="43" fill="#204c4c" stroke="#98dcc2" stroke-width="2"/>'+glutCarrier(0,0,.57,'glutStored'+i)+'</g>';
+s+=line('glutSugar','M580 130V268Q567 291 580 313Q593 339 580 370V495',P.gold,1)+line('glutSugar2','M780 130V265Q768 290 780 312Q793 340 780 370V488',P.gold,1)+'<g id="glutParticles"></g>'+tag(25,24,['细胞外：胰岛素与葡萄糖'],{w:390})+tag(620,24,['骨骼肌 / 脂肪细胞模型'],{w:355})+tag(25,163,['胰岛素受体'],{w:250})+tag(25,475,['信号传递 → 囊泡转位'],{w:330})+tag(505,582,['载体结合底物、交替开放；不是常开孔道'],{w:470})+tag(25,578,['基础摄糖保留，并非全部归零'],{w:440});$('scene').innerHTML=s;
+}
+function buildRenal(){let s=defs()+vessel('renalBlood','M72 137H821Q943 137 905 229Q870 277 826 228','#934463',16)+'<path d="M99 264C230 164 390 237 389 335S253 422 260 477S478 552 624 448Q734 355 876 462" fill="none" stroke="#8ea5b77a" stroke-width="52"/><path d="M99 264C230 164 390 237 389 335S253 422 260 477S478 552 624 448Q734 355 876 462" fill="none" stroke="#244a65" stroke-width="39"/>';
+s+=line('renalLumen','M99 264C230 164 390 237 389 335S253 422 260 477S478 552 624 448Q734 355 876 462',P.cyan,2)+line('renalReturn','M527 488Q584 314 688 162',P.blue,3,'6 7','arrow')+'<g id="renalParticles"></g>';
+s+=tag(25,22,['尿糖增加 → 管液保留更多溶质'],{w:540})+tag(627,22,['水重吸收返回血液'],{w:350})+tag(25,549,['管腔里的葡萄糖增多，不等于肾小球破损'],{w:585})+tag(671,549,['尿液：溶质与水流出'],{w:300})+tag(25,336,['曲线：肾小管管腔'],{w:265});$('scene').innerHTML=s;
+}
+function buildHpt(){let s=defs()+brain(393,103,.8,'hBrain')+'<path d="M393 148Q409 182 393 226" fill="none" stroke="#b9a4d8" stroke-width="8"/><path d="M370 249C340 228 341 282 370 287C399 303 429 281 416 255Q394 233 370 249Z" fill="#6b587f" stroke="#c4ace3" stroke-width="2"/>'+thyroid(393,489,1,'hThyroid');
+s+=line('hTrh','M393 163V240',P.blue,5,'','arrow')+line('hTsh','M395 290V385',P.violet,5,'','arrow')+line('hTh','M483 491Q594 521 673 509',P.green,5,'','arrow')+line('hFeedbackH','M348 509Q127 483 151 216Q178 95 307 112',P.pink,3,'','stop')+line('hFeedbackP','M469 487Q660 450 601 280Q552 251 438 266',P.pink,3,'','stop')+line('hExternal','M896 128Q903 372 689 497',P.green,3,'7 8','arrow')+line('hTRHload','M39 254Q169 299 341 271',P.blue,3,'7 8','arrow');
+s+='<g id="hVial"><path d="M868 78v43q27 24 54 0V78" fill="#2b634f" stroke="#b2e0bf" stroke-width="2"/><path d="M867 76h57" stroke="#e0f3ed" stroke-width="4"/></g><g id="hCut"><path d="M316 433l155 112m0-112-155 112" stroke="'+P.pink+'" stroke-width="7"/></g>';
+s+='<g id="hParticles"></g>'+tag(271,17,['下丘脑：TRH'],{w:257})+tag(272,312,['垂体：TSH'],{w:257})+tag(251,574,['甲状腺：TH'],{w:280})+tag(22,366,['TH 负反馈（−）'],{w:245})+tag(678,83,['外源 TH 输入'],{w:280,id:'hExoLabel'})+tag(22,179,['外源 TRH 负荷'],{w:260,id:'hLoadLabel'});
+for(let i=0;i<3;i++){s+='<rect x="'+(692+i*93)+'" y="250" width="45" height="196" rx="7" fill="#18364b" stroke="#587e94"/><rect id="hGauge'+i+'" x="'+(696+i*93)+'" y="400" width="37" height="42" rx="5" fill="'+[P.blue,P.violet,P.green][i]+'"/>'+tag(679+i*93,465,[['TRH','TSH','TH'][i]],{w:86})+tag(675+i*93,194,['1.0'],{w:89,id:'hGaugeValue'+i})}s+=tag(647,550,['相对指标：各自基线 = 1','柱高不能直接比较绝对浓度'],{w:329});$('scene').innerHTML=s;
+}
+function buildMessenger(){let s=defs()+vessel('mMain','M71 127H261V510H97','#93435e',24);for(let i=0;i<3;i++){const y=142+i*166;s+=vessel('mBranch'+i,'M261 '+y+'H671','#93435e',19);s+='<ellipse cx="790" cy="'+y+'" rx="105" ry="66" fill="url(#cellBlue)" stroke="#a2c1d4" stroke-width="2"/><ellipse cx="815" cy="'+y+'" rx="25" ry="30" fill="#414565" stroke="#aaa9d8"/>';if(i===2)s+='<path id="mReceptor" d="M690 '+(y-20)+'l-20 20 20 20m-17-20h46" fill="none" stroke="'+P.violet+'" stroke-width="7"/>';s+=tag(535,y+82,[["心肌细胞：不响应本图的 TSH 信号","肝细胞：不响应本图的 TSH 信号","甲状腺细胞：匹配受体，接收信号"][i]],{w:440})}s+='<g id="mParticles"></g><path id="mBlocked" d="M656 446l47 54m0-54-47 54" stroke="'+P.pink+'" stroke-width="6"/>'+tag(25,22,['TSH 随血液进入每一条分支'],{w:575})+tag(23,564,['微量信使 → 受体 → 放大响应'],{w:450});$('scene').innerHTML=s;
+}
+function renderScene(){const c=E.clock;let out='';if(S.stage===0&&L.view==='overview'){out+=flow('gLoop',c,21,P.pink,4,{red:true,speed:.07});out+=flow('gAbsorb',c,Math.max(2,Math.round(B.input*3)),P.gold,4,{speed:.12});out+=flow('gSupply',c,Math.max(1,Math.round(B.A*4)),P.gold,4,{speed:.11});out+=flow('gGNG',c,Math.max(1,Math.round(B.input*2)),P.gold,3.5,{speed:.09});out+=flow('gStore',c,Math.round(B.eff*4),P.cyan,3.5,{speed:.12});out+=flow('gMuscleRoute',c,Math.max(1,Math.round(B.uptake*3)),P.gold,4,{speed:.1});out+=flow('gFatRoute',c,Math.max(1,Math.round(B.eff*4)),P.gold,4,{speed:.11});out+=flow('gOxRoute',c,5,P.gold,3,{speed:.18});out+=flow(E.applied&&L.glucose==='t1'&&L.rescue?'gExternalInsulin':'gInsulin',c,Math.round(B.I*5),P.blue,4,{speed:.15});out+=flow('gGlucagon',c,Math.round(B.A*4),'#f5ad69',4,{speed:.12});out+=flow('gNerve',c,4,P.green,3,{speed:.18});if(E.applied&&L.glucose==='fast'){out+=flow('gAdrenalNerve',c,4,P.green,3,{speed:.2});out+=flow('gEpinephrine',c,6,P.pink,3.5,{speed:.16})}attr('gHeart',{transform:'translate(484 316) scale('+(.55+.025*Math.sin(c*6))+')'});const inactive=E.applied&&L.glucose==='t1';attr('gExternalInsulin',{opacity:E.applied&&L.glucose==='t1'&&L.rescue?1:0});document.querySelectorAll('#gIslet .beta').forEach(e=>e.setAttribute('fill',inactive?'#5d7285':'#568fd1'));setTag('gPool',['血糖池',B.G.toFixed(1)+' mmol/L']);$('gParticles').innerHTML=out;const cycle=(c*.12)%1,travel=B.mem*phase(cycle,0,.7);attr('insetVesicle',{transform:'translate(802 '+lerp(563,491,travel)+')',opacity:1-phase(travel,.75,1)});$('insetGlucose').innerHTML=Array.from({length:5},(_,i)=>{const f=(c*.15+i/5)%1;return ball(716,458+f*94,3.5,P.gold,B.mem)}).join('')}
+if(S.stage===0&&L.view==='micro'){out+=flow('glutInsPath',c,Math.round(B.I*5),P.blue,5,{speed:.14});out+=flow('glutSignal',c,7,P.blue,4,{speed:.2,opacity:clamp(B.eff)});out+=flow('glutSugar',c,Math.max(2,Math.round(3+B.mem*9)),P.gold,5,{speed:.16,opacity:.25+B.mem*.75});out+=flow('glutSugar2',c,Math.max(2,Math.round(3+B.mem*9)),P.gold,5,{speed:.15,opacity:.25+B.mem*.75});for(let i=0;i<3;i++){const f=(c*.1+i/3)%1,up=f<.58?phase(f,0,.5):1-phase(f,.65,1),a=clamp((B.eff-.1)/1.2);attr('glutVes'+i,{transform:'translate('+(470+i*170)+' '+lerp(510,327,up*a)+')',opacity:1-.75*phase(up*a,.9,1)})}for(let i=0;i<6;i++)attr('glutMem'+i,{opacity:i<2?1:phase(B.mem,.15+i*.08,.3+i*.08),transform:'translate('+(380+i*100)+' 312) scale(.76) rotate('+(Math.sin(c*3+i)*8*B.mem)+')'});$('glutParticles').innerHTML=out}
+if(S.stage===0&&L.view==='renal'){out+=flow('renalBlood',c,16,P.pink,4,{red:true,speed:.06});out+=flow('renalLumen',c,7+Math.round(B.urine*15),P.cyan,4,{speed:.06});out+=flow('renalLumen',c,Math.round(B.urine*10),P.gold,5,{speed:.055});out+=flow('renalReturn',c,Math.max(2,12-Math.round(B.urine*12)),P.blue,4,{speed:.12});$('renalParticles').innerHTML=out}
+if(S.stage===1){out+=flow('hTrh',c,Math.min(6,Math.max(1,Math.round(B.R*3))),P.blue,3.5,{speed:.2});out+=flow('hTsh',c,Math.min(7,Math.max(1,Math.round(B.TSH*3))),P.violet,3.5,{speed:.2});out+=flow('hTh',c,Math.min(10,Math.round(B.THout*5)),P.green,4,{speed:.1});for(const id of ['hFeedbackH','hFeedbackP']){attr(id,{opacity:.2+clamp(B.H/2.5)*.8,'stroke-width':1.5+clamp(B.H)*2.5,'stroke-dasharray':B.H<.5?'5 9':''});out+=flow(id,c,Math.max(2,Math.round(B.H*4)),P.pink,3.2,{speed:.08,opacity:clamp(B.H,.2,1)})}const isExo=E.applied&&L.hpt==='exo',isLoad=E.applied&&L.hpt.startsWith('trh');for(const id of ['hExternal','hVial','hExoLabel'])attr(id,{opacity:isExo?1:0});for(const id of ['hTRHload','hLoadLabel'])attr(id,{opacity:isLoad?1:0});if(isExo)out+=flow('hExternal',c,12,P.green,4,{speed:.12});if(isLoad)out+=flow('hTRHload',c,Math.max(1,Math.round(B.load*7)),P.blue,4,{speed:.12});attr('hThyroid',{transform:'translate(393 489) scale('+B.size+')',opacity:E.applied&&L.hpt==='cut'?0:1});attr('hCut',{opacity:E.applied&&L.hpt==='cut'?1:0});[B.R+B.load,B.TSH,B.H].forEach((v,i)=>{const h=clamp(v/4)*184;attr('hGauge'+i,{height:h,y:442-h});setTag('hGaugeValue'+i,[v.toFixed(2)])});$('hParticles').innerHTML=out}
+if(S.stage===2){out+=flow('mMain',c,10,P.pink,3,{red:true,speed:.06});for(let i=0;i<3;i++){out+=flow('mBranch'+i,c,7,P.pink,3,{red:true,speed:.08});out+=flow('mBranch'+i,c,Math.max(3,Math.round(B.msg/10)),P.violet,4,{speed:.12,offset:i*.2})}if(!L.block)for(let i=0;i<9;i++)out+=ball(750+Math.cos(i*.7+c)*35,474+Math.sin(i*.7+c)*25,3,P.green,B.response/100);attr('mReceptor',{opacity:L.block?.3:1});attr('mBlocked',{opacity:L.block?1:0});$('mParticles').innerHTML=out}
+}
+function manualHTML(){return '<h3>01 / 血糖三来三去</h3>'+table(['来源','去路'],[['食物中糖类消化吸收','氧化分解供能'],['肝糖原分解','合成肝糖原、肌糖原'],['非糖物质转化','转变为脂肪等非糖物质']])+'<p>胰岛素促三去、抑二来。肌糖原不能直接释放葡萄糖补血糖，不否定乳酸循环等间接联系。GLUT-4 是载体蛋白；囊泡上膜耗能与葡萄糖协助扩散是不同过程。</p><h3>02 / HPT 干预速查</h3>'+table(['干预','TRH','TSH','TH','原因与前提'],DATA.hptRows)+'<p>TRH 负荷定位有前提：低 TH、低 TSH，排除原发甲状腺疾病与药物等干扰，题设仅比较下丘脑和垂体。实际临床需综合检查。</p><h3>03 / 激素配对</h3>'+table(['配对','限定效应','关系'],DATA.pairs.map(p=>[p.title,p.effect,p.a===0?'协同':'相抗衡']))+'<h3>04 / 信使“五不做”</h3><p>不以结构材料身份起效，不供能，不直接催化代谢，不按靶器官定向运输，不对所有经过细胞产生同样效应。作用后逐步清除，需持续分泌。</p><h3>05 / 两类糖尿病</h3><p>1 型以胰岛素绝对缺乏为主；2 型涉及抵抗与随病程变化的分泌障碍。2 型也可能使用胰岛素治疗。糖尿病多尿可由渗透性利尿引起，不能一概解释为 ADH 不足。</p>'}
+function sourcesHTML(){return '<p>本版以 ICU 的持续场景为母版。血糖使用供需平衡、HPT 使用带时延的反馈方程，系数、比例与时程仅为教学预设，不用于个体患者诊断或治疗预测。粒子数量表示相对流量，不代表精确分子计数。</p><p>3.9～6.1 mmol/L 为教材常用血糖参考，需结合空腹等条件理解；不能由一次餐后值诊断糖尿病。TRH 定位只适用于明确的二选一题设；原始病因和实际临床可能更复杂。</p><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7039200/" target="_blank" rel="noopener">JCB：GLUT-4 囊泡原始研究</a> · <a href="https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes" target="_blank" rel="noopener">NIDDK：糖尿病类型</a> · <a href="https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments" target="_blank" rel="noopener">NIDDK：胰岛素治疗边界</a> · <a href="https://www.thyroid.org/thyroid-function-tests/" target="_blank" rel="noopener">ATA：甲状腺功能检查</a></p>'}
+
+function resetEvent(){E.t=0;E.elapsed=0;E.running=false;E.applied=false;E.paused=false;E.samples=[];E.sampleClock=0;resetPhysics()}
+function setStage(n,scroll=false){S.stage=clamp(+n,0,3);resetEvent();const examOnly=CONFIG.examOnlyStage&&S.stage===3;$('labSection').hidden=examOnly;$('examSection').hidden=S.stage!==3;document.querySelectorAll('[data-stage]').forEach((b,i)=>{b.setAttribute('aria-selected',String(i===S.stage));b.tabIndex=i===S.stage?0:-1});if(!examOnly){const m=stageMeta();setText('sectionKicker','0'+(S.stage+1)+' / LIVE PHYSIOLOGY');setText('sectionTitle',m.title);setText('sectionLead',m.lead);setText('sceneTag',m.tag);setText('consoleTitle',m.console);setText('consoleLead',S.stage===0?'循环已开始。先预测，随后点击下方按钮施加干预。':'保持背景生理过程运行，选择本组对照。');setText('chartTitle',m.chart);setText('chartCaption',m.caption);setText('evidenceTitle',m.evidence);setText('evidenceCopy',m.copy);$('sceneLegend').innerHTML=sceneLegend().map(([c,t])=>'<span><i style="background:'+c+'"></i>'+t+'</span>').join('');buildScene();lessonControls();renderScene();updateChart();renderUI()}renderQuestions();renderScore();feedback('先看过程，再解释变化。','同一舞台中保留运输联系，改变一个条件，用结构、流动和读数共同作证。');if(scroll)$('workspace').scrollIntoView({behavior:'smooth',block:'start'})}
+function renderUI(){if(CONFIG.examOnlyStage&&S.stage===3)return;updateLessonUI();syncTransport();drawHud()}
+function seek(t){E.paused=true;E.applied=true;E.running=false;E.t=clamp(t);E.elapsed=E.duration*E.t;E.clock=E.elapsed;onSeek(E.t);renderScene();updateChart();renderUI();feedback('时间帧已停住，比较同一时刻的结构与读数。','点击“继续画面”可继续运行；回看帧只是教学时程，不代表实际临床时间。')}
+function pause(){E.paused=!E.paused;if(!E.paused&&E.applied&&E.t<1)E.running=true;renderUI()}
+function tick(now){const dt=E.previous?Math.min(.045,(now-E.previous)/1000):0;E.previous=now;if(!document.hidden&&!E.paused){const step=dt*E.speed;E.clock+=step;if(E.applied)E.elapsed+=step;if(E.running){E.t=clamp(E.t+step/E.duration);if(E.t>=1)E.running=false}if(!(CONFIG.examOnlyStage&&S.stage===3)){updatePhysics(step);recordSample(step);renderScene()}if(now-UIlast>110){UIlast=now;renderUI();updateChart()}drawHud()}requestAnimationFrame(tick)}
+function init(){loadProgress();setText('brandTitle',CONFIG.brand);setText('chapter',CONFIG.chapter);setText('eyebrow',CONFIG.kicker);$('heroTitle').innerHTML=CONFIG.title;setText('heroCopy',CONFIG.copy);$('tabs').innerHTML=CONFIG.tabs.map((t,i)=>'<button class="tab" role="tab" id="tab'+i+'" data-stage="'+i+'" aria-selected="'+(i===0)+'"><small>0'+(i+1)+'</small>'+t+'</button>').join('');$('sources').innerHTML=sourcesHTML();$('manualContent').innerHTML=manualHTML();setText('manualTitle',LESSON===1?'激素与内分泌系统 · 满分法典':'激素调节的过程 · 满分法典');setStage(0);
+document.addEventListener('click',e=>{const b=e.target.closest('button,[data-action]');if(!b)return;if(b.dataset.stage!==undefined){setStage(+b.dataset.stage);return}if(b.dataset.case!==undefined){choose(b.dataset.case);return}if(b.dataset.view!==undefined){extraAction('view',b.dataset.view);return}if(b.dataset.action){extraAction(b.dataset.action);return}if(b.dataset.prediction){if(LESSON===1)S.predictions[L.history]=b.dataset.prediction;else S.predictions['g-'+L.glucose]=b.dataset.prediction;lessonControls();feedback('预测已记录。','现在施加干预，比较预期与实际模型轨迹；观察后仍可修正。');return}if(b.dataset.answer){answer(b.dataset.answer,+b.dataset.option);return}if(b.dataset.close){$(b.dataset.close).close();return}});
+document.addEventListener('input',e=>{const x=e.target;if(x.id==='timeline')seek(+x.value/1000);if(['mealInput','iodineInput'].includes(x.id))extraAction(x.id,x.value)});
+document.addEventListener('change',e=>{const x=e.target;if(x.id==='speed')E.speed=+x.value;if(['hormoneSelect','glandSelect','t2Phase','pairSelect'].includes(x.id))extraAction(x.id,x.value);if(['protect','rescue'].includes(x.id))extraAction(x.id,x.checked);if(x.dataset.hpred!==undefined)L.hpred[+x.dataset.hpred]=x.value});
+document.addEventListener('keydown',e=>{const g=e.target.closest('.hot');if(g&&['Enter',' '].includes(e.key)){e.preventDefault();extraAction(g.dataset.action)}const b=e.target.closest('[data-stage]');if(b&&['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();const i=+b.dataset.stage,n=e.key==='Home'?0:e.key==='End'?3:(i+(e.key==='ArrowRight'?1:3))%4;setStage(n);$('tab'+n).focus()}});
+$('applyButton').onclick=()=>{applyExperiment();renderScene();renderUI()};$('pauseButton').onclick=pause;$('globalPause').onclick=pause;$('baselineButton').onclick=()=>{resetEvent();buildScene();lessonControls();renderScene();renderUI();updateChart();feedback('已回到本组干预前的基础状态。','背景循环继续运行；积分与观察档案保留。')};$('recordButton').onclick=recordObservation;$('stepButton').onclick=()=>seek(Math.min(1,(Math.floor(E.t*4)+1)/4));
+$('manualButton').onclick=()=>$('manualDialog').showModal();const award=()=>{certificate();$('awardDialog').showModal()};$('awardButton').onclick=award;$('examAward').onclick=award;$('scoreButton').onclick=award;$('makeAward').onclick=()=>{certificate();sound()};$('studentName').onkeydown=e=>{if(e.key==='Enter')certificate()};$('printAward').onclick=()=>{certificate();window.print()};
+$('focusButton').onclick=()=>{S.focus=!S.focus;document.body.classList.toggle('focus',S.focus);$('focusButton').setAttribute('aria-pressed',String(S.focus));setText('focusButton',S.focus?'退出专注':'专注观察')};$('foldAssistant').onclick=()=>{const folded=$('assistant').classList.toggle('folded');setText('foldAssistant',folded?'展开助教':'收起助教');$('foldAssistant').setAttribute('aria-expanded',String(!folded))};$('soundButton').onclick=()=>{S.sound=!S.sound;setText('soundButton',S.sound?'音效开':'音效关');$('soundButton').setAttribute('aria-pressed',String(S.sound));sound()};
+$('clearProgress').onclick=()=>{if(!confirm('只清空本课 v2 的本机进度，是否继续？'))return;S.credits={};S.answers={};S.observations={};S.predictions={};save();setStage(0);notify('本课进度已清空')};
+const icons=()=>{try{window.lucide?.createIcons()}catch(e){}};icons();window.addEventListener('load',icons);document.addEventListener('visibilitychange',()=>E.previous=performance.now());requestAnimationFrame(tick)}
+window.BioICU={lesson:LESSON,state:S,engine:E,lessonState:L,phys:B,setStage,choose,apply:applyExperiment,seek,pause,record:recordObservation,answer,extraAction,score,questions:QUESTIONS,weights:WEIGHTS,refresh:()=>{renderScene();renderUI();updateChart()}};
+init();
+
+})();</script><!-- BIOCOURSE PLATFORM BEGIN --><script src="../assets/lesson-bridge.js" data-portal="courses/hormone-regulation/regulation-v2/" data-file="lessons/选择性必修1_03-02_激素调节的过程_人体内分泌动态调节中枢_v2.0.html" defer></script><!-- BIOCOURSE PLATFORM END --></body></html>
