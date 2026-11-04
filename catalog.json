@@ -917,8 +917,8 @@
         ],
         "route": "courses/secretion/signal-golgi-v1-2/",
         "platformUpdated": "2026-11-04",
-        "bytes": 85483,
-        "contentSha256": "f55431e71831efa508bbd10291ac902885d67e9d3d139e4948c3082693662c41",
+        "bytes": 85481,
+        "contentSha256": "409ad2b40ee636e30d315347fb2f287176f7a784219b1b2b662391fb0c17a082",
         "sourceFilename": "必修1_03-02_分泌蛋白_膜上旅程_v1.2.html",
         "preview": {
           "image": "assets/previews/secretion--signal-golgi-v1-2.webp",
@@ -928,8 +928,8 @@
           "alt": "分泌蛋白v1.2真实课件画面：高尔基体糖链修饰与前后对照",
           "scene": "进一步加工与糖链修饰"
         },
-        "sourceModifiedAt": "2026-11-04T05:54:27.844Z",
-        "sourceSha256": "f55431e71831efa508bbd10291ac902885d67e9d3d139e4948c3082693662c41",
+        "sourceModifiedAt": "2026-11-04T05:59:49.991Z",
+        "sourceSha256": "409ad2b40ee636e30d315347fb2f287176f7a784219b1b2b662391fb0c17a082",
         "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。",
         "releaseHistory": [
           {
