@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#334155"><title>免疫学的应用｜机制图谱</title>
+<style>:root {
+  color-scheme: light;
+  --ink: #202b35;
+  --secondary: #455360;
+  --paper: #f5f6f7;
+  --green: #354e67;
+  --line: #d5dce2;
+  --accent: #ad502d;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 18px/1.65 "Segoe UI","Microsoft YaHei",sans-serif; }
+button,input { font: inherit; }
+button { cursor: pointer; color: inherit; }
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible { outline: 3px solid #b65a18; outline-offset: 4px; }
+button { transition: background .18s, transform .18s; }
+button:active { transform: translateY(1px); }
+a { color: #165e54; }
+.masthead,main { width: min(1500px,94%); margin: auto; }
+.masthead { display:flex; gap:20px; align-items:center; min-height:76px; border-bottom:1px solid #acbcb4; }
+.brand { text-decoration:none; display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:750; }
+.brand-mark { display:inline-grid; place-items:center; background:var(--green); color:white; width:34px; height:38px; border-radius:50% 50% 10px 10px; font:bold italic 28px Georgia,serif; }
+.brand-en,.book { font-size:14px; letter-spacing:.04em; color:var(--secondary); }
+.book { margin-left:auto; }
+.quiet { padding:7px 13px; border:1px solid #95aaa0; background:#ffffff; border-radius:6px; font-weight:600; }
+.quiet:hover { background:#e4eee6; }
+.intro { display:flex; align-items:end; justify-content:space-between; padding:34px 0 26px; gap:20px; }
+.eyebrow { margin:0 0 10px; font-size:13px; font-weight:750; letter-spacing:.12em; color:var(--secondary); }
+h1 { margin:0 0 14px; font-size:clamp(35px,4.3vw,63px); letter-spacing:-.04em; line-height:1.16; font-weight:700; font-family:Arial,"Microsoft YaHei",sans-serif; }
+h1 span { display:inline-block; margin-left:20px; border-left:1px solid #90a79c; padding-left:20px; font:600 23px/1.3 "Microsoft YaHei",sans-serif; letter-spacing:0; }
+p { margin:0 0 12px; }
+.lead { margin:0; line-height:1.7; color:var(--secondary); }
+.intro-note { min-width:200px; padding-left:24px; border-left:1px solid #adbbb4; }
+.intro-note>span { font-size:13px; color:var(--secondary); }
+.intro-note p { margin:7px 0 0; font-size:16px; }
+.case-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:18px; }
+.case-nav button { display:flex; gap:14px; text-align:left; padding:15px 17px; border:1px solid var(--line); border-radius:5px; background:#ffffff; align-items:center; }
+.case-nav button[aria-pressed=true] { background:#354e67; border-color:#354e67; color:white; }
+.nav-no { font:23px Georgia,serif; opacity:.9; }
+.case-nav b { font-size:20px; display:block; }
+.case-nav small { display:block; font-size:14px; color:var(--secondary); }
+.case-nav button[aria-pressed=true] small { color:#e4f0e9; }
+.case-nav i { margin-left:auto; font-size:22px; font-style:normal; }
+.theatre { display:grid; grid-template-columns:minmax(0,3fr) minmax(280px,1fr); overflow:hidden; border:1px solid #b1c2b8; border-radius:4px; background:#ffffff; box-shadow:0 2px 8px #1a2d3910; scroll-margin-top:12px; }
+.scene-column { min-width:0; background:#ffffff; border-right:1px solid var(--line); }
+.scene-top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 18px; border-bottom:1px solid #c5d5cd; font-weight:650; font-size:16px; }
+.model-badge { font-size:13px; color:#354e52; white-space:nowrap; border:1px solid #b5c9bc; padding:1px 7px; border-radius:4px; }
+.stage-scroll { overflow:auto; }
+#stage { display:block; width:100%; min-width:780px; }
+.figure-legend { border-top:1px solid #c5d5cd; padding:10px 18px; color:var(--secondary); font-size:15px; min-height:48px; }
+.commentary { padding:clamp(17px,2vw,29px); min-width:0; }
+.commentary h2 { margin:0 0 13px; font-size:28px; line-height:1.4; letter-spacing:-.02em; }
+.commentary>p { color:var(--secondary); font-size:17px; }
+.evidence { background:#edf2f6; padding:12px 14px; border-left:3px solid #6a86a1; margin:18px 0; }
+.evidence span,.inference span { display:block; color:#354e52; font-size:13px; font-weight:600; margin-bottom:4px; }
+.evidence b { font-size:18px; }
+.inference p { font-size:16px; color:var(--ink); }
+.text-button { background:none; border:0; border-bottom:1px solid #8da394; color:#245a4d; padding:2px 0; font-size:15px; }
+.boundary { font-size:15px!important; line-height:1.7; margin:12px 0 0; }
+.transport { grid-column:1/-1; padding:15px 20px 12px; background:#ffffff; border-top:1px solid #baccbf; }
+.controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+.play { padding:9px 22px; color:white; background:#354e67; border:1px solid #354e67; border-radius:6px; font-weight:650; min-width:156px; }
+.play:hover { background:#164d44; }
+.clock { margin-left:auto; font:14px/1.4 Consolas,monospace; font-variant-numeric:tabular-nums; color:var(--secondary); }
+.keyboard-tip { color:#354e52; font-size:13px; }
+.scrub-label { display:block; padding:11px 0 0; }
+input[type=range] { width:100%; margin:0; accent-color:#354e67; cursor:pointer; }
+.events { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; margin-top:5px; }
+.events button { background:none; border:0; border-top:2px solid #c9d8cd; padding:8px 4px 3px; text-align:left; font-size:15px; }
+.events button[aria-current=true] { color:#124737; border-color:#354e67; font-weight:750; }
+.takeaway { display:grid; grid-template-columns:130px 1fr; gap:15px; padding:17px 4px 25px; align-items:baseline; }
+.takeaway span { font-size:14px; font-weight:650; color:#3f5a50; }
+.takeaway p { font-size:20px; font-weight:600; margin:0; }
+.comparison { display:grid; grid-template-columns:1fr 2fr; gap:25px; padding:28px 0; border-top:1px solid #a8bdb0; }
+.section-title h2 { font-size:27px; line-height:1.5; margin:0; font-family:"Songti SC","SimSun",serif; }
+.table-scroll { overflow:auto; min-width:0; }
+table { border-collapse:collapse; width:100%; font-size:16px; }
+th,td { padding:12px; text-align:left; border-bottom:1px solid #c4d0c8; vertical-align:top; }
+th { font-weight:650; }
+thead { background:#e5ece3; }
+.extension { margin:12px 0; background:#ffffff; border:1px solid #c5d3c9; border-radius:10px; }
+summary { display:flex; justify-content:space-between; gap:14px; cursor:pointer; font-weight:650; padding:17px 20px; }
+.summary-hint { font-size:14px; color:#354e52; font-weight:400; }
+.extension-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:10px 22px 24px; }
+.extension h3 { font-size:20px; margin:8px 0 12px; }
+.extension p { font-size:17px; color:var(--secondary); }
+.case-tag { font-size:13px; font-weight:750; background:#f6e8d9; color:#743b1d; padding:3px 7px; }
+.purple { color:#623a78; background:#f0e6f5; }
+.blue { color:#23556e; background:#e1eff3; }
+.care { padding:15px; background:#ffffff; }
+.source-notes { padding:8px 22px 20px; }
+.source-notes ul { font-size:16px; line-height:1.9; padding-left:24px; }
+#quiz { padding:0 20px 20px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.quiz-item { border-top:1px solid #c5d3c9; padding-top:16px; }
+.quiz-item h3 { margin-top:0; }
+.quiz-options { display:flex; flex-direction:column; gap:7px; }
+.quiz-options button { text-align:left; background:#f8faf4; border:1px solid #a9bdb1; border-radius:6px; padding:8px 12px; font-size:16px; }
+.quiz-options button.correct { background:#dcebdc; border-color:#2c704f; }
+.quiz-options button.incorrect { background:#fae8dc; border-color:#ba622c; }
+.quiz-feedback { margin-top:10px; font-size:16px!important; }
+footer { display:flex; gap:15px; justify-content:space-between; padding:23px 0; border-top:1px solid #b8c9bd; font-size:14px; color:#354e52; margin-top:30px; }
+dialog { background:#ffffff; color:var(--ink); width:min(650px,94vw); border:1px solid #9caf9f; border-radius:15px; padding:26px; max-height:85vh; overflow:auto; }
+dialog::backdrop { background:#102c2b99; }
+dialog form { text-align:right; }
+dialog h2 { margin:10px 0; font-size:29px; }
+dialog h3 { font-size:21px; margin:18px 0 8px; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+[hidden] { display:none!important; }
+@media(min-width:1500px) { main,.masthead { width:90%; } }
+@media(max-width:1080px) {
+ .brand-en,.keyboard-tip { display:none; }
+ .theatre { grid-template-columns:minmax(0,1.85fr) minmax(255px,1fr); }
+ #stage { min-width:780px; }
+ .commentary h2 { font-size:25px; }
+}
+@media(max-width:850px) {
+ .book { display:none; }
+ .masthead .quiet { margin-left:auto; }
+ .theatre { grid-template-columns:1fr; }
+ .scene-column { border-right:0; }
+ .commentary { display:grid; grid-template-columns:1fr 1fr; gap:0 20px; }
+ .commentary .eyebrow,.commentary h2,.commentary>p { grid-column:1; }
+ .evidence { grid-column:2; grid-row:1/4; margin:0; align-self:start; }
+ .inference { grid-column:2; grid-row:4/6; }
+ .text-button { grid-column:1; justify-self:start; }
+ .boundary { grid-column:1/-1!important; }
+ .intro-note { display:none; }
+ .comparison { grid-template-columns:1fr; }
+}
+@media(max-width:550px) {
+ body { font-size:17px; }
+ .intro { padding-top:25px; }
+ h1 span { display:block; margin:12px 0 0; padding:0; border:0; font-size:21px; }
+ .case-nav { gap:5px; }
+ .case-nav button { padding:10px 6px; flex-direction:column; align-items:start; gap:3px; }
+ .nav-no { font-size:19px; }
+ .case-nav b { font-size:17px; }
+ .case-nav small,.case-nav i { display:none; }
+ .scene-top { padding:10px; font-size:15px; }
+ .model-badge { font-size:11px; }
+ .commentary { display:block; }
+ .commentary h2 { font-size:26px; }
+ .evidence { margin:15px 0; }
+ .events { gap:6px; }
+ .events button { font-size:13px; }
+ .clock { margin-left:0; }
+ .transport { padding:12px; }
+ .takeaway { grid-template-columns:1fr; gap:3px; }
+ .takeaway p { font-size:18px; }
+ .extension-grid,#quiz { grid-template-columns:1fr; }
+ summary { padding:14px; }
+ .summary-hint { display:none; }
+ footer { flex-direction:column; }
+}
+@media(prefers-reduced-motion:reduce) { button { transition:none; } }
+
+
+@media(min-width:850px){.case-nav button{padding:13px 12px;gap:9px}.case-nav b{font-size:18px}.case-nav small{font-size:13px}.case-nav i{display:none}}
+.vaccine-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vaccine-compare article{padding:12px;background:#ffffff}@media(max-width:600px){.vaccine-compare{grid-template-columns:1fr}.case-nav b{font-size:15px}}
+/* Journal figure hierarchy */
+.scene-top{background:#fff;padding:12px 18px;border-bottom:1px solid #d5dce2}.scene-column{background:#fff}.model-badge{color:#455360;border-color:#c4cdd5}.figure-legend{background:#f6f7f9;border-color:#d5dce2;color:#344654;font-size:15px}.commentary{background:#fafbfc;padding:22px}.commentary h2{font-size:25px}.intro h1{font-size:clamp(34px,4vw,56px);font-weight:750;letter-spacing:-.03em}.nav-no{font-family:Arial,sans-serif;font-weight:750}.intro-note p{font-size:15px}.case-nav button{border-color:#c7d1da}.transport{border-top-color:#c8d2db}.figure-key{display:flex;gap:25px;flex-wrap:wrap;font-size:14px;color:#354554;padding:9px 0 17px}.figure-key b{color:#202b35}.events button[aria-current=true]{color:#253e56;border-color:#354e67}.brand-mark{border-radius:4px;font-style:normal;font-size:23px}
+@media(min-width:1081px){.keyboard-tip{display:none}}@media(max-width:1080px) and (min-width:851px){.theatre{grid-template-columns:minmax(0,2.6fr) minmax(245px,1fr)}}
+</style></head>
+<body>
+<header class="masthead"><a href="#top" class="brand"><span class="brand-mark">i</span>生物学机制图谱 <span class="brand-en">MECHANISM ATLAS</span></a><span class="book">选择性必修一 · 第4章第4节</span><button class="quiet" id="openGuide">课堂速查 ↗</button></header>
+<main id="top">
+<section class="intro"><div><p class="eyebrow">FIGURE ATLAS / IMMUNOLOGICAL APPLICATIONS</p><h1>免疫学的应用<span>从机制到干预</span></h1><p class="lead">预防、检测、移植与治疗。<br>沿着图中的箭头，找出<b>干预的位点</b>与<b>效应的来源</b>。</p></div><div class="intro-note"><span>读图顺序</span><p>① 对象与结构<br>② 接触与信号<br>③ 干预与结果</p></div></section>
+<nav class="case-nav" aria-label="选择应用场景"><button data-case="0" aria-pressed="true"><span class="nav-no">A</span><span><b>疫苗预防</b><small>提前建立特异性免疫</small></span><i>↗</i></button><button data-case="1" aria-pressed="false"><span class="nav-no">B</span><span><b>免疫检测</b><small>把特异性结合变成信号</small></span><i>↗</i></button><button data-case="2" aria-pressed="false"><span class="nav-no">C</span><span><b>器官移植</b><small>减轻针对移植物的反应</small></span><i>↗</i></button><button data-case="3" aria-pressed="false"><span class="nav-no">D</span><span><b>肿瘤免疫治疗</b><small>帮助免疫细胞发挥效应</small></span><i>↗</i></button></nav>
+<section class="theatre" aria-label="过程观察台">
+<div class="scene-column"><div class="scene-top"><span id="sceneName"></span><span class="model-badge">机制图版 · 可回放</span></div><div class="stage-scroll"><svg id="stage" viewBox="0 0 1000 540" role="img" aria-label="免疫学应用机制的分面动态图"><defs><marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9Z" fill="#586676"/></marker><marker id="small-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#586676"/></marker></defs><g id="world"></g><g id="labels"></g></svg></div><div id="figureLegend" class="figure-legend"></div></div>
+<aside class="commentary"><p id="stepCounter" class="eyebrow"></p><h2 id="stepTitle"></h2><p id="stepBody"></p><div class="evidence"><span>此刻，看到了什么</span><b id="evidenceText"></b></div><div class="inference"><span>这项应用借助什么</span><p id="inferenceText"></p></div><button class="text-button" id="showBoundary">查看本图的简化范围 ＋</button><p id="boundaryText" class="boundary" hidden></p></aside>
+<div class="transport"><div class="controls"><button class="play" id="playButton">▶ 播放过程</button><button class="quiet" id="restartButton" aria-label="重看本段">↺ 重看</button><span id="clock" class="clock"></span><span class="keyboard-tip">空格播放 / 暂停　← → 推进</span></div><label class="scrub-label"><span class="sr-only">拖动查看过程</span><input id="scrubber" type="range" min="0" max="100" value="0" step=".1"></label><div id="eventButtons" class="events"></div></div>
+</section>
+<section class="takeaway"><span>一句话解释</span><p id="takeawayText"></p></section>
+<section class="comparison"><div class="section-title"><p class="eyebrow">PURPOSE → MECHANISM → EVIDENCE</p><h2>同一种特异性<br>可以服务不同目的。</h2></div><div class="table-scroll"><table><thead><tr><th>应用</th><th>希望达到什么</th><th>借助的机制</th></tr></thead><tbody><tr><th>免疫预防</th><td>提前获得针对特定病原体的保护</td><td>疫苗诱发免疫应答，建立免疫记忆</td></tr><tr><th>免疫诊断</th><td>检测样本中的特定抗原或抗体</td><td>抗原与抗体的特异性结合</td></tr><tr><th>器官移植</th><td>用移植物重建受损器官功能</td><td>评估相容性，控制针对移植物的排斥</td></tr><tr><th>免疫治疗</th><td>按治疗目标调节免疫反应</td><td>可增强、恢复或抑制特定免疫功能</td></tr></tbody></table></div></section>
+<details class="extension"><summary><span>疫苗与现成抗体 · 为什么起效和维持时间不同？</span><span class="summary-hint">概念对照 ＋</span></summary><div class="source-notes"><div class="vaccine-compare"><article><h3>让机体自己建立应答</h3><p><b>接种疫苗</b>通常属于人工主动免疫。疫苗可提供抗原或编码抗原的信息，诱导机体产生免疫应答与记忆，需要一定时间。加强接种可强化相关应答。</p></article><article><h3>直接获得现成的抗体</h3><p><b>输入免疫球蛋白或抗毒素</b>可提供被动免疫，较快发挥作用，但输入的抗体会逐渐降解；这种保护本身不建立相应免疫记忆。</p></article></div><p>疫苗有减毒活疫苗、灭活疫苗、亚单位疫苗等不同类型，核酸疫苗提供编码抗原的信息。不同疫苗的保护效果、接种程序和适用人群存在差异。某些疾病暴露后的处理可能同时需要疫苗与免疫球蛋白，应依规范处置。</p><p>人群中较多成员获得免疫后，可减少病原体传播机会，间接保护部分易感者。具体效果与病原体和疫苗特性有关。</p></div></details>
+<details class="extension"><summary><span>移植之后 · 为什么需要平衡两种风险？</span><span class="summary-hint">临床与社会联系 ＋</span></summary><div class="extension-grid"><article><span class="case-tag purple">相容性评估</span><h3>配型是在比较什么？</h3><p>供者和受者的组织相容性抗原可能不同。人体主要组织相容性抗原称为 HLA。血型、组织配型、交叉配型等帮助评估风险，器官类型、器官质量与医学紧急程度等也参与决策。</p></article><article><span class="case-tag blue">风险平衡</span><h3>减轻排斥，仍需防范感染</h3><p>免疫抑制治疗可降低针对移植物的免疫反应，同时可能增加感染等风险。配型较相合也不等于可以自行停用免疫抑制药物。</p></article><article><span class="case-tag blue">免疫治疗</span><h3>治疗目标决定调节方向</h3><p>肿瘤免疫治疗有多种途径，本课展示免疫检查点阻断的一个例子。免疫抑制则可用于移植排斥或部分自身免疫病。治疗选择与效果因病情而异。</p></article><article class="care"><span class="case-tag">社会责任</span><h3>器官来源也需要被讨论</h3><p>器官供给不足是移植面临的困难之一。器官捐献应遵守法律与伦理，尊重自愿、知情同意和公平分配，保护捐献者与受者权益。</p></article></div></details>
+<details class="extension" id="practice"><summary><span>迁移判断 · 为新的目的选择机制</span><span class="summary-hint">6 个原创问题 ＋</span></summary><div id="quiz"></div></details>
+<details class="extension"><summary><span>模型边界与阅读依据</span><span class="summary-hint">资料与图示说明 ＋</span></summary><div class="source-notes"><p>图示为机制教学模型。分子数量、动画时长、抗体曲线和细胞损伤均用于表达相对趋势，不对应临床测量或治疗概率。肿瘤免疫检查点属于帮助理解机制的拓展，不能推广为所有免疫治疗的共同步骤。</p><ul>
+<li><a href="https://crosstalk.cell.com/hubfs/Files/GA_guide.pdf" target="_blank" rel="noopener">Cell Press · 图形摘要的阅读顺序与标签原则</a></li>
+<li><a href="https://www.biorender.com/product/illustration" target="_blank" rel="noopener">BioRender · 科学插图的视觉一致性</a></li>
+<li><a href="https://www.who.int/news-room/feature-stories/detail/how-do-vaccines-work" target="_blank" rel="noopener">WHO · 疫苗怎样发挥作用</a></li>
+<li><a href="https://www.cdc.gov/vaccines/basics/immunity-types.html" target="_blank" rel="noopener">CDC · 主动免疫与被动免疫</a></li>
+<li><a href="https://www.hrsa.gov/optn/patients/organ-donation/donor-matching-system" target="_blank" rel="noopener">HRSA · 器官匹配的评估因素</a></li>
+<li><a href="https://www.hrsa.gov/optn/patients/organ-donation/living-donation/living-donation-faqs" target="_blank" rel="noopener">HRSA · 配型与免疫抑制</a></li>
+<li><a href="https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/checkpoint-inhibitors" target="_blank" rel="noopener">NCI · 免疫检查点抑制剂</a></li></ul></div></details>
+<footer><span>生命观察室 · 免疫学的应用</span><span>学术图版 v2.0　/　离线单文件</span></footer></main>
+<dialog id="guide"><form method="dialog"><button class="quiet">关闭 ×</button></form><p class="eyebrow">CLASSROOM NOTES</p><h2>先说目的，再解释机制</h2><h3>预防</h3><p>疫苗诱发主动应答，形成免疫记忆；直接输入抗体提供被动保护。记忆 B 细胞可迅速分化为浆细胞，再由浆细胞分泌抗体。</p><h3>检测</h3><p>利用特异性结合，把目标分子转化为可观察的信号。已知抗体可检测相应抗原，已知抗原也可用于检测相应抗体。</p><h3>移植</h3><p>供受者组织相容性抗原差异可引起免疫排斥，T 细胞在其中起重要作用。配型和免疫抑制可帮助降低风险。</p><h3>治疗</h3><p>调节方向取决于治疗目标。某些肿瘤疗法增强免疫效应，移植治疗通常需要控制排斥。</p><h3>一句话答题顺序</h3><p>说明希望改变的生理结果，指出相关免疫机制，再用观察证据支持判断。</p></dialog>
+
+<script>'use strict';
+
+const byId = id => document.getElementById(id);
+const clamp = value => Math.max(0, Math.min(1, value));
+const progress = (time, start, end) => clamp((time - start) / (end - start));
+const interpolate = (start, end, amount) => start + (end - start) * clamp(amount);
+const repeat = (count, draw) => Array.from({length: count}, (_, index) => draw(index)).join('');
+const path = (data, fill = 'none', stroke = '#586676', width = 1.8) =>
+  '<path d="' + data + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '" stroke-linejoin="round" stroke-linecap="round"/>';
+const circle = (x, y, radius, fill, stroke = 'none', width = 1) =>
+  '<circle cx="' + x + '" cy="' + y + '" r="' + radius + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '"/>';
+const ellipse = (x, y, rx, ry, fill, stroke = 'none', width = 1) =>
+  '<ellipse cx="' + x + '" cy="' + y + '" rx="' + rx + '" ry="' + ry + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '"/>';
+const place = (x, y, scale, body, angle = 0) =>
+  '<g transform="translate(' + x + ' ' + y + ') rotate(' + angle + ') scale(' + scale + ')">' + body + '</g>';
+const opacity = (amount, body) => '<g opacity="' + clamp(amount) + '">' + body + '</g>';
+
+const palette = {
+  b: '#c9d8ec',
+  bEdge: '#6683a4',
+  t: '#c5ded5',
+  tEdge: '#59897b',
+  plasma: '#edd3ca',
+  plasmaEdge: '#ad8278',
+  nucleus: '#9e9ab7',
+  antigen: '#e3ab6d',
+  antibody: '#a36d35',
+  detector: '#447eab',
+  drug: '#8c67ad',
+  signal: '#bc6856'
+};
+
+function label(x, y, text, color = '#263642', size = 18, align = 'middle') {
+  size = Math.max(17, size);
+  const width = Array.from(text).reduce((total, letter) => total + (letter.charCodeAt(0) > 255 ? size : size * .56), 12);
+  const start = align === 'start' ? -5 : -width / 2;
+  return '<g transform="translate(' + x + ' ' + y + ')">' +
+    '<rect x="' + start + '" y="' + (-size - 2) + '" width="' + width + '" height="' + (size + 9) + '" fill="white"/>' +
+    '<text text-anchor="' + align + '" y="0" font-size="' + size + '" font-family="Arial,Microsoft YaHei,sans-serif" fill="' + color + '">' + text + '</text></g>';
+}
+function panel(x, y, width, height, letter, title) {
+  return '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" rx="3" fill="#fff" stroke="#d6dee5"/>' +
+    '<g transform="translate(' + (x + 15) + ' ' + (y + 28) + ')"><rect x="-5" y="-21" width="24" height="27" fill="white"/>' +
+    '<text font-size="21" font-family="Arial,sans-serif" font-weight="700" fill="#233341">' + letter + '</text></g>' +
+    label(x + 42, y + 28, title, '#263642', 18, 'start');
+}
+function arrow(data, dashed = false, color = '#586676') {
+  return '<path d="' + data + '" fill="none" stroke="' + color + '" stroke-width="1.8"' +
+    (dashed ? ' stroke-dasharray="5 4"' : '') + ' marker-end="url(#small-arrow)"/>';
+}
+function leader(data, x, y, text) {
+  return path(data, 'none', '#8593a1', 1.2) + label(x, y, text);
+}
+function tintCell(data, fill, stroke, nucleusX = -8, nucleusY = 0) {
+  return path(data, fill, stroke, 2) +
+    path(data, 'none', '#ffffff', .6) +
+    ellipse(nucleusX, nucleusY, 20, 23, palette.nucleus, '#77768f', 1.3) +
+    path('M-15 -6q10 -8 17 0m-17 8q8 -6 17 1', 'none', '#85829e', .8);
+}
+const roundCell = 'M-37 -4C-39 -30 -18 -43 8 -39C35 -40 45 -15 40 8C38 34 16 43 -9 38C-32 36 -40 17 -37 -4Z';
+const bCell = tintCell(roundCell, palette.b, palette.bEdge) +
+  repeat(5, index => place(0, 0, .55, path('M0 -63v-10l-6 -5m6 5l6 -5', 'none', '#6683a4', 2), index * 72));
+const tCell = tintCell(roundCell, palette.t, palette.tEdge) +
+  repeat(7, index => circle(13 + index % 2 * 9, -19 + index * 5, 2.7, '#6e9b8b', '#4a7d6d', .7));
+const plasmaCell = tintCell('M-42 -3C-48 -35 -10 -53 19 -43C50 -33 58 -2 39 27C21 51 -13 50 -34 27Q-48 13 -42 -3Z', palette.plasma, palette.plasmaEdge, -23, 5) +
+  repeat(6, index => path('M-2 ' + (-29 + index * 10) + 'q19 -9 37 2', 'none', '#b58b83', 2.4)) +
+  repeat(10, index => circle(3 + index % 4 * 9, -27 + Math.floor(index / 4) * 23, 1.25, '#82685e')) +
+  repeat(3, index => path('M-14 ' + (24 + index * 4) + 'q12 5 24 0', 'none', '#c3a17c', 1.8));
+const tumorCell = tintCell('M-44 -16Q-50 -42 -18 -41Q-1 -55 19 -38Q45 -44 45 -16Q58 0 42 20Q36 45 10 37Q-16 51 -32 29Q-55 25 -44 -16Z', '#efd1d0', '#b87e86', -7, 0);
+const epitope = path('M-8 4v-8l8 -5 8 5v8Z', palette.antigen, '#aa7a44', 1.4);
+function antibody(color = palette.antibody) {
+  return path('M-2 18V2L-14 -11M2 18V2L14 -11', 'none', color, 3.5) +
+    path('M-11 -14L-3 -5M11 -14L3 -5', 'none', color, 3.3) +
+    path('M-3 3H3', 'none', color, 2) +
+    circle(-13, -12, 2.1, '#ead5b4', color, 1) +
+    circle(13, -12, 2.1, '#ead5b4', color, 1);
+}
+const captureAntibody = antibody();
+const detectionAntibody = antibody(palette.detector) + circle(0, 23, 5, '#95c4df', palette.detector, 1.4);
+const blockingAntibody = antibody(palette.drug);
+const vaccineBottle = path('M-17 -27H17V-12L23 -5V35Q0 49 -23 35V-5L-17 -12Z', '#edf3f6', '#7691a2', 1.8) +
+  path('M-16 -29H16', 'none', '#58738a', 8) +
+  path('M-22 14H22V34Q0 47 -22 34Z', '#c7dfea', 'none') +
+  path('M-14 -3H14V15H-14Z', '#fff', '#b6c8d3', 1) +
+  path('M0 0v11m-5 -5h10', 'none', '#738fa1', 1.5);
+
+function responseValue(position) {
+  const points = [[0,.02],[.06,.02],[.23,.30],[.40,.08],[.58,.03],[.65,.07],[.76,.79],[.85,.96],[1,.65]];
+  const rightIndex = points.findIndex(point => point[0] >= position);
+  if (rightIndex <= 0) return points[0][1];
+  const left = points[rightIndex - 1], right = points[rightIndex];
+  let amount = (position - left[0]) / (right[0] - left[0]);
+  amount = amount * amount * (3 - 2 * amount);
+  return interpolate(left[1], right[1], amount);
+}
+function vaccineScene(time) {
+  const first = progress(time, .02, .20);
+  const expansion = progress(time, .22, .48);
+  const second = progress(time, .65, .80);
+  const recall = progress(time, .80, .98);
+  let art = '';
+  let labels = '';
+  art += panel(12, 12, 302, 329, 'a', '抗原刺激');
+  art += panel(328, 12, 285, 329, 'b', '克隆扩增');
+  art += panel(627, 12, 361, 329, 'c', '效应与记忆');
+  art += panel(12, 355, 976, 172, 'd', '抗体应答 · 相对趋势');
+
+  art += place(72, 167, 1, vaccineBottle);
+  art += arrow('M111 168H181');
+  art += place(interpolate(111, 180, first), 168, .75, epitope);
+  art += place(241, 168, .9, bCell);
+  art += arrow('M286 168H342');
+  labels += label(72, 251, '疫苗抗原');
+  labels += label(238, 251, 'B 细胞');
+  labels += label(164, 308, '相关活化信号简化', '#455360', 16);
+
+  art += place(398, 174, .75, bCell);
+  art += arrow('M433 172Q463 172 478 130');
+  art += arrow('M433 178Q465 178 478 238');
+  art += opacity(expansion, place(interpolate(398, 542, expansion), interpolate(174, 127, expansion), .75, bCell));
+  art += opacity(expansion, place(interpolate(398, 542, expansion), interpolate(174, 242, expansion), .75, bCell));
+  art += arrow('M581 127H660');
+  art += arrow('M581 242H795');
+  labels += label(471, 308, '同类细胞增殖与分化', '#455360', 16);
+
+  art += opacity(expansion, place(712, 136, .86, plasmaCell));
+  art += opacity(expansion, place(842, 255, .67, bCell));
+  art += arrow('M755 135H946');
+  art += arrow('M824 221Q805 166 750 147', true);
+  art += repeat(4 + Math.round(recall * 7), index => {
+    const amount = index < 4 ? progress(time, .34 + index * .01, .58 + index * .01) :
+      progress(time, .81 + index * .003, .97 + index * .002);
+    return opacity(amount, place(interpolate(750, 798 + index % 4 * 43, amount), 117 + Math.floor(index / 4) * 27, .56, captureAntibody));
+  });
+  art += opacity(second, place(interpolate(945, 886, second), 258, .65, epitope));
+  labels += label(710, 209, '浆细胞');
+  labels += label(849, 315, '记忆 B 细胞');
+  labels += leader('M924 244V213H951', 920, 204, '同种抗原');
+  labels += label(882, 91, '抗体', '#263642', 17);
+
+  const graphX = fraction => 121 + fraction * 820;
+  const graphY = value => 488 - value * 88;
+  art += path('M121 399V488H949', 'none', '#72818e', 1.3);
+  art += path('M121 445H949', 'none', '#e3e7eb', .8);
+  let entire = '', active = '';
+  for (let index = 0; index <= 160; index++) {
+    const position = index / 160;
+    const segment = (index === 0 ? 'M' : 'L') + graphX(position) + ' ' + graphY(responseValue(position));
+    entire += segment;
+    if (position <= time) active += segment;
+  }
+  art += path(entire, 'none', '#d4dde4', 2);
+  if (active) art += path(active, 'none', '#4b749b', 2.8);
+  art += circle(graphX(time), graphY(responseValue(time)), 4, '#4b749b');
+  art += arrow('M135 510V490');
+  art += arrow('M645 510V490');
+  labels += label(50, 442, '抗体', '#455360', 16);
+  labels += label(137, 521, '接种', '#455360', 16);
+  labels += label(646, 521, '以后再次接触同种抗原', '#455360', 16);
+  labels += label(913, 521, '时间', '#455360', 16);
+  return {art, labels};
+}
+
+function assayWell(x, time, positive) {
+  const capture = progress(time, .03, .25);
+  const detection = progress(time, .28, .49);
+  const wash = progress(time, .52, .69);
+  const color = positive ? progress(time, .78, .96) : 0;
+  let art = place(x, 204, 1, path('M-140 -95V79Q-140 104 -114 104H114Q140 104 140 79V-95', '#fff', '#7596aa', 2.4));
+  art += opacity(.04 + color * .35, place(x, 204, 1, path('M-137 -38H137V78Q137 101 114 101H-114Q-137 101 -137 78Z', '#5698c2', 'none')));
+  for (let index = 0; index < 3; index++) {
+    const center = x - 77 + index * 77;
+    art += place(center, 281, 1.1, captureAntibody);
+    art += path('M' + (center - 14) + ' 305H' + (center + 14), 'none', '#7596aa', 1.4);
+    if (positive) {
+      art += place(interpolate(x - 103 + index * 74, center, capture), interpolate(143 + index % 2 * 12, 260, capture), .84, epitope);
+      art += opacity(detection, place(interpolate(x + 53 - index * 27, center, detection), interpolate(155, 239, detection), .8, detectionAntibody, 180));
+    }
+  }
+  art += opacity(1 - wash, repeat(7, index => place(
+    interpolate(x - 108 + index * 32, x + 170, wash), 152 + index % 3 * 17, .36,
+    index % 2 === 0 ? (positive ? epitope : path('M-8 -5L8 -5L0 7Z', '#c8d7d0', '#72978a', 1.4)) : detectionAntibody
+  )));
+  art += opacity(wash * (1 - progress(time, .70, .76)), arrow('M' + (x - 165) + ' 183Q' + x + ' 155 ' + (x + 161) + ' 183'));
+  return art;
+}
+function diagnosticScene(time) {
+  let art = panel(12, 12, 481, 355, 'a', '含目标抗原') +
+    panel(507, 12, 481, 355, 'b', '不含目标抗原') +
+    panel(12, 381, 976, 146, 'c', '识别 → 保留酶标记 → 可见信号');
+  let labels = '';
+  art += assayWell(252, time, true);
+  art += assayWell(748, time, false);
+  labels += label(252, 349, time > .78 ? '显色信号' : '捕获抗体固定于孔底');
+  labels += label(748, 349, time > .78 ? '本模型中无显色信号' : '相同检测条件');
+
+  const baseX = 186;
+  art += place(baseX, 477, .9, captureAntibody);
+  art += place(baseX, 460, .7, epitope);
+  art += place(baseX, 441, .68, detectionAntibody, 180);
+  labels += leader('M206 441H267', 340, 443, '带酶标记的检测抗体');
+  labels += leader('M203 460H267', 340, 466, '目标抗原');
+  labels += leader('M203 482H267', 340, 490, '捕获抗体');
+  art += arrow('M477 462H559');
+  art += path('M590 428H670V490Q630 510 590 490Z', '#edf5fa', '#7596aa', 1.6);
+  art += opacity(progress(time, .78, .96), path('M592 462H668V488Q630 508 592 488Z', '#88b9d5', 'none'));
+  labels += label(630, 516, '底物显色', '#455360', 16);
+  labels += label(803, 451, '洗涤去除游离标记');
+  labels += label(803, 478, '信号来自保留的酶', '#455360', 17);
+  return {art, labels};
+}
+
+function donorKidney(x, y, damage = 0) {
+  let art = path('M8 -76C-72 -102 -101 -20 -79 45C-58 112 43 91 38 44C37 25 9 28 5 8C1 -14 39 -15 39 -41C42 -59 28 -71 8 -76Z',
+    damage > .5 ? '#d8aca7' : '#e8bebb', '#ab7778', 2);
+  art += path('M-4 -57C-52 -73 -73 -17 -58 27C-44 70 6 65 15 43Q-19 34 -16 4Q-16 -21 14 -34Q19 -45 -4 -57Z',
+    '#f3d8c6', '#ca9d94', 1.2);
+  art += repeat(6, index => place(-25 + Math.cos(index * .65 + 1.6) * 27, -9 + Math.sin(index * .65 + 1.6) * 43, 1,
+    path('M-5 -9l9 8 -8 8Z', '#c99091', '#b47f82', .8), index * 25));
+  art += path('M8 8Q51 24 57 80', 'none', '#c6a374', 8);
+  art += path('M13 -8Q44 -2 64 -21', 'none', '#b86e70', 8);
+  art += path('M12 3Q49 4 69 -8', 'none', '#6f91b8', 7);
+  return place(x, y, 1, art);
+}
+function transplantScene(time) {
+  const approach = progress(time, .04, .28);
+  const expansion = progress(time, .29, .57);
+  const intervention = progress(time, .39, .64);
+  const injury = progress(time, .65, .97);
+  let art = panel(12, 12, 481, 384, 'a', '相关免疫应答未受控制') +
+    panel(507, 12, 481, 384, 'b', '抑制针对移植物的应答');
+  let labels = '';
+  art += donorKidney(267, 189, injury);
+  art += donorKidney(764, 189, 0);
+  [267, 764].forEach(x => {
+    art += place(x + 18, 108, .8, epitope);
+    art += place(x - 60, 158, .65, epitope);
+  });
+  art += place(interpolate(111, 166, approach), interpolate(302, 249, approach), .8, tCell);
+  art += opacity(expansion, repeat(3, index => place(interpolate(166, 270 + index * 47, expansion),
+    interpolate(249, 298 + index % 2 * 18, expansion), .52, tCell)));
+  art += opacity(injury, repeat(9, index => circle(259 + Math.cos(index * 2.4) * (36 + index % 3 * 8),
+    181 + Math.sin(index * 2.4) * 47, 3.5, '#b65f61')));
+  art += place(interpolate(608, 660, approach * .6), interpolate(302, 268, approach * .6), .8, tCell);
+  art += opacity(intervention, place(674, 278, 1,
+    path('M-15 -7Q0 -21 15 -7V12Q0 25 -15 12Z', '#d8d2e5', '#8d7caa', 1.6) +
+    path('M-7 3H7', 'none', '#8d7caa', 2.8)));
+  art += opacity(expansion * (1 - intervention), arrow('M662 275L704 245'));
+  labels += label(262, 351, '受者 T 细胞活化与扩增');
+  labels += label(757, 351, '相关免疫效应减弱');
+  labels += leader('M305 147L367 107H395', 393, 89, '移植物', '#263642');
+  labels += leader('M783 119L838 87H863', 887, 83, '供者抗原');
+
+  art += panel(12, 410, 976, 117, 'c', '临床目标');
+  art += arrow('M151 478H417');
+  art += arrow('M575 478H842');
+  labels += label(286, 469, '降低排斥风险');
+  labels += label(710, 469, '维持必要的抗感染能力');
+  labels += label(497, 512, '配型评估 + 免疫抑制 + 持续监测', '#455360', 17);
+  return {art, labels};
+}
+
+// A membrane cross-section consists of phospholipids, rather than a single decorative line.
+function membrane(x, y, count, color) {
+  return repeat(count, index => {
+    const at = x + index * 12;
+    return circle(at, y, 3.4, color, '#708090', .7) +
+      circle(at, y + 25, 3.4, color, '#708090', .7) +
+      path('M' + (at - 1.5) + ' ' + (y + 4) + 'l-2 8m5 -8l2 8M' + (at - 1.5) + ' ' + (y + 21) + 'l-2 -8m5 8l2 -8', 'none', color, 1.4);
+  });
+}
+function synapsePanel(center, time, blockade) {
+  const strength = blockade ? progress(time, .56, .75) : 0;
+  let art = membrane(center - 189, 130, 33, '#8bacbb') +
+    membrane(center - 189, 280, 33, '#d1a0a8');
+  // TCR-peptide/MHC recognition is anatomically and visually separated from the checkpoint.
+  art += path('M' + (center - 114) + ' 137V196l10 12 10 -12v-59Z', '#bdd3e4', '#6283a0', 1.8);
+  art += path('M' + (center - 113) + ' 289V232q-4 -15 0 -17l10 6 10 -6q4 2 0 17v57Z', '#e0b8be', '#ad7f8e', 1.8);
+  art += place(center - 104, 215, .7, epitope);
+  art += path('M' + (center + 38) + ' 137V196q10 13 20 0v-59Z', '#d4cee1', '#8e7ba5', 1.8);
+  art += path('M' + (center + 41) + ' 289V216q8 -10 14 0v73Z', '#e7cbd5', '#ae8195', 1.8);
+  art += opacity(1 - strength, path('M' + (center + 48) + ' 199V210', 'none', '#8c6b99', 3));
+  if (blockade) {
+    art += opacity(strength, place(interpolate(center + 142, center + 48, strength),
+      interpolate(234, 211, strength), .75, blockingAntibody, 180));
+    art += opacity(progress(time, .77, .97), repeat(6, index => circle(center - 26 + index * 11, 245 + index % 2 * 9, 3, '#a77945')));
+  } else {
+    art += opacity(progress(time, .23, .42), path('M' + (center + 47) + ' 177l-26 -21m-5 -5l9 10', 'none', '#a0647c', 2.5));
+  }
+  return art;
+}
+function cancerScene(time) {
+  let art = panel(12, 12, 481, 362, 'a', '检查点抑制信号') +
+    panel(507, 12, 481, 362, 'b', '阻断抑制信号');
+  let labels = '';
+  art += synapsePanel(252, time, false);
+  art += synapsePanel(748, time, true);
+  labels += label(120, 97, 'T 细胞内');
+  labels += label(370, 332, '肿瘤细胞内');
+  labels += label(617, 97, 'T 细胞内');
+  labels += label(865, 332, '肿瘤细胞内');
+  labels += leader('M149 174H70', 88, 193, 'TCR', '#263642');
+  labels += leader('M141 216H87', 60, 235, '抗原肽');
+  labels += leader('M149 248H70', 94, 267, 'MHCⅠ', '#263642');
+  labels += leader('M302 174H358', 400, 178, 'PD-1', '#263642');
+  labels += leader('M302 249H358', 400, 255, 'PD-L1', '#263642');
+  labels += label(833, 241, '阻断抗体', '#6d4c8b', 17);
+
+  art += panel(12, 388, 976, 139, 'c', '恢复免疫细胞的效应');
+  art += place(528, 456, .65, tCell);
+  const death = progress(time, .78, .98);
+  art += opacity(1 - death * .3, place(701, 456, .79 - death * .08, tumorCell));
+  art += arrow('M574 456H647');
+  art += opacity(death, repeat(7, index => circle(interpolate(572, 675 + index % 3 * 9, clamp(death * 1.7 - index * .1)),
+    440 + index * 5, 2.7, '#a77945')));
+  art += opacity(death, repeat(7, index => circle(701 + Math.cos(index * .9) * 35, 456 + Math.sin(index * .9) * 29, 4.3, '#cf959c')));
+  labels += label(255, 461, '由 T 细胞执行杀伤');
+  labels += label(536, 515, '效应 T 细胞', '#455360', 16);
+  labels += label(709, 515, '肿瘤细胞', '#455360', 16);
+  return {art, labels};
+}
+
+
+const cases = [
+  {
+    name:'FIGURE A / 疫苗与免疫记忆',
+    legend:'橙色结构：抗原　棕色 Y：抗体　实线箭头：过程方向　虚线：再次应答',
+    takeaway:'疫苗诱发机体自身的免疫应答，建立免疫记忆，为以后遇到相应抗原做准备。',
+    boundary:'以B细胞应答为观察线索，省略APC、辅助性T细胞等活化环节。实线箭头表示过程方向，虚线表示再次应答路径。记忆与保护也涉及其他免疫组分。图中时轴为阶段展开，不能读取具体接种间隔或保护效力。',
+    events:['抗原刺激','应答与分化','保留免疫记忆','再次应答'],
+    steps:[
+      ['疫苗给免疫系统提供了什么？','疫苗可提供抗原，或提供编码抗原的信息。机体识别后，启动针对相应抗原的免疫应答。','图中抗原接近相应的 B 细胞。','人工主动免疫依靠机体自己产生应答。'],
+      ['保护需要怎样建立？','在相关信号参与下，B细胞增殖、分化，一部分成为浆细胞并分泌抗体，另一部分成为记忆B细胞。','浆细胞与记忆B细胞逐渐出现。','接种后通常需要一定时间形成保护。'],
+      ['抗体回落，留下的准备是什么？','部分记忆细胞可较长期保留，特异性抗体的维持也有不同机制。以后再次遇到相应抗原，可更快作出反应。','观察分化后保留的记忆 B 细胞。','长期保护涉及免疫记忆，不能只看某一时点的抗体水平。'],
+      ['再次遇到同种抗原，会怎样？','记忆B细胞可较快增殖、分化为浆细胞，产生较强的抗体应答，免疫系统更快限制相应病原体。','下方曲线再次应答峰值更高，出现更快。','记忆B细胞经分化后，由浆细胞分泌抗体。']
+    ],draw:vaccineScene
+  },
+  {
+    name:'FIGURE B / 特异性结合与检测',
+    legend:'棕色 Y＝固定的捕获抗体　·　蓝色 Y＋圆点＝带酶标记的检测抗体',
+    takeaway:'利用抗原与抗体的特异性结合，可把目标分子的存在转化为可观察的检测信号。',
+    boundary:'示意双抗体夹心式抗原检测，捕获抗体和检测抗体识别不同表位。阳性信号在给定模型条件下提示检出目标；真实检测还受阈值、误差和样本等影响，需结合临床判读。',
+    events:['加入样本','形成特异性结合','洗去未结合成分','加入底物显色'],
+    steps:[
+      ['怎样让目标分子留下来？','反应孔底部固定已知捕获抗体。含对应抗原的样本中，抗原能与捕获抗体结合，不对应的成分难以稳定保留。','比较两孔底部是否出现目标结合。','已知抗体可以帮助检测相应抗原。'],
+      ['怎样给结合加上可见标记？','加入能识别目标另一表位的检测抗体，其携带的酶标记成为后续产生信号的基础。','含目标抗原的一侧形成“抗体—抗原—检测抗体”。','结合的特异性与可检测标记共同构成检测方法。'],
+      ['为什么要洗涤？','未结合的检测抗体和样本成分被洗去。模型中，有目标抗原的一侧通过夹心复合物保留了酶标记。','比较洗涤之后留下的蓝色检测标记。','减少游离标记的干扰，才能解释后续信号。'],
+      ['颜色能支持什么结论？','加入底物后，保留的酶标记产生显色。模型中阳性孔出现信号，阴性孔未出现相应信号。','显色差异与酶标记是否被保留相对应。','真实结果需依检测规则判读，不能只凭颜色推断全部病情。']
+    ],draw:diagnosticScene
+  },
+  {
+    name:'FIGURE C / 移植物与免疫抑制',
+    legend:'橙色标志＝供者组织相容性抗原示意　·　绿色细胞＝受者 T 细胞',
+    takeaway:'供受者组织相容性差异可引起排斥，配型和免疫抑制有助于降低移植风险。',
+    boundary:'并排展示同类移植物的相关免疫应答受控与未受控两种条件。橙色图形代表组织相容性差异，省略抗原呈递等环节；真实排斥可同时涉及T细胞、抗体和其他因素。',
+    events:['识别供者差异','受者免疫应答','比较抑制干预','平衡获益与风险'],
+    steps:[
+      ['对受者而言，移植物有什么差异？','供者与受者的组织相容性抗原可能不同。受者免疫系统可识别这些差异，启动针对移植物的免疫反应。','两侧移植物都有供者的标志。','器官能恢复功能，也可能成为受者免疫反应的对象。'],
+      ['排斥由什么过程造成？','T细胞等参与针对移植物的应答，可引发组织炎症和损伤，影响器官存活与功能。','左侧 T 细胞活化并扩增，接近移植物。','免疫排斥与特异性免疫识别有关。'],
+      ['免疫抑制怎样帮助移植？','抑制相关免疫应答可以减轻对移植物的攻击。右侧用紫色标志表示药物干预后的效应减弱。','比较两侧的免疫细胞与组织变化。','配型选择与免疫抑制有助于提高移植成功机会。'],
+      ['为什么控制排斥后还要防感染？','免疫抑制可能同时削弱部分抗感染能力。治疗需要平衡排斥控制与感染等风险，并持续监测。','左侧有明显损伤，右侧相关应答被控制。','应用免疫学，需要结合治疗目的和风险进行权衡。']
+    ],draw:transplantScene
+  },
+  {
+    name:'FIGURE D / 免疫检查点与阻断',
+    legend:'蓝色受体：TCR　粉色配体：MHCⅠ　紫色受体：PD-1　紫色 Y：阻断抗体',
+    takeaway:'某些免疫治疗可解除抑制信号，帮助T细胞发挥抗肿瘤效应；治疗方向取决于具体目的。',
+    boundary:'以PD-1/PD-L1阻断为拓展示例。检查点参与正常免疫调节，该疗法对部分肿瘤有效，也可能出现免疫相关不良反应。并非所有肿瘤或所有免疫治疗都遵循本图。',
+    events:['识别肿瘤抗原','效应受到抑制','阻断抑制信号','恢复部分杀伤效应'],
+    steps:[
+      ['被识别，就一定会被清除吗？','细胞毒性T细胞可识别肿瘤细胞呈递的抗原信息。它能否有效杀伤，还受多种调节信号影响。','先看 TCR 与抗原肽-MHC 的识别位置。','抗原识别与后续效应之间存在调控。'],
+      ['肿瘤细胞可能怎样逃逸？','某些肿瘤细胞表达PD-L1，与T细胞表面的PD-1结合，产生抑制信号，使T细胞杀伤受限。','比较 PD-1 与 PD-L1 接触形成的抑制通路。','检查点本来参与保护正常组织，也可能被肿瘤利用。'],
+      ['药物改变了哪条联系？','阻断抗体结合检查点相关分子，阻止抑制信号继续传递。在适合的情境下，可增强T细胞的抗肿瘤效应。','观察 Y 形药物分子占据抑制通路的位置。','阻断药物提供干预，由免疫细胞执行相关杀伤。'],
+      ['恢复杀伤，也需要注意什么？','T细胞可释放杀伤颗粒，使肿瘤细胞死亡。增强免疫效应也可能引起正常组织炎症，临床需评估适用性。','阻断后，观察下方 T 细胞的杀伤效应。','免疫治疗的获益和不良反应都与调节免疫有关。']
+    ],draw:cancerScene
+  }
+];
+
+
+let activeCase = 0;
+let time = 0;
+let playing = false;
+let previousTimestamp = 0;
+let lastPaint = 0;
+let shownStep = -1;
+const duration = 30;
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clock = byId('clock');
+const sceneWorld = byId('world');
+const sceneLabels = byId('labels');
+
+function render() {
+  const current = cases[activeCase];
+  const step = Math.min(3, Math.floor(time * 4));
+  const image = current.draw(time);
+  sceneWorld.innerHTML = image.art;
+  sceneLabels.innerHTML = image.labels;
+  byId('scrubber').value = time * 100;
+  clock.textContent = Math.floor(time * duration).toString().padStart(2, '0') + ' / ' + duration + ' 秒';
+  byId('playButton').textContent = playing ? 'Ⅱ 暂停观察' : time >= 1 ? '↻ 再看一次' : '▶ 播放过程';
+  if (step === shownStep) return;
+  shownStep = step;
+  const [title, body, evidence, inference] = current.steps[step];
+  byId('stepCounter').textContent = '证据 ' + (step + 1).toString().padStart(2, '0') + ' / 04';
+  byId('stepTitle').textContent = title;
+  byId('stepBody').textContent = body;
+  byId('evidenceText').textContent = evidence;
+  byId('inferenceText').textContent = inference;
+  [...byId('eventButtons').children].forEach((button, index) => button.setAttribute('aria-current', index === step));
+}
+function chooseCase(index) {
+  activeCase = index;
+  time = 0;
+  playing = false;
+  shownStep = -1;
+  const current = cases[index];
+  byId('sceneName').textContent = current.name;
+  byId('figureLegend').textContent = current.legend;
+  byId('takeawayText').textContent = current.takeaway;
+  byId('boundaryText').textContent = current.boundary;
+  byId('boundaryText').hidden = true;
+  byId('showBoundary').textContent = '查看本图的简化范围 ＋';
+  document.querySelectorAll('[data-case]').forEach((button, at) => button.setAttribute('aria-pressed', at === index));
+  byId('eventButtons').replaceChildren();
+  current.events.forEach((event, at) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = (at + 1) + '　' + event;
+    button.onclick = () => {
+      time = [0, .39, .59, 1][at];
+      playing = false;
+      render();
+    };
+    byId('eventButtons').append(button);
+  });
+  render();
+}
+function togglePlayback() {
+  if (time >= 1) time = 0;
+  playing = !playing;
+  render();
+}
+byId('playButton').onclick = togglePlayback;
+byId('restartButton').onclick = () => {
+  time = 0;
+  playing = false;
+  render();
+};
+byId('scrubber').oninput = event => {
+  time = Number(event.target.value) / 100;
+  playing = false;
+  render();
+};
+byId('showBoundary').onclick = () => {
+  const note = byId('boundaryText');
+  note.hidden = !note.hidden;
+  byId('showBoundary').textContent = note.hidden ? '查看本图的简化范围 ＋' : '收起模型说明 −';
+};
+document.querySelectorAll('[data-case]').forEach(button => {
+  button.onclick = () => chooseCase(Number(button.dataset.case));
+});
+byId('openGuide').onclick = () => {
+  playing = false;
+  render();
+  byId('guide').showModal();
+};
+document.addEventListener('keydown', event => {
+  if (event.target.closest('input,button,select,textarea,a,summary') || byId('guide').open) return;
+  if (event.code === 'Space') {
+    event.preventDefault();
+    togglePlayback();
+  }
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    time = clamp(time + (event.key === 'ArrowRight' ? .05 : -.05));
+    playing = false;
+    render();
+  }
+});
+function animate(timestamp) {
+  requestAnimationFrame(animate);
+  const delta = Math.min(.1, (timestamp - previousTimestamp) / 1000);
+  previousTimestamp = timestamp;
+  if (!playing || document.hidden || byId('guide').open) return;
+  time = clamp(time + delta / duration);
+  if (time >= 1) playing = false;
+  if (timestamp - lastPaint > 33 || !playing) {
+    render();
+    lastPaint = timestamp;
+  }
+}
+
+
+const questions = [
+  ['接种以后，保护来自哪里？','接种疫苗后，机体形成相应的抗体与记忆细胞，这属于哪种机制？',
+    ['直接输入大量现成抗体','机体受刺激后建立主动免疫','把免疫细胞全部替换'],1,
+    '疫苗诱导自身应答，通常需要一定时间；保护涉及相关效应与免疫记忆。'],
+  ['需要较快获得抗体时','直接输入免疫球蛋白，与接种疫苗相比有什么特点？',
+    ['输入抗体本身就能建立长期免疫记忆','只能通过先产生记忆细胞才起效','可较快提供被动保护，但抗体会逐渐降解'],2,
+    '输入的是现成抗体。这种保护本身不建立相应免疫记忆，具体临床处置需按疾病规范决定。'],
+  ['已知抗体可以检测什么？','以特异性结合为基础，用带标记的已知抗体可以帮助检测什么？',
+    ['相应的抗原','任意一种分子','所有感染都相同的唯一物质'],0,
+    '抗原和抗体的结合具有特异性，标记把结合转化为可观察信号。也可用已知抗原检测相应抗体。'],
+  ['配型较相合之后','某患者移植前配型较相合，最合理的理解是什么？',
+    ['可保证永远没有排斥','可自行停用所有免疫抑制药','有助于降低风险，仍需综合评估与后续治疗'],2,
+    '配型是风险评估的一部分，移植还受到器官类型、质量、受者情况等因素影响。'],
+  ['为什么既抑制又监测？','移植后使用免疫抑制剂，同时监测感染，反映了什么？',
+    ['药物只作用于病原体','减轻排斥与维持防御之间需要平衡','治疗目的是让所有免疫反应永久归零'],1,
+    '免疫抑制可减轻针对移植物的应答，也可能影响部分抗感染能力。'],
+  ['检查点阻断的因果链','本课展示的肿瘤免疫治疗中，阻断抗体最直接改变了什么？',
+    ['抑制性分子之间的结合与信号','所有肿瘤细胞的染色体数目','把抗体转化为细胞毒性T细胞'],0,
+    '阻断PD-1/PD-L1等检查点相关结合，可在适合的情境下增强T细胞效应。杀伤仍由相关免疫效应机制执行。']
+];
+
+
+function buildQuiz() {
+  questions.forEach(([title, question, options, correct, explanation], number) => {
+    const card = document.createElement('article');
+    card.className = 'quiz-item';
+    const heading = document.createElement('h3');
+    heading.textContent = (number + 1) + '. ' + title;
+    const description = document.createElement('p');
+    description.textContent = question;
+    const box = document.createElement('div');
+    box.className = 'quiz-options';
+    const feedback = document.createElement('p');
+    feedback.className = 'quiz-feedback';
+    feedback.setAttribute('aria-live', 'polite');
+    options.forEach((option, choice) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = option;
+      button.onclick = () => {
+        [...box.children].forEach(item => item.className = '');
+        button.className = choice === correct ? 'correct' : 'incorrect';
+        feedback.textContent = (choice === correct ? '判断成立。' : '再检查作用对象与过程。') + explanation;
+      };
+      box.append(button);
+    });
+    card.append(heading, description, box, feedback);
+    byId('quiz').append(card);
+  });
+}
+chooseCase(0);
+buildQuiz();
+requestAnimationFrame(animate);
+
+</script></body></html>

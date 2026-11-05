@@ -13,7 +13,9 @@
     },
     "latest": true,
     "route": "courses/cell-basics/interactive-v1-0/",
-    "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。"
+    "design": "学生先记录观察，再用证据修正解释；比较动物、植物与单细胞的层级，最后答辩并生成报告。",
+    "difference": "本站当前独立方案，重点包括：历史透镜、细胞分裂证据与同行评审；T2宿主比较和同位素标记顺序。",
+    "suitableFor": "适合围绕历史透镜、细胞分裂证据与同行评审组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_01-02_细胞的多样性和统一性_微观物种海关与光学镜检局_v1.0.html",
@@ -29,7 +31,9 @@
     },
     "latest": true,
     "route": "courses/cell-diversity/interactive-v1-0/",
-    "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。"
+    "design": "先亲手操作显微镜，再扫描物种结构，最后用结构证据纠正常见分类误区。",
+    "difference": "本站当前独立方案，重点包括：高低倍镜切换、移片方向与视野计数；八种生物扫描与分类通关。",
+    "suitableFor": "适合围绕高低倍镜切换、移片方向与视野计数组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_02-01_细胞中的元素和化合物_BAUHAUS_BIO-ALCHEMY生命元素炼金工坊_v1.0.html",
@@ -45,7 +49,9 @@
     },
     "latest": true,
     "route": "courses/elements/interactive-v1-0/",
-    "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。"
+    "design": "先澄清统计口径，再选材料、配试剂和解释现象；把每个结论与具体条件及对照联系起来。",
+    "difference": "本站当前独立方案，重点包括：鲜干重守恒模型与大量、微量元素分拣；真实食材本底与纯物质对照。",
+    "suitableFor": "适合围绕鲜干重守恒模型与大量、微量元素分拣组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_02-02_细胞中的无机物_深空生命维生局_v1.0.html",
@@ -61,7 +67,9 @@
     },
     "latest": true,
     "route": "courses/inorganics/interactive-v1-0/",
-    "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。"
+    "design": "从微观相互作用出发，用变量调节与回补对照支持结构功能判断。",
+    "difference": "本站当前独立方案，重点包括：水分子极性、氢键及种子失水观察；自由水与结合水、生理状态联动。",
+    "suitableFor": "适合围绕水分子极性、氢键及种子失水观察组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_02-03_细胞中的糖类和脂质_细胞能量造物局_v1.0.html",
@@ -77,7 +85,9 @@
     },
     "latest": true,
     "route": "courses/carbohydrate-lipid/interactive-v1-0/",
-    "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。"
+    "design": "把材料分类转为拼装与实验，再明确氧化比较与种子曲线的条件，避免脱离对象套用结论。",
+    "difference": "本站当前独立方案，重点包括：单糖拼装、糖类分类及显色对照；脂肪酸结构与等质量氧化比较。",
+    "suitableFor": "适合围绕单糖拼装、糖类分类及显色对照组织观察与讨论。"
   },
   {
     "file": "蛋白质生命架构实验室.html",
@@ -93,7 +103,9 @@
     },
     "latest": true,
     "route": "courses/protein/original/",
-    "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。"
+    "design": "把分子组装、脱水缩合与折叠串联，先动手再解释结构与功能。",
+    "difference": "本站当前独立方案，重点包括：识别氨基酸共同结构与 R 基差异；逐步形成肽键并观察脱水缩合。",
+    "suitableFor": "适合围绕识别氨基酸共同结构与 R 基差异组织观察与讨论。"
   },
   {
     "file": "核酸训练实验室.html",
@@ -109,7 +121,9 @@
     },
     "latest": true,
     "route": "courses/nucleic/original/",
-    "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。"
+    "design": "从核苷酸拼装到互补配对，让遗传信息成为可操作的结构模型。",
+    "difference": "本站当前独立方案，重点包括：DNA 与 RNA 核苷酸组装校验；碱基配对任务与序列切换。",
+    "suitableFor": "适合围绕DNA 与 RNA 核苷酸组装校验组织观察与讨论。"
   },
   {
     "file": "细胞膜_边界研究所_v1.0.html",
@@ -125,7 +139,9 @@
     },
     "latest": true,
     "route": "courses/membrane/original/",
-    "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。"
+    "design": "以边界证据与膜模型试验建立结构解释，再讨论物质和信息交流。",
+    "difference": "本站当前独立方案，重点包括：完整与受损细胞膜对照；膜分子搭建和标记蛋白混合演示。",
+    "suitableFor": "适合围绕完整与受损细胞膜对照组织观察与讨论。"
   },
   {
     "file": "细胞器图鉴_2D互动版_v1.0.html",
@@ -141,7 +157,9 @@
     },
     "latest": true,
     "route": "courses/organelles/original/",
-    "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。"
+    "design": "在同一2D画布比较结构，并沿分泌路径看分工如何形成协作。",
+    "difference": "本站当前独立方案，重点包括：2D 图鉴逐项观察与结构标注；膜结构分类归档任务。",
+    "suitableFor": "适合围绕2D 图鉴逐项观察与结构标注组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_03-02_分泌蛋白_膜上旅程_v1.2.html",
@@ -157,7 +175,9 @@
     },
     "latest": true,
     "route": "courses/secretion/signal-golgi-v1-2/",
-    "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。"
+    "design": "沿用原版的膜区室剖面与同步放大，把课堂反馈中缺少的两个动态环节补入同一条货物路线。",
+    "difference": "重点补齐游离核糖体起始、信号肽露出和共同转移，并显示高尔基体加工前后及货物分类变化。",
+    "suitableFor": "适合分泌蛋白合成运输的机制精讲与过程纠错。"
   },
   {
     "file": "分泌蛋白_膜上旅程_v1.1.html",
@@ -173,7 +193,9 @@
     },
     "latest": false,
     "route": "courses/secretion/original/",
-    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
+    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。",
+    "difference": "保留v1.1膜上旅程方案；v1.2进一步补充核糖体—新生链共同转移和高尔基修饰、分选、包装。",
+    "suitableFor": "适合原有课堂流程回看；精讲转移与分选优先v1.2。"
   },
   {
     "file": "分泌蛋白_膜上旅程_v1.0.html",
@@ -189,7 +211,9 @@
     },
     "latest": false,
     "route": "courses/secretion/legacy/",
-    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。"
+    "design": "沿蛋白质的路线逐步预测，让膜系统协作在连续过程里显现。",
+    "difference": "沿分泌通路建立初始流程图像；尚未采用v1.2的信号肽转移与高尔基加工强化动画。",
+    "suitableFor": "适合查看初始方案，详细机制优先选择v1.2。"
   },
   {
     "file": "workbuddy/3.3细胞核的结构和功能.html",
@@ -205,7 +229,9 @@
     },
     "latest": false,
     "route": "courses/nucleus/workbuddy/",
-    "design": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。"
+    "design": "先提出谁控制细胞的问题，通过实验提出结论，再回到结构。",
+    "difference": "Kimi课堂方案：按教材结构与经典实验组织；与完整PBL工程和三幕精讲版并列，按教师指定前置。",
+    "suitableFor": "适合日常课堂主讲，作为教师指定默认方案。"
   },
   {
     "file": "lessons/必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_课堂精讲_v2.0.html",
@@ -221,7 +247,9 @@
     },
     "latest": true,
     "route": "courses/nucleus/prometheus-v2/",
-    "design": "把完整工程任务压缩为证据—结构—功能三幕，用一幅主图和一句结论建立视觉层级，减少课堂操作负担。"
+    "design": "把完整工程任务压缩为证据—结构—功能三幕，用一幅主图和一句结论建立视觉层级，减少课堂操作负担。",
+    "difference": "将工程版内容收敛为证据、结构、核质协作三幕；黑白美西螈以可见体色呈现，降低操作负担。",
+    "suitableFor": "适合一课时精讲、突出核心概念和实验因果。"
   },
   {
     "file": "lessons/必修1_03-03_细胞核的结构和功能_PBL普罗米修斯工程_v1.0.html",
@@ -237,7 +265,9 @@
     },
     "latest": false,
     "route": "courses/nucleus/prometheus-v1/",
-    "design": "以合成细胞金库为主线，把经典实验、核孔选择性与核仁功能拆成可操作的工程验收。"
+    "design": "以合成细胞金库为主线，把经典实验、核孔选择性与核仁功能拆成可操作的工程验收。",
+    "difference": "完整PBL工程方案，覆盖多组核功能实验、核孔协议、核仁调校与染色质折叠，探究环节较多。",
+    "suitableFor": "适合项目活动、自主探索或分次使用。"
   },
   {
     "file": "workbuddy/4.1被动运输.html",
@@ -253,7 +283,9 @@
     },
     "latest": true,
     "route": "courses/passive/workbuddy/",
-    "design": "由水的运动推理细胞变化，再比较被动运输的不同方式。"
+    "design": "由水的运动推理细胞变化，再比较被动运输的不同方式。",
+    "difference": "本版侧重：渗透作用实验与预测题；动物细胞吸失水、植物质壁分离与复原。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕渗透作用实验与预测题组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_04-01_被动运输_PBL绿洲与仿生膜工程_v1.0.html",
@@ -269,7 +301,9 @@
     },
     "latest": false,
     "route": "courses/passive/oasis-v1/",
-    "design": "将农业急救与仿生膜研发串联，以预测—操作—审稿质询的节奏建立渗透与被动运输概念。"
+    "design": "将农业急救与仿生膜研发串联，以预测—操作—审稿质询的节奏建立渗透与被动运输概念。",
+    "difference": "本版侧重：长颈漏斗、U形管与渗透平衡判断；紫洋葱质壁分离、复原及溶质进入追踪。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕长颈漏斗、U形管与渗透平衡判断组织观察与讨论。"
   },
   {
     "file": "workbuddy/4.2主动运输与胞吞胞吐.html",
@@ -285,7 +319,9 @@
     },
     "latest": true,
     "route": "courses/active/workbuddy/",
-    "design": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。"
+    "design": "先从逆浓度现象提出问题，再借具体模型说明不同运输机制。",
+    "difference": "本版侧重：浓度坡挑战与运输方式对比；钠钾泵逐步播放。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕浓度坡挑战与运输方式对比组织观察与讨论。"
   },
   {
     "file": "lessons/必修1_04-02_主动运输与胞吞胞吐_跨膜逆流引擎与液态囊泡工坊_v2.0.html",
@@ -301,7 +337,9 @@
     },
     "latest": false,
     "route": "courses/active/counterflow-v2/",
-    "design": "以机械水坝呈现离子势能，以液态膜动画呈现囊泡拓扑，让学生先操作再用曲线与证据判别。"
+    "design": "以机械水坝呈现离子势能，以液态膜动画呈现囊泡拓扑，让学生先操作再用曲线与证据判别。",
+    "difference": "本版侧重：小肠上皮三运输装置与Na⁺梯度联动；胞吞胞吐、膜蛋白参与及膜面积变化。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕小肠上皮三运输装置与Na⁺梯度联动组织观察与讨论。"
   },
   {
     "file": "主动运输与胞吞胞吐_细胞物流港_v1.0.html",
@@ -317,7 +355,9 @@
     },
     "latest": false,
     "route": "courses/active/original/",
-    "design": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。"
+    "design": "以物流任务逐项比较证据，避免仅凭载体或物质大小下结论。",
+    "difference": "本版侧重：控制载体和供能，比较主动运输条件；胞吞步骤排序和动画观察。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕控制载体和供能，比较主动运输条件组织观察与讨论。"
   },
   {
     "file": "workbuddy/5.1降低化学反应的活化能.html",
@@ -333,7 +373,9 @@
     },
     "latest": true,
     "route": "courses/enzyme/workbuddy/",
-    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
+    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。",
+    "difference": "本版侧重：过氧化氢四管实验和检测记录；无催化、Fe³⁺、酶的能量路径比较。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕过氧化氢四管实验和检测记录组织观察与讨论。"
   },
   {
     "file": "降低活化能的酶_催化现场_v1.0.html",
@@ -349,7 +391,9 @@
     },
     "latest": false,
     "route": "courses/enzyme/original/",
-    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。"
+    "design": "并排对照实验与能量路径，把反应快慢和催化原因对应起来。",
+    "difference": "本版侧重：不同条件反应速率比较与活化能路径；酶和底物结合的逐步演示。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕不同条件反应速率比较与活化能路径组织观察与讨论。"
   },
   {
     "file": "workbuddy/5.2细胞的能量货币ATP.html",
@@ -365,7 +409,9 @@
     },
     "latest": true,
     "route": "courses/atp/workbuddy/",
-    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
+    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。",
+    "difference": "本版侧重：荧光恢复条件比较；ATP 部件辨认和水解、合成演示。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕荧光恢复条件比较组织观察与讨论。"
   },
   {
     "file": "ATP_细胞能量交换站_v1.0.html",
@@ -381,7 +427,9 @@
     },
     "latest": false,
     "route": "courses/atp/original/",
-    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。"
+    "design": "将分子变化与具体细胞工作耦联，区分整体反应释能与单纯断键。",
+    "difference": "本版侧重：腺嘌呤、核糖、磷酸基团分层辨认；整体水解反应与泵的工作周期对照。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕腺嘌呤、核糖、磷酸基团分层辨认组织观察与讨论。"
   },
   {
     "file": "workbuddy/5.3细胞呼吸的原理和应用.html",
@@ -397,7 +445,9 @@
     },
     "latest": true,
     "route": "courses/respiration/workbuddy/",
-    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
+    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。",
+    "difference": "本版侧重：酵母菌实验中 CO₂ 和酒精检测；有氧呼吸三阶段与两类无氧途径。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕酵母菌实验中 CO₂ 和酒精检测组织观察与讨论。"
   },
   {
     "file": "细胞呼吸_碳的旅程_v1.0.html",
@@ -413,7 +463,9 @@
     },
     "latest": false,
     "route": "courses/respiration/original/",
-    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。"
+    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。",
+    "difference": "本版侧重：有氧呼吸与无氧途径的过程观察；通过情境比较物质去向与能量变化。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕有氧呼吸与无氧途径的过程观察组织观察与讨论。"
   },
   {
     "file": "光合作用_一束光的温室_v1.0.html",
@@ -429,7 +481,9 @@
     },
     "latest": true,
     "route": "courses/photosynthesis/original/",
-    "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。"
+    "design": "把光、反应位置和限制条件联动，鼓励先预测再调节变量。",
+    "difference": "本站当前独立方案，重点包括：叶绿体结构及反应分区观察；水与二氧化碳的氧标记对照。",
+    "suitableFor": "适合围绕叶绿体结构及反应分区观察组织观察与讨论。"
   },
   {
     "file": "细胞的增殖_一分为二放映室_v1.0.html",
@@ -445,7 +499,9 @@
     },
     "latest": true,
     "route": "courses/division/original/",
-    "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。"
+    "design": "像导演一样推进分裂时序，用行为与数量联动解释遗传信息分配。",
+    "difference": "本站当前独立方案，重点包括：细胞周期与植物、动物有丝分裂放映；DNA 与染色体数量核算。",
+    "suitableFor": "适合围绕细胞周期与植物、动物有丝分裂放映组织观察与讨论。"
   },
   {
     "file": "细胞的分化_同源异职展_v1.0.html",
@@ -461,7 +517,9 @@
     },
     "latest": true,
     "route": "courses/differentiation/original/",
-    "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。"
+    "design": "以相同基因组的不同分工为线索，比较基因表达与细胞功能。",
+    "difference": "本站当前独立方案，重点包括：细胞职责匹配与分裂分化比较；DNA、RNA、蛋白质证据链排序。",
+    "suitableFor": "适合围绕细胞职责匹配与分裂分化比较组织观察与讨论。"
   },
   {
     "file": "细胞的衰老和死亡_生命维护现场_v1.0.html",
@@ -477,7 +535,9 @@
     },
     "latest": true,
     "route": "courses/aging/original/",
-    "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。"
+    "design": "用现场证据与分类决策区分衰老、凋亡及其他死亡情境。",
+    "difference": "本站当前独立方案，重点包括：衰老特征及端粒、损伤解释情境；细胞凋亡与坏死的对照动画。",
+    "suitableFor": "适合围绕衰老特征及端粒、损伤解释情境组织观察与讨论。"
   },
   {
     "file": "孟德尔的豌豆杂交实验_豌豆试验局_v1.0.html",
@@ -493,7 +553,9 @@
     },
     "latest": true,
     "route": "courses/mendel/original/",
-    "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。"
+    "design": "让杂交结果与假说检验相互迭代，先做预测再用子代数据判断。",
+    "difference": "本站当前独立方案，重点包括：人工杂交操作排序和单性状棋盘；不同样本量的模拟统计与测交。",
+    "suitableFor": "适合围绕人工杂交操作排序和单性状棋盘组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_02-01_减数分裂和受精作用_荧光共聚焦细胞剧场_v1.0.html",
@@ -509,7 +571,9 @@
     },
     "latest": true,
     "route": "courses/meiosis/interactive-v1-0/",
-    "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。"
+    "design": "先看行为再核算数量，结合细胞类型与题设条件推断配子来源，最后检验推理边界。",
+    "difference": "本站当前独立方案，重点包括：八时期染色体动画、互换与精卵形成切换；染色体、DNA及每条染色体DNA数量联动。",
+    "suitableFor": "适合围绕八时期染色体动画、互换与精卵形成切换组织观察与讨论。"
   },
   {
     "file": "基因在染色体上_果蝇遗传调查室_v1.0.html",
@@ -525,7 +589,9 @@
     },
     "latest": true,
     "route": "courses/chromosome/original/",
-    "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。"
+    "design": "围绕果蝇杂交设计与竞争假说，使定位结论来自可比较的证据。",
+    "difference": "本站当前独立方案，重点包括：基因与染色体行为类比；常染色体与 X 染色体假说预测比较。",
+    "suitableFor": "适合围绕基因与染色体行为类比组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_02-03_伴性遗传_基因侦探社_v1.0.html",
@@ -541,7 +607,9 @@
     },
     "latest": true,
     "route": "courses/sex-linked/interactive-v1-0/",
-    "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。"
+    "design": "沿辨显隐、定位置、标基因、算概率推进，让每次定位都有条件支持。",
+    "difference": "本站当前独立方案，重点包括：X/Y区段与经典杂交比较；三关系谱图、个体基因型标记与证据扫描。",
+    "suitableFor": "适合围绕X/Y区段与经典杂交比较组织观察与讨论。"
   },
   {
     "file": "DNA是主要的遗传物质_遗传物质证据发布会_v2.0.html",
@@ -557,7 +625,9 @@
     },
     "latest": true,
     "route": "courses/dna-evidence/original/",
-    "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。"
+    "design": "以证据发布会组织角色讨论，要求每次结论都对应具体实验。",
+    "difference": "本版侧重：细菌转化实验的预测、观察和对照；噬菌体实验流程排序与异常条件分析。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕细菌转化实验的预测、观察和对照组织观察与讨论。"
   },
   {
     "file": "DNA是主要的遗传物质_证据接力_v1.0.html",
@@ -573,7 +643,9 @@
     },
     "latest": false,
     "route": "courses/dna-evidence/legacy/",
-    "design": "从猜想开始，通过每一站的对照结果修正判断。"
+    "design": "从猜想开始，通过每一站的对照结果修正判断。",
+    "difference": "本版侧重：初始观点选择与细菌转化对照；DNA 酶处理预测及噬菌体标记追踪。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕初始观点选择与细菌转化对照组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_03-02_DNA的结构_1953卡文迪许分子制图局_v2.0.html",
@@ -589,7 +661,9 @@
     },
     "latest": true,
     "route": "courses/dna-structure/blueprint-v2/",
-    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
+    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
+    "difference": "本版侧重：互补配对与反向平行方向判断；糖磷酸骨架、碱基与氢键比较。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕互补配对与反向平行方向判断组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_03-02_DNA的结构_双螺旋修复室_v1.0.html",
@@ -605,7 +679,9 @@
     },
     "latest": false,
     "route": "courses/dna-structure/repair-notes-v1/",
-    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。"
+    "design": "让学生先搭建并找错，再用结构证据检验模型，最后推导碱基比例。",
+    "difference": "本版侧重：模板链互补配对操作；反向平行方向提示。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕模板链互补配对操作组织观察与讨论。"
   },
   {
     "file": "DNA的复制_双链蓝图工坊_v1.0.html",
@@ -621,7 +697,9 @@
     },
     "latest": true,
     "route": "courses/replication/original/",
-    "design": "先预测三种复制模型的结果，再用条带与配对检验解释。"
+    "design": "先预测三种复制模型的结果，再用条带与配对检验解释。",
+    "difference": "本站当前独立方案，重点包括：保守、半保留和分散复制的预测；不同代数密度分布比较。",
+    "suitableFor": "适合围绕保守、半保留和分散复制的预测组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_BIO-SYNTH_OP-4生命胶片剪辑室_v3.0.html",
@@ -637,7 +715,9 @@
     },
     "latest": true,
     "route": "courses/gene-fragment/bio-synth-v3/",
-    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+    "difference": "本版侧重：基因与非基因片段的功能对照；染色体、DNA、基因与核苷酸关系。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕基因与非基因片段的功能对照组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_生命密码破译局与CSI基因刑侦终端_v2.0.html",
@@ -653,7 +733,9 @@
     },
     "latest": false,
     "route": "courses/gene-fragment/csi-v2/",
-    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+    "difference": "本版侧重：基因与非基因片段的功能对照；染色体、DNA、基因与核苷酸关系。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕基因与非基因片段的功能对照组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_03-04_基因通常是有遗传效应的DNA片段_基因组标注室_v1.0.html",
@@ -669,7 +751,9 @@
     },
     "latest": false,
     "route": "courses/gene-fragment/annotation-notes-v1/",
-    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。"
+    "design": "先检验片段功能，再区分概念层次和序列信息；不同版本提供不同的功能验证与比对任务。",
+    "difference": "本版侧重：片段删除与回补功能对照；基因遗传效应的判读。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕片段删除与回补功能对照组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_04-01_基因指导蛋白质的合成_生命密码破译员_v1.0.html",
@@ -685,7 +769,9 @@
     },
     "latest": true,
     "route": "courses/expression/interactive-v1-0/",
-    "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。"
+    "design": "先解决信息如何传出，再动手配对转录和翻译，用突变沙盒检验序列与产物的联系。",
+    "difference": "本站当前独立方案，重点包括：DNA与RNA组成对比及核苷酸组装；转录步骤控制与模板配对。",
+    "suitableFor": "适合围绕DNA与RNA组成对比及核苷酸组装组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_04-02_基因表达与性状的关系_生命交响曲的指挥家_v2.0.html",
@@ -701,7 +787,9 @@
     },
     "latest": true,
     "route": "courses/expression-trait/symphony-v2/",
-    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
+    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
+    "difference": "本版侧重：基因经酶或蛋白质影响性状的案例；表观遗传与基因序列变化辨析。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕基因经酶或蛋白质影响性状的案例组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_04-02_基因表达与性状的关系_猫毛颜色观测站_v1.0.html",
@@ -717,7 +805,9 @@
     },
     "latest": false,
     "route": "courses/expression-trait/cat-notes-v1/",
-    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。"
+    "design": "从可观察表型出发，追踪表达、蛋白质和环境条件；不同版本以温敏性状或多案例画卷展开。",
+    "difference": "本版侧重：不同温度下的温敏酶与新毛颜色比较；基因型不变、环境改变的情境。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕不同温度下的温敏酶与新毛颜色比较组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.1.html",
@@ -733,7 +823,9 @@
     },
     "latest": true,
     "route": "courses/mutation-recombination/swiss-v2-1/",
-    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+    "difference": "本版侧重：替换、插入、缺失及阅读框变化；基因突变特点或癌变情境推理。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕替换、插入、缺失及阅读框变化组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-01_基因突变和基因重组_SWISS_BIO-PRESS生命活字印刷厂_v2.0.html",
@@ -749,7 +841,9 @@
     },
     "latest": false,
     "route": "courses/mutation-recombination/swiss-v2/",
-    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+    "difference": "本版侧重：替换、插入、缺失及阅读框变化；基因突变特点或癌变情境推理。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕替换、插入、缺失及阅读框变化组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-01_基因突变_分子基因侦探社_v1.0.html",
@@ -765,7 +859,9 @@
     },
     "latest": false,
     "route": "courses/mutation-recombination/mutation-detective-v1/",
-    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+    "difference": "本版侧重：镰状细胞模型与碱基变化；替换、增添、缺失联动沙盒。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕镰状细胞模型与碱基变化组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-01_基因重组_配子组合印刷所_v1.0.html",
@@ -781,7 +877,9 @@
     },
     "latest": false,
     "route": "courses/mutation-recombination/recombination-notes-v1/",
-    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。"
+    "design": "先比较分子与组合层面的变化，再要求学生明确新等位基因与新组合的区别；历史单项版可分课使用。",
+    "difference": "本版侧重：同源染色体分离与配子组合展示；已有等位基因重新组合的辨析。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕同源染色体分离与配子组合展示组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-02_染色体变异_细胞遗传与育种工程实验室_v1.0.html",
@@ -797,7 +895,9 @@
     },
     "latest": true,
     "route": "courses/chromosome-variation/interactive-v1-0/",
-    "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。"
+    "design": "先建立染色体组概念，再追踪发育起点、倍性变化和结构片段去向，用对照解释育种与实验结果。",
+    "difference": "本站当前独立方案，重点包括：非同源染色体组分拣与倍性判定；无子西瓜、单倍体育种与低温诱导。",
+    "suitableFor": "适合围绕非同源染色体组分拣与倍性判定组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-03_人类遗传病_NORDIC_GENE_CLINIC首席遗传咨询师工作站_v2.0.html",
@@ -813,7 +913,9 @@
     },
     "latest": true,
     "route": "courses/genetic-disease/nordic-v2/",
-    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
+    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
+    "difference": "本版侧重：单基因、多基因与染色体异常分类；患病率调查和遗传方式调查比较。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕单基因、多基因与染色体异常分类组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_05-03_人类遗传病_人群调查编辑部_v1.0.html",
@@ -829,7 +931,9 @@
     },
     "latest": false,
     "route": "courses/genetic-disease/survey-notes-v1/",
-    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。"
+    "design": "以调查目标和病例证据决定方法，区分筛查、诊断与遗传风险，不把课堂模型当成实际临床建议。",
+    "difference": "本版侧重：患病率模拟与样本选择；人群随机调查与家系调查辨析。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕患病率模拟与样本选择组织观察与讨论。"
   },
   {
     "file": "lessons/必修2_06-00_生物的进化_达尔文的怀表与基因沙盘_v1.0.html",
@@ -845,7 +949,9 @@
     },
     "latest": true,
     "route": "courses/evolution/interactive-v1-0/",
-    "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。"
+    "design": "先比较处理前后证据，再追踪基因频率与生殖隔离；本版重点覆盖自然选择、种群变化及协同进化，证据主题以导入为主。",
+    "difference": "本站当前独立方案，重点包括：变异在前、选择在后的种群模拟；哈迪—温伯格、自交与淘汰重算。",
+    "suitableFor": "适合围绕变异在前、选择在后的种群模拟组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
@@ -861,7 +967,9 @@
     },
     "latest": true,
     "route": "courses/extracellular/microcirculation-v1/",
-    "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。"
+    "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。",
+    "difference": "本站当前独立方案，重点包括：微循环与淋巴回流动态模型及多种水肿情境；氧气跨膜计数与细胞专属内环境定位。",
+    "suitableFor": "适合围绕微循环与淋巴回流动态模型及多种水肿情境组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
@@ -877,7 +985,9 @@
     },
     "latest": true,
     "route": "courses/homeostasis/icu-v1/",
-    "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。"
+    "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。",
+    "difference": "本站当前独立方案，重点包括：呼吸、消化、泌尿、循环粒子联动及病理冲击；血浆酸碱缓冲反应过程与清除路径。",
+    "suitableFor": "适合围绕呼吸、消化、泌尿、循环粒子联动及病理冲击组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
@@ -893,7 +1003,9 @@
     },
     "latest": true,
     "route": "courses/neural-reflex/neuralink-v1/",
-    "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。"
+    "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。",
+    "difference": "本版侧重：反射弧刺激与阻断及真假反射判断；交感与副交感的器官响应比较。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕反射弧刺激与阻断及真假反射判断组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_02-02_神经调节的基本方式_奈特神经解剖与电生理动态图谱_v1.0.html",
@@ -909,7 +1021,9 @@
     },
     "latest": false,
     "route": "courses/neural-reflex/anatomical-atlas-v1/",
-    "design": "以暖色医学图谱强化位置约束，配合可暂停脉冲与局部放大；犬脑功能投影可关闭，帮助区分结构与解释。"
+    "design": "以暖色医学图谱强化位置约束，配合可暂停脉冲与局部放大；犬脑功能投影可关闭，帮助区分结构与解释。",
+    "difference": "本版侧重：H形灰质、T形感觉神经元与运动终板放大探针；膝跳与缩手双模式、病灶节段及时相判断。同号版本以方案名称区分，不视为相互替代。",
+    "suitableFor": "适合围绕H形灰质、T形感觉神经元与运动终板放大探针组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_02-03_神经冲动的产生和传导_神经电生理与突触药理高精工作站_v1.0.html",
@@ -925,7 +1039,9 @@
     },
     "latest": true,
     "route": "courses/neural-impulse/electrophysiology-v1/",
-    "design": "把离子流、记录位置与电位曲线同步展示，让学生先区分测量对象，再用刺激与靶点对照检验解释。"
+    "design": "把离子流、记录位置与电位曲线同步展示，让学生先区分测量对象，再用刺激与靶点对照检验解释。",
+    "difference": "本站当前独立方案，重点包括：四阶段膜电位与细胞外Na⁺/K⁺条件对照；单纤维与跨突触检流计实验、延搁和单向传递。",
+    "suitableFor": "适合围绕四阶段膜电位与细胞外Na⁺/K⁺条件对照组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_02-04_神经系统的分级调节_临床神经分级调控与泌尿动力学仿真工作站_v1.0.html",
@@ -941,7 +1057,9 @@
     },
     "latest": true,
     "route": "courses/neural-hierarchy/hierarchical-control-v1/",
-    "design": "用可暂停的神经脉冲连接解剖位置和器官响应，把感觉、随意控制与有效排空拆成独立判据。"
+    "design": "用可暂停的神经脉冲连接解剖位置和器官响应，把感觉、随意控制与有效排空拆成独立判据。",
+    "difference": "本站当前独立方案，重点包括：五个运动代表区、肢体交叉与头面部双侧联系对照；五种排尿工况、逼尿肌与两类括约肌的动态模型。",
+    "suitableFor": "适合围绕五个运动代表区、肢体交叉与头面部双侧联系对照组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_02-05_人脑的高级功能_人脑高级认知与临床神经药理工作站_v1.0.html",
@@ -957,7 +1075,9 @@
     },
     "latest": true,
     "route": "courses/higher-brain/cognition-v1/",
-    "design": "把基础感觉、语言加工、即时保持、长期巩固和药理机制逐层拆开，用对照揭示每个模型能解释什么。"
+    "design": "把基础感觉、语言加工、即时保持、长期巩固和药理机制逐层拆开，用对照揭示每个模型能解释什么。",
+    "difference": "本站当前独立方案，重点包括：W/S/V/H与三类初级皮层对照、四项行为测试；四级记忆、长期突触重塑与复述/干扰条件实验。",
+    "suitableFor": "适合围绕W/S/V/H与三类初级皮层对照、四项行为测试组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_03-01_激素与内分泌系统_诺贝尔内分泌传奇与分子矩阵工作站_v2.0.html",
@@ -973,7 +1093,9 @@
     },
     "latest": true,
     "route": "courses/endocrine-system/legend-v2/",
-    "design": "把肠道—血液—胰腺连接为可比较的实验路径，再用分子性质解释受体与给药条件。"
+    "design": "把肠道—血液—胰腺连接为可比较的实验路径，再用分子性质解释受体与给药条件。",
+    "difference": "采用ICU参考的过程剧场，联动实验操作、分泌过程与结果读数，将长解释按需展开。",
+    "suitableFor": "适合投影精讲和少量干预下的连续观察。"
   },
   {
     "file": "lessons/选择性必修1_03-01_激素与内分泌系统_诺贝尔内分泌传奇与分子矩阵工作站_v1.0.html",
@@ -989,7 +1111,9 @@
     },
     "latest": false,
     "route": "courses/endocrine-system/legend-v1/",
-    "design": "把肠道—血液—胰腺连接为可比较的实验路径，再用分子性质解释受体与给药条件。"
+    "design": "把肠道—血液—胰腺连接为可比较的实验路径，再用分子性质解释受体与给药条件。",
+    "difference": "以科学史、化学本质、给药与腺体功能多个工作台展开；v2进一步集中过程主舞台和课堂节奏。",
+    "suitableFor": "适合专题资料查阅和多环节探索。"
   },
   {
     "file": "lessons/选择性必修1_03-02_激素调节的过程_人体内分泌动态调节中枢_v2.0.html",
@@ -1005,7 +1129,9 @@
     },
     "latest": true,
     "route": "courses/hormone-regulation/regulation-v2/",
-    "design": "将器官平衡与分子放大镜同步，区分来源、受体响应、反馈时延和模型边界。"
+    "design": "将器官平衡与分子放大镜同步，区分来源、受体响应、反馈时延和模型边界。",
+    "difference": "重构为ICU式联动过程，以血糖和反馈为中心统一动画、曲线与少量条件干预。",
+    "suitableFor": "适合课堂连续演示、暂停预测和反馈推理。"
   },
   {
     "file": "lessons/选择性必修1_03-02_激素调节的过程_人体内分泌动态调节中枢_v1.0.html",
@@ -1021,7 +1147,9 @@
     },
     "latest": false,
     "route": "courses/hormone-regulation/regulation-v1/",
-    "design": "将器官平衡与分子放大镜同步，区分来源、受体响应、反馈时延和模型边界。"
+    "design": "将器官平衡与分子放大镜同步，区分来源、受体响应、反馈时延和模型边界。",
+    "difference": "多模块展开血糖、GLUT-4和HPT轴等内容；保留原始工作站式方案。",
+    "suitableFor": "适合专题探索或课后复习查阅。"
   },
   {
     "file": "lessons/选择性必修1_03-03_体液调节与神经调节的关系_ICU双轨协同调控中心_v1.0.html",
@@ -1037,7 +1165,9 @@
     },
     "latest": true,
     "route": "courses/neuro-humoral/icu-coordination-v1/",
-    "design": "保留大幅动态主舞台，以少量干预串联器官响应和变量变化，把长解释与练习折叠。"
+    "design": "保留大幅动态主舞台，以少量干预串联器官响应和变量变化，把长解释与练习折叠。",
+    "difference": "本站当前独立方案，重点包括：体温调节、水盐平衡与ADH回路的同步动画；少量条件干预、变量曲线与暂停单步。",
+    "suitableFor": "适合围绕体温调节、水盐平衡与ADH回路的同步动画组织观察与讨论。"
   },
   {
     "file": "lessons/选择性必修1_04-01_免疫系统的组成和功能_免疫组织动态图谱_v2.0.html",
@@ -1053,7 +1183,9 @@
     },
     "latest": true,
     "route": "courses/immune-system/anatomical-atlas-v2/",
-    "design": "用同一个问题串起宏观器官、组织切面与分子接触面。暂停关键帧后先让学生判断，再揭示依据。"
+    "design": "用同一个问题串起宏观器官、组织切面与分子接触面。暂停关键帧后先让学生判断，再揭示依据。",
+    "difference": "以皮肤伤口串联人体器官、组织切面、淋巴结和细胞接触面，补充解剖图及关键帧。",
+    "suitableFor": "适合宏观到微观的结构辨识与暂停解释。"
   },
   {
     "file": "lessons/选择性必修1_04-01_免疫系统的组成和功能_ICU免疫协同防御中心_v1.0.html",
@@ -1069,7 +1201,207 @@
     },
     "latest": false,
     "route": "courses/immune-system/icu-defense-v1/",
-    "design": "以三个观察工作台替代集中罗列，采用定性事件带和少量条件切换解释免疫协作。"
+    "design": "以三个观察工作台替代集中罗列，采用定性事件带和少量条件切换解释免疫协作。",
+    "difference": "ICU式多工作台方案，突出系统组成、防御过程与功能联动；v2改以同一道伤口串联组织层次。",
+    "suitableFor": "适合完整主题探索与分站观察。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-02_特异性免疫_双窗实验_v2.0.html",
+    "title": "特异性免疫 膜的两边·双窗探究版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/specific-immunity--dual-window-v2.webp",
+      "thumbnail": "assets/previews/specific-immunity--dual-window-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "特异性免疫 · 膜的两边·双窗探究版 v2.0真实课件画面",
+      "scene": "用两个同步视窗比较细胞外病毒与藏入细胞的病毒，让学生据观察修订解释。"
+    },
+    "latest": true,
+    "route": "courses/specific-immunity/dual-window-v2/",
+    "design": "围绕“病毒所在位置”设置对照，让学生先作判断，再观察抗体和细胞效应的作用边界。",
+    "difference": "从单线分镜转为同步对照；增加预测、观察记录和证据解释，流程细节改为按需追溯。",
+    "suitableFor": "适合探究课堂、学生讨论及概念诊断。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-02_特异性免疫_微观史诗战役_v1.0.html",
+    "title": "特异性免疫 微观史诗·分镜版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/specific-immunity--cinematic-v1.webp",
+      "thumbnail": "assets/previews/specific-immunity--cinematic-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "特异性免疫 · 微观史诗·分镜版 v1.0真实课件画面",
+      "scene": "按连续分镜追踪抗原呈递、辅助性T细胞、抗体与细胞毒性T细胞的协同。"
+    },
+    "latest": false,
+    "route": "courses/specific-immunity/cinematic-v1/",
+    "design": "用分镜叙事先建立完整过程图像，再在关键幕停下来解释细胞之间的联系。",
+    "difference": "七幕连续讲解，强调两类特异性免疫的整体流程；与双窗版的条件对照实验不同。",
+    "suitableFor": "适合第一次整体讲授或课后按流程回看。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-03_免疫失调_防线的三个偏差_v2.0.html",
+    "title": "免疫失调 三个偏差·课堂推理版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immune-disorders--three-errors-v2.webp",
+      "thumbnail": "assets/previews/immune-disorders--three-errors-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫失调 · 三个偏差·课堂推理版 v2.0真实课件画面",
+      "scene": "以“作用对象发生了什么偏差”为主线，分步解释过敏、自身免疫和免疫缺陷。"
+    },
+    "latest": true,
+    "route": "courses/immune-disorders/three-errors-v2/",
+    "design": "把图像、观察和解释拆开，让学生先指出变化，再完成有依据的因果表达。",
+    "difference": "相较暗场展厅版，改为高对比课堂舞台；增加证据/推断说明、边界开关与可选病例。",
+    "suitableFor": "适合大屏讲授、逐步提问和病例迁移。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-03_免疫失调_脆弱的宙斯盾_v1.0.html",
+    "title": "免疫失调 脆弱宙斯盾·暗场展厅版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immune-disorders--aegis-v1.webp",
+      "thumbnail": "assets/previews/immune-disorders--aegis-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫失调 · 脆弱宙斯盾·暗场展厅版 v1.0真实课件画面",
+      "scene": "在过敏、自身免疫和HIV三种微观场景中追踪作用对象与免疫失衡。"
+    },
+    "latest": false,
+    "route": "courses/immune-disorders/aegis-v1/",
+    "design": "用低操作负担的展厅切换和连续时间轴，让微观过程与宏观变化同步出现。",
+    "difference": "采用暗场生物荧光和展厅探索；v2改用浅底分步解释并强化证据与推断区分。",
+    "suitableFor": "适合自主探索、导入和课后回看，投影前可检查教室亮度。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-04_免疫学的应用_机制图谱_学术图版_v2.0.html",
+    "title": "免疫学的应用 机制图谱·学术图版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immunity-applications--academic-atlas-v2.webp",
+      "thumbnail": "assets/previews/immunity-applications--academic-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫学的应用 · 机制图谱·学术图版 v2.0真实课件画面",
+      "scene": "用学术机制图组织预防、检测、移植和治疗，连接结构识别与干预结果。"
+    },
+    "latest": true,
+    "route": "courses/immunity-applications/academic-atlas-v2/",
+    "design": "采用期刊图谱的信息组织方式，把参与者、识别位置与干预方向放进同一幅可回看的图中。",
+    "difference": "主要改进图形语言、空间组织和机制标注；保留v1的应用主线及可选练习。",
+    "suitableFor": "适合机制精讲、对照复习和图文表达训练。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-04_免疫学的应用_把免疫机制变成工具_v1.0.html",
+    "title": "免疫学的应用 免疫工具·过程探究版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immunity-applications--mechanisms-tools-v1.webp",
+      "thumbnail": "assets/previews/immunity-applications--mechanisms-tools-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫学的应用 · 免疫工具·过程探究版 v1.0真实课件画面",
+      "scene": "围绕预防、检测、移植与治疗，选择并解释免疫机制的应用。"
+    },
+    "latest": false,
+    "route": "courses/immunity-applications/mechanisms-tools-v1/",
+    "design": "从实际应用目的出发，沿“工具—作用对象—结果”解释同一种特异性如何服务不同任务。",
+    "difference": "以连续过程和应用目的组织；v2在保留主线的同时重绘为分面学术机制图。",
+    "suitableFor": "适合按案例展开的新课讲授与小组判断。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-01_植物生长素_从实验到机制_v1.0.html",
+    "title": "植物生长素 实验到机制·图谱版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/auxin--evidence-atlas-v1.webp",
+      "thumbnail": "assets/previews/auxin--evidence-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物生长素 · 实验到机制·图谱版 v1.0真实课件画面",
+      "scene": "沿感光、信号转运、生理效应和实验对照，建立生长素的证据链。"
+    },
+    "latest": true,
+    "route": "courses/auxin/evidence-atlas-v1/",
+    "design": "先用对照排除解释，再把观察结果连接到生长素来源、运输与效应。",
+    "difference": "本站当前独立小节版本，区别于其他植物激素的多激素互作图谱。",
+    "suitableFor": "适合科学史实验分析、曲线读图和实验题复习。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-02_其他植物激素_植物激素互作图谱_v1.0.html",
+    "title": "其他植物激素 植物激素·互作图谱版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/other-plant-hormones--interaction-atlas-v1.webp",
+      "thumbnail": "assets/previews/other-plant-hormones--interaction-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "其他植物激素 · 植物激素·互作图谱版 v1.0真实课件画面",
+      "scene": "从赤霉素研究到发育阶段和激素比例，观察多种植物激素共同调控。"
+    },
+    "latest": true,
+    "route": "courses/other-plant-hormones/interaction-atlas-v1/",
+    "design": "把激素关系放在具体器官、时期和过程中解释，避免把一种激素背成单一功能。",
+    "difference": "聚焦天然激素互作；不等同于下一节外源调节剂的处理和生根实验。",
+    "suitableFor": "适合机制关系精讲与多激素综合判断。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-03_植物生长调节剂的应用_从分子到生根实验_v2.0.html",
+    "title": "植物生长调节剂的应用 分子到生根·证据修订版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/plant-regulators--rooting-atlas-v2.webp",
+      "thumbnail": "assets/previews/plant-regulators--rooting-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物生长调节剂的应用 · 分子到生根·证据修订版 v2.0真实课件画面",
+      "scene": "强化生根实验的条件控制、原始记录与稀释判别，避免跨方法套用数据。"
+    },
+    "latest": true,
+    "route": "courses/plant-regulators/rooting-atlas-v2/",
+    "design": "用一致的数据口径约束图像、均值和解释，让学生判断结论成立需要哪些条件。",
+    "difference": "在v1图谱基础上修正数据口径：沾蘸或暴晒不沿用浸泡结果；补充过度稀释可能使两候选液都下降的反例。",
+    "suitableFor": "适合实验设计、数据解释和高阶条件推理，优先作课堂版本。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-03_植物生长调节剂的应用_从分子到生根实验_v1.0.html",
+    "title": "植物生长调节剂的应用 分子到生根·初版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/plant-regulators--rooting-atlas-v1.webp",
+      "thumbnail": "assets/previews/plant-regulators--rooting-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物生长调节剂的应用 · 分子到生根·初版 v1.0真实课件画面",
+      "scene": "连接调节剂分子作用、生产应用、生根浓度比较与未知液稀释判别。"
+    },
+    "latest": false,
+    "route": "courses/plant-regulators/rooting-atlas-v1/",
+    "design": "让应用目标与实验条件相连，学生从可见根数返回检验浓度与方法。",
+    "difference": "保留初始图谱方案；v2进一步限定处理方法、数据适用范围与稀释判别条件。",
+    "suitableFor": "适合查看初始方案与修订对照；课堂默认建议v2。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-04_环境因素参与调节植物的生命活动_植物的环境信号图谱_v1.0.html",
+    "title": "环境因素参与调节植物的生命活动 植物环境·信号图谱版 1.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/plant-environment--signal-atlas-v1.webp",
+      "thumbnail": "assets/previews/plant-environment--signal-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "环境因素参与调节植物的生命活动 · 植物环境·信号图谱版 v1.0真实课件画面",
+      "scene": "用光信号、连续黑夜、低温记忆与重力感知解释植物如何读取环境。"
+    },
+    "latest": true,
+    "route": "courses/plant-environment/signal-atlas-v1/",
+    "design": "按环境信息、感知位置、信号传递和生长结果展开，把知识结论与分子拓展分开。",
+    "difference": "聚焦外界信号参与调节，连接前两节激素机制而不重复激素名单。",
+    "suitableFor": "适合光周期、春化与向重力性比较，及实验条件推理。"
   },
   {
     "file": "种群及其动态_山野调查手记_v1.0.html",
@@ -1085,7 +1417,45 @@
     },
     "latest": true,
     "route": "courses/population/original/",
-    "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
+    "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。",
+    "difference": "本站当前独立方案，重点包括：随机样方与偏向布样比较；标记重捕估算及可信度检查。",
+    "suitableFor": "适合围绕随机样方与偏向布样比较组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_01-01_种群的数量特征_种群生态学定量图谱_v1.0.html",
+    "title": "种群的数量特征 种群生态·定量图谱版 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/population-traits--quantitative-atlas-v1.webp",
+      "thumbnail": "assets/previews/population-traits--quantitative-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "种群的数量特征 · 种群生态·定量图谱版 v1.0真实课件画面",
+      "scene": "从数量变化来源到样方、标记重捕和非捕获调查，练习用样本认识种群。"
+    },
+    "latest": true,
+    "route": "courses/population-traits/quantitative-atlas-v1/",
+    "design": "将抽样过程与原始记录直接连起来，先确定调查对象和条件，再进行估计。",
+    "difference": "专讲第1节调查与数量特征；既有“山野调查手记”仍作为第1—3节综合方案保留。",
+    "suitableFor": "适合调查方法新授、样本偏差分析与计算训练。"
+  },
+  {
+    "file": "lessons/选择性必修2_01-02_种群的数量变化_种群数量变化动力学图谱_v1.0.html",
+    "title": "种群的数量变化 种群动力学·图谱版 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/population-growth--dynamics-atlas-v1.webp",
+      "thumbnail": "assets/previews/population-growth--dynamics-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "种群的数量变化 · 种群动力学·图谱版 v1.0真实课件画面",
+      "scene": "区分数量、增长比例和增长速率，联动λ、管理模型与酵母计数。"
+    },
+    "latest": true,
+    "route": "courses/population-growth/dynamics-atlas-v1/",
+    "design": "让同一数据模型生成曲线、读数和解释，暴露量纲混淆并用操作结果检验。",
+    "difference": "专讲第2节数量模型和实验换算；与第1节抽样、第3节因素图谱及既有综合方案分开。",
+    "suitableFor": "适合数量模型精讲、曲线辨析和计数实验复习。"
   },
   {
     "file": "lessons/选择性必修2_01-03_影响种群数量变化的因素_种群调控与统计证据图谱_v1.0.html",
@@ -1101,6 +1471,8 @@
     },
     "latest": true,
     "route": "courses/population-factors/quantitative-atlas-v1/",
-    "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。"
+    "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。",
+    "difference": "本站当前独立方案，重点包括：四季林冠与温光水条件、草本和蚊成虫观测指数联动；1900—1920年历史毛皮记录、峰值游标与双轴尺度对照。",
+    "suitableFor": "适合围绕四季林冠与温光水条件、草本和蚊成虫观测指数联动组织观察与讨论。"
   }
 ]

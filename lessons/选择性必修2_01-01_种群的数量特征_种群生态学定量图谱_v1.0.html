@@ -1,0 +1,264 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>种群的数量特征｜种群生态学定量图谱</title><meta name="theme-color" content="#456c4c"><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@500;600&display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script><style>:root{color-scheme:light;--ink:#24392d;--muted:#42564a;--paper:#faf8f5;--edge:#dcded2;--green:#456c4c;--orange:#c87645}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:18px/1.65 Inter,"Microsoft YaHei",sans-serif}button,select,input{font:inherit;color:inherit}button{cursor:pointer;background:white;border:1px solid #a9b6a6;border-radius:5px;padding:7px 13px;font-weight:600;transition:background .15s,transform .15s}button:hover{background:#edf1e8}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb6a30;outline-offset:3px}a{color:#355f48}header,main{width:min(1490px,94%);margin:auto}header{min-height:77px;display:flex;gap:20px;align-items:center;justify-content:space-between;border-bottom:1px solid #abb8a7}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:700;font-size:20px}.brand svg{width:29px;height:34px}.brand small{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}.intro{display:flex;justify-content:space-between;align-items:end;padding:32px 0 24px;gap:20px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.12em;font-weight:700;margin:0 0 12px}h1{font-family:"Source Serif 4",Georgia,"Songti SC","SimSun",serif;font-size:clamp(38px,4.6vw,66px);line-height:1.2;margin:0 0 17px;font-weight:600;letter-spacing:-.03em}h1 span{font-size:23px;letter-spacing:0;margin-left:24px;display:inline-block;border-left:1px solid #b9c4b3;padding-left:22px;font-family:Inter,"Microsoft YaHei",sans-serif}.subtitle{font-size:18px;line-height:1.8;margin:0;color:var(--muted)}.intro-note{min-width:210px;padding-left:25px;border-left:1px solid #b9c4b3}.intro-note i{font:italic 36px "Source Serif 4",Georgia,serif}.intro-note p{font-size:14px;color:var(--muted);margin:8px 0 0}nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:27px;border-bottom:1px solid #c8d1c1;padding-bottom:18px}nav a{font-size:16px;text-decoration:none;background:#f0f1e9;padding:7px 16px;border-radius:4px;font-weight:600}nav a:hover{background:#e0e9da}.figure{background:#fff;border:1px solid #dcded2;border-radius:9px;margin:23px 0 38px;box-shadow:0 5px 20px #29422b06;scroll-margin:15px;overflow:hidden}.fig-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:21px 23px 16px;border-bottom:1px solid #e0e3d9}.fig-heading .eyebrow{margin:0 0 5px}.fig-heading h2{font:600 28px/1.4 "Source Serif 4",Georgia,"Songti SC",serif;margin:0}.fig-heading>span{font-size:13px;color:var(--muted)}.context{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 22px;background:#f6f7f2;border-bottom:1px solid #dde2d6}.context label{font-size:15px;font-weight:650}.context select{border:1px solid #abb9a5;border-radius:4px;background:#fff;padding:6px 12px;max-width:100%;min-width:0;font-size:16px}.figure-body{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,1fr)}.scroll-stage{min-width:0;overflow-x:auto;background:#fff}.scroll-stage>svg{display:block;width:100%;min-width:780px}aside{padding:22px;border-left:1px solid #e0e3d9;background:#fcfcf8}.phase{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:0 0 12px}aside h3{font-size:24px;line-height:1.5;margin:0 0 14px;font-weight:650}aside>p{font-size:17px;color:var(--muted);margin:0 0 14px}aside .small{font-size:14px;line-height:1.8;margin-top:17px}.result{background:#eff3e9;border-left:3px solid #77966a;padding:13px;margin-top:17px}.result span{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}.result b{font-size:17px}.toolbar{display:flex;gap:12px;align-items:center;padding:14px 20px;background:#fcfcf8;border-top:1px solid #dce2d4;flex-wrap:wrap}.toolbar .play{background:#456c4c;border-color:#456c4c;color:white;min-width:154px}.toolbar .play:hover{background:#355c3b}.toolbar>label{flex:1;min-width:150px;display:flex;align-items:center}input[type=range]{width:100%;accent-color:#52764e;cursor:pointer}output{font:14px Consolas,monospace;min-width:100px;text-align:right;color:var(--muted)}.fig-caption{padding:14px 23px;margin:0;font-size:15px;color:#3e5343;border-top:1px solid #e1e5dc;line-height:1.8}.fig-caption b{color:var(--ink)}.probe-context input{width:min(270px,90%)}.probe-context output{min-width:170px;font-size:16px}.effect{padding:7px 0;border-bottom:1px solid #dfe5da;display:flex;gap:7px;justify-content:space-between;font-size:16px}.effect b{font-weight:650}.grid-instruction{padding:14px 23px 0;margin:0;font-size:16px;color:var(--muted)}.experiment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:18px 20px}.device{border:1px solid #cfd8c7;padding:0;border-radius:5px;background:#fff;text-align:left;overflow:hidden;font-weight:400}.device[aria-pressed=true]{border:2px solid #52764e;background:#fbfdf8}.device svg{display:block;width:100%;height:auto}.device-name{display:block;padding:9px 12px;border-top:1px solid #e3e7db;font-size:15px;line-height:1.6;min-height:65px}.grid-result{margin:0 20px 20px;padding:15px 17px;background:#f0f4e9;border-left:3px solid #77966a}.grid-result b{font-size:19px}.grid-result p{font-size:17px;margin:5px 0 0}.notes{border:1px solid #d6decd;background:#fff;border-radius:7px;margin:20px 0}.notes summary{padding:16px 20px;cursor:pointer;font-weight:600}.notes>div{padding:0 20px 20px;color:var(--muted);font-size:16px}.notes p{margin:12px 0}.notes li{margin:6px 0}footer{border-top:1px solid #bdcbb5;padding:22px 0;display:flex;justify-content:space-between;gap:15px;font-size:13px;color:var(--muted)}dialog{color:var(--ink);background:#fffefa;border:1px solid #adbda2;border-radius:10px;padding:28px;width:min(690px,94vw);max-height:88vh;overflow:auto}dialog::backdrop{background:#203a2a99}dialog form{text-align:right}dialog h2{font-size:30px;margin:14px 0}dialog h3{font-size:21px;margin:18px 0 7px}dialog p{font-size:17px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:8px;border-bottom:1px solid #d5ddcd;text-align:left}dialog .eyebrow{margin-top:18px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}[hidden]{display:none!important}
+@media(max-width:1100px){.brand small{display:none}.figure-body{grid-template-columns:minmax(0,2.6fr) minmax(240px,1fr)}aside{padding:17px}.fig-heading>span{display:none}}
+@media(max-width:900px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce2d4;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.phase,aside h3,aside>p{grid-column:1}.result{grid-column:2;grid-row:1/4;margin-top:0;align-self:start}aside .small{grid-column:2;grid-row:4}.intro-note{display:none}.experiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{gap:8px;min-height:66px}.brand{font-size:16px}header button{font-size:14px;padding:6px 8px}.intro{padding-top:25px}h1 span{display:block;margin:12px 0 0;padding:0;border:0;font-size:23px}nav{gap:6px}nav a{font-size:14px;padding:6px 10px}.fig-heading{padding:16px}.fig-heading h2{font-size:25px}.context{padding:12px;gap:8px}.context select{width:100%}.toolbar{padding:12px;gap:8px}.toolbar>label{order:4;flex-basis:100%}.toolbar output{margin-left:auto;min-width:auto}.toolbar button{font-size:15px;padding:7px 10px}aside{display:block}.result{margin-top:12px}.fig-caption{padding:12px 16px}footer{flex-direction:column}.experiment-grid{grid-template-columns:1fr;padding:14px}.device-name{min-height:0}.probe-context input{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+
+#svgLibrary{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+
+:root{--paper:#faf9f5;--ink:#20372f;--edge:#e2e8e3}.figure{border-radius:16px;border-color:#dde5df}.intro h1{font-size:clamp(38px,4.4vw,64px)}.intro-note i{font-size:28px}.figure-body{grid-template-columns:minmax(0,3fr) minmax(280px,1fr)}.fig-heading .eyebrow{letter-spacing:.14em}.context{background:#f7f9f6}.context button{font-size:15px}.context button[aria-pressed=true]{background:#eae2f2;border-color:#a888bd}.extra{border-top:1px solid #dce2d4;padding:12px 22px}.extra summary{font-size:16px;font-weight:600;cursor:pointer}.extra p{font-size:16px}.table-scroll{overflow:auto}.extra table{font-size:15px;margin-top:12px}.object-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:22px}.object-grid svg{width:100%;min-width:300px}.references{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px 24px}.references h2{font:600 23px 'Source Serif 4',Georgia,serif;margin:0 0 12px}.references>p,.references li,.references a,.references span,.cites a{font-size:11px!important;line-height:1.45;color:#64748b}.references ol{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}.references li{break-inside:avoid}.references span{display:block;margin-top:2px}.references a,.cites a{text-decoration:none}.references a:hover,.cites a:hover{color:#0f172a;text-decoration:underline}.cites{white-space:normal;margin-left:8px}.cites a{white-space:nowrap;display:inline-block}.annotation text{font-family:Arial,'Microsoft YaHei',sans-serif}.scroll-stage:after{content:''}.method-note{font-size:14px;color:#42564a}.result b{display:block}.toolbar output{min-width:105px}.references a:focus-visible{outline:2px solid #456c4c}.figure svg{touch-action:pan-x pan-y}.extra td{word-break:normal}.sample-tag{display:inline-block;padding:2px 6px;border:1px solid #ccd8ce;border-radius:4px;margin:3px;font-size:14px}.sample-tag.marked{border-color:#d47869;background:#fceee9}
+.comparison{margin-top:18px;padding-top:16px;border-top:1px solid #d8e1d9}.comparison div{margin-bottom:10px;background:#e7ece9;border-radius:4px}.comparison b{display:block;font-size:15px;background:#fff;padding-bottom:4px}.comparison span{display:block;height:9px;border-radius:3px}.comparison p{font-size:13px;margin:0}
+@media(max-width:1000px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dde4da}.intro-note{display:none}}@media(max-width:800px){.scroll-stage:after{content:'图谱可左右滑动查看 →';position:sticky;left:0;display:block;padding:6px 12px;background:#f3f7ef;color:#334938;font-size:14px}}@media(max-width:560px){.object-grid{display:block;overflow:auto}.references ol{grid-template-columns:1fr}.references{padding:16px}.context button{width:100%}.toolbar output{min-width:80px}}
+</style></head><body><header><a class="brand" href="#top">生态定量图谱 <small>POPULATION / FIELD NOTES</small></a><button id="reviewOpen">种群数量与调查方法速查 ↗</button></header><main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第1章 · 第1节</p><h1>从一株草，到一整个种群。</h1><p class="subtitle">数量怎样改变？怎样从有限的观察，推知看不见的全部？<br>一张关系网，两种调查方法，一套证据意识。</p></div><div class="intro-note"><i>Count. Infer. Question.</i><p>先作预测，再播放过程，<br>最后说明估计成立的条件。</p></div></section><nav aria-label="图谱导航"><a href="#figure1">01 数量的来去</a><a href="#figure2">02 一平方米</a><a href="#figure3">03 再遇一只鼠</a><a href="#figure4">04 无接触识别</a></nav><div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="fur" x2="0" y2="1"><stop stop-color="#b6aa96"/><stop offset="1" stop-color="#766b5c"/></linearGradient><linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#b5cc9a"/><stop offset="1" stop-color="#5b8969"/></linearGradient><linearGradient id="lake"><stop stop-color="#dcebf0"/><stop offset="1" stop-color="#adc9ce"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#708679"/></marker></defs></svg></div><section class="figure" id="figure1"><div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / DEMOGRAPHIC NETWORK</p><h2>数量的改变，从哪里发生？</h2></div><span>观察 · 比较 · 解释</span></div><div class="context"><label for="age">年龄结构</label><select id="age"><option value="expand">增长型</option><option value="stable">稳定型</option><option value="decline">衰退型</option></select><button id="pheromone" aria-pressed="false">性引诱剂：未释放</button></div><div class="figure-body"><div class="scroll-stage"><svg id="svg1" viewBox="0 0 1000 580" role="img" aria-label="数量的改变，从哪里发生？"></svg></div><aside><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p><div class="result"><span>依据与结论</span><b id="result1"></b></div><p class="small" id="note1"></p></aside></div><div class="toolbar"><button class="play" data-play="0">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">图1时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div><p class="fig-caption"><b>Figure 1.</b> 年龄结构用于判断趋势；密度需结合空间范围。性引诱模型示意交配机会改变，不是实测防效。 <span class="cites"><a href="https://www.pearson.com/en-gb/subject-catalog/p/campbell-biology/P200000007019?tab=title-overview&view=educator" target="_blank" rel="noopener noreferrer" title="Urry et al., 12th ed. · Campbell Biology">[1] ↗</a> <a href="https://doi.org/10.1007/s10886-009-9737-y" target="_blank" rel="noopener noreferrer" title="Witzgall et al., 2010 · Journal of Chemical Ecology">[2] ↗</a> <a href="https://www.pep.com.cn/gzsw/" target="_blank" rel="noopener noreferrer" title="人教版 · 选择性必修2《生物与环境》1.1">[9] ↗</a></span></p></section><section class="figure" id="figure2"><div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / QUADRAT / SAMPLING & BOUNDARIES</p><h2>一平方米，怎样数得公平？</h2></div><span>观察 · 比较 · 解释</span></div><div class="context"><label for="terrain">布点情境</label><select id="terrain"><option value="meadow">方形草甸 · 五点示意</option><option value="bank">狭长岸带 · 等距示意</option></select><button id="reshuffle">重新布设植株</button><span class="method-note">按生根点判定边界</span></div><div class="figure-body"><div class="scroll-stage"><svg id="svg2" viewBox="0 0 1000 580" role="img" aria-label="一平方米，怎样数得公平？"></svg></div><aside><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p><div class="result"><span>依据与结论</span><b id="result2"></b></div><p class="small" id="note2"></p></aside></div><div class="toolbar"><button class="play" data-play="1">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">图2时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div><details class="extra"><summary>调查对象：个体怎么划分？</summary><div class="object-grid"><div id="plants"></div><p><b>蒲公英：</b>莲座、主根与个体边界较清楚，便于初学计数。<br><b>丛生或克隆植物：</b>须先规定是数植株、分株还是基株；并非单子叶植物一律不能用样方法。<br><b>其他对象：</b>昆虫卵、蚜虫、活动范围较小的跳蝻等，需选择合适时间、样方面积与计数单位。</p></div></details><p class="fig-caption"><b>Figure 2.</b> 等面积样方密度＝总计数÷总样方面积。五点、等距是布局；真实调查仍须避免主观选点并考虑空间异质性。 <span class="cites"><a href="https://doi.org/10.5962/bhl.title.54858" target="_blank" rel="noopener noreferrer" title="Clements, 1905 · Research Methods in Ecology">[3] ↗</a> <a href="https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_04_2017.pdf" target="_blank" rel="noopener noreferrer" title="Krebs · Ecological Methodology, Quadrat Counts">[4] ↗</a> <a href="https://www.pep.com.cn/gzsw/" target="_blank" rel="noopener noreferrer" title="人教版 · 选择性必修2《生物与环境》1.1">[9] ↗</a></span></p></section><section class="figure" id="figure3"><div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / MARK–RECAPTURE / ESTIMATE & ASSUMPTIONS</p><h2>看不见全部，怎样估出数量？</h2></div><span>观察 · 比较 · 解释</span></div><div class="context"><label for="scenario">重捕情境</label><select id="scenario"><option value="ideal">0 标准示例</option><option value="loss">1 标记脱落</option><option value="predation">2 标记增加捕食风险</option><option value="shy">3 陷阱回避</option><option value="happy">4 陷阱趋向</option><option value="cluster">5 未混匀原地重捕</option></select><button id="resample">标准条件：随机重捕一次</button></div><div class="figure-body"><div class="scroll-stage"><svg id="svg3" viewBox="0 0 1000 580" role="img" aria-label="看不见全部，怎样估出数量？"></svg></div><aside><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p><div class="result"><span>依据与结论</span><b id="result3"></b></div><p class="small" id="note3"></p></aside></div><div class="toolbar"><button class="play" data-play="2">▶ 播放过程</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">图3时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div><details class="extra"><summary>展开第二次捕获的20个个体记录</summary><div id="captureTable" class="table-scroll"></div></details><p class="fig-caption"><b>Figure 3.</b> 个体与捕获记录为教学模拟。N̂＝Mn/m；固定M和n时，m减小使估值增大。一次碰巧相等不能证明估计量无偏。 <span class="cites"><a href="https://archive.org/details/calculatingwater118linc" target="_blank" rel="noopener noreferrer" title="Lincoln, 1930 · USDA Circular 118">[5] ↗</a> <a href="https://www.jstor.org/stable/3830650" target="_blank" rel="noopener noreferrer" title="Otis et al., 1978 · Wildlife Monographs 62">[6] ↗</a> <a href="https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_02_2021.pdf" target="_blank" rel="noopener noreferrer" title="Krebs · Mark–Recapture Techniques, author manuscript">[10] ↗</a></span></p></section><section class="figure" id="figure4"><div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / NON-INVASIVE / EVIDENCE TO INDIVIDUALS</p><h2>不抓住它，也能知道“它是谁”。</h2></div><span>观察 · 比较 · 解释</span></div><div class="context"><label for="technique">观察方法</label><select id="technique"><option value="camera">红外相机 · 条纹识别</option><option value="dna">粪便DNA · 多位点比对</option><option value="sound">声学与航拍 · 检测边界</option></select></div><div class="figure-body"><div class="scroll-stage"><svg id="svg4" viewBox="0 0 1000 580" role="img" aria-label="不抓住它，也能知道“它是谁”。"></svg></div><aside><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p><div class="result"><span>依据与结论</span><b id="result4"></b></div><p class="small" id="note4"></p></aside></div><div class="toolbar"><button class="play" data-play="3">▶ 播放过程</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">图4时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div><p class="fig-caption"><b>Figure 4.</b> 图像、DNA条带与声谱均为原创方法示意。照片、样本或叫声的数量不直接等于动物个体数。 <span class="cites"><a href="https://doi.org/10.1016/j.cub.2006.05.042" target="_blank" rel="noopener noreferrer" title="Zhan et al., 2006 · Current Biology 16, R451–R452">[7] ↗</a> <a href="https://www.usgs.gov/publications/estimation-tiger-densities-india-using-photographic-captures-and-recaptures" target="_blank" rel="noopener noreferrer" title="Karanth & Nichols, 1998 · Ecology 79, 2852–2862">[8] ↗</a> <a href="https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_02_2021.pdf" target="_blank" rel="noopener noreferrer" title="Krebs · Mark–Recapture Techniques, author manuscript">[10] ↗</a></span></p></section><section class="references" id="references"><h2>References / 原文与方法</h2><p>原创机制与模拟图谱。期刊论文、历史扫描本和在线稿各自标明证据范围；点击直接打开来源。</p><ol><li id="ref-1"><a href="https://www.pearson.com/en-gb/subject-catalog/p/campbell-biology/P200000007019?tab=title-overview&view=educator" target="_blank" rel="noopener noreferrer">[1] Urry et al., 12th ed. · Campbell Biology ↗</a><span>种群生态学框架；2020发布，©2021。书目核验，未逐页核验。</span></li><li id="ref-2"><a href="https://doi.org/10.1007/s10886-009-9737-y" target="_blank" rel="noopener noreferrer">[2] Witzgall et al., 2010 · Journal of Chemical Ecology ↗</a><span>性信息素的监测、防治与行为调控用途。</span></li><li id="ref-3"><a href="https://doi.org/10.5962/bhl.title.54858" target="_blank" rel="noopener noreferrer">[3] Clements, 1905 · Research Methods in Ecology ↗</a><span>样方法的发展背景；BHL原书扫描。</span></li><li id="ref-4"><a href="https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_04_2017.pdf" target="_blank" rel="noopener noreferrer">[4] Krebs · Ecological Methodology, Quadrat Counts ↗</a><span>作者在线章节稿；布点、计数与密度估计。不是已出版的2014第三版。</span></li><li id="ref-5"><a href="https://archive.org/details/calculatingwater118linc" target="_blank" rel="noopener noreferrer">[5] Lincoln, 1930 · USDA Circular 118 ↗</a><span>以环志回收估算水禽数量的历史原文。</span></li><li id="ref-6"><a href="https://www.jstor.org/stable/3830650" target="_blank" rel="noopener noreferrer">[6] Otis et al., 1978 · Wildlife Monographs 62 ↗</a><span>封闭种群捕获模型、捕获概率与行为反应。</span></li><li id="ref-7"><a href="https://doi.org/10.1016/j.cub.2006.05.042" target="_blank" rel="noopener noreferrer">[7] Zhan et al., 2006 · Current Biology 16, R451–R452 ↗</a><span>大熊猫粪便DNA非侵入遗传普查；书目与作者机构摘要核验，非本文模拟数据来源。</span></li><li id="ref-8"><a href="https://www.usgs.gov/publications/estimation-tiger-densities-india-using-photographic-captures-and-recaptures" target="_blank" rel="noopener noreferrer">[8] Karanth & Nichols, 1998 · Ecology 79, 2852–2862 ↗</a><span>用相机图像识别虎个体并进行捕获重捕估计。</span></li><li id="ref-9"><a href="https://www.pep.com.cn/gzsw/" target="_blank" rel="noopener noreferrer">[9] 人教版 · 选择性必修2《生物与环境》1.1 ↗</a><span>教材知识范围；链接为出版社教材入口，具体印次与页码未逐页核验。</span></li><li id="ref-10"><a href="https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_02_2021.pdf" target="_blank" rel="noopener noreferrer">[10] Krebs · Mark–Recapture Techniques, author manuscript ↗</a><span>Petersen比值估计的偏差与假设；文件文内版本为2016。</span></li></ol></section><footer><span>原创交互生态图谱 · 林默然生物课件</span><span>种群的数量特征 / v1.0</span></footer></main><dialog id="review"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">SUMMARY / 证据与推论</p><h2>先确定对象，再判断数量。</h2><div id="reviewTable"></div></dialog><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase;
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#6a8375',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=8)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,scale,art,angle=0)=>`<g transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})">${art}</g>`;
+const O=(opacity,art)=>`<g opacity="${clamp(opacity)}">${art}</g>`;
+const ink='#24392d',coral='#cd7464',blue='#427b9b',green='#527c64';
+function label(x,y,title,subtitle=''){return BioAtlas.label({x,y,title,subtitle,bounds:{width:1000,height:580}})}
+function call(x,y,px,py,title,subtitle=''){return BioAtlas.callout({x,y,from:[px,py],title,subtitle,bounds:{width:1000,height:580}})}
+function small(x,y,s){return `<text x="${x}" y="${y}" font-size="16" fill="${ink}">${s}</text>`}
+function arrow(d,color=green,w=2){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" marker-end="url(#arrow)"/>`}
+function flow(points,t,color=green,count=6){return many(count,i=>{const u=(t*2+i/count)%1,a=points[0],b=points[1],c=points[2];const x=(1-u)**2*a[0]+2*(1-u)*u*b[0]+u*u*c[0],y=(1-u)**2*a[1]+2*(1-u)*u*b[1]+u*u*c[1];return E(x,y,3,3,color)})}
+function leaf(x,y,s,angle=0){return G(x,y,s,P('M0 0Q12 -10 19 -37L13 -34L20 -49L11 -46L15 -62Q2 -54 -7 -39L-2 -40L-8 -27L-1 -30Q-3 -10 0 0Z','url(#leaf)','#729173',.8)+P('M0 0L10 -53','none','#547c5b',.6),angle)}
+function dandelion(x,y,s=1){return G(x,y,s,many(7,i=>leaf(0,0,.52,i*51))+P('M0 0Q4 -18 1 -40','none','#718a4b',1.8)+G(1,-41,1,many(13,i=>G(0,0,1,E(0,-5,1.7,5,'#e4bd58','#be9539'),i*360/13))+E(0,0,4,4,'#d4a43c'))+E(0,0,2,2,'#4a7455'))}
+function grass(x,y,s=1){return G(x,y,s,many(5,i=>P(`M0 0Q${(i-2)*9} -35 ${(i-2)*12} -72`,'none','#5e8969',1.5)+G((i-2)*12,-72,1,P('M-3 0Q-6 -14 0 -28Q6 -15 3 0Z','#b3b876','#7c8d58',.8)+many(9,j=>P(`M-3 ${-j*2.5}l-5 -4m11 4l5 -4`,'none','#a1ab65',.6))))+leaf(0,0,.8,-50)+leaf(0,0,.75,50))}
+function mouse(x,y,s=1,marked=false,angle=0){return G(x,y,s,P('M-19 7C-32 8 -34 20 -45 13C-53 8 -45 4 -38 7','none','#a59886',1.8)+E(-3,4,23,13,'url(#fur)','#736955')+P('M11 -4Q25 -10 34 5L36 8Q28 15 12 12Z','#aa9e89','#736955',1)+E(17,-4,7,8,'#bcb09c','#827461')+E(18,-4,4,5,'#cfb1a5')+E(29,3,1.5,1.8,'#263b34')+E(36,8,2,2,'#7b5957')+P('M-15 13l-7 3h9m17 -2l-4 3h9','none','#887766',1.8)+(marked?P('M18 -7l7 1l-1 9l-7 -1Z',coral,'#a64c48',.7):''),angle)}
+function moth(x,y,s=1,angle=0){return G(x,y,s,P('M0 0Q-9 -19 -24 -13Q-24 -1 -8 7Q-25 13 -12 20L0 9L12 20Q25 13 8 7Q24 -1 24 -13Q9 -19 0 0Z','#c6ad8b','#967e63',1)+P('M0 -9V17M0 -9L-5 -17M0 -9L5 -17','none','#6e6251',2)+P('M-20 -7L-6 4M20 -7L6 4','none','#a18c70',1),angle)}
+function trap(x,y,s=1){return G(x,y,s,R(-35,-25,70,48,'#e7e6d9','#879786',3)+P('M-35 -25L-21 -37H49L35 -25M35 -25L49 -37V9L35 23','none','#879786',1)+many(7,i=>P('M'+(-28+i*9)+' -25v48','none','#a1ac98',1))+E(6,15,8,4,'#d7b881'))}
+function owl(x,y,s=1){return G(x,y,s,P('M0 8Q-45 -6 -61 -41Q-19 -30 0 -8Q20 -31 60 -42Q44 -5 0 8Z','#9c8c79','#786653',1)+E(0,-8,13,17,'#c5b79e')+E(-6,-14,5,6,'#f1dfb6')+E(6,-14,5,6,'#f1dfb6')+E(-6,-14,2,3,'#37403b')+E(6,-14,2,3,'#37403b')+P('M-3 -9L0 -4L3 -9Z','#c48d4b','none'))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+function seeded(seed){return ()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}}
+
+let pheromone=false,plantSeed=14;
+function renderDemography(t){
+ const type=$('age').value,p=phase(t,.08,.7),trapP=pheromone?phase(t,.35,.9):0;
+ const names={expand:'增长型',stable:'稳定型',decline:'衰退型'},targets={expand:[72,132,210],stable:[130,145,150],decline:[194,142,82]},ws=targets[type].map((w,i)=>mix([130,145,150][i],w,p));
+ let s=R(18,18,276,500,'#fdf8f2')+R(310,18,370,500,'#f2f7f4')+R(696,18,286,500,'#f6f2f8');
+ s+=label(32,30,'年龄结构','不同年龄组的相对数量')+label(328,30,'直接改变数量的四条通路')+label(710,30,'性别比例 · 诱捕示意');
+ ['生殖后期','生殖期','生殖前期'].forEach((name,i)=>{let y=155+i*92,w=ws[i];s+=P(`M${155-w/2} ${y}h${w}v56h-${w}Z`,['#b8c4ae','#89a784','#527c64'][i],'#70846c')+P(`M${155+w/2} ${y}l10 -8v56l-10 8Z`,['#93a08a','#6e906c','#3e614f'][i],'none')+label(88,y+59,name)});
+ s+=arrow('M268 361Q286 270 267 226','#ab8f68',2)+E(275,mix(355,225,phase(t,.2,.85)),5,5,'#b38b50')+call(52,448,155-ws[2]/2,355,names[type]+' ≠ 必然增减');
+ s+=arrow('M276 155Q301 91 405 91V110','#a4b3a0',1.4)+arrow('M302 113Q490 73 595 93V110','#a4b3a0',1.4);
+ s+=arrow('M404 170Q426 208 467 236',green,mix(5,2,trapP))+flow([[404,170],[426,208],[467,236]],t,green,pheromone?3:6)+arrow('M583 236Q617 202 596 170',coral,3)+flow([[583,236],[617,202],[596,170]],t,coral,4);
+ s+=arrow('M400 393Q435 342 467 303',blue,3)+flow([[400,393],[435,342],[467,303]],t,blue,4)+arrow('M575 303Q618 349 610 393',coral,3)+flow([[575,303],[618,349],[610,393]],t,coral,4);
+ s+=label(337,112,'出生率（+）')+label(521,112,'死亡率（−）')+label(337,404,'迁入率（+）')+label(521,404,'迁出率（−）');
+ s+=R(359,226,273,98,'#fff','#91af97',14)+label(386,233,'种群密度 = N / 面积','最基本的数量特征')+label(348,460,'N下一期 = N + B − D + I − E');
+ if(pheromone)s+=many(6,i=>O(.05+.05*trapP,P(`M890 226Q${760-i*8} ${120+i*20} ${728+i*8} ${300+i*8}`,'none','#926aaa',9+trapP*15)));
+ s+=trap(884,228,1.05);
+ for(let i=0;i<10;i++){const a=i*.8,x=735+(i%3)*76,y=130+Math.floor(i/3)*56;const q=i<6?trapP:0;s+=O(1-.68*q,moth(mix(x,875+(i%3)*8,q),mix(y,222+Math.floor(i/3)*8,q),.43,Math.sin(a+t*12)*(1-q)*10))}
+ const males=Math.round(mix(10,4,trapP));s+=label(716,352,`示意：雄 ${males} : 雌 10`)+R(720,407,220,20,'#eee7dd')+R(720,407,220*males/20,20,'#9a80ac')+R(720,440,110,20,'#d0aa7d')+small(842,456,'雌蛾不诱捕');
+ s+=label(38,532,'推断条件：年龄、性别结构影响出生与死亡，但环境、迁移也会改变结果。');
+ $('svg1').innerHTML=s;
+ say(1,pheromone?'PERTURBATION / 生物防治':'CAUSE & TREND / 因果与趋势',pheromone?'少一些雄蛾，意味着什么？':'“增长型”是一种趋势判断。',pheromone?'性引诱剂改变雄蛾行为。若诱捕降低有效交配机会，出生贡献可能减弱；其作用还取决于物种的交配系统。':'年龄结构影响未来进入生殖期的个体数，也与死亡状况有关。增长型种群若遇高死亡或大量迁出，数量仍可能下降。',pheromone?'性别比例 → 交配机会 → 出生贡献':'数量由出生、死亡、迁入、迁出共同改变。',pheromone?'图中10→4只是示意。捕杀或移走雄蛾也直接减少数量，不能一概写成“不影响死亡”。':'上式 B、D、I、E 为同一时段的个体数；比较率时需统一时间和分母。水生种群也可按体积计密度。');
+}
+function plantData(seed=plantSeed){const rnd=seeded(seed),inside=Array.from({length:6},(_,i)=>({x:.2+(i%3)*.28+(rnd()-.5)*.06,y:.32+Math.floor(i/3)*.39+(rnd()-.5)*.07,kind:'内部'}));return inside.concat([{x:.45,y:0,kind:'上边'},{x:0,y:.54,kind:'左边'},{x:0,y:0,kind:'左上角'},{x:1,y:.35,kind:'右边'},{x:.65,y:1,kind:'下边'},{x:1,y:0,kind:'右上角'},{x:-.14,y:.87,kind:'外部'},{x:1.14,y:.84,kind:'外部'}])}
+function included(p){return p.x>=0&&p.x<1&&p.y>=0&&p.y<1}
+function renderQuadrat(t){
+ const bank=$('terrain').value==='bank',ps=plantData(),n=Math.min(14,Math.floor(t*14.01)),count=ps.slice(0,n).filter(included).length,counts=[6,8,9,7,10],sampleN=Math.min(5,Math.floor(t*5.01)),sum=counts.slice(0,sampleN).reduce((a,b)=>a+b,0),mean=sampleN?sum/sampleN:0;
+ let s=R(18,18,455,500,'#f2f7f4')+R(488,18,494,500,'#f9f8f1')+label(34,30,'2a / 先布点，再计数')+label(505,30,'2b / 放大第3号样方：1 m × 1 m');
+ s+=R(49,109,390,270,'#dce8d6','#93ae94',12);
+ if(bank)s+=P('M50 135C160 115 170 220 295 180S380 240 437 200V315C340 340 306 260 221 287S116 217 50 235Z','url(#lake)','#91b6bc');
+ s+=many(90,i=>{const rnd=seeded(i*83+5),x=58+rnd()*367,y=120+rnd()*248;return O(.35,leaf(x,y,.13,rnd()*360))});
+ const spots=bank?[[90,285],[163,304],[236,326],[309,340],[394,357]]:[[112,171],[365,171],[240,245],[112,326],[365,326]];
+ if(!bank)s+=P('M112 171L365 326M365 171L112 326','none','#a9b9a2',1);else s+=P('M90 285L394 357','none','#899d8a',1);
+ spots.forEach(([x,y],i)=>{s+=R(x-19,y-19,38,38,i<sampleN?'#fff':'#f3f5e7',green,0)+small(x-10,y+6,String(i+1));if(i<sampleN)s+=label(x-33,y-54,counts[i]+' 株')});
+ s+=label(43,404,bank?'等距布局示意':'五点布局示意',`已查 ${sampleN} 个等面积样方 · 合计 ${sum} 株`)+label(43,476,sampleN?`当前平均密度：${mean.toFixed(1)} 株/m²`:'播放后逐个读取样方');
+ const x=598,y=150,w=300;s+=R(x,y,w,w,'#eff4df','#b1c4a4',0)+many(4,i=>P(`M${x+(i+1)*60} ${y}v300M${x} ${y+(i+1)*60}h300`,'none','#d0ddbd',1));
+ s+=P(`M${x+w} ${y}H${x}V${y+w}`,'none','#3d795b',3)+`<path d="M${x+w} ${y}V${y+w}H${x}" stroke="#be6155" fill="none" stroke-width="3" stroke-dasharray="7 6"/>`;
+ const k=Math.min(13,Math.floor(t*14)),u=t===1?1:(t*14)%1,from=ps[Math.max(0,k-1)],to=ps[k],sx=x+mix(from.x,to.x,u)*w,sy=y+mix(from.y,to.y,u)*w;
+ s+=E(sx,sy,13,13,'none','#719d6c')+P(`M${sx-18} ${sy}h7M${sx+11} ${sy}h7M${sx} ${sy-18}v7M${sx} ${sy+11}v7`,'none','#719d6c',1.2);
+ ps.forEach((p,i)=>{const px=x+p.x*w,py=y+p.y*w,yes=included(p);s+=dandelion(px,py,.65)+E(px,py,4,4,i<n?(yes?green:coral):'#526152','#fff');if(i<n)s+=R(px+7,py-22,yes?28:23,23,'#fff',yes?green:coral,4)+small(px+10,py-5,yes?'#'+(i+1):'×')});
+ s+=call(545,84,x,y,'上、左纳入；下、右排除')+label(563,478,`纳入 ${count} / 9 株 · 图中共14株`)+label(36,532,'统一边界归属，避免相邻样方重复计数；角点也必须遵守同一规则。');
+ $('svg2').innerHTML=s;
+ say(2,n<14?'COUNTING / 按生根点扫描':'DENSITY / 样本与总体','先规定“个体”和边界。',n<14?'莲座叶片伸出样方，不代表这株植物在样方外。观察生根点，按预先约定的同一规则逐株判定。':'第3号样方：内部6株，上边、左边及左上角3株，共9株。其他样方同样计数，再汇总样本面积估计总体密度。',n<14?`第3号样方当前已计 ${count}/9 株；尚未读完`:'第3号样方：9 株/m²；5个样方均值：8.0 株/m²', '本图采用半开区域：0≤x<1，0≤y<1。右上角也不计。规则保证相邻区域归属唯一，并不表示每个边界个体有50%计入概率。');
+}
+
+let randomCapture=null,captureSeed=919,lastRecordKey='';
+const captureNotes={
+ ideal:['标准示例','本次重捕20只，其中4只带标。若标记、捕获概率、混匀和封闭等假设成立，可以用样本比例推估。','100只是本次恰好与真实值一致，并不证明这个比值估计量无偏。'],
+ loss:['标记脱落','4只曾标记的鼠被重捕，但其中2只丢失耳标，现场只能认出2只。原始M仍按20使用，标记比例被低估。','记录中区分“曾被标记”与“本次识别出标记”，不能把两者混为一谈。'],
+ predation:['标记改变了生存','10只标记鼠被捕食，真实存活数已由100降为90。本次20只中仅2只可识别为标记鼠。','同时破坏了封闭假设和标记无害假设；估值200既高于初始100，也高于当前90。'],
+ shy:['被抓过一次，更不愿进笼','标记鼠与未标记鼠的捕获概率不同。本次只有2只带标鼠进入重捕样本。','这是行为反应的教学示例。不能把一次看见的样本比例当作群体的确定比例。'],
+ happy:['诱饵提高再次入笼概率','曾捕获的鼠更容易再次进笼，本次20个不同个体中有8只带标。','n和m都数不同个体；同一只鼠反复进笼不能重复增加个体数。'],
+ cluster:['尚未混匀，就在释放点重捕','标记鼠仍聚集在原地。这个局部区域不代表整个种群，重捕20只中带标者达8只。','等待混匀或调整空间取样覆盖，目的是改善代表性，不是保证每次m恰好为4。']};
+function captureModel(){
+ const kind=$('scenario').value,m0={ideal:4,loss:4,predation:2,shy:2,happy:8,cluster:8}[kind];
+ const ids=randomCapture&&kind==='ideal'?randomCapture.slice():Array.from({length:20},(_,i)=>i<m0?i:20+i-m0),dead=kind==='predation'?Array.from({length:10},(_,i)=>i+10):[],lost=kind==='loss'?[2,3]:[];
+ const m=ids.filter(id=>id<20&&!lost.includes(id)).length;
+ return {kind,M:20,n:20,m,ids,dead,lost,alive:100-dead.length,estimate:m?400/m:null};
+}
+function mouseHome(id){return [64+(id%10)*53,135+Math.floor(id/10)*31]}
+function mouseMixed(id){const slot=(id*37+13)%100;return mouseHome(slot)}
+function renderCapture(t){
+ const m=captureModel(),capture=phase(t,.05,.18),release=phase(t,.26,.48),mixP=phase(t,.43,.64),recap=phase(t,.73,.98),done=m.ids.filter((id,j)=>recap>=(j+5)/24).length,seen=m.ids.slice(0,done).filter(id=>id<20&&!m.lost.includes(id)).length,lossP=phase(t,.50,.68),predP=phase(t,.49,.68);
+ let s=R(18,18,615,500,'#f0f4f0')+R(650,18,332,500,'#f0f4f8')+label(34,30,'3a / 同一批100个个体','灰褐：未识别标记 · 珊瑚耳标：已识别')+label(668,30,'3b / 第二次捕获样本','每只鼠只计一次');
+ s+=many(6,i=>O(.23,grass(42+i*114,490,.7)));
+ s+=R(672,126,286,235,'#fff','#c1d0d6',12)+trap(315,474,.7);
+ for(let id=0;id<100;id++){
+  let [x,y]=mouseHome(id),[dx,dy]=mouseMixed(id),marked=id<20&&t>=.18,alpha=1;
+  if(id<20){const c=capture*(1-release);x=mix(x,270+(id%5)*21,c);y=mix(y,457+Math.floor(id/5)*9,c)}
+  if(m.kind==='cluster'&&id<20){dx=255+(id%5)*27;dy=355+Math.floor(id/5)*24}
+  x=mix(x,dx,mixP);y=mix(y,dy,mixP);
+  if(m.kind==='shy'&&id<20){x+=Math.sin(lossP*Math.PI)*20;y-=Math.sin(lossP*Math.PI)*25}
+  if(m.kind==='happy'&&id<20){x=mix(x,270+(id%5)*25,lossP*.32);y=mix(y,427+Math.floor(id/5)*13,lossP*.32)}
+  if(m.lost.includes(id)){if(lossP>0)s+=O(1-lossP,P(`M${x+7} ${y+lossP*33}l5 1v6l-5 -1Z`,coral));if(lossP>.45)marked=false}
+  if(m.dead.includes(id)){alpha=1-predP;x=mix(x,200+predP*180,predP);y=mix(y,90,predP)}
+  const j=m.ids.indexOf(id);if(j>=0){const q=phase(recap,j/24,(j+5)/24);if(q<.35){x=mix(x,315,q/.35);y=mix(y,474,q/.35)}else{x=mix(315,704+(j%5)*51,(q-.35)/.65);y=mix(474,158+Math.floor(j/5)*52,(q-.35)/.65)}if(q===1&&marked)s+=E(x,y+2,20,14,'#fae6df',coral)}
+  s+=O(alpha,mouse(x,y,.43,marked,Math.sin(id+t*18)*3*(1-recap)));
+ }
+ if(m.kind==='predation')s+=O(Math.sin(predP*Math.PI),owl(200+predP*180,110-predP*40,.7));
+ const estimateText=m.estimate===null?'无法给出有限估计':Number.isInteger(m.estimate)?m.estimate.toFixed(0):m.estimate.toFixed(1);
+ s+=label(46,462,t<.18?'初捕：准备标记20只':t<.48?'标记后放回原环境':t<.73?'释放与混匀 / 检查假设':'重捕：逐个进入右侧样本盘');
+ s+=label(671,376,`已计 n = ${done} · 识别 m = ${seen}`)+label(671,423,done===20?`N̂ = 20 × 20 / ${m.m}`:'样本未读完，暂不计算估值')+label(671,472,done===20?'估计 '+estimateText+' 只':'继续播放或拖动至结尾');
+ s+=label(38,532,`初始 N = 100 · 当前真实 N = ${t>=.68?m.alive:100} · 所有数值为可追溯教学模拟`);
+ $('svg3').innerHTML=s;
+ const desc=captureNotes[m.kind],ratio=m.estimate===null?'m = 0：不能直接套用有限数值':`重捕完成：m=${m.m}，N̂=${estimateText}，当前真实N=${m.alive}`;
+ say(3,t<.18?'01 / 初捕':t<.48?'02 / 标记与释放':t<.73?'03 / 混匀及假设扰动':'04 / 第二次捕获',randomCapture&&m.kind==='ideal'?'标准条件下，也有抽样波动。':desc[0],randomCapture&&m.kind==='ideal'?'本次样本从100个个体中不放回随机抽取20个。即使各项假设满足，每次抽到的标记数也可能不同。':desc[1],done===20?ratio:`正在建立捕获记录：${done}/20`,desc[2]);
+ if(!$('comparison3'))$('note3').insertAdjacentHTML('afterend','<div id="comparison3" class="comparison"></div>');
+ $('comparison3').innerHTML=`<div><b>当前真实数量 ${t>=.68?m.alive:100}</b><span style="width:${(t>=.68?m.alive:100)/5}%;background:#427b9b"></span></div><div><b>${done===20?'本次估计 '+estimateText:'本次估计 · 待样本读完'}</b><span style="width:${done===20&&m.estimate!==null?Math.min(100,m.estimate/5):0}%;background:#a86657"></span></div><p>共同刻度 0—500 只${m.estimate>500?'；估值超出图表范围':''}</p>`;
+ const key=m.kind+':'+m.ids.join(',');if(key!==lastRecordKey){lastRecordKey=key;$('captureTable').innerHTML='<p>真实身份用于核对模拟；实际野外只能观察本次可辨认标记。</p><table><thead><tr><th>样本序号</th><th>个体ID</th><th>是否曾标记</th><th>本次能否识别标记</th></tr></thead><tbody>'+m.ids.map((id,i)=>`<tr><td>${i+1}</td><td>R${String(id+1).padStart(3,'0')}</td><td>${id<20?'是':'否'}</td><td>${id<20&&!m.lost.includes(id)?'是 · 计入 m':'否'}</td></tr>`).join('')+'</tbody></table>'}
+}
+function tiger(x,y,s=1){return G(x,y,s,P('M-49 5Q-79 -18 -74 -37','none','#b88a50',7)+P('M-45 -5Q-33 -28 12 -19Q32 -24 44 -9L43 19H-44Z','#d1ab76','#876f52',1.5)+P('M-37 11L-40 39H-26L-22 15M21 10L23 39H37L34 10','#d1ab76','#876f52',2)+E(45,-7,21,20,'#ddba87','#876f52')+E(31,-23,6,7,'#b58f5c')+E(58,-23,6,7,'#b58f5c')+E(46,0,13,10,'#f2e6ce')+P('M41 -2l6 5l5 -5Z','#53645a')+many(6,i=>P(`M${-34+i*12} -17q-5 13 2 25`,'none','#615b49',3))+P('M29 -13l12 4M62 -12l-10 4','none','#615b49',2)+E(37,-7,2,2,'#263b34')+E(55,-7,2,2,'#263b34'))}
+function panda(x,y,s=1){return G(x,y,s,E(0,10,35,27,'#e9eade','#52665c')+E(-25,16,12,18,'#3c4941')+E(25,16,12,18,'#3c4941')+E(0,-20,24,23,'#f9f8ef','#52665c')+E(-18,-39,8,9,'#35433d')+E(18,-39,8,9,'#35433d')+G(-10,-22,1,E(0,0,6,9,'#35433d'),35)+G(10,-22,1,E(0,0,6,9,'#35433d'),-35)+E(0,-11,5,3,'#35433d'))}
+function bird(x,y,s=1,flap=0){return G(x,y,s,E(0,0,20,12,'#a6b4a7','#637a6b')+E(16,-9,10,10,'#aab9ac','#637a6b')+P('M24 -12L36 -6L25 -4Z','#c69d59')+P(`M-6 3Q-37 ${-21-flap*17} -3 -11Q15 -5 7 3Z`,'#708a7e','#4f695e')+P('M-17 4L-36 10L-25 0Z','#708a7e')+E(20,-11,1.6,1.6,'#253b31'))}
+function renderModern(t){
+ const type=$('technique').value,act=type==='camera'?0:type==='dna'?1:2;
+ let s='';for(let i=0;i<3;i++)s+=R(18+i*327,18,310,500,i===act?'#edf4ec':'#f5f5ef',i===act?'#8faa95':'#e0e5dd',14);
+ s+=label(33,32,'4a / 红外相机')+label(360,32,'4b / 粪便DNA')+label(687,32,'4c / 声学与航拍');
+ const ct=type==='camera'?t:.5,dt=type==='dna'?t:.4,at=type==='sound'?t:.4;
+ s+=P('M55 310Q62 200 53 112M53 160L28 136M54 198L92 169','none','#a3ad91',15)+R(50,191,44,38,'#617765','#344c40',4)+E(75,211,11,11,'#223d33','#c0c7b7')+E(75,211,5,5,'#8cae9f');
+ s+=O(Math.sin(ct*Math.PI)*.24,P('M88 210L297 136V312Z','#d9bb67','none'))+tiger(mix(147,240,ct),260,.76);
+ for(let i=0;i<2;i++)s+=R(41+i*141,346,122,92,'#fff','#bbc9b7')+tiger(101+i*141,395,.58)+small(64+i*141,461,'T01 · 第'+(i+1)+'次');
+ s+=label(41,478,'同一条纹：2张照片 ≠ 2只虎');
+ s+=panda(437,151,.82)+P('M398 211Q419 198 435 210Q440 228 415 226Q398 227 398 211Z','#a38d6a','#837357')+arrow('M460 215Q510 221 535 263',green)+O(dt,P('M535 179v59q11 16 23 0v-59Z','#d8e8ed','#72999d',2));
+ s+=O(dt,many(14,i=>{let yy=184+i*3.5;return P(`M${544+Math.sin(i*.8)*5} ${yy}h${6-Math.sin(i*.8)*10}`,'none',i%2?coral:blue,1.2)}));
+ s+=R(378,300,246,138,'#e1e9e9','#b3c7c6',5);
+ const bands=[[327,353,399],[335,371,414],[327,353,399]];bands.forEach((ys,i)=>{s+=R(397+i*76,313,34,112,'#f7f9f7');ys.forEach(y=>{s+=O(phase(dt,.2+i*.17,.36+i*.17),R(401+i*76,y,26,5,i===1?coral:blue))});s+=small(396+i*76,460,['A','B','A'][i])});
+ s+=call(365,242,416,220,'样本 → 提取宿主DNA')+label(367,478,'3份样本 → 2个可区分基因型');
+ s+=P('M697 236Q811 198 961 239','none','#9eae98',7)+bird(777,199,.8,Math.sin(at*20)) +O(.8,many(4,i=>P(`M${828+i*21} ${165-i*8}Q${844+i*21} 194 ${828+i*21} ${221+i*8}`,'none','#789a8c',1.5)));
+ s+=R(700,265,262,57,'#fff','#c3cfc6')+P('M708 295'+many(60,i=>'L'+(708+i*4.1)+' '+(295+Math.sin(i*.8)*Math.sin(i*.23+at*8)*18)),'none',green,2);
+ s+=G(827,363,1,E(0,0,17,8,'#b6c8c3','#748b81')+P('M-29 -18L29 18M29 -18L-29 18','none','#758a80',3)+many(4,i=>E(i%2?30:-30,i<2?-18:18,13,6,'#e7eeea','#758a80')));
+ s+=many(5,i=>bird(723+i*49,427+(i%2)*14,.27,Math.sin(at*20+i)))+label(694,478,'检测到的记录 ≠ 总种群数');
+ s+=label(36,532,'识别个体 → 避免重复 → 估计检测概率 → 推断种群数量。');
+ $('svg4').innerHTML=s;
+ const notes={camera:['身体花纹，是可重复比对的身份线索。','同一个体多次被相机拍到，相当于再次捕获。结合采样设计与检测概率，才能进一步估计数量或密度。','两次拍摄，仍然是同一只 T01。','需可靠的个体识别与布机方案；不能把所有照片张数直接当作数量。'],dna:['先识别谁留下了样本。','粪便中的宿主脱落细胞可提供DNA。多位点基因型用于个体识别，再把不同采样时段的相同个体视作重捕。','图示 A、B、A → 可区分的个体至少2只。','条带只是概念图。真实调查须控制污染、DNA降解与分型错误，并验证位点组合的区分能力。'],sound:['记录的是信号，仍要处理漏检与重复。','声学设备连续监听；部分物种可利用稳定鸣声特征区分个体。无人机提供空间覆盖，但树冠遮挡和重复拍摄仍会影响计数。','从“检测次数”到“个体数”，还隔着识别与检测模型。','声纹不适用于一切物种；不能把每次鸣叫都算一个新个体。航拍还须遵守保护区与飞行要求。']}[type];
+ say(4,'OBSERVE WITHOUT CAPTURE / 非侵入调查',notes[0],notes[1],notes[2],notes[3]);
+}
+
+const renderers=[renderDemography,renderQuadrat,renderCapture,renderModern];
+const clocks=renderers.map((render,i)=>BioAtlas.createTimeline({duration:[18,18,24,16][i],render,onState({t,playing,duration}){document.querySelector(`[data-time="${i}"]`).value=t*100;document.querySelector(`[data-play="${i}"]`).textContent=playing?'Ⅱ 暂停过程':'▶ 播放过程';$('time'+i).textContent=`${Math.round(t*100)}% · ${duration}秒演示`}}));
+document.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];c.state.playing?c.pause():c.play()}));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>clocks[+b.dataset.reset].reset()));
+document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('input',()=>clocks[+b.dataset.time].seek(Number(b.value)/100)));
+function restart(i){clocks[i].reset();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)clocks[i].play()}
+$('age').addEventListener('change',()=>restart(0));
+$('pheromone').addEventListener('click',()=>{pheromone=!pheromone;$('pheromone').setAttribute('aria-pressed',String(pheromone));$('pheromone').textContent=pheromone?'性引诱剂：已释放':'性引诱剂：未释放';restart(0)});
+$('terrain').addEventListener('change',()=>restart(1));$('reshuffle').addEventListener('click',()=>{plantSeed++;restart(1)});
+$('scenario').addEventListener('change',()=>{randomCapture=null;restart(2)});
+$('resample').addEventListener('click',()=>{const rnd=seeded(++captureSeed),pool=Array.from({length:100},(_,i)=>i);for(let i=99;i>0;i--){let j=Math.floor(rnd()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}randomCapture=pool.slice(0,20);$('scenario').value='ideal';restart(2)});
+$('technique').addEventListener('change',()=>restart(3));
+$('plants').innerHTML='<svg viewBox="0 0 430 270" role="img" aria-label="蒲公英莲座与狗尾草丛生结构比较">'+dandelion(105,183,2.3)+grass(320,183,1.55)+label(28,210,'蒲公英 · 按生根点')+label(254,210,'狗尾草 · 先定单位')+'</svg>';
+const rows=[['种群与密度','一定区域内同种生物的全部个体。密度是单位面积或体积中的个体数，是最基本的数量特征。'],['数量变化','出生、迁入增加数量；死亡、迁出减少数量。比较各项率须统一时间与分母。'],['年龄结构','增长型、稳定型、衰退型用于预测；结果还受环境、迁移等影响。'],['性别比例','通过有效交配与出生影响数量；性信息素诱捕还须区分行为干扰和实际移除。'],['样方法','明确调查单位；避免主观选点，兼顾代表性；统一边界规则；等面积样方用总个体数÷总面积。'],['边界约定','本图计上、计左，排除下、右。因此左上角计入，右上、左下、右下角均排除；相邻区域不重复。'],['标记重捕','N̂=Mn/m。短期近似封闭，标记不丢失、不影响生存与捕获，释放后充分混匀，个体捕获概率可比。'],['误差与波动','固定M、n，m减小使估值增大，m增大使估值减小。一次估准不等于无偏；m=0无法给出有限估计。'],['非侵入调查','照片、DNA、声音可提供个体或出现记录；去重、验证识别、处理漏检之后才能推断数量。']];
+$('reviewTable').innerHTML='<table><tbody>'+rows.map(r=>'<tr><th>'+r[0]+'</th><td>'+r[1]+'</td></tr>').join('')+'</tbody></table><p>课堂追问：为什么样方边界要统一？为什么同样重捕20只，估值却不同？哪些假设被破坏了？</p>';
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+$('review').addEventListener('click',e=>{if(e.target===$('review')){const b=$('review').getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)$('review').close()}});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>BioAtlas.pauseAll()));
+const screenObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting){const index=Number(e.target.id.replace('figure',''))-1;clocks[index].pause()}}),{threshold:0});document.querySelectorAll('.figure').forEach(n=>screenObserver.observe(n));
+</script></body></html>

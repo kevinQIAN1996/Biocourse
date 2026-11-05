@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153f3b"><title>免疫失调｜防线的三个偏差</title>
+<style>:root {
+  color-scheme: light;
+  --ink: #152f32;
+  --secondary: #354e52;
+  --paper: #f6f5ef;
+  --green: #215e54;
+  --line: #ccd6d0;
+  --accent: #ad502d;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 18px/1.65 "Segoe UI","Microsoft YaHei",sans-serif; }
+button,input { font: inherit; }
+button { cursor: pointer; color: inherit; }
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible { outline: 3px solid #b65a18; outline-offset: 4px; }
+button { transition: background .18s, transform .18s; }
+button:active { transform: translateY(1px); }
+a { color: #165e54; }
+.masthead,main { width: min(1500px,94%); margin: auto; }
+.masthead { display:flex; gap:20px; align-items:center; min-height:76px; border-bottom:1px solid #acbcb4; }
+.brand { text-decoration:none; display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:750; }
+.brand-mark { display:inline-grid; place-items:center; background:var(--green); color:white; width:34px; height:38px; border-radius:50% 50% 10px 10px; font:bold italic 28px Georgia,serif; }
+.brand-en,.book { font-size:14px; letter-spacing:.04em; color:var(--secondary); }
+.book { margin-left:auto; }
+.quiet { padding:7px 13px; border:1px solid #95aaa0; background:#fffefa; border-radius:6px; font-weight:600; }
+.quiet:hover { background:#e4eee6; }
+.intro { display:flex; align-items:end; justify-content:space-between; padding:34px 0 26px; gap:20px; }
+.eyebrow { margin:0 0 10px; font-size:13px; font-weight:750; letter-spacing:.12em; color:var(--secondary); }
+h1 { margin:0 0 14px; font-size:clamp(35px,4.3vw,63px); letter-spacing:-.04em; line-height:1.16; font-weight:700; font-family:Georgia,"Songti SC","SimSun",serif; }
+h1 span { display:inline-block; margin-left:20px; border-left:1px solid #90a79c; padding-left:20px; font:600 23px/1.3 "Microsoft YaHei",sans-serif; letter-spacing:0; }
+p { margin:0 0 12px; }
+.lead { margin:0; line-height:1.7; color:var(--secondary); }
+.intro-note { min-width:200px; padding-left:24px; border-left:1px solid #adbbb4; }
+.intro-note>span { font-size:13px; color:var(--secondary); }
+.intro-note p { margin:7px 0 0; font-size:16px; }
+.case-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:18px; }
+.case-nav button { display:flex; gap:14px; text-align:left; padding:15px 17px; border:1px solid var(--line); border-radius:10px; background:#fffefa; align-items:center; }
+.case-nav button[aria-pressed=true] { background:#153f3b; border-color:#153f3b; color:white; }
+.nav-no { font:23px Georgia,serif; opacity:.9; }
+.case-nav b { font-size:20px; display:block; }
+.case-nav small { display:block; font-size:14px; color:var(--secondary); }
+.case-nav button[aria-pressed=true] small { color:#e4f0e9; }
+.case-nav i { margin-left:auto; font-size:22px; font-style:normal; }
+.theatre { display:grid; grid-template-columns:minmax(0,2.15fr) minmax(285px,1fr); overflow:hidden; border:1px solid #b1c2b8; border-radius:14px; background:#fffefa; box-shadow:0 15px 40px #1a3f3510; scroll-margin-top:12px; }
+.scene-column { min-width:0; background:#edf3ed; border-right:1px solid var(--line); }
+.scene-top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 18px; border-bottom:1px solid #c5d5cd; font-weight:650; font-size:16px; }
+.model-badge { font-size:13px; color:#354e52; white-space:nowrap; border:1px solid #b5c9bc; padding:1px 7px; border-radius:4px; }
+.stage-scroll { overflow:auto; }
+#stage { display:block; width:100%; min-width:650px; }
+.figure-legend { border-top:1px solid #c5d5cd; padding:10px 18px; color:var(--secondary); font-size:15px; min-height:48px; }
+.commentary { padding:clamp(17px,2vw,29px); min-width:0; }
+.commentary h2 { margin:0 0 13px; font-size:28px; line-height:1.4; letter-spacing:-.02em; }
+.commentary>p { color:var(--secondary); font-size:17px; }
+.evidence { background:#eaf1e6; padding:12px 14px; border-left:3px solid #2e7359; margin:18px 0; }
+.evidence span,.inference span { display:block; color:#354e52; font-size:13px; font-weight:600; margin-bottom:4px; }
+.evidence b { font-size:18px; }
+.inference p { font-size:16px; color:var(--ink); }
+.text-button { background:none; border:0; border-bottom:1px solid #8da394; color:#245a4d; padding:2px 0; font-size:15px; }
+.boundary { font-size:15px!important; line-height:1.7; margin:12px 0 0; }
+.transport { grid-column:1/-1; padding:15px 20px 12px; background:#fffefa; border-top:1px solid #baccbf; }
+.controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+.play { padding:9px 22px; color:white; background:#215e54; border:1px solid #215e54; border-radius:6px; font-weight:650; min-width:156px; }
+.play:hover { background:#164d44; }
+.clock { margin-left:auto; font:14px/1.4 Consolas,monospace; font-variant-numeric:tabular-nums; color:var(--secondary); }
+.keyboard-tip { color:#354e52; font-size:13px; }
+.scrub-label { display:block; padding:11px 0 0; }
+input[type=range] { width:100%; margin:0; accent-color:#215e54; cursor:pointer; }
+.events { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; margin-top:5px; }
+.events button { background:none; border:0; border-top:2px solid #c9d8cd; padding:8px 4px 3px; text-align:left; font-size:15px; }
+.events button[aria-current=true] { color:#124737; border-color:#215e54; font-weight:750; }
+.takeaway { display:grid; grid-template-columns:130px 1fr; gap:15px; padding:17px 4px 25px; align-items:baseline; }
+.takeaway span { font-size:14px; font-weight:650; color:#3f5a50; }
+.takeaway p { font-size:20px; font-weight:600; margin:0; }
+.comparison { display:grid; grid-template-columns:1fr 2fr; gap:25px; padding:28px 0; border-top:1px solid #a8bdb0; }
+.section-title h2 { font-size:27px; line-height:1.5; margin:0; font-family:"Songti SC","SimSun",serif; }
+.table-scroll { overflow:auto; min-width:0; }
+table { border-collapse:collapse; width:100%; font-size:16px; }
+th,td { padding:12px; text-align:left; border-bottom:1px solid #c4d0c8; vertical-align:top; }
+th { font-weight:650; }
+thead { background:#e5ece3; }
+.extension { margin:12px 0; background:#fffefa; border:1px solid #c5d3c9; border-radius:10px; }
+summary { display:flex; justify-content:space-between; gap:14px; cursor:pointer; font-weight:650; padding:17px 20px; }
+.summary-hint { font-size:14px; color:#354e52; font-weight:400; }
+.extension-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:10px 22px 24px; }
+.extension h3 { font-size:20px; margin:8px 0 12px; }
+.extension p { font-size:17px; color:var(--secondary); }
+.case-tag { font-size:13px; font-weight:750; background:#f6e8d9; color:#743b1d; padding:3px 7px; }
+.purple { color:#623a78; background:#f0e6f5; }
+.blue { color:#23556e; background:#e1eff3; }
+.care { padding:15px; background:#edf3ed; }
+.source-notes { padding:8px 22px 20px; }
+.source-notes ul { font-size:16px; line-height:1.9; padding-left:24px; }
+#quiz { padding:0 20px 20px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.quiz-item { border-top:1px solid #c5d3c9; padding-top:16px; }
+.quiz-item h3 { margin-top:0; }
+.quiz-options { display:flex; flex-direction:column; gap:7px; }
+.quiz-options button { text-align:left; background:#f8faf4; border:1px solid #a9bdb1; border-radius:6px; padding:8px 12px; font-size:16px; }
+.quiz-options button.correct { background:#dcebdc; border-color:#2c704f; }
+.quiz-options button.incorrect { background:#fae8dc; border-color:#ba622c; }
+.quiz-feedback { margin-top:10px; font-size:16px!important; }
+footer { display:flex; gap:15px; justify-content:space-between; padding:23px 0; border-top:1px solid #b8c9bd; font-size:14px; color:#354e52; margin-top:30px; }
+dialog { background:#fffefa; color:var(--ink); width:min(650px,94vw); border:1px solid #9caf9f; border-radius:15px; padding:26px; max-height:85vh; overflow:auto; }
+dialog::backdrop { background:#102c2b99; }
+dialog form { text-align:right; }
+dialog h2 { margin:10px 0; font-size:29px; }
+dialog h3 { font-size:21px; margin:18px 0 8px; }
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+[hidden] { display:none!important; }
+@media(min-width:1500px) { main,.masthead { width:90%; } }
+@media(max-width:1080px) {
+ .brand-en,.keyboard-tip { display:none; }
+ .theatre { grid-template-columns:minmax(0,1.85fr) minmax(255px,1fr); }
+ #stage { min-width:650px; }
+ .commentary h2 { font-size:25px; }
+}
+@media(max-width:850px) {
+ .book { display:none; }
+ .masthead .quiet { margin-left:auto; }
+ .theatre { grid-template-columns:1fr; }
+ .scene-column { border-right:0; }
+ .commentary { display:grid; grid-template-columns:1fr 1fr; gap:0 20px; }
+ .commentary .eyebrow,.commentary h2,.commentary>p { grid-column:1; }
+ .evidence { grid-column:2; grid-row:1/4; margin:0; align-self:start; }
+ .inference { grid-column:2; grid-row:4/6; }
+ .text-button { grid-column:1; justify-self:start; }
+ .boundary { grid-column:1/-1!important; }
+ .intro-note { display:none; }
+ .comparison { grid-template-columns:1fr; }
+}
+@media(max-width:550px) {
+ body { font-size:17px; }
+ .intro { padding-top:25px; }
+ h1 span { display:block; margin:12px 0 0; padding:0; border:0; font-size:21px; }
+ .case-nav { gap:5px; }
+ .case-nav button { padding:10px 6px; flex-direction:column; align-items:start; gap:3px; }
+ .nav-no { font-size:19px; }
+ .case-nav b { font-size:17px; }
+ .case-nav small,.case-nav i { display:none; }
+ .scene-top { padding:10px; font-size:15px; }
+ .model-badge { font-size:11px; }
+ .commentary { display:block; }
+ .commentary h2 { font-size:26px; }
+ .evidence { margin:15px 0; }
+ .events { gap:6px; }
+ .events button { font-size:13px; }
+ .clock { margin-left:0; }
+ .transport { padding:12px; }
+ .takeaway { grid-template-columns:1fr; gap:3px; }
+ .takeaway p { font-size:18px; }
+ .extension-grid,#quiz { grid-template-columns:1fr; }
+ summary { padding:14px; }
+ .summary-hint { display:none; }
+ footer { flex-direction:column; }
+}
+@media(prefers-reduced-motion:reduce) { button { transition:none; } }
+
+</style></head>
+<body>
+<header class="masthead"><a href="#top" class="brand"><span class="brand-mark">i</span>生命观察室 <span class="brand-en">BIOLOGY FIELD NOTES</span></a><span class="book">选择性必修一 · 第4章第3节</span><button class="quiet" id="openGuide">课堂速查 ↗</button></header>
+<main id="top">
+<section class="intro"><div><p class="eyebrow">03 / WHEN DEFENCE GOES ASTRAY</p><h1>防线的三个偏差<span>免疫失调</span></h1><p class="lead">同一套保护机制，为什么会引发伤害？<br>从反应的<b>对象</b>出发，追踪它造成的<b>后果</b>。</p></div><div class="intro-note"><span>本节观察方法</span><p>先找攻击对象<br>再看作用过程<br>最后解释症状</p></div></section>
+<nav class="case-nav" aria-label="选择观察病例">
+<button data-case="0" aria-pressed="true"><span class="nav-no">01</span><span><b>过敏反应</b><small>对某些外界物质反应过度</small></span><i>↗</i></button>
+<button data-case="1" aria-pressed="false"><span class="nav-no">02</span><span><b>自身免疫病</b><small>免疫反应损伤自身成分</small></span><i>↗</i></button>
+<button data-case="2" aria-pressed="false"><span class="nav-no">03</span><span><b>免疫缺陷病</b><small>免疫组分或功能出现不足</small></span><i>↗</i></button>
+</nav>
+<section class="theatre" aria-label="过程观察台">
+<div class="scene-column"><div class="scene-top"><span id="sceneName"></span><span class="model-badge">动态教学模型</span></div><div class="stage-scroll"><svg id="stage" viewBox="0 0 860 440" role="img" aria-label="免疫失调的微观过程"><defs>
+<radialGradient id="cellGradient" cx=".34" cy=".28" r=".9"><stop stop-color="#a5d6ba"/><stop offset=".7" stop-color="#6a9f88"/><stop offset="1" stop-color="#315c57"/></radialGradient>
+<radialGradient id="mastGradient" cx=".33" cy=".32" r=".8"><stop stop-color="#f3d4bc"/><stop offset=".75" stop-color="#d7a28f"/><stop offset="1" stop-color="#ae7975"/></radialGradient>
+<radialGradient id="vesicle"><stop stop-color="#ffe1b6"/><stop offset=".6" stop-color="#e9936b"/><stop offset="1" stop-color="#aa5e53"/></radialGradient>
+<linearGradient id="tissueGradient" x2="0" y2="1"><stop stop-color="#ecdde3"/><stop offset="1" stop-color="#c7b3cd"/></linearGradient>
+</defs><g id="world"></g><g id="labels"></g></svg></div><div id="figureLegend" class="figure-legend"></div></div>
+<aside class="commentary"><p id="stepCounter" class="eyebrow"></p><h2 id="stepTitle"></h2><p id="stepBody"></p><div class="evidence"><span>此刻，看到了什么</span><b id="evidenceText"></b></div><div class="inference"><span>连回本节概念</span><p id="inferenceText"></p></div><button class="text-button" id="showBoundary">查看本图的简化范围 ＋</button><p id="boundaryText" class="boundary" hidden></p></aside>
+<div class="transport"><div class="controls"><button class="play" id="playButton">▶ 播放过程</button><button class="quiet" id="restartButton" aria-label="重看本段">↺ 重看</button><span id="clock" class="clock"></span><span class="keyboard-tip">空格播放 / 暂停　← → 推进</span></div><label class="scrub-label"><span class="sr-only">拖动查看过程</span><input id="scrubber" type="range" min="0" max="100" value="0" step=".1"></label><div id="eventButtons" class="events"></div></div>
+</section>
+<section class="takeaway"><span>一句话解释</span><p id="takeawayText"></p></section>
+<section class="comparison"><div class="section-title"><p class="eyebrow">READ THE TARGET</p><h2>别只说“免疫力强或弱”<br>把作用对象说清楚。</h2></div><div class="table-scroll"><table><thead><tr><th>失调类型</th><th>免疫反应指向哪里</th><th>辨别时抓住什么</th></tr></thead><tbody><tr><th>过敏反应</th><td>对某些过敏原发生异常反应</td><td>已致敏个体再次接触同种过敏原后出现反应</td></tr><tr><th>自身免疫病</th><td>自身细胞、组织或分子</td><td>针对自身的免疫反应造成组织或功能损伤</td></tr><tr><th>免疫缺陷病</th><td>防御所需的免疫组分或功能不足</td><td>抗感染能力下降，可有先天性或获得性原因</td></tr></tbody></table></div></section>
+<details class="extension"><summary><span>拓展病例与生活联系</span><span class="summary-hint">按课堂需要展开 ＋</span></summary><div class="extension-grid">
+<article><span class="case-tag">过敏</span><h3>每个人都会对花粉过敏吗？</h3><p>个体差异和遗传倾向影响过敏的发生。反应有快慢之分，一般不破坏组织细胞，严重反应可危及生命。识别并避免接触明确的过敏原，是预防的重要环节。</p></article>
+<article><span class="case-tag purple">自身免疫</span><h3>损伤位置不同，表现也不同</h3><p><b>重症肌无力</b>的部分病例中，自身抗体影响乙酰胆碱受体，神经传来的信号难以有效驱动肌肉。</p><p><b>系统性红斑狼疮</b>可累及皮肤、关节、肾脏等多处；免疫复合物参与部分损伤。<b>类风湿关节炎</b>以关节滑膜等的炎症为主要表现。</p></article>
+<article><span class="case-tag blue">免疫缺陷</span><h3>HIV 感染与艾滋病有何关系？</h3><p>HIV 感染可导致获得性免疫缺陷，艾滋病是其最严重阶段。慢性期即使症状不明显，病毒仍可持续复制。规范抗逆转录病毒治疗可抑制复制并改变病程。</p><p>先天性免疫缺陷可与遗传因素有关，如部分严重联合免疫缺陷。它们与 HIV 感染的病因不同。</p></article>
+<article class="care"><span class="case-tag blue">预防与关怀</span><h3>识别传播途径，减少不必要的隔离</h3><p>HIV 主要经性接触、血液和母婴传播。安全性行为、规范用血和器械消毒等有助于预防。握手、拥抱、共同进餐等日常接触不会传播 HIV。</p><p>用科学知识保护自己，也尊重感染者的学习、工作和生活。</p></article></div></details>
+<details class="extension" id="practice"><summary><span>病例推理 · 用新情境检查理解</span><span class="summary-hint">6 个原创问题 ＋</span></summary><div id="quiz"></div></details>
+<details class="extension"><summary><span>科学说明与阅读依据</span><span class="summary-hint">教学模型与资料来源 ＋</span></summary><div class="source-notes"><p>图中颜色、分子数量和过程时长用于表现事件次序。三个场景均为机制模型，人物症状不用于临床诊断。HIV 图把最初数周、数年的慢性期和晚期展开为三个观察窗口，两条曲线分别表示各自的相对变化。</p><ul><li><a href="https://www.ncbi.nlm.nih.gov/books/NBK27117/" target="_blank" rel="noopener">Janeway · IgE 介导的过敏反应</a></li><li><a href="https://pubmed.ncbi.nlm.nih.gov/16210652/" target="_blank" rel="noopener">Ellis 等 · 风湿性心脏病中的交叉反应性 T 细胞</a></li><li><a href="https://www.niams.nih.gov/health-topics/autoimmune-diseases" target="_blank" rel="noopener">NIAMS · 自身免疫病及类型</a></li><li><a href="https://hivinfo.nih.gov/understanding-hiv/fact-sheets/hiv-life-cycle" target="_blank" rel="noopener">NIH · HIV 生命周期</a></li><li><a href="https://hivinfo.nih.gov/understanding-hiv/fact-sheets/stages-hiv-infection" target="_blank" rel="noopener">NIH · HIV 感染阶段与治疗</a></li></ul></div></details>
+<footer><span>生命观察室 · 免疫失调</span><span>课堂重构版 v2.0　/　离线单文件</span></footer></main>
+<dialog id="guide"><form method="dialog"><button class="quiet">关闭 ×</button></form><p class="eyebrow">CLASSROOM NOTES</p><h2>从对象到后果</h2><h3>过敏反应</h3><p>初次接触形成致敏状态；再次接触同种过敏原，激活相关免疫效应机制，释放组胺等介质，产生组织效应。本课以 IgE 介导的速发型反应为例。</p><h3>自身免疫病</h3><p>针对自身成分的免疫反应造成损伤。相似表位引起的交叉反应，是部分病变的解释路径。</p><h3>免疫缺陷病</h3><p>可分先天性和获得性。HIV 主要攻击 CD4⁺ 辅助性 T 细胞，影响体液免疫和细胞免疫。防御受损后，机会性感染风险升高。</p><h3>大题表达顺序</h3><p>先写作用对象，再写关键细胞或分子，最后写生理后果。描述 HIV 时，区分“病毒载量下降”与“病毒已被彻底清除”。</p></dialog>
+<script>'use strict';
+
+const byId = id => document.getElementById(id);
+const clamp = value => Math.max(0, Math.min(1, value));
+const progress = (time, start, end) => clamp((time - start) / (end - start));
+const interpolate = (start, end, amount) => start + (end - start) * clamp(amount);
+const repeat = (count, draw) => Array.from({length: count}, (_, index) => draw(index)).join('');
+const circle = (x, y, radius, fill, stroke = 'none', width = 1) =>
+  '<circle cx="' + x + '" cy="' + y + '" r="' + radius + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '"/>';
+const ellipse = (x, y, rx, ry, fill, stroke = 'none') =>
+  '<ellipse cx="' + x + '" cy="' + y + '" rx="' + rx + '" ry="' + ry + '" fill="' + fill + '" stroke="' + stroke + '"/>';
+const path = (data, fill = 'none', stroke = '#234b49', width = 2) =>
+  '<path d="' + data + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + width + '" stroke-linejoin="round" stroke-linecap="round"/>';
+const place = (x, y, scale, body, angle = 0) =>
+  '<g transform="translate(' + x + ' ' + y + ') rotate(' + angle + ') scale(' + scale + ')">' + body + '</g>';
+const opacity = (amount, body) => '<g opacity="' + clamp(amount) + '">' + body + '</g>';
+
+function label(x, y, text, color = '#203b3d') {
+  const width = Array.from(text).reduce((sum, character) => sum + (character.charCodeAt(0) > 255 ? 18 : 10), 24);
+  return '<g transform="translate(' + x + ' ' + y + ')">' +
+    '<rect x="' + (-width / 2) + '" y="-18" width="' + width + '" height="32" rx="6" fill="#fffef9" stroke="#b0c5b8"/>' +
+    '<text y="4" text-anchor="middle" font-size="18" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-weight="650" fill="' + color + '">' + text + '</text></g>';
+}
+
+const antibody = path('M0 16V1L-11 -11M0 1L11 -11', 'none', '#a95522', 4);
+const antibodyViolet = antibody.replace('#a95522', '#7451a2');
+const pollen = circle(0, 0, 12, '#d49a4e', '#825026', 1.5) + repeat(10, index =>
+  place(0, 0, 1, path('M-2 -10l-1 -6 6 0 -1 6Z', '#e2b86f', '#8c642f', 1), index * 36)
+);
+const mastOutline = 'M-93 -10C-97 -56 -58 -81 -20 -79C17 -89 58 -73 80 -48C104 -24 102 14 80 42C65 76 20 85 -16 76C-61 80 -99 43 -93 -10Z';
+const cellNucleus = path('M-30 -10C-35 -34 -6 -43 10 -31C28 -18 7 -6 18 8C30 29 5 39 -12 25C-29 23 -22 6 -30 -10Z', '#8a788b', '#65516b');
+const plasmaCell = path('M-55 -6C-62 -46 -15 -63 21 -45C55 -36 69 -5 50 30C33 58 -9 59 -35 34Q-57 18 -55 -6Z', '#e8d6df', '#806d87', 2.5) +
+  ellipse(-25, 7, 19, 22, '#8c799f', '#655376') +
+  repeat(7, index => path('M-3 ' + (-31 + index * 9) + 'q20 -10 42 4', 'none', '#b48a9d', 3)) +
+  repeat(12, index => circle(5 + index % 4 * 9, -28 + Math.floor(index / 4) * 22, 1.6, '#70576c'));
+
+function allergyScene(time) {
+  const coat = progress(time, .02, .22);
+  const bridge = progress(time, .27, .39);
+  const degranulation = progress(time, .40, .58);
+  const effect = progress(time, .63, .92);
+  let art = '';
+  let labels = '';
+  art += path('M0 310Q200 284 430 304T860 303V440H0Z', '#e1eae0', 'none');
+  art += place(127, 160, 1, plasmaCell);
+  art += place(425, 193, 1, path(mastOutline, 'url(#mastGradient)', '#926969', 2.5) + cellNucleus);
+  art += repeat(30, index => {
+    const angle = index * 2.39996;
+    const radius = 40 + (index * 19) % 35;
+    const outward = degranulation * (index % 3 === 0 ? 1 : .1);
+    const distance = interpolate(radius, 89, outward);
+    return circle(425 + Math.cos(angle) * distance, 193 + Math.sin(angle) * distance * .79, 4.5 + index % 2, 'url(#vesicle)', '#a97160', .7);
+  });
+
+  // IgE is bound by its Fc end to receptors on the mast-cell surface.
+  [409, 438].forEach((x, index) => {
+    const amount = clamp(coat * 1.6 - index * .35);
+    art += place(interpolate(183, x, amount), interpolate(160, 104, amount), 1, antibody);
+    art += path('M' + (x - 5) + ' 121q5 -6 10 0', 'none', '#5d7774', 3);
+  });
+  art += opacity(bridge, place(interpolate(565, 424, bridge), interpolate(65, 87, bridge), .9, pollen));
+  art += opacity(bridge, path('M420 94L427 94', 'none', '#a36125', 4));
+
+  // Discharged mediators leave fused granules and spread through tissue fluid.
+  art += opacity(degranulation, path('M417 264Q425 276 434 264', 'none', '#6d4b4b', 3));
+  art += repeat(22, index => {
+    const amount = progress(time, .43 + index % 4 * .012, .80 + index % 3 * .025);
+    if (amount === 0) return '';
+    const x = 425 + Math.sin(index * 2.4) * amount * (70 + index % 6 * 24);
+    const y = 267 + amount * (23 + index % 5 * 12);
+    return circle(x, y, 2.5, '#c15d38');
+  });
+
+  const vesselTop = 333 - effect * 10;
+  art += path('M0 ' + vesselTop + 'Q215 ' + (vesselTop - 5) + ' 430 ' + vesselTop + 'T860 ' + vesselTop + 'V399H0Z', '#f4d6d2', 'none');
+  art += repeat(11, index => {
+    const x = index * 86 - 20;
+    const gap = 2 + effect * 10;
+    return place(x, vesselTop, 1,
+      path('M0 0Q28 -9 ' + (86 - gap) + ' 0Q60 9 0 5Z', '#dda5a4', '#b77b7c', 1) +
+      ellipse(36, 0, 9, 2.8, '#9a6a7a')
+    );
+  });
+  art += path('M0 399H860', 'none', '#bd8c8e', 3);
+  art += repeat(7, index => {
+    const x = (index * 138 + time * 130) % 970 - 55;
+    return place(x, 367 + Math.sin(index) * 4, 1,
+      ellipse(0, 0, 18, 7, '#c66769') + ellipse(0, 0, 8, 3, '#a04e59'), -8);
+  });
+  art += repeat(16, index => {
+    const x = 50 + index % 9 * 87;
+    const leak = effect * (index % 3 === 0 ? 1 : 0);
+    const y = interpolate(355 + index % 3 * 9, 293 - index % 4 * 6, leak);
+    return circle(x, y, 4, '#34789c');
+  });
+
+  // A transverse airway section makes narrowing visible without a numeric score.
+  art += place(699, 177, 1,
+    ellipse(0, 0, 66, 46, '#cb9d8e', '#a66c5c') +
+    ellipse(0, 0, 55, 37, '#ebc9ac') +
+    ellipse(0, 0, 42 - effect * 20, 27 - effect * 13, '#e7f1ee', '#a76e5a') +
+    repeat(12, index => place(Math.cos(index * Math.PI / 6) * 56, Math.sin(index * Math.PI / 6) * 37, 1,
+      ellipse(0, 0, 6, 2, '#9b5e58'), index * 30 + 90))
+  );
+
+  labels += label(128, 77, '浆细胞');
+  labels += label(425, 40, bridge < .5 ? '特异性 IgE 就位' : '同种过敏原交联 IgE');
+  labels += label(425, 303, degranulation < .3 ? '肥大细胞 · 含组胺颗粒' : '组胺释放到组织液');
+  labels += label(700, 250, effect < .6 ? '支气管横切面' : '平滑肌收缩 · 管腔变窄');
+  labels += label(160, 422, effect < .3 ? '微血管 · 血浆蛋白' : '通透性增加 · 蛋白外渗');
+  return {art, labels};
+}
+
+const epitope = path('M-15 3l7 -10 8 7 8 -7 7 10', 'none', '#764da0', 5);
+const valvularTissue = path('M-110 56C-62 45 -66 -12 -23 -59Q-32 -13 4 11C30 -9 48 -53 65 -62C91 -17 78 24 46 52Q-22 89 -110 56Z', 'url(#tissueGradient)', '#8d759f', 3) +
+  repeat(6, index => path('M-69 ' + (16 + index * 6) + 'q45 28 106 1', 'none', '#a790b2', 1.5));
+function autoimmunityScene(time) {
+  const immuneResponse = progress(time, .05, .28);
+  const crossing = progress(time, .35, .62);
+  const injury = progress(time, .65, .93);
+  let art = '';
+  let labels = '';
+  art += path('M396 75V353', 'none', '#b8c8c0', 1);
+  art += repeat(6, index => place(83 + index * 30, 186 + Math.sin(index * .6) * 20, 1,
+    circle(0, 0, 22, '#b0c6a8', '#6b8467', 2) +
+    path('M-8 -12q13 10 10 26', 'none', '#758b70', 2)
+  ));
+  art += place(235, 175, 1, epitope);
+  art += place(625, 209, 1.32, valvularTissue);
+  art += place(650, 196, 1, epitope);
+  art += path('M285 172Q442 124 597 175', 'none', crossing > .1 ? '#9e80b5' : '#b9c8bf', 2);
+  art += repeat(4, index => {
+    const amount = clamp(immuneResponse * 1.3 - index * .09);
+    return place(interpolate(145 + index * 25, 224 + index * 9, amount),
+      interpolate(82 + index % 2 * 15, 157 + index % 2 * 10, amount), .85, antibodyViolet, 180);
+  });
+  art += opacity(crossing, repeat(4, index => {
+    const amount = clamp(crossing * 1.3 - index * .09);
+    return place(interpolate(419, 632 + index * 12, amount),
+      interpolate(106 + index * 5, 180 + index % 2 * 10, amount), .85, antibodyViolet, 180);
+  }));
+  art += opacity(injury, repeat(12, index => {
+    const angle = index * 2.4;
+    return circle(628 + Math.cos(angle) * (34 + index % 3 * 15), 233 + Math.sin(angle) * 30, 4, '#c66d60');
+  }));
+  art += opacity(injury, place(568, 290, .63,
+    path('M-29 -5Q-35 -31 -6 -34Q24 -34 33 -8Q40 25 9 35Q-22 37 -29 -5Z', '#cad5c0', '#738873') +
+    ellipse(-5, 0, 17, 22, '#8a8ca0')
+  ));
+  labels += label(181, 53, '外来抗原所在处');
+  labels += label(637, 53, '自身组织所在处');
+  labels += label(188, 278, '化脓性链球菌');
+  labels += label(637, 330, '心脏瓣膜组织');
+  labels += label(438, 118, crossing < .2 ? '比较表面结构' : '部分抗体交叉结合');
+  labels += label(429, 401, injury < .4 ? '相似表位可引起交叉反应' : '免疫反应引起炎症和损伤');
+  return {art, labels};
+}
+
+const rna = (y, color) => path('M-22 ' + y + 'q6 -11 12 0t12 0t12 0', 'none', color, 2.6);
+const viralCore = path('M-24 -20Q-11 -28 4 -18L24 17Q13 27 4 22Z', '#c6b2cf', '#866c9b', 2);
+const hivParticle = circle(0, 0, 45, '#c7dcd8', '#648b91', 2) +
+  circle(0, 0, 40, '#e0e8de', '#85a8a4', 1.4) +
+  repeat(13, index => place(0, 0, 1,
+    path('M0 -44v-8', 'none', '#9e5e76', 2) + ellipse(0, -54, 4.5, 3, '#bc778a'), index * 360 / 13)) +
+  viralCore + rna(-8, '#b25a60') + rna(2, '#aa7626') +
+  circle(-9, 10, 3.5, '#327a73') + circle(3, 12, 3.5, '#327a73');
+const helperCell = path('M-29 -5Q-34 -30 -7 -34Q21 -37 32 -10Q42 19 14 34Q-23 42 -29 -5Z', 'url(#cellGradient)', '#447d71', 2) +
+  ellipse(-5, 0, 18, 23, '#7d91ac');
+
+const virusTrend = [[0,.06],[.12,.95],[.28,.23],[.45,.25],[.65,.34],[.8,.57],[1,.94]];
+const helperTrend = [[0,.91],[.12,.52],[.28,.73],[.45,.64],[.65,.47],[.8,.27],[1,.08]];
+function trend(points, time) {
+  const end = points.findIndex(point => point[0] >= time);
+  if (end <= 0) return points[end === 0 ? 0 : points.length - 1][1];
+  const left = points[end - 1];
+  const right = points[end];
+  let amount = (time - left[0]) / (right[0] - left[0]);
+  amount = amount * amount * (3 - 2 * amount);
+  return interpolate(left[1], right[1], amount);
+}
+function diseaseChart(time) {
+  const x = fraction => 469 + fraction * 355;
+  const y = amount => 247 - amount * 151;
+  let art = repeat(4, index => path('M469 ' + (100 + index * 48) + 'H824', 'none', '#c4d4ca', 1));
+  [virusTrend, helperTrend].forEach((points, index) => {
+    const color = index === 0 ? '#a64868' : '#217765';
+    let full = '';
+    let current = '';
+    for (let tick = 0; tick <= 150; tick++) {
+      const at = tick / 150;
+      const command = tick === 0 ? 'M' : 'L';
+      const position = x(at) + ' ' + y(trend(points, at));
+      full += command + position;
+      if (at <= time) current += command + position;
+    }
+    art += path(full, 'none', '#c0ccbf', 2);
+    if (current) art += path(current, 'none', color, 3.5);
+    art += circle(x(time), y(trend(points, time)), 5, color);
+  });
+  art += path('M' + x(time) + ' 85V250', 'none', '#516a62', 1);
+  return art;
+}
+
+function deficiencyScene(time) {
+  const fusion = progress(time, .02, .14);
+  const reverseTranscription = progress(time, .17, .35);
+  const integration = progress(time, .35, .49);
+  const production = progress(time, .50, .77);
+  const depletion = progress(time, .74, 1);
+  let art = '';
+  let labels = '';
+  art += path('M221 69C299 38 391 72 414 140C446 217 402 300 325 320C246 347 161 305 145 238C125 175 144 103 221 69Z', '#deebe0', '#6e9b86', 3);
+  art += place(317, 171, 1, ellipse(0, 0, 67, 78, '#c3cede', '#8a99b0') +
+    place(0, -15, 1, rna(0, '#687aa1') + rna(7, '#687aa1')) +
+    place(5, 20, 1, rna(0, '#687aa1') + rna(7, '#687aa1')));
+  if (time < .19) {
+    art += opacity(1 - progress(time, .13, .19), place(interpolate(60, 150, fusion), 166, .73, hivParticle));
+  }
+  if (time > .12 && time < .53) {
+    const position = interpolate(164, 322, progress(time, .12, .46));
+    const strands = opacity(1 - reverseTranscription,
+      rna(-7, '#b25a60') + rna(3, '#aa7626') +
+      circle(-9, 12, 4, '#327a73') + circle(5, 15, 4, '#327a73')) +
+      opacity(reverseTranscription, rna(0, '#217765') + rna(7, '#217765'));
+    art += place(position, 163, .88, strands);
+  }
+  art += opacity(integration, place(327, 156, .75, rna(0, '#217765') + rna(7, '#217765')));
+  if (production > 0) {
+    art += repeat(5, index => {
+      const amount = clamp(production * 1.4 - index * .1);
+      return opacity(clamp(amount * 7), place(interpolate(151, 43 + index * 18, amount),
+        interpolate(270, 270 + index % 3 * 15, amount), .23, hivParticle));
+    });
+  }
+  art += repeat(7, index => opacity(1 - depletion * (index < 5 ? .88 : .5),
+    place(63 + index * 54, 375, .52, helperCell)));
+  art += diseaseChart(time);
+  labels += label(189, 30, time < .15 ? 'HIV 融合并入胞' : time < .5 ? 'RNA → DNA → 整合' : '感染持续 · 子代释放');
+  labels += label(319, 89, '辅助性 T 细胞核');
+  labels += label(240, 420, '辅助性 T 细胞群 · 数量示意');
+  labels += label(650, 43, '各自的相对水平 · 未治疗');
+  labels += label(556, 282, '最初数周');
+  labels += label(695, 282, '数年');
+  labels += label(810, 282, '晚期');
+  labels += label(642, 336, '红紫线 · HIV 载量', '#963d5c');
+  labels += label(642, 377, '绿色线 · 辅助性 T 细胞', '#165e4d');
+  return {art, labels};
+}
+
+const cases = [
+  {
+    name: '观察 01 / 再次接触花粉之后',
+    legend: 'Y 形＝特异性 IgE　·　橙色微粒＝组胺　·　蓝色颗粒＝血浆蛋白',
+    takeaway: '已致敏个体再次接触同种过敏原，可释放组胺等介质，引起局部或全身反应。',
+    boundary: '展示 IgE 介导的速发型过敏，省略抗原呈递和克隆扩增。血管为展开的微血管示意，介质释放、蛋白外渗和气道收缩在同一画面中并列呈现。',
+    events: ['致敏：IgE 就位', '再次接触', '组胺释放', '组织反应'],
+    steps: [
+      ['初遇之后，留下了什么？', '浆细胞分泌特异性 IgE。抗体的柄部结合肥大细胞膜上的受体，抗原结合臂朝向组织液。', 'IgE 逐渐固定在肥大细胞表面。', '初次接触可以使个体致敏；此时通常没有明显症状。'],
+      ['为什么同种过敏原会触发反应？', '再次接触时，多价过敏原与相邻 IgE 的结合臂结合，发生交联，激活肥大细胞。', '一枚过敏原连接了相邻的 IgE。', '已致敏个体再次接触同种过敏原，是本模型的关键条件。'],
+      ['谁把信号带给周围组织？', '颗粒移向细胞膜并融合，将组胺等物质释放到组织液中。这些介质可作用于周围血管和气道。', '颗粒向膜边缘移动，组胺在细胞外出现。', '组胺是调节介质；它的释放把细胞识别连到组织效应。'],
+      ['红肿和呼吸不畅从何而来？', '局部血管舒张，微血管通透性增加，蛋白和液体外渗可引起水肿。支气管平滑肌收缩使管腔变窄。', '血管间隙增大，蓝色颗粒外渗；气道管腔缩小。', '过敏的临床表现取决于发生部位与反应程度。严重反应可危及生命。']
+    ],
+    draw: allergyScene
+  },
+  {
+    name: '观察 02 / 反应指向了自身组织',
+    legend: '紫色 Y＝部分交叉反应抗体　·　相同折线纹样＝相似的识别表位',
+    takeaway: '针对自身成分的免疫反应造成组织或功能损伤，可形成自身免疫病。',
+    boundary: '以风湿性心脏病的一种解释路径展示抗体交叉反应。真实病变还涉及 T 细胞等参与的复杂炎症。图中右侧是瓣膜组织；分子模拟并非所有自身免疫病的共同机制。',
+    events: ['应答外来抗原', '比较相似表位', '交叉识别', '自身组织受损'],
+    steps: [
+      ['本来针对的是谁？', '链球菌感染可诱发免疫应答。部分针对链球菌抗原的抗体，也能与自身组织中的相似表位发生反应。', '先观察抗体结合链球菌的识别位点。', '免疫反应的形成有外来抗原参与。'],
+      ['表面有相似图案，会怎样？', '比较链球菌抗原和心脏组织中的部分分子表位。结构相似为交叉反应提供了可能。', '两处用同样的紫色折线标出相似表位。', '结构相似是本病例的一条机制线索。'],
+      ['识别方向转向哪里？', '部分抗体交叉结合自身组织中的表位，并可参与炎症反应。此时反应对象已包括自身成分。', '右侧瓣膜组织也出现了抗体结合。', '辨别自身免疫时，先找被攻击的对象。'],
+      ['免疫反应怎样造成损伤？', '持续的自身反应可引起组织炎症、结构改变或功能障碍。风湿性心脏病可出现瓣膜损伤。', '抗体结合后，局部出现炎症与损伤信号。', '自身反应造成损伤，是理解自身免疫病的核心。']
+    ],
+    draw: autoimmunityScene
+  },
+  {
+    name: '观察 03 / HIV 如何影响整套防御',
+    legend: '左图追踪代表性细胞事件；右图展示长期趋势。两图时间尺度不同。',
+    takeaway: 'HIV 主要攻击辅助性 T 细胞，可使体液免疫和细胞免疫受影响，导致获得性免疫缺陷。',
+    boundary: '两条曲线各自归一化，不可比较彼此的绝对数值。横轴为阶段展开，不等距表示年数。曲线示意未经治疗时的一种趋势；单个细胞感染过程远短于人体病程。',
+    events: ['入胞与早期复制', '逆转录及应答', '持续感染', '免疫功能受损'],
+    steps: [
+      ['HIV 靶向了哪类细胞？', 'HIV 主要感染 CD4⁺ 辅助性 T 细胞。与细胞膜融合后，病毒核心进入细胞，携带的 RNA 与逆转录酶参与后续过程。', '包膜靠近细胞膜，病毒内容物进入细胞。', '辅助性 T 细胞在两类特异性免疫应答中均起重要作用。'],
+      ['早期病毒载量回落说明什么？', '病毒 RNA 经逆转录形成 DNA，并可整合入宿主 DNA。感染最初数周，病毒载量可先升高，再随免疫应答建立而回落。', '观察红紫线的早期高峰与回落。', '载量下降说明复制受到限制；体内仍可存在病毒及感染细胞。'],
+      ['症状不明显时，发生了什么？', '慢性期病毒仍可持续复制并释放子代。辅助性 T 细胞总体可逐渐减少，感染能够持续多年。', '左图出现子代病毒，绿色曲线逐渐下降。', 'HIV 感染与艾滋病阶段需要区分。'],
+      ['失去辅助性 T 细胞，谁受影响？', '辅助性 T 细胞显著减少，会影响 B 细胞和细胞毒性 T 细胞的应答。机会性感染及部分恶性肿瘤的风险增加。', '辅助性 T 细胞群减少，病毒载量上升。', '规范抗逆转录病毒治疗可抑制病毒复制，改变病程。']
+    ],
+    draw: deficiencyScene
+  }
+];
+
+let activeCase = 0;
+let time = 0;
+let playing = false;
+let previousTimestamp = 0;
+let lastPaint = 0;
+let shownStep = -1;
+const duration = 30;
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clock = byId('clock');
+const sceneWorld = byId('world');
+const sceneLabels = byId('labels');
+
+function render() {
+  const current = cases[activeCase];
+  const step = Math.min(3, Math.floor(time * 4));
+  const image = current.draw(time);
+  sceneWorld.innerHTML = image.art;
+  sceneLabels.innerHTML = image.labels;
+  byId('scrubber').value = time * 100;
+  clock.textContent = Math.floor(time * duration).toString().padStart(2, '0') + ' / ' + duration + ' 秒';
+  byId('playButton').textContent = playing ? 'Ⅱ 暂停观察' : time >= 1 ? '↻ 再看一次' : '▶ 播放过程';
+  if (step === shownStep) return;
+  shownStep = step;
+  const [title, body, evidence, inference] = current.steps[step];
+  byId('stepCounter').textContent = '证据 ' + (step + 1).toString().padStart(2, '0') + ' / 04';
+  byId('stepTitle').textContent = title;
+  byId('stepBody').textContent = body;
+  byId('evidenceText').textContent = evidence;
+  byId('inferenceText').textContent = inference;
+  [...byId('eventButtons').children].forEach((button, index) => button.setAttribute('aria-current', index === step));
+}
+function chooseCase(index) {
+  activeCase = index;
+  time = 0;
+  playing = false;
+  shownStep = -1;
+  const current = cases[index];
+  byId('sceneName').textContent = current.name;
+  byId('figureLegend').textContent = current.legend;
+  byId('takeawayText').textContent = current.takeaway;
+  byId('boundaryText').textContent = current.boundary;
+  byId('boundaryText').hidden = true;
+  byId('showBoundary').textContent = '查看本图的简化范围 ＋';
+  document.querySelectorAll('[data-case]').forEach((button, at) => button.setAttribute('aria-pressed', at === index));
+  byId('eventButtons').replaceChildren();
+  current.events.forEach((event, at) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = (at + 1) + '　' + event;
+    button.onclick = () => {
+      time = [0, .39, .59, 1][at];
+      playing = false;
+      render();
+    };
+    byId('eventButtons').append(button);
+  });
+  render();
+}
+function togglePlayback() {
+  if (time >= 1) time = 0;
+  playing = !playing;
+  render();
+}
+byId('playButton').onclick = togglePlayback;
+byId('restartButton').onclick = () => {
+  time = 0;
+  playing = false;
+  render();
+};
+byId('scrubber').oninput = event => {
+  time = Number(event.target.value) / 100;
+  playing = false;
+  render();
+};
+byId('showBoundary').onclick = () => {
+  const note = byId('boundaryText');
+  note.hidden = !note.hidden;
+  byId('showBoundary').textContent = note.hidden ? '查看本图的简化范围 ＋' : '收起模型说明 −';
+};
+document.querySelectorAll('[data-case]').forEach(button => {
+  button.onclick = () => chooseCase(Number(button.dataset.case));
+});
+byId('openGuide').onclick = () => {
+  playing = false;
+  render();
+  byId('guide').showModal();
+};
+document.addEventListener('keydown', event => {
+  if (event.target.closest('input,button,select,textarea,a,summary') || byId('guide').open) return;
+  if (event.code === 'Space') {
+    event.preventDefault();
+    togglePlayback();
+  }
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+    time = clamp(time + (event.key === 'ArrowRight' ? .05 : -.05));
+    playing = false;
+    render();
+  }
+});
+function animate(timestamp) {
+  requestAnimationFrame(animate);
+  const delta = Math.min(.1, (timestamp - previousTimestamp) / 1000);
+  previousTimestamp = timestamp;
+  if (!playing || document.hidden || byId('guide').open) return;
+  time = clamp(time + delta / duration);
+  if (time >= 1) playing = false;
+  if (timestamp - lastPaint > 33 || !playing) {
+    render();
+    lastPaint = timestamp;
+  }
+}
+
+const questions = [
+  ['春季喷嚏的线索', '某人接触花粉后出现鼻痒、喷嚏，并且对该花粉已致敏。哪条因果链最合理？',
+    ['过敏原 → 肥大细胞释放介质 → 组织反应', '过敏原 → 所有组织细胞立即破裂', '组胺 → 形成 HIV'], 0,
+    '同种过敏原再次接触已致敏个体，可激活介质释放，造成局部组织效应。'],
+  ['首次与再次', '本模型中，初次接触后的重要变化是什么？',
+    ['所有抗体被消耗', '特异性 IgE 可结合肥大细胞表面的受体', '辅助性 T 细胞全部消失'], 1,
+    '初次接触可形成致敏状态，肥大细胞表面结合特异性 IgE，为再次反应创造条件。'],
+  ['肌无力的反应对象', '自身抗体影响肌细胞膜上的乙酰胆碱受体，最直接支持哪种判断？',
+    ['过敏反应', '先天性免疫缺陷', '自身免疫病'], 2,
+    '作用对象是自身受体，且造成神经肌肉传递功能障碍。判断依据是对象和损伤。'],
+  ['载量回落之后', 'HIV 早期载量由高峰回落，能得出什么结论？',
+    ['已彻底清除 HIV', '免疫应答等因素限制了病毒，但感染仍可持续', '此后一定不会传播'], 1,
+    '下降描述的是数量趋势。感染细胞和前病毒等可继续存在，不能由载量回落推出感染清除。'],
+  ['共同枢纽', '辅助性 T 细胞大量减少，为何影响范围很广？',
+    ['它参与体液免疫和细胞免疫', '它是唯一直接分泌抗体的细胞', '所有酶均由它合成'], 0,
+    '辅助性 T 细胞参与 B 细胞活化与分化，也支持细胞毒性 T 细胞等应答。抗体由浆细胞分泌。'],
+  ['日常相处', '以下哪一项属于科学的相处方式？',
+    ['拒绝与 HIV 感染者握手', '认为无明显症状就无传播风险', '了解传播途径，保持正常学习与生活交往'], 2,
+    'HIV 主要经性接触、血液和母婴传播，握手、拥抱、共同进餐等日常接触不会传播。']
+];
+function buildQuiz() {
+  questions.forEach(([title, question, options, correct, explanation], number) => {
+    const card = document.createElement('article');
+    card.className = 'quiz-item';
+    const heading = document.createElement('h3');
+    heading.textContent = (number + 1) + '. ' + title;
+    const description = document.createElement('p');
+    description.textContent = question;
+    const box = document.createElement('div');
+    box.className = 'quiz-options';
+    const feedback = document.createElement('p');
+    feedback.className = 'quiz-feedback';
+    feedback.setAttribute('aria-live', 'polite');
+    options.forEach((option, choice) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = option;
+      button.onclick = () => {
+        [...box.children].forEach(item => item.className = '');
+        button.className = choice === correct ? 'correct' : 'incorrect';
+        feedback.textContent = (choice === correct ? '判断成立。' : '再检查作用对象与过程。') + explanation;
+      };
+      box.append(button);
+    });
+    card.append(heading, description, box, feedback);
+    byId('quiz').append(card);
+  });
+}
+chooseCase(0);
+buildQuiz();
+requestAnimationFrame(animate);
+
+</script></body></html>

@@ -1,0 +1,524 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#3a5a40"><title>植物生长素｜从实验到机制</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@500;600&display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--ink:#24392d;--muted:#42564a;--paper:#faf8f5;--edge:#dcded2;--green:#456c4c;--orange:#c87645}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:18px/1.65 Inter,"Microsoft YaHei",sans-serif}button,select,input{font:inherit;color:inherit}button{cursor:pointer;background:white;border:1px solid #a9b6a6;border-radius:5px;padding:7px 13px;font-weight:600;transition:background .15s,transform .15s}button:hover{background:#edf1e8}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb6a30;outline-offset:3px}a{color:#355f48}header,main{width:min(1490px,94%);margin:auto}header{min-height:77px;display:flex;gap:20px;align-items:center;justify-content:space-between;border-bottom:1px solid #abb8a7}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:700;font-size:20px}.brand svg{width:29px;height:34px}.brand small{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}.intro{display:flex;justify-content:space-between;align-items:end;padding:32px 0 24px;gap:20px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.12em;font-weight:700;margin:0 0 12px}h1{font-family:"Source Serif 4",Georgia,"Songti SC","SimSun",serif;font-size:clamp(38px,4.6vw,66px);line-height:1.2;margin:0 0 17px;font-weight:600;letter-spacing:-.03em}h1 span{font-size:23px;letter-spacing:0;margin-left:24px;display:inline-block;border-left:1px solid #b9c4b3;padding-left:22px;font-family:Inter,"Microsoft YaHei",sans-serif}.subtitle{font-size:18px;line-height:1.8;margin:0;color:var(--muted)}.intro-note{min-width:210px;padding-left:25px;border-left:1px solid #b9c4b3}.intro-note i{font:italic 36px "Source Serif 4",Georgia,serif}.intro-note p{font-size:14px;color:var(--muted);margin:8px 0 0}nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:27px;border-bottom:1px solid #c8d1c1;padding-bottom:18px}nav a{font-size:16px;text-decoration:none;background:#f0f1e9;padding:7px 16px;border-radius:4px;font-weight:600}nav a:hover{background:#e0e9da}.figure{background:#fff;border:1px solid #dcded2;border-radius:9px;margin:23px 0 38px;box-shadow:0 5px 20px #29422b06;scroll-margin:15px;overflow:hidden}.fig-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:21px 23px 16px;border-bottom:1px solid #e0e3d9}.fig-heading .eyebrow{margin:0 0 5px}.fig-heading h2{font:600 28px/1.4 "Source Serif 4",Georgia,"Songti SC",serif;margin:0}.fig-heading>span{font-size:13px;color:var(--muted)}.context{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 22px;background:#f6f7f2;border-bottom:1px solid #dde2d6}.context label{font-size:15px;font-weight:650}.context select{border:1px solid #abb9a5;border-radius:4px;background:#fff;padding:6px 12px;max-width:100%;min-width:0;font-size:16px}.figure-body{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,1fr)}.scroll-stage{min-width:0;overflow-x:auto;background:#fff}.scroll-stage>svg{display:block;width:100%;min-width:780px}aside{padding:22px;border-left:1px solid #e0e3d9;background:#fcfcf8}.phase{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:0 0 12px}aside h3{font-size:24px;line-height:1.5;margin:0 0 14px;font-weight:650}aside>p{font-size:17px;color:var(--muted);margin:0 0 14px}aside .small{font-size:14px;line-height:1.8;margin-top:17px}.result{background:#eff3e9;border-left:3px solid #77966a;padding:13px;margin-top:17px}.result span{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}.result b{font-size:17px}.toolbar{display:flex;gap:12px;align-items:center;padding:14px 20px;background:#fcfcf8;border-top:1px solid #dce2d4;flex-wrap:wrap}.toolbar .play{background:#456c4c;border-color:#456c4c;color:white;min-width:154px}.toolbar .play:hover{background:#355c3b}.toolbar>label{flex:1;min-width:150px;display:flex;align-items:center}input[type=range]{width:100%;accent-color:#52764e;cursor:pointer}output{font:14px Consolas,monospace;min-width:100px;text-align:right;color:var(--muted)}.fig-caption{padding:14px 23px;margin:0;font-size:15px;color:#3e5343;border-top:1px solid #e1e5dc;line-height:1.8}.fig-caption b{color:var(--ink)}.probe-context input{width:min(270px,90%)}.probe-context output{min-width:170px;font-size:16px}.effect{padding:7px 0;border-bottom:1px solid #dfe5da;display:flex;gap:7px;justify-content:space-between;font-size:16px}.effect b{font-weight:650}.grid-instruction{padding:14px 23px 0;margin:0;font-size:16px;color:var(--muted)}.experiment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:18px 20px}.device{border:1px solid #cfd8c7;padding:0;border-radius:5px;background:#fff;text-align:left;overflow:hidden;font-weight:400}.device[aria-pressed=true]{border:2px solid #52764e;background:#fbfdf8}.device svg{display:block;width:100%;height:auto}.device-name{display:block;padding:9px 12px;border-top:1px solid #e3e7db;font-size:15px;line-height:1.6;min-height:65px}.grid-result{margin:0 20px 20px;padding:15px 17px;background:#f0f4e9;border-left:3px solid #77966a}.grid-result b{font-size:19px}.grid-result p{font-size:17px;margin:5px 0 0}.notes{border:1px solid #d6decd;background:#fff;border-radius:7px;margin:20px 0}.notes summary{padding:16px 20px;cursor:pointer;font-weight:600}.notes>div{padding:0 20px 20px;color:var(--muted);font-size:16px}.notes p{margin:12px 0}.notes li{margin:6px 0}footer{border-top:1px solid #bdcbb5;padding:22px 0;display:flex;justify-content:space-between;gap:15px;font-size:13px;color:var(--muted)}dialog{color:var(--ink);background:#fffefa;border:1px solid #adbda2;border-radius:10px;padding:28px;width:min(690px,94vw);max-height:88vh;overflow:auto}dialog::backdrop{background:#203a2a99}dialog form{text-align:right}dialog h2{font-size:30px;margin:14px 0}dialog h3{font-size:21px;margin:18px 0 7px}dialog p{font-size:17px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:8px;border-bottom:1px solid #d5ddcd;text-align:left}dialog .eyebrow{margin-top:18px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}[hidden]{display:none!important}
+@media(max-width:1100px){.brand small{display:none}.figure-body{grid-template-columns:minmax(0,2.6fr) minmax(240px,1fr)}aside{padding:17px}.fig-heading>span{display:none}}
+@media(max-width:900px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce2d4;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.phase,aside h3,aside>p{grid-column:1}.result{grid-column:2;grid-row:1/4;margin-top:0;align-self:start}aside .small{grid-column:2;grid-row:4}.intro-note{display:none}.experiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{gap:8px;min-height:66px}.brand{font-size:16px}header button{font-size:14px;padding:6px 8px}.intro{padding-top:25px}h1 span{display:block;margin:12px 0 0;padding:0;border:0;font-size:23px}nav{gap:6px}nav a{font-size:14px;padding:6px 10px}.fig-heading{padding:16px}.fig-heading h2{font-size:25px}.context{padding:12px;gap:8px}.context select{width:100%}.toolbar{padding:12px;gap:8px}.toolbar>label{order:4;flex-basis:100%}.toolbar output{margin-left:auto;min-width:auto}.toolbar button{font-size:15px;padding:7px 10px}aside{display:block}.result{margin-top:12px}.fig-caption{padding:12px 16px}footer{flex-direction:column}.experiment-grid{grid-template-columns:1fr;padding:14px}.device-name{min-height:0}.probe-context input{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+
+#svgLibrary{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+</style></head><body><header><a class="brand" href="#top"><svg viewBox="0 0 28 32" aria-hidden="true"><path d="M7 26Q1 10 24 3Q28 23 7 26M6 30L20 9" fill="#a3b18a" stroke="#3a5a40" stroke-width="1.5"/></svg>植物机制图谱 <small>PLANT SCIENCE / INTERACTIVE ATLAS</small></a><button id="reviewOpen">核心考点精要 ↗</button></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">VOLUME 05　/　ARTICLE 01　/　选择性必修一</p><h1>植物生长素<span>从实验到机制</span></h1><p class="subtitle">尖端怎样“感知”光，细胞怎样改变长度？<br>沿四幅可操控图谱，连接实验处理、分子分布与生长方向。</p></div><div class="intro-note"><i>Auxin</i><p>Indole-3-acetic acid<br>吲哚乙酸 · IAA</p></div></section>
+<nav aria-label="图谱导航"><a href="#figure1">01　向光性实验</a><a href="#figure2">02　定向运输</a><a href="#figure3">03　浓度与效应</a><a href="#figure4">04　变式推演</a></nav>
+<div id="svgLibrary" aria-hidden="true"><svg><defs>
+<linearGradient id="shootFill" x1="0" x2="1"><stop stop-color="#b7c79f"/><stop offset=".48" stop-color="#89a77b"/><stop offset="1" stop-color="#52764e"/></linearGradient>
+<linearGradient id="rootFill"><stop stop-color="#f0dbb2"/><stop offset="1" stop-color="#d9ac71"/></linearGradient>
+<linearGradient id="agarFill" x2="1" y2="1"><stop stop-color="#dceef0" stop-opacity=".9"/><stop offset="1" stop-color="#9acace" stop-opacity=".75"/></linearGradient>
+<linearGradient id="steelFill"><stop stop-color="#9caaba"/><stop offset=".5" stop-color="#526273"/><stop offset="1" stop-color="#9caaba"/></linearGradient>
+<filter id="softShadow" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#203c2b" flood-opacity=".08"/></filter>
+<marker id="arrow" markerWidth="7" markerHeight="7" refX="8" refY="5" viewBox="0 0 10 10" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#536c5a"/></marker>
+</defs></svg></div>
+<section class="figure" id="figure1"><div class="fig-heading"><div><p class="eyebrow">FIGURE 1　/　EVIDENCE ACROSS SCALES</p><h2>先定位感光，再解释弯曲。</h2></div><span>实验装置 × 组织放大</span></div>
+<div class="context"><label for="experiment">实验处理</label><select id="experiment">
+<optgroup label="① 达尔文 · 感光定位"><option value="intact">单侧光 · 完整胚芽鞘</option><option value="cap">单侧光 · 锡箔罩住尖端</option><option value="sleeve">单侧光 · 只罩尖端下部</option><option value="cut">单侧光 · 切去尖端</option></optgroup>
+<optgroup label="② 鲍森·詹森 · 传递的信号"><option value="agar">尖端与下部间放琼脂片</option><option value="mica">尖端与下部间放云母片</option></optgroup>
+<optgroup label="③ 拜尔 · 黑暗中偏置"><option value="paal">黑暗 · 尖端偏放右侧</option></optgroup>
+<optgroup label="④ 温特 · 琼脂转移"><option value="wentLeft">含IAA琼脂偏放左侧 + 空白对照</option><option value="wentCenter">含IAA琼脂居中 + 空白对照</option><option value="wentLight">无尖端，左置含IAA琼脂 + 单侧光</option></optgroup></select></div>
+<div class="figure-body"><div class="scroll-stage"><svg id="svg1" viewBox="0 0 1000 560" aria-label="胚芽鞘实验与细胞伸长联动图"></svg></div><aside><p id="phase1" class="phase"></p><h3 id="title1"></h3><p id="text1"></p><div class="result"><span>观察到的证据</span><b id="result1"></b></div><p class="small">IAA 粒子和伸长幅度为示意。感光与弯曲发生在不同部位。</p></aside></div>
+<div class="toolbar" data-index="0"><button class="play" data-play="0">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">图1过程时间</span><input data-time="0" type="range" min="0" max="100" step=".1" value="0"></label><output id="time0">00 / 18 秒</output></div><p class="fig-caption"><b>Figure 1.</b> 尖端感光，生长素分布影响尖端下部的伸长差异。正常向光弯曲中，两侧均可受到促进。温特证明生长促进物质可转移至琼脂；其化学本质后来被确定为 IAA。</p></section>
+<section class="figure" id="figure2"><div class="fig-heading"><div><p class="eyebrow">FIGURE 2　/　TRANSPORT & ORIENTATION</p><h2>形态学方向，与空间上下有何关系？</h2></div><span>细胞跨膜 × 横放幼苗</span></div>
+<div class="context"><label for="orientation">茎段</label><select id="orientation"><option value="upright">正置 · 形态学上端在上</option><option value="inverted">倒置 · 形态学下端在上</option></select><label for="gravity">幼苗环境</label><select id="gravity"><option value="earth">横放后受重力定向刺激</option><option value="none">无定向重力刺激的理想对照</option></select></div>
+<div class="figure-body"><div class="scroll-stage"><svg id="svg2" viewBox="0 0 1000 560" aria-label="极性运输与根茎重力响应"></svg></div><aside><p id="phase2" class="phase"></p><h3 id="title2"></h3><p id="text2"></p><div class="result"><span>当前判据</span><b id="result2"></b></div><p class="small">图2a限于所画茎段细胞。根中不同组织的IAA运输可有不同方向。PIN输出与细胞代谢供能不能混为同一个ATP水解步骤。</p></aside></div>
+<div class="toolbar" data-index="1"><button class="play" data-play="1">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">图2过程时间</span><input data-time="1" type="range" min="0" max="100" step=".1" value="0"></label><output id="time1">00 / 18 秒</output></div><p class="fig-caption"><b>Figure 2.</b> 茎中基部PIN定位参与定向输出；代谢过程维持运输条件。重力引起再分配后，根与茎的生长响应不同。根近地侧的抑制与茎近地侧的促进在本模型中同时呈现。</p></section>
+<section class="figure" id="figure3"><div class="fig-heading"><div><p class="eyebrow">FIGURE 3　/　DOSE, RESPONSE & BRANCHING</p><h2>同一种信号，为什么带来不同效应？</h2></div><span>敏感性曲线 × 顶端优势</span></div>
+<div class="context probe-context"><label for="concentration">浓度探针</label><input id="concentration" type="range" min="-12" max="-2" step=".01" value="-8"><output id="concentrationValue"></output><label for="apical">枝条处理</label><select id="apical"><option value="intact">保留顶芽</option><option value="cut">摘除顶芽</option><option value="paste">摘顶后切口涂含IAA羊毛脂</option></select></div>
+<div class="figure-body"><div class="scroll-stage"><svg id="svg3" viewBox="0 0 1000 560" aria-label="根芽茎浓度效应曲线与顶端优势"></svg></div><aside><p class="phase">DOSE–RESPONSE / 模型探针</p><h3 id="title3"></h3><div id="effectReadouts"></div><p class="small">P₁、P₂表示本曲线上两个浓度可有相同促进效果。峰后仍高于零线时，依然属于促进作用。</p><div class="result"><span>枝条观察</span><b id="result3"></b></div><p class="small">曲线峰区浓度为教材型示意，随植物、器官和条件变化。枝条旁的效应点是概念映射，不能作为体内浓度实测值。</p></aside></div>
+<div class="toolbar" data-index="2"><button class="play" data-play="2">▶ 播放处理效应</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">图3枝条处理时间</span><input data-time="2" type="range" min="0" max="100" step=".1" value="0"></label><output id="time2">00 / 18 秒</output></div><p class="fig-caption"><b>Figure 3.</b> 纵轴相对不加外源IAA的对照，零线上方为促进，下方为抑制。下降但仍高于零线表示促进减弱。顶端优势还涉及其他激素与运输网络，图中以主茎IAA信号和侧枝生长作教学关联。</p></section>
+<section class="figure" id="figure4"><div class="fig-heading"><div><p class="eyebrow">FIGURE 4　/　EXTENDED EXPERIMENTS</p><h2>先确定来源，再确定分布。</h2></div><span>六个明确边界的变式</span></div><p class="grid-instruction">点击或将指针移入装置，观察一次短回放。注意云母片的方向、相对伸长区的位置，以及花盆与窗口是否一起转动。</p><div class="experiment-grid" id="experimentGrid"></div><div class="grid-result"><b id="gridTitle"></b><p id="gridText"></p></div><div class="toolbar" data-index="3"><button class="play" data-play="3">▶ 重放当前装置</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">图4当前装置时间</span><input data-time="3" type="range" min="0" max="100" step=".1" value="0"></label><output id="time3">00 / 2.4 秒</output></div></section>
+<details class="notes"><summary>图谱阅读边界与科学资料 ＋</summary><div><p>橙色圆点代表IAA，点数、弯曲角度和细胞尺寸只作定性示意。极性运输的机制图不是分子结构实测图，AUX1、PIN与质子泵以不同图形表示不同功能。尖端小细胞与伸长区大液泡细胞仅表示功能区差别。</p><p>IAA是吲哚乙酸，主要合成部位包括幼嫩的芽、叶和发育中的种子等。极性运输不等于物理空间始终向下；非极性运输也存在。根中的向根尖运输和向地上部运输可在不同组织中并存。</p><p>顶端优势涉及主茎IAA运输与细胞分裂素、独脚金内酯、糖等共同调控。本图保留“摘顶解除抑制、切口补IAA可恢复抑制”的实验逻辑，把侧芽生长效应点映射到示意曲线，未把其位置当作测得的IAA浓度。</p><ul><li><a href="https://openstax.org/books/biology-2e/pages/30-6-plant-sensory-systems-and-responses" target="_blank" rel="noopener">OpenStax · 植物感受系统与响应</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/2751654/" target="_blank" rel="noopener">Prusinkiewicz等 · 生长素运输与侧芽活化</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9477730/" target="_blank" rel="noopener">PIN运输体结构与机制研究</a></li><li><a href="https://doi.org/10.1093/jxb/erp113" target="_blank" rel="noopener">向光性研究的实验历史</a></li></ul></div></details><footer><span>PLANT SCIENCE · 原创互动图谱</span><span>植物生长素　/　v1.0　/　离线单文件</span></footer>
+</main><dialog id="review"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2>把判断写成因果链</h2><h3>向光性</h3><p>尖端感受单侧光 → 生长素分布不均 → 尖端下部两侧细胞伸长不均 → 向光弯曲。IAA合成不以单侧光为必要条件。</p><h3>科学史证据</h3><table><tr><th>实验</th><th>支持的解释</th></tr><tr><td>达尔文</td><td>感光部位在尖端，弯曲在下部</td></tr><tr><td>鲍森·詹森</td><td>信号可透过琼脂等材料传递</td></tr><tr><td>拜尔</td><td>黑暗中偏置尖端也能造成生长差异</td></tr><tr><td>温特</td><td>促进物可转移至琼脂，偏放可引起弯曲</td></tr></table><h3>生理效应</h3><p>效应受浓度、器官敏感性与发育状态等影响。根通常较敏感，芽次之，茎相对不敏感。曲线在零线上方都属于促进。</p><h3>实验题两步</h3><p>① 有无生长素来源与可达路径？② 伸长区两侧受到的作用是否相同？云母片的方向与位置必须结合图判断。</p></dialog><script>'use strict';
+const $ = id => document.getElementById(id);
+const clamp = value => Math.max(0,Math.min(1,value));
+const mix = (a,b,t) => a+(b-a)*clamp(t);
+const phase = (t,a,b) => clamp((t-a)/(b-a));
+const many = (n,draw) => Array.from({length:n},(_,i)=>draw(i)).join('');
+const circle = (x,y,r,fill,stroke='none',width=1) => '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'"/>';
+const path = (d,fill='none',stroke='#536c5a',width=1.7) => '<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'" stroke-linejoin="round" stroke-linecap="round"/>';
+const rect = (x,y,w,h,fill,stroke='none',radius=5,width=1) => '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'" rx="'+radius+'"/>';
+const at = (x,y,s,body,rotation=0) => '<g transform="translate('+x+' '+y+') rotate('+rotation+') scale('+s+')">'+body+'</g>';
+const alpha = (v,body) => '<g opacity="'+clamp(v)+'">'+body+'</g>';
+const arrow = (d,color='#536c5a',dashed=false) => '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.5" '+(dashed?'stroke-dasharray="4 4" ':'')+'marker-end="url(#arrow)"/>';
+function text(x,y,value,size=18,color='#263c30',anchor='middle',bold=false){
+ return '<text x="'+x+'" y="'+y+'" text-anchor="'+anchor+'" font-family="Arial,Microsoft YaHei,sans-serif" font-size="'+size+'" font-weight="'+(bold?650:400)+'" fill="'+color+'">'+value+'</text>';
+}
+function tag(x,y,cn,en=''){
+ const w=Math.max(cn.length*18,en.length*8.2)+16;
+ return '<g class="annotation">'+rect(x-w/2,y-20,w,en?52:29,'#fff','none',3)+text(x,y,cn,18)+
+  (en?text(x,y+22,en,17,'#49614f'):'')+'</g>';
+}
+function callout(x,y,px,py,cn,en,active=true){
+ const w=Math.max(cn.length*18,en.length*8.1)+12;
+ return '<g class="annotation">'+circle(px,py,2.5,active?'#b6783f':'#63776b')+
+  path('M'+px+' '+py+'L'+(x-19)+' '+(y-8)+'H'+x,'none',active?'#9b784e':'#8b9e8e',1.1)+
+  rect(x-3,y-21,w,en?51:30,'#fff','none',2)+text(x+3,y,cn,18,'#293e31','start',active)+
+  (en?text(x+3,y+22,en,17,'#49614f','start'):'')+'</g>';
+}
+function panelTitle(x,y,letter,title){
+ return text(x,y,letter,21,'#263c30','start',true)+text(x+25,y,title,18,'#263c30','start');
+}
+function agar(x,y,w=43,h=22){
+ return rect(x,y,w,h,'url(#agarFill)','#6f9fa4',3)+rect(x+3,y+3,w-6,h-6,'none','#edf7f8',2);
+}
+function plantCell(x,y,w,h){
+ return rect(x,y,w,h,'#e3ebd6','#8b9f7c',7,2)+rect(x+4,y+4,w-8,h-8,'#edf1de','#a4b79a',6,1)+
+ rect(x+10,y+9,w-20,h-18,'#e0f2fe','#87b7cc',8)+circle(x+w-10,y+h-10,4,'#b0a1b8','#8f8599',.7);
+}
+function mitochondrion(x,y){
+ return at(x,y,1,path('M-13 0Q-10 -10 3 -7Q16 -6 14 3Q9 12 -3 7Q-13 7 -13 0Z','#e5c9ac','#ac8b6c',1)+
+ path('M-7 -2l4 5 4 -6 4 5 4 -4','none','#b39476',1));
+}
+const experimentConfig={
+ intact:{name:'达尔文 · 完整胚芽鞘',light:true,source:true,side:'right',sense:true,claim:'尖端感光，背光侧伸长较快，向左侧光源弯曲。'},
+ cap:{name:'达尔文 · 锡箔罩尖端',light:true,source:true,side:'none',sense:false,cap:true,claim:'尖端被遮光后，在本实验中直立生长。IAA合成仍可进行。'},
+ sleeve:{name:'达尔文 · 锡箔罩下部',light:true,source:true,side:'right',sense:true,sleeve:true,claim:'下部遮光仍向光弯曲，支持感光部位在尖端。'},
+ cut:{name:'达尔文 · 去尖端',light:true,source:false,side:'none',sense:false,noTip:true,claim:'在经典短时模型中，失去主要促进物来源后不明显伸长、不弯曲。'},
+ agar:{name:'鲍森·詹森 · 琼脂可传递',light:true,source:true,side:'right',sense:true,separator:'agar',claim:'促进生长的信号可穿过琼脂，继续传到下部。'},
+ mica:{name:'鲍森·詹森 · 云母阻断',light:true,source:true,side:'none',sense:true,separator:'mica',blocked:true,claim:'云母阻断尖端与下部间的信号传递，下部不明显伸长。'},
+ paal:{name:'拜尔 · 黑暗中右置尖端',light:false,source:true,side:'right',sense:false,offsetTip:true,claim:'黑暗中右侧接受的促进作用较强，向左弯曲。'},
+ wentLeft:{name:'温特 · 左置含IAA琼脂',light:false,source:true,side:'left',sense:false,noTip:true,agar:true,claim:'左侧促进作用较强，向右弯曲；空白琼脂对照不明显生长。'},
+ wentCenter:{name:'温特 · 居中含IAA琼脂',light:false,source:true,side:'none',sense:false,noTip:true,agar:true,claim:'两侧促进作用相近，直立伸长；空白对照不明显生长。'},
+ wentLight:{name:'温特变式 · 左置琼脂并给光',light:true,source:true,side:'left',sense:false,noTip:true,agar:true,claim:'去尖端后，本模型中IAA位置由琼脂决定，仍向右弯曲。'}
+};
+function shoot(baseX,baseY,height,bend,options={},t=0){
+ const tipX=baseX+bend,tipY=baseY-height;
+ const midX=baseX+bend*.22,midY=baseY-height*.52;
+ let d='M'+(baseX-18)+' '+baseY+'Q'+(midX-18)+' '+midY+' '+(tipX-17)+' '+(tipY+23);
+ d+=options.noTip?'L'+(tipX+17)+' '+(tipY+23):'Q'+tipX+' '+(tipY-12)+' '+(tipX+17)+' '+(tipY+23);
+ d+='Q'+(midX+18)+' '+midY+' '+(baseX+18)+' '+baseY+'Z';
+ let g=path(d,'url(#shootFill)','#587653',1.6);
+ g+=path('M'+baseX+' '+baseY+'Q'+midX+' '+midY+' '+tipX+' '+(tipY+30),'none','#74926a',1);
+ const track=(fraction,side=0)=>({x:baseX+bend*fraction*fraction+side,y:baseY-height*fraction});
+ if(options.source){
+  const count=18;
+  g+=many(count,i=>{
+   const side=options.side==='none'?(i%2===0?-8:8):options.side==='right'?(i%3===0?-8:8):(i%3===0?8:-8);
+   let f=(t*2.3+i/count)%1;
+   let u=.91-f*.78;
+   if(options.blocked)u=Math.max(.84,u);
+   if(t<.26)u=Math.max(.83,u);
+   const point=track(u,side);
+   return circle(point.x,point.y,2.1,'#d28b48');
+  });
+ }
+ if(options.separator){
+  const yy=tipY+48;
+  g+=options.separator==='agar'?agar(tipX-24,yy,48,13):rect(tipX-30,yy,60,5,'url(#steelFill)','#526273',1);
+ }
+ if(options.cap){
+  g+=path('M'+(tipX-21)+' '+(tipY+51)+'V'+(tipY+20)+'Q'+tipX+' '+(tipY-17)+' '+(tipX+21)+' '+(tipY+20)+'V'+(tipY+51)+'Z','url(#steelFill)','#526273',1.5);
+ }
+ if(options.sleeve){
+  g+=path('M'+(baseX+bend*.55-22)+' '+(baseY-height*.74)+'Q'+(midX-22)+' '+midY+' '+(baseX-21)+' '+(baseY-height*.2)+'L'+(baseX+21)+' '+(baseY-height*.2)+'Q'+(midX+22)+' '+midY+' '+(baseX+bend*.55+22)+' '+(baseY-height*.74)+'Z','url(#steelFill)','#526273',1.2);
+ }
+ if(options.agar){
+  const shift=options.side==='left'?-21:0;
+  g+=agar(tipX-19+shift,tipY+3,38,20);
+  if(options.source)g+=many(6,i=>circle(tipX-12+shift+i%3*9,tipY+10+Math.floor(i/3)*7,1.8,'#d58b49'));
+ }
+ if(options.offsetTip){
+  g+=path('M'+(tipX+3)+' '+(tipY+35)+'V'+(tipY+12)+'Q'+(tipX+22)+' '+(tipY-11)+' '+(tipX+39)+' '+(tipY+12)+'V'+(tipY+35)+'Z','url(#shootFill)','#587653',1.2);
+ }
+ return {g,tipX,tipY,track};
+}
+function lightRays(x,y,w=110){
+ return many(3,i=>arrow('M'+x+' '+(y+i*32)+'H'+(x+w),'#c29c58'))+
+ tag(x+w/2,y-18,'单侧光','Unilateral light');
+}
+function drawFigure1(t){
+ const cfg=experimentConfig[$('experiment').value];
+ const moving=phase(t,.25,.65),growth=phase(t,.61,1);
+ const canGrow=cfg.source&&!cfg.blocked;
+ const bend=canGrow?growth*(cfg.side==='right'?-66:cfg.side==='left'?66:0):0;
+ const height=240+(canGrow?growth*30:0);
+ const s=shoot(207,452,height,bend,{...cfg,noTip:cfg.noTip||cfg.offsetTip},t);
+ let art=panelTitle(22,35,'a','实验装置')+panelTitle(414,35,'b','组织放大');
+ let labels='';
+ art+=path('M389 59V510','none','#d8e0d1',1);
+ art+=rect(178,452,59,10,'#cec9bb','none',2)+path('M163 463H253','none','#a5ae98',1.2);
+ if(cfg.light)art+=lightRays(34,132,88);
+ else art+=tag(127,130,'黑暗环境','Dark control');
+ art+=s.g;
+ const blank=cfg.agar;
+ if(blank){
+  const control=shoot(322,452,173,0,{noTip:true,agar:true,source:false},0);
+  art+=control.g;
+  labels+=tag(321,493,'空白琼脂','Blank agar');
+ }
+ if(cfg.light){
+  labels+=tag(116,510,'向光侧','Lit side');
+  if(!blank)labels+=tag(288,510,'背光侧','Shaded side');
+ }
+ // Connection between macro specimen and the enlarged tissue.
+ art+=path('M'+(s.tipX+19)+' '+(s.tipY+35)+'L397 88','none','#a6b39b',1.1);
+ art+=path('M'+(207+bend*.4+19)+' '+(452-height*.55)+'L397 475','none','#a6b39b',1.1);
+ art+=rect(414,66,216,420,'#f8fbf5','#d0ddc6',6);
+ if(!cfg.noTip){
+  art+=many(12,i=>plantCell(433+i%6*27,95+Math.floor(i/6)*28,25,26));
+  art+=many(14,i=>{
+   const startX=437+(i%6)*25;
+   const endX=cfg.side==='right'?555+(i%2)*10:cfg.side==='left'?445+(i%2)*10:startX;
+   return circle(mix(startX,endX,moving),107+Math.floor(i/6)*25,2.4,'#d58b49');
+  });
+ }else if(cfg.agar){
+  art+=agar(442,111,155,32);
+  if(cfg.source)art+=many(11,i=>circle(cfg.side==='left'?451+i%4*12:456+i%9*15,121+i%2*10,2.4,'#d58b49'));
+ }else{
+  art+=path('M435 143H606','none','#829078',2);
+ }
+ const leftFactor=canGrow?1+growth*(cfg.side==='left'?.80:.27):1;
+ const rightFactor=canGrow?1+growth*(cfg.side==='right'?.80:.27):1;
+ const leftHeight=59*leftFactor,rightHeight=59*rightFactor;
+ [0,1].forEach(row=>{
+  art+=plantCell(439,224+row*(leftHeight+7),67,leftHeight);
+  art+=plantCell(541,224+row*(rightHeight+7),67,rightHeight);
+ });
+ if(cfg.source){
+  art+=many(20,i=>{
+   const right=cfg.side==='right'?i%3!==0:cfg.side==='left'?i%3===0:i%2===0;
+   const f=(t*2.5+i/20)%1;
+   const yy=cfg.blocked?165:165+f*211*moving;
+   return circle(right?547:445,yy,2.1,'#d58b49');
+  });
+ }
+ if(cfg.separator==='mica')art+=rect(425,175,197,5,'url(#steelFill)','#526273',0);
+ if(cfg.separator==='agar')art+=agar(425,174,197,12);
+ labels+=tag(474,205,cfg.light&&cfg.sense?'向光侧':'左侧');
+ labels+=tag(574,205,cfg.light&&cfg.sense?'背光侧':'右侧');
+ labels+=callout(675,102,558,118,cfg.agar?'琼脂中的促进物':cfg.noTip?'去除尖端':'尖端：感光与再分配',cfg.agar?'Auxin transferred to agar':cfg.noTip?'Tip removed':'Tip / perception',t<.42);
+ labels+=callout(675,256,603,273,'伸长区：细胞纵向伸长','Subapical elongation zone',t>=.42);
+ labels+=callout(675,398,585,371,'蓝色大液泡与细胞壁','Vacuole / cell wall',t>.62);
+ labels+=tag(520,526,canGrow&&cfg.side!=='none'?'促进程度不同 → 伸长差异':'比较来源与可达路径');
+ $('svg1').innerHTML=art+labels;
+ const stage=Math.min(3,Math.floor(t*4));
+ const messages=[
+ ['来源仍在，先看尖端。','生长素合成不需要单侧光。比较是否有尖端或外源IAA，以及尖端能否感受光。'],
+ ['先发生分布或路径变化。','单侧光可使尖端内生长素重新分配。琼脂可传递促进物，云母则可阻断所隔路径。'],
+ ['促进物能否到达伸长区？','比较两侧向下传递的路径；再判断下部细胞接受的作用是否相同。'],
+ ['细胞伸长差异，形成宏观弯曲。','在经典促进浓度范围内，生长素较多侧可伸长较快，胚芽鞘向另一侧弯曲。']
+ ];
+ $('phase1').textContent='STEP 0'+(stage+1)+' / 04';
+ $('title1').textContent=messages[stage][0];
+ $('text1').textContent=messages[stage][1];
+ $('result1').textContent=cfg.claim;
+}
+
+
+
+function transportCell(x,y){
+ let g=plantCell(x,y,116,100)+mitochondrion(x+89,y+79);
+ g+=rect(x+8,y-3,13,13,'#7caa98','#4d7d6c',3);
+ g+=path('M'+(x+14)+' '+(y+1)+'v10','none','#eff8ed',1.3);
+ [x+15,x+99].forEach(xx=>{
+  g+=path('M'+(xx-6)+' '+(y+91)+'q6 -8 12 0v12h-12Z','#d69070','#ae684e',1.3);
+  g+=arrow('M'+xx+' '+(y+94)+'v17','#a56a45');
+ });
+ return g;
+}
+function drawFigure2(t){
+ const inverted=$('orientation').value==='inverted';
+ const gravity=$('gravity').value==='earth';
+ const distribution=phase(t,.12,.49),growth=phase(t,.49,1)*(gravity?1:0);
+ let art=panelTitle(22,35,'a','茎段的形态学方向')+panelTitle(503,35,'b','横放幼苗的重力响应');
+ let labels='';
+ art+=path('M480 59V513','none','#d8e0d1',1);
+ art+=agar(155,80,108,29)+agar(155,410,108,29);
+ art+=many(11,i=>circle(164+i%6*16,90+Math.floor(i/6)*10,2.5,'#d28b48'));
+ let cells=transportCell(150,145)+transportCell(150,264);
+ if(inverted)cells=at(208,254.5,1,at(-208,-254.5,1,cells),180);
+ art+=cells;
+ if(!inverted){
+  art+=many(20,i=>{
+   const f=(t*2.1+i/20)%1;
+   const yy=110+f*299*distribution;
+   let xx=i%2===0?156:260;
+   if(Math.abs(yy-242)<12||Math.abs(yy-361)<12||Math.abs(yy-146)<10||Math.abs(yy-265)<10)xx=i%2===0?165:249;
+   return circle(xx,yy,2.4,'#d28b48');
+  });
+  art+=many(Math.floor(11*phase(t,.6,1)),i=>circle(166+i%6*15,420+Math.floor(i/6)*9,2.4,'#d28b48'));
+ }else{
+  art+=many(7,i=>circle(164+i*14,119+Math.sin(i)*3,2.3,'#d28b48'));
+  art+=path('M179 124H237','none','#64748b',1.5);
+ }
+ const proteinY=inverted?150:242;
+ labels+=callout(306,178,inverted?167:249,proteinY,'PIN：极性输出','Polar efflux');
+ labels+=callout(306,299,inverted?251:165,inverted?367:148,'AUX1：输入','Influx carrier');
+ labels+=tag(210,65,'上方供体','Donor agar');
+ labels+=tag(210,488,inverted?'下方：未检出净输入':'下方：IAA可到达','Receiver agar');
+ labels+=tag(90,133,inverted?'形态学下端':'形态学上端');
+ labels+=tag(90,386,inverted?'形态学上端':'形态学下端');
+ labels+=tag(368,379,'代谢供能','ATP / H⁺ pump');
+ art+=arrow('M300 357L263 339','#8c9c83',true);
+
+ const baseX=750,baseY=264;
+ const stem=shoot(0,0,177+growth*13,growth*65,{source:true,side:gravity&&distribution>.5?'left':'none'},t);
+ const root=shoot(0,0,171+growth*13,growth*65,{source:true,side:gravity&&distribution>.5?'right':'none'},t);
+ art+=at(baseX,baseY,1,stem.g,-90);
+ art+=at(baseX,baseY,1,root.g.replaceAll('url(#shootFill)','url(#rootFill)'),90);
+ art+=circle(baseX,baseY,17,'#a1af80','#6e845b');
+ const stemFar=stem.track(.58,12),stemNear=stem.track(.58,-12);
+ const rootFar=root.track(.58,-12),rootNear=root.track(.58,12);
+ art+=circle(baseX+stemFar.y,baseY-stemFar.x,4,'#527c68');
+ art+=circle(baseX+stemNear.y,baseY-stemNear.x,4,'#c27b47');
+ art+=circle(baseX-rootFar.y,baseY+rootFar.x,4,'#527c68');
+ art+=circle(baseX-rootNear.y,baseY+rootNear.x,4,'#c27b47');
+ labels+=tag(baseX+stemFar.y-5,baseY-stemFar.x-18,'C');
+ labels+=tag(baseX+stemNear.y-5,baseY-stemNear.x+38,'D');
+ labels+=tag(baseX-rootFar.y+4,baseY+rootFar.x-18,'A');
+ labels+=tag(baseX-rootNear.y+4,baseY+rootNear.x+38,'B');
+ labels+=tag(615,93,'茎 / Shoot');
+ labels+=tag(869,93,'根 / Root');
+ labels+=tag(625,398,gravity?'C < D：两侧促进':'理想对照：无定向差异');
+ labels+=tag(859,398,gravity?'A < B：促进与抑制':'根茎均无定向弯曲');
+ labels+=callout(530,469,baseX+stemNear.y,baseY-stemNear.x,'茎：近地侧伸长较快','Positive growth response',growth>.2);
+ labels+=callout(795,469,baseX-rootNear.y,baseY+rootNear.x,'根：近地侧伸长受抑','Root sensitivity',growth>.2);
+ if(gravity){
+  art+=arrow('M966 129V213','#7e8c79');
+  labels+=tag(961,116,'g');
+ }
+ $('svg2').innerHTML=art+labels;
+ const step=Math.min(3,Math.floor(t*4));
+ $('phase2').textContent='STEP 0'+(step+1)+' / 04';
+ $('title2').textContent=['先固定形态学方向。','IAA如何逐细胞转移？','相同分布，响应可能不同。','用伸长差异解释弯曲。'][step];
+ $('text2').textContent=[
+  '正置和倒置只改变空间朝向。所画茎细胞的基部PIN定位仍与自身形态学方向对应。',
+  'AUX1参与输入，PIN定位参与输出方向；ATP依赖的细胞代谢和质子泵等维持跨膜运输条件。',
+  '重力定向刺激可使近地侧IAA较多。在本模型的浓度范围内，茎近地侧促进较强，根近地侧受抑。',
+  '茎下侧较快伸长而向上弯；根上侧较快伸长而向下弯。根的情况在本图中体现促进与抑制。'
+ ][step];
+ $('result2').textContent=inverted?'倒置茎段：在该供体—受体条件下，未检出逆形态学方向的净向下运输。':'正置茎段：可沿形态学上端到下端方向向受体输送IAA。';
+}
+function response(logValue,peak){
+ const distance=logValue-peak;
+ return distance<=0?Math.exp(-.64*distance*distance):Math.max(-.84,1-distance*distance/4);
+}
+const organs=[{name:'根',peak:-10,color:'#477b64'},{name:'芽',peak:-8,color:'#b9873a'},{name:'茎',peak:-4,color:'#427b8d'}];
+function curvePath(organ){
+ const X=x=>78+(x+12)/10*485,Y=y=>296-y*173;
+ let d='';
+ for(let i=0;i<=240;i++){const x=-12+i/24;d+=(i?'L':'M')+X(x)+' '+Y(response(x,organ.peak));}
+ return d;
+}
+function leaf(x,y,length,angle=0){
+ return at(x,y,1,path('M0 0Q'+(length*.32)+' '+(-length*.45)+' '+length+' '+(-length*.17)+'Q'+(length*.65)+' '+(length*.3)+' 0 0Z','url(#shootFill)','#6f8a60',1.1)+path('M0 0L'+(length*.86)+' '+(-length*.15),'none','#6e855c',.8),angle);
+}
+function drawFigure3(t){
+ const log=+$('concentration').value,mode=$('apical').value;
+ const change=phase(t,.12,.95);
+ const release=mode==='cut'?change:0;
+ const flow=mode==='cut'?1-change:1;
+ let art=panelTitle(22,35,'a','器官敏感性的示意曲线')+panelTitle(644,35,'b','顶端优势与摘顶');
+ let labels='';
+ const X=x=>78+(x+12)/10*485,Y=y=>296-y*173;
+ art+=rect(78,94,485,202,'#eff5ed','none',0)+rect(78,296,485,159,'#fbefea','none',0);
+ art+=path('M78 80V455H566','none','#667d6c',1.4)+path('M78 296H563','none','#7a8c7a',1.3);
+ [-12,-10,-8,-6,-4,-2].forEach(value=>{
+  art+=path('M'+X(value)+' 296V303','none','#6b806d',1);
+  labels+=tag(X(value),483,'10'+superscript(value));
+ });
+ organs.forEach(organ=>{art+=path(curvePath(organ),'none',organ.color,2.6);});
+ art+=path('M'+X(log)+' 83V455','none','#67786a',1.2).replace('stroke-width="1.2"','stroke-width="1.2" stroke-dasharray="4 4"');
+ organs.forEach(organ=>{art+=circle(X(log),Y(response(log,organ.peak)),5,organ.color,'#fff',1.3);});
+ labels+=tag(106,75,'相对生长效应');
+ labels+=tag(323,531,'IAA浓度 / mol·L⁻¹（对数轴）');
+ labels+=tag(139,188,'促进区');
+ labels+=tag(146,439,'抑制区');
+ labels+=tag(52,305,'0');
+ labels+=tag(X(-10),Y(1)-12,'根');
+ labels+=tag(X(-8),Y(1)-12,'芽');
+ labels+=tag(X(-4),Y(1)-12,'茎');
+ const sameEffect=.60,leftLog=-4-Math.sqrt(-Math.log(sameEffect)/.64),rightLog=-4+2*Math.sqrt(1-sameEffect);
+ art+=path('M'+X(leftLog)+' '+Y(sameEffect)+'H'+X(rightLog),'none','#85a0a5',1.2).replace('stroke-width="1.2"','stroke-width="1.2" stroke-dasharray="4 3"');
+ art+=circle(X(leftLog),Y(sameEffect),4,'#fff','#427b8d',1.5)+circle(X(rightLog),Y(sameEffect),4,'#fff','#427b8d',1.5);
+ labels+=tag(X(leftLog)-9,Y(sameEffect)-17,'P₁');
+ labels+=tag(X(rightLog)+9,Y(sameEffect)-17,'P₂');
+ labels+=tag(357,66,'示意峰区，非普适常数');
+
+ art+=path('M766 470Q764 310 768 145','none','#648752',11);
+ art+=path('M766 470Q764 310 768 145','none','#9db585',5);
+ const topPresent=mode==='intact';
+ if(topPresent)art+=leaf(767,144,41,-72)+leaf(770,146,31,-120);
+ else{
+  art+=path('M754 149H781','none','#627d53',3);
+  if(mode==='paste')art+=rect(750,132,33,17,'#c8bd9b','#9b9478',4)+many(5,i=>circle(755+i*5,140,2,'#ce8a45'));
+ }
+ art+=leaf(766,369,61,165)+leaf(767,329,58,-16);
+ const length=18+release*110;
+ art+=path('M767 251Q'+(780+length*.2)+' '+(238-length*.1)+' '+(786+length)+' '+(250-length*.44),'none','#648752',5);
+ art+=leaf(786+length*.49,247-length*.23,30+release*14,-35);
+ art+=leaf(786+length,250-length*.44,24+release*20,-30);
+ const secondLength=15+release*77;
+ art+=path('M766 302Q'+(742-secondLength*.25)+' '+(291-secondLength*.1)+' '+(750-secondLength)+' '+(299-secondLength*.48),'none','#648752',4);
+ art+=leaf(750-secondLength,299-secondLength*.48,25+release*15,160);
+ art+=many(Math.round(17*flow),i=>{
+  const f=(t*2+i/17)%1;
+  return circle(765+(i%2)*4,160+f*245,2.5,'#d18a45');
+ });
+ const effectLog=mix(-5.3,-8,release);
+ const effectValue=response(effectLog,-8);
+ art+=circle(X(effectLog),Y(effectValue),7,'#fff','#a45f43',2);
+ labels+=tag(799,96,topPresent?'保留顶芽':mode==='cut'?'摘除顶芽':'切口补IAA');
+ labels+=callout(657,415,766,204,'主茎IAA信号','Main-stem auxin',flow>.5);
+ labels+=tag(817,508,release>.6?'侧枝伸展':'侧芽生长受抑');
+ labels+=tag(864,348,'侧芽效应点为示意映射');
+ $('svg3').innerHTML=art+labels;
+ $('concentrationValue').textContent='10^('+log.toFixed(2)+') mol/L';
+ $('title3').textContent='同一浓度，分器官判断。';
+ $('effectReadouts').replaceChildren();
+ organs.forEach(organ=>{
+  const value=response(log,organ.peak),row=document.createElement('div');
+  row.className='effect';
+  const name=document.createElement('span'),result=document.createElement('b');
+  name.textContent=organ.name;
+  result.textContent=Math.abs(value)<.025?'接近对照':value>0?'促进（相对对照）':'抑制（相对对照）';
+  row.append(name,result);$('effectReadouts').append(row);
+ });
+ $('result3').textContent=mode==='cut'?'摘除顶芽后，主茎信号改变，侧芽生长可解除抑制。':mode==='paste'?'切口补充IAA可恢复对侧芽的抑制效应。':'保留顶芽时，顶端优势维持，侧芽生长受到抑制。';
+}
+function superscript(value){
+ const mapping={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','.':'·'};
+ return String(value).split('').map(character=>mapping[character]||character).join('');
+}
+
+
+
+const deviceCases=[
+ {name:'尖端中央纵向云母隔片',side:'none',source:true,mica:'vertical',result:'直立生长',reason:'有来源，但纵隔阻断尖端左右的横向再分配。两侧促进作用相近。'},
+ {name:'背光侧尖端基部横隔',side:'left',source:true,mica:'upperRight',result:'向右弯曲（本装置）',reason:'云母片从右侧横向插入尖端基部，阻断右侧下传路径；下部左侧接受的促进作用较强。'},
+ {name:'伸长区以下背光侧横隔',side:'right',source:true,mica:'lowerRight',result:'仍向左侧光源弯曲',reason:'隔片位于本图伸长区下方，背光侧伸长区仍可得到IAA。位置改变，不能套用上一图结论。'},
+ {name:'左置IAA琼脂＋单侧光',side:'left',source:true,agar:true,noTip:true,result:'向右弯曲',reason:'促进物从左置琼脂进入。无尖端，本模型中分布由琼脂位置决定，单侧光不改变该结果。'},
+ {name:'暗箱不动，花盆单独匀速旋转',side:'none',source:true,rotate:'pot',result:'平均受光近似均匀，直立生长',reason:'假定转动足够均匀、持续时间足够长，植株各侧轮流面对窗口，难以维持固定的生长差异。'},
+ {name:'花盆与开孔暗箱一起旋转',side:'right',source:true,rotate:'together',result:'相对于装置，弯向窗口',reason:'窗口与花盆相对位置固定。虽整套装置旋转，来自窗口的光仍作用于植株相同一侧。'}
+];
+const cardTimes=[0,0,0,0,0,0];
+let selectedDevice=0;
+function deviceImage(index,t){
+ const cfg=deviceCases[index];
+ const growth=phase(t,.38,1);
+ const bend=(cfg.side==='right'?-34:cfg.side==='left'?34:0)*growth;
+ const plant=shoot(145,192,107+growth*12,bend,{...cfg,source:false},t);
+ let art=rect(0,0,320,237,'#fff','none',0);
+ art+=text(17,28,String(index+1).padStart(2,'0'),20,'#3a5a40','start',true);
+ if(cfg.rotate){
+  art+=rect(61,40,177,158,'#f4f5ed','#aebda1',3);
+  art+=rect(57,88,8,28,'#fff','#aebda1',0);
+ }
+ art+=many(2,i=>arrow('M25 '+(104+i*28)+'H78','#c29c58'));
+ art+=plant.g;
+ art+=path('M108 192H182L171 217H120Z','#c9b89b','#9b8c75',1.2);
+ if(cfg.mica==='vertical')art+=rect(plant.tipX-2,plant.tipY+13,4,38,'url(#steelFill)','#64748b',0);
+ if(cfg.mica==='upperRight')art+=rect(plant.tipX-1,plant.tipY+36,30,4,'url(#steelFill)','#64748b',0);
+ if(cfg.mica==='lowerRight')art+=rect(146,174,31,4,'url(#steelFill)','#64748b',0);
+ art+=many(11,i=>{
+  const right=cfg.side==='right'?i%3!==0:cfg.side==='left'?i%3===0:i%2===0;
+  let u=.88-((t*2+i/11)%1)*.70;
+  if(cfg.mica==='upperRight'&&right)u=Math.max(.78,u);
+  const point=plant.track(u,right?7:-7);
+  return circle(point.x,point.y,1.9,'#d18a45');
+ });
+ if(cfg.agar)art+=agar(plant.tipX-36,plant.tipY+3,36,19);
+ if(cfg.rotate){
+  const angle=t*Math.PI*6;
+  const windowAngle=cfg.rotate==='together'?angle:Math.PI;
+  art+=circle(269,66,23,'#f7faf2','#9bae92',1.1)+circle(269,66,13,'#d4ddc5','#819673',1);
+  art+=circle(269+Math.cos(angle)*12,66+Math.sin(angle)*12,3,'#cf8a47');
+  art+=circle(269+Math.cos(windowAngle)*23,66+Math.sin(windowAngle)*23,4,'#7fa6a4');
+  art+=path('M250 39Q283 26 296 55','none','#647c65',1).replace('/>',' marker-end="url(#arrow)"/>');
+  art+=text(269,109,'俯视旋转',14,'#425b48');
+ }
+ art+=text(160,231,cfg.rotate==='together'?'以窗口坐标观察':'单侧光来自图左侧',15,'#425b48');
+ return art;
+}
+function drawFigure4(t){
+ cardTimes[selectedDevice]=t;
+ const cards=[...$('experimentGrid').children];
+ cards.forEach((card,index)=>{
+  card.querySelector('svg').innerHTML=deviceImage(index,cardTimes[index]);
+  card.setAttribute('aria-pressed',index===selectedDevice);
+ });
+ const cfg=deviceCases[selectedDevice];
+ $('gridTitle').textContent=cfg.name+' → '+cfg.result;
+ $('gridText').textContent=cfg.reason;
+}
+
+const times=[0,0,0,0];
+const playing=[false,false,false,false];
+const durations=[18,18,18,2.4];
+const renderers=[drawFigure1,drawFigure2,drawFigure3,drawFigure4];
+const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function render(index){
+ renderers[index](times[index]);
+ document.querySelector('[data-time="'+index+'"]').value=times[index]*100;
+ const duration=durations[index];
+ $('time'+index).textContent=(times[index]*duration).toFixed(index===3?1:0).padStart(2,'0')+' / '+duration+' 秒';
+ document.querySelector('[data-play="'+index+'"]').textContent=playing[index]?'Ⅱ 暂停观察':times[index]>=1?'↻ 再看一次':index===3?'▶ 重放当前装置':index===2?'▶ 播放处理效应':'▶ 播放过程';
+}
+function start(index){
+ playing.fill(false);
+ times[index]=reduced?1:0;
+ playing[index]=!reduced;
+ renderers.forEach((_,at)=>render(at));
+}
+function changeDevice(index){
+ if(index===selectedDevice&&playing[3])return;
+ cardTimes[selectedDevice]=times[3];
+ selectedDevice=index;
+ start(3);
+}
+deviceCases.forEach((cfg,index)=>{
+ const button=document.createElement('button');
+ button.type='button';button.className='device';
+ button.setAttribute('aria-label',cfg.name+'，点击播放');
+ button.innerHTML='<svg viewBox="0 0 320 237" aria-hidden="true"></svg><span class="device-name">'+cfg.name+'</span>';
+ button.onclick=()=>changeDevice(index);
+ button.onpointerenter=event=>{if(event.pointerType==='mouse')changeDevice(index)};
+ $('experimentGrid').append(button);
+});
+document.querySelectorAll('[data-play]').forEach(button=>button.onclick=()=>{
+ const index=Number(button.dataset.play),wasPlaying=playing[index];
+ playing.fill(false);
+ if(times[index]>=1)times[index]=0;
+ playing[index]=!wasPlaying;
+ renderers.forEach((_,at)=>render(at));
+});
+document.querySelectorAll('[data-reset]').forEach(button=>button.onclick=()=>{
+ const index=Number(button.dataset.reset);
+ times[index]=0;playing[index]=false;render(index);
+});
+document.querySelectorAll('[data-time]').forEach(input=>input.oninput=()=>{
+ const index=Number(input.dataset.time);
+ times[index]=Number(input.value)/100;playing[index]=false;render(index);
+});
+$('experiment').onchange=()=>start(0);
+$('orientation').onchange=()=>start(1);
+$('gravity').onchange=()=>start(1);
+$('apical').onchange=()=>start(2);
+$('concentration').oninput=()=>render(2);
+$('reviewOpen').onclick=()=>{playing.fill(false);renderers.forEach((_,index)=>render(index));$('review').showModal()};
+let lastRender=0;
+function tick(now){
+ requestAnimationFrame(tick);
+ if(document.hidden||$('review').open)return;
+ if(now-lastRender<32)return;
+ const elapsed=(now-lastRender)/1000;lastRender=now;
+ for(let index=0;index<4;index++){
+  if(!playing[index])continue;
+  times[index]=clamp(times[index]+Math.min(.1,elapsed)/durations[index]);
+  if(times[index]===1)playing[index]=false;
+  render(index);
+ }
+}
+renderers.forEach((_,index)=>render(index));
+requestAnimationFrame(tick);
+
+</script></body></html>

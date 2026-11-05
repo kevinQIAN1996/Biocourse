@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#326b72"><title>植物生长调节剂的应用｜从分子到生根实验</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@500;600&display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script><style>:root{color-scheme:light;--ink:#24392d;--muted:#42564a;--paper:#faf8f5;--edge:#dcded2;--green:#456c4c;--orange:#c87645}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:18px/1.65 Inter,"Microsoft YaHei",sans-serif}button,select,input{font:inherit;color:inherit}button{cursor:pointer;background:white;border:1px solid #a9b6a6;border-radius:5px;padding:7px 13px;font-weight:600;transition:background .15s,transform .15s}button:hover{background:#edf1e8}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb6a30;outline-offset:3px}a{color:#355f48}header,main{width:min(1490px,94%);margin:auto}header{min-height:77px;display:flex;gap:20px;align-items:center;justify-content:space-between;border-bottom:1px solid #abb8a7}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:700;font-size:20px}.brand svg{width:29px;height:34px}.brand small{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}.intro{display:flex;justify-content:space-between;align-items:end;padding:32px 0 24px;gap:20px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.12em;font-weight:700;margin:0 0 12px}h1{font-family:"Source Serif 4",Georgia,"Songti SC","SimSun",serif;font-size:clamp(38px,4.6vw,66px);line-height:1.2;margin:0 0 17px;font-weight:600;letter-spacing:-.03em}h1 span{font-size:23px;letter-spacing:0;margin-left:24px;display:inline-block;border-left:1px solid #b9c4b3;padding-left:22px;font-family:Inter,"Microsoft YaHei",sans-serif}.subtitle{font-size:18px;line-height:1.8;margin:0;color:var(--muted)}.intro-note{min-width:210px;padding-left:25px;border-left:1px solid #b9c4b3}.intro-note i{font:italic 36px "Source Serif 4",Georgia,serif}.intro-note p{font-size:14px;color:var(--muted);margin:8px 0 0}nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:27px;border-bottom:1px solid #c8d1c1;padding-bottom:18px}nav a{font-size:16px;text-decoration:none;background:#f0f1e9;padding:7px 16px;border-radius:4px;font-weight:600}nav a:hover{background:#e0e9da}.figure{background:#fff;border:1px solid #dcded2;border-radius:9px;margin:23px 0 38px;box-shadow:0 5px 20px #29422b06;scroll-margin:15px;overflow:hidden}.fig-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:21px 23px 16px;border-bottom:1px solid #e0e3d9}.fig-heading .eyebrow{margin:0 0 5px}.fig-heading h2{font:600 28px/1.4 "Source Serif 4",Georgia,"Songti SC",serif;margin:0}.fig-heading>span{font-size:13px;color:var(--muted)}.context{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 22px;background:#f6f7f2;border-bottom:1px solid #dde2d6}.context label{font-size:15px;font-weight:650}.context select{border:1px solid #abb9a5;border-radius:4px;background:#fff;padding:6px 12px;max-width:100%;min-width:0;font-size:16px}.figure-body{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,1fr)}.scroll-stage{min-width:0;overflow-x:auto;background:#fff}.scroll-stage>svg{display:block;width:100%;min-width:780px}aside{padding:22px;border-left:1px solid #e0e3d9;background:#fcfcf8}.phase{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:0 0 12px}aside h3{font-size:24px;line-height:1.5;margin:0 0 14px;font-weight:650}aside>p{font-size:17px;color:var(--muted);margin:0 0 14px}aside .small{font-size:14px;line-height:1.8;margin-top:17px}.result{background:#eff3e9;border-left:3px solid #77966a;padding:13px;margin-top:17px}.result span{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}.result b{font-size:17px}.toolbar{display:flex;gap:12px;align-items:center;padding:14px 20px;background:#fcfcf8;border-top:1px solid #dce2d4;flex-wrap:wrap}.toolbar .play{background:#456c4c;border-color:#456c4c;color:white;min-width:154px}.toolbar .play:hover{background:#355c3b}.toolbar>label{flex:1;min-width:150px;display:flex;align-items:center}input[type=range]{width:100%;accent-color:#52764e;cursor:pointer}output{font:14px Consolas,monospace;min-width:100px;text-align:right;color:var(--muted)}.fig-caption{padding:14px 23px;margin:0;font-size:15px;color:#3e5343;border-top:1px solid #e1e5dc;line-height:1.8}.fig-caption b{color:var(--ink)}.probe-context input{width:min(270px,90%)}.probe-context output{min-width:170px;font-size:16px}.effect{padding:7px 0;border-bottom:1px solid #dfe5da;display:flex;gap:7px;justify-content:space-between;font-size:16px}.effect b{font-weight:650}.grid-instruction{padding:14px 23px 0;margin:0;font-size:16px;color:var(--muted)}.experiment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:18px 20px}.device{border:1px solid #cfd8c7;padding:0;border-radius:5px;background:#fff;text-align:left;overflow:hidden;font-weight:400}.device[aria-pressed=true]{border:2px solid #52764e;background:#fbfdf8}.device svg{display:block;width:100%;height:auto}.device-name{display:block;padding:9px 12px;border-top:1px solid #e3e7db;font-size:15px;line-height:1.6;min-height:65px}.grid-result{margin:0 20px 20px;padding:15px 17px;background:#f0f4e9;border-left:3px solid #77966a}.grid-result b{font-size:19px}.grid-result p{font-size:17px;margin:5px 0 0}.notes{border:1px solid #d6decd;background:#fff;border-radius:7px;margin:20px 0}.notes summary{padding:16px 20px;cursor:pointer;font-weight:600}.notes>div{padding:0 20px 20px;color:var(--muted);font-size:16px}.notes p{margin:12px 0}.notes li{margin:6px 0}footer{border-top:1px solid #bdcbb5;padding:22px 0;display:flex;justify-content:space-between;gap:15px;font-size:13px;color:var(--muted)}dialog{color:var(--ink);background:#fffefa;border:1px solid #adbda2;border-radius:10px;padding:28px;width:min(690px,94vw);max-height:88vh;overflow:auto}dialog::backdrop{background:#203a2a99}dialog form{text-align:right}dialog h2{font-size:30px;margin:14px 0}dialog h3{font-size:21px;margin:18px 0 7px}dialog p{font-size:17px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:8px;border-bottom:1px solid #d5ddcd;text-align:left}dialog .eyebrow{margin-top:18px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}[hidden]{display:none!important}
+@media(max-width:1100px){.brand small{display:none}.figure-body{grid-template-columns:minmax(0,2.6fr) minmax(240px,1fr)}aside{padding:17px}.fig-heading>span{display:none}}
+@media(max-width:900px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce2d4;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.phase,aside h3,aside>p{grid-column:1}.result{grid-column:2;grid-row:1/4;margin-top:0;align-self:start}aside .small{grid-column:2;grid-row:4}.intro-note{display:none}.experiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{gap:8px;min-height:66px}.brand{font-size:16px}header button{font-size:14px;padding:6px 8px}.intro{padding-top:25px}h1 span{display:block;margin:12px 0 0;padding:0;border:0;font-size:23px}nav{gap:6px}nav a{font-size:14px;padding:6px 10px}.fig-heading{padding:16px}.fig-heading h2{font-size:25px}.context{padding:12px;gap:8px}.context select{width:100%}.toolbar{padding:12px;gap:8px}.toolbar>label{order:4;flex-basis:100%}.toolbar output{margin-left:auto;min-width:auto}.toolbar button{font-size:15px;padding:7px 10px}aside{display:block}.result{margin-top:12px}.fig-caption{padding:12px 16px}footer{flex-direction:column}.experiment-grid{grid-template-columns:1fr;padding:14px}.device-name{min-height:0}.probe-context input{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+
+#svgLibrary{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+
+
+/* Review atlas and linked literature */
+.hormone-grid{display:flex;gap:6px;flex-wrap:wrap}.hormone-grid button{font-size:15px;padding:5px 10px}.hormone-grid button[aria-pressed=true]{background:#edf1e8;border-color:#56764e}.references{margin:38px 0;background:white;border:1px solid #dddcd2;border-radius:8px;padding:25px}.ref-heading{border-bottom:1px solid #cbd5c4;margin-bottom:15px}.ref-heading h2{font-family:"Source Serif 4",Georgia,"Songti SC",serif;font-size:32px;margin:0 0 12px}.ref-heading>p{color:#42564a;font-size:16px}.ref-list{list-style:none;padding:0;margin:0}.ref-list>li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;border-bottom:1px solid #dfe4d9;padding:18px 0;scroll-margin-top:18px}.ref-list p{font-size:16px;margin:0 0 8px;overflow-wrap:anywhere}.ref-note{font-size:14px!important;line-height:1.8;color:#42564a}.ref-list>li:target{background:#f4ebd4;outline:2px solid #bc8f4a;outline-offset:6px;transition:background .2s}sup{font-size:12px;line-height:0;vertical-align:super;margin-left:3px}sup a{font-weight:700;color:#27685d;text-decoration:none;padding:2px}sup a:hover{text-decoration:underline}.fig-heading h2 sup{font-size:12px}.ref-highlight{background:#f4ebd4}#svgLibrary{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}.review-table{overflow:auto}#review table{font-size:15px;min-width:520px}.context select{max-width:450px}.synthesis{font-size:14px;color:#42564a}@media(max-width:550px){.references{padding:16px}.ref-list>li{grid-template-columns:28px minmax(0,1fr);gap:5px}.ref-list p{font-size:15px}.context select{max-width:100%}}
+
+
+.result b span{display:inline;font-size:17px;margin:0}.table-scroll{max-width:100%;overflow:auto}.scroll-stage{position:relative}.ref-pulse{animation:reference-flash 1.4s ease-out}@keyframes reference-flash{from{box-shadow:0 0 0 5px #b98c4144}to{box-shadow:0 0 0 0 #b98c4100}}@media(max-width:800px){.scroll-stage:after{content:'图谱可左右滑动查看 →';position:sticky;left:0;display:block;width:100%;padding:7px 14px;box-sizing:border-box;background:#f2f5ed;color:#334938;font-size:14px;border-top:1px solid #dce2d4}}
+
+.history-strip{display:flex;gap:12px 22px;flex-wrap:wrap;padding:12px 23px;background:#f6f5ef;border-top:1px solid #e0e3d9;font-size:15px}.history-strip b{color:#355f48}.history-strip span{white-space:nowrap}
+
+.data-panel{border-top:1px solid #dce2d4;padding:0 22px;background:#fafbf6}.data-panel summary{padding:14px 0;cursor:pointer;font-weight:600;font-size:17px}.data-panel p{font-size:15px;color:#334b3b;line-height:1.8}.data-scroll{max-width:100%;overflow:auto}.data-scroll table{min-width:430px}.method-note{font-size:15px;color:#42564a}.intro-note{min-width:250px}.intro-note i{font-size:30px}.result b span{display:inline}
+</style></head><body>
+<header><a class="brand" href="#top">植物机制图谱 <small>PLANT SCIENCE · APPLIED REVIEW</small></a><button id="reviewOpen">调节剂与生根实验速查 ↗</button></header>
+<main id="top">
+<section class="intro"><div><p class="eyebrow">VOLUME 05 / ARTICLE 03 / 选择性必修一</p><h1>从分子作用，到生根证据<span>植物生长调节剂的应用</span></h1><p class="subtitle">稳定不等于无法代谢，膨大不等于结出种子。<br>用四幅机制图，连接化学调控、农业目标与实验判断。</p></div><div class="intro-note"><i>Growth, by design.</i><p>先明确目标，再选择处理。<br>用证据界定效应与最适范围。</p></div></section>
+<nav aria-label="图谱导航"><a href="#figure1">01 分子与代谢</a><a href="#figure2">02 农业应用</a><a href="#figure3">03 生根实验</a><a href="#figure4">04 稀释判别</a><a href="#references">References 文献</a></nav>
+<div id="svgLibrary" aria-hidden="true"><svg><defs>
+<linearGradient id="shootFill"><stop stop-color="#c4d3aa"/><stop offset=".5" stop-color="#9eb988"/><stop offset="1" stop-color="#648c65"/></linearGradient>
+<linearGradient id="cellWall"><stop stop-color="#e4ecd7"/><stop offset="1" stop-color="#c7d7b6"/></linearGradient>
+<linearGradient id="glassFill"><stop stop-color="#ecf7f9" stop-opacity=".7"/><stop offset="1" stop-color="#afd1d7" stop-opacity=".45"/></linearGradient>
+<linearGradient id="tuberFill" x2="0" y2="1"><stop stop-color="#e7d1a3"/><stop offset="1" stop-color="#c6a77a"/></linearGradient>
+<linearGradient id="fruitFill"><stop stop-color="#b6ca8b"/><stop offset="1" stop-color="#84aa6a"/></linearGradient>
+<marker id="arrow" refX="8" refY="5" markerWidth="6" markerHeight="6" viewBox="0 0 10 10" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#62766b"/></marker>
+</defs></svg></div>
+
+<section class="figure" id="figure1">
+ <div class="fig-heading"><div><p class="eyebrow">FIGURE 1 / STRUCTURE, SIGNAL & METABOLISM</p><h2>为什么有些调节剂的作用更持久？<sup><a href="#ref-1">[1]</a><a href="#ref-2">[2]</a></sup></h2></div><span>天然与人工 × 结构与效应</span></div>
+ <div class="context"><label for="track">观察路径</label><select id="track"><option value="both">IAA / NAA 双轨对照</option><option value="IAA">聚焦天然IAA</option><option value="NAA">聚焦合成NAA</option></select><label for="molecule">右侧分子图鉴</label><select id="molecule"><option value="IBA">IBA · 与IAA结构相近</option><option value="NAA">NAA · 萘乙酸</option><option value="D24">2,4-D · 生长素样效应</option><option value="CCC">CCC · 控制徒长</option><option value="CPPU">CPPU · 细胞分裂素样效应</option></select></div>
+ <div class="figure-body"><div class="scroll-stage"><svg id="svg1" viewBox="0 0 1000 580" aria-label="IAA与NAA的代谢差异及调节剂分子图鉴"></svg></div><aside><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p><div class="result"><span>分子图鉴</span><b id="result1"></b></div><p class="small" id="note1"></p></aside></div>
+ <div class="toolbar"><button class="play" data-play="0">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">图1时间</span><input data-time="0" type="range" min="0" max="100" step=".1" value="0"></label><output id="time0"></output></div>
+ <p class="fig-caption"><b>Figure 1.</b> 原创机制示意，依据生根、IAA氧化/缀合及NAA代谢研究绘制。结构骨架与残余信号为教学示意，不是分子对接或半衰期实测。植物生长调节剂可人工生产并用于调控生长发育；IBA也可天然存在。<sup><a href="#ref-1">[1]</a><a href="#ref-2">[2]</a><a href="#ref-9">[9]</a></sup></p>
+</section>
+
+<section class="figure" id="figure2">
+ <div class="fig-heading"><div><p class="eyebrow">FIGURE 2 / MATCH THE TREATMENT TO THE GOAL</p><h2>目标是成熟、果肉、种子，还是抑芽？<sup><a href="#ref-3">[3]</a><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup></h2></div><span>农业应用 × 证据边界</span></div>
+ <div class="context"><label for="application">应用分镜</label><select id="application"><option value="ethephon">A 乙烯利 · pH与乙烯释放</option><option value="fruit">B 单性结实 · 果肉与种子</option><option value="GA">C GA · 葡萄、大麦与纤维</option><option value="MH">D MH · 抑芽与合理施用</option></select></div>
+ <div class="figure-body"><div class="scroll-stage"><svg id="svg2" viewBox="0 0 1000 580" aria-label="植物生长调节剂农业应用过程"></svg></div><aside><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p><div class="result"><span>应用判据</span><b id="result2"></b></div><p class="small" id="note2"></p></aside></div>
+ <div class="toolbar"><button class="play" data-play="1">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">图2时间</span><input data-time="1" type="range" min="0" max="100" step=".1" value="0"></label><output id="time1"></output></div>
+ <p class="fig-caption"><b>Figure 2.</b> 原创应用机制示意。文献分别支持乙烯利释放、单性结实、葡萄GA响应与MH抑制生长；未把某一研究外推为所有作物的统一处方。图中不提供实际施药剂量。<sup><a href="#ref-3">[3]</a><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a><a href="#ref-6">[6]</a><a href="#ref-9">[9]</a></sup></p>
+</section>
+
+<section class="figure" id="figure3">
+ <div class="fig-heading"><div><p class="eyebrow">FIGURE 3 / FROM PILOT TO COMPARISON</p><h2>处理方式一致，浓度比较才有意义。<sup><a href="#ref-7">[7]</a><a href="#ref-8">[8]</a></sup></h2></div><span>插条解剖 × 模拟数据</span></div>
+ <div class="context"><label for="method">处理条件</label><select id="method"><option value="soak">遮阴高湿 · 基部浸泡</option><option value="sun">错误对照 · 阳光干燥浸泡</option><option value="dip">较高浓度 · 短时沾蘸</option></select><label for="experiment">浓度设计</label><select id="experiment"><option value="pilot">预实验 · 粗梯度</option><option value="formal">正式实验 · 窄区间细梯度</option></select></div>
+ <div class="figure-body"><div class="scroll-stage"><svg id="svg3" viewBox="0 0 1000 580" aria-label="插条浸泡与沾蘸处理以及生根浓度响应曲线"></svg></div><aside><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p><div class="result"><span>实验结论</span><b id="result3"></b></div><p class="small" id="note3"></p></aside></div>
+ <div class="toolbar"><button class="play" data-play="2">▶ 播放过程</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">图3处理与培养时间</span><input data-time="2" type="range" min="0" max="100" step=".1" value="0"></label><output id="time2"></output></div>
+ <details class="data-panel"><summary>展开模拟原始记录与设计说明</summary><div class="data-scroll" id="dataTable"></div><p>每组5根插条，记录为整数根数；图中点为均值，误差线为样本标准差。数据由本课模型生成，不是论文数据。mg/L在稀水溶液中与质量ppm数值近似相同。</p><p>预实验帮助确定范围、发现操作问题。正式实验继续判断促进/抑制时需保留匹配空白；若使用溶剂，应设溶剂对照。重复可估计变异并提高均值精度，不能消除系统偏差。</p></details>
+ <p class="fig-caption"><b>Figure 3.</b> 原创实验模型。形态学上下端不可倒置；插条材料、芽数、处理时间和培养条件应一致。图中4.0 mg/L是模拟数据的最佳已测点，真实最适浓度需通过材料特异的实验确定。<sup><a href="#ref-7">[7]</a><a href="#ref-8">[8]</a><a href="#ref-9">[9]</a></sup></p>
+</section>
+
+<section class="figure" id="figure4">
+ <div class="fig-heading"><div><p class="eyebrow">FIGURE 4 / SAME RESPONSE, DIFFERENT CONCENTRATIONS</p><h2>同样长出12条根，怎样区分峰值两侧？<sup><a href="#ref-8">[8]</a><a href="#ref-9">[9]</a></sup></h2></div><span>稀释预测 × 对照推理</span></div>
+ <div class="context"><label for="dilution">稀释幅度</label><select id="dilution"><option value="0.8">适度稀释 · 保留原浓度80%</option><option value="0.2">过度稀释 · 保留原浓度20%</option></select><span class="method-note">用新一批插条比较处理结果</span></div>
+ <div class="figure-body"><div class="scroll-stage"><svg id="svg4" viewBox="0 0 1000 580" aria-label="未知浓度在峰值两侧的稀释响应预测"></svg></div><aside><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p><div class="result"><span>实验设计三步</span><b>① 分取未知液，设未稀释与稀释组。<br>② 新插条随机分组，条件一致并重复。<br>③ 比较均值，结合已知曲线与稀释幅度判断。</b></div><p class="small" id="note4"></p></aside></div>
+ <div class="toolbar"><button class="play" data-play="3">▶ 播放过程</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">图4稀释与独立培养过程</span><input data-time="3" type="range" min="0" max="100" step=".1" value="0"></label><output id="time3"></output></div>
+ <p class="fig-caption"><b>Figure 4.</b> 与图3共用同一模拟响应函数。稀释后根数代表独立插条组培养后的期望均值，不是给原插条加水后根立即增减；推理依赖已知的局部单调区间及适度稀释。<sup><a href="#ref-7">[7]</a><a href="#ref-8">[8]</a><a href="#ref-9">[9]</a></sup></p>
+</section>
+
+<section class="references" id="references"><div class="ref-heading"><p class="eyebrow">REFERENCES & FOUNDATIONAL LITERATURE</p><h2>参考文献与证据范围</h2><p>角标支持定位与高亮。每条区分原始发现、后续机制和教学模型，未核实的题名、DOI和教材页码不补造。</p></div>
+<ol class="ref-list">
+<li id="ref-1" tabindex="-1"><b>[1]</b><div><p>Zimmerman, P. W. & Wilcoxon, F. (1935). Several chemical growth substances which cause initiation of roots and other responses in plants. <i>Contributions from Boyce Thompson Institute</i> <strong>7</strong>, 209–229.</p><p><a href="https://paperzz.com/doc/6761724/several-chemical-growth-substances-which-cause" target="_blank" rel="noopener">原文转录 ↗</a> · DOI未检得。书目可与<a href="https://journals.ashs.org/downloadpdf/view/journals/hortsci/38/5/article-p1015.pdf" target="_blank" rel="noopener">ASHS植物繁殖历史综述</a>交叉核对。</p><p class="ref-note">对应早期合成生长物质与生根效应，不直接支持“所有人工调节剂均无法代谢”。教材定位：本节概念与应用。</p></div></li>
+<li id="ref-2" tabindex="-1"><b>[2]</b><div><p>Andreae, W. A. & Good, N. E. (1955). The formation of indoleacetylaspartic acid in pea seedlings. <i>Plant Physiology</i> <strong>30</strong>, 380–382. DOI <a href="https://doi.org/10.1104/pp.30.4.380" target="_blank" rel="noopener">10.1104/pp.30.4.380</a>.</p><p class="ref-note">原论文涉及IAA缀合，不能作为“一种氧化酶破坏所有天然激素而不作用任何合成物”的证明。后续氧化证据：Zhang, J. <i>et al.</i> (2016). DAO1 catalyzes temporal and tissue-specific oxidative inactivation of auxin in <i>Arabidopsis thaliana</i>. <i>PNAS</i> <strong>113</strong>, 11010–11015. DOI <a href="https://doi.org/10.1073/pnas.1604769113" target="_blank" rel="noopener">10.1073/pnas.1604769113</a>。</p><p class="ref-note">NAA也可代谢：Goren, R. & Bukovac, M. J. (1973). Mechanism of naphthaleneacetic acid conjugation: No effect of ethylene. <i>Plant Physiology</i> <strong>51</strong>, 907–913. DOI <a href="https://doi.org/10.1104/pp.51.5.907" target="_blank" rel="noopener">10.1104/pp.51.5.907</a>。</p><p class="ref-note">IBA内源前体与运输：Růžička <i>et al.</i> (2010), <i>PNAS</i> <strong>107</strong>, 10749–10753，DOI <a href="https://doi.org/10.1073/pnas.1005878107" target="_blank" rel="noopener">10.1073/pnas.1005878107</a>。胞内TIR1受体：Dharmasiri, N., Dharmasiri, S. & Estelle, M. (2005), <i>Nature</i> <strong>435</strong>, 441–445，DOI <a href="https://doi.org/10.1038/nature03543" target="_blank" rel="noopener">10.1038/nature03543</a>。图1将多条路径分面简化，并非同一组动力学实测。</p></div></li>
+<li id="ref-3" tabindex="-1"><b>[3]</b><div><p>Warner, H. L. & Leopold, A. C. (1969). Ethylene evolution from 2-chloroethylphosphonic acid. <i>Plant Physiology</i> <strong>44</strong>, 156–158. DOI <a href="https://doi.org/10.1104/pp.44.1.156" target="_blank" rel="noopener">10.1104/pp.44.1.156</a>.</p><p class="ref-note">支持乙烯利分解释放乙烯及pH依赖趋势。检测条件、反应速度与温度等有关，不把pH4.0当作所有体系的瞬时阈值。教材定位：乙烯利应用。</p></div></li>
+<li id="ref-4" tabindex="-1"><b>[4]</b><div><p>Gustafson, F. G. (1936). Inducement of fruit development by growth-promoting chemicals. <i>PNAS</i> <strong>22</strong>, 628–636. DOI <a href="https://doi.org/10.1073/pnas.22.11.628" target="_blank" rel="noopener">10.1073/pnas.22.11.628</a>.</p><p class="ref-note">支持生长促进物质诱导未授粉子房发育的经典证据；不外推为任意作物、品种与时期均可保产。教材定位：无子果实与收获对象辨析。</p></div></li>
+<li id="ref-5" tabindex="-1"><b>[5]</b><div><p>Weaver, R. J. & McCune, S. B. (1959). Response of certain varieties of <i>Vitis vinifera</i> to gibberellin. <i>Hilgardia</i> <strong>28</strong>(13), 297–350. DOI <a href="https://doi.org/10.3733/hilg.v28n13p297" target="_blank" rel="noopener">10.3733/hilg.v28n13p297</a>.</p><p class="ref-note">葡萄效应随品种、剂量与时期变化。后续风险实例：Weaver (1960), <i>Nature</i> <strong>187</strong>, 1135–1136，DOI <a href="https://doi.org/10.1038/1871135a0" target="_blank" rel="noopener">10.1038/1871135a0</a>。大麦淀粉酶另据Paleg (1960), <i>Plant Physiology</i> <strong>35</strong>, 293–299，DOI <a href="https://doi.org/10.1104/pp.35.3.293" target="_blank" rel="noopener">10.1104/pp.35.3.293</a>。芦苇纤维案例据教材[9]，未采用统一50%增幅。教材定位：GA应用。</p></div></li>
+<li id="ref-6" tabindex="-1"><b>[6]</b><div><p>Schoene, D. L. & Hoffmann, O. L. (1949). Maleic hydrazide, a unique growth regulant. <i>Science</i> <strong>109</strong>, 588–590. DOI <a href="https://doi.org/10.1126/science.109.2841.588-a" target="_blank" rel="noopener">10.1126/science.109.2841.588-a</a>.</p><p class="ref-note">历史论文支持生长抑制效应，不是现代人体致癌评估。风险判断须区分MH与肼等杂质，并考虑制剂、暴露和使用条件。参见<a href="https://www3.epa.gov/pesticides/chem_search/reg_actions/reregistration/fs_PC-051501_1-Jun-94.pdf" target="_blank" rel="noopener">EPA官方事实表（1994）</a>及<a href="https://public-inspection.federalregister.gov/2026-03942.pdf" target="_blank" rel="noopener">EPA后续审查文件（2026）</a>；这些资料不等同中国登记或施药建议。本课不作“必然致癌”“全球禁用”的断言。教材定位：合理施用与风险意识。</p></div></li>
+<li id="ref-7" tabindex="-1"><b>[7]</b><div><p>Hartmann, H. T., Kester, D. E., Davies, F. T. & Geneve, R. L. <i>Hartmann & Kester’s Plant Propagation: Principles and Practices</i>, 8th ed., Pearson New International Edition. Pearson, ©2014. ISBN 9781292020884.</p><p><a href="https://www.pearson.com/en-gb/subject-catalog/p/hartmann--kesters-plant-propagation-pearson-new-international-edition/P200000004411/9781292034133" target="_blank" rel="noopener">出版社记录 ↗</a>：2013年发布，©2014。书目核验不代表本课逐页取得该版本全文。</p><p class="ref-note">对应插条繁殖、浸泡/沾蘸及环境控制。具体时间和浓度须随材料确定。教材定位：探究生长素类调节剂促进插条生根。</p></div></li>
+<li id="ref-8" tabindex="-1"><b>[8]</b><div><p>Heckert, N. A. <i>et al.</i> (2002). <i>NIST/SEMATECH e-Handbook of Statistical Methods</i>. National Institute of Standards and Technology. <a href="https://www.nist.gov/publications/handbook-151-nistsematech-e-handbook-statistical-methods" target="_blank" rel="noopener">官方书目</a> · <a href="https://www.itl.nist.gov/div898/handbook/pmd/section3/pmd33.htm" target="_blank" rel="noopener">实验设计原则</a>。</p><p class="ref-note">支持重复、随机化与建模设计的一般原则，不是中国高考评分标准。原始需求中的《高考生物学实验设计规范解析：预实验的功能边界与最适浓度梯度探究》（2023）未检得可核验记录，故以真实方法资料替代，未将该题名列为已发表论文。图3/4数据与函数均为本课原创教学模型。</p></div></li>
+<li id="ref-9" tabindex="-1"><b>[9]</b><div><p>人民教育出版社，课程教材研究所，生物课程教材研究开发中心. <i>普通高中教科书·生物学·选择性必修1·稳态与调节</i>，第5章第3节《植物生长调节剂的应用》. 北京：人民教育出版社.</p><p class="ref-note">原课程资料标为2019、pp.100–104；本课未取得该印次完整页面，出版年及具体页码尚待以所用教材版权页核对，引用采用章节定位，不伪称完成逐页核验。</p></div></li>
+</ol><details class="notes"><summary>模型、引用与课堂用语边界</summary><div><p>全部SVG为原创，参考文献支持相应史实与机制，未复制期刊原图。插条生根数、浓度响应、反应时间与残余信号为教学模拟，不是田间实测或用药处方。</p><p>“效果较稳定”不能改写成“完全不代谢”；“最优已测点”不等于精确的普遍最适浓度；预实验并不自动降低随机误差，正式实验的对照也不能一概删除。</p></div></details></section>
+
+<footer><span>PLANT SCIENCE · 原创交互综述图谱</span><span>植物生长调节剂的应用 / v1.0 / 离线单文件</span></footer></main>
+<dialog id="review"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2>把目标、条件与证据写完整。</h2><div id="reviewTable"></div></dialog>
+<script>'use strict';
+const $=id=>document.getElementById(id);
+const clamp=x=>Math.max(0,Math.min(1,x));
+const mix=(a,b,t)=>a+(b-a)*clamp(t);
+const phase=(t,a,b)=>clamp((t-a)/(b-a));
+const many=(n,draw)=>Array.from({length:n},(_,i)=>draw(i)).join('');
+const path=(d,fill='none',stroke='#617963',width=1.6)=>'<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'" stroke-linecap="round" stroke-linejoin="round"/>';
+const circle=(x,y,r,fill,stroke='none',width=1)=>'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'"/>';
+const ellipse=(x,y,rx,ry,fill,stroke='none')=>'<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" fill="'+fill+'" stroke="'+stroke+'"/>';
+const rect=(x,y,w,h,fill,stroke='none',radius=5,width=1)=>'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+radius+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+width+'"/>';
+const at=(x,y,s,g,angle=0)=>'<g transform="translate('+x+' '+y+') rotate('+angle+') scale('+s+')">'+g+'</g>';
+const alpha=(v,g)=>'<g opacity="'+clamp(v)+'">'+g+'</g>';
+const arrow=(d,color='#617963')=>'<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.5" marker-end="url(#arrow)"/>';
+const C={GA:'#2a9d8f',CTK:'#3b82f6',ABA:'#d97706',ETH:'#e63946',IAA:'#eaa06a',BR:'#7c3aed'};
+const blend=(a,b,t)=>'rgb('+a.map((v,i)=>Math.round(mix(v,b[i],t))).join(',')+')';
+function text(x,y,txt,size=18,color='#2b4130',anchor='middle',bold=false){return '<text x="'+x+'" y="'+y+'" font-family="Arial,Microsoft YaHei,sans-serif" font-size="'+size+'" fill="'+color+'" text-anchor="'+anchor+'" font-weight="'+(bold?650:400)+'">'+txt+'</text>'}
+function cite(x,y,ref){return '<a href="#ref-'+ref+'" class="svg-cite"><rect x="'+(x-2)+'" y="'+(y-16)+'" width="30" height="24" fill="#fff"/>'+text(x,y,'['+ref+']',17,'#27685d','start',true)+'</a>'}
+const labelMeasure=document.createElement('canvas').getContext('2d');
+const labelWidth=str=>{labelMeasure.font='650 18px Arial,"Microsoft YaHei",sans-serif';return labelMeasure.measureText(str).width+7};
+function tag(x,y,cn,en='',ref){
+ const content=Math.max(labelWidth(cn),en.length*8.2),w=content+16+(ref?32:0);
+ const center=Math.max(w/2+8,Math.min(992-w/2,x)),tx=center-(ref?16:0);
+ return '<g class="annotation">'+rect(center-w/2,y-21,w,en?53:31,'white','none',2)+text(tx,y,cn)+
+  (en?text(tx,y+22,en,17,'#4b6150'):'')+(ref?cite(center+w/2-30,y-8,ref):'')+'</g>';
+}
+function callout(x,y,px,py,cn,en,ref){
+ const w=Math.max(labelWidth(cn)+(ref?32:0),en.length*8.1)+17;
+ x=Math.min(x,990-w);
+ return '<g class="annotation">'+circle(px,py,2.5,'#9d8059')+path('M'+px+' '+py+'L'+(x-15)+' '+(y-7)+'H'+x,'none','#849583',1.1)+rect(x-3,y-21,w,en?53:31,'#fff','none',2)+text(x,y,cn,18,'#2b4130','start',true)+
+ (en?text(x,y+22,en,17,'#4b6150','start'):'')+(ref?cite(x+labelWidth(cn)+4,y-8,ref):'')+'</g>';
+}
+const title=(x,y,letter,label)=>text(x,y,letter,21,'#2b4130','start',true)+text(x+25,y,label,18,'#2b4130','start');
+function plantCell(x,y,w,h,nuclei=1){
+ let g=rect(x,y,w,h,'url(#cellWall)','#8da37d',8,2)+rect(x+5,y+5,w-10,h-10,'#eef2e0','#a7b99a',5)+rect(x+13,y+12,w-26,h-24,'#e0f2fe','#8bbfd1',9);
+ if(nuclei===1)g+=ellipse(x+w-17,y+h*.5,8,11,'#b2a2b8','#8e859b');
+ if(nuclei===2)g+=ellipse(x+w-17,y+h*.28,8,11,'#b2a2b8','#8e859b')+ellipse(x+w-17,y+h*.72,8,11,'#b2a2b8','#8e859b');
+ return g;
+}
+function leaf(x,y,len,angle=0,fill='url(#shootFill)'){
+ return at(x,y,1,path('M0 0Q'+len*.30+' '+(-len*.48)+' '+len+' '+(-len*.18)+'Q'+len*.65+' '+len*.27+' 0 0Z',fill,'#6d895c',1)+path('M0 0L'+len*.86+' '+(-len*.16),'none','#7a8e63',.8),angle);
+}
+
+C.NAA='#0284c7';C.ENZYME='#d17862';C.MH='#7c3aed';
+function refs(list){return '<sup>'+list.map(n=>'<a href="#ref-'+n+'">['+n+']</a>').join('')+'</sup>'}
+function ring(cx,cy,r,sides=6,start=-Math.PI/6){
+ const pts=Array.from({length:sides},(_,i)=>[cx+Math.cos(start+2*Math.PI*i/sides)*r,cy+Math.sin(start+2*Math.PI*i/sides)*r]);
+ return pts.map((p,i)=>(i?'L':'M')+p[0]+' '+p[1]).join('')+'Z';
+}
+function molecule(type,x,y,s=1,annotate=false){
+ const color=type==='IAA'?'#b7753e':C.NAA;
+ let art='';
+ if(type==='IAA'||type==='IBA'){
+  art+=path(ring(-20,0,26),'none',color,2)+path('M2 -13L30 -19L45 3L27 24L2 13','none',color,2)+circle(-20,0,14,'none',color,1);
+  art+=path('M30 -19L45 -39L64 -39','none',color,2);
+  if(annotate)art+=rect(13,10,30,28,'white')+text(27,30,'NH',17,color)+rect(52,-56,134,28,'white')+text(59,-35,type==='IAA'?'CH₂COOH':'(CH₂)₃COOH',17,'#284334','start');
+ }else if(type==='NAA'){
+  art+=path(ring(-22,0,26),'none',color,2)+path(ring(23,0,26),'none',color,2)+circle(-22,0,14,'none',color,1)+circle(23,0,14,'none',color,1);
+  art+=path('M23 -26L44 -47H62','none',color,2);
+  if(annotate)art+=rect(55,-64,119,28,'white')+text(60,-43,'CH₂COOH',17,'#284334','start');
+ }else if(type==='D24'){
+  art+=path(ring(0,0,29),'none',color,2)+circle(0,0,17,'none',color,1)+path('M25 -14L45 -29H63M25 14L45 29M-25 14L-43 27','none',color,2);
+  if(annotate)art+=rect(57,-46,145,30,'white')+text(61,-24,'O–CH₂COOH',17,'#284334','start')+rect(43,29,30,26,'white')+text(58,48,'Cl',17,color)+rect(-71,27,30,26,'white')+text(-56,46,'Cl',17,color);
+ }else if(type==='CCC'){
+  art+=path('M-14 0H-46M0 -14V-30M0 14V38M14 0H47','none',C.MH,2);
+  if(annotate)art+=rect(-14,-15,29,31,'white')+text(0,6,'N⁺',17,C.MH)+rect(-148,-12,100,29,'white')+text(-50,7,'ClCH₂CH₂',17,'#284334','end')+rect(-24,-59,48,28,'white')+text(0,-37,'CH₃',17,'#284334')+rect(48,-13,48,28,'white')+text(72,7,'CH₃',17,'#284334')+rect(-24,40,48,28,'white')+text(0,61,'CH₃',17,'#284334')+rect(105,-47,47,28,'white')+text(129,-26,'Cl⁻',17,'#284334');
+ }else{
+  art+=path(ring(-60,0,25,6,0),'none',C.MH,2)+circle(-60,0,14,'none',C.MH,1)+path(ring(120,0,25,6,0),'none',C.MH,2)+circle(120,0,14,'none',C.MH,1)+path('M-35 0H95M132.5 -21.65L151 -45','none',C.MH,2);
+  if(annotate)art+=rect(-23,-16,101,30,'white')+text(28,5,'NH–CO–NH',17,'#284334')+rect(134,-13,24,27,'white')+text(145,6,'N',17,C.MH)+rect(151,-67,29,27,'white')+text(166,-47,'Cl',17,C.MH)+rect(-95,50,255,31,'white')+text(30,71,'苯基脲 · 氯吡啶基');
+ }
+ return at(x,y,s,art);
+}
+function enzyme(x,y,s=1){
+ return at(x,y,s,path('M-43 -20C-32 -59 15 -52 29 -27L9 -7L30 12C55 43 7 65 -23 41C-51 49 -64 4 -43 -20Z','#edb6a4','#c17b63',1.5)+path('M28 -28L8 -7L28 12','none','#9e5e51',2));
+}
+const molecules={
+ IBA:{name:'吲哚丁酸 · IBA',line:'共同吲哚骨架，侧链长度不同',info:'与IAA结构相近，可用于促生根；IBA也天然存在，可经转化提供IAA。',ref:2},
+ NAA:{name:'α-萘乙酸 · NAA',line:'萘环骨架，具有生长素样效应',info:'结构不同，仍可引起生长素样响应；可被植物缀合代谢，不能说“永不降解”。',ref:2},
+ D24:{name:'2,4-D',line:'氯代苯氧乙酸骨架',info:'具有生长素样效应，响应取决于浓度、组织与施用条件；高浓度可产生抑制效应。',ref:9},
+ CCC:{name:'矮壮素 · CCC',line:'生长延缓剂，不是生长素类似物',info:'可抑制GA生物合成，控制徒长；目标与生长素类促生根并不相同。',ref:9},
+ CPPU:{name:'氯吡脲 · CPPU',line:'细胞分裂素样调节剂',info:'可促进细胞分裂并用于部分果实发育调控，效果随作物、时期和剂量而变。',ref:9}
+};
+function draw1(t){
+ const focus=$('track').value,key=$('molecule').value,meta=molecules[key];
+ const move=phase(t,.08,.52),met=phase(t,.56,.95);
+ let art=title(22,35,'a','胞内识别与代谢 · 分面示意')+title(605,35,'b','分子骨架与生理效应');
+ let labels='';
+ art+=path('M574 58V546','none','#d9e0d4',1);
+ art+=rect(27,113,520,349,'#f8faf4','#bacbb0',18,2)+rect(33,119,508,337,'#fdfdf9','#d5dec9',14);
+ [205,360].forEach((y,i)=>{
+  const type=i?'NAA':'IAA',color=i?C.NAA:C.IAA,op=focus==='both'||focus===type?1:.27;
+  let lane=ellipse(172,y,45,39,'#e7dfed','#a69ab5')+path('M150 '+(y-6)+'q15 -14 31 0m-28 10q13 13 27 0','none','#9786a6',2);
+  lane+=enzyme(305,y,.72);
+  lane+=many(7,j=>{
+   const xx=mix(67,443,move),yy=y+(j-3)*8-(i?46*Math.sin(Math.PI*phase(move,.43,.85)):0);
+   const off=i?met*.28:met*.92;
+   return alpha(op*(1-off),molecule(type,xx+j%2*9,yy,.18))+alpha(op*off,circle(443+j%3*11,yy,3,'#adbdaf'));
+  });
+  lane+=arrow('M87 '+y+'H124')+(i?arrow('M219 360Q250 303 310 309T400 350',C.NAA):arrow('M219 '+y+'H264')+arrow('M346 '+y+'H400'));
+  art+=alpha(op,lane);
+  labels+=tag(87,y-57,type,'',i?1:2)+tag(304,y+63,i?'仍可经其他途径代谢':'氧化 / 缀合失活','',2);
+ });
+ labels+=tag(171,126,'胞内受体通路','TIR1 / AFB',2);
+ labels+=callout(355,100,305,191,'酶促识别有选择性','Metabolic selectivity',2);
+ labels+=tag(461,262,'代谢产物','Metabolites',2);
+ art+=rect(40,497,147,9,'#e9ece3')+rect(40,497,147*(1-.92*met),9,'#c17c3b');
+ art+=rect(244,497,147,9,'#e9ece3')+rect(244,497,147*(1-.28*met),9,C.NAA);
+ labels+=tag(111,535,'IAA · 示意信号')+tag(319,535,'NAA · 示意信号');
+ art+=molecule('IAA',730,208,1,true)+molecule(key,730,390,1,true);
+ labels+=tag(794,116,'IAA · 天然生长素','Reference scaffold',2);
+ labels+=tag(798,293,meta.name,'Selected regulator',meta.ref);
+ labels+=tag(792,512,meta.line,'Scaffolds are schematic',meta.ref);
+ $('svg1').innerHTML=art+labels;
+ $('phase1').textContent=t<.5?'RECOGNITION / RESPONSE':'METABOLISM / PERSISTENCE';
+ $('title1').textContent=t<.5?'先产生响应，再看物质去向。':'较稳定，不代表不能代谢。';
+ $('text1').innerHTML='IAA可经酶促氧化、缀合等途径失活。某些合成调节剂不易走相同路径，作用可较持久；但NAA同样能形成缀合物。这里比较路径差异，未给出真实半衰期。'+refs([1,2,9]);
+ $('result1').innerHTML=meta.info+refs([meta.ref]);
+ $('note1').innerHTML='原料可得、便于生产、效果较稳定是应用优势。实际响应仍受吸收、转运、代谢和组织状态影响。氧化酶不是蛋白酶，IAA也不是肽链。'+refs([2,9]);
+}
+
+function tomato(x,y,r,color='#cf765b',cut=false){
+ let art=path('M0 '+(-r*.85)+'C'+(-r*.86)+' '+(-r*1.18)+' '+(-r*1.15)+' '+(-r*.35)+' '+(-r*.87)+' '+(r*.5)+'Q0 '+(r*1.18)+' '+(r*.87)+' '+(r*.5)+'C'+(r*1.15)+' '+(-r*.35)+' '+(r*.86)+' '+(-r*1.18)+' 0 '+(-r*.85)+'Z',color,'#8e9c71',1.7);
+ art+=many(5,i=>at(0,-r*.78,1,path('M0 0Q-10 -17 -22 -12Q-6 -5 0 0Z','#789263','#6c8056',1),i*72));
+ if(cut)art+=ellipse(0,9,r*.66,r*.57,'#f6d8bd','#c99a78')+ellipse(-r*.28,9,r*.17,r*.33,'#faf3d9')+ellipse(r*.28,9,r*.17,r*.33,'#faf3d9');
+ else art+=ellipse(-r*.35,-r*.2,r*.11,r*.31,'#ffffff24');
+ return at(x,y,1,art);
+}
+function bloom(x,y,scale=1,removed=false){
+ return at(x,y,scale,many(5,i=>at(0,0,1,ellipse(0,-24,13,24,'#edcf87','#b49c5e'),i*72))+ellipse(0,3,9,18,'#a4b981','#7f9661')+path('M0 -17V-40','none','#739361',3)+(!removed?many(5,i=>at(0,0,1,path('M0 0V-26','none','#caab55',2)+ellipse(0,-27,3,6,'#c19e3b'),i*72)):'')+path('M0 21V58','none','#739361',3));
+}
+function ethephonScene(t){
+ const enter=phase(t,.08,.42),gas=phase(t,.42,.85),ripe=phase(t,.67,1);
+ let art=title(22,35,'a','乙烯利的环境响应与果实成熟'),labels='';
+ art+=rect(52,179,166,204,'url(#glassFill)','#a0b7b9',7)+rect(58,267,154,110,'#dcecf1','#b7d2d7',3);
+ art+=rect(311,142,331,312,'url(#cellWall)','#96ab80',19,2)+rect(319,150,315,296,'#f1f5e8','#b7c7a4',14)+rect(480,174,135,147,'#dcecf0','#9ebec5',17)+ellipse(564,369,30,41,'#c1b5c9','#9f91aa');
+ art+=many(4,i=>path('M341 '+(383+i*11)+'q44 -14 78 0','none','#bbc7b0',2));
+ art+=many(12,i=>alpha(1-.85*gas,circle(mix(94+i%3*19,386+i%3*32,enter),mix(290+i*5,225+i*9,enter),3.2,C.NAA)));
+ art+=alpha(gas,many(13,i=>{
+  const x=mix(434,698+i%3*16,gas),y=mix(284,212+i*16,gas);
+  return circle(x,y,4,C.ETH)+path('M'+(x-5)+' '+y+'h10','none','#cf6d64',1);
+ }));
+ art+=arrow('M228 300H296')+arrow('M650 300H744');
+ art+=tomato(840,317,74,blend([164,189,120],[214,100,77],ripe));
+ labels+=tag(134,123,'酸性配液：相对稳定','Acidic solution',3);
+ labels+=callout(349,94,447,280,'较高pH：分解速率增加','pH-dependent release',3);
+ labels+=tag(483,489,'乙烯利 ≠ 乙烯','Ethephon → ethylene',3);
+ labels+=tag(835,440,'乙烯参与成熟调控','Ripening response',3);
+ labels+=tag(835,205,'C₂H₄ · 乙烯','Released ethylene',3);
+ return {art,labels};
+}
+function fruitScene(t){
+ const grow=phase(t,.27,.93);
+ let art=title(22,35,'b','收获果肉，还是收获种子？'),labels='';
+ art+=path('M515 73V526','none','#dbe2d3',1);
+ art+=bloom(174,180,1,true)+arrow('M234 210Q293 220 297 279');
+ art+=many(7,i=>circle(mix(78,175,phase(t,.03,.27)),mix(155,184,phase(t,.03,.27))+i*3,2.7,C.NAA));
+ art+=tomato(303,365,18+61*grow,'#d99d75',true);
+ art+=rect(113,116,124,130,'none','#a3afb1',5,1)+path('M114 123l123 112m-123 0l123 -112','none','#b3bfc0',.6);
+ art+=bloom(699,180,.8)+arrow('M745 205Q790 226 796 278');
+ art+=path('M796 297Q748 365 793 432Q835 365 796 297Z','#d9dbad','#93a273',2);
+ art+=path('M796 306V423','none','#9da776',1.3);
+ art+=alpha(grow,many(4,i=>circle(797,333+i*23,6,'none','#bbbba0',1)));
+ labels+=tag(178,91,'去雄，并排除授粉','Unpollinated flower',4);
+ labels+=callout(52,484,283,352,'子房发育，种子未形成','Parthenocarpic fruit',4);
+ labels+=tag(718,91,'未受精 · 种子产量问题','Seed harvest',9);
+ labels+=tag(769,491,'膨大不能替代受精','No replacement for fertilization',9);
+ labels+=tag(298,252,'子房壁细胞仍可为2n','Not a triploid treatment',9);
+ return {art,labels};
+}
+function grapeCluster(x,y,t){
+ let art=path('M0 -89V26','none','#7c9765',3);
+ art+=many(15,i=>{
+  const row=Math.floor(i/4),col=i%4,xx=(col-1.5)*(19+7*t)*(1-row*.1),yy=-38+row*(26+14*t);
+  return path('M0 '+(yy-25)+'L'+xx+' '+yy,'none','#90a779',1.4)+ellipse(xx,yy,10+4*t,12+5*t,'#bacb8d','#8da871');
+ });
+ return at(x,y,1,art);
+}
+function gaScene(t){
+ const eff=phase(t,.15,.95);
+ let art=title(22,35,'c','GA：不同对象，不同应用'),labels='';
+ art+=path('M331 84V521M667 84V521','none','#dbe2d3',1);
+ art+=grapeCluster(169,296,eff);
+ art+=ellipse(497,290,113,73,'#e7d3ac','#b99b6f')+ellipse(497,290,104,65,'#d0d8b0','#9fae80')+ellipse(504,289,89,54,'#f7ecd0','#c6ba91');
+ art+=ellipse(419,296,16,28,'#b7c99e','#849c71');
+ art+=many(12,i=>ellipse(467+i%4*27,269+Math.floor(i/4)*22,8*(1-.65*eff),5*(1-.65*eff),'white','#c6ba91'));
+ art+=many(9,i=>alpha(eff,circle(mix(516,466+i%4*25,eff),mix(235,276+i%3*19,eff),2.5,'#4a8dc8')));
+ art+=many(5,i=>{
+  const xx=758+i*29,top=403-(80+100*eff)*(1+i%2*.15);
+  return path('M'+xx+' 435Q'+(xx-4)+' 321 '+xx+' '+top,'none','#9bb280',3)+leaf(xx,351,52,-35)+leaf(xx,294,43,158);
+ });
+ labels+=tag(169,108,'葡萄果穗与果粒','Cultivar / timing',5);
+ labels+=tag(500,108,'大麦储藏物动员','α-amylase induction',5);
+ labels+=tag(835,108,'芦苇茎纤维伸长','Elongation',9);
+ labels+=tag(169,490,'不等于所有品种自动无核','Not universal seedlessness',5);
+ labels+=tag(500,458,'淀粉 → 可溶性糖','Malting context',5);
+ labels+=tag(832,490,'不设统一增幅','Response varies',9);
+ return {art,labels};
+}
+function mhScene(t){
+ const sprout=phase(t,.18,.92);
+ let art=title(22,35,'d','生理效应与合理施用'),labels='';
+ [278,721].forEach((x,i)=>{
+  art+=at(x,332,1,path('M-113 -12C-104 -82 38 -102 101 -45C162 10 86 82 -6 79C-75 85 -131 48 -113 -12Z','url(#tuberFill)','#a88b65',1.8)+many(12,j=>ellipse(-73+j%4*48,-24+Math.floor(j/4)*27,3.2,1.9,'#a98e65')));
+  if(!i)art+=many(3,j=>{
+   const xx=x-38+j*36,h=(40+j%2*34)*sprout;
+   return path('M'+xx+' 280q-10 '+(-h*.6)+' 4 '+(-h),'none','#8ba474',6)+leaf(xx+2,280-h,24*sprout,-25);
+  });
+ });
+ labels+=tag(276,118,'未处理 · 示意对照','Sprouting',6);
+ labels+=tag(720,118,'MH处理 · 抑芽示意','Growth inhibition',6);
+ labels+=callout(501,217,722,285,'抑制新生组织生长','Physiological effect',6);
+ labels+=tag(500,468,'风险评价：有效成分、杂质、暴露与条件','Hazard is not the same as risk',6);
+ labels+=tag(500,538,'对象 · 浓度 · 时期 · 部位 · 环境 · 残留','Use requires matching the conditions',9);
+ return {art,labels};
+}
+function draw2(t){
+ const mode=$('application').value;
+ const scene=({ethephon:ethephonScene,fruit:fruitScene,GA:gaScene,MH:mhScene}[mode])(t);
+ $('svg2').innerHTML=scene.art+scene.labels;
+ const facts={
+ ethephon:['ETHEPHON / ETHYLENE',t<.4?'先进入不同化学环境。':'释放的是乙烯，响应是成熟。','乙烯利在酸性条件下相对稳定，较高pH可使其分解释放乙烯的速度增加。图中分解与成熟是压缩后的过程，不把pH4.0画成瞬时开关。','乙烯利是人工应用的乙烯释放剂，不等于乙烯本身。','响应还受温度、组织与处理条件影响；图中颜色代表成熟过程，不是固定反应时长。',[3,9]],
+ fruit:['PARTHENOCARPY / HARVEST',t<.3?'先排除授粉，控制实验条件。':'果肉可以发育，种子仍需受精。','生长素类处理可在特定材料中诱导未授粉子房发育。子房壁膨大不等于胚已形成，因此不能把促进果肉发育套用到收获种子的作物。','这种处理本身不使果皮细胞变成3n，也不等同三倍体无子西瓜。','对阴雨天减产的作用取决于作物与收获对象，不能一概保证保产或宣称全部产量归零。',[4,9]],
+ GA:['GIBBERELLIN / CONTEXT',t<.4?'同一种信号，作用对象不同。':'把器官、时期和目标一起描述。','GA可影响葡萄穗轴、果梗和果粒生长，也可促进大麦水解酶产生、影响茎纤维伸长。三者不是同一项实验证据。','果穗响应与无核性取决于品种、剂量和时期。','制麦工艺并非一律完全不萌发；图中不采用统一50%纤维增幅或统一增产率。',[5,9]],
+ MH:['MALEIC HYDRAZIDE / EVIDENCE','抑芽效应与致癌断言，要分开。','MH可抑制植物新生组织生长并用于部分抑芽场景。不能据此画成“必然掺入RNA致癌”，也不能将历史杂质问题等同于所有现代制剂的风险。','合理应用要匹配对象、条件与现行登记标签。','现代评价需区分MH与肼等杂质、危害与实际暴露；参考区给出官方资料，不跨国家外推禁用结论。',[6,9]]
+ };
+ const f=facts[mode];$('phase2').textContent=f[0];$('title2').textContent=f[1];$('text2').innerHTML=f[2]+refs(f[5]);$('result2').textContent=f[3];$('note2').innerHTML=f[4]+refs(f[5]);
+}
+
+
+const responsePoints=[[0,6],[2,12],[4,18],[6,12],[8,3],[10,1]];
+const responseSlopes=[3,3,0,-3.75,-2.75,-1];
+function response(c){
+ c=Math.max(0,Math.min(10,c));
+ let i=Math.min(4,Math.floor(c/2));
+ const x0=responsePoints[i][0],y0=responsePoints[i][1],y1=responsePoints[i+1][1],u=(c-x0)/2;
+ return (2*u**3-3*u*u+1)*y0+(u**3-2*u*u+u)*2*responseSlopes[i]+(-2*u**3+3*u*u)*y1+(u**3-u*u)*2*responseSlopes[i+1];
+}
+function records(c){
+ const total=Math.round(response(c)*5),base=Math.floor(total/5),remainder=total-base*5;
+ const values=[-2,-1,0,1,2].map((v,i)=>Math.max(0,base+v+(i<remainder?1:0)));
+ while(values.reduce((a,b)=>a+b,0)>total){const i=values.indexOf(Math.max(...values));values[i]--}
+ const mean=values.reduce((a,b)=>a+b,0)/5;
+ const sd=Math.sqrt(values.reduce((sum,v)=>sum+(v-mean)**2,0)/4);
+ return {c,values,mean,sd};
+}
+const pilotData=[0,2,4,6,8,10].map(records);
+const formalData=[0,...Array.from({length:9},(_,i)=>2+i*.5)].map(records);
+function roots(x,y,count,growth=1,color='#bcac85',spread=1){
+ return many(Math.max(0,Math.round(count)),i=>{
+  const endX=x+(i-(count-1)/2)*5.2*spread,endY=y+(26+i%4*7)*growth;
+  return path('M'+(x+(i%3-1)*3)+' '+y+'Q'+(x+(i-(count-1)/2)*3.5*growth)+' '+(y+13*growth)+' '+endX+' '+endY,'none',color,1.5);
+ });
+}
+function cutting(x,y,t,options={}){
+ const height=options.height||193,tilt=options.tilt||0,w=13,top=y-height;
+ let art=path('M'+(x-w/2)+' '+y+'V'+top+'H'+(x+w/2)+'V'+(y-9)+'Z','url(#shootFill)','#6d8d64',1.6);
+ art+=path('M'+(x-w/2)+' '+y+'L'+(x+w/2)+' '+(y-9),'none','#786c52',2);
+ art+=ellipse(x+11,top+height*.20,6,Math.min(10,height*.13),'#8baa78','#6f8c60');
+ art+=leaf(x+6,top+height*.41,Math.min(52,height*.31),-23+tilt)+leaf(x-7,top+height*.57,Math.min(42,height*.27),161-tilt);
+ art+=path('M'+(x-6)+' '+top+'h12','none','#786c52',2);
+ return art;
+}
+function methodScene(t,mode){
+ const dip=mode==='dip',sun=mode==='sun';
+ const travel=dip?phase(t,.18,.49):0,waterY=382+(sun?54*phase(t,.18,.87):0),grow=phase(t,.55,.98);
+ const x=mix(257,416,travel),y=mix(407,389,travel);
+ let art=title(22,35,'a','插条基部处理与培养条件'),labels='';
+ if(!sun){
+  art+=path('M71 461V117Q273 75 492 117V462','none','#a8c0c4',2);
+  art+=rect(69,89,426,21,'#e0e7d9','#a3b598',3);
+  art+=many(23,i=>path('M'+(74+i*18)+' 91l-10 17','none','#c1cfb8',1));
+  art+=many(15,i=>alpha(.8,circle(98+i%6*65,177+Math.floor(i/6)*64,1.7,'#a3c9ce')));
+ }else{
+  art+=circle(460,115,26,'#f2d697','#c3aa69',1);
+  art+=many(10,i=>at(460,115,1,path('M0 -33V-42','none','#c3aa69',1.2),i*36));
+ }
+ art+=rect(172,352,164,111,'url(#glassFill)','#91acb0',6);
+ art+=rect(178,waterY,152,457-waterY,sun?blend([196,223,234],[103,160,199],phase(t,.18,.87)):'#c4dfea','none',2);
+ art+=path('M178 '+waterY+'H330','none','#85b8c7',1);
+ art+=path('M359 386h115l-13 77h-90Z','#c9bd9c','#9e967b',1.2)+ellipse(417,387,57,9,'#ddd6bc','#a69e83');
+ art+=cutting(x,y,t,{tilt:sun?grow*48:0});
+ art+=roots(x,y,sun?3:mode==='dip'?15:17,grow,sun?'#bc9879':'#a79a78',.8);
+ if(sun)art+=many(11,i=>alpha(phase(t,.25,.85),circle(191+i%5*28,mix(382,187+i%4*17,phase(t,.25+i*.01,.93)),2.5,'#98c1d2')));
+ labels+=callout(28,157,x,y-193,'上端平切，保留幼芽','Morphological upper end',7);
+ labels+=callout(342,278,x+10,y-148,'材料与芽数相近','Comparable cuttings',7);
+ labels+=callout(28,490,x,y-4,'形态学基部斜切','Basal end in treatment',7);
+ labels+=tag(272,77,sun?'蒸腾与蒸发加快':'遮阴、空气湿度较高','Environmental control',7);
+ labels+=tag(300,548,dip?'短时沾蘸后转入湿基质':sun?'水减少，溶质不变时浓度升高':'较低浓度、较长时间浸泡','Times depend on material',9);
+ return {art,labels};
+}
+function chart3(t,formal){
+ const x0=640,x1=951,y0=432,y1=175,min=formal?2:0,max=formal?6:10;
+ const xx=c=>mix(x0,x1,(c-min)/(max-min)),yy=v=>mix(y0,y1,v/22);
+ let art=title(601,35,'b',formal?'细梯度比较：最佳已测点':'预实验：先找有效范围'),labels='';
+ art+=path('M585 58V551','none','#d9e0d4',1);
+ [0,6,12,18].forEach(v=>{
+  art+=path('M640 '+yy(v)+'H951','none','#e0e5da',1);
+  labels+=tag(615,yy(v)+6,String(v));
+ });
+ art+=path('M640 165V432H957','none','#87967d',1.3);
+ let d='';for(let i=0;i<=120;i++){const c=min+(max-min)*i/120;d+=(i?'L':'M')+xx(c).toFixed(2)+' '+yy(response(c)).toFixed(2)}
+ art+=path(d,'none','#a8b99d',1.2);
+ const list=formal?formalData.filter(a=>a.c>0):pilotData;
+ list.forEach((r,i)=>{
+  const opacity=phase(t,.05+i*.035,.35+i*.035);
+  art+=alpha(opacity,path('M'+xx(r.c)+' '+yy(r.mean-r.sd)+'V'+yy(r.mean+r.sd)+'m-4 0h8M'+(xx(r.c)-4)+' '+yy(r.mean-r.sd)+'h8','none',C.NAA,1.3)+circle(xx(r.c),yy(r.mean),4,C.NAA,'white',1));
+ });
+ (formal?[2,3,4,5,6]:[0,2,4,6,8,10]).forEach(c=>{
+  art+=path('M'+xx(c)+' 432v6','none','#87967d',1);
+  labels+=tag(xx(c),462,String(c));
+ });
+ labels+=tag(797,123,'平均生根数 / 条','Mean ± sample SD',8);
+ labels+=tag(801,491,'调节剂浓度 / mg·L⁻¹','Simulated concentrations',9);
+ labels+=callout(715,74,xx(4),yy(18),'4.0：模型最佳已测点','Not a universal optimum',8);
+ labels+=tag(808,548,formal?'保留同批0对照：平均6.0条':'0组：匹配空白对照','Five cuttings per group',8);
+ return {art,labels};
+}
+function draw3(t){
+ const mode=$('method').value,formal=$('experiment').value==='formal';
+ const scene=methodScene(t,mode),chart=chart3(t,formal);
+ $('svg3').innerHTML=scene.art+chart.art+scene.labels+chart.labels;
+ $('phase3').textContent=formal?'FORMAL / NARROW RANGE':'PILOT / BROAD RANGE';
+ $('title3').textContent=mode==='sun'?'环境失控，浓度也可能改变。':mode==='dip'?'浓度与处理时间，需要配套。':'遮阴高湿，维持处理条件。';
+ $('text3').innerHTML=(mode==='sun'?'阳光和干燥可增加蒸腾与蒸发。若处理液溶质近似不变，水量减少会使浓度升高，插条也可能失水；不能把此结果只归因于原设定浓度。':mode==='dip'?'沾蘸用较高浓度、较短处理时间，基部接触后移入湿基质。不能把浸泡与沾蘸的浓度或时间直接互换，具体方案需按材料确定。':'浸泡通常采用较低浓度和较长时间。遮阴、高湿有助降低插条失水与处理液蒸发，让比较条件较稳定。')+refs([7,9]);
+ $('result3').innerHTML=(formal?'窄区间细梯度定位最佳已测点；本模型保留同批空白。':'粗梯度用于寻找合适范围、检验方法是否可行。')+refs([8,9]);
+ $('note3').innerHTML='时间轴合并展示处理与后续培养，生根并非数秒即时完成。预实验不等于自动减少随机误差；正式实验是否另设空白取决于研究目的。'+refs([7,8,9]);
+ const rows=formal?formalData:pilotData;
+ $('dataTable').innerHTML='<table><thead><tr><th>浓度 mg/L</th><th>5根插条的根数</th><th>均值</th><th>标准差</th></tr></thead><tbody>'+rows.map(r=>'<tr><th>'+r.c.toFixed(formal?1:0)+(r.c===0?' 对照':'')+'</th><td>'+r.values.join(' / ')+'</td><td>'+r.mean.toFixed(1)+'</td><td>'+r.sd.toFixed(2)+'</td></tr>').join('')+'</tbody></table>';
+}
+function draw4(t){
+ const target=Number($('dilution').value),progress=phase(t,.14,.89),q=mix(1,target,progress),c1=2*q,c2=6*q;
+ const x=c=>80+c*86,y=v=>311-v*10.1;
+ let art=title(22,35,'a','同一响应曲线 · 两个候选浓度'),labels='';
+ art+=path('M80 86V311H950','none','#87967d',1.3);
+ [0,6,12,18].forEach(v=>{
+  art+=path('M80 '+y(v)+'H940','none','#e2e7db',1);
+  labels+=tag(48,y(v)+6,String(v));
+ });
+ let d='';for(let i=0;i<=160;i++){const c=10*i/160;d+=(i?'L':'M')+x(c).toFixed(2)+' '+y(response(c)).toFixed(2)}
+ art+=path(d,'none','#698961',2.3);
+ [0,2,4,6,8,10].forEach(v=>{art+=path('M'+x(v)+' 311v5','none','#87967d',1);labels+=tag(x(v),340,String(v))});
+ art+=path('M'+x(2)+' '+y(12)+'H'+x(6),'none','#b99c73',1.2);
+ art+=circle(x(2),y(12),5,'white','#a59175',1.5)+circle(x(6),y(12),5,'white','#a59175',1.5);
+ [2,6].forEach((start,i)=>{
+  const end=start*q,color=i?'#bc744e':C.NAA;
+  let trace='';for(let j=0;j<=32;j++){const c=mix(start,end,j/32);trace+=(j?'L':'M')+x(c).toFixed(2)+' '+y(response(c)).toFixed(2)}
+  art+=path(trace,'none',color,4)+circle(x(end),y(response(end)),6,color,'white',1.5);
+ });
+ labels+=tag(498,85,'同一水平：初始均为12条','Two possible concentrations',9);
+ labels+=tag(159,81,'平均生根数 / 条');
+ labels+=tag(812,85,'模拟数据','Not measured',8);
+ labels+=tag(505,368,'浓度 / mg·L⁻¹','Dilution moves both points left',9);
+ const values=[c1,c2];
+ [276,722].forEach((cx,i)=>{
+  const v=response(values[i]),color=i?'#bc744e':C.NAA;
+  art+=rect(cx-165,395,330,133,'#f8faf4','#d9e2d2',8);
+  art+=path('M'+(cx-145)+' 435v-8h19v8l7 8v43q-16 5 -32 0v-43Z','url(#glassFill)','#98b0b7',1.2)+rect(cx-149,455,25,29,blend([220,237,243],[103,165,199],q),'none',2)+arrow('M'+(cx-113)+' 453h12');
+  art+=alpha(1-progress,ellipse(cx-137,mix(405,449,progress),3.5,5.5,'#8fc5d6'));
+  art+=cutting(cx-95,482,t,{height:62});
+  art+=roots(cx-95,482,v,.8,color,.45);
+  labels+=tag(cx+40,425,(i?'若X原为C₂':'若X原为C₁')+'：'+values[i].toFixed(2)+' mg/L');
+  labels+=tag(cx+40,473,'期望均值 '+v.toFixed(1)+' 条');
+  labels+=tag(cx,548,(i?'较高浓度侧':'较低浓度侧')+' · '+(v>12.05?'增加':v<11.95?'减少':'初始12条'),'Compared with undiluted control',9);
+ });
+ $('svg4').innerHTML=art+labels;
+ $('phase4').textContent='C′ = C × '+q.toFixed(2)+' / SIMULATION';
+ $('title4').textContent=target>.5?'适度稀释，可得到相反方向。':'稀释过度，判别可能失效。';
+ $('text4').innerHTML=(target>.5?'在已知曲线与本次稀释范围中，较低浓度侧进一步远离峰值，较高浓度侧向峰值靠近。两者平均根数分别降低和增加。':'两种候选液都被稀释到很低的浓度，平均根数都可下降。仅凭“下降”便判断原液在低浓度侧，会产生错误结论。')+refs([8,9]);
+ $('note4').innerHTML='这里的比例是教学模型。真实实验需验证局部单调范围，避免稀释跨区间、环境变化和处理时间差异干扰，并比较独立重复的均值。'+refs([7,8,9]);
+}
+
+
+const times=[0,0,0,0],playing=[false,false,false,false],durations=[16,18,20,15];
+const renderers=[draw1,draw2,draw3,draw4],reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('reviewTable').innerHTML='<div class="table-scroll"><table><thead><tr><th>调节剂</th><th>应用目标</th><th>需要带上的条件</th></tr></thead><tbody><tr><th>NAA / IBA等</th><td>插条生根</td><td>材料、浓度、部位与处理时间</td></tr><tr><th>乙烯利</th><td>释放乙烯，参与催熟等</td><td>组织状态、pH、温度与时期</td></tr><tr><th>GA</th><td>生长、果穗与储藏物动员等</td><td>品种、浓度、时期</td></tr><tr><th>CCC / CPPU / MH</th><td>控制徒长 / 促发育 / 抑芽等</td><td>对象、浓度、时期、环境与登记条件</td></tr></tbody></table></div><p>不是所有调节剂都只促进生长，也不是所有合成分子都不能被代谢。'+refs([1,2,3,5,6,9])+'</p><h3>生根实验的证据链</h3><p>材料相近 → 随机分组 → 匹配对照 → 处理与培养条件一致 → 独立重复 → 比较均值与变异。预实验找范围，正式实验作精细比较；不能一概删除空白对照。'+refs([7,8,9])+'</p><h3>浸泡 vs 沾蘸</h3><p>浸泡通常是较低浓度、较长时间，并注意遮阴高湿。沾蘸通常是较高浓度、短时间，仅处理基部后转移湿基质。数值须随材料确定。'+refs([7,9])+'</p><h3>稀释判别长句模板</h3><p>分取未知溶液，设置未稀释组和适度稀释组，用条件相近的新插条分别处理，其他条件一致并重复。若在已知局部响应范围内，稀释后平均生根数增加，支持原液位于较高浓度侧；降低则需结合稀释幅度排除跨越区间后再判断。'+refs([8,9])+'</p>';
+function render(i){
+ renderers[i](times[i]);document.querySelector('[data-time="'+i+'"]').value=times[i]*100;
+ $('time'+i).textContent=Math.round(times[i]*100)+'% · '+Math.round(times[i]*durations[i])+' 秒';
+ document.querySelector('[data-play="'+i+'"]').textContent=playing[i]?'Ⅱ 暂停观察':times[i]>=1?'↻ 再看一次':'▶ 播放过程';
+}
+function start(i){playing.fill(false);times[i]=reduced?1:0;playing[i]=!reduced;renderers.forEach((_,j)=>render(j))}
+document.querySelectorAll('[data-play]').forEach(button=>button.onclick=()=>{
+ const i=Number(button.dataset.play),was=playing[i];playing.fill(false);if(times[i]>=1)times[i]=0;playing[i]=!was;renderers.forEach((_,j)=>render(j));
+});
+document.querySelectorAll('[data-reset]').forEach(button=>button.onclick=()=>{const i=Number(button.dataset.reset);times[i]=0;playing[i]=false;render(i)});
+document.querySelectorAll('[data-time]').forEach(input=>input.oninput=()=>{const i=Number(input.dataset.time);times[i]=Number(input.value)/100;playing[i]=false;render(i)});
+['track','molecule'].forEach(id=>$(id).onchange=()=>start(0));$('application').onchange=()=>start(1);
+['method','experiment'].forEach(id=>$(id).onchange=()=>start(2));$('dilution').onchange=()=>start(3);
+$('reviewOpen').onclick=()=>{playing.fill(false);renderers.forEach((_,i)=>render(i));$('review').showModal()};
+$('review').onclick=event=>{if(event.target===$('review')){const r=$('review').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)$('review').close()}};
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[href^="#ref-"]');if(!link)return;const target=document.querySelector(link.getAttribute('href'));if(!target)return;
+ event.preventDefault();if($('review').open)$('review').close();history.replaceState(null,'',link.getAttribute('href'));target.scrollIntoView({behavior:reduced?'instant':'smooth',block:'center'});target.focus({preventScroll:true});target.classList.remove('ref-pulse');void target.offsetWidth;target.classList.add('ref-pulse');
+});
+let last=0;
+function tick(now){requestAnimationFrame(tick);const elapsed=last?Math.min(.1,(now-last)/1000):0;last=now;if(document.hidden||$('review').open)return;for(let i=0;i<4;i++){if(!playing[i])continue;times[i]=clamp(times[i]+elapsed/durations[i]);if(times[i]===1)playing[i]=false;render(i)}}
+renderers.forEach((_,i)=>render(i));requestAnimationFrame(tick);
+</script></body></html>

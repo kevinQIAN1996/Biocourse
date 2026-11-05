@@ -1,0 +1,292 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#456c4c"><title>种群的数量变化｜种群数量变化动力学图谱</title><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@500;600&display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script><style>:root{color-scheme:light;--ink:#24392d;--muted:#42564a;--paper:#faf8f5;--edge:#dcded2;--green:#456c4c;--orange:#c87645}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:18px/1.65 Inter,"Microsoft YaHei",sans-serif}button,select,input{font:inherit;color:inherit}button{cursor:pointer;background:white;border:1px solid #a9b6a6;border-radius:5px;padding:7px 13px;font-weight:600;transition:background .15s,transform .15s}button:hover{background:#edf1e8}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb6a30;outline-offset:3px}a{color:#355f48}header,main{width:min(1490px,94%);margin:auto}header{min-height:77px;display:flex;gap:20px;align-items:center;justify-content:space-between;border-bottom:1px solid #abb8a7}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:700;font-size:20px}.brand svg{width:29px;height:34px}.brand small{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}.intro{display:flex;justify-content:space-between;align-items:end;padding:32px 0 24px;gap:20px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.12em;font-weight:700;margin:0 0 12px}h1{font-family:"Source Serif 4",Georgia,"Songti SC","SimSun",serif;font-size:clamp(38px,4.6vw,66px);line-height:1.2;margin:0 0 17px;font-weight:600;letter-spacing:-.03em}h1 span{font-size:23px;letter-spacing:0;margin-left:24px;display:inline-block;border-left:1px solid #b9c4b3;padding-left:22px;font-family:Inter,"Microsoft YaHei",sans-serif}.subtitle{font-size:18px;line-height:1.8;margin:0;color:var(--muted)}.intro-note{min-width:210px;padding-left:25px;border-left:1px solid #b9c4b3}.intro-note i{font:italic 36px "Source Serif 4",Georgia,serif}.intro-note p{font-size:14px;color:var(--muted);margin:8px 0 0}nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:27px;border-bottom:1px solid #c8d1c1;padding-bottom:18px}nav a{font-size:16px;text-decoration:none;background:#f0f1e9;padding:7px 16px;border-radius:4px;font-weight:600}nav a:hover{background:#e0e9da}.figure{background:#fff;border:1px solid #dcded2;border-radius:9px;margin:23px 0 38px;box-shadow:0 5px 20px #29422b06;scroll-margin:15px;overflow:hidden}.fig-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:21px 23px 16px;border-bottom:1px solid #e0e3d9}.fig-heading .eyebrow{margin:0 0 5px}.fig-heading h2{font:600 28px/1.4 "Source Serif 4",Georgia,"Songti SC",serif;margin:0}.fig-heading>span{font-size:13px;color:var(--muted)}.context{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 22px;background:#f6f7f2;border-bottom:1px solid #dde2d6}.context label{font-size:15px;font-weight:650}.context select{border:1px solid #abb9a5;border-radius:4px;background:#fff;padding:6px 12px;max-width:100%;min-width:0;font-size:16px}.figure-body{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,1fr)}.scroll-stage{min-width:0;overflow-x:auto;background:#fff}.scroll-stage>svg{display:block;width:100%;min-width:780px}aside{padding:22px;border-left:1px solid #e0e3d9;background:#fcfcf8}.phase{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:0 0 12px}aside h3{font-size:24px;line-height:1.5;margin:0 0 14px;font-weight:650}aside>p{font-size:17px;color:var(--muted);margin:0 0 14px}aside .small{font-size:14px;line-height:1.8;margin-top:17px}.result{background:#eff3e9;border-left:3px solid #77966a;padding:13px;margin-top:17px}.result span{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}.result b{font-size:17px}.toolbar{display:flex;gap:12px;align-items:center;padding:14px 20px;background:#fcfcf8;border-top:1px solid #dce2d4;flex-wrap:wrap}.toolbar .play{background:#456c4c;border-color:#456c4c;color:white;min-width:154px}.toolbar .play:hover{background:#355c3b}.toolbar>label{flex:1;min-width:150px;display:flex;align-items:center}input[type=range]{width:100%;accent-color:#52764e;cursor:pointer}output{font:14px Consolas,monospace;min-width:100px;text-align:right;color:var(--muted)}.fig-caption{padding:14px 23px;margin:0;font-size:15px;color:#3e5343;border-top:1px solid #e1e5dc;line-height:1.8}.fig-caption b{color:var(--ink)}.probe-context input{width:min(270px,90%)}.probe-context output{min-width:170px;font-size:16px}.effect{padding:7px 0;border-bottom:1px solid #dfe5da;display:flex;gap:7px;justify-content:space-between;font-size:16px}.effect b{font-weight:650}.grid-instruction{padding:14px 23px 0;margin:0;font-size:16px;color:var(--muted)}.experiment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:18px 20px}.device{border:1px solid #cfd8c7;padding:0;border-radius:5px;background:#fff;text-align:left;overflow:hidden;font-weight:400}.device[aria-pressed=true]{border:2px solid #52764e;background:#fbfdf8}.device svg{display:block;width:100%;height:auto}.device-name{display:block;padding:9px 12px;border-top:1px solid #e3e7db;font-size:15px;line-height:1.6;min-height:65px}.grid-result{margin:0 20px 20px;padding:15px 17px;background:#f0f4e9;border-left:3px solid #77966a}.grid-result b{font-size:19px}.grid-result p{font-size:17px;margin:5px 0 0}.notes{border:1px solid #d6decd;background:#fff;border-radius:7px;margin:20px 0}.notes summary{padding:16px 20px;cursor:pointer;font-weight:600}.notes>div{padding:0 20px 20px;color:var(--muted);font-size:16px}.notes p{margin:12px 0}.notes li{margin:6px 0}footer{border-top:1px solid #bdcbb5;padding:22px 0;display:flex;justify-content:space-between;gap:15px;font-size:13px;color:var(--muted)}dialog{color:var(--ink);background:#fffefa;border:1px solid #adbda2;border-radius:10px;padding:28px;width:min(690px,94vw);max-height:88vh;overflow:auto}dialog::backdrop{background:#203a2a99}dialog form{text-align:right}dialog h2{font-size:30px;margin:14px 0}dialog h3{font-size:21px;margin:18px 0 7px}dialog p{font-size:17px}table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:8px;border-bottom:1px solid #d5ddcd;text-align:left}dialog .eyebrow{margin-top:18px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}[hidden]{display:none!important}
+@media(max-width:1100px){.brand small{display:none}.figure-body{grid-template-columns:minmax(0,2.6fr) minmax(240px,1fr)}aside{padding:17px}.fig-heading>span{display:none}}
+@media(max-width:900px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce2d4;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.phase,aside h3,aside>p{grid-column:1}.result{grid-column:2;grid-row:1/4;margin-top:0;align-self:start}aside .small{grid-column:2;grid-row:4}.intro-note{display:none}.experiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){header{gap:8px;min-height:66px}.brand{font-size:16px}header button{font-size:14px;padding:6px 8px}.intro{padding-top:25px}h1 span{display:block;margin:12px 0 0;padding:0;border:0;font-size:23px}nav{gap:6px}nav a{font-size:14px;padding:6px 10px}.fig-heading{padding:16px}.fig-heading h2{font-size:25px}.context{padding:12px;gap:8px}.context select{width:100%}.toolbar{padding:12px;gap:8px}.toolbar>label{order:4;flex-basis:100%}.toolbar output{margin-left:auto;min-width:auto}.toolbar button{font-size:15px;padding:7px 10px}aside{display:block}.result{margin-top:12px}.fig-caption{padding:12px 16px}footer{flex-direction:column}.experiment-grid{grid-template-columns:1fr;padding:14px}.device-name{min-height:0}.probe-context input{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+
+#svgLibrary{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+
+:root{--paper:#faf9f5;--ink:#20372f;--edge:#e2e8e3}.figure{border-radius:16px;border-color:#dde5df}.intro h1{font-size:clamp(38px,4.4vw,64px)}.intro-note i{font-size:28px}.figure-body{grid-template-columns:minmax(0,3fr) minmax(280px,1fr)}.fig-heading .eyebrow{letter-spacing:.14em}.context{background:#f7f9f6}.context button{font-size:15px}.context button[aria-pressed=true]{background:#eae2f2;border-color:#a888bd}.extra{border-top:1px solid #dce2d4;padding:12px 22px}.extra summary{font-size:16px;font-weight:600;cursor:pointer}.extra p{font-size:16px}.table-scroll{overflow:auto}.extra table{font-size:15px;margin-top:12px}.object-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:22px}.object-grid svg{width:100%;min-width:300px}.references{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px 24px}.references h2{font:600 23px 'Source Serif 4',Georgia,serif;margin:0 0 12px}.references>p,.references li,.references a,.references span,.cites a{font-size:11px!important;line-height:1.45;color:#64748b}.references ol{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}.references li{break-inside:avoid}.references span{display:block;margin-top:2px}.references a,.cites a{text-decoration:none}.references a:hover,.cites a:hover{color:#0f172a;text-decoration:underline}.cites{white-space:normal;margin-left:8px}.cites a{white-space:nowrap;display:inline-block}.annotation text{font-family:Arial,'Microsoft YaHei',sans-serif}.scroll-stage:after{content:''}.method-note{font-size:14px;color:#42564a}.result b{display:block}.toolbar output{min-width:105px}.references a:focus-visible{outline:2px solid #456c4c}.figure svg{touch-action:pan-x pan-y}.extra td{word-break:normal}.sample-tag{display:inline-block;padding:2px 6px;border:1px solid #ccd8ce;border-radius:4px;margin:3px;font-size:14px}.sample-tag.marked{border-color:#d47869;background:#fceee9}
+.comparison{margin-top:18px;padding-top:16px;border-top:1px solid #d8e1d9}.comparison div{margin-bottom:10px;background:#e7ece9;border-radius:4px}.comparison b{display:block;font-size:15px;background:#fff;padding-bottom:4px}.comparison span{display:block;height:9px;border-radius:3px}.comparison p{font-size:13px;margin:0}
+@media(max-width:1000px){.figure-body{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dde4da}.intro-note{display:none}}@media(max-width:800px){.scroll-stage:after{content:'图谱可左右滑动查看 →';position:sticky;left:0;display:block;padding:6px 12px;background:#f3f7ef;color:#334938;font-size:14px}}@media(max-width:560px){.object-grid{display:block;overflow:auto}.references ol{grid-template-columns:1fr}.references{padding:16px}.context button{width:100%}.toolbar output{min-width:80px}}
+input[type=number]{max-width:120px;border:1px solid #9daea0;border-radius:4px;padding:5px 9px;background:#fff}.extra caption{text-align:left;font-weight:600;margin:18px 0 8px}.extra table th{white-space:nowrap}dialog table th{min-width:115px}dialog table td{line-height:1.8}
+</style></head><body><header><a class="brand" href="#top">种群动力学图谱 <small>POPULATION / DYNAMICS</small></a><button id="reviewOpen">曲线与计数速查 ↗</button></header><main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第1章 · 第2节</p><h1>数量会变，读法不能混。</h1><p class="subtitle">从一条增长曲线，到一格出芽的酵母。<br>看清变化的尺度，才能解释数量的来去。</p></div><div class="intro-note"><i>Change, in perspective.</i><p>沿一条时间轴，<br>把观察、模型与证据连起来。</p></div></section><nav aria-label="图谱导航"><a href="#figure1">01 三种读法</a><a href="#figure2">02 λ与管理</a><a href="#figure3">03 显微计数</a><a href="#figure4">04 波动与恢复</a></nav><div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="fur" x2="0" y2="1"><stop stop-color="#baae9c"/><stop offset="1" stop-color="#776c5d"/></linearGradient><linearGradient id="leaf"><stop stop-color="#bdcfaa"/><stop offset="1" stop-color="#789b77"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#eaf3ec"/><stop offset="1" stop-color="#bfd7ca"/></linearGradient><radialGradient id="cell"><stop stop-color="#fffdf2"/><stop offset=".7" stop-color="#f4e6bf"/><stop offset="1" stop-color="#ceb271"/></radialGradient><pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><line x1="0" y1="0" x2="0" y2="7" stroke="#d9b173" stroke-width="2" opacity=".45"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#718578"/></marker></defs></svg></div><section class="figure" id="figure1"><div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / GROWTH / THREE READINGS</p><h2>同一条曲线，高度、比例、斜率。</h2></div><span>预测 · 播放 · 用数据解释</span></div><div class="context"><label for="capacity">栖息地</label><select id="capacity"><option value="400">基准 · K=400</option><option value="600">改善 · K=600</option><option value="240">受损 · K=240</option></select><label for="rateMode">增长率口径</label><select id="rateMode"><option value="finite">每期新增比例 R</option><option value="instant">瞬时人均增长率 g</option></select></div><div class="figure-body"><div class="scroll-stage"><svg id="svg1" viewBox="0 0 1000 660" role="img" aria-label="同一条曲线，高度、比例、斜率。"></svg></div><aside><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p><div class="result"><span>当前证据</span><b id="result1"></b></div><p class="small" id="note1"></p></aside></div><div class="toolbar"><button class="play" data-play="0">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">第1图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div><details class="extra"><summary>展开模型口径与边界</summary><p>每期增长率 R=[N(t+1)−N(t)]/N(t)；瞬时人均增长率 g=(1/N)dN/dt；总增长速率 v=dN/dt。指数模型中 λ=eʳ，因此 R=λ−1，g=r=lnλ，二者不可直接混同。</p><p>理想S模型从K以下单调趋近K。现实种群可因环境、时滞等超过K并波动；K不是任意一段波动的算术平均数。两模型数量差还包含少出生等效应，不能说成全部是被淘汰个体数。</p></details><p class="fig-caption"><b>Figure 1.</b> N₀=20，r=0.45/时间单位。三联曲线由同一函数计算；瓶中一个图标示意约10个个体。J超出纵轴时裁切标示，绝非达到平台。 <span class="cites"><a href="https://www.persee.fr/doc/marb_0770-8157_1845_num_18_1_3438" target="_blank" rel="noopener noreferrer" title="Verhulst, 1845 · Académie royale de Belgique">[1] ↗</a> <a href="https://doi.org/10.5962/bhl.title.4489" target="_blank" rel="noopener noreferrer" title="Gause, 1934 · The Struggle for Existence">[2] ↗</a> <a href="https://doi.org/10.1073/pnas.6.6.275" target="_blank" rel="noopener noreferrer" title="Pearl & Reed, 1920 · PNAS 6, 275–288">[3] ↗</a> <a href="https://openstax.org/books/concepts-biology/pages/19-2-population-growth-and-regulation" target="_blank" rel="noopener noreferrer" title="OpenStax · Concepts of Biology, §19.2">[10] ↗</a></span></p></section><section class="figure" id="figure2"><div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / LAMBDA / PRODUCT & MANAGEMENT</p><h2>λ在下降，数量也在下降吗？</h2></div><span>预测 · 播放 · 用数据解释</span></div><div class="context"><label for="management">管理情境</label><select id="management"><option value="fish">渔业 · 捕后保留量</option><option value="pest">鼠害 · 移除与恢复</option></select><button id="cleanup" aria-pressed="false" hidden>改为：早期移除＋环境治理</button></div><div class="figure-body"><div class="scroll-stage"><svg id="svg2" viewBox="0 0 1000 660" role="img" aria-label="λ在下降，数量也在下降吗？"></svg></div><aside><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p><div class="result"><span>当前证据</span><b id="result2"></b></div><p class="small" id="note2"></p></aside></div><div class="toolbar"><button class="play" data-play="1">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">第2图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div><details class="extra"><summary>逐年核对：λ、数量与净变化</summary><div class="table-scroll" id="lambdaTable"></div></details><p class="fig-caption"><b>Figure 2.</b> 左图是20个年度倍数的离散连乘，点之间为演示插值；右图是独立管理模型，动画进度同步但时间单位不同。 <span class="cites"><a href="https://www.iattc.org/GetAttachment/62d510ee-13d0-40f2-847b-0fde415476b8/Vol-1-No-2-1954-SCHAEFER%2C-MILNER-B-_Some-aspects-of-the-dynamics-of-populations-important-to-the-management-of-the-commercial-marine-fisheries.pdf" target="_blank" rel="noopener noreferrer" title="Schaefer, 1954 · IATTC Bulletin 1(2)">[4] ↗</a> <a href="https://www.aciar.gov.au/sites/default/files/legacy/node/451/mn96rats_mice_and_people_rodent_biology_and_mana_29893.pdf" target="_blank" rel="noopener noreferrer" title="Singleton et al. (eds.), 2003 · ACIAR MN96">[5] ↗</a> <a href="https://openstax.org/books/concepts-biology/pages/19-2-population-growth-and-regulation" target="_blank" rel="noopener noreferrer" title="OpenStax · Concepts of Biology, §19.2">[10] ↗</a></span></p></section><section class="figure" id="figure3"><div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / YEAST / COUNT TO CONCENTRATION</p><h2>一格里的细胞，怎样换成每毫升？</h2></div><span>预测 · 播放 · 用数据解释</span></div><div class="context"><label for="procedure">操作情境</label><select id="procedure"><option value="standard">标准操作</option><option value="cover">盖玻片被托高</option><option value="bottom">未摇匀 · 底层取样</option><option value="top">未摇匀 · 上层取样</option><option value="unsettled">未静置沉降</option></select><label for="format">计数板题设</label><select id="format"><option value="25">25中格 × 16小格</option><option value="16">16中格 × 25小格</option></select></div><div class="figure-body"><div class="scroll-stage"><svg id="svg3" viewBox="0 0 1000 660" role="img" aria-label="一格里的细胞，怎样换成每毫升？"></svg></div><aside><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p><div class="result"><span>当前证据</span><b id="result3"></b></div><p class="small" id="note3"></p></aside></div><div class="toolbar"><button class="play" data-play="2">▶ 播放过程</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">第3图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div><details class="extra"><summary>展开原始记录、总稀释倍数与方法说明</summary><div class="context"><label for="dilution">样本实际总稀释倍数（含染液）</label><input id="dilution" type="number" min="1" max="1000" step="1" value="10"><span>固定镜下记录，用已知稀释倍数反推原液浓度。</span></div><div id="countTable" class="table-scroll"></div><div id="dayTable" class="table-scroll"></div><p>本演练用芽体投影大小达到母体1/2时单独计数的约定；不是用平面图测三维体积。不同方案阈值不同，实际应预先规定并统一执行。深蓝表示本例判为死细胞，淡色表示活细胞，形态与颜色为教学示意。</p><p>前后记录可描述消长；若研究温度等因素，仍须匹配对照。重复装板计数与独立培养重复解决的问题不同。错误装片若同时有气泡、溢液，偏差方向未必相同。</p></details><p class="fig-caption"><b>Figure 3.</b> 先展示7天批次培养模拟记录，再对固定的第3天样本制片计数。死活鉴别以亚甲蓝示意；台盼蓝方法不能未经验证直接套用。 <span class="cites"><a href="https://coloradobeer.org/tech-safety-posts/yeast-counting/" target="_blank" rel="noopener noreferrer" title="Colorado Brewers Guild · The Methods and Math of Yeast Counting">[6] ↗</a> <a href="https://www.awri.com.au/industry_support/winemaking_resources/laboratory_methods/microbiological/identification-of-yeast/non-viable_counts/" target="_blank" rel="noopener noreferrer" title="Australian Wine Research Institute · Yeast cell counts">[7] ↗</a> <a href="https://doi.org/10.1002/0471142735.ima03bs111" target="_blank" rel="noopener noreferrer" title="Strober, 2015 · Current Protocols in Immunology">[8] ↗</a> <a href="https://www.pep.com.cn/gzsw/" target="_blank" rel="noopener noreferrer" title="人教版 · 选择性必修2，第1章第2节">[11] ↗</a></span></p></section><section class="figure" id="figure4"><div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / REGULATION / BEYOND THE S CURVE</p><h2>波动之后，恢复速度为何不同？</h2></div><span>预测 · 播放 · 用数据解释</span></div><div class="context"><label for="factor">共同扰动</label><select id="factor"><option value="dependent">密度相关损失 · 病害压力示意</option><option value="independent">非密度制约 · 天气冲击示意</option></select></div><div class="figure-body"><div class="scroll-stage"><svg id="svg4" viewBox="0 0 1000 660" role="img" aria-label="波动之后，恢复速度为何不同？"></svg></div><aside><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p><div class="result"><span>当前证据</span><b id="result4"></b></div><p class="small" id="note4"></p></aside></div><div class="toolbar"><button class="play" data-play="3">▶ 播放过程</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">第4图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div><p class="fig-caption"><b>Figure 4.</b> 原创概念模型，非鲸或蝗虫实测。虚线与实线分别代表较低、较高起始数量；时间单位是示意单位，不同物种不能直接据图比较年增长率。 <span class="cites"><a href="https://openstax.org/books/biology-2e/pages/45-4-population-dynamics-and-regulation" target="_blank" rel="noopener noreferrer" title="OpenStax · Biology 2e, §45.4">[9] ↗</a> <a href="https://openstax.org/books/concepts-biology/pages/19-2-population-growth-and-regulation" target="_blank" rel="noopener noreferrer" title="OpenStax · Concepts of Biology, §19.2">[10] ↗</a></span></p></section><section class="references"><h2>References / 原文与方法</h2><p>原创图谱与教学模拟；图注区分历史来源、方法说明及未逐页核验的资料。点击直接打开原文或权威档案。</p><ol><li><a href="https://www.persee.fr/doc/marb_0770-8157_1845_num_18_1_3438" target="_blank" rel="noopener noreferrer">[1] Verhulst, 1845 · Académie royale de Belgique ↗</a><span>逻辑斯谛模型历史原典；使用可访问的1845论文档案，非1838原文。</span></li><li><a href="https://doi.org/10.5962/bhl.title.4489" target="_blank" rel="noopener noreferrer">[2] Gause, 1934 · The Struggle for Existence ↗</a><span>微生物种群实验背景；本图数据为模拟，未逐页复核原书。</span></li><li><a href="https://doi.org/10.1073/pnas.6.6.275" target="_blank" rel="noopener noreferrer">[3] Pearl & Reed, 1920 · PNAS 6, 275–288 ↗</a><span>美国人口增长的数学表示；不将该文扩大解释为所有生物的普适规律。</span></li><li><a href="https://www.iattc.org/GetAttachment/62d510ee-13d0-40f2-847b-0fde415476b8/Vol-1-No-2-1954-SCHAEFER%2C-MILNER-B-_Some-aspects-of-the-dynamics-of-populations-important-to-the-management-of-the-commercial-marine-fisheries.pdf" target="_blank" rel="noopener noreferrer">[4] Schaefer, 1954 · IATTC Bulletin 1(2) ↗</a><span>理想渔业剩余生产与管理模型；机构原文。</span></li><li><a href="https://www.aciar.gov.au/sites/default/files/legacy/node/451/mn96rats_mice_and_people_rodent_biology_and_mana_29893.pdf" target="_blank" rel="noopener noreferrer">[5] Singleton et al. (eds.), 2003 · ACIAR MN96 ↗</a><span>啮齿动物生态管理综述；年份据PDF扉页，机构网页另列2002。</span></li><li><a href="https://coloradobeer.org/tech-safety-posts/yeast-counting/" target="_blank" rel="noopener noreferrer">[6] Colorado Brewers Guild · The Methods and Math of Yeast Counting ↗</a><span>酵母计数、芽体判定、稀释和体积换算的方法说明。</span></li><li><a href="https://www.awri.com.au/industry_support/winemaking_resources/laboratory_methods/microbiological/identification-of-yeast/non-viable_counts/" target="_blank" rel="noopener noreferrer">[7] Australian Wine Research Institute · Yeast cell counts ↗</a><span>亚甲蓝活死计数；芽体规则等细节须按选定方案统一。</span></li><li><a href="https://doi.org/10.1002/0471142735.ima03bs111" target="_blank" rel="noopener noreferrer">[8] Strober, 2015 · Current Protocols in Immunology ↗</a><span>台盼蓝排除法与膜完整性检测的局限；并非酵母专用标准。</span></li><li><a href="https://openstax.org/books/biology-2e/pages/45-4-population-dynamics-and-regulation" target="_blank" rel="noopener noreferrer">[9] OpenStax · Biology 2e, §45.4 ↗</a><span>密度制约、环境变化与生活史；教材方法框架。</span></li><li><a href="https://openstax.org/books/concepts-biology/pages/19-2-population-growth-and-regulation" target="_blank" rel="noopener noreferrer">[10] OpenStax · Concepts of Biology, §19.2 ↗</a><span>指数与逻辑斯谛方程，以及真实种群偏离模型的原因。</span></li><li><a href="https://www.pep.com.cn/gzsw/" target="_blank" rel="noopener noreferrer">[11] 人教版 · 选择性必修2，第1章第2节 ↗</a><span>教材章节定位；此链接为出版社入口，未逐页核对具体印次。</span></li></ol></section><footer><span>林默然生物课件 · 原创交互图谱</span><span>种群的数量变化 / v1.0</span></footer></main><dialog id="review"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW / 量纲、模型与证据</p><h2>先问“什么量”，再看“怎么变”。</h2><div id="reviewTable"></div></dialog><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase;
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#6a8375',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=8)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,scale,art,angle=0)=>`<g transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})">${art}</g>`;
+const O=(opacity,art)=>`<g opacity="${clamp(opacity)}">${art}</g>`;
+const ink='#24392d',coral='#cd7464',blue='#427b9b',green='#527c64';
+function label(x,y,title,subtitle=''){return BioAtlas.label({x,y,title,subtitle,bounds:{width:1000,height:660}})}
+function call(x,y,px,py,title,subtitle=''){return BioAtlas.callout({x,y,from:[px,py],title,subtitle,bounds:{width:1000,height:660}})}
+function small(x,y,s){return `<text x="${x}" y="${y}" font-size="16" fill="${ink}">${s}</text>`}
+function arrow(d,color=green,w=2){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" marker-end="url(#arrow)"/>`}
+function flow(points,t,color=green,count=6){return many(count,i=>{const u=(t*2+i/count)%1,a=points[0],b=points[1],c=points[2];const x=(1-u)**2*a[0]+2*(1-u)*u*b[0]+u*u*c[0],y=(1-u)**2*a[1]+2*(1-u)*u*b[1]+u*u*c[1];return E(x,y,3,3,color)})}
+function leaf(x,y,s,angle=0){return G(x,y,s,P('M0 0Q12 -10 19 -37L13 -34L20 -49L11 -46L15 -62Q2 -54 -7 -39L-2 -40L-8 -27L-1 -30Q-3 -10 0 0Z','url(#leaf)','#729173',.8)+P('M0 0L10 -53','none','#547c5b',.6),angle)}
+function dandelion(x,y,s=1){return G(x,y,s,many(7,i=>leaf(0,0,.52,i*51))+P('M0 0Q4 -18 1 -40','none','#718a4b',1.8)+G(1,-41,1,many(13,i=>G(0,0,1,E(0,-5,1.7,5,'#e4bd58','#be9539'),i*360/13))+E(0,0,4,4,'#d4a43c'))+E(0,0,2,2,'#4a7455'))}
+function grass(x,y,s=1){return G(x,y,s,many(5,i=>P(`M0 0Q${(i-2)*9} -35 ${(i-2)*12} -72`,'none','#5e8969',1.5)+G((i-2)*12,-72,1,P('M-3 0Q-6 -14 0 -28Q6 -15 3 0Z','#b3b876','#7c8d58',.8)+many(9,j=>P(`M-3 ${-j*2.5}l-5 -4m11 4l5 -4`,'none','#a1ab65',.6))))+leaf(0,0,.8,-50)+leaf(0,0,.75,50))}
+function mouse(x,y,s=1,marked=false,angle=0){return G(x,y,s,P('M-19 7C-32 8 -34 20 -45 13C-53 8 -45 4 -38 7','none','#a59886',1.8)+E(-3,4,23,13,'url(#fur)','#736955')+P('M11 -4Q25 -10 34 5L36 8Q28 15 12 12Z','#aa9e89','#736955',1)+E(17,-4,7,8,'#bcb09c','#827461')+E(18,-4,4,5,'#cfb1a5')+E(29,3,1.5,1.8,'#263b34')+E(36,8,2,2,'#7b5957')+P('M-15 13l-7 3h9m17 -2l-4 3h9','none','#887766',1.8)+(marked?P('M18 -7l7 1l-1 9l-7 -1Z',coral,'#a64c48',.7):''),angle)}
+function moth(x,y,s=1,angle=0){return G(x,y,s,P('M0 0Q-9 -19 -24 -13Q-24 -1 -8 7Q-25 13 -12 20L0 9L12 20Q25 13 8 7Q24 -1 24 -13Q9 -19 0 0Z','#c6ad8b','#967e63',1)+P('M0 -9V17M0 -9L-5 -17M0 -9L5 -17','none','#6e6251',2)+P('M-20 -7L-6 4M20 -7L6 4','none','#a18c70',1),angle)}
+function trap(x,y,s=1){return G(x,y,s,R(-35,-25,70,48,'#e7e6d9','#879786',3)+P('M-35 -25L-21 -37H49L35 -25M35 -25L49 -37V9L35 23','none','#879786',1)+many(7,i=>P('M'+(-28+i*9)+' -25v48','none','#a1ac98',1))+E(6,15,8,4,'#d7b881'))}
+function owl(x,y,s=1){return G(x,y,s,P('M0 8Q-45 -6 -61 -41Q-19 -30 0 -8Q20 -31 60 -42Q44 -5 0 8Z','#9c8c79','#786653',1)+E(0,-8,13,17,'#c5b79e')+E(-6,-14,5,6,'#f1dfb6')+E(6,-14,5,6,'#f1dfb6')+E(-6,-14,2,3,'#37403b')+E(6,-14,2,3,'#37403b')+P('M-3 -9L0 -4L3 -9Z','#c48d4b','none'))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+function seeded(seed){return ()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}}
+
+const fmt=(n,d=1)=>Number(n).toLocaleString('zh-CN',{maximumFractionDigits:d});
+const logN=(t,K=400,N0=20,r=.45)=>K/(1+(K/N0-1)*Math.exp(-r*t));
+function growthState(t,K=Number($('capacity').value)){const S=logN(t,K),J=20*Math.exp(.45*t);return {K,t,S,J,vS:.45*S*(1-S/K),vJ:.45*J,gS:.45*(1-S/K),gJ:.45,RS:logN(t+1,K)/S-1,RJ:Math.exp(.45)-1,halfTime:Math.log(K/20-1)/.45,maxV:.45*K/4}}
+function txt(x,y,s,anchor='start',fill=ink,size=17){return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-size="${size}" fill="${fill}" font-family="Arial,Microsoft YaHei,sans-serif">${s}</text>`}
+function chart(id,x,y,w,h,xmax,ymax,xticks,yticks){const X=t=>x+w*t/xmax,Y=v=>y+h-h*v/ymax;let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs>`+R(x,y,w,h,'#fff');for(const v of yticks)svg+=P(`M${x} ${Y(v)}h${w}`,'none','#dfe5df',1)+txt(x-9,Y(v)+5,fmt(v,2),'end');for(const t of xticks)svg+=P(`M${X(t)} ${y+h}v4`,'none','#87988c',1)+txt(X(t),y+h+23,t,'middle');svg+=P(`M${x} ${y}v${h}h${w}`,'none','#819286',1.2);return {id,x,y,w,h,xmax,ymax,X,Y,svg}}
+function line(c,fn,max,color,w=2.5,dashed=false){const n=Math.max(2,Math.min(900,Math.ceil(c.w*1.4)));let d='';for(let i=0;i<=n;i++){let t=max*i/n;d+=(i?'L':'M')+c.X(t).toFixed(2)+' '+c.Y(fn(t)).toFixed(2)}return `<g clip-path="url(#${c.id})"><path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" ${dashed?'stroke-dasharray="5 5"':''}/></g>`}
+function cursor(c,t,color='#758a7d'){return P(`M${c.X(t)} ${c.y}v${c.h}`,'none',color,1)}
+function point(c,t,value,color=green){return value<=c.ymax&&value>=0?E(c.X(t),c.Y(value),4,4,color,'#fff'):''}
+function paramecium(x,y,s=1,a=0){return G(x,y,s,P('M-25 0C-24 -17 13 -19 27 -5C38 7 17 20 -8 14C-21 11 -25 7 -25 0Z','#d9e4bd','#6e936a',1.1)+many(17,i=>{let p=i/17*Math.PI*2;return P(`M${Math.cos(p)*27} ${Math.sin(p)*14}l${Math.cos(p)*4} ${Math.sin(p)*4}`,'none','#95ac80',.8)})+P('M-7 8Q9 0 19 5','none','#9db27c',2)+E(-7,-2,7,4,'#a7bc88')+E(17,-4,3,3,'#f0efcc')+E(-17,4,3,3,'#f0efcc'),a)}
+function fish(x,y,s=1,a=0){return G(x,y,s,P('M-24 0Q-3 -18 27 -1Q8 19 -24 0L-39 -13L-34 2L-39 15Z','#88afa7','#4e7f75',1.2)+P('M-8 -10L-2 -20L10 -10M-1 10L5 20L13 9','#abc6ba','#6b9485',1)+P('M15 -8Q9 0 16 9','none','#60877b',1)+E(21,-2,2,2,ink),a)}
+function whale(x,y,s=1){return G(x,y,s,P('M-112 -5Q-100 -49 -18 -42Q38 -47 78 -9L112 1Q115 -20 139 -22L124 6L144 26Q118 28 108 9L67 11Q5 55 -70 27Q-117 23 -112 -5Z','#91afb7','#527986',1.5)+P('M-109 8Q-45 44 61 7','none','#d7e4e0',8)+P('M-29 17Q-24 58 6 51L-5 18','#789aa3','#527986',1)+P('M2 -39L12 -59L26 -32','#789aa3','#527986',1)+E(-91,-5,3,3,'#253d44')+P('M-105 9Q-88 13 -76 10','none','#527986',1.5)+P('M-56 -43Q-73 -68 -63 -78M-56 -43Q-47 -73 -38 -74','none','#b9d2d6',2))}
+function locust(x,y,s=1){return G(x,y,s,P('M-58 5Q-29 -14 31 -5Q42 2 30 12L-38 16Z','#a6b77e','#6e8559',1.4)+P('M-42 -7Q-3 -26 35 -5L-37 12Z','#c5c995','#7e9169',1)+P('M-35 -1L27 -5M-17 -12L-5 7M1 -14L13 4','none','#95a377',.7)+E(35,0,11,13,'#b1b980','#6e8559')+E(38,-5,3,4,'#5e704f')+P('M38 -12L62 -32M34 -12L48 -36M-18 9L-1 -23L18 35L-10 41M13 10L31 31L46 33M31 10L48 24L60 23','none','#728758',3))}
+const lambdas=[1,...Array(5).fill(1.6),1.48,1.36,1.24,1.12,1,...Array(5).fill(.7),.76,.82,.88,.94,1];
+const Ns=[100];for(let i=1;i<=20;i++)Ns.push(Ns[i-1]*lambdas[i]);
+function lambdaState(t){let k=Math.min(20,Math.floor(t)),f=t-k,lambda=k===20?lambdas[20]:lambdas[k+1];return {t,k,lambda,N:Ns[k]*(k<20?lambda**f:1),peak:Math.max(...Ns),minimum:Math.min(...Ns)}}
+let cleaned=false;
+function fishState(t){const p=t/14,K=400,r=.5,grow=Math.log((K/180-1)/(K/280-1))/r;let N;if(p<.35)N=logN(grow*p/.35,K,180,r);else if(p<.55)N=mix(280,200,(p-.35)/.2);else N=logN((p-.55)/.45*3,K,200,r);return {N,K,caught:80*phase(p,.35,.55),r,v:r*N*(1-N/K)}}
+function pestState(t,clean=cleaned){const K0=400,r=.55,at=clean?2:Math.log(19)/r,before=logN(at,K0,20,r),after=before*(clean?.25:.5),K=t<at?K0:clean?200:400,N=t<at?logN(t,K0,20,r):logN(t-at,K,after,r);return {N,K,at,before,after,r,v:r*N*(1-N/K),removed:t>=at?before-after:0}}
+const dayData=[.4,1.1,3.2,6,6.1,5.8,4.4,2];
+const countSets={25:{standard:[22,25,24,23,26],cover:[33,37,36,35,39],bottom:[33,37,36,35,39],top:[11,12,12,12,13],unsettled:[13,15,14,14,16]},16:{standard:[36,40,38,36],cover:[54,60,57,54],bottom:[54,60,57,54],top:[18,20,19,18],unsettled:[22,24,23,21]}};
+function yeastRecords(target){const base=target-4,cols=Math.ceil(Math.sqrt(base)),rows=Math.ceil(base/cols),a=Array.from({length:base},(_,i)=>({x:.12+.76*(i%cols)/(cols-1),y:.16+.66*Math.floor(i/cols)/(rows-1),live:true,bud:i<2?.6:i<4?.2:0}));a.push({x:.45,y:0,live:true},{x:0,y:.6,live:true},{x:1,y:.36,live:true},{x:.63,y:1,live:true},{x:-.10,y:.8,live:true},{x:1.09,y:.79,live:true},{x:.15,y:.94,live:false},{x:.4,y:.94,live:false},{x:.88,y:.94,live:false});return a}
+const countedCell=p=>p.live&&p.x>=0&&p.x<1&&p.y>=0&&p.y<1?(p.bud>=.5?2:1):0;
+function yeastModel(){const groups=Number($('format').value),kind=$('procedure').value,counts=countSets[groups][kind],samples=counts.length,A=counts.reduce((a,b)=>a+b,0),dilution=Math.max(1,Math.min(1000,Number($('dilution').value)||1));return {groups,kind,counts,samples,A,dilution,concentration:A/samples*groups*1e4*dilution,baseline:600*1e4*dilution,records:yeastRecords(counts[0]),depth:kind==='cover'?.15:.1}}
+function yeast(x,y,s=1,dead=false,bud=0){return G(x,y,s,E(0,0,7.5,10,dead?'#87a5bd':'url(#cell)',dead?'#466e8f':'#a68e52')+E(1,1,3.6,4.8,dead?'#b2c6d5':'#fff9e7')+E(-2,-5,1.2,1.2,dead?'#496e8d':'#d1b279')+(bud?G(7,-9,Math.sqrt(bud),E(0,0,7.5,10,'url(#cell)','#a68e52')+E(1,1,3.5,4.5,'#fff9e7')):''),-18)}
+function regulation(species,factor,start){const K=200,r=species==='whale'?.13:.7,step=.05,out=[{t:0,N:start}],events=[];let N=start;for(let i=1;i<=200;i++){let t=i*step;N+=r*N*(1-N/K)*step;if(i===40||i===120){let fraction=factor==='dependent'?.45*N/K:.30;events.push({t,before:N,fraction,loss:N*fraction});N*=1-fraction}out.push({t,N})}return {out,events,K,r}}
+function atSeries(series,t){const j=Math.min(199,Math.floor(t/.05)),f=clamp((t-j*.05)/.05);return mix(series[j].N,series[j+1].N,f)}
+
+
+function renderGrowth(p){
+ const t=p*16,m=growthState(t),finite=$('rateMode').value==='finite';
+ const a=chart('ng',78,120,500,108,16,m.K*1.25,[],[0,m.K/2,m.K]),b=chart('rg',78,310,500,75,16,finite?.7:.5,[],[0,finite?.6:.45]),c=chart('vg',78,460,500,100,16,m.K*.16,[0,4,8,12,16],[0,m.maxV]);
+ const fj=q=>growthState(q).J,fs=q=>growthState(q).S,frj=q=>finite?growthState(q).RJ:.45,frs=q=>finite?growthState(q).RS:growthState(q).gS;
+ let s=R(18,18,590,586,'#faf7f0')+R(622,18,360,586,'#f0f7f4')+a.svg+b.svg+c.svg;
+ let fill='';for(let i=0;i<=100;i++){let q=t*i/100;fill+=(i?'L':'M')+a.X(q)+' '+a.Y(fj(q))}for(let i=100;i>=0;i--){let q=t*i/100;fill+='L'+a.X(q)+' '+a.Y(fs(q))}s+=`<g clip-path="url(#ng)">${P(fill+'Z','url(#hatch)','none')}</g>`;
+ [[a,fj,coral],[a,fs,green],[b,frj,coral],[b,frs,green],[c,q=>growthState(q).vJ,coral],[c,q=>growthState(q).vS,green]].forEach(([ch,fn,color])=>{s+=line(ch,fn,16,'#c5cec4',1,true)+line(ch,fn,t,color,3)+point(ch,t,fn(t),color)});
+ for(const ch of [a,b,c])s+=cursor(ch,t)+`<path d="M${ch.X(m.halfTime)} ${ch.y}v${ch.h}" stroke="#a58c68" stroke-dasharray="3 4" fill="none"/>`;
+ s+=P(`M${a.x} ${a.Y(m.K)}h${a.w}`,'none','#8fa48d',1.3);
+ const dx=24,dt=dx/a.w*a.xmax;s+=`<g clip-path="url(#ng)">${P(`M${a.X(t)-dx} ${a.Y(m.S-m.vS*dt)}L${a.X(t)+dx} ${a.Y(m.S+m.vS*dt)}`,'none','#273f32',2)}</g>`;
+ s+=label(34,27,'J：指数增长（橙）  /  S：逻辑斯谛（绿）')+label(37,70,'Ⅰ 数量 N（个体）')+call(366,70,a.X(m.halfTime),a.Y(m.K/2),'N=K/2：切线最陡');
+ s+=label(37,260,finite?'Ⅱ 每期增长率 R（比例/期）':'Ⅱ 瞬时人均增长率 g（/时间）')+label(37,409,'Ⅲ 总增长速率 v = dN/dt');
+ const escapeN=Math.log(a.ymax/20)/.45,escapeV=Math.log(c.ymax/9)/.45;
+ if(t>escapeN)s+=label(368,188,'J 超出纵轴 ↑');if(t>escapeV)s+=label(368,523,'J 仍在继续上升 ↑');
+ const bottle='M760 126H840V182L933 370Q944 398 920 402H680Q657 399 669 370L760 182Z';
+ s+=`<defs><clipPath id="flask1">${P(bottle)}</clipPath></defs>`+P(bottle,'#fafffb','#8ea79b',2)+`<g clip-path="url(#flask1)">${R(663,223,285,180,'url(#water)')}`;
+ const cells=Math.floor(m.S/10);for(let i=0;i<cells;i++){const random=seeded(i*71+22),y=235+random()*149,spread=(y-180)*.57,x=800+(random()-.5)*spread*1.65;s+=paramecium(x+Math.sin(t*1.8+i)*3,y+Math.cos(t*1.2+i)*2,.35,i*41+t*6)}s+='</g>'+P(bottle,'none','#8ea79b',2)+P('M762 135H838','none','#b4c8bc',5);
+ s+=label(642,38,`草履虫培养 · K = ${m.K}`)+label(642,90,`t = ${t.toFixed(1)} · S ≈ ${fmt(m.S)} 个体`)+call(645,418,710,374,'资源与空间改变，K也改变');
+ const v=chart('vN',677,521,264,68,m.K,m.maxV*1.15,[0,m.K/2,m.K],[0]);s+=v.svg+line(v,n=>.45*n*(1-n/m.K),m.K,green)+point(v,m.S,m.vS,green)+label(639,468,'v 随 N 变化：峰值在 K/2');
+ s+=label(36,618,'斜纹表示两模型的数量差；并不等于累计死亡数，也不是死亡曲线下的面积。');
+ $('svg1').innerHTML=s;
+ const near=Math.abs(m.S-m.K/2)<m.K*.09;
+ say(1,'TIME PROBE / 同步读数',near?'K/2最大的是总增量斜率。':m.S>m.K*.9?'接近K，增长正在放缓。':'先说清楚“率”的分母。',near?'v=rN(1−N/K)在N=K/2处达到rK/4。出生率与死亡率之差对应人均净增长率，不能直接称作总增长速率。':m.S>m.K*.9?'理想S曲线逐渐接近K，净增长趋近0。无迁移的稳定状态下，出生与死亡可以相等且都不为0。':'J的每期新增比例恒定，但新增个体数会随已有数量增加。S的人均增长指标下降，总增长速率却先升后降。',`S：N=${fmt(m.S)}；${finite?'R='+fmt(m.RS*100)+'%/期':'g='+m.gS.toFixed(3)+'/时间'}；v=${fmt(m.vS)}个体/时间`, `J：N=${fmt(m.J)}。连续参数r=0.45，λ=eʳ≈${Math.exp(.45).toFixed(3)}；每期R≈${(m.RJ*100).toFixed(1)}%。三者口径明确后再比较。`);
+}
+function renderLambda(p){
+ const t=p*20,m=lambdaState(t),a=chart('lambda',77,135,480,127,20,1.85,[0,5,10,15,20],[0,1,1.6]),b=chart('number',77,362,480,168,20,Math.ceil(m.peak/500)*500,[0,5,10,15,20],[0,1000,2000]);
+ let s=R(18,18,575,586,'#f7f6f0')+R(610,18,372,586,'#f0f7f4')+a.svg+b.svg;
+ s+=`<path d="M${a.x} ${a.Y(1)}h${a.w}" fill="none" stroke="${coral}" stroke-width="1.5" stroke-dasharray="6 4"/>`;
+ for(let i=1;i<=20;i++){const x0=a.X(i-1),x1=a.X(i),y=a.Y(lambdas[i]);s+=P(`M${x0} ${y}H${x1}`,'none','#c2cfc8',1.5);if(i<=Math.ceil(t)){let end=Math.min(t,i);s+=P(`M${x0} ${y}H${a.X(end)}`,'none',blue,3);if(i>1)s+=P(`M${x0} ${a.Y(lambdas[i-1])}V${y}`,'none',blue,1.4)}}
+ s+=line(b,q=>lambdaState(q).N,20,'#c2cfc8',1.2,true)+line(b,q=>lambdaState(q).N,t,green,3)+cursor(a,t)+cursor(b,t)+point(a,t,m.lambda,blue)+point(b,t,m.N,green);
+ s+=label(35,32,'年度倍数 → 逐年连乘')+label(35,82,`Ⅰ λ = Nᵢ / Nᵢ₋₁ · 当前 ${m.lambda.toFixed(2)}`)+label(36,307,'Ⅱ 数量 N')+call(291,307,b.X(9),b.Y(Ns[9]),'最高值：第9—10年');
+ s+=label(44,565,`第${t.toFixed(1)}年：N ≈ ${fmt(m.N)} · 初始100`);
+ const isFish=$('management').value==='fish',mgt=isFish?fishState(p*14):pestState(p*14),nIcons=Math.max(1,Math.floor(mgt.N/12));
+ s+=label(628,32,isFish?'渔业：补充量与保留量':'鼠害：移除后还会恢复');
+ if(isFish){
+  s+=R(631,174,331,160,'#ddece8','#c2d5cc',14)+P('M684 139H813L791 169H709Z','#c8ae88','#937b5c',1.3)+R(715,107,56,32,'#eee8dc','#937b5c',3)+P('M771 109L817 127L851 183','none','#937b5c',2);
+  const net=phase(p,.35,.55);s+=P(`M851 183Q${915-net*15} ${315-net*100} 805 281Q${749+net*36} 231 851 183`,'#b2c8ba44','#819f8e',1.3)+many(7,i=>P(`M${805+i*9} ${210+i*5}l${20-net*7} ${69-net*37}`,'none','#8da896',.8));
+  s+=many(nIcons,i=>fish(655+(i%7)*43+Math.sin(i+p*7)*5,210+Math.floor(i/7)*30,.36));
+  s+=O(net,many(Math.floor(mgt.caught/12),i=>fish(827+(i%3)*23,187+Math.floor(i/3)*20,.3,-30)));
+  const c=chart('fishV',676,457,272,105,400,55,[0,200,400],[0,50]);s+=c.svg+line(c,n=>.5*n*(1-n/400),400,green)+point(c,mgt.N,mgt.v,coral)+label(640,405,'v(N)：K/2处潜在补充最多');
+ }else{
+  s+=R(635,124,323,214,'#e9ecdf','#c0cbb2',12)+P('M645 183L710 127L775 183M655 183V277H765V183','#d2c7ac','#a3977a',1.5)+R(691,211,35,66,cleaned?'#9aafa0':'#736a50','#968b71',3);
+  s+=many(nIcons,i=>mouse(668+(i%7)*43,208+Math.floor(i/7)*24,.37,false,Math.sin(i+p*12)*5));
+  s+=O(cleaned?1-phase(p,0,.3):1,many(7,i=>E(805+i*15,192+i%2*13,6,4,'#b5a276')));
+  const c=chart('pestN',676,457,272,105,14,430,[0,7,14],[0,200,400]);s+=c.svg+line(c,q=>logN(q,400,20,.55),14,'#a9b6a3',1.7,true)+line(c,q=>pestState(q).N,p*14,green,3)+point(c,p*14,mgt.N,green)+label(640,405,cleaned?'早期移除＋降低可用食源':'单次移除：后续仍有增长');
+ }
+ s+=label(637,351,`N ≈ ${fmt(mgt.N)} · ${isFish?'已捕 '+fmt(mgt.caught):'K = '+mgt.K}`)+label(36,618,'λ＞1仍在增加；λ＜1仍在减少。λ的升降方向，不能替代它与1的大小比较。');
+ $('svg2').innerHTML=s;
+ const rate=m.lambda>1?'本期增长':m.lambda<1?'本期减少':'本期不变';
+ say(2,`YEAR ${t.toFixed(1)} / ${rate}`,t>=15?'λ回升，数量仍可能减少。':t>=5&&t<=10?'倍数在下降，数量仍可增加。':'把每一期接在上一期之后。',`Nᵢ=Nᵢ₋₁×λᵢ。当前N≈${fmt(m.N)}。第9—10年的峰值约${fmt(m.peak)}，第20年约${fmt(Ns[20])}，仍高于初始100；末段最低不等于全程最低。`,isFish?'理想连续模型：MSY=rK/4；并非现实捕捞的无条件处方。':cleaned?'环境治理可降低可支持数量；本图K减半是设定，不是实测效果。':'单次降低数量，不一定改变后续增长条件。',isFish?'右图捕前280、捕后200，收获80。现实需留安全余量。仅凭λ不能唯一反推年龄结构。':'K/2不是普遍防治阈值。天敌改变死亡等过程，不能一律解释为K减半。');
+}
+
+
+let lastCountKey='';
+function renderYeast(p){
+ const m=yeastModel(),day=7*phase(p,0,.25),f=q=>{let n=Math.min(6,Math.floor(q));return mix(dayData[n],dayData[n+1],q-n)},c=chart('yeastDays',77,127,379,123,7,7,[0,1,3,5,7],[0,3,6]);
+ const shake=phase(p,.25,.35),cover=phase(p,m.kind==='cover'?.47:.35,m.kind==='cover'?.60:.47),fill=phase(p,m.kind==='cover'?.35:.47,m.kind==='cover'?.47:.60),settle=m.kind==='unsettled'?0:phase(p,.6,.75),scan=phase(p,.75,1),nRead=Math.floor(scan*(m.records.length+.01)),observed=m.records.slice(0,nRead).reduce((a,v)=>a+countedCell(v),0);
+ let s=R(18,18,475,518,'#fdf8f5')+R(510,18,472,518,'#f4f6fa')+c.svg+line(c,f,7,'#c9cbc3',1,true)+line(c,f,day,green,3)+point(c,day,f(day),green);
+ s+=label(34,29,'3a / 培养记录与装板')+label(34,80,'活菌浓度（×10⁷/mL）')+label(517,29,'3b / 固定第3天样本 · 中格放大');
+ if(p>=.25)s+=call(256,80,c.X(3),c.Y(6),'取第3天样本');
+ s+=label(35,290,p<.25?'① 记录7天的消长':p<.35?(m.kind==='bottom'||m.kind==='top'?'② 未摇匀，分层取样':'② 摇匀后取代表性样本'):p<.47?(m.kind==='cover'?'③ 先滴液（错误顺序）':'③ 先放妥盖玻片'):p<.60?(m.kind==='cover'?'④ 后盖片，液滴将其托高':'④ 从边缘加液，毛细渗入'):p<.75?(m.kind==='unsettled'?'⑤ 未等沉降就开始观察':'⑤ 适当静置，细胞沉降'):'⑥ 同一焦面，按规则计数');
+ const swing=m.kind==='bottom'||m.kind==='top'?0:Math.sin(shake*Math.PI*6)*5*(1-shake),bx=137+swing;
+ const bottle='M-23 -88H23V-44L66 55Q71 69 53 70H-53Q-71 69 -66 55L-23 -44Z';
+ s+=G(bx,418,1,P(bottle,'#fffefa','#a89b83',1.6)+P('M-44 4H44L64 57Q65 66 51 66H-51Q-65 66 -64 57Z','#ece4c5','#c6b78b',1));
+ for(let i=0;i<18;i++){let rng=seeded(61*i+3),x=bx-38+rng()*75,y=433+rng()*42;if(m.kind==='bottom'||m.kind==='top')y=466+rng()*12;s+=yeast(x,y,.38,false,i%6===0?.25:0)}
+ const uptakeY=m.kind==='bottom'?477:m.kind==='top'?432:450;s+=P(`M${bx+7} ${uptakeY}L${bx+18} 379L${bx+44} 365`,'none','#819ca0',3)+E(bx+48,362,10,5,'#b2c5c3','#6e8e8d');
+ const top=450-m.depth*400,glassY=mix(349,top,cover);s+=R(258,453,216,18,'#d3dde0','#92a6ac',3)+R(274,top,184*fill,450-top,'#dbe7e6')+P(`M264 ${glassY}H468`,'none','#92acb1',5)+P('M265 455V470M467 455V470','none','#92acb1',1);
+ if(fill>0&&fill<1)s+=E(275,mix(350,top,fill),4,6,blue);
+ for(let i=0;i<9;i++){let x=288+i*18,y=mix(top+10+(i%2)*9,443,settle);s+=O(fill,yeast(x,y,.42,i===7))}
+ s+=call(247,493,466,top,`液层厚度 ${m.depth.toFixed(2)} mm`);
+ const qside=m.groups===25?5:4,miniX=526,miniY=123,miniW=88,selected=m.groups===25?[[0,0],[4,0],[2,2],[0,4],[4,4]]:[[0,0],[3,0],[0,3],[3,3]];
+ for(let r=0;r<qside;r++)for(let col=0;col<qside;col++)s+=R(miniX+col*miniW/qside,miniY+r*miniW/qside,miniW/qside,miniW/qside,selected.some(a=>a[0]===col&&a[1]===r)?'#c4d9bd':'#fff','#9daf9c',0);
+ s+=label(518,222,`取 ${m.samples} 中格`)+label(638,90,'淡色：活菌  /  蓝色：死菌')+label(642,136,`内含 ${m.groups===25?16:25} 小格`);
+ const x=640,y=190,w=300,sub=m.groups===25?4:5;s+=R(x,y,w,w,'#fff','#9cadb5',0);
+ for(let i=1;i<sub;i++)s+=P(`M${x+i*w/sub} ${y}v${w}M${x} ${y+i*w/sub}h${w}`,'none','#dae2e4',1);
+ s+=P(`M${x+w} ${y}H${x}V${y+w}`,'none',green,2)+`<path d="M${x+w} ${y}V${y+w}H${x}" stroke="${coral}" stroke-width="2" stroke-dasharray="5 4" fill="none"/>`;
+ m.records.forEach((r,i)=>{let px=x+r.x*w,py=y+r.y*w,seen=i<nRead,ct=countedCell(r);s+=O(.3+.7*phase(p,.55,.75),yeast(px,py,.8,!r.live,r.bud));if(seen)s+=E(px,py,10,13,'none',ct?green:coral);if(seen&&r.bud>=.5)s+=txt(px+10,py-10,'2', 'start',green,17)});
+ if(m.kind==='unsettled')s+=O(.16,many(9,i=>yeast(x+30+(i%3)*102,y+55+Math.floor(i/3)*100,1.15,false)));
+ s+=label(603,497,`本中格已计 ${observed} / ${m.counts[0]} 个活菌`);
+ s+=label(36,553,`C = (${m.A} / ${m.samples}) × ${m.groups} × 10⁴ × ${m.dilution} = ${(m.concentration/1e7).toFixed(2)} ×10⁷ 个/mL`)+label(36,611,'大格体积：1 mm × 1 mm × 0.1 mm = 0.1 mm³ = 10⁻⁴ mL');
+ $('svg3').innerHTML=s;
+ const notes={standard:['按体积反推浓度。','摇匀、规范装板、适当沉降、统一边界，是让小体积样本具有代表性的前提。','培养曲线展示时间变化；检验具体环境因素时仍需设置匹配对照。'],cover:['被托高的液层，多装了细胞。','本例盖玻片被托高至0.15mm，却仍用0.1mm换算，结果偏大。这是明确条件下的示例，不是所有错误装片的必然后果。','若同时有气泡、溢流或细胞分布不均，偏差方向还会改变，应重新装板。'],bottom:['底层不是整瓶的平均状况。','未摇匀且细胞已沉降时，底层样本较浓。本例记录数升高，反推的原液浓度偏大。','不充分混匀破坏了样本代表性，增加重复计数不能自动消除系统偏差。'],top:['上层取样，可能漏掉底部个体。','本例未摇匀，细胞主要沉在底部。上层样本偏稀，估算值偏小。','取样位置造成的偏差与稀释倍数算错不是同一个问题。'],unsettled:['同一个视野，不一定同一焦面。','仍悬浮在不同深度的细胞可能看不清或漏计，本例可见计数减少，估值偏小。','镜下蓝色细胞单列为死菌，不计入此处活菌浓度；若统计总菌数则应另外合计。']}[m.kind];
+ say(3,p<.25?'BATCH CULTURE / 批次培养':p<.75?'PREPARATION / 取样与装板':'COUNT & CONVERT / 计数与换算',notes[0],notes[1],`所取${m.samples}中格合计 A=${m.A}；活菌浓度 ${(m.concentration/1e7).toFixed(2)}×10⁷/mL`,notes[2]+' 原始记录和总稀释倍数可在下方展开核对。');
+ const key=m.groups+':'+m.kind+':'+m.dilution;if(key!==lastCountKey){lastCountKey=key;$('countTable').innerHTML='<table><thead><tr><th>样本中格</th>'+m.counts.map((v,i)=>'<th>'+(i+1)+'</th>').join('')+'<th>合计 A</th></tr></thead><tbody><tr><th>活菌计数</th>'+m.counts.map(v=>'<td>'+v+'</td>').join('')+'<td>'+m.A+'</td></tr></tbody></table><p>当前记录的标准对照浓度：'+(m.baseline/1e7).toFixed(2)+'×10⁷/mL。修改总稀释倍数表示重新指定这份镜下样本的已知处理记录，并非把原液加水后还假定镜下数量不变。</p>'}
+}
+function renderRegulation(p){
+ const factor=$('factor').value,t=10*p,colors=[blue,green];let s='';
+ ['whale','locust'].forEach((species,i)=>{
+  let dx=i*492,low=regulation(species,factor,40),high=regulation(species,factor,120),now=atSeries(high.out,t),c=chart('reg'+i,78+dx,350,368,175,10,220,[0,2,6,10],[0,100,200]);
+  s+=R(18+dx,18,472,586,i?'#f4f6ec':'#f0f5f7')+label(34+dx,32,i?'蝗虫：较快生活史示意':'鲸：较慢生活史示意');
+  if(i)s+=many(7,j=>O(.28,grass(570+j*57,276,.8)))+locust(747,185,2);else s+=P('M48 251Q150 230 246 252T459 250','none','#adc7ce',3)+whale(242,183,1.2);
+  s+=label(40+dx,280,`当前高起始组 N ≈ ${fmt(now)}`)+c.svg+line(c,q=>atSeries(low.out,q),10,'#b7c9c1',1.2,true)+line(c,q=>atSeries(high.out,q),10,'#b7c9c1',1.2,true)+line(c,q=>atSeries(low.out,q),t,colors[i],2,true)+line(c,q=>atSeries(high.out,q),t,colors[i],3)+cursor(c,t)+point(c,t,now,colors[i]);
+  for(const event of [2,6])s+=`<path d="M${c.X(event)} ${c.y}v${c.h}" stroke="${coral}" stroke-width="1" stroke-dasharray="4 4"/>`;
+  const hi=high.events[0],lo=low.events[0];s+=label(41+dx,556,`首轮损失比例：${fmt(lo.fraction*100)}% / ${fmt(hi.fraction*100)}%`);
+ });
+ s+=label(35,613,'虚线：低起始N=40  /  实线：高起始N=120；重点比较损失比例，不把波动直接等同制约类型。');
+ $('svg4').innerHTML=s;
+ say(4,'MODEL BOUNDARY / 通向下一节',factor==='dependent'?'看单位个体受到的影响。':'同一冲击，不要求高密度才发生。',factor==='dependent'?'本例把每次损失比例设为0.45×N/K，因此较高密度下损失比例更高。竞争、传播性病害等可呈现密度制约，但具体机制仍要调查。':'本例两组都损失30%，用来隔离“与密度无关的外部冲击”这一概念。实际极端天气的效应也受暴露程度和生境影响。','K/2不是灭绝阈值，也不是所有害虫的行动阈值。','鲸与蝗虫只是生活史示意，不是二分法的绝对分类。低密度风险须看物种、繁殖与生境；干旱也并非无条件导致蝗灾。');
+}
+
+
+const renderers=[renderGrowth,renderLambda,renderYeast,renderRegulation];
+const clocks=renderers.map((render,i)=>BioAtlas.createTimeline({duration:[22,24,28,18][i],render,onState({t,playing,duration}){document.querySelector(`[data-time="${i}"]`).value=t*100;document.querySelector(`[data-play="${i}"]`).textContent=playing?'Ⅱ 暂停过程':'▶ 播放过程';$('time'+i).textContent=`${Math.round(t*100)}% · ${duration}秒演示`}}));
+document.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];c.state.playing?c.pause():c.play()}));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>clocks[+b.dataset.reset].reset()));
+document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('input',()=>clocks[+b.dataset.time].seek(Number(b.value)/100)));
+function restart(i){clocks[i].reset();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)clocks[i].play()}
+$('capacity').addEventListener('change',()=>restart(0));
+$('rateMode').addEventListener('change',()=>clocks[0].seek(clocks[0].state.t));
+$('management').addEventListener('change',()=>{$('cleanup').hidden=$('management').value!=='pest';restart(1)});
+$('cleanup').addEventListener('click',()=>{cleaned=!cleaned;$('cleanup').setAttribute('aria-pressed',String(cleaned));$('cleanup').textContent=cleaned?'已启用：早期移除＋环境治理':'改为：早期移除＋环境治理';restart(1)});
+$('procedure').addEventListener('change',()=>restart(2));
+$('format').addEventListener('change',()=>clocks[2].seek(clocks[2].state.t));
+$('dilution').addEventListener('change',()=>{let n=Number($('dilution').value);$('dilution').value=Number.isFinite(n)?Math.max(1,Math.min(1000,Math.round(n))):1;clocks[2].seek(clocks[2].state.t)});
+$('factor').addEventListener('change',()=>restart(3));
+$('lambdaTable').innerHTML='<table><thead><tr><th>年末 i</th><th>本年 λᵢ</th><th>数量 Nᵢ</th><th>相较上一年</th></tr></thead><tbody>'+Ns.map((n,i)=>'<tr><th>'+i+'</th><td>'+(i?lambdas[i].toFixed(2):'起始条件')+'</td><td>'+fmt(n,2)+'</td><td>'+(i?(n>Ns[i-1]?'增加 ':n<Ns[i-1]?'减少 ':'不变 ')+fmt(n-Ns[i-1],2):'N₀=100')+'</td></tr>').join('')+'</tbody></table><p>数量允许小数，因为这里是确定性模型的期望值；不是声称观察到了半个个体。λᵢ对应第i−1年至第i年。</p>';
+$('dayTable').innerHTML='<table><caption>0日基线与随后7天的独立模拟记录（批次培养）</caption><thead><tr><th>培养天数</th>'+dayData.map((n,i)=>'<th>'+i+'</th>').join('')+'</tr></thead><tbody><tr><th>活菌浓度 ×10⁷/mL</th>'+dayData.map(n=>'<td>'+n.toFixed(1)+'</td>').join('')+'</tr></tbody></table>';
+const reviewRows=[
+ ['J形：理想条件','离散 Nᵢ=Nᵢ₋₁λ；连续 N=N₀eʳᵗ。每期增长率 R=λ−1；瞬时人均增长率 g=r=lnλ。两种时间口径须分开。'],
+ ['S形：密度制约','dN/dt=rN(1−N/K)。N=K/2时总增长速率最大；g=r(1−N/K)随N增加而下降。K是给定环境下的模型参数。'],
+ ['λ判读','λ>1增加，λ=1本期不变，λ<1减少。先与1比较，再看λ走势；数量按连乘还原，不能对λ直接积分求N。'],
+ ['数量与年龄结构','仅凭某年的λ无法唯一确定年龄结构。迁移、年龄别出生死亡与外界条件都能影响年度倍数。'],
+ ['渔业与防治','理想模型的最大剩余生产量为rK/4，对应K/2。实际管理须估计参数、保留安全余量；不能把K/2当作所有害虫的防治阈值。'],
+ ['计数换算','大格1×1×0.1 mm³=10⁻⁴mL。C=(所取中格合计÷中格数)×每大格中格数×10⁴×总稀释倍数。'],
+ ['活菌、死菌与芽体','本课统计活菌浓度。边界计上、计左，排除下、右；左上角计入，其余角排除。芽体按预先约定判定，染色条件与试剂稀释也须记录。'],
+ ['代表性与误差','摇匀取样，先规范放盖玻片，边缘加液，适当静置。重复计数可减小随机误差，但不能修正错误取样造成的系统偏差。'],
+ ['密度制约','比较的是单位个体损失概率/比例与密度的关系，不能仅看总死亡个体数。现实因素可能交互作用。']
+];
+$('reviewTable').innerHTML='<table><tbody>'+reviewRows.map(r=>'<tr><th>'+r[0]+'</th><td>'+r[1]+'</td></tr>').join('')+'</tbody></table><p>课堂追问：哪条曲线的峰值对应K/2？λ下降时N何时才下降？为什么制片体积不对，乘对公式仍然会错？</p>';
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+$('review').addEventListener('click',e=>{if(e.target===$('review')){const b=$('review').getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)$('review').close()}});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>BioAtlas.pauseAll()));
+const screenObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting){const index=Number(e.target.id.replace('figure',''))-1;clocks[index].pause()}}),{threshold:0});document.querySelectorAll('.figure').forEach(n=>screenObserver.observe(n));
+</script></body></html>
