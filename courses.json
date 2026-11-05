@@ -1086,5 +1086,21 @@
     "latest": true,
     "route": "courses/population/original/",
     "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。"
+  },
+  {
+    "file": "lessons/选择性必修2_01-03_影响种群数量变化的因素_种群调控与统计证据图谱_v1.0.html",
+    "title": "影响种群数量变化的因素 种群调控·统计图谱版 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/population-factors--quantitative-atlas-v1.webp",
+      "thumbnail": "assets/previews/population-factors--quantitative-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "影响种群数量变化的因素 · 种群调控与统计证据图谱真实画面：雪兔—猞猁反馈与历史记录",
+      "scene": "先起峰的曲线，就一定是猎物吗？"
+    },
+    "latest": true,
+    "route": "courses/population-factors/quantitative-atlas-v1/",
+    "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。"
   }
 ]

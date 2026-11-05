@@ -1,0 +1,289 @@
+<!doctype html><html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5"><title>影响种群数量变化的因素｜种群调控与统计证据图谱</title><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script><style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+</style></head><body><header><a class="brand" href="#top"><span class="brand-mark">Q</span><span>种群调控图谱<small>QUANTITATIVE ECOLOGY</small></span></a><div class="head-actions"><button id="theme" aria-pressed="false">theme_gray() → bw</button><button id="reviewOpen">考点速查 ↗</button></div></header><main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第1章 · 第3节</p><h1>数量的起伏，<br>有机制，也需要<em>证据。</em></h1><p class="subtitle">影响种群数量变化的因素<br>在四幅可回看的图谱中，连接环境、相互作用与管理。</p></div><div class="intro-note"><i>Regulation, in context.</i><p>先观察，再追问。<br>哪一处变化支持你的解释？<br>哪些结论，还需要更多证据？</p></div></section><nav aria-label="图谱导航"><a href="#figure1">01 季节与环境</a><a href="#figure2">02 捕食与相位</a><a href="#figure3">03 密度与回归</a><a href="#figure4">04 决策与边界</a></nav><div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="hare" x2="0" y2="1"><stop stop-color="#f8f7ef"/><stop offset="1" stop-color="#c0bba9"/></linearGradient><linearGradient id="lynx" x2="0" y2="1"><stop stop-color="#c9b793"/><stop offset="1" stop-color="#998e76"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><marker id="bar" viewBox="0 0 10 12" refX="8" refY="6" markerWidth="5" markerHeight="6" orient="auto"><path d="M8 0V12" stroke="context-stroke" stroke-width="2.5"/></marker></defs></svg></div><section class="figure" data-figure="0" id="figure1"><div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / ENVIRONMENT / SEASONAL WINDOWS</p><h2>一片林冠之下，数量怎样回应四季？</h2></div><span class="fig-number">01</span></div><div class="context"><span class="pill">模拟数据 · mean ± SD</span><span class="hint">回拖下方时间轴，联动气温、光照、林下草本与蚊成虫活动。</span></div><div class="scroll-stage" tabindex="0" aria-label="第1幅图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 760" role="img" aria-label="一片林冠之下，数量怎样回应四季？"></svg></div><p class="code-note">R语法参考（本图由SVG绘制）：ggplot(monthly, aes(Month, Index, colour = Species)) + geom_ribbon(aes(ymin = Mean - SD, ymax = Mean + SD)) + geom_line() + geom_point()</p><div class="reading"><div><div id="phase1" class="phase"></div><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前读数与证据</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div><div class="toolbar"><button class="play" data-play="0">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">第1图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div><details class="extra"><summary>展开：模拟原始记录与生态边界</summary><div id="seasonTable" class="table-scroll"></div><p>生境中的光、温、水与生物相互作用共同影响数量；这里的温度和光照是独立设定的季节条件，观测值未由单一因素拟合，不能拿相关性确定唯一主因。冬季不同蚊种可在卵、幼虫或成虫阶段越冬。</p><p>蝗灾也不是“越干旱越多”的单向规则。Stige等的千年记录分析提示：年际、地区和十年尺度的关系不同，洪涝或干旱还会改变产卵生境。</p></details><p class="fig-caption"><b>Figure 1.</b> 三个分面分开保留温度、光照与观测指数的量纲。每月5个固定模拟重复，阴影由真实计算的SD生成；地上可见株数和成虫活动并不代表全部生活史数量。 <span class="cites"><a href="https://doi.org/10.2307/2259531" target="_blank" rel="noopener noreferrer" title="Augspurger, 1984 · Journal of Ecology 72, 777–795">[1] ↗</a> <a href="https://doi.org/10.1073/pnas.0706813104" target="_blank" rel="noopener noreferrer" title="Stige et al., 2007 · PNAS 104, 16188–16193">[2] ↗</a></span></p></section><section class="figure" data-figure="1" id="figure2"><div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / PREDATION / A CYCLE, WITH CAUTION</p><h2>先起峰的曲线，就一定是猎物吗？</h2></div><span class="fig-number">02</span></div><div class="context"><label class="switch"><input id="scaleLynx" type="checkbox"> 猞猁显示比例 ×10 · 开启右轴</label><span class="pill">历史记录 · 1900—1920</span></div><div class="scroll-stage" tabindex="0" aria-label="第2幅图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 760" role="img" aria-label="先起峰的曲线，就一定是猎物吗？"></svg></div><p class="code-note">R语法参考（本图由SVG绘制）：ggplot(pelts, aes(Year, Pelts, colour = Species)) + geom_line() + geom_point() + geom_vline(xintercept = peaks)</p><div class="reading"><div><div id="phase2" class="phase"></div><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前读数与证据</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div><div class="toolbar"><button class="play" data-play="1">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">第2图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div><details class="extra"><summary>展开：历史数据、代理指标与因果边界</summary><div id="peltTable" class="table-scroll"></div><p>数据据Stan公开教程及其CSV复现，教程再引相关数学教学材料。毛皮收购量受种群、捕猎努力、贸易和记录方式影响，不能直接称为野外种群数量。</p><p>捕食关系需要行为、食性、操纵实验等证据。已知捕食背景下，响应滞后可支持机制推理；共同气候驱动也能产生相似波动。负反馈与时滞可以形成周期，不能保证“永远完美平衡”。</p></details><p class="fig-caption"><b>Figure 2.</b> 使用已核验的21年配对记录，不补造1845—1935的90年数据。放大开关只改变猞猁绘图比例，右轴还原原记录；1903→1904和1913→1915的峰值间隔分别为1年、2年。机制示意不是对历史数据的唯一因果解释。 <span class="cites"><a href="https://doi.org/10.1073/pnas.94.10.5147" target="_blank" rel="noopener noreferrer" title="Stenseth et al., 1997 · PNAS 94, 5147–5152">[3] ↗</a> <a href="https://mc-stan.org/learn-stan/case-studies/lotka-volterra-predator-prey.html" target="_blank" rel="noopener noreferrer" title="Carpenter, 2018 · Stan case study">[4] ↗</a> <a href="https://raw.githubusercontent.com/stan-dev/example-models/master/knitr/lotka-volterra/hudson-bay-lynx-hare.csv" target="_blank" rel="noopener noreferrer" title="Stan example-models · Hudson Bay CSV">[5] ↗</a></span></p></section><section class="figure" data-figure="2" id="figure3"><div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / DENSITY / ESTIMATE THE RELATIONSHIP</p><h2>密度改变时，谁承受更大的风险？</h2></div><span class="fig-number">03</span></div><div class="context"><label for="factor">因子透镜</label><select id="factor"><option value="0">食物短缺</option><option value="1">接触传播</option><option value="2">捕食压力</option><option value="3">严寒 / 干旱</option><option value="4">森林火灾</option><option value="5">统一农药暴露</option></select><span class="pill">模拟数据 · OLS与95%均值CI</span></div><div class="scroll-stage" tabindex="0" aria-label="第3幅图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 760" role="img" aria-label="密度改变时，谁承受更大的风险？"></svg></div><p class="code-note">R语法参考（本图由SVG绘制）：ggplot(mortality, aes(Density, Mortality)) + geom_point() + geom_smooth(method = "lm", se = TRUE) + facet_wrap(~ Regulation)</p><div class="reading"><div><div id="phase3" class="phase"></div><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前读数与证据</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div><div class="toolbar"><button class="play" data-play="2">▶ 播放过程</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">第3图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div><details class="extra"><summary>展开：回归原始记录、公式与判断尺度</summary><div id="regressionTable" class="table-scroll"></div><p>密度制约与否，是特定机制在给定尺度下的性质。“生物因素”不能直接等于“密度制约”，“非生物因素”也不能保证没有密度交互作用。1946—1947严冬的苍鹭下降仅用作外部环境冲击的历史背景。</p></details><p class="fig-caption"><b>Figure 3.</b> 散点为固定教学模拟，不是1947年苍鹭或具体传染病的实测结果。两条回归线及95%均值响应置信带由同一组散点计算；不要把置信带当作95%个体的覆盖范围或因果证明。 <span class="cites"><a href="https://doi.org/10.1038/280361a0" target="_blank" rel="noopener noreferrer" title="Anderson & May, 1979 · Nature 280, 361–367">[6] ↗</a> <a href="https://www.bto.org/about/history/timeline/1933-53" target="_blank" rel="noopener noreferrer" title="British Trust for Ornithology · Survey history">[7] ↗</a> <a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" target="_blank" rel="noopener noreferrer" title="ggplot2 · geom_smooth">[12] ↗</a></span></p></section><section class="figure" data-figure="3" id="figure4"><div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / MANAGEMENT / DECIDE WITH BOUNDARIES</p><h2>从控制数量，到改变环境支持能力。</h2></div><span class="fig-number">04</span></div><div class="context"><label for="management">右图管理情境</label><select id="management"><option value="light">渔业 · 轻度捕捞</option><option value="medium" selected>渔业 · 模型中等捕捞</option><option value="heavy">渔业 · 重度捕捞</option><option value="habitat">保护 · 栖息地修复</option></select><span class="pill">参数模型 · 非管理处方</span></div><div class="scroll-stage" tabindex="0" aria-label="第4幅图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 760" role="img" aria-label="从控制数量，到改变环境支持能力。"></svg></div><p class="code-note">R语法参考（本图由SVG绘制）：ggplot(management, aes(Time, N, colour = Intervention)) + geom_line() + geom_hline(yintercept = c(ET, EIL), linetype = "dashed")</p><div class="reading"><div><div id="phase4" class="phase"></div><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前读数与证据</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div><div class="toolbar"><button class="play" data-play="3">▶ 播放过程</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">第4图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div><details class="extra"><summary>展开：管理模型、年龄组成与适用边界</summary><p><b>害虫：</b>dN/dt=0.25N(1−N/1000)−0.005PN；dP/dt=(0.0006N−0.09)P。天敌组起始N=120、P=50；药剂组起始N=120、P=20，并在第8、22、36天分别移除75%的害虫与90%的天敌。用步长0.025天显式积分，绘出每日状态。参数只为机制演示。</p><p>本例广谱药剂可能伤害天敌并造成再增长，但并非所有化学防治都会反弹。综合治理需监测，合理组合生境管理、天敌保护与必要的选择性措施。EIL是经济损害水平，ET是提前采取行动的阈值。</p><p><b>渔业：</b>dN/dt=rN(1−N/K)−FN，r=0.4，K=400。在0≤F&lt;r时，N*=K(1−F/r)，Y=FN*；最优点F=r/2、N*=K/2、Y=rK/4。没有年龄结构的模型不能推出“捕后必为增长型”。</p><div class="table-scroll"><table><caption>年龄组成示例：大个体被捕后，幼年比例上升不等于未来一定增长</caption><thead><tr><th>阶段</th><th>捕捞前</th><th>捕捞后</th></tr></thead><tbody><tr><th>幼年</th><td>120（30%）</td><td>120（42.9%）</td></tr><tr><th>成熟</th><td>180（45%）</td><td>120（42.9%）</td></tr><tr><th>较老</th><td>100（25%）</td><td>40（14.3%）</td></tr></tbody></table></div><p>这张年龄表示例与无年龄结构模型分开，不能据此计算该模型的产量。判断恢复能力需进一步知道各年龄存活和繁殖，以及补充、迁移与栖息地变化。</p></details><p class="fig-caption"><b>Figure 4.</b> 左图N为害虫、P为天敌，资源K始终固定为1000。天敌压低实际平衡数量，不自动等于降低资源K；右图的K/2最优点仅属于所用理想无年龄结构模型。EIL与ET均为示意值。左右图分别扫描时间与捕捞强度，不是同一横轴。 <span class="cites"><a href="https://doi.org/10.3733/hilg.v29n02p081" target="_blank" rel="noopener noreferrer" title="Stern et al., 1959 · Hilgardia 29, 81–101">[8] ↗</a> <a href="https://ipmworld.umn.edu/pedigo" target="_blank" rel="noopener noreferrer" title="Pedigo · University of Minnesota, IPM World">[9] ↗</a> <a href="https://www.iattc.org/GetAttachment/62d510ee-13d0-40f2-847b-0fde415476b8/Vol-1-No-2-1954-SCHAEFER%2C-MILNER-B-_Some-aspects-of-the-dynamics-of-populations-important-to-the-management-of-the-commercial-marine-fisheries.pdf" target="_blank" rel="noopener noreferrer" title="Schaefer, 1954 · IATTC Bulletin 1(2)">[10] ↗</a></span></p></section><section class="references"><h2>References / 机制、记录与方法</h2><p>原创SVG图谱，采用学术机制图与ggplot2视觉语法。历史记录、模拟数据和理想模型在各图分别标明；不代表相关期刊或软件官方出品。</p><ol><li id="ref-1"><a href="https://doi.org/10.2307/2259531" target="_blank" rel="noopener noreferrer">[1] Augspurger, 1984 · Journal of Ecology 72, 777–795 ↗</a><span>热带树苗在不同光环境中的生长与存活；不把结果等同于本图温带草本模拟。</span></li><li id="ref-2"><a href="https://doi.org/10.1073/pnas.0706813104" target="_blank" rel="noopener noreferrer">[2] Stige et al., 2007 · PNAS 104, 16188–16193 ↗</a><span>蝗灾与气候关联随时间尺度改变；不能概括为“干旱必然引发蝗灾”。</span></li><li id="ref-3"><a href="https://doi.org/10.1073/pnas.94.10.5147" target="_blank" rel="noopener noreferrer">[3] Stenseth et al., 1997 · PNAS 94, 5147–5152 ↗</a><span>雪兔与猞猁的不同食物网配置及数量调节。</span></li><li id="ref-4"><a href="https://mc-stan.org/learn-stan/case-studies/lotka-volterra-predator-prey.html" target="_blank" rel="noopener noreferrer">[4] Carpenter, 2018 · Stan case study ↗</a><span>公开复现1900—1920毛皮记录；数据并非野外绝对种群普查。</span></li><li id="ref-5"><a href="https://raw.githubusercontent.com/stan-dev/example-models/master/knitr/lotka-volterra/hudson-bay-lynx-hare.csv" target="_blank" rel="noopener noreferrer">[5] Stan example-models · Hudson Bay CSV ↗</a><span>本课21组原始输入数据；Year, Lynx, Hare，单位千张。</span></li><li id="ref-6"><a href="https://doi.org/10.1038/280361a0" target="_blank" rel="noopener noreferrer">[6] Anderson & May, 1979 · Nature 280, 361–367 ↗</a><span>宿主—传染病种群动力学框架；本课回归并非该文实测数据。</span></li><li id="ref-7"><a href="https://www.bto.org/about/history/timeline/1933-53" target="_blank" rel="noopener noreferrer">[7] British Trust for Ornithology · Survey history ↗</a><span>持续苍鹭调查记录了1946—1947严冬等事件的种群冲击。官方资料，无DOI。</span></li><li id="ref-8"><a href="https://doi.org/10.3733/hilg.v29n02p081" target="_blank" rel="noopener noreferrer">[8] Stern et al., 1959 · Hilgardia 29, 81–101 ↗</a><span>综合防治概念的经典论文；未将其解释为“天敌必降低资源K”。</span></li><li id="ref-9"><a href="https://ipmworld.umn.edu/pedigo" target="_blank" rel="noopener noreferrer">[9] Pedigo · University of Minnesota, IPM World ↗</a><span>经济损害水平EIL与行动阈值ET的定义和区别。</span></li><li id="ref-10"><a href="https://www.iattc.org/GetAttachment/62d510ee-13d0-40f2-847b-0fde415476b8/Vol-1-No-2-1954-SCHAEFER%2C-MILNER-B-_Some-aspects-of-the-dynamics-of-populations-important-to-the-management-of-the-commercial-marine-fisheries.pdf" target="_blank" rel="noopener noreferrer">[10] Schaefer, 1954 · IATTC Bulletin 1(2) ↗</a><span>渔业剩余生产量与理想管理模型；机构原文，无DOI。</span></li><li id="ref-11"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank" rel="noopener noreferrer">[11] ggplot2 · Complete themes ↗</a><span>theme_gray与theme_bw的官方图形规范；本课使用SVG实现相应视觉语法。</span></li><li id="ref-12"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" target="_blank" rel="noopener noreferrer">[12] ggplot2 · geom_smooth ↗</a><span>平滑回归与均值置信带的图形语法；本课用原生JavaScript计算OLS。</span></li><li id="ref-13"><a href="https://nanx.me/ggsci/reference/scale_npg.html" target="_blank" rel="noopener noreferrer">[13] ggsci · NPG palette ↗</a><span>NPG调色来源。原创图谱不代表期刊或软件官方出品。</span></li></ol></section><footer><span>林默然生物课件 · 原创交互图谱</span><span>影响种群数量变化的因素 / v1.0</span></footer></main><dialog id="review"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY / 因素、证据与边界</p><h2>把条件说完整，<br>让结论有依据。</h2><div id="reviewTable"></div></dialog><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:760}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:760}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+data.filter(d=>d.x<=edge).map(d=>E(p.X(d.x),p.Y(d.y),3.7,3.7,color,'#fff')).join(''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function lynx(x,y,s=1,a=0){return G(x,y,s,E(0,33,70,8,'#dde3dc')+P('M-60 -3Q-80 -12 -77 -22','none','#635746',10)+P('M-65 17Q-65 -20 -28 -25L15 -24Q32 -44 54 -31L65 -9L54 8L29 14L22 36H4L8 9L-20 10L-39 35H-60L-46 9Z','url(#lynx)','#695f4e',1.7)+P('M28 -29L29 -56L43 -35L53 -37L65 -53L63 -22','url(#lynx)','#695f4e',1.5)+P('M29 -54l-5 -15m40 16l7 -13','none','#27343b',2)+P('M31 -7l-13 -8l8 21m34 -15l12 -8l-8 24','url(#lynx)','#695f4e',1.2)+E(38,-20,3,2,'#27343b')+E(56,-20,3,2,'#27343b')+P('M45 -13l4 4l4 -4Z','#514338')+many(17,i=>E(-51+(i%6)*14,-13+Math.floor(i/6)*9,2.8,1.7,'#867a62')),a)}
+function heron(x,y,s=1,a=0){return G(x,y,s,P('M-7 20L-12 72L-28 78M7 20L20 65L34 69','none','#8b765e',2)+P('M0 25Q-37 8 -22 -16Q-4 -29 15 -7Q-1 -14 1 -40Q2 -73 21 -74Q38 -68 24 -57Q9 -59 12 -40Q12 -19 25 -7L13 14Z','#aab9c2','#536878',1.6)+P('M22 -71L57 -66L22 -62Z','#caab65','#8b765e')+P('M-15 -12Q15 -4 4 18L-25 8Z','#67879a','#536878')+E(23,-68,1.8,1.8,'#162b36')+P('M12 -70L0 -78','none','#344c5a',2),a)}
+function insect(x,y,s=1,a=0,lady=false){return G(x,y,s,many(6,i=>{let side=i%2?1:-1;let yy=Math.floor(i/2)*10-10;return P(`M${side*6} ${yy}L${side*18} ${yy+side*5}l${side*4} 8`,'none','#3c4d42',1.6)})+E(0,0,lady?15:9,21,lady?'#E64B35':'#9eb873','#3b5849')+P('M0 -18V20','none','#3b5849',1.3)+E(0,-23,8,7,'#344b45')+(lady?many(6,i=>E(i%2?7:-7,-12+Math.floor(i/2)*12,3,3,'#263e37')):'')+P('M-5 -27l-6 -11M5 -27l6 -11','none','#3c4d42',1.4),a)}
+function fish(x,y,s=1,a=0){return G(x,y,s,P('M-30 0L-57 -22L-51 3L-56 25L-28 9Q14 39 45 4Q16 -26 -30 0Z','#a5c6cb','#3c7481',1.5)+P('M-12 -10L0 -24L12 -12M5 20L14 31L24 15','none','#3c7481',1.4)+P('M28 -5Q18 5 29 15','none','#608e94',1.2)+E(35,3,2.5,2.5,'#183a44')+many(5,i=>P(`M${-22+i*9} 0q10 6 0 12`,'none','#78a6ab',.8)),a)}
+function flower(x,y,s=1,bloom=1){return G(x,y,s,P('M0 0Q6 -24 0 -65','none','#567e56',2.2)+P('M2 -20Q-24 -45 -24 -24Q-16 -13 2 -15M3 -36Q28 -61 25 -35Q18 -26 3 -30Z','#84ab76','#557c57')+G(0,-65,bloom,many(7,i=>G(0,0,1,E(0,-7,4,9,'#e7b79e','#bd8475',.6),i*360/7))+E(0,0,5,5,'#e0b34f')))}
+function mosquito(x,y,s=1,a=0){return G(x,y,s,E(-8,-7,14,5,'#d8e6ec','#779bab')+E(8,-7,14,5,'#d8e6ec','#779bab')+E(0,1,3,13,'#62777c')+P('M0 -13l0 -12M-1 -3l-17 9l-6 13M1 -3l17 9l6 13M-1 6l-12 12M1 6l12 12','none','#4c646b',1.2),a)}
+
+const temperatures=[1,3,8,14,20,25,28,27,21,14,7,2],lights=[67,65,64,53,28,13,11,14,28,46,63,68],waters=[22,26,40,48,68,84,88,76,58,42,30,22];
+const herbBase=[7,11,37,83,71,43,35,29,23,16,10,7],mosBase=[2,2,6,18,47,73,88,80,50,19,5,2];
+function records(base){return base.map((m,i)=>{const raw=[-.11,-.04,0,.05,.10].map((v,j)=>Math.max(.1,Math.round(m*(1+v)+(i%3-1)*(j-2)*.35)));const mean=raw.reduce((a,b)=>a+b,0)/raw.length,sd=Math.sqrt(raw.reduce((a,b)=>a+(b-mean)**2,0)/(raw.length-1));return{x:i+1,y:mean,raw,sd,lo:Math.max(0,mean-sd),hi:mean+sd}})}
+const herbs=records(herbBase),mosquitoes=records(mosBase);
+function interp(values,x){const i=Math.floor(Math.max(0,Math.min(values.length-1,x)));return i===values.length-1?values[i]:mix(values[i],values[i+1],x-i)}
+const pelts=[[1900,4,30],[1901,6.1,47.2],[1902,9.8,70.2],[1903,35.2,77.4],[1904,59.4,36.3],[1905,41.7,20.6],[1906,19,18.1],[1907,13,21.4],[1908,8.3,22],[1909,9.1,25.4],[1910,7.4,27.1],[1911,8,40.3],[1912,12.3,57,],[1913,19.5,76.6],[1914,45.7,52.3],[1915,51.1,19.5],[1916,29.7,11.2],[1917,15.8,7.6],[1918,9.7,14.6],[1919,10.1,16.2],[1920,8.6,24.7]];
+const residuals=[4,-3,2,-4,1,0,0,1,-4,2,-3,4];
+const dependent=residuals.map((e,i)=>({x:(i+1)*20,y:12+.22*(i+1)*20+e})),independent=residuals.map((e,i)=>({x:(i+1)*20,y:30+e}));
+function ols(data){const n=data.length,mx=data.reduce((s,d)=>s+d.x,0)/n,my=data.reduce((s,d)=>s+d.y,0)/n,Sxx=data.reduce((s,d)=>s+(d.x-mx)**2,0),b=data.reduce((s,d)=>s+(d.x-mx)*(d.y-my),0)/Sxx,a=my-b*mx,sse=data.reduce((s,d)=>s+(d.y-a-b*d.x)**2,0),s=Math.sqrt(sse/(n-2)),critical=2.2281388519649385;return{n,mx,my,a,b,sse,s,df:n-2,critical,at:x=>{let y=a+b*x,w=critical*s*Math.sqrt(1/n+(x-mx)**2/Sxx);return{x,y,lo:y-w,hi:y+w}}}}
+const fitD=ols(dependent),fitI=ols(independent);
+const factorData=[
+ ['食物短缺','dependent','拥挤时，每个个体可用食物减少。','相同食物供给、相近个体体型与观察期，是此处比较的前提。'],
+ ['接触传播','dependent','接触机会随密度增多，感染风险可能上升。','这是接触随密度增加的传播模型；频率依赖、媒介传播不能机械套用。'],
+ ['捕食压力','dependent','天敌的捕食或数量反应可形成密度反馈。','响应形状可非线性、有时滞；并非所有捕食关系都符合这条直线。'],
+ ['严寒 / 干旱','independent','同样暴露条件下，天气冲击可不依赖初始密度。','死亡比例约相同是本例设定；微生境、年龄与拥挤可改变真实结果。'],
+ ['森林火灾','independent','一次外界灾变可使不同密度种群同时受损。','若密度改变燃料或逃生条件，作用也可能与密度相关。'],
+ ['统一农药暴露','independent','相同有效剂量下，本模型采用相近死亡比例。','真实杀伤还取决于剂量、抗性、暴露方式和天敌损伤，不作普遍定律。']
+];
+function pestModel(chemical){let n=120,p=chemical?20:50,out=[],dt=.025;for(let j=0;j<=2400;j++){const t=j*dt;if(chemical&&[320,880,1440].includes(j)){n*=.25;p*=.10}if(j%40===0)out.push({x:t,y:n,p});let dn=.25*n*(1-n/1000)-.005*p*n,dp=(.0006*n-.09)*p;n=Math.max(.01,n+dn*dt);p=Math.max(.01,p+dp*dt)}return out}
+const chemical=pestModel(true),biological=pestModel(false),EIL=300,ET=230;
+function fishModel(f){const K=400,r=.4,N=K*Math.max(0,1-f/r);return{F:f,N,yield:f*N,K,r}}
+const managementValues={light:.08,medium:.2,heavy:.34};
+const modelExports={pelts,herbs,mosquitoes,fitD,fitI,dependent,independent,chemical,biological,fishModel};
+
+function renderSeason(t){
+ const month=1+11*t,temp=interp(temperatures,month-1),light=interp(lights,month-1),water=interp(waters,month-1),canopy=1-light/75;
+ const h=interp(herbs.map(d=>d.y),month-1),m=interp(mosquitoes.map(d=>d.y),month-1),season=month<3||month>=11?'冬':month<6?'春':month<9?'夏':'秋';
+ let s=R(25,47,426,650,'#eef2e9','#d8dfd2',16)+E(367,128,32,32,'#f3d47a')+many(5,i=>O(.10+light/170,P(`M${320+i*13} 143L${125+i*58} 508L${95+i*58} 508Z`,'#e9ca70','none')));
+ s+=P('M25 539Q180 516 270 538Q362 520 451 544V697H25Z','#dae2cf','none')+P('M25 544Q180 530 280 547Q380 531 451 550','none','#8aa178',2);
+ s+=P('M91 544L98 275L80 183L99 181L117 260L149 211L161 220L126 284L131 544Z','#a6a083','#77795e',1.5)+P('M365 537L360 256L324 193L339 188L373 238L400 165L416 172L385 258L389 538Z','#a6a083','#77795e',1.5);
+ const leafColor=season==='秋'?'#bc9e61':'#729b75';
+ s+=many(22,i=>{const x=70+(i%7)*50,y=195+Math.floor(i/7)*33;return O(canopy*.9,G(x,y,1,P('M-39 4Q-49 -10 -31 -17Q-35 -33 -15 -29Q-3 -41 11 -27Q34 -33 35 -16Q51 -8 39 7Q43 25 20 23Q8 36 -7 25Q-26 34 -29 20Q-47 22 -39 4Z',leafColor,'#627c5d',1)+P('M-22 9Q1 0 20 -14M0 0L-1 -22','none','#a2b591',.7)))});
+ s+=many(8,i=>flower(54+i*28,531,.38+.45*h/100,.35+.65*h/100));
+ s+=E(296,572,100,27,'#d0e4e7','#739fa8')+P('M211 572Q296 590 378 572','none','#81b0b8',2);
+ s+=many(7,i=>O(water/100,P(`M${244+i*11} 571q5 -7 3 -14q-5 -7 0 -12`,'none','#65968d',1.4)));
+ s+=many(8,i=>O(phase(m/100,i*.10,i*.10+.08),mosquito(232+(i%4)*44+Math.sin(t*24+i)*10,390+Math.floor(i/4)*61+Math.cos(t*18+i)*8,.64,Math.sin(t*9+i)*12)));
+ s+=R(54,325,19,147,'#fff','#728a89',9)+R(59,459-temp*4,9,temp*4+5,C.red,'none',4)+E(63.5,471,13,13,C.red,'#fff');
+ s+=label(42,62,`${season}季 · ${month.toFixed(1)} 月`,'光、温、水共同改变可生存条件');
+ s+=call(147,315,208,252,`林下光照 ${light.toFixed(0)}%`,'林冠越密，透光通常越少');
+ s+=label(39,607,`气温 ${temp.toFixed(1)} °C · 积水指数 ${water.toFixed(0)}`,'地上“看不见”，不等于种群灭绝');
+ const xt=[1,3,5,7,9,12];
+ let a=plot('sTemp',530,93,440,130,xt,[0,10,20,30],'温度 / Temperature','','°C');s+=a.svg+series(a,temperatures.map((y,i)=>({x:i+1,y})),C.red,t)+scan(a,month)+legend(995,103,'Driver',[['温度',C.red]]);
+ let b=plot('sLight',530,321,440,130,xt,[0,25,50,75],'林下光照 / Light','','相对光照 %');s+=b.svg+series(b,lights.map((y,i)=>({x:i+1,y})),C.blue,t)+scan(b,month)+legend(995,331,'Driver',[['光照',C.blue]]);
+ let c=plot('sCount',530,549,440,130,xt,[0,25,50,75,100],'观测指数 / mean ± SD','月份','相对指数');s+=c.svg+c.clip(ribbon(herbs,c.X,c.Y,C.green)+ribbon(mosquitoes,c.X,c.Y,C.cyan))+series(c,herbs,C.green,t)+series(c,mosquitoes,C.cyan,t)+scan(c,month)+legend(995,553,'Observed',[['草本',C.green],['蚊成虫',C.cyan]])+txt(995,680,'每月 n = 5');
+ $('svg1').innerHTML=s;
+ const text=season==='春'?'春季林冠尚未完全展开，部分林下草本可利用短暂的光照窗口生长和开花。':season==='夏'?'夏季气温高且积水增多，可提高本例蚊成虫活动；林冠茂密却使林下光照下降。':season==='秋'?'落叶后林下光照回升，但温度下降。一个因素变好，并不保证数量随之增加。':'低温下可见草本和蚊成虫活动都少。草本地下器官、种子，以及蚊虫的越冬阶段仍可能存活。';
+ say(1,'01 / 多因素共同作用','同一季节，不同种群有不同响应。',text,`草本指数 ${h.toFixed(1)} · 蚊成虫指数 ${m.toFixed(1)}`,'曲线及每月重复均为教学模拟；SD表示重复间离散程度，不是均值的95%置信区间。');
+}
+function renderPredator(t){
+ const year=1900+t*20,scaled=$('scaleLynx').checked,mult=scaled?10:1,upper=scaled?700:100,cycle=year<1910?0:1,peaks=cycle?[1913,1915]:[1903,1904];
+ const z=phase(year,cycle?1910:1900,cycle?1920:1910),step=Math.min(3,Math.floor(z*4)),hs=interp(pelts.map(d=>d[2]),year-1900),ls=interp(pelts.map(d=>d[1]),year-1900);
+ let s=R(25,60,455,618,'#f0f2eb','#d7dfd2',16);
+ const cards=[[50,100,'雪兔 ↑','食物资源增多'],[280,100,'猞猁 ↑','捕食压力增大'],[280,392,'雪兔 ↓','猞猁食物减少'],[50,392,'猞猁 ↓','捕食压力减轻']];
+ cards.forEach((a,i)=>{s+=R(a[0]-5,a[1]-5,180,223,i===step?'#fff':'#f0f2eb',i===step?C.blue:'#e2e6dc',10);s+=label(a[0],a[1],a[2],a[3])});
+ s+=hare(137,251,.78)+lynx(365,248,.77)+hare(367,546,.67)+lynx(135,546,.62);
+ s+=arrow('M217 225H271',C.green)+txt(243,210,'+','middle',C.green,24,700)+arrow('M369 330V381',C.red,true)+txt(392,360,'−','middle',C.red,24,700)+arrow('M279 520H222',C.green)+txt(249,505,'+','middle',C.green,24,700)+arrow('M134 391V335',C.red,true)+txt(111,367,'−','middle',C.red,24,700);
+ const starts=[[220,225],[369,330],[276,520],[134,391]],ends=[[270,225],[369,380],[223,520],[134,335]];s+=dotFlow(starts[step],ends[step],z*4,C.blue,3)+label(42,623,'＋资源促进；−捕食抑制','符号表示作用关系，不是数量的升降');
+ const p=plot('predator',570,168,400,390,[1900,1905,1910,1915,1920],scaled?[0,175,350,525,700]:[0,25,50,75,100],'历史毛皮记录 · 1900—1920','年份','左轴：雪兔 / 千张'+(scaled?'':'；两物种同尺度'));
+ s+=p.svg+series(p,pelts.map(d=>({x:d[0],y:d[2]})),C.red,t)+series(p,pelts.map(d=>({x:d[0],y:d[1]*mult})),C.cyan,t)+scan(p,year);
+ if(scaled){s+=txt(1000,112,'右轴：猞猁 / 千张');[0,17.5,35,52.5,70].forEach(v=>{s+=txt(985,p.Y(v*10)+6,String(v))})}
+ s+=legend(1060,scaled?184:168,'Species',[['雪兔',C.red],['猞猁',C.cyan]])+txt(1060,307,scaled?'显示 ×10':'显示 ×1');
+ peaks.forEach((v,i)=>{s+=`<path d="M${p.X(v)} ${p.y}v${p.h}" stroke="${i?C.cyan:C.red}" stroke-dasharray="7 5" stroke-width="2"/>`});
+ s+=P(`M${p.X(peaks[0])} 606v12H${p.X(peaks[1])}v-12`,'none',C.ink,1.5)+label(590,639,`${peaks[0]} → ${peaks[1]}：峰值相差 ${peaks[1]-peaks[0]} 年`,'高度随刻度变，年份先后不变');
+ s+=label(582,24,`游标 ${year.toFixed(1)} 年`,'毛皮收购量 ≠ 野外种群绝对数量');
+ $('svg2').innerHTML=s;
+ say(2,'02 / 先有机制，再看证据','曲线的先后，是线索，不是因果证明。',`已知雪兔与猞猁存在捕食联系。本段${peaks[0]}年的雪兔峰值早于${peaks[1]}年的猞猁峰值，与捕食者响应滞后相容；植物、其他捕食者与捕猎活动也会影响记录。`,`雪兔 ${hs.toFixed(1)} 千张 · 猞猁 ${ls.toFixed(1)} 千张`,scaled?'当前猞猁绘图值乘10，右轴还原其真实记录；缩放不改变数据，也不改变峰值时间。':'仅凭谁先增加，不能在未知关系的两条曲线间判定谁吃谁。周期也不是永远固定的。');
+}
+
+function renderDensity(t){
+ const factor=+ $('factor').value,selected=factorData[factor],density=20+t*220,activeD=selected[1]==='dependent';
+ let s=R(25,48,550,244,activeD?'#e8f3ed':'#f1f3ef',activeD?C.green:'#dce2d8',14)+R(623,48,550,244,activeD?'#f4efea':'#edf2f5',activeD?'#ddd':C.blue,14);
+ s+=label(41,57,'A · 拥挤改变个体所受影响','示例：食物有限 / 接触机会增加')+label(639,57,'B · 相同暴露的外界冲击','严寒案例：1946—1947年英国苍鹭');
+ const count=3+Math.round(t*10);s+=P('M51 259H551','none','#b6c7af',3)+many(count,i=>{const x=75+(i%7)*68,y=172+Math.floor(i/7)*61;return insect(x,y,.58,Math.sin(i+t*8)*15)+ (i%7>0?O(.5,arrow(`M${x-50} ${y}h26`,C.green)):'')});
+ s+=heron(738,203,.8)+heron(921,202,.8)+P('M657 270Q780 246 870 270T1150 269','none','#94b6c7',2)+many(17,i=>{const x=661+(i*61)%480,y=126+(t*140+i*13)%120;return P(`M${x-4} ${y}h8m-4 -4v8m-3 -7l6 6m-6 0l6 -6`,'none','#7ba6ba',1.2)});
+ const left=plot('dep',85,417,365,231,[0,60,120,180,240],[0,20,40,60,80],'密度制约 / Dependent','密度：个体 / hm²','固定观察期死亡比例 %');
+ const right=plot('indep',680,417,355,231,[0,60,120,180,240],[0,20,40,60,80],'非密度制约 / Independent','密度：个体 / hm²','固定观察期死亡比例 %');
+ s+=left.svg+right.svg;
+ [[left,dependent,fitD,C.green],[right,independent,fitI,C.orange]].forEach(([p,data,fit,color])=>{
+ const band=Array.from({length:81},(_,i)=>fit.at(i*3));s+=p.clip(ribbon(band,p.X,p.Y,color,.24))+p.clip(P(linePath(band,p.X,p.Y),'none',color,3));
+ s+=p.clip(data.map((d,i)=>E(p.X(d.x),p.Y(d.y),i/11<=t?5.5:3.5,i/11<=t?5.5:3.5,i/11<=t?color:'#b9c2bd','#fff')).join(''))+scan(p,density);
+ const current=fit.at(density);s+=E(p.X(density),p.Y(current.y),6,6,color,'#182b36');
+ });
+ s+=legend(465,435,'Fit',[['观测',C.green],['均值CI',C.green,'band']])+legend(1048,435,'Fit',[['观测',C.orange],['均值CI',C.orange,'band']]);
+ s+=label(94,716,`斜率 b = ${fitD.b.toFixed(2)}`)+label(688,716,`斜率 b = ${fitI.b.toFixed(2)}`);
+ $('svg3').innerHTML=s;
+ const fit=activeD?fitD:fitI,point=fit.at(density);
+ say(3,'03 / 判断的是“单位个体”','不看总死了多少，要看比例是否随密度变。',selected[2],`${selected[0]} · 当前拟合死亡比例 ${point.y.toFixed(1)}%`,selected[3]+' 两组散点均为教学模拟，阴影是回归均值的95%置信区间，不是个体预测区间。');
+}
+function renderManagement(t){
+ const kind=$('management').value,day=t*60,cn=interp(chemical.map(d=>d.y),day),bn=interp(biological.map(d=>d.y),day);
+ let s=R(25,48,710,206,'#f1f3eb','#d8dfcf',14)+R(767,48,408,206,'#edf3f0','#d1dfd7',14);
+ s+=label(39,58,'害虫—天敌模型','两种情境的资源参数 K 均为1000');
+ s+=insect(101,193,.9,0,false)+insect(287,190,1,0,true)+arrow('M267 190H145',C.cyan,true)+label(390,151,`第 ${day.toFixed(1)} 天`,'观察天敌受损后的恢复过程');
+ s+=many(7,i=>O(clamp(cn/500),insect(370+i*43,224,.35,(i%2?1:-1)*15)))+dotFlow([255,190],[151,190],t,C.cyan,4);
+ const p=plot('pest',83,385,440,252,[0,15,30,45,60],[0,250,500,750,1000],'控制数量，不混淆 K 与平衡点','培养时间 / 示意天数','害虫数量 / 模型单位');
+ s+=p.svg+series(p,chemical,C.red,t)+series(p,biological,C.cyan,t)+scan(p,day);
+ s+=p.clip(`<path d="M${p.x} ${p.Y(EIL)}h${p.w}" stroke="${C.red}" stroke-width="1.8" stroke-dasharray="8 4"/><path d="M${p.x} ${p.Y(ET)}h${p.w}" stroke="${C.blue}" stroke-width="1.8" stroke-dasharray="2 5"/>`)+legend(545,383,'Intervention',[['广谱药剂',C.red],['保存天敌',C.cyan],['EIL 300',C.red,'dash'],['ET 230',C.blue,'dot']]);
+ [8,22,36].forEach(x=>{s+=p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#b5a899',.9))});
+ s+=label(89,711,`药剂组 ${cn.toFixed(0)} · 天敌组 ${bn.toFixed(0)}`);
+ let r,note,result;
+ if(kind==='habitat'){
+  const K=mix(400,600,t);s+=label(780,57,'保护：修复栖息地','增加食物、空间与连通性');
+  s+=many(7,i=>{const sc=.45+.35*t,x=813+i*49,y=230;return G(x,y,sc,P('M-5 0V-55H5V0Z','#8e8771')+P('M0 -120L-37 -51H37Z','#7b9b78','#4f7058')+P('M0 -86L-42 -25H42Z','#92ae82','#4f7058'))});
+  const q=plot('manage',847,385,210,252,[0,25,50,75,100],[0,200,400,600,800],'栖息地改善','修复进度 %','资源支持量 K');
+  s+=q.svg+series(q,[{x:0,y:400},{x:100,y:600}],C.green,t)+scan(q,t*100)+legend(1075,389,'Model',[['K',C.green]])+label(847,711,`K = ${K.toFixed(0)}`);
+  result=`资源支持能力：400 → ${K.toFixed(0)}`;note='K是给定环境下的模型参数；此处数字为示意，不能直接当作保护区真实可容纳数量。';
+  say(4,'04 / 应用需要明确目标','保护栖息地，改变的是资源支持条件。','食物、空间、连通性与干扰共同影响保护效果。与增加天敌死亡压力相比，修复栖息地可以直接改善资源支持条件。',result,note);
+ }else{
+  const F=managementValues[kind],f=fishModel(F),yseries=Array.from({length:41},(_,i)=>({x:i*.01,y:fishModel(i*.01).yield}));
+  s+=label(780,57,'利用：理想持续捕捞','保留繁殖亲体，评估补充量');
+  s+=fish(836,182,.5)+fish(945,177,.72)+O(1-.7*t,fish(1082,177,1.0))+P(`M${mix(1145,1050,t)} 129v108m-20 -108v108m-20 -108v108`,'none','#889b97',1.3);
+  const q=plot('manage',847,385,210,252,[0,.1,.2,.3,.4],[0,10,20,30,40,50],'持续产量 / 理想模型','捕捞死亡率 F','产量 / 单位时间');
+  s+=q.svg+series(q,yseries,C.blue,t)+q.clip(P(`M${q.X(F)} ${q.y}v${q.h}`,'none',C.red,1.7))+`<g data-mark="fish-choice">${E(q.X(F),q.Y(f.yield),6,6,C.red,'#fff')}</g>`+legend(1075,389,'Model',[['产量',C.blue],['选择',C.red]])+label(835,711,`N*=${f.N.toFixed(0)} · Y=${f.yield.toFixed(1)}`);
+  say(4,'04 / 应用需要明确条件','最大持续产量，是模型结论，不是万能配额。',`选择${kind==='light'?'轻度':kind==='medium'?'模型中等':'重度'}捕捞：F=${F.toFixed(2)}。r=0.4、K=400时，平衡量N*=K(1−F/r)，持续产量Y=FN*；本模型在N*=K/2时达到最大值。`,`平衡量 ${f.N.toFixed(0)} · 持续产量 ${f.yield.toFixed(1)}`,'捕大留小会改变年龄比例，但不能单凭幼年比例判定增长型。真实管理还须年龄别存活、繁殖、环境变化及安全余量。');
+ }
+ $('svg4').innerHTML=s;
+}
+
+const renderers=[renderSeason,renderPredator,renderDensity,renderManagement];
+const clocks=renderers.map((render,i)=>BioAtlas.createTimeline({duration:[25,30,18,24][i],render,onState({t,playing,duration}){document.querySelector(`[data-time="${i}"]`).value=t*100;document.querySelector(`[data-play="${i}"]`).textContent=playing?'Ⅱ 暂停':'▶ 播放过程';$('time'+i).textContent=`${Math.round(t*100)}% · ${duration}秒演示`}}));
+document.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];c.state.playing?c.pause():c.play()}));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>clocks[+b.dataset.reset].reset()));
+document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('input',()=>clocks[+b.dataset.time].seek(Number(b.value)/100)));
+function refresh(i){clocks[i].seek(clocks[i].state.t)}
+$('scaleLynx').addEventListener('change',()=>refresh(1));$('factor').addEventListener('change',()=>refresh(2));$('management').addEventListener('change',()=>refresh(3));
+$('theme').addEventListener('click',()=>{let bw=document.documentElement.dataset.theme!=='bw';document.documentElement.dataset.theme=bw?'bw':'gray';$('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';$('theme').setAttribute('aria-pressed',String(bw))});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+$('review').addEventListener('click',e=>{if(e.target===$('review')){const r=$('review').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('review').close()}});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>BioAtlas.pauseAll()));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)clocks[Number(e.target.dataset.figure)].pause()}));document.querySelectorAll('.figure').forEach(s=>observer.observe(s));
+function table(headers,rows,caption=''){return '<table>'+(caption?'<caption>'+caption+'</caption>':'')+'<thead><tr>'+headers.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody></table>'}
+$('seasonTable').innerHTML=table(['月份','温度 °C','光照 %','草本：5个重复','均值 ± SD','蚊成虫：5个重复','均值 ± SD'],herbs.map((d,i)=>[i+1,temperatures[i],lights[i],d.raw.join(' / '),d.y.toFixed(1)+' ± '+d.sd.toFixed(2),mosquitoes[i].raw.join(' / '),mosquitoes[i].y.toFixed(1)+' ± '+mosquitoes[i].sd.toFixed(2)]),'完整模拟记录；n=5，SD分母为n−1');
+$('peltTable').innerHTML=table(['年份','雪兔 / 千张','猞猁 / 千张'],pelts.map(d=>[d[0],d[2].toFixed(1),d[1].toFixed(1)]),'公开教程复现的历史毛皮记录（1900—1920）');
+$('regressionTable').innerHTML=table(['密度','密度制约：死亡 %','非密度制约：死亡 %'],dependent.map((d,i)=>[d.x,d.y.toFixed(1),independent[i].y.toFixed(1)]),'固定12组教学数据')+'<p><b>OLS复核：</b>左图 ŷ=12+0.22x；右图 ŷ=30。两组残差标准差 s='+fitD.s.toFixed(4)+'，自由度10，t₀.₉₇₅='+fitD.critical.toFixed(5)+'。</p><p>均值响应置信区间：ŷ ± t × s × √[1/n + (x−x̄)² / Σ(xᵢ−x̄)²]。横轴两端不确定性更大，即使拟合线水平，置信带也不会等宽。样本、线性、独立性和同方差假设需另行检验；此处用固定模拟记录说明计算，不作真实因果推断。</p>';
+const reviewRows=[
+ ['非生物因素','温度、水、光等常综合作用；物种、生活史阶段和时空尺度不同，响应可能不同。'],
+ ['生物因素','种内竞争、捕食、种间竞争、寄生等可影响出生、死亡或迁移；“生物因素”不与“密度制约”严格同义。'],
+ ['密度制约判据','比较规定条件与观察期内，单位个体死亡、生殖等作用强度如何随密度改变；不能只比较总死亡数。'],
+ ['捕食反馈','猎物影响捕食者食物来源，捕食者又影响猎物损失；负反馈与时滞可形成波动，不保证始终稳定。'],
+ ['两条曲线的证据','在已知捕食背景下关注时间滞后；高度依赖量纲与坐标。峰值先后或相关性单独都不足以证明捕食因果。'],
+ ['SD与95% CI','SD描述重复值的离散程度；本课回归CI表示均值响应估计的不确定性，不是95%个体预测带。'],
+ ['天敌、K与平衡量','天敌可提高死亡率并压低实际平衡数量，而资源容纳参数K不必改变。改善食物与生境则可改变资源K。'],
+ ['EIL与ET','EIL为经济损害水平；ET为应采取措施的行动阈值，通常低于EIL，以为措施生效留下时间。'],
+ ['可持续利用','N=K/2、最大剩余生产量rK/4是理想逻辑斯谛模型结果。年龄结构、时滞、环境和估计误差影响实际决策。'],
+ ['规范表达','在……条件下，……改变出生/死亡/迁移，使净增长……；证据为……，尚不能排除……。']
+];
+$('reviewTable').innerHTML=table(['问题','判断与表述'],reviewRows);
+globalThis.atlasQA={clocks,modelExports,renderers};
+</script></body></html>

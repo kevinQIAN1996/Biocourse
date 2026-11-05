@@ -5878,5 +5878,96 @@
     "latestPolicy": "默认较新版本；同号时比较源文件修改时间。",
     "design": "将调查方法变为采样任务，用样本推断种群并检查适用条件。",
     "preferredVersionId": "original"
+  },
+  {
+    "id": "population-factors",
+    "title": "影响种群数量变化的因素",
+    "category": "eco",
+    "summary": "联动季节环境、雪兔—猞猁记录、密度制约回归与种群管理，把机制解释和统计证据连接起来。",
+    "versions": [
+      {
+        "id": "quantitative-atlas-v1",
+        "label": "1.0",
+        "edition": "种群调控·统计图谱版",
+        "file": "lessons/选择性必修2_01-03_影响种群数量变化的因素_种群调控与统计证据图谱_v1.0.html",
+        "route": "courses/population-factors/quantitative-atlas-v1/",
+        "sourceFilename": "选择性必修2_01-03_影响种群数量变化的因素_种群调控与统计证据图谱_v1.0.html",
+        "published": "2026-11-05",
+        "platformUpdated": "2026-11-05",
+        "dateNote": "本版本首次在本站公开日期；不等同于原始创作日期。",
+        "summary": "联动季节环境、雪兔—猞猁记录、密度制约回归与种群管理，把机制解释和统计证据连接起来。",
+        "features": [
+          "四季林冠与温光水条件、草本和蚊成虫观测指数联动",
+          "1900—1920年历史毛皮记录、峰值游标与双轴尺度对照",
+          "密度制约散点与OLS置信带、害虫控制及渔业和栖息地模型"
+        ],
+        "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。",
+        "approach": "先预测环境或干预的影响，再播放或回拖对照图像和读数，最后说明证据支持什么、还不能推出什么。",
+        "changes": [
+          "新增选择性必修二第1章第3节独立课件，保留既有种群综合课件入口。",
+          "四幅图分别联动季节环境、捕食反馈、密度制约回归和管理决策；支持播放、暂停和回拖。",
+          "采用ggplot2风格灰底白网格、分面与NPG配色，可全局切换白底主题。",
+          "历史毛皮记录与教学模拟分别标注；均值、SD和回归95%均值置信带由同源数据计算。",
+          "明确捕食相位证据、资源K与平衡数量、EIL与ET及理想捕捞模型的适用边界。"
+        ],
+        "releaseHistory": [
+          {
+            "date": "2026-11-05",
+            "title": "统计图谱版v1.0首次上线",
+            "changes": [
+              "新增选择性必修二第1章第3节独立课件，保留既有种群综合课件入口。",
+              "四幅图分别联动季节环境、捕食反馈、密度制约回归和管理决策；支持播放、暂停和回拖。",
+              "采用ggplot2风格灰底白网格、分面与NPG配色，可全局切换白底主题。",
+              "历史毛皮记录与教学模拟分别标注；均值、SD和回归95%均值置信带由同源数据计算。",
+              "明确捕食相位证据、资源K与平衡数量、EIL与ET及理想捕捞模型的适用边界。"
+            ]
+          }
+        ],
+        "sourceModifiedAt": "2026-11-05T11:52:54.304Z",
+        "bytes": 61810,
+        "sourceSha256": "e32fc546624d09cc795900c92ecf9bb8ab9181a54e0c3f5e81f9a36f9c94572e",
+        "contentSha256": "e32fc546624d09cc795900c92ecf9bb8ab9181a54e0c3f5e81f9a36f9c94572e",
+        "preview": {
+          "image": "assets/previews/population-factors--quantitative-atlas-v1.webp",
+          "thumbnail": "assets/previews/population-factors--quantitative-atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "影响种群数量变化的因素 · 种群调控与统计证据图谱真实画面：雪兔—猞猁反馈与历史记录",
+          "scene": "先起峰的曲线，就一定是猎物吗？"
+        }
+      }
+    ],
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 1,
+      "chapterTitle": "种群及其动态",
+      "sections": [
+        {
+          "number": 3,
+          "title": "影响种群数量变化的因素"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第3节"
+    },
+    "preview": {
+      "image": "assets/previews/population-factors--quantitative-atlas-v1.webp",
+      "thumbnail": "assets/previews/population-factors--quantitative-atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "影响种群数量变化的因素 · 种群调控与统计证据图谱真实画面：雪兔—猞猁反馈与历史记录",
+      "scene": "先起峰的曲线，就一定是猎物吗？",
+      "versionId": "quantitative-atlas-v1"
+    },
+    "inquiry": "怎样用机制与证据，解释种群数量的起伏？",
+    "activities": [
+      "机制推演",
+      "统计判读"
+    ],
+    "latestVersionId": "quantitative-atlas-v1",
+    "preferredVersionId": "quantitative-atlas-v1",
+    "latestPolicy": "默认较新版本；历史入口保留。",
+    "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。"
   }
 ]
