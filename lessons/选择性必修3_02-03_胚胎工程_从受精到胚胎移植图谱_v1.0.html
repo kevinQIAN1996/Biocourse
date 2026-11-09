@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>胚胎工程｜从受精到胚胎移植 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从受精到胚胎移植<small>EMBRYO ENGINEERING / 02.03</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 2 章 · 第 3 节</p><h1>胚胎工程</h1><p class="subtitle">从第一次精卵接触，到子宫里的下一段发育。用四幅图读懂胚胎的结构、时机与证据。</p></div>
+<div class="intro-note"><i>EMBRYO ENGINEERING</i><p>同一个胚胎，在不同发育时点能做哪些操作？如何知道操作奏效了？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 受精</a><a href="#figure2">02 早期发育</a><a href="#figure3">03 胚胎移植</a><a href="#figure4">04 胚胎分割</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / FERTILIZATION</p><h2 id="heading1">游得动的精子，就具备受精能力吗？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="sperm"><button type="button" data-group="sperm" data-value="ready" aria-pressed="true">已获能</button><button type="button" data-group="sperm" data-value="unready" aria-pressed="false">未获能</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="游得动的精子，就具备受精能力吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>自然条件下，哺乳动物通常在输卵管受精。精子须获能，卵母细胞也须成熟到能参与受精的阶段。本图从 MⅡ 期卵母细胞开始。顶体反应及精子的运动帮助其通过外层结构；具体起始位置因物种和条件而异。</p><p>按教材追踪透明带反应与卵细胞膜反应两处防多精屏障。图中皮质颗粒释放用于解释透明带改性，鼠的研究显示皮质颗粒释放的卵浆蛋白酶可切割透明带蛋白 ZP2。精卵融合后，卵母细胞完成减Ⅱ，排出第二极体；随后可看到雌、雄原核。两个极体或两个原核是常用受精观察标志。首轮卵裂前，两原核膜解体。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 以哺乳动物受精为主线的时序示意。透明带、卵细胞膜与极体分开标示。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1095/biolreprod38.5.1171" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1083/jcb.201112094" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / PREIMPLANTATION DEVELOPMENT</p><h2 id="heading2">细胞越来越多，为什么胚胎起初没有变大？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="lens"><button type="button" data-group="lens" data-value="form" aria-pressed="true">观察形态</button><button type="button" data-group="lens" data-value="lineage" aria-pressed="false">追踪谱系</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="细胞越来越多，为什么胚胎起初没有变大？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>受精卵在早期进行有丝分裂。在透明带内的早期卵裂中，细胞数增加，胚胎总体积不随之增加。桑葚胚的特征是卵裂球致密排列。形成含液腔和可区分的内细胞团、滋养层后，进入囊胚阶段。滋养层参与形成胎盘等胎外结构，内细胞团主要形成胚体。随后囊胚从透明带开口伸出，完成孵化。继续发育时形成原肠胚并建立三个胚层。</p><p>右图的细胞数取 1、2、4、8 四个示意阶段。按等分且总体积恒定近似，平均体积为起始值的 1/N。实际卵裂球大小与发育进度可能不同。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 左图为发育剖面示意。右图用等体积、等分模型说明早期卵裂，桑葚胚及其后不纳入该数值模型。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / EMBRYO TRANSFER</p><h2 id="heading3">拿到合格胚胎后，为什么还要看受体发情时间？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="sync"><button type="button" data-group="sync" data-value="early" aria-pressed="false">受体早 1.5 天</button><button type="button" data-group="sync" data-value="same" aria-pressed="true">同日发情</button><button type="button" data-group="sync" data-value="late" aria-pressed="false">受体晚 1.5 天</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="拿到合格胚胎后，为什么还要看受体发情时间？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>供体授精路线通常包括选择供体、用适宜促性腺激素超数排卵、授精、冲取并检查胚胎。体外受精路线包括采集并培养卵母细胞、处理精子使其获能、体外受精与早期培养。两路均需筛选发育合格的胚胎。选择同种、繁殖状态适宜的受体，使其生殖道环境与胚胎阶段匹配。牛的常见操作将胚胎送入黄体同侧子宫角，随后检查妊娠。</p><p>图中 + 表示受体比供体先发情。历史统计为分组观察，受体管理、胚胎质量和研究条件均可能影响结果。标注 n 为该时间差组记录数，百分比按手册原值。胚胎亲本遗传来源由提供精卵的亲本决定，受体提供妊娠环境。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 左图为牛的取胚及移植示意。右图为 FAO 手册 Table 7 所列两项历史研究，显示各时间差分组的妊娠百分比。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1095/biolreprod27.1.147" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://www.fao.org/4/t0117e/T0117E08.htm" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / EMBRYO BISECTION</p><h2 id="heading4">把囊胚切成两半，光看外形是否对称够吗？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="cut"><button type="button" data-group="cut" data-value="equal" aria-pressed="true">均分内细胞团</button><button type="button" data-group="cut" data-value="offset" aria-pressed="false">偏心分割对照</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="把囊胚切成两半，光看外形是否对称够吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>分割宜选发育良好、形态正常的桑葚胚或囊胚。分割囊胚时应均分内细胞团，使两份都尽可能得到足以继续发育的细胞群。图上 12 个标记只用于显示分配，不代表实际内细胞团计数。移植分割后的胚胎才有机会获得同卵双胎。共同的遗传来源不保证每项表现型都完全相同。</p><p>Williams 等研究的选定组别为早期桑葚胚 2/22、囊胚 24/62，以分割前的原胚为分母。图中比例按计数换算为一位小数，论文摘要以整数给出。两组比较发育阶段，未比较本图两条刀线。胚胎移植后发现妊娠与最终得到一对同卵双胎是不同结局。囊胚滋养层少量细胞可用于特定遗传检测，检出范围取决于检测项目。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 左图为同一个囊胚的两种刀线示意；右图为牛原胚获得同卵双胎的历史研究比例。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/0093-691X(84)90051-7" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 2 章第 3 节，受精、胚胎早期发育、体外受精、胚胎移植和分割。</span></li><li id="ref-2"><a href="https://doi.org/10.1095/biolreprod38.5.1171" target="_blank" rel="noopener noreferrer">[2] Parrish et al., 1988 · Biology of Reproduction ↗</a><span>肝素诱导牛精子体外获能。</span></li><li id="ref-3"><a href="https://doi.org/10.1083/jcb.201112094" target="_blank" rel="noopener noreferrer">[3] Burkart et al., 2012 · Journal of Cell Biology ↗</a><span>鼠卵皮质颗粒释放的 ovastacin 切割透明带蛋白 ZP2。</span></li><li id="ref-4"><a href="https://doi.org/10.1095/biolreprod27.1.147" target="_blank" rel="noopener noreferrer">[4] Brackett et al., 1982 · Biology of Reproduction ↗</a><span>牛卵母细胞体外受精和胚胎移植后活产。</span></li><li id="ref-5"><a href="https://www.fao.org/4/t0117e/T0117E08.htm" target="_blank" rel="noopener noreferrer">[5] FAO · Training Manual for Embryo Transfer in Cattle ↗</a><span>Table 7 汇总供体与受体发情时间差、妊娠百分比和记录数。</span></li><li id="ref-6"><a href="https://doi.org/10.1016/0093-691X(84)90051-7" target="_blank" rel="noopener noreferrer">[6] Williams et al., 1984 · Theriogenology ↗</a><span>分割不同发育阶段的牛胚后获得同卵双胎的比例。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>胚胎工程 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">胚胎工程 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">受精准备</th><td>精子获能；卵母细胞成熟。哺乳动物自然受精通常在输卵管。</td></tr><tr><th scope="row">防止多精入卵</th><td>区分透明带反应与卵细胞膜反应。精卵融合后，卵母细胞完成减Ⅱ。</td></tr><tr><th scope="row">受精观察标志</th><td>两个极体或雌、雄原核。第一次卵裂前原核膜解体。</td></tr><tr><th scope="row">辨认早期胚胎</th><td>卵裂细胞数增加，早期总体积不随之增加。桑葚胚呈致密细胞团；囊胚有囊胚腔。</td></tr><tr><th scope="row">细胞去向</th><td>内细胞团主要形成胚体；滋养层参与形成胎盘等胎外结构。</td></tr><tr><th scope="row">胚胎移植</th><td>供体提供胚胎，受体提供妊娠环境。同期发情使受体环境适配胚胎发育阶段。</td></tr><tr><th scope="row">分割与评估</th><td>囊胚应尽量均分内细胞团。妊娠与获得同卵双胎对应不同分母和终点。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={sperm:'ready',lens:'form',sync:'same',cut:'equal'};
+const sea='#188476',deep='#554578',warm='#a56147',muted='#445d66',pink='#f1c7b1',ice='#d7eef1';
+const step=(t,a,b)=>clamp((t-a)/(b-a));
+const place=(n,i)=>Math.min(n-1,Math.floor(i*n));
+const activeColor=(on,color)=>on?color:'#81928d';
+const radial=(i,n,r)=>[Math.cos(i/n*Math.PI*2)*r,Math.sin(i/n*Math.PI*2)*r];
+function embryoDefs(){
+  return `<defs>
+    <radialGradient id="emb-yolk" cx="35%" cy="30%"><stop stop-color="#fff6e7"/><stop offset=".71" stop-color="#f3d4b5"/><stop offset="1" stop-color="#e3ad8c"/></radialGradient>
+    <radialGradient id="emb-fluid" cx="35%" cy="36%"><stop stop-color="#fff"/><stop offset=".8" stop-color="#d4ecf2"/><stop offset="1" stop-color="#a7d6df"/></radialGradient>
+    <radialGradient id="emb-cell" cx="32%" cy="28%"><stop stop-color="#f3eaf8"/><stop offset="1" stop-color="#a994cd"/></radialGradient>
+    <linearGradient id="emb-theca" x2="0" y2="1"><stop stop-color="#ecb69e"/><stop offset="1" stop-color="#d88e78"/></linearGradient>
+  </defs>`;
+}
+function miniCell(x,y,r,kind='icm'){
+  const outer=kind==='te'?'#acd9ce':kind==='early'?'url(#emb-yolk)':'url(#emb-cell)';
+  const stroke=kind==='te'?'#459386':kind==='early'?'#ae755e':'#78659b';
+  return E(x,y,r,r*.92,outer,stroke)+E(x-r*.19,y+r*.08,r*.31,r*.26,stroke);
+}
+function spermArt(x,y,angle,t,cap=true){
+  const bend=Math.sin(t*46)*6;
+  return G(x,y,1,P(`M-15 0Q-32 ${bend-8}-46 ${-bend}T-77 ${bend*.5}`,'none','#315a7d',2.4)+
+    P('M-14 0H-22','none','#705c8d',5)+E(-5,0,12,6,'#96b2d2','#315a7d')+
+    (cap?P('M1-4Q11-1 2 5','none','#ab5e42',3):''),angle);
+}
+const eggSteps=[
+  ['精卵准备','精子需获能；画面中的卵母细胞已经处于减Ⅱ中期。','减Ⅱ中期卵母细胞'],
+  ['通过卵外层','获能的精子发生顶体反应，配合自身运动通过卵外结构。','通过透明带'],
+  ['精卵膜融合','精子与卵细胞膜融合，皮质颗粒释放，透明带与卵膜形成防多精屏障。','后来精子受阻'],
+  ['排出第二极体','卵母细胞完成减数分裂Ⅱ，排出第二极体。','可见两个极体'],
+  ['雌雄原核靠近','父、母来源的原核靠近，随后原核膜解体，进入首次卵裂。','可见两个原核']
+];
+function eggArt(t,ready){
+  const f=ready?t:Math.min(t,.15);
+  const halo=step(f,.42,.56);
+  const release=step(f,.42,.59);
+  const near=step(f,.78,1);
+  const capProgress=step(t,0,.25);
+  let a=G(290,313,1,
+    many(33,i=>{
+      const [x,y]=radial(i,33,158+Math.sin(i*7)*4);
+      return G(x,y,1,E(0,0,10,7,'#eed7c3','#b39179')+E(-1,0,3,3,'#b48975'),i/33*360+90);
+    })+
+    E(0,0,146,144,'url(#emb-fluid)','#52899d')+E(0,0,132,130,'#f2f9f8','#84b6c3')+
+    E(0,0,123,121,'url(#emb-yolk)',warm)+
+    many(48,i=>{const [x,y]=radial(i,48,32+(i*17)%80);return E(x,y,1+i%3*.6,1+i%3*.6,'#ab765f55')})+
+    O(1-release,many(34,i=>{const [x,y]=radial(i,34,114);return E(x,y,3,2.8,'#ba6275')}))+
+    O(Math.sin(release*Math.PI),many(24,i=>{const [x,y]=radial(i,24,116+release*16);return E(x,y,3,3,C.red)}))+
+    O(halo,E(0,0,145,143,'none','#b45448')+E(0,0,123,121,'none','#b45448'))+
+    miniCell(2,-126,7,'early')+O(step(f,.57,.69),miniCell(26,-124,7,'early'))+
+    O(1-step(f,.61,.72),P('M-18-88Q0-103 19-88M-14-78Q0-93 14-78M-10-84L-4-90M1-83L7-91','none',deep,2))+
+    O(step(f,.63,.77),E(mix(-52,-26,near),mix(10,4,near),23,22,'#d6dbef',C.blue)+E(mix(-50,-25,near),5,5,5,C.blue)+
+      E(mix(47,24,near),mix(-19,4,near),23,22,'#ead7e9',deep)+E(mix(49,25,near),0,5,5,deep)));
+  if(ready){
+    a+=O(1-step(f,.40,.55),spermArt(mix(61,171,step(f,0,.43)),mix(351,315,step(f,0,.43)),-14,t,f<.22));
+    const arrest=step(f,.49,.75);
+    a+=O(step(f,.45,.55),spermArt(mix(49,131,arrest),mix(423,370,arrest),-21,t)+
+      O(step(f,.69,.78),P('M139 356l13 15m0-15-13 15','none',C.red,3)));
+  }else{
+    a+=spermArt(mix(67,121,capProgress),mix(354,339,capProgress),-12,t);
+  }
+  a+=call(43,100,159,243,'透明带')+call(426,117,408,293,'卵细胞膜')+
+    call(391,483,389,431,'卵丘细胞')+
+    (f>.63?call(43,481,237,321,'雄原核')+call(396,534,329,298,'雌原核')+call(232,102,310,184,'第一、第二极体'):
+    call(233,102,292,186,'第一极体'));
+  return a+tile(42,574,502,48,ready?(halo>.5?'已建立防多精屏障':'对照条件 · 已获能精子'):'对照条件 · 未获能精子','',ready?sea:warm);
+}
+function eggEvidence(t,ready){
+  const i=ready?place(5,t):0;
+  return txt(624,92,'可观察事件 / 从外到内','start',muted,18,700)+
+    eggSteps.map(([name],j)=>{
+      const y=118+j*83,enabled=j<=i,color=activeColor(enabled,j===2?C.red:sea);
+      return (j<4?P(`M657 ${y+56}v26`,'none','#b0bdb6',2):'')+
+        E(657,y+31,15,15,enabled?color:'#fff',color)+txt(657,y+37,String(j+1),'middle',enabled?'#fff':muted,16,700)+
+        tile(691,y,456,61,name,'',color,enabled?'#eef7f1':'#f7f8f6')+
+        txt(1125,y+37,ready?(j===i?'当前':j<i?'已达':'待观察'):j===0?'精卵准备':'受阻','end',muted,16,700);
+    }).join('')+txt(624,568,'确认受精时可查：两个极体，或两个原核','start',C.ink,18,750)+
+    txt(624,598,'推进条表示事件顺序，各阶段的实际时长有差异。','start',muted,16);
+}
+function view1(t){
+  const ready=state.sperm==='ready',i=place(5,t),[heading,body,result]=eggSteps[i];
+  draw(1,headings('输卵管内 · 精卵相遇','受精事件与观察标志')+embryoDefs()+eggArt(t,ready)+eggEvidence(t,ready));
+  say(1,'FERTILIZATION / 0'+(i+1),ready?heading:'精子接近，受精未完成',ready?body:'精子仍可运动，但在本课堂对照中因未获能而无法完成正常受精。',
+    ready?result:'没有形成雌、雄原核','原核和极体都可提供受精证据。图中两种防多精反应按教材示意。');
+}
+
+const development=[
+  ['受精卵','雌、雄原核阶段后开始第一次有丝分裂。','1 个细胞'],
+  ['2 细胞','第一次卵裂把细胞质分成两份，胚胎早期总体积基本不变。','2 个卵裂球'],
+  ['4 细胞','透明带包围多个更小的卵裂球。','4 个卵裂球'],
+  ['8 细胞','细胞数继续增加，平均细胞体积进一步减小。','8 个卵裂球'],
+  ['桑葚胚','卵裂球形成致密细胞团。此时尚未形成囊胚腔。','致密细胞团'],
+  ['囊胚','胚胎内形成含液腔。一端的内细胞团与外围滋养层清晰可辨。','囊胚腔出现'],
+  ['孵化','扩大的囊胚从透明带开口伸出。再往后发育形成原肠胚并出现三个胚层。','囊胚伸出透明带']
+];
+const icmDots=[[-48,-61],[-31,-69],[-15,-67],[-45,-44],[-30,-51],[-14,-49],[4,-70],[17,-65],[1,-52],[16,-50],[3,-35],[30,-57]];
+function blastCore(includeIcm=true){
+  return E(0,0,111,105,'url(#emb-fluid)','#579584')+
+    many(34,i=>{
+      const [x,y]=radial(i,34,101);
+      return G(x,y*.94,1,E(0,0,8.9,12,'#a6dace','#459386')+E(0,0,3,4,'#498478'),i/34*360);
+    })+(includeIcm?icmDots.map(([x,y])=>miniCell(x+9,y,12)).join(''):'');
+}
+const cleavageCells=[
+    [[0,0,106]],
+    [[-49,0,55],[49,0,55]],
+    [[-37,-38,48],[38,-38,48],[-37,39,48],[38,39,48]],
+    [[-34,-57,33],[29,-57,33],[-57,-7,33],[-3,-8,33],[53,-8,33],[-37,44,33],[22,44,33],[58,39,27]]
+];
+function cleavage(stage,u){
+  if(stage===0)return E(0,0,106,103,'url(#emb-yolk)',warm)+E(-25,-11,24,23,'#d4dbef',C.blue)+E(26,6,24,23,'#ead7e9',deep);
+  if(stage<4){
+    const parents=cleavageCells[stage-1];
+    const progress=step(u,0,.38);
+    return cleavageCells[stage].map(([x,y,r])=>{
+      const [px,py,pr]=parents.reduce((a,b)=>Math.hypot(b[0]-x,b[1]-y)<Math.hypot(a[0]-x,a[1]-y)?b:a);
+      return miniCell(mix(px,x,progress),mix(py,y,progress),mix(pr,r,progress),'early');
+    }).join('');
+  }
+  const compact=step(u,0,.50);
+  return O(1-compact,cleavage(3,1))+O(compact,E(0,0,106,97,'#edc2a5',warm)+many(26,i=>{
+    const a=i*2.39996,r=Math.sqrt((i+.5)/26)*88;
+    return miniCell(Math.cos(a)*r,Math.sin(a)*r*.93,14+(i%3)*2,'early');
+  }));
+}
+function developmentArt(t,i){
+  const hatch=i===6?step(t,6/7,1):0;
+  const shell=i===6?P('M115-43A124 118 0 1 0 115 43','none','#82b5bf',7):E(0,0,126,120,'#e8f3f2','#7cb0bf');
+  const local=t*7-i;
+  const cavitate=step(local,0,.36);
+  const genome=i<5?cleavage(i,local):i===5?O(1-cavitate,cleavage(4,1))+O(cavitate,blastCore()):
+    G(hatch*124,0,mix(.85,1,hatch),blastCore());
+  let a=G(278,301,1,shell+genome);
+  if(i<5){
+    a+=call(46,105,175,241,'透明带')+call(372,469,333,369,i===4?'致密细胞团':i===0?'受精卵':'卵裂球');
+  }else{
+    a+=call(44,110,236+hatch*124,243,'内细胞团')+call(357,108,344+hatch*124,223,'滋养层')+
+      call(379,465,332+hatch*124,322,'囊胚腔');
+    if(i===6)a+=call(43,476,193,374,'残留透明带');
+  }
+  a+=development.map(([name],j)=>{
+    const x=69+j*74,color=j===i?sea:'#9eb3ac';
+    return (j<6?P(`M${x} 553h74`,'none','#b8c8c0',2):'')+
+      E(x,553,j===i?9:5,j===i?9:5,color)+txt(x,585,name,'middle',j===i?C.ink:muted,16,j===i?750:500);
+  }).join('');
+  return a;
+}
+function developmentEvidence(i){
+  if(state.lens==='lineage'){
+    return txt(624,95,'同一囊胚中的两条主要去向','start',muted,17,700)+
+      G(750,315,.78,blastCore())+
+      arrow('M739 267Q826 186 905 184',deep)+arrow('M792 368Q832 423 905 426',sea)+
+      tile(910,146,243,81,'内细胞团','主要形成胚体',deep,'#f2eef8')+
+      tile(910,389,243,81,'滋养层','参与形成胎盘等',sea)+
+      tile(627,526,520,73,i<5?'先有卵裂，再出现可区分的谱系':'囊胚孵化后继续发育','原肠胚阶段可见内、中、外三个胚层');
+  }
+  const p=plot('emb-cleavage',690,175,434,286,[0,1,2,3,4,5],[0,25,50,75,100],'理想等分模型 · 体积相对起始值 (%)','卵裂球个数','',v=>v>0&&v<5?2**(v-1):null);
+  const seriesA=[1,2,4,8].map((n,j)=>({x:j+1,y:100/n}));
+  const selected=seriesA[i];
+  let a=p.svg+
+    line([{x:1,y:100},{x:4,y:100}],p,C.cyan,3,'8 5')+line(seriesA,p,C.blue,4)+
+    seriesA.map(d=>chartDot(p,d.x,d.y,C.blue)).join('');
+  if(selected)a+=E(p.X(selected.x),p.Y(selected.y),12,12,'none',deep)+txt(p.X(selected.x)+18,p.Y(selected.y)+23,selected.y+'%','start',deep,17,800);
+  return a+txt(683,557,'━━ 平均单个卵裂球','start',C.blue,16,750)+txt(931,557,'┄┄ 胚胎总体积','start',sea,16,750)+
+    rScript(640,605,['ggplot(cleavage, aes(stage, relative_volume)) +','geom_line() + geom_point()  # teaching model']);
+}
+function view2(t){
+  const i=place(7,t),[heading,body,result]=development[i];
+  draw(2,headings('同尺度切面 · 透明带内外',state.lens==='form'?'卵裂的定量读图':'囊胚的两类细胞去向')+
+    embryoDefs()+developmentArt(t,i)+developmentEvidence(i));
+  say(2,'DEVELOPMENT / 0'+(i+1),heading,body,result,
+    state.lens==='form'?'右图只模拟早期等分卵裂。右图高亮随前四个阶段变化。':'沿箭头区分内细胞团与滋养层。');
+}
+
+const syncRows=[
+  {day:-1.5,nelson:52,n1:31,hasler:68,n2:132},
+  {day:-1,nelson:57,n1:112,hasler:69,n2:707},
+  {day:-.5,nelson:61,n1:311,hasler:73,n2:1089},
+  {day:0,nelson:58,n1:586,hasler:73,n2:3340},
+  {day:.5,nelson:57,n1:277,hasler:74,n2:973},
+  {day:1,nelson:54,n1:100,hasler:75,n2:618},
+  {day:1.5,nelson:38,n1:26,hasler:73,n2:67}
+];
+const syncChoice={early:1.5,same:0,late:-1.5};
+const transferSteps=[
+  ['获取胚胎','可在供体体内授精后冲取胚胎，也可在体外受精并培养获得胚胎。'],
+  ['检查发育阶段','筛选发育良好、形态正常且阶段合适的胚胎。牛常移植桑葚胚或囊胚。'],
+  ['匹配受体','使受体的生殖生理阶段和胚胎的发育阶段相匹配。观察右图：相同时间差下，两组结果完全相同吗？'],
+  ['移入受体子宫','牛常将胚胎送入黄体同侧的子宫角。胚胎亲本遗传来源仍是提供精子和卵子的亲本。'],
+  ['检查妊娠','移植完成后还要检查妊娠。受体提供胚胎继续发育的环境。']
+];
+function recipientArt(t,stage,offset){
+  const tip=step(t,.59,.79);
+  const route='M302 535C302 491 302 462 294 438C284 408 242 401 221 385Q202 367 205 332';
+  let a=tile(39,86,243,81,'体内授精','供体超排 → 授精 → 冲胚',warm,'#f8f0e6')+
+    tile(294,86,251,81,'体外受精','精卵准备 → 受精与培养',sea)+
+    arrow('M160 171V192Q160 205 181 205H218',warm)+arrow('M417 171V192Q417 205 394 205H369',sea)+
+    R(221,184,144,42,stage===1?'#ddece5':'#f0f4ee','#abc0b2',7)+txt(293,211,'检查胚胎','middle',C.ink,17,750);
+  a+=P('M288 466C285 438 271 418 249 415C207 410 178 390 177 352C176 329 188 307 210 301C227 296 243 308 244 324C244 340 228 348 219 341C220 359 232 373 254 377C274 380 288 387 301 404C312 390 328 383 348 378C368 372 382 358 383 341C374 348 357 340 357 324C356 308 372 296 389 301C411 307 423 329 422 352C420 390 392 410 350 415C328 419 314 438 313 466L318 522Q302 535 286 522Z','url(#emb-theca)','#9c544a',3)+
+    P('M295 491Q303 475 299 456C291 420 263 402 239 398Q190 382 203 332M307 491Q300 475 304 456C314 420 337 403 366 397Q407 382 398 332','none','#ffe1d0',11)+
+    P('M206 301Q173 277 159 310M390 301Q423 277 438 310','none','#ad6e60',5)+
+    E(146,314,25,15,'#efc2aa',warm)+E(451,314,25,15,'#efc2aa',warm)+
+    E(145,313,9,8,'#edbb59','#9b6539')+E(453,311,6,5,'#f4d6c7',warm)+E(441,317,4,4,'#f4d6c7',warm)+
+    O(stage>=3?1:.25,spark(route,'#805a28',3,'8 5'))+
+    call(44,253,145,311,'黄体')+call(387,260,409,348,'受体子宫角')+call(367,488,306,501,'子宫颈');
+  if(stage>=3){
+    const track=[[302,535],[301,485],[294,439],[262,408],[222,385],[205,364],[205,332]];
+    const at=tip*(track.length-1),j=Math.floor(at),[x,y]=track[j],[xx,yy]=track[j+1]??track[j];
+    a+=G(mix(x,xx,at-j),mix(y,yy,at-j),.11,blastCore());
+    if(stage===4)a+=call(49,448,205,332,'移植位置');
+  }
+  a+=txt(47,572,'受体发情窗口 / 相对供体','start',C.ink,18,750)+P('M68 602H505','none','#b9ccc5',5)+
+    E(286,602,6,6,deep)+E(286-offset*114,602,9,9,sea,'#fff')+
+    txt(69,630,'早','middle',muted,15)+txt(286,630,'供体发情日','middle',muted,15)+txt(505,630,'晚','middle',muted,15);
+  return a;
+}
+function transferEvidence(row){
+  const p=plot('emb-sync',685,160,445,270,[-1.5,-1,-.5,0,.5,1,1.5],[0,25,50,75,100],'牛胚移植 / FAO Table 7','受体比供体先发情的天数（负值为较晚）','妊娠 (%)');
+  return p.svg+scan(p,row.day)+
+    line(syncRows.map(r=>({x:r.day,y:r.nelson})),p,C.blue,3)+
+    line(syncRows.map(r=>({x:r.day,y:r.hasler})),p,sea,3,'7 5')+
+    syncRows.map(r=>chartDot(p,r.day,r.nelson,C.blue,r===row?8:4)+
+      R(p.X(r.day)-(r===row?6:4),p.Y(r.hasler)-(r===row?6:4),r===row?12:8,r===row?12:8,sea,'#fff',1)).join('')+
+    tile(623,509,255,67,'Nelson 等 · '+row.nelson+'%','记录数 n = '+row.n1,C.blue,'#edf1f7')+
+    tile(889,509,255,67,'Hasler 等 · '+row.hasler+'%','记录数 n = '+row.n2,sea)+
+    rScript(640,609,['ggplot(sync, aes(days, pregnant, colour = study)) +','geom_line() + geom_point()  # FAO Table 7']);
+}
+function view3(t){
+  const row=syncRows.find(r=>r.day===syncChoice[state.sync]),i=place(5,t),[heading,body]=transferSteps[i];
+  draw(3,headings('取胚双路线与受体解剖','发情时间差与妊娠结局')+embryoDefs()+recipientArt(t,i,row.day)+transferEvidence(row));
+  say(3,'TRANSFER / 0'+(i+1),heading,body,'Nelson '+row.nelson+'% · Hasler '+row.hasler+'%',
+    '两项历史研究用相同坐标重画。百分比为各组观察结果，n 为组记录数。');
+}
+
+const twinRows=[
+  {name:'早期桑葚胚',pairs:2,original:22,color:C.blue},
+  {name:'囊胚',pairs:24,original:62,color:sea}
+];
+const twinPct=r=>100*r.pairs/r.original;
+const cutPosition={equal:283,offset:299.5};
+function partition(position){
+  const left=icmDots.filter(([x])=>283+x<position).length;
+  return [left,icmDots.length-left];
+}
+const cutSteps=[
+  ['观察内细胞团','囊胚腔很大，内细胞团却聚在一端。定位这一团细胞后再确定刀线。'],
+  ['沿刀线分开囊胚','比较刀线两侧的蓝紫色标记。两份外观相似，内细胞团也可能分得不均。'],
+  ['比较两半的细胞分配','囊胚分割时应尽量均分内细胞团。分割后的两半仍要经过移植和发育，才可能得到同卵双胎。']
+];
+function splitArt(t){
+  const cutX=cutPosition[state.cut];
+  const split=step(t,.43,.84),blade=step(t,.10,.53),show=step(t,.40,.70);
+  const core=G(274,315,1,blastCore(false));
+  const [left,right]=partition(cutX);
+  const markers=icmDots.map(([x,y])=>{
+    const original=283+x;
+    const direction=original<cutX?-1:1;
+    const adjusted=direction<0?Math.min(original,cutX-9):Math.max(original,cutX+9);
+    return miniCell(mix(original,adjusted,split)+49*split*direction,315+y,9);
+  }).join('');
+  return `<defs><clipPath id="emb-half-left"><rect x="135" y="188" width="${cutX-135}" height="252"/></clipPath>
+    <clipPath id="emb-half-right"><rect x="${cutX}" y="188" width="${426-cutX}" height="252"/></clipPath></defs>`+
+    `<g transform="translate(${-49*split} 0)"><g clip-path="url(#emb-half-left)">${core}</g></g>
+    <g transform="translate(${49*split} 0)"><g clip-path="url(#emb-half-right)">${core}</g></g>`+
+    markers+call(43,104,235-49*split,254,'内细胞团')+call(378,104,348+49*split,250,'滋养层')+
+    O(1-step(t,.50,.70),spark(`M${cutX} 154V445`,C.red,3,'7 5')+
+      P(`M${cutX-13} ${144+262*blade}h26l-13 31z`,'#e6edef','#a44a3b',2))+
+    tile(43,497,239,71,show>.5?'左侧 · '+left+' 个':'左侧分割区','蓝紫色示意标记',deep,'#f2eef8')+
+    tile(303,497,239,71,show>.5?'右侧 · '+right+' 个':'右侧分割区','蓝紫色示意标记',deep,'#f2eef8')+
+    txt(45,601,'总数固定为 12 个示意标记；可切换刀线重看。','start',muted,17);
+}
+function twinEvidence(){
+  const p=plot('emb-twin',689,160,435,281,[0,1,2,3],[0,10,20,30,40,50],'获得同卵双胎 · 按分割前的原胚计 (%)','','',()=>null);
+  return p.svg+twinRows.map((d,i)=>{
+    const x=p.X(i+1),y=p.Y(twinPct(d));
+    return R(x-42,y,84,p.Y(0)-y,d.color,'none',2)+
+      txt(x,y-14,twinPct(d).toFixed(1)+'%','middle',C.ink,19,800)+
+      txt(x,469,d.name,'middle',C.ink,17,700)+
+      txt(x,502,d.pairs+' / '+d.original,'middle',muted,17,650);
+  }).join('')+
+    txt(634,559,'论文比较的是发育阶段。左图刀线属于课堂对照。','start',muted,17,700)+
+    rScript(640,609,['ggplot(twins, aes(stage, pairs / original)) +','geom_col()  # Williams et al., 1984']);
+}
+function view4(t){
+  const i=place(3,t),[heading,body]=cutSteps[i];
+  const [left,right]=partition(cutPosition[state.cut]);
+  draw(4,headings('囊胚剖面 · 同一胚胎两条刀线','实证 · 分割牛胚获得双胎')+embryoDefs()+splitArt(t)+twinEvidence());
+  say(4,'BISECTION / 0'+(i+1),heading,body,i===2?left+' : '+right+(left===right?' · 近似均分':' · 分配不均'):'追踪蓝紫色内细胞团',
+    '同卵双胎源于同一受精卵。妊娠率与每枚原胚获得双胎的比例衡量不同结局。');
+}
+
+const views=[view1,view2,view3,view4],durations=[13,14,13,10],initialTimes=[.27,.76,.70,.27];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={
+  sperm:value=>change(0,'sperm',value),
+  lens:value=>change(1,'lens',value),
+  sync:value=>change(2,'sync',value),
+  cut:value=>change(3,'cut',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

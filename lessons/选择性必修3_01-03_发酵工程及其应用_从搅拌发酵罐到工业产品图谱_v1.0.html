@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>发酵工程及其应用｜从搅拌发酵罐到工业产品 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从搅拌发酵罐到工业产品<small>INDUSTRIAL BIOPROCESSING / 01.03</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 1 章 · 第 3 节</p><h1>发酵工程及其应用</h1><p class="subtitle">沿着一罐培养液，追踪供氧、代谢分流、下游提纯与四类工业应用。</p></div>
+<div class="intro-note"><i>INDUSTRIAL BIOPROCESSING</i><p>想提高目标产物的收获量，该换菌种、调工况，还是改分离路线？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 六步与发酵罐</a><a href="#figure2">02 代谢与补料</a><a href="#figure3">03 下游与 SCP</a><a href="#figure4">04 四类工业应用</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / STIRRED-TANK BIOREACTOR</p><h2 id="heading1">从种子液到发酵罐：如何供氧、移热与控污？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="equipment"><button type="button" data-group="equipment" data-value="mix" aria-pressed="true">搅拌与通气</button><button type="button" data-group="equipment" data-value="cool" aria-pressed="false">冷却回路</button><button type="button" data-group="equipment" data-value="probe" aria-pressed="false">探头与补料</button><button type="button" data-group="equipment" data-value="sterile" aria-pressed="false">无菌防线</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="从种子液到发酵罐：如何供氧、移热与控污？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>自然筛选、诱变或基因工程获得生产菌，扩大培养制备种子液；配制并灭菌的培养基沿另一条管线进入罐。发酵罐内发酵是中心环节。空气经除菌过滤，设备和培养基经适用流程灭菌，接种和补料保持闭路。防污染还包括接头、阀门、尾气与操作过程。污染可能竞争底物、降解产品；细菌发酵还要防范噬菌体。</p><p>通气与搅拌在合适范围内改善混合和氧传递。氧传递速率 OTR = k<sub>L</sub>a(C* − C<sub>L</sub>)，液相 DO 随供氧与菌体耗氧的差额变化。夹套与盘管移除代谢热与机械耗散。pH、DO、温度和泡沫可在线检测，菌量及产品浓度可用取样或专用分析仪测量。</p><p>1929 年 Fleming 报道抑菌现象，其原始菌株的约 2 IU/mL 来自后期资料。1940 年 Chain 等报告动物治疗研究。甜瓜株 NRRL 1951 约 100 U/mL 来自早期深层培养记录。X-1612 经紫外诱变产生 Q-176，约 500 与超过 900 U/mL 来自相同 300 L 条件的对比记录。氮芥支系约 3000 是实验室报告高值，现代超过 83,300 为文献所述补料分批记录。跨年代效价的培养、测定和单位记法有差异，图中“超过”按报道下限定位。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 工程剖面为原创示意。效价值来自不同年代、菌株与工艺记录；以对数轴展示量级。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2048009/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1016/S0140-6736(01)08728-1" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1080/00275514.1955.12024468" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.1128/JB.183.19.5465-5471.2001" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://doi.org/10.1155/2012/105109" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://search.worldcat.org/title/1111378" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1128/jb.57.1.15-21.1949" target="_blank" rel="noopener noreferrer" aria-label="参考资料 18">[18]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / METABOLIC SWITCHING</p><h2 id="heading2">同一种菌，为什么能积累不同的产物？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="environment"><button type="button" data-group="environment" data-value="aerobic" aria-pressed="true">近中性 · 氧充足</button><button type="button" data-group="environment" data-value="acid" aria-pressed="false">偏酸 · 氧充足</button><button type="button" data-group="environment" data-value="lowO2" aria-pressed="false">通气不足 · 低氧</button></div><div class="segmented" role="group" aria-label="kinetics"><button type="button" data-group="kinetics" data-value="batch" aria-pressed="false">读取分批</button><button type="button" data-group="kinetics" data-value="fed" aria-pressed="true">读取补料分批</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="同一种菌，为什么能积累不同的产物？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>谷氨酸棒状杆菌在适宜条件下用 α-酮戊二酸和铵合成谷氨酸；部分偏酸工艺可积累 N-乙酰谷氨酰胺，铵供给等也会改变产物谱。低氧可积累乳酸与琥珀酸，图示将乳酸支路从丙酮酸引出，琥珀酸还可经草酰乙酸等形成。三档份额只用于看相对流向。谷氨酸下游可经碳酸钠等中和，再浓缩结晶得到谷氨酸钠。</p><p>下图以同样初始菌体和底物比较两种进料方式。补料组在 12–36 h 以 1.1 碳当量/h 增加底物，模型把每一步耗用的底物分为菌体、目标产物与其他去向（如呼吸碳损失）。读数是总量，浓度还需考虑罐液体积。阴影由补料速率 ±15% 两次计算得到。谷氨酸是氨基酸，本图的泛化产品曲线也不代表所有次级代谢产物或保证翻倍。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 上图为示意产物占比，反映三种工况的方向。下图为独立的碳当量模型，阴影为补料速率敏感性。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://search.worldcat.org/title/1111378" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.2323/jgam.3.193" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://doi.org/10.1159/000079827" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://doi.org/10.1201/9781420039696" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / DOWNSTREAM & SINGLE-CELL PROTEIN</p><h2 id="heading3">离心之后，保留菌体还是上清？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="downstream"><button type="button" data-group="downstream" data-value="cells" aria-pressed="true">目标是菌体 · SCP</button><button type="button" data-group="downstream" data-value="solute" aria-pressed="false">目标是胞外产物 · 味精</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="离心之后，保留菌体还是上清？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>取 1000 kg 初始干物质，用 24 h 净增量比例 0.2%、1.5%、40% 分别表示三种假设情景，新生物质的蛋白比例设为 25%、35%、50%。估算式为 1000 kg × 净增量比例 × 蛋白比例。此比较用来练习统一分母，不能作为真实产业效率或营养可替代性的依据。</p><p>土地分面取颗粒型微生物蛋白与大豆浓缩物案例，以每吨蛋白 52 与 6655 m² 为输入，分别显示 0.052 与 6.655 m²/kg 蛋白。前者的土地面积在该案例中来自制粒用植物油。系统边界、原料、能源与基础设施会改变结果；此案例不与肉牛情景混作同一土地数据集。</p><p>胞内目标先回收菌体，破碎再提纯。胞外代谢物通常先澄清发酵液，随后按产物选择离子交换、萃取、蒸发或结晶。利用合适底物制备的微生物生物量富含蛋白质；也含核酸、糖类和脂质。用秸秆水解液、工农业副产物或 C₁ 原料时，仍须考虑菌种、预处理与产品安全。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 上图的蛋白增量为统一假设的教学计算；下图为 Matassa 等 Fig. 2 转引案例的单位换算，两图口径分开。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.3389/fmicb.2017.02009" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a> <a href="https://doi.org/10.1111/1751-7915.12369" target="_blank" rel="noopener noreferrer" aria-label="参考资料 12">[12]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / APPLICATIONS & FIELD COMPARISON</p><h2 id="heading4">从食品到浸矿：读懂产品身份与田间证据</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="application"><button type="button" data-group="application" data-value="food" aria-pressed="false">食品</button><button type="button" data-group="application" data-value="medicine" aria-pressed="false">医药</button><button type="button" data-group="application" data-value="farm" aria-pressed="true">农牧</button><button type="button" data-group="application" data-value="extreme" aria-pressed="false">特殊环境</button></div><div class="segmented" role="group" aria-label="treatment"><button type="button" data-group="treatment" data-value="control" aria-pressed="false">无处理</button><button type="button" data-group="treatment" data-value="bt" aria-pressed="true">Bt 制剂</button><button type="button" data-group="treatment" data-value="spray" aria-pressed="false">广谱化学处理</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="从食品到浸矿：读懂产品身份与田间证据"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>田间模型让害虫增长受承载量与蜘蛛捕食影响，蜘蛛可随猎物变化。Bt 制剂与广谱化学处理的施药强度、对非靶标的直接影响均为设定值。曲线演示为何需要无处理对照，并同时看目标害虫与非靶标天敌。不同害虫、蜘蛛、制剂和剂量会得到不同结果。</p><p>一些 Bt Cry 晶体在易感昆虫中肠溶解，经蛋白酶活化、结合受体并破坏膜。Bt 制剂是发酵得到的微生物农药。Naranjo 研究的是转基因 Bt 棉和杀虫剂处理，提供田间对照设计案例，与本图的 Bt 制剂模拟分开解释。微生物肥料可固氮、活化养分或促进根系生长；某些嗜酸微生物氧化亚铁或含硫物质，帮助浸出矿物中的铜。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 害虫与蜘蛛双分面为教学模拟，同初值、第 7 天施药。Cry 机制研究与 Bt 棉长期田间研究仅作独立证据。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.toxicon.2006.11.022" target="_blank" rel="noopener noreferrer" aria-label="参考资料 13">[13]↗</a> <a href="https://doi.org/10.1093/ee/34.5.1193" target="_blank" rel="noopener noreferrer" aria-label="参考资料 14">[14]↗</a> <a href="https://doi.org/10.1073/pnas.76.1.106" target="_blank" rel="noopener noreferrer" aria-label="参考资料 15">[15]↗</a> <a href="https://doi.org/10.1126/science.2448875" target="_blank" rel="noopener noreferrer" aria-label="参考资料 16">[16]↗</a> <a href="https://doi.org/10.1271/bbb.70743" target="_blank" rel="noopener noreferrer" aria-label="参考资料 17">[17]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 高中生物学选择性必修 3 ↗</a><span>第 1 章第 3 节，国家中小学智慧教育平台教材 PDF。</span></li><li id="ref-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2048009/" target="_blank" rel="noopener noreferrer">[2] Fleming, 1929 · British Journal of Experimental Pathology ↗</a><span>青霉培养物抑菌的原始报告。</span></li><li id="ref-3"><a href="https://doi.org/10.1016/S0140-6736(01)08728-1" target="_blank" rel="noopener noreferrer">[3] Chain et al., 1940 · The Lancet ↗</a><span>青霉素治疗感染的早期动物实验。</span></li><li id="ref-4"><a href="https://doi.org/10.1080/00275514.1955.12024468" target="_blank" rel="noopener noreferrer">[4] Backus &amp; Stauffer, 1955 · Mycologia ↗</a><span>威斯康星家系、紫外和氮芥选育与实验室报告效价。</span></li><li id="ref-5"><a href="https://doi.org/10.1128/JB.183.19.5465-5471.2001" target="_blank" rel="noopener noreferrer">[5] Rodríguez-Sáiz et al., 2001 · Journal of Bacteriology ↗</a><span>X-1612 与 Q-176 亲缘及 300 L 罐效价比较。</span></li><li id="ref-6"><a href="https://doi.org/10.1155/2012/105109" target="_blank" rel="noopener noreferrer">[6] Barreiro, Martín &amp; García-Estrada, 2012 · Journal of Biomedicine and Biotechnology ↗</a><span>青霉素菌株改良史及现代高产菌的补料分批效价记录。</span></li><li id="ref-7"><a href="https://search.worldcat.org/title/1111378" target="_blank" rel="noopener noreferrer">[7] Pirt, 1975 · Principles of Microbe and Cell Cultivation ↗</a><span>微生物培养动力学专著，馆藏书目。</span></li><li id="ref-8"><a href="https://doi.org/10.2323/jgam.3.193" target="_blank" rel="noopener noreferrer">[8] Kinoshita, Udaka &amp; Shimono, 1957 · Journal of General and Applied Microbiology ↗</a><span>筛选产 L-谷氨酸的微生物及培养条件研究。</span></li><li id="ref-9"><a href="https://doi.org/10.1159/000079827" target="_blank" rel="noopener noreferrer">[9] Inui et al., 2004 · Journal of Molecular Microbiology and Biotechnology ↗</a><span>缺氧条件下谷氨酸棒状杆菌产生乳酸、琥珀酸的实验。</span></li><li id="ref-10"><a href="https://doi.org/10.1201/9781420039696" target="_blank" rel="noopener noreferrer">[10] Eggeling &amp; Bott, 2005 · Handbook of Corynebacterium glutamicum ↗</a><span>谷氨酸棒状杆菌的生理与工业过程。</span></li><li id="ref-11"><a href="https://doi.org/10.3389/fmicb.2017.02009" target="_blank" rel="noopener noreferrer">[11] Ritala et al., 2017 · Frontiers in Microbiology ↗</a><span>单细胞蛋白的菌种、原料、制备形式与应用。</span></li><li id="ref-12"><a href="https://doi.org/10.1111/1751-7915.12369" target="_blank" rel="noopener noreferrer">[12] Matassa et al., 2016 · Microbial Biotechnology ↗</a><span>Fig. 2 汇总按产品蛋白含量归一化的生产用地案例。</span></li><li id="ref-13"><a href="https://doi.org/10.1016/j.toxicon.2006.11.022" target="_blank" rel="noopener noreferrer">[13] Bravo, Gill &amp; Soberón, 2007 · Toxicon ↗</a><span>Bt Cry 和 Cyt 毒素的机制综述。</span></li><li id="ref-14"><a href="https://doi.org/10.1093/ee/34.5.1193" target="_blank" rel="noopener noreferrer">[14] Naranjo, 2005 · Environmental Entomology ↗</a><span>转基因 Bt 棉和杀虫剂处理下非靶标天敌的长期田间比较。</span></li><li id="ref-15"><a href="https://doi.org/10.1073/pnas.76.1.106" target="_blank" rel="noopener noreferrer">[15] Goeddel et al., 1979 · PNAS ↗</a><span>大肠杆菌表达重组人胰岛素两条肽链的研究。</span></li><li id="ref-16"><a href="https://doi.org/10.1126/science.2448875" target="_blank" rel="noopener noreferrer">[16] Saiki et al., 1988 · Science ↗</a><span>利用耐热 DNA 聚合酶进行 PCR 的原始研究。</span></li><li id="ref-17"><a href="https://doi.org/10.1271/bbb.70743" target="_blank" rel="noopener noreferrer">[17] Sugio et al., 2008 · Bioscience, Biotechnology, and Biochemistry ↗</a><span>从铜矿分离有浸铜活性的嗜酸细菌。</span></li><li id="ref-18"><a href="https://doi.org/10.1128/jb.57.1.15-21.1949" target="_blank" rel="noopener noreferrer">[18] Reese et al., 1949 · Journal of Bacteriology ↗</a><span>记录甜瓜分离株 NRRL 1951 的约 100 U/mL 深层培养效价。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>发酵工程及其应用 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">发酵工程及其应用 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">基本流程</th><td>菌种选育 → 扩大培养。配制培养基并灭菌。种子与物料汇入接种和发酵 → 分离提纯 → 成品。发酵罐内发酵是中心环节。</td></tr><tr><th scope="row">控温、供氧、无菌</th><td>夹套与盘管移热；通气与搅拌促进氧传递；设备、培养基、补料和通气分别建立无菌防线。</td></tr><tr><th scope="row">工况调控</th><td>温度、pH、氧、底物不仅影响生长，还能改变产物谱。谷氨酸发酵的有利条件须结合菌株和工艺。</td></tr><tr><th scope="row">分批与补料分批</th><td>分批初始投料；补料分批在培养中继续加料，通常在末端统一收获。总量与浓度须分别判断。</td></tr><tr><th scope="row">目标决定分离路线</th><td>菌体产物先回收固相；胞外产物先保留澄清液，再按性质提纯；胞内产物还需破碎。</td></tr><tr><th scope="row">单细胞蛋白 SCP</th><td>教材重点是富含蛋白质的微生物菌体产品，含多种生物质成分。</td></tr><tr><th scope="row">应用与证据</th><td>食品与医药可回收代谢物或表达产物；农牧应用可涉及菌体、发酵产物与活菌；评价农药需同时观测靶标和非靶标。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={equipment:'mix',environment:'aerobic',kinetics:'fed',downstream:'cells',application:'farm',treatment:'bt'};
+const steel='#506b7c',metal='#b4c5cc',ice='#c1e6ef',solution='#c4e6dd',darkGreen='#126450',gold='#d39538',acid='#9d512c';
+const wrap=(text,x,y,fill=C.ink)=>txt(x,y,text,'middle',fill,17,700);
+const scientificTicks={'-2':'10⁻²','-1':'10⁻¹',0:'10⁰',1:'10¹',2:'10²',3:'10³',4:'10⁴',5:'10⁵',6:'10⁶'};
+function axes(p,xNames=[],yNames){
+  let i=0;
+  return p.svg.replace(/(<text\b[^>]*text-anchor="(middle|end)"[^>]*>)(-?\d+)(<\/text>)/g,(_,tag,anchor,value,end)=>{
+    const formatted=anchor==='end'?yNames?.[value]:(xNames.length?xNames[i++]:value);
+    return tag+esc(formatted??value)+end;
+  });
+}
+function bar(p,x,y,color,width=47,base=0){
+  return R(p.X(x)-width/2,p.Y(y),width,Math.max(0,p.Y(base)-p.Y(y)),color,'none',1);
+}
+function pathThrough(points){return 'M'+points.map(pair=>pair.join(' ')).join('L')}
+function pipe(points,color=steel,width=9){const d=pathThrough(points);return spark(d,color,width)+spark(d,'#ffffff5e',width*.35)}
+function drift(points,t,color,count=6,r=4,speed=2){
+  const lengths=points.slice(1).map(([x,y],i)=>Math.hypot(x-points[i][0],y-points[i][1]));
+  const total=lengths.reduce((a,b)=>a+b,0);
+  return many(count,i=>{
+    let distance=((t*speed+i/count)%1)*total,j=0;
+    while(j<lengths.length-1&&distance>lengths[j])distance-=lengths[j++];
+    const a=points[j],b=points[j+1],f=distance/lengths[j];
+    return E(mix(a[0],b[0],f),mix(a[1],b[1],f),r,r,color,'#fff9');
+  });
+}
+const penicillin=[
+  {label:'原始株',value:2,display:'约 2',color:C.orange},
+  {label:'甜瓜株',value:100,display:'约 100',color:C.blue},
+  {label:'X-1612',value:500,display:'约 500',color:C.cyan},
+  {label:'Q-176',value:900,display:'＞900',color:C.green},
+  {label:'氮芥支系',value:3000,display:'约 3,000',color:C.orange},
+  {label:'工业株',value:83300,display:'＞83,300',color:C.blue}
+];
+const equipment={
+  mix:{heading:'用叶轮把气泡分散到整罐',read:'进气 → 分布器 → 叶轮剪切 → 氧传递',body:'搅拌促进培养液均匀混合，合适的叶轮能把大气泡剪切成更小的气泡，增大气液接触面积。',note:'DO 是溶解氧。即使加强供氧，菌体耗氧增加时，DO 仍可能下降。'},
+  cool:{heading:'冷却水带走发酵放出的热',read:'夹套与盘管 · 冷水入、温水出',body:'大型罐的微生物代谢与搅拌耗散都会产热。冷却水沿夹套和内盘管带走热量。',note:'培养液和冷却水由金属壁隔开，传递热量。'},
+  probe:{heading:'先读取信号，再决定怎样调节',read:'pH／DO／温度／泡沫 → 控制器',body:'监测数据可联动补料、酸碱泵、供气、搅拌或消泡。碳氮源按配方和工况补加。',note:'常规 pH、DO 探头与菌量/产物测定承担不同任务，后者可用取样或专用分析仪。'},
+  sterile:{heading:'气体、液体与设备分别设防',read:'进气除菌 · 培养基与罐体灭菌',body:'高密度纯培养一旦染菌，杂菌可能争夺营养或降解产品，噬菌体也可能使细菌发酵失败。',note:'无菌操作贯穿接种、补料和取样。传统工艺可使用混合菌群，工业发酵也有设计好的混菌体系。'}
+};
+function processStrip(){
+  const nodes=[[40,72,133,'① 菌种选育'],[192,72,128,'② 扩大培养'],[40,121,196,'③ 培养基配制与灭菌'],[378,91,169,'④ 接种与发酵'],[40,170,204,'⑤ 分离提纯'],[300,170,164,'⑥ 获得成品']];
+  const edges=arrow('M173 89H191',steel)+arrow('M320 89H347V108H377',steel)+arrow('M236 139H347V115H377',steel)+
+    arrow('M548 107H554V160H143V169',steel)+arrow('M244 187H298',steel);
+  return edges+nodes.map(([x,y,w,label],i)=>R(x,y,w,35,i===3?'#dceee6':'#f3f7f4',i===3?'#408771':'#c1d4d1',7)+txt(x+w/2,y+23,label,'middle',C.ink,16,750)).join('');
+}
+function impeller(x,y,t,active){
+  const k=active?.45+.55*Math.abs(Math.cos(t*25)):1;
+  return E(x,y+6,45,10,'#3e67733b')+
+    P(`M${x-46*k} ${y+4}l15-12h62l15 12-12 8h-68Z`,'#b5c7ce',steel,1.7)+
+    E(x,y,47*k,8,'#dce6e9',steel)+R(x-11,y-7,22,12,'#738f9c',steel,3)+
+    P(`M${x-37*k} ${y+4}v12m${74*k} -12v12`,'none',steel,4);
+}
+function vessel(t){
+  const key=state.equipment,stir=key==='mix';
+  const silhouette='M180 333Q180 287 286 283Q392 287 392 333V496Q392 546 286 552Q180 546 180 496Z';
+  const interior='M194 336Q194 297 286 296Q378 297 378 336V491Q378 530 286 538Q194 530 194 491Z';
+  const coolant=[[114,516],[179,516],[179,348],[202,325],[372,325],[395,350],[395,512],[445,512]];
+  const coil=[[412,369],[358,369],[358,386],[222,386],[222,416],[358,416],[358,446],[222,446],[222,467],[412,467]];
+  const air=[[45,475],[91,475],[117,475],[143,475],[143,510],[209,510],[350,510]];
+  const feed=[[500,269],[422,269],[422,300],[345,300],[345,340]];
+  let art='<defs><linearGradient id="tank-metal"><stop stop-color="#94aeb9"/><stop offset=".22" stop-color="#eef5f5"/><stop offset=".68" stop-color="#b0c6cc"/><stop offset="1" stop-color="#8ea8b6"/></linearGradient><clipPath id="vessel-liquid">'+P(interior,'white','none')+'</clipPath></defs>';
+  art+=E(283,554,126,17,'#385c6020')+P('M216 526v36h-16m155-36v36h17','none',steel,7)+P('M286 548v18h96','none',steel,8)+E(385,566,8,8,metal,steel);
+  art+=P(silhouette,'url(#tank-metal)',steel,2.5)+P(interior,'#edf5f4',steel,1.7)+
+    '<g clip-path="url(#vessel-liquid)">'+P('M189 362Q229 345 281 361T386 357V552H187Z',solution,'none')+
+    P('M190 362Q230 345 282 361T385 357','none','#69b4ac',2)+
+    many(24,i=>G(212+(i*71)%151,372+(i*41)%142,.55,P('M-5-2Q0-5 5-2Q8 3 2 4H-3Q-8 2-5-2Z','#5c9c84','none'),i*53))+'</g>';
+  art+=P('M199 354v139m173-138v139','none','#8ea8a8',4)+pipe(air,steel,7)+
+    R(87,463,38,24,'#e6f2f4',steel,3)+many(6,i=>P(`M${91+i*5} 484l4-17`,'none','#73929e',1.5))+
+    P('M207 510H352','none',steel,8)+many(9,i=>E(215+i*16,507,2,2,'#dbeff1'));
+  art+=R(257,230,59,48,'#7e9ba8',steel,8)+many(7,i=>R(263+i*7,239,2.5,29,'#b8cdd3'))+R(270,273,33,17,metal,steel,4)+
+    P('M286 284V509','none',steel,6)+P('M286 287V509','none','#c5d5d9',2)+[394,443,483].map((y,i)=>impeller(286,y,t+i*.035,stir)).join('');
+  art+=pipe([[324,303],[324,245],[383,245]],steel,5)+R(369,238,26,14,'#dce9e9',steel,3);
+  art+=pipe(feed,'#a17247',6)+E(495,269,13,13,'#f0d7ad','#987046')+P('M489 269h11m-5-5v10','none','#805a39',2);
+  art+=pipe([[352,314],[352,388]],steel,3)+pipe([[365,316],[365,430]],steel,3)+pipe([[226,311],[226,412]],steel,3)+pipe([[213,317],[213,359]],steel,3)+
+    [ [352,388],[365,430],[226,412],[213,359]].map(([x,y],i)=>E(x,y,4,5,[C.red,C.cyan,C.orange,C.green][i],steel)).join('');
+  if(key==='mix'||key==='sterile'){
+    art+=drift(air,t,C.cyan,10,3.5,2.3);
+    if(stir)art+=many(28,i=>{
+      const f=(t*1.72+i*.137)%1,y=506-144*f,x=213+(i*19)%145+Math.sin(i*3+f*8)*7;
+      const radius=y>447?5+2*(i%3):2+i%3;
+      return E(x,y,radius,radius,'#e2faffb0','#4b9eb4')+E(x-radius*.3,y-radius*.3,1,1,'#fff');
+    });
+  }
+  if(key==='cool'){
+    art+=pipe(coolant,'#51a7c6',9)+pipe(coil,'#7abccc',6)+drift(coolant,t,C.cyan,10,4.5)+drift(coil,t,'#247fa5',8,3.5);
+    art+=drift([[296,405],[329,414],[358,416]],t,C.red,4,4,1.7)+drift([[296,478],[326,467],[358,467]],t,C.red,4,4,1.6);
+  }
+  if(key==='probe'){
+    art+=drift(feed,t,gold,8,4,2.7)+drift([[365,430],[365,317],[422,317],[422,269],[495,269]],t,C.green,8,3,2);
+    art+=O(.4+.35*Math.sin(t*34),E(365,430,12,12,'none',C.cyan)+E(352,388,11,11,'none',C.red));
+  }
+  if(key==='sterile'){
+    art+=many(7,i=>E(Math.min(82,43+((t+i*.15)%1)*48),469+i%3*5,3.8,3.8,C.red,'#fff'));
+    art+=R(86,462,41,26,'none',darkGreen,4);
+  }
+  art+=key==='mix'?call(43,347,242,395,'涡轮叶轮')+call(415,452,347,509,'空气分布器'):
+    key==='cool'?call(41,438,180,471,'夹套')+call(426,390,357,418,'内盘管'):
+    key==='probe'?call(42,349,225,412,'在线探头')+call(421,316,494,270,'补料泵'):
+    call(44,405,106,475,'进气滤芯')+call(419,352,366,314,'密闭接种');
+  return art+R(40,589,505,34,'#edf4ef','#cee0d6',7)+wrap(equipment[key].read,292,611,darkGreen);
+}
+function historyChart(t){
+  const p=plot('penicillin-chart',685,153,441,312,[0,1,2,3,4,5,6,7],[0,1,2,3,4,5,6],'跨年代效价记录 · 对数坐标','','青霉素效价（U/mL，历史记录）');
+  let art=axes(p,Array(8).fill(''),scientificTicks);
+  art+=penicillin.map((d,i)=>{
+    const y=Math.log10(d.value),active=clamp(t*6-i+.3);
+    return O(.61+.39*active,bar(p,i+1,y,d.color,38))+txt(p.X(i+1),p.Y(y)-10,d.display,'middle',C.ink,15,750)+
+      txt(p.X(i+1),p.y+p.h+25,d.label,'middle',C.ink,15);
+  }).join('');
+  art+=P('M844 518H943','none',C.green,2)+txt(838,545,'同一 300 L 对比','start',C.ink,16,700)+txt(1000,545,'跨工艺记录','start',C.ink,16,700)+
+    txt(644,576,'1929 抑菌发现 → 1940 动物研究 → 选育与工艺迭代','start',C.ink,17);
+  return art+rScript(640,612,['ggplot(titers, aes(strain, units_ml)) + geom_col() +','scale_y_log10() + theme_gray()']);
+}
+function view1(t){
+  const item=equipment[state.equipment];
+  draw(1,headings('工序与搅拌罐剖面','青霉素 · 工业菌株改良')+processStrip()+vessel(t)+historyChart(t));
+  say(1,'BIOREACTOR / '+state.equipment.toUpperCase(),item.heading,item.body,item.read,item.note);
+}
+const productNames=['谷氨酸','乙酰谷氨酰胺支路','乳酸／琥珀酸'];
+const productColors=[C.green,C.orange,C.red];
+const conditions={
+  aerobic:{name:'近中性 · 氧充足',short:'近中性',fractions:[90,6,4],body:'示意工况下，α-酮戊二酸与铵在谷氨酸脱氢酶等途径作用下转为谷氨酸，产物可分泌到培养液。'},
+  acid:{name:'偏酸 · 氧充足',short:'偏酸',fractions:[30,62,8],body:'一些偏酸工艺会积累 N-乙酰谷氨酰胺等副产物。pH 之外，铵供给与菌株也会影响产物谱。'},
+  lowO2:{name:'通气不足 · 低氧',short:'低氧',fractions:[15,10,75],body:'低氧时有机酸通路可积累乳酸和琥珀酸。乳酸可由丙酮酸生成，琥珀酸还可经草酰乙酸等支路形成。'}
+};
+function simulateFermentation(rate){
+  const points=[],dt=.25;
+  let X=3,S=42,P=0,loss=0,feed=0;
+  for(let i=0;i<=192;i++){
+    const time=i*dt;
+    points.push({time,X,S,P,loss,feed});
+    const added=time>=12&&time<36?rate*dt:0;
+    feed+=added;
+    S+=added;
+    const uptake=Math.min(S,.60*X*S/(S+4)*dt);
+    const growth=.41*uptake,product=.44*uptake;
+    S-=uptake;
+    X+=growth;
+    P+=product;
+    loss+=uptake-growth-product;
+  }
+  return points;
+}
+const kinetic={batch:simulateFermentation(0),fed:simulateFermentation(1.1)};
+const sensitivity=[simulateFermentation(1.1*.85),simulateFermentation(1.1*1.15)];
+function timePoint(points,time){
+  const position=clamp(time/points.at(-1).time)*(points.length-1);
+  const a=points[Math.floor(position)],b=points[Math.ceil(position)],f=position-Math.floor(position);
+  return Object.fromEntries(Object.keys(a).map(k=>[k,k==='time'?time:mix(a[k],b[k],f)]));
+}
+const metabolicRoutes=[
+  [[270,305],[270,337],[399,337],[399,430],[431,430]],
+  [[270,305],[270,337],[399,337],[399,523],[431,523]],
+  [[205,179],[152,179],[152,369],[139,369]]
+];
+function metaboliteStage(t){
+  const m=conditions[state.environment],n=m.fractions;
+  let art=P('M120 119C168 77 378 80 457 119C512 148 531 237 505 314C482 389 382 408 303 401C223 395 112 382 81 333C51 287 58 166 120 119Z','#e6f2ea','#8fbaac',2.5)+
+    P('M126 127C175 90 372 92 448 127C493 148 516 236 491 309C465 377 382 398 303 390C227 385 120 370 94 327C66 278 67 171 126 127Z','none','#b4d5c7',1.5);
+  art+=many(15,i=>E(186+(i*37)%258,125+(i*47)%211,2.3,1.6,'#9ec8b680'));
+  art+=arrow('M270 132V165',steel)+arrow('M270 195V225',steel)+spark('M270 244C313 228 345 273 327 304C312 330 274 326 255 310',C.green,2,'6 5')+
+    arrow('M270 246V275',steel)+txt(345,234,'TCA 节点','start',darkGreen,16,750);
+  const nodes=[[270,115,'葡萄糖'],[270,179,'丙酮酸'],[270,236,'进入 TCA'],[270,289,'α-酮戊二酸']];
+  art+=nodes.map(([x,y,l])=>R(x-64,y-15,128,30,'#fff','#a9c8ba',6)+wrap(l,x,y+5)).join('');
+  art+=metabolicRoutes.map((points,i)=>{
+    const color=productColors[i],linePath=pathThrough(points),prominence=n[i]/100;
+    return O(.32+.68*prominence,spark(linePath,color,3+prominence*10))+
+      drift(points,t,gold,Math.max(1,Math.round(n[i]/9)),3.4,1.7)+
+      arrow(pathThrough(points.slice(-2)),color);
+  }).join('');
+  const labels=[[409,412,137,'谷氨酸'],[367,501,179,'N-乙酰谷氨酰胺'],[42,355,149,'乳酸／琥珀酸']];
+  art+=labels.map(([x,y,w,l],i)=>R(x,y,w,36,'#fff',productColors[i],6)+txt(x+w/2,y+23,l,'middle',C.ink,16,750)).join('');
+  art+=txt(55,461,'低氧时有机酸支路增大','start',C.ink,17,700)+
+    txt(55,491,'胞外谷氨酸可提取并中和结晶','start',C.ink,17)+
+    tile(44,563,498,57,m.name+'  ｜  主分流 '+Math.max(...n)+'%','',productColors[n.indexOf(Math.max(...n))]);
+  return art;
+}
+function kineticsCharts(t){
+  const time=48*t,now=timePoint(kinetic[state.kinetics],time);
+  const a=plot('fractions',688,115,438,157,[0,1,2,3,4],[0,25,50,75,100],'产物组成 · 教学示意（%）');
+  const b=plot('fermentation-kinetics',688,397,438,120,[0,12,24,36,48],[0,10,20,30,40],'菌体与产物 · 碳当量');
+  const list=Object.entries(conditions),chosen=list.findIndex(([key])=>key===state.environment)+1;
+  let art=axes(a,['',...list.map(([,v])=>v.short),''])+a.clip(O(.15,R(a.X(chosen)-43,a.y,86,a.h,C.blue,'none',0)));
+  art+=list.map(([,v],i)=>{
+    let cumulative=0;
+    return v.fractions.map((n,j)=>{const base=cumulative;cumulative+=n;return bar(a,i+1,cumulative,productColors[j],60,base)}).join('');
+  }).join('');
+  art+=productNames.map((l,i)=>R([687,798,997][i],311,14,13,productColors[i],'none',2)+txt([706,817,1016][i],323,l,'start',C.ink,15)).join('');
+  art+=txt(688,348,'12–36 h 补料窗口 · 橙色带表示补料速率 ±15%','start',C.ink,15);
+  art+=b.svg+b.clip(O(.12,R(b.X(12),b.y,b.X(36)-b.X(12),C.cyan,'none',0)));
+  const band=sensitivity[0].map((p,i)=>({x:p.time,lo:p.P,hi:sensitivity[1][i].P}));
+  art+=b.clip(ribbon(band,b.X,b.Y,C.orange,.25));
+  for(const [mode,points] of Object.entries(kinetic)){
+    for(const [key,color] of [['X',C.green],['P',C.red]]){
+      const data=points.map(p=>({x:p.time,y:p[key]}));
+      art+=O(mode===state.kinetics?1:.61,line(data,b,color,mode===state.kinetics?3.1:2.4,mode==='batch'?'7 5':''));
+    }
+  }
+  art+=scan(b,time)+b.clip(chartDot(b,time,now.X,C.green,5)+chartDot(b,time,now.P,C.red,5));
+  art+=txt(646,570,'● 菌体','start',darkGreen,16,750)+txt(724,570,'● 产物','start','#9c3024',16,750)+
+    txt(808,570,'分批：虚线 · 补料：实线','start',C.ink,16)+txt(1008,570,'时间（h）','start',C.ink,16);
+  art+=rScript(640,611,['ggplot(kinetics, aes(time, carbon, linetype = mode)) +','geom_ribbon(alpha = .25) + geom_line() + theme_gray()']);
+  return art;
+}
+function view2(t){
+  const m=conditions[state.environment],mode=state.kinetics,now=timePoint(kinetic[mode],48*t);
+  draw(2,headings('谷氨酸棒状杆菌 · 代谢出口','产物占比与补料动力学')+metaboliteStage(t)+kineticsCharts(t));
+  say(2,'FERMENTATION / '+now.time.toFixed(1)+' h',m.name,m.body,
+    (mode==='fed'?'补料分批':'分批')+' · 产物 '+now.P.toFixed(1)+' 碳当量',
+    '残余底物 '+now.S.toFixed(1)+' · 累计补料 '+now.feed.toFixed(1)+'。下图以同一初始条件比较进料方式，独立于上方产物占比。');
+}
+const proteinScenarios=[
+  {name:'肉牛情景',growth:.002,protein:.25,color:C.orange},
+  {name:'大豆情景',growth:.015,protein:.35,color:C.cyan},
+  {name:'酵母情景',growth:.40,protein:.50,color:C.green}
+];
+const proteinGain=({growth,protein})=>1000*growth*protein;
+const landCases=[{name:'颗粒型 SCP',perTon:52,color:C.green},{name:'大豆浓缩物',perTon:6655,color:C.cyan}];
+function smallVat(x,y,s=1){
+  return G(x,y,s,P('M-48-44Q-48-66 0-66Q48-66 48-44V42Q48 59 0 62Q-48 59-48 42Z','#e1eceb',steel,2.3)+
+    P('M-43-11Q-14-18 11-12Q26-8 43-13V40Q43 53 0 57Q-43 53-43 40Z',solution,'none')+
+    P('M0-66v-17m-35 139v11m70-11v11m-35-7v11h26','none',steel,4)+R(-14,-90,28,15,metal,steel,4)+
+    E(0,12,29,6,'#94b6bf',steel)+P('M0-65V37','none',steel,4));
+}
+function separator(x,y,t){
+  return G(x,y,1,E(0,47,59,9,'#425e731b')+P('M-46-34Q-48-52 0-52Q48-52 46-34L39 37Q38 47 0 48Q-38 47-39 37Z','#bacbd0',steel,2.2)+
+    P('M-36-26Q0-43 36-26V32Q0 44-36 32Z','#eff6f3',steel,1.5)+
+    many(5,i=>P(`M-${12+i*5} ${-22+i*10}Q0 ${-13+i*10} ${12+i*5} ${-22+i*10}`,'none','#758f9a',2.3))+
+    P('M0-53v92','none','#6c8d99',2.4)+many(7,i=>E((8+i*3)*Math.cos(t*10+i),28+i%4*2.2,2.5,2.5,C.green))+
+    E(28,-16,3,3,C.cyan)+E(-24,-20,2.6,2.6,C.cyan));
+}
+function dryer(x,y){
+  return G(x,y,1,P('M-34-37H34V10L10 36H-10L-34 10Z','#eef4ec',steel,2)+
+    P('M-29-28h58m-22-4v6m-7-6v10m-7-10v6','none','#9ab0ae',2)+
+    many(12,i=>E((i*19)%48-24, -15+(i*17)%36,2,2,C.green))+P('M0 36v13','none',steel,4));
+}
+function column(x,y,t){
+  return G(x,y,1,R(-24,-39,48,71,'#f3f9f9',steel,8)+R(-19,-9,38,33,'#c1dbe7','none',3)+
+    P('M-24-31h48m-48 56h48m-24-64v-11m0 82v12','none',steel,2)+
+    many(12,i=>E((i*13)%30-15,3+(i*7)%19,2,2,'#5d97ad'))+
+    E(0,mix(-25,29,(t*2)%1),4,4,C.orange));
+}
+function sachet(x,y){
+  return G(x,y,1,P('M-25-32H25L22-21L27 30H-27L-22-21Z','#edf7e8','#6f9f84',2)+R(-20,-5,40,21,'#97c8a8','none',3)+
+    P('M-19-25H19M-22 24H22','none','#89b59b',1.5)+P('M-8 5q7-9 17-5q-4 10-17 5Z',C.green,'none'));
+}
+function crystals(x,y){
+  return G(x,y,1,E(0,22,32,8,'#d7e8ee')+P('M-31 5Q0 13 31 5L25 22Q0 31-25 22Z','#e5eff2',steel,2)+
+    P('M-23 5l10-15 8 10 11-21 11 19 8 8Z','#edf8ff','#78a9c1',2)+
+    P('M1 2l5-17 6 17m-28 1 3-8 5 8','none','#a0c8d7',1.5));
+}
+const separation={
+  cells:{heading:'菌体是目标，回收固相',note:'过滤或离心收集菌体，再洗涤和干燥。SCP 是富含蛋白质的微生物生物量，仍含糖类、脂质及核酸。',result:'固相 → 洗涤／干燥 → SCP'},
+  solute:{heading:'胞外代谢物是目标，保留澄清液',note:'先除去菌体，再按目标物性质选择提纯工艺。谷氨酸可提取、中和、结晶制成谷氨酸钠。',result:'液相 → 提取／纯化 → 晶体'}
+};
+function downstreamStage(t){
+  const solid=state.downstream==='cells',routeColor=solid?C.green:C.blue;
+  const inlet=[[137,194],[253,194],[253,212]],solidPath=[[237,317],[237,355],[149,355],[149,402],[149,459],[149,515]],liquidPath=[[270,317],[270,355],[412,355],[412,396],[412,459],[412,515]];
+  const off=solid?liquidPath:solidPath,active=solid?solidPath:liquidPath;
+  let art=pipe(inlet,'#729ca3',7)+pipe(off,'#c3cfcb',6)+pipe(active,routeColor,8);
+  art+=drift(inlet,t,[C.green,C.cyan][solid?0:1],6,4)+drift(active,t,routeColor,9,4.5,1.65);
+  art+=smallVat(115,135,.83)+separator(253,266,t)+
+    O(solid?1:.4,dryer(149,429)+sachet(149,516))+O(solid?.4:1,column(412,428,t)+crystals(412,516));
+  art+=call(326,223,285,251,'碟片式离心','可按物料改用过滤')+label(43,212,'发酵液')+
+    label(58,325,'固相 · 菌体')+label(395,325,'液相 · 可溶物')+
+    label(178,420,'洗涤／干燥')+label(434,420,'按性质提纯')+
+    wrap('SCP / 干酵母',149,569,solid?darkGreen:C.ink)+wrap('味精晶体',412,569,solid?C.ink:C.blue);
+  return art+R(40,588,505,34,'#eef4f0','#caddd3',7)+wrap(solid?'本次保留含细胞的固相':'本次保留含可溶产物的液相',292,610,darkGreen);
+}
+function proteinCharts(){
+  const a=plot('scp-protein',692,118,431,164,[0,1,2,3,4],[-1,0,1,2,3],'24 h 新增蛋白 · 教学假设（kg）');
+  const b=plot('scp-land',692,408,431,128,[0,1,2,3],[-2,-1,0,1,2],'单位蛋白土地面积 · 案例（m²/kg）');
+  let art=axes(a,['',...proteinScenarios.map(p=>p.name),''],scientificTicks)+axes(b,['',...landCases.map(p=>p.name),''],scientificTicks);
+  art+=proteinScenarios.map((p,i)=>{
+    const gain=proteinGain(p),v=Math.log10(gain);
+    return bar(a,i+1,v,p.color,58,-1)+txt(a.X(i+1),a.Y(v)-10,gain,'middle',C.ink,16,750);
+  }).join('');
+  art+=landCases.map((p,i)=>{
+    const value=p.perTon/1000,v=Math.log10(value);
+    return bar(b,i+1,v,p.color,67,-2)+txt(b.X(i+1),b.Y(v)-9,value,'middle',C.ink,16,750);
+  }).join('');
+  art+=txt(677,336,'起点均为 1000 kg 干物质，采用设定增长率。','start',C.ink,17)+
+    txt(676,582,'案例来源：Matassa et al. (2016) Fig. 2','start',C.ink,16);
+  return art+rScript(641,614,['ggplot(protein, aes(system, amount)) + geom_col() +','scale_y_log10() + facet_wrap(~ metric, scales = "free")']);
+}
+function view3(t){
+  const m=separation[state.downstream];
+  draw(3,headings('固液分离 · 目标物决定路线','SCP · 效率与土地口径')+downstreamStage(t)+proteinCharts());
+  say(3,'DOWNSTREAM / '+(state.downstream==='cells'?'SOLIDS':'LIQUID'),m.heading,m.note,m.result,
+    '胞内产物需要额外破碎和提取。生产速率与环境足迹应分别比较，先核对基准和系统边界。');
+}
+const applications={
+  food:{name:'食品',color:C.orange,heading:'食品、添加剂和酶制剂',body:'酱油、醋与啤酒采用不同原料和微生物；黑曲霉可生产柠檬酸，谷氨酸棒状杆菌用于味精生产。',notes:['食品添加剂 · 柠檬酸、味精','酶制剂 · α-淀粉酶、果胶酶、蛋白酶'],workflow:['植物原料','发酵／酶解','食品与加工助剂']},
+  medicine:{name:'医药',color:C.blue,heading:'从抗生素到重组药品',body:'青霉素和部分头孢菌素可由发酵获得或用发酵产物作前体；微生物也可表达重组人胰岛素、乙肝疫苗抗原或干扰素。',notes:['抗生素 · 筛选高产株并控制发酵','重组制剂 · 回收和纯化表达产物'],workflow:['工程菌／生产菌','罐内表达或合成','纯化与质量检验']},
+  farm:{name:'农牧',color:C.green,heading:'活菌肥、微生物农药与菌体饲料',body:'根瘤菌或解磷解钾菌可改善养分利用。Bt 制剂、白僵菌和井冈霉素可用于生物防治。菌体也可制成饲料蛋白。',notes:['肥料 · 固氮、活化养分或促根','农药 · Bt、白僵菌、井冈霉素','饲料 · 酵母等富蛋白微生物菌体'],workflow:['Cry 晶体溶解','中肠酶活化','受体结合与成孔']},
+  extreme:{name:'特殊环境',color:C.cyan,heading:'借用极端环境微生物的能力',body:'嗜热菌来源的 Taq 聚合酶可在 PCR 温度循环中使用；嗜盐微生物可用于耐盐工艺，嗜酸菌可参与铜矿生物浸出。',notes:['嗜热 · Thermus aquaticus → 耐热 Taq','嗜酸 · 氧化亚铁／硫 → 矿物浸出'],workflow:['极端环境筛选','获得菌株或酶','耐热、耐盐或浸矿']}
+};
+const fieldModes={
+  control:{name:'无处理',color:C.blue,dash:'6 4',kill:0,spider:0},
+  bt:{name:'Bt 制剂',color:C.green,dash:'',kill:.40,spider:.016},
+  spray:{name:'广谱化学',color:C.red,dash:'3 5',kill:.86,spider:.56}
+};
+function simulateField(mode){
+  const data=[],dt=.25,settings=fieldModes[mode];
+  let H=52,N=20;
+  for(let i=0;i<=144;i++){
+    const time=i*dt;
+    data.push({time,H,N});
+    const since=time-7,exposure=since<0?0:Math.exp(-since/3.2);
+    const pestChange=.16*H*(1-H/114)-.0030*N*H-settings.kill*exposure*H;
+    const spiderChange=(.00105*H-.040)*N-settings.spider*exposure*N;
+    H=Math.max(0,H+dt*pestChange);
+    N=Math.max(0,N+dt*spiderChange);
+  }
+  return data;
+}
+const field=Object.fromEntries(Object.keys(fieldModes).map(k=>[k,simulateField(k)]));
+function industrialIcon(kind,x,y,s=1){
+  const jar=P('M-30-27H30L33-16V34Q0 47-33 34V-16Z','#fff3d7','#a87541',2)+P('M-28 10Q0 3 28 10V32Q0 41-28 32Z','#e1a35b','none')+
+    R(-32,-34,64,10,'#a87d56','#795d4d',3)+R(-22,0,44,16,'#fff4d5','#c9aa79',4);
+  const meds=P('M-22-24H22V-12Q33-7 33 4V31Q0 40-33 31V4Q-33-7-22-12Z','#dfedf6',steel,2)+R(-25,-35,50,13,'#b5c6d9',steel,3)+R(-26,4,52,19,'#a4c4e0','none',4)+P('M0 8v10m-5-5h10','none','#254768',2.6);
+  const roots=P('M0 31V-29M0-12Q-32-10-36-33Q-16-36 0-12M0-4Q31-6 36-29Q15-31 0-4','none',darkGreen,4)+
+    P('M0 15l-18 14m18-9l18 9m-18-2l-4 15','none','#7a5c41',2.8)+E(-13,27,5,4,C.orange)+E(17,28,5,4,C.orange);
+  const ore=P('M-42 30l9-34 13 6 13-32 19 9 12 24 15-1 8 28Z','#d1dde3',steel,2)+
+    P('M-34 7l15 13L0 7l17 17 18-14','none','#c47c4e',3)+
+    E(-8,-6,3,4,C.orange)+E(22,17,4,4,C.orange);
+  return G(x,y,s,{food:jar,medicine:meds,farm:roots,extreme:ore}[kind]);
+}
+function btMechanism(t){
+  const step=Math.min(2,Math.floor(t*3));
+  const midgut=P('M51 493C104 471 155 512 209 492S324 477 382 491S474 505 536 486V558C490 569 438 542 382 552S271 562 215 553S101 548 51 565Z','#fde5d6','#c78a77',1.8)+
+    P('M54 533Q88 513 122 530T190 531T257 533T325 535T394 532T464 535T534 529','none','#bb6b60',4);
+  let art=midgut;
+  art+=O(step===0?1:.6,many(6,i=>G(100+i*13,511+Math.sin(t*13+i)*4,.7,P('M0-6L5 0L0 6L-5 0Z','#d1a3ce','#8e5d92',2))));
+  art+=O(step===1?1:.52,many(7,i=>E(236+i*12,512+Math.sin(t*14+i)*5,4,4,'#a572aa','#fff')));
+  art+=O(step===2?1:.58,many(4,i=>R(407+i*25,522,13,23,'#d9eceb','#5c9d9e',3)+P('M'+(413+i*25)+' 527v12','none','#476f82',2)));
+  return art+P('M203 508H225m104 0h53','none','#9e6271',2)+
+    ['晶体溶解','酶活化','结合受体／成孔'].map((l,i)=>txt([120,276,453][i],591,l,'middle',i===step?'#773863':C.ink,16,750)).join('');
+}
+function applicationStage(t){
+  const key=state.application,m=applications[key],list=Object.keys(applications);
+  let art=list.map((k,i)=>{
+    const x=40+(i%2)*258,y=73+Math.floor(i/2)*105,item=applications[k],isActive=k===key;
+    return R(x,y,245,91,isActive?'#e7f0ec':'#f5f7f3',isActive?darkGreen:'#d4e0d9',9)+industrialIcon(k,x+55,y+44,.68)+
+      txt(x+111,y+44,item.name,'start',C.ink,19,750)+txt(x+111,y+67,['风味／原料','表达／纯化','肥／药／料','酶／浸矿'][i],'start','#435963',16);
+  }).join('');
+  art+=tile(40,291,503,60,m.heading,'',m.color)+m.notes.map((l,i)=>txt(49,381+i*29,l,'start',C.ink,17)).join('');
+  if(key==='farm')return art+btMechanism(t);
+  art+=m.workflow.map((l,i)=>{
+    const x=44+i*171;
+    return R(x,488,150,84,'#f3f7f4','#c6d8d1',8)+industrialIcon(key,x+75,515,.39)+wrap(l,x+75,554);
+  }).join('');
+  return art+drift([[118,581],[465,581]],t,m.color,8,3.5,1.15);
+}
+function fieldCharts(t){
+  const time=36*t,active=state.treatment,now=timePoint(field[active],time);
+  const a=plot('pest-density',688,121,440,158,[0,6,12,18,24,30,36],[0,30,60,90,120],'目标害虫 · 相对密度');
+  const b=plot('spider-density',688,401,440,148,[0,6,12,18,24,30,36],[0,10,20,30,40,50],'非靶标天敌蜘蛛 · 相对密度');
+  let art='';
+  for(const [p,varname] of [[a,'H'],[b,'N']]){
+    art+=p.svg+p.clip(spark(`M${p.X(7)} ${p.y}v${p.h}`,'#687583',1.8,'3 4'));
+    for(const [mode,s] of Object.entries(fieldModes)){
+      const data=field[mode].map(p=>({x:p.time,y:p[varname]}));
+      art+=O(mode===active?1:.63,line(data,p,s.color,mode===active?3.3:2.2,s.dash));
+    }
+    art+=scan(p,time)+p.clip(chartDot(p,time,now[varname],fieldModes[active].color,5));
+  }
+  art+=legend(683,312,'',[['无处理',C.blue,'dash']])+legend(815,312,'',[['Bt 制剂',C.green,'solid']])+legend(947,312,'',[['广谱化学',C.red,'dot']]);
+  art+=txt(690,594,'第 7 天施药 · 纵虚线','start',C.ink,16,750)+txt(1047,594,'时间（天）','start',C.ink,16);
+  return art+rScript(641,627,['ggplot(field, aes(day, index, colour = treatment)) + geom_line()']);
+}
+function view4(t){
+  const m=applications[state.application],f=fieldModes[state.treatment],sample=timePoint(field[state.treatment],36*t);
+  draw(4,headings('生产对象 · 用途矩阵','田间对照 · 课堂模拟')+applicationStage(t)+fieldCharts(t));
+  say(4,'APPLICATIONS / '+sample.time.toFixed(1)+' 天',m.heading,m.body,
+    f.name+' · 害虫 '+sample.H.toFixed(1)+' / 蜘蛛 '+sample.N.toFixed(1),
+    '两个数字是模拟相对密度。相同初值下比较靶标和天敌，效果取决于制剂、剂量和田间条件。');
+}
+const views=[view1,view2,view3,view4],durations=[11,15,10,13],initialTimes=[.55,.58,.70,.53];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={
+  equipment:value=>change(0,'equipment',value),
+  environment:value=>change(1,'environment',value),
+  kinetics:value=>change(1,'kinetics',value),
+  downstream:value=>change(2,'downstream',value),
+  application:value=>change(3,'application',value),
+  treatment:value=>change(3,'treatment',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

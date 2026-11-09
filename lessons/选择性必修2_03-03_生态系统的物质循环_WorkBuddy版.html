@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="人教版选择性必修二3.3生态系统的物质循环互动课件：全球碳循环、基林曲线、DDT生物富集、土壤微生物分解实验与能量流动对比。">
+  <title>Cell Press × ggplot2｜生态系统的物质循环</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#FAF9F5;--ink:#17202A;--muted:#64748B;--line:#D8D5CC;
+      --coral:#E64B35;--cyan:#4DBBD5;--green:#00A087;--navy:#3C5488;--amber:#F39B7F;
+      --gold:#D99A2B;--co2:#38BDF8;--organic:#D99A2B;--danger:#B91C1C;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:104px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter','Microsoft YaHei',sans-serif;line-height:1.65}
+    .serif{font-family:'Source Serif 4','Songti SC',serif}
+    .code{font-family:'Fira Code',monospace}
+    .page-shell{max-width:1600px;margin:0 auto;padding:0 28px}
+    .topbar{position:sticky;top:0;z-index:40;background:rgba(250,249,245,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .brand-mark{width:42px;height:42px;background:var(--ink);color:white;display:grid;place-items:center;border-radius:4px;font-weight:800;letter-spacing:-1px}
+    .nav-link{font-size:12px;color:#475569;text-decoration:none;padding:7px 10px;border-radius:6px;white-space:nowrap;transition:.2s}
+    .nav-link:hover{background:#ECEAE3;color:#111827}
+    .btn{border:1px solid #C9C6BC;background:#fff;color:#273444;border-radius:8px;padding:9px 14px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(30,41,59,.09)}
+    .btn:focus-visible,.tab:focus-visible,.nav-link:focus-visible{outline:3px solid rgba(77,187,213,.45);outline-offset:2px}
+    .btn-dark{background:#17202A;color:#fff;border-color:#17202A}
+    .btn-coral{background:var(--coral);color:white;border-color:var(--coral)}
+    .btn-green{background:var(--green);color:white;border-color:var(--green)}
+    .btn.active{box-shadow:inset 0 0 0 2px rgba(255,255,255,.5),0 0 0 2px currentColor}
+    .hero{border-bottom:1px solid var(--line);padding:58px 0 42px;position:relative;overflow:hidden}
+    .hero:after{content:'';position:absolute;right:-120px;top:-170px;width:510px;height:510px;border:1px solid #DCD8CC;border-radius:50%;box-shadow:0 0 0 46px rgba(77,187,213,.035),0 0 0 92px rgba(0,160,135,.025);pointer-events:none}
+    .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .figure-section{padding:54px 0 12px}
+    .figure-head{display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:start;margin-bottom:22px}
+    .figure-no{font-size:54px;line-height:1;font-weight:800;letter-spacing:-.06em;color:#D3D0C7}
+    .figure-title{font-size:clamp(23px,2.1vw,34px);line-height:1.3;margin:4px 0 8px;font-weight:600}
+    .figure-card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 36px rgba(51,45,34,.045);overflow:hidden}
+    .panel-label{font-size:12px;font-weight:700;letter-spacing:.03em;padding:14px 18px;border-bottom:1px solid #E7E4DB;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#FDFCF9}
+    .panel-body{padding:18px}
+    .caption{font-size:12px;color:#64748B;line-height:1.65}
+    .reference,.cite{font-size:11px;color:#64748B;line-height:1.65}
+    .cite{text-decoration:none;border-bottom:1px dotted #94A3B8}
+    .reference a{color:#3C5488;text-decoration:none;border-bottom:1px solid #C5CDDC}
+    .reference a:hover{color:var(--coral);border-color:var(--coral)}
+    .callout{border-left:3px solid var(--coral);background:#FFF7F3;padding:13px 15px;border-radius:0 8px 8px 0;font-size:13px;line-height:1.75}
+    .callout.blue{border-color:var(--navy);background:#F3F6FB}
+    .callout.green{border-color:var(--green);background:#F0FAF7}
+    .legend-pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#475569;background:#F7F6F1;border:1px solid #E2DFD6;border-radius:999px;padding:5px 10px}
+    .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+    .scene-svg{width:100%;height:auto;display:block}
+    .flow-co2{fill:none;stroke:var(--co2);stroke-width:2;stroke-dasharray:5 5;opacity:.65;marker-end:url(#arrowCO2)}
+    .flow-organic{fill:none;stroke:var(--organic);stroke-width:2.3;stroke-dasharray:6 4;opacity:.72;marker-end:url(#arrowOrganic)}
+    .node-box{fill:#fff;stroke:#CFCFC5;stroke-width:1.2;filter:url(#softShadow)}
+    .node-title{font:600 14px 'Inter','Microsoft YaHei',sans-serif;fill:#243244}
+    .node-sub{font:400 10px 'Inter','Microsoft YaHei',sans-serif;fill:#64748B}
+    .annotation{font:500 11px 'Inter','Microsoft YaHei',sans-serif;fill:#526172}
+    .tiny{font:400 9px 'Inter','Microsoft YaHei',sans-serif;fill:#64748B}
+    .scenario-high #carbonScene .atm-halo{fill:#FEE2E2;stroke:#EF9A9A}
+    .scenario-neutral #carbonScene .atm-halo{fill:#DCFCE7;stroke:#86D7B0}
+    .atm-halo{transition:.5s}
+    .gg-strip-text{font:600 12px 'Inter',sans-serif;fill:#303030}
+    .gg-axis-text{font:400 10px 'Inter',sans-serif;fill:#4D4D4D}
+    .gg-title{font:600 11px 'Inter',sans-serif;fill:#333}
+    .gg-code{font:400 8.5px 'Fira Code',monospace;fill:#737373}
+    .gg-legend-text{font:400 10px 'Inter',sans-serif;fill:#404040}
+    .tab{border:1px solid #D5D2C8;background:#fff;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;color:#475569;cursor:pointer;text-align:left}
+    .tab.active{background:#17202A;color:#fff;border-color:#17202A}
+    .experiment-panel{display:none}.experiment-panel.active{display:block;animation:fadeUp .35s ease}
+    .leaf{transform-box:fill-box;transform-origin:center;transition:opacity 1.2s,transform 1.2s,filter 1.2s}
+    .decomposed .leaf-a{opacity:.16;transform:scale(.48) rotate(18deg);filter:saturate(.3)}
+    .fungi{opacity:0;stroke-dasharray:80;stroke-dashoffset:80;transition:opacity .5s,stroke-dashoffset 1.8s}
+    .decomposed .fungi{opacity:1;stroke-dashoffset:0}
+    .mass-track{height:12px;background:#ECEAE4;border-radius:99px;overflow:hidden}
+    .mass-bar{height:100%;width:100%;border-radius:99px;transition:width 1.5s ease}
+    .result-hidden{opacity:0;max-height:0;overflow:hidden;transition:.5s}.result-shown{opacity:1;max-height:260px}
+    .tube-liquid{transition:fill .8s}
+    .precipitate{opacity:0;transition:opacity 1s}.precipitate.show{opacity:1}
+    .water-bath{opacity:0;transition:.4s}.water-bath.show{opacity:1}
+    .ddt-dot{opacity:.16;transition:opacity .8s}.ddt-active .ddt-dot{opacity:.95}
+    .ddt-active .osprey-ddt{animation:pulseRed 1.8s ease-in-out infinite}
+    .egg-crack{opacity:0;transition:.4s}.egg-thin .egg-crack{opacity:1}.egg-thin .egg-shell{stroke-width:1.4}
+    .energy-band{fill:none;stroke:#00A087;stroke-linecap:round;opacity:.28}
+    .gear{transform-box:fill-box;transform-origin:center;animation:spin 15s linear infinite}
+    .gear.reverse{animation-direction:reverse;animation-duration:19s}
+    .paused .gear{animation-play-state:paused}
+    .matrix-card{border:1px solid #E0DED6;border-radius:10px;padding:15px;background:#FDFCF9}
+    .matrix-card:hover{border-color:#A7B7C9;background:#fff}
+    .floating-review{position:fixed;right:20px;bottom:22px;z-index:35;box-shadow:0 12px 32px rgba(23,32,42,.18)}
+    .drawer{position:fixed;top:0;right:0;width:min(580px,94vw);height:100vh;background:#FAF9F5;z-index:70;transform:translateX(102%);transition:transform .35s cubic-bezier(.22,.8,.24,1);box-shadow:-18px 0 55px rgba(15,23,42,.18);overflow-y:auto;border-left:1px solid #CFCBC0}
+    .drawer.open{transform:translateX(0)}
+    .overlay{position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:65;opacity:0;pointer-events:none;transition:.3s}.overlay.show{opacity:1;pointer-events:auto}
+    .summary-table{width:100%;border-collapse:collapse;font-size:12px}.summary-table th,.summary-table td{border:1px solid #D9D6CD;padding:9px;text-align:left;vertical-align:top}.summary-table th{background:#ECEAE3;font-weight:700}
+    details.review-q{border:1px solid #DAD7CD;border-radius:8px;background:#fff;padding:10px 12px;font-size:13px}details.review-q summary{cursor:pointer;font-weight:600}details.review-q p{margin:8px 0 0;color:#475569}
+    .footer{border-top:1px solid var(--line);margin-top:58px;padding:32px 0 80px;background:#F5F3ED}
+    .ref-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 26px}
+    .reference{padding-left:24px;position:relative}.ref-no{position:absolute;left:0;top:0;color:#3C5488;font-family:'Fira Code',monospace}
+    .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--green),var(--coral));z-index:100;width:0}
+    .badge{font-size:10px;padding:3px 7px;border-radius:4px;background:#ECEAE3;color:#5C6673;font-weight:600;white-space:nowrap}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pulseRed{50%{filter:drop-shadow(0 0 8px rgba(185,28,28,.7))}}
+    @media(max-width:1100px){.ref-grid{grid-template-columns:1fr}.desktop-nav{display:none}.page-shell{padding:0 18px}.figure-head{grid-template-columns:66px 1fr}.figure-no{font-size:42px}}
+    @media(max-width:640px){.page-shell{padding:0 12px}.hero{padding-top:36px}.panel-body{padding:10px}.figure-section{padding-top:38px}.figure-head{grid-template-columns:1fr;gap:4px}.figure-no{font-size:28px}.topbar .brand-sub{display:none}.floating-review{right:12px;bottom:12px}.floating-review span{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gear{animation:none}.btn,.drawer{transition:none}}
+    @media print{.topbar,.floating-review,.drawer,.overlay,.btn,.tab{display:none!important}.page-shell{max-width:none}.figure-card{box-shadow:none;break-inside:avoid}.figure-section{padding-top:22px}body{background:white}}
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <header class="topbar">
+    <div class="page-shell py-3 flex items-center gap-4">
+      <div class="brand-mark">C↻</div>
+      <div class="min-w-0">
+        <div class="font-bold text-sm leading-tight">BIOGEOCHEMICAL CYCLES</div>
+        <div class="brand-sub text-[11px] text-slate-500">CELL PRESS × GGPLOT2 · 选择性必修二 3.3</div>
+      </div>
+      <nav class="desktop-nav flex items-center gap-1 ml-auto" aria-label="图谱导航">
+        <a class="nav-link" href="#figure1">01 碳循环</a>
+        <a class="nav-link" href="#figure2">02 生物富集</a>
+        <a class="nav-link" href="#figure3">03 分解实验</a>
+        <a class="nav-link" href="#figure4">04 能流×物流</a>
+      </nav>
+      <div class="flex items-center gap-2 ml-auto lg:ml-0">
+        <button class="btn" id="themeToggle" title="Theme Switcher: theme_gray() ⇄ theme_bw()（切换全部统计图表主题）"><i data-lucide="palette" class="w-4 h-4"></i><span id="themeLabel" class="code">theme_gray()</span></button>
+        <button class="btn btn-dark" id="reviewOpenTop" title="打开高考复习法典"><i data-lucide="book-open" class="w-4 h-4"></i><span class="hidden sm:inline">满分法典</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <div class="relative z-10 max-w-5xl">
+        <div class="eyebrow mb-4">Graphical Abstracts for Inquiry Learning · Issue 03</div>
+        <h1 class="serif font-semibold tracking-tight leading-[1.08] text-[clamp(38px,5.4vw,78px)]">生态系统的<br><span style="color:var(--green)">物质循环</span></h1>
+        <p class="mt-6 text-slate-600 max-w-3xl text-[15px] md:text-base">从莫纳罗亚的一曲线，到鱼鹰体内的一枚红点，再到烧杯里的一次显色反应：用<strong class="text-slate-900">机制图回答“怎样循环”</strong>，用<strong class="text-slate-900">统计图回答“证据在哪里”</strong>。</p>
+        <div class="mt-7 flex flex-wrap gap-2">
+          <span class="legend-pill"><i data-lucide="mouse-pointer-2" class="w-3.5 h-3.5"></i>点击操作</span>
+          <span class="legend-pill"><i data-lucide="git-compare-arrows" class="w-3.5 h-3.5"></i>双主题统计图</span>
+          <span class="legend-pill"><i data-lucide="flask-conical" class="w-3.5 h-3.5"></i>对照实验沙盘</span>
+          <span class="legend-pill"><i data-lucide="external-link" class="w-3.5 h-3.5"></i>原始文献直达</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIGURE 1 -->
+    <section class="figure-section" id="figure1">
+      <div class="figure-head">
+        <div class="figure-no">01</div>
+        <div>
+          <div class="eyebrow">Global Carbon Cycle × Keeling Curve</div>
+          <h2 class="figure-title serif">全球碳循环：元素去了哪里，曲线为何逐年上升？<sup><a class="cite" href="#ref1">[1–3]</a></sup></h2>
+          <p class="caption max-w-5xl">先看碳的“形态”与“路径”，再用真实观测曲线检验机制。蓝色微粒代表 CO₂，琥珀金微粒代表含碳有机物；两者不可混画。</p>
+        </div>
+      </div>
+      <div class="grid xl:grid-cols-2 gap-5 items-start">
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 1a · 全球碳循环五库拓扑流图</span><span class="badge">Cell-style mechanism</span></div>
+          <div class="panel-body">
+            <div class="flex flex-wrap gap-2 mb-3" role="group" aria-label="碳循环情景切换">
+              <button class="btn btn-coral active" id="highCarbonBtn">🔥 高碳失衡态</button>
+              <button class="btn btn-green" id="neutralCarbonBtn">🌱 碳中和稳态</button>
+              <button class="btn ml-auto" id="carbonPause"><i data-lucide="pause" class="w-4 h-4"></i><span>暂停粒子</span></button>
+            </div>
+            <div class="mb-3 flex flex-wrap gap-2">
+              <span class="legend-pill"><span class="dot" style="background:var(--co2)"></span>CO₂：环境 ⇄ 群落</span>
+              <span class="legend-pill"><span class="dot" style="background:var(--organic)"></span>有机物：群落内单向传递</span>
+            </div>
+            <svg id="carbonScene" class="scene-svg" viewBox="0 0 760 640" role="img" aria-label="全球碳循环五库及二氧化碳和有机物微粒流动图">
+              <defs>
+                <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#334155" flood-opacity=".08"/></filter>
+                <marker id="arrowCO2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#38BDF8"/></marker>
+                <marker id="arrowOrganic" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D99A2B"/></marker>
+                <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EFF9FD"/><stop offset="1" stop-color="#FDFCF8"/></linearGradient>
+                <linearGradient id="soilGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A87C"/><stop offset="1" stop-color="#806348"/></linearGradient>
+              </defs>
+              <rect x="1" y="1" width="758" height="638" rx="14" fill="url(#skyGrad)" stroke="#E4E1D8"/>
+              <path d="M2 430 Q180 390 355 430 T758 415 L758 638 L2 638Z" fill="#E9E3D5"/>
+              <path d="M2 520 Q200 480 380 535 T758 510 L758 638 L2 638Z" fill="url(#soilGrad)" opacity=".75"/>
+              <ellipse class="atm-halo" cx="380" cy="112" rx="176" ry="83" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="2"/>
+              <g>
+                <path id="pPhoto" class="flow-co2" d="M300 157 C265 190 214 210 190 247"/>
+                <path id="pRespP" class="flow-co2" d="M130 245 C125 193 207 145 264 145"/>
+                <path id="pRespC1" class="flow-co2" d="M400 244 C420 210 415 185 407 157"/>
+                <path id="pRespC2" class="flow-co2" d="M637 245 C624 191 547 140 488 139"/>
+                <path id="pDecomp" class="flow-co2" d="M300 470 C245 405 270 277 349 157"/>
+                <path id="pCombust" class="flow-co2" d="M620 455 C722 353 670 189 493 130"/>
+                <path id="pOrg1" class="flow-organic" d="M245 292 C273 283 292 283 320 292"/>
+                <path id="pOrg2" class="flow-organic" d="M500 292 C522 285 535 285 555 292"/>
+                <path id="pOrgDet1" class="flow-organic" d="M145 379 C146 444 187 481 230 508"/>
+                <path id="pOrgDet2" class="flow-organic" d="M635 345 C626 422 544 481 450 520"/>
+                <path id="pOrgDet3" class="flow-organic" d="M410 345 C407 397 378 432 354 470"/>
+              </g>
+              <g>
+                <rect class="node-box" x="248" y="48" width="264" height="110" rx="18"/>
+                <circle cx="287" cy="85" r="18" fill="#BAE6FD"/><circle cx="310" cy="76" r="13" fill="#E0F2FE"/><circle cx="328" cy="88" r="16" fill="#BAE6FD"/>
+                <text class="node-title" x="380" y="78" text-anchor="middle">大气 CO₂ 库 ⇄ 水圈溶解 CO₂</text>
+                <text class="node-sub" x="380" y="99" text-anchor="middle">非生物环境 · 碳主要以 CO₂ 形式存在</text>
+                <text id="co2Readout" x="380" y="132" text-anchor="middle" style="font:700 20px 'Fira Code',monospace;fill:#B91C1C">425 ppm</text>
+                <text id="co2State" class="node-sub" x="380" y="149" text-anchor="middle">模拟读数：释放 ＞ 固定</text>
+              </g>
+              <g>
+                <rect class="node-box" x="45" y="245" width="200" height="136" rx="18"/>
+                <path d="M80 324 L80 279 M80 289 L62 273 M80 299 L103 280" stroke="#477A51" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="62" cy="270" r="21" fill="#72B58A"/><circle cx="101" cy="272" r="26" fill="#4C9B6B"/><circle cx="80" cy="258" r="25" fill="#86C794"/>
+                <path d="M55 331 H133" stroke="#8D6A49" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="178" cy="279" r="16" fill="#D1E7F4" stroke="#4DBBD5"/><path d="M169 278 q9 -13 18 0 q-9 13 -18 0" fill="#00A087" opacity=".75"/>
+                <text class="node-title" x="145" y="346" text-anchor="middle">生产者</text>
+                <text class="node-sub" x="145" y="365" text-anchor="middle">绿色植物 · 蓝细菌 · 硝化细菌</text>
+              </g>
+              <g>
+                <rect class="node-box" x="320" y="245" width="180" height="101" rx="18"/>
+                <path d="M345 292 q20 -33 48 -7 l22 4 10 19 -16 1 -8 18 h-9 l-2 -20 -25 2 -5 18 h-9 l4 -27Z" fill="#D6B18A" stroke="#8D6544" stroke-width="1.2"/>
+                <circle cx="407" cy="291" r="2" fill="#3F342C"/>
+                <text class="node-title" x="410" y="327" text-anchor="middle">初级消费者</text>
+                <text class="node-sub" x="410" y="341" text-anchor="middle">植食性动物 · 有机物输入</text>
+              </g>
+              <g>
+                <rect class="node-box" x="555" y="245" width="160" height="101" rx="18"/>
+                <path d="M582 310 q18 -48 58 -44 l20 -15 3 22 25 15 -22 7 -14 29 -12 -2 4 -22 -35 4 -13 17Z" fill="#D9A0A0" stroke="#8E5555" stroke-width="1.2"/>
+                <circle cx="652" cy="275" r="2" fill="#3F3434"/>
+                <text class="node-title" x="635" y="327" text-anchor="middle">次级消费者</text>
+                <text class="node-sub" x="635" y="341" text-anchor="middle">肉食性动物</text>
+              </g>
+              <g>
+                <rect class="node-box" x="230" y="470" width="220" height="121" rx="18"/>
+                <path d="M265 536 q2 -37 22 -37 q20 0 22 37Z" fill="#E8C7A1" stroke="#9B704D"/><path d="M255 505 q31 -37 64 0 q-32 18 -64 0" fill="#D77E67" stroke="#9B5042"/><path d="M285 535 v22" stroke="#9B704D" stroke-width="6"/>
+                <g stroke="#8A664C" stroke-width="1.4" fill="none"><path d="M337 493 q-15 28 5 45 t-3 38"/><path d="M353 488 q18 25 -1 43 t8 41"/><path d="M375 494 q-15 19 2 34 t-2 36"/></g>
+                <circle cx="398" cy="512" r="12" fill="#A9C8B4"/><circle cx="409" cy="538" r="9" fill="#7CA58B"/>
+                <text class="node-title" x="340" y="570" text-anchor="middle">分解者</text>
+                <text class="node-sub" x="340" y="585" text-anchor="middle">腐生细菌与真菌 · 分解有机物</text>
+              </g>
+              <g>
+                <rect class="node-box" x="520" y="455" width="200" height="136" rx="18"/>
+                <path d="M540 489 H700 M540 516 H700 M540 544 H700" stroke="#9C8267" stroke-width="10" opacity=".55"/>
+                <path d="M560 480 l25 -17 30 15 -19 22Z" fill="#343A40"/><path d="M628 516 q22 -34 47 0 q-23 21 -47 0" fill="#51443A"/><path d="M574 550 l20 -20 26 14 -14 22Z" fill="#252A30"/>
+                <text class="node-title" x="620" y="570" text-anchor="middle">化石燃料与石灰岩库</text>
+                <text class="node-sub" x="620" y="585" text-anchor="middle">煤 · 石油 · 碳酸盐岩</text>
+              </g>
+              <g>
+                <path d="M235 199 L278 179" stroke="#64748B"/><text class="annotation" x="26" y="194">光合作用 + 化能合成作用</text><text class="tiny" x="26" y="210">CO₂ → 有机物（进入群落）</text>
+                <path d="M512 191 L485 165" stroke="#64748B"/><text class="annotation" x="516" y="196">呼吸 / 分解 / 燃烧</text><text class="tiny" x="516" y="212">有机物 → CO₂（返回环境）</text>
+                <text class="annotation" x="26" y="412">碳在生物群落内部：</text><text class="tiny" x="26" y="429">以含碳有机物形式，沿食物链单向传递</text>
+              </g>
+              <g id="carbonParticles"></g>
+            </svg>
+            <p class="caption mt-2">读图口诀：<strong>跨界面看 CO₂，群落内部看有机物。</strong>分解者并非“循环终点站”，它把有机物中的碳重新释放回非生物环境。</p>
+          </div>
+        </article>
+
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 1b · Mauna Loa CO₂ 基林曲线</span><span class="badge code">geom_line + geom_ribbon</span></div>
+          <div class="panel-body">
+            <svg id="keelingChart" class="scene-svg" viewBox="0 0 780 570" role="img" aria-label="1958至2025年大气二氧化碳基林曲线与季节振荡分面图"></svg>
+            <div class="code text-[9px] text-slate-500 mt-1 overflow-x-auto whitespace-nowrap">ggplot(keeling, aes(year, co2_ppm)) + geom_line(color="#E64B35") + facet_wrap(~ Process, scales="free_y")</div>
+            <div class="callout mt-4"><strong>为什么 5–9 月曲线下凹？</strong>北半球陆地植被面积广，夏季光合作用吸收 CO₂ 的速率大于呼吸释放速率；秋冬季光合减弱，呼吸与化石燃料燃烧使 CO₂ 回升。季节振荡叠加在长期上升趋势上。</div>
+            <div class="callout blue mt-3"><strong>高考长句：既然元素能循环，农田为何仍需年年施氮肥？</strong><br>农田是局部人工生态系统，<u>农产品（粮食、秸秆等）源源不断地输出</u>，其中的氮元素不能全部归还土壤，因此必须施肥补充。<sup><a class="cite" href="#ref3">[3]</a></sup></div>
+            <p class="text-[11px] reference mt-3">注：曲线依据 Mauna Loa 长期观测趋势作教学简化，1958 年约 315 ppm，2025 年约 425 ppm；季节振幅为示意，不作为精确数据读取依据。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FIGURE 2 -->
+    <section class="figure-section" id="figure2">
+      <div class="figure-head">
+        <div class="figure-no">02</div>
+        <div>
+          <div class="eyebrow">Biomagnification × Logarithmic Evidence</div>
+          <h2 class="figure-title serif">生物富集：能量逐级减少，DDT 为何逐级暴增？<sup><a class="cite" href="#ref4">[4,5]</a></sup></h2>
+          <p class="caption max-w-5xl">同一条食物链上，两个指标的变化方向完全相反。先观察深红色 DDT 微粒如何汇聚到鱼鹰，再切换右侧对数坐标寻找证据。</p>
+        </div>
+      </div>
+      <div class="grid xl:grid-cols-2 gap-5 items-start">
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 2a · 长岛河口五级食物链</span><span class="badge">Mechanism theatre</span></div>
+          <div class="panel-body">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="btn btn-coral" id="ddtRun"><i data-lucide="play" class="w-4 h-4"></i><span>启动 DDT 沿链富集</span></button>
+              <button class="btn" id="eggToggle"><i data-lucide="egg" class="w-4 h-4"></i><span>观察鱼鹰蛋壳</span></button>
+            </div>
+            <svg id="ddtScene" class="scene-svg" viewBox="0 0 760 560" role="img" aria-label="水体浮游生物小鱼大鱼鱼鹰食物链中能量递减和DDT富集示意图">
+              <defs>
+                <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E5F5F8"/><stop offset="1" stop-color="#C6E5EA"/></linearGradient>
+                <filter id="redGlow"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#B91C1C" flood-opacity=".5"/></filter>
+              </defs>
+              <rect x="1" y="1" width="758" height="558" rx="14" fill="#FDFCF8" stroke="#E4E1D8"/>
+              <path d="M2 176 Q130 160 260 180 T520 172 T758 180 L758 485 L2 485Z" fill="url(#waterGrad)"/>
+              <path d="M2 182 Q130 166 260 186 T520 178 T758 186" fill="none" stroke="#8CCDD8" stroke-width="2"/>
+              <g opacity=".32" stroke="#00A087" fill="none">
+                <path class="energy-band" d="M78 279 H180" stroke-width="34"/>
+                <path class="energy-band" d="M222 279 H324" stroke-width="12"/>
+                <path class="energy-band" d="M373 279 H474" stroke-width="4"/>
+                <path class="energy-band" d="M526 279 H626" stroke-width="1.4"/>
+              </g>
+              <text x="390" y="218" text-anchor="middle" class="annotation" fill="#00755F">能量传递：每级约 −85% 经呼吸散失，仅约 10%–20% 进入下一级（光带宽度作可见性放大）</text>
+              <path id="ddtRoute" d="M70 320 C170 290 250 320 350 310 S540 300 665 285" fill="none" stroke="#B91C1C" stroke-width="1.5" stroke-dasharray="4 5" opacity=".55"/>
+              <g>
+                <circle cx="70" cy="286" r="42" fill="#F8FDFE" stroke="#6BB8C8" stroke-width="2"/>
+                <path d="M70 253 C58 272 48 281 48 294 a22 22 0 0 0 44 0 c0 -13 -10 -22 -22 -41Z" fill="#8ED6E3"/>
+                <text class="node-title" x="70" y="360" text-anchor="middle">水体</text><text class="node-sub" x="70" y="378" text-anchor="middle">0.00005 ppm</text>
+                <g fill="#B91C1C" class="ddt-dot"><circle cx="59" cy="301" r="2.5"/><circle cx="79" cy="292" r="2.5"/></g>
+              </g>
+              <g>
+                <circle cx="202" cy="288" r="38" fill="#F4FAF6" stroke="#7AB99A"/>
+                <g fill="#83B998" stroke="#4D8565"><ellipse cx="188" cy="280" rx="11" ry="18"/><ellipse cx="210" cy="292" rx="14" ry="10"/><ellipse cx="213" cy="269" rx="8" ry="12"/></g>
+                <g stroke="#4D8565"><path d="M188 262 v36 M177 280 h22 M201 292 h18 M213 257 v24"/></g>
+                <text class="node-title" x="202" y="360" text-anchor="middle">浮游生物</text><text class="node-sub" x="202" y="378" text-anchor="middle">0.04 ppm</text>
+                <g fill="#B91C1C" class="ddt-dot"><circle cx="190" cy="278" r="3"/><circle cx="210" cy="290" r="3"/><circle cx="216" cy="270" r="3"/><circle cx="195" cy="298" r="3"/></g>
+              </g>
+              <g>
+                <path d="M313 288 q42 -38 84 0 q-42 38 -84 0 l-24 22 v-44Z" fill="#91B9D0" stroke="#3C6D8B" stroke-width="1.5"/>
+                <circle cx="378" cy="280" r="3" fill="#1F2937"/><path d="M341 288 q12 -17 24 0 q-12 17 -24 0" fill="#C8DCE8"/>
+                <text class="node-title" x="352" y="360" text-anchor="middle">小鱼 Minnow</text><text class="node-sub" x="352" y="378" text-anchor="middle">0.5 ppm</text>
+                <g fill="#B91C1C" class="ddt-dot"><circle cx="330" cy="280" r="3.4"/><circle cx="344" cy="299" r="3.4"/><circle cx="355" cy="277" r="3.4"/><circle cx="369" cy="293" r="3.4"/><circle cx="321" cy="293" r="3.4"/><circle cx="379" cy="280" r="3.4"/></g>
+              </g>
+              <g>
+                <path d="M463 286 q54 -48 105 0 q-51 46 -105 0 l-29 24 v-48Z" fill="#7494B4" stroke="#334F72" stroke-width="1.7"/>
+                <path d="M559 282 l49 -8 -48 19Z" fill="#607E9D"/><circle cx="544" cy="276" r="3" fill="#17202A"/>
+                <text class="node-title" x="503" y="360" text-anchor="middle">肉食性大鱼</text><text class="node-sub" x="503" y="378" text-anchor="middle">2.0 ppm</text>
+                <g fill="#B91C1C" class="ddt-dot"><circle cx="467" cy="280" r="3.8"/><circle cx="480" cy="298" r="3.8"/><circle cx="489" cy="270" r="3.8"/><circle cx="505" cy="288" r="3.8"/><circle cx="520" cy="271" r="3.8"/><circle cx="535" cy="294" r="3.8"/><circle cx="458" cy="294" r="3.8"/><circle cx="518" cy="305" r="3.8"/><circle cx="549" cy="282" r="3.8"/></g>
+              </g>
+              <g>
+                <path d="M618 295 q15 -48 44 -57 q-3 24 9 33 q28 -33 58 -40 q-14 41 -49 58 l-9 32 -18 0 -5 -29Z" fill="#F4F0E7" stroke="#645B4E" stroke-width="1.8"/>
+                <path d="M644 278 q-18 -42 -48 -48 q8 35 36 63" fill="#756B5D"/><path d="M675 270 q25 -38 52 -40 q-12 31 -45 54" fill="#756B5D"/>
+                <circle cx="666" cy="247" r="2.5" fill="#17202A"/>
+                <text class="node-title" x="663" y="360" text-anchor="middle">鱼鹰 Osprey</text><text class="node-sub" x="663" y="378" text-anchor="middle">25.0 ppm</text>
+                <g class="osprey-ddt" fill="#B91C1C" filter="url(#redGlow)">
+                  <g class="ddt-dot"><circle cx="630" cy="286" r="4"/><circle cx="640" cy="272" r="4"/><circle cx="651" cy="292" r="4"/><circle cx="662" cy="276" r="4"/><circle cx="674" cy="294" r="4"/><circle cx="685" cy="278" r="4"/><circle cx="696" cy="262" r="4"/><circle cx="620" cy="265" r="4"/><circle cx="643" cy="251" r="4"/><circle cx="661" cy="256" r="4"/><circle cx="681" cy="252" r="4"/><circle cx="704" cy="248" r="4"/><circle cx="630" cy="302" r="4"/><circle cx="660" cy="306" r="4"/><circle cx="690" cy="300" r="4"/></g>
+                </g>
+              </g>
+              <g id="ddtParticles"></g>
+              <g transform="translate(34,405)">
+                <rect width="324" height="127" rx="12" fill="#FFF" stroke="#D8D5CC"/>
+                <text x="16" y="24" class="node-title">DDT 为何“只进难出”？</text>
+                <text x="16" y="47" class="annotation">① 化学性质稳定，环境中难降解</text>
+                <text x="16" y="68" class="annotation">② 脂溶性强，易储存在脂肪组织</text>
+                <text x="16" y="89" class="annotation">③ 难以随尿液等排出，捕食时继续累积</text>
+                <text x="16" y="112" class="tiny">营养级越高，通常体内富集浓度越高</text>
+              </g>
+              <g id="eggScene" transform="translate(400,405)">
+                <rect width="324" height="127" rx="12" fill="#FFF" stroke="#D8D5CC"/>
+                <path class="egg-shell" d="M54 94 C27 74 36 25 60 20 C84 25 94 74 66 94Z" fill="#F6E9CF" stroke="#A27A52" stroke-width="6"/>
+                <path class="egg-crack" d="M57 43 l10 12 -12 9 13 12 -8 12" fill="none" stroke="#B91C1C" stroke-width="2.5"/>
+                <text x="112" y="30" class="node-title">鱼鹰的薄壳蛋</text>
+                <text x="112" y="54" class="annotation">DDT 干扰钙代谢</text>
+                <text x="112" y="76" class="annotation">蛋壳变薄、易破碎</text>
+                <text x="112" y="101" class="tiny">种群繁殖成功率下降 [5]</text>
+              </g>
+              <g transform="translate(596,116)">
+                <path d="M0 28 q18 -35 40 0 l-7 25 H8Z" fill="#252C35"/><circle cx="20" cy="10" r="12" fill="#F7F7F2"/><path d="M20 2 l12 8 -12 4Z" fill="#D99A2B"/>
+                <text x="52" y="13" class="annotation">南极也检出 DDT</text><text x="52" y="32" class="tiny">随大气、水流与生物迁移全球扩散</text>
+              </g>
+            </svg>
+            <p class="caption mt-2"><strong>辨析：</strong>“生物富集”强调某种生物体内积累有害物质；“生物放大”强调其浓度沿食物链营养级升高而逐级放大。高考材料中常统称生物富集。</p>
+          </div>
+        </article>
+
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 2b · 同化能量 vs DDT 浓度</span><span class="badge code">facet_wrap + scale_y_log10</span></div>
+          <div class="panel-body">
+            <svg id="ddtChart" class="scene-svg" viewBox="0 0 780 445" role="img" aria-label="ggplot2风格同化能量下降与DDT浓度对数坐标上升双分面图"></svg>
+            <div class="code text-[9px] text-slate-500 mt-1 overflow-x-auto whitespace-nowrap">ggplot(ddt_data, aes(Trophic_Level, Concentration_ppm, fill=Role)) + geom_col() + scale_y_log10() + theme_gray()</div>
+            <div class="callout mt-4"><strong>考场识图铁律：先看表头，再连食物链！</strong><br>若是<strong>同化能量</strong>：数值越大，营养级通常越低；若是<strong>DDT、Hg、Pb、Cd 等难降解物质浓度</strong>：数值越小，营养级通常越低；数值越大，营养级越高。</div>
+            <div class="callout green mt-3"><strong>根本原因不同：</strong>能量沿食物链传递时大部分通过呼吸以热能散失；DDT 则因稳定、难降解、脂溶且不易排出，被高营养级不断摄入并积累。不要把“能量递减”误套到污染物上。</div>
+            <p class="text-[11px] reference mt-3">数据：Woodwell et al. (1967) 的长岛河口经典实测值，水体 0.00005 ppm → 鱼鹰 25 ppm，约放大 5×10⁵ 倍。绿色能量带宽度为教学示意。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FIGURE 3 -->
+    <section class="figure-section" id="figure3">
+      <div class="figure-head">
+        <div class="figure-no">03</div>
+        <div>
+          <div class="eyebrow">Soil Microbial Decomposition × Controlled Experiments</div>
+          <h2 class="figure-title serif">土壤微生物的分解作用：用对照与显色让“看不见”现形<sup><a class="cite" href="#ref6">[6,7]</a></sup></h2>
+          <p class="caption max-w-5xl">教材“探究·实践”两组实验：案例 1 用减法原理排除微生物，案例 2 用碘液和斐林试剂分别检测反应物减少与产物生成。</p>
+        </div>
+      </div>
+      <div class="grid xl:grid-cols-2 gap-5 items-start">
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 3a · 教材探究实验互动操作台</span><span class="badge">Controlled experiment</span></div>
+          <div class="panel-body">
+            <div class="grid sm:grid-cols-2 gap-2 mb-4" role="tablist">
+              <button class="tab active" data-exp="leaf" role="tab">案例 1｜落叶是否由微生物分解？</button>
+              <button class="tab" data-exp="starch" role="tab">案例 2｜微生物能分解淀粉吗？</button>
+            </div>
+            <div id="exp-leaf" class="experiment-panel active">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-dark" id="leafRun"><i data-lucide="sprout" class="w-4 h-4"></i>埋入等量落叶，培养 30 天</button>
+                <button class="btn" id="leafReset"><i data-lucide="rotate-ccw" class="w-4 h-4"></i>重置</button>
+              </div>
+              <svg id="leafScene" class="scene-svg" viewBox="0 0 720 350" role="img" aria-label="自然土壤与60度处理土壤的落叶分解对照实验">
+                <defs><g id="leafShape"><path d="M0 0 C15 -20 42 -15 48 2 C32 20 12 20 0 0Z" fill="#B57C45" stroke="#754D2D"/><path d="M5 2 L42 0 M22 1 l8 -10 M27 2 l8 9" stroke="#754D2D" stroke-width="1" fill="none"/></g></defs>
+                <rect x="1" y="1" width="718" height="348" rx="14" fill="#FDFCF8" stroke="#E4E1D8"/>
+                <g>
+                  <rect x="26" y="52" width="310" height="214" rx="14" fill="#F8F6EF" stroke="#AAB5A4"/>
+                  <text x="181" y="31" text-anchor="middle" class="node-title">A 组｜对照组：自然状态土壤</text>
+                  <text x="181" y="47" text-anchor="middle" class="node-sub">不做处理，保留土壤微生物</text>
+                  <path d="M42 142 H320 V250 H42Z" fill="#8B6A4B"/>
+                  <path d="M42 142 Q100 127 160 143 T320 138" fill="#A68762" stroke="#6F5138"/>
+                  <g class="fungi" stroke="#EEE5CE" stroke-width="2" fill="none"><path d="M66 153 q30 20 10 52 t38 37"/><path d="M132 146 q-16 36 18 50 t-6 47"/><path d="M224 148 q30 27 2 52 t34 41"/><path d="M280 146 q-21 31 4 58"/></g>
+                  <g transform="translate(70,130)"><g class="leaf leaf-a"><use href="#leafShape"/></g></g>
+                  <g transform="translate(137,144) rotate(20)"><g class="leaf leaf-a"><use href="#leafShape"/></g></g>
+                  <g transform="translate(205,128) rotate(-12)"><g class="leaf leaf-a"><use href="#leafShape"/></g></g>
+                  <g transform="translate(260,150) rotate(18)"><g class="leaf leaf-a"><use href="#leafShape"/></g></g>
+                  <text id="leafAText" x="181" y="291" text-anchor="middle" class="annotation">落叶完整，等待培养</text>
+                </g>
+                <g>
+                  <rect x="384" y="52" width="310" height="214" rx="14" fill="#F8F6EF" stroke="#C5A17F"/>
+                  <g transform="translate(602,62)">
+                    <rect x="0" y="0" width="82" height="60" rx="10" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+                    <rect x="9" y="8" width="64" height="28" rx="5" fill="#FFEDD5" stroke="#D97706"/>
+                    <path d="M15 27 q9 -12 18 0 t18 0 t14 0" stroke="#EA580C" stroke-width="2" fill="none"/>
+                    <circle cx="41" cy="47" r="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+                    <path d="M41 43 v6" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+                    <text x="41" y="72" text-anchor="middle" class="tiny" fill="#9A3412">60°C · 1 h 恒温箱</text>
+                  </g>
+                  <text x="539" y="31" text-anchor="middle" class="node-title">B 组｜实验组：60°C 处理 1 h</text>
+                  <text x="539" y="47" text-anchor="middle" class="node-sub">塑料袋包好土壤，尽可能排除微生物</text>
+                  <path d="M400 142 H678 V250 H400Z" fill="#8B6A4B"/>
+                  <path d="M400 142 Q460 127 520 143 T678 138" fill="#A68762" stroke="#6F5138"/>
+                  <g transform="translate(428,130)"><use href="#leafShape"/></g>
+                  <g transform="translate(495,144) rotate(20)"><use href="#leafShape"/></g>
+                  <g transform="translate(563,128) rotate(-12)"><use href="#leafShape"/></g>
+                  <g transform="translate(618,150) rotate(18)"><use href="#leafShape"/></g>
+                  <text id="leafBText" x="539" y="291" text-anchor="middle" class="annotation">落叶完整，等待培养</text>
+                </g>
+                <g transform="translate(316,313)"><rect x="0" y="0" width="88" height="25" rx="12" fill="#FFF1E8" stroke="#E5A47C"/><text x="44" y="17" text-anchor="middle" class="tiny" fill="#9A4D28">减法原理</text></g>
+              </svg>
+              <div class="grid grid-cols-2 gap-4 mt-3">
+                <div><div class="flex justify-between text-xs mb-1"><span>A 组落叶剩余干重</span><strong id="massALabel">100%</strong></div><div class="mass-track"><div id="massA" class="mass-bar" style="background:var(--green)"></div></div></div>
+                <div><div class="flex justify-between text-xs mb-1"><span>B 组落叶剩余干重</span><strong id="massBLabel">100%</strong></div><div class="mass-track"><div id="massB" class="mass-bar" style="background:var(--amber)"></div></div></div>
+              </div>
+              <div id="leafResult" class="result-hidden">
+                <div class="callout green mt-4"><strong>结果与结论：</strong>A 组落叶明显腐烂、干重下降，B 组落叶基本完好，说明土壤微生物对落叶具有分解作用。数值为教学模拟，用于比较趋势。</div>
+              </div>
+              <div class="callout mt-3"><strong>为什么用 60°C 处理 1 h，而不能 200°C 灼烧？</strong><br>60°C 处理是为了尽可能杀死土壤微生物（减法原理），同时<strong>避免过高温度改变土壤的理化性质</strong>，如腐殖质含量、pH、水分和团粒结构，从而控制无关变量。</div>
+            </div>
+
+            <div id="exp-starch" class="experiment-panel">
+              <div class="mb-3 grid sm:grid-cols-2 gap-3 text-xs">
+                <div class="p-3 rounded-lg border border-slate-200 bg-slate-50"><strong>A 烧杯：</strong>淀粉糊 + 30 mL 土壤浸出液</div>
+                <div class="p-3 rounded-lg border border-slate-200 bg-slate-50"><strong>B 烧杯：</strong>淀粉糊 + 30 mL 蒸馏水</div>
+              </div>
+              <p class="caption mb-3">室温放置 7 天后，分别从 A、B 取样装入 A₁/A₂、B₁/B₂ 试管。请选择检测方法：</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <button class="btn" id="iodineBtn"><i data-lucide="droplets" class="w-4 h-4"></i>A₁/B₁ 滴加碘液</button>
+                <button class="btn" id="fehlingBtn"><i data-lucide="flame" class="w-4 h-4"></i>A₂/B₂ 斐林试剂 + 水浴</button>
+                <button class="btn" id="starchReset"><i data-lucide="rotate-ccw" class="w-4 h-4"></i>重置</button>
+              </div>
+              <svg class="scene-svg" viewBox="0 0 720 355" role="img" aria-label="土壤浸出液分解淀粉的碘液与斐林试剂显色对照">
+                <rect x="1" y="1" width="718" height="353" rx="14" fill="#FDFCF8" stroke="#E4E1D8"/>
+                <g id="bath" class="water-bath"><rect x="64" y="218" width="590" height="90" rx="12" fill="#DFF2F6" stroke="#73B7C5"/><path d="M70 245 q20 -12 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#77C3D1" stroke-width="3"/><text x="360" y="337" text-anchor="middle" class="annotation">50–65°C 水浴加热</text></g>
+                <g id="tubes">
+                  <g><path d="M90 55 H150 L143 272 Q120 294 97 272Z" fill="#FFFFFF" fill-opacity=".55" stroke="#7B8A97" stroke-width="2"/><rect id="liquidA1" class="tube-liquid" x="99" y="155" width="42" height="112" rx="18" fill="#F2E8CF"/><text x="120" y="35" text-anchor="middle" class="node-title">A₁ + 碘液</text><text id="labelA1" x="120" y="321" text-anchor="middle" class="annotation">等待显色</text></g>
+                  <g><path d="M235 55 H295 L288 272 Q265 294 242 272Z" fill="#FFFFFF" fill-opacity=".55" stroke="#7B8A97" stroke-width="2"/><rect id="liquidB1" class="tube-liquid" x="244" y="155" width="42" height="112" rx="18" fill="#F2E8CF"/><text x="265" y="35" text-anchor="middle" class="node-title">B₁ + 碘液</text><text id="labelB1" x="265" y="321" text-anchor="middle" class="annotation">等待显色</text></g>
+                  <g><path d="M410 55 H470 L463 272 Q440 294 417 272Z" fill="#FFFFFF" fill-opacity=".55" stroke="#7B8A97" stroke-width="2"/><rect id="liquidA2" class="tube-liquid" x="419" y="155" width="42" height="112" rx="18" fill="#A9D3E8"/><g id="precipA2" class="precipitate" fill="#873B29"><circle cx="428" cy="250" r="5"/><circle cx="441" cy="256" r="6"/><circle cx="453" cy="248" r="5"/><circle cx="435" cy="239" r="4"/><circle cx="449" cy="236" r="4"/></g><text x="440" y="35" text-anchor="middle" class="node-title">A₂ + 斐林</text><text id="labelA2" x="440" y="321" text-anchor="middle" class="annotation">等待显色</text></g>
+                  <g><path d="M555 55 H615 L608 272 Q585 294 562 272Z" fill="#FFFFFF" fill-opacity=".55" stroke="#7B8A97" stroke-width="2"/><rect id="liquidB2" class="tube-liquid" x="564" y="155" width="42" height="112" rx="18" fill="#A9D3E8"/><text x="585" y="35" text-anchor="middle" class="node-title">B₂ + 斐林</text><text id="labelB2" x="585" y="321" text-anchor="middle" class="annotation">等待显色</text></g>
+                </g>
+              </svg>
+              <div id="starchResult" class="callout green mt-3" style="display:none"><strong>双证据链：</strong>A₁ 不变蓝，说明淀粉减少；A₂ 水浴后出现砖红色沉淀，说明生成了还原糖。B 组作为对照，B₁ 变蓝、B₂ 保持浅蓝色。综合说明土壤浸出液中的微生物能分解淀粉。</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 3b · 不同群落落叶剩余率衰减</span><span class="badge code">geom_line + geom_ribbon</span></div>
+          <div class="panel-body">
+            <svg id="litterChart" class="scene-svg" viewBox="0 0 780 465" role="img" aria-label="热带雨林温带森林北极冻原落叶分解剩余率随时间变化曲线"></svg>
+            <div class="code text-[9px] text-slate-500 mt-1 overflow-x-auto whitespace-nowrap">ggplot(litter, aes(Time, Mass_Remaining, color=Biome, fill=Biome)) + geom_line() + geom_ribbon(alpha=.25)</div>
+            <div class="callout green mt-4"><strong>热带雨林“叶落归根”快，土壤却未必肥沃？</strong><br>高温高湿使分解者酶活性高，枯枝落叶被迅速分解，释放的养分又很快被植物吸收，因此<strong>土壤中腐殖质和有机质的积累量反而可能较少</strong>。冻原则因低温抑制微生物活动，分解缓慢，有机质易积累。</div>
+            <div class="callout blue mt-3"><strong>读模型：</strong>Olson 指数衰减模型可写为 X/X₀ = e<sup>−kt</sup>。k 越大，分解越快；本图用于比较不同温度和水分背景下分解速率的相对差异。<sup><a class="cite" href="#ref6">[6]</a></sup></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FIGURE 4 -->
+    <section class="figure-section" id="figure4">
+      <div class="figure-head">
+        <div class="figure-no">04</div>
+        <div>
+          <div class="eyebrow">Energy Flow × Matter Cycling Coupling</div>
+          <h2 class="figure-title serif">能量流动与物质循环：一台引擎，两种运动<sup><a class="cite" href="#ref8">[8,9]</a></sup></h2>
+          <p class="caption max-w-5xl">能量不能循环利用，物质也不能脱离能量“自动循环”。太阳能驱动生命系统，物质承担能量转移，最终能量以热能散失。</p>
+        </div>
+      </div>
+      <div class="grid xl:grid-cols-2 gap-5 items-start">
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 4a · 单向能流 × 循环物流双齿轮</span><button class="btn" id="gearToggle"><i data-lucide="pause" class="w-4 h-4"></i><span>暂停齿轮</span></button></div>
+          <div class="panel-body">
+            <svg id="gearScene" class="scene-svg" viewBox="0 0 720 515" role="img" aria-label="太阳能驱动能量单向流动与物质循环耦合齿轮模型">
+              <defs>
+                <marker id="arrowNavy" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#3C5488"/></marker>
+                <marker id="arrowCoral" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#E64B35"/></marker>
+                <marker id="arrowGold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#D99A2B"/></marker>
+                <radialGradient id="sunGrad"><stop offset="0" stop-color="#FFF4B8"/><stop offset="1" stop-color="#F2B84B"/></radialGradient>
+              </defs>
+              <rect x="1" y="1" width="718" height="513" rx="14" fill="#FDFCF8" stroke="#E4E1D8"/>
+              <g transform="translate(105,95)">
+                <circle r="46" fill="url(#sunGrad)"/>
+                <g stroke="#E6A936" stroke-width="4" stroke-linecap="round"><path d="M0 -65 V-82 M0 65 V82 M65 0 H82 M-65 0 H-82 M46 -46 L59 -59 M-46 46 L-59 59 M46 46 L59 59 M-46 -46 L-59 -59"/></g>
+                <text x="0" y="6" text-anchor="middle" class="node-title">太阳能</text>
+              </g>
+              <path d="M158 124 C202 140 220 170 249 203" fill="none" stroke="#3C5488" stroke-width="7" marker-end="url(#arrowNavy)"/>
+              <text x="190" y="128" class="annotation" fill="#3C5488">外部动力输入</text>
+              <g class="gear">
+                <circle cx="310" cy="265" r="100" fill="#E8F3F0" stroke="#00A087" stroke-width="22" stroke-dasharray="20 12"/>
+                <circle cx="310" cy="265" r="75" fill="#F8FCFA" stroke="#00A087" stroke-width="2"/>
+                <path d="M267 257 a46 46 0 1 1 48 45" fill="none" stroke="#00A087" stroke-width="6" marker-end="url(#arrowNavy)"/>
+                <text x="310" y="250" text-anchor="middle" class="node-title">物质循环</text><text x="310" y="272" text-anchor="middle" class="node-sub">C · N · P 等元素</text><text x="310" y="292" text-anchor="middle" class="tiny">环境 ⇄ 生物群落</text>
+              </g>
+              <g class="gear reverse">
+                <circle cx="510" cy="265" r="100" fill="#F4F5F9" stroke="#3C5488" stroke-width="22" stroke-dasharray="20 12"/>
+                <circle cx="510" cy="265" r="75" fill="#FAFBFD" stroke="#3C5488" stroke-width="2"/>
+                <path d="M466 264 H550" stroke="#3C5488" stroke-width="7" marker-end="url(#arrowNavy)"/>
+                <text x="510" y="242" text-anchor="middle" class="node-title">能量流动</text><text x="510" y="291" text-anchor="middle" class="node-sub">单向 · 逐级递减</text>
+              </g>
+              <path d="M603 199 C646 168 664 135 670 101" fill="none" stroke="#E64B35" stroke-width="6" marker-end="url(#arrowCoral)"/>
+              <g stroke="#E64B35" stroke-width="3" fill="none" opacity=".7"><path d="M642 88 q-15 -15 0 -30 q15 -15 0 -30"/><path d="M670 88 q-15 -15 0 -30 q15 -15 0 -30"/><path d="M698 88 q-15 -15 0 -30 q15 -15 0 -30"/></g>
+              <text x="655" y="129" class="annotation" fill="#B91C1C">热能散失</text>
+              <path d="M385 152 C432 127 486 126 535 145" fill="none" stroke="#D99A2B" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrowGold)"/>
+              <text x="455" y="113" text-anchor="middle" class="annotation">相互依存 · 不可分割</text>
+              <g transform="translate(47,412)">
+                <rect width="626" height="76" rx="12" fill="#F4F2EB" stroke="#D8D5CC"/>
+                <text x="18" y="29" class="node-title">物质是能量的载体</text><text x="198" y="29" class="annotation">能量沿食物链（网）流动</text>
+                <text x="18" y="56" class="node-title">能量是物质的动力</text><text x="198" y="56" class="annotation">驱动物质在群落与环境间循环</text>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <article class="figure-card">
+          <div class="panel-label"><span>Figure 4b · 四维对比矩阵</span><span class="badge">High-exam framework</span></div>
+          <div class="panel-body">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="matrix-card"><div class="eyebrow mb-2">01 · 形式</div><strong class="text-sm">能量流动</strong><p class="caption">太阳能 → 有机物中的化学能 → 热能</p><div class="h-px bg-slate-200 my-2"></div><strong class="text-sm">物质循环</strong><p class="caption">无机物 ⇄ 有机物，元素形式不断转换</p></div>
+              <div class="matrix-card"><div class="eyebrow mb-2">02 · 特点</div><strong class="text-sm">能量流动</strong><p class="caption">单向流动、逐级递减，不循环</p><div class="h-px bg-slate-200 my-2"></div><strong class="text-sm">物质循环</strong><p class="caption">全球性、循环往复、可被反复利用</p></div>
+              <div class="matrix-card"><div class="eyebrow mb-2">03 · 范围</div><strong class="text-sm">能量流动</strong><p class="caption">生态系统各营养级之间</p><div class="h-px bg-slate-200 my-2"></div><strong class="text-sm">物质循环</strong><p class="caption">生物圈，非生物环境与生物群落之间</p></div>
+              <div class="matrix-card"><div class="eyebrow mb-2">04 · 联系</div><p class="caption mt-1">二者<strong>同时进行、相互依存、不可分割</strong>：物质作为能量的载体，能量作为物质循环的动力。</p></div>
+            </div>
+            <div class="callout mt-4"><strong>两句话必须写全主语与方向：</strong><br>① <strong>物质</strong>作为能量的<strong>载体</strong>，使能量沿着食物链（网）流动。<br>② <strong>能量</strong>作为<strong>动力</strong>，使物质能够不断在非生物环境和生物群落之间循环往返。</div>
+            <div class="callout green mt-3"><strong>一句话收束全课：</strong>生态系统不是“能量循环、物质单向”，也不是“两者都循环”；而是<strong>能量单向流，物质循环走</strong>。</div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a class="btn btn-dark" href="#figure1"><i data-lucide="rotate-ccw" class="w-4 h-4"></i>回到碳循环复盘</a>
+              <button class="btn" id="reviewOpenBottom"><i data-lucide="book-open-check" class="w-4 h-4"></i>打开满分法典</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="references">
+    <div class="page-shell">
+      <div class="flex items-end justify-between gap-4 mb-5">
+        <div><div class="eyebrow">Compact & Clickable References</div><h2 class="serif text-2xl font-semibold mt-1">参考文献与教材依据</h2></div>
+        <span class="text-[11px] reference">11 px · DOI 原文直达 ↗</span>
+      </div>
+      <div class="ref-grid">
+        <div class="text-[11px] reference" id="ref1"><span class="ref-no">[1]</span>Keeling, C. D. (1960). The concentration and isotopic abundances of carbon dioxide in the atmosphere. <em>Tellus, 12</em>(2), 200–203. — 创立莫纳罗亚 CO₂ 连续观测，揭示长期上升与季节振荡。 <a href="https://doi.org/10.3402/tellusa.v12i2.9366" target="_blank" rel="noopener noreferrer">DOI: 10.3402/tellusa.v12i2.9366 ↗</a></div>
+        <div class="text-[11px] reference" id="ref2"><span class="ref-no">[2]</span>Falkowski, P., Scholes, R. J., Boyle, E., et al. (2000). The global carbon cycle: a test of our knowledge of earth as a system. <em>Science, 290</em>(5490), 291–296. — 全球碳库、人类扰动与碳汇机制综述。 <a href="https://doi.org/10.1126/science.290.5490.291" target="_blank" rel="noopener noreferrer">DOI: 10.1126/science.290.5490.291 ↗</a></div>
+        <div class="text-[11px] reference" id="ref3"><span class="ref-no">[3]</span>Vitousek, P. M., Aber, J. D., Howarth, R. W., et al. (1997). Human alteration of the global nitrogen cycle: sources and consequences. <em>Ecological Applications, 7</em>(3), 737–750. — 解释人类活动改变氮循环及农田养分补充需求。 <a href="https://doi.org/10.1890/1051-0761(1997)007%5B0737:HAOTGN%5D2.0.CO;2" target="_blank" rel="noopener noreferrer">DOI: 10.1890/1051-0761(1997)007[0737:HAOTGN]2.0.CO;2 ↗</a></div>
+        <div class="text-[11px] reference" id="ref4"><span class="ref-no">[4]</span>Woodwell, G. M., Wurster, C. F., & Isaacson, P. A. (1967). DDT residues in an east coast estuary: a case of biological concentration of a persistent insecticide. <em>Science, 156</em>(3776), 821–824. — 长岛河口 DDT 沿食物链逐级富集的经典数据。 <a href="https://doi.org/10.1126/science.156.3776.821" target="_blank" rel="noopener noreferrer">DOI: 10.1126/science.156.3776.821 ↗</a></div>
+        <div class="text-[11px] reference" id="ref5"><span class="ref-no">[5]</span>Ratcliffe, D. A. (1967). Decrease in eggshell weight in certain birds of prey. <em>Nature, 215</em>(5097), 208–210. — 揭示猛禽蛋壳变薄现象，为有机氯污染影响繁殖提供关键证据。 <a href="https://doi.org/10.1038/215208a0" target="_blank" rel="noopener noreferrer">DOI: 10.1038/215208a0 ↗</a></div>
+        <div class="text-[11px] reference" id="ref6"><span class="ref-no">[6]</span>Olson, J. S. (1963). Energy storage and the balance of producers and decomposers in ecological systems. <em>Ecology, 44</em>(2), 322–331. — 建立凋落物分解指数衰减模型，连接生产者与分解者。 <a href="https://doi.org/10.2307/1932179" target="_blank" rel="noopener noreferrer">DOI: 10.2307/1932179 ↗</a></div>
+        <div class="text-[11px] reference" id="ref7"><span class="ref-no">[7]</span>Swift, M. J., Heal, O. W., & Anderson, J. M. (1979). <em>Decomposition in Terrestrial Ecosystems.</em> University of California Press. — 陆地分解过程、微生物胞外酶及实验研究规范专著。 <a href="https://books.google.com/books?q=Decomposition+in+Terrestrial+Ecosystems+Swift+Heal+Anderson" target="_blank" rel="noopener noreferrer">Google Books 检索 ↗</a></div>
+        <div class="text-[11px] reference" id="ref8"><span class="ref-no">[8]</span>Reiners, W. A. (1986). Complementary models for ecosystems. <em>The American Naturalist, 127</em>(1), 59–73. — 讨论生态系统能量流与化学元素循环的互补模型。 <a href="https://doi.org/10.1086/284467" target="_blank" rel="noopener noreferrer">DOI: 10.1086/284467 ↗</a></div>
+        <div class="text-[11px] reference" id="ref9"><span class="ref-no">[9]</span>人民教育出版社. (2020). <em>普通高中教科书·生物学·选择性必修2·生物与环境</em>，第3章第3节《生态系统的物质循环》，pp. 61–67. 北京：人民教育出版社。 — 课件概念、探究实验及课堂表述的教材依据。</div>
+      </div>
+      <p class="text-[11px] reference mt-6">教学说明：本课件为原创矢量化教学示意，不复刻付费图库素材。动态粒子、衰减曲线和实验剩余率中的部分数值用于表现过程与趋势；真实观测结论请参见上述原始文献。</p>
+    </div>
+  </footer>
+
+  <button class="btn btn-dark floating-review" id="reviewFloating"><i data-lucide="notebook-tabs" class="w-5 h-5"></i><span>Review Summary // 碳循环 · 生物富集 · 分解实验满分法典</span></button>
+  <div class="overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="reviewDrawer" aria-hidden="true" aria-label="高考复习总结抽屉">
+    <div class="sticky top-0 bg-[#FAF9F5]/95 backdrop-blur border-b border-slate-300 p-5 flex items-center justify-between z-10">
+      <div><div class="eyebrow">Review Summary</div><h2 class="serif text-2xl font-semibold">物质循环满分法典</h2></div>
+      <button class="btn" id="reviewClose" aria-label="关闭"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <div class="p-5 space-y-5">
+      <section><h3 class="font-bold text-sm mb-2">一、六维速查表</h3>
+        <table class="summary-table"><tbody>
+          <tr><th>碳的存在形式</th><td>非生物环境主要为 CO₂/碳酸盐等；生物群落内部主要为含碳有机物。</td></tr>
+          <tr><th>进入生物群落</th><td>生产者的光合作用与化能合成作用，将 CO₂ 固定为有机物。</td></tr>
+          <tr><th>返回非生物环境</th><td>动植物呼吸、微生物分解、化石燃料燃烧。</td></tr>
+          <tr><th>生物富集判断</th><td>先看指标：能量值大 → 营养级低；难降解污染物浓度大 → 营养级高。</td></tr>
+          <tr><th>分解实验设计</th><td>自变量是有无土壤微生物/土壤浸出液；对照、等量、单一变量；60°C 而非灼烧。</td></tr>
+          <tr><th>能流与物流</th><td>能量单向流动、逐级递减；物质全球性循环。物质是载体，能量是动力。</td></tr>
+        </tbody></table>
+      </section>
+      <section><h3 class="font-bold text-sm mb-2">二、实验结果速记</h3>
+        <div class="callout green"><strong>落叶实验：</strong>A 自然土壤腐烂明显；B 60°C 处理后基本不腐烂 → 微生物有分解作用。</div>
+        <div class="callout blue mt-2"><strong>淀粉实验：</strong>A₁ 碘液不变蓝；A₂ 斐林试剂水浴出现砖红色；B₁ 变蓝；B₂ 浅蓝。反应物减少 + 产物生成，证据才完整。</div>
+      </section>
+      <section><h3 class="font-bold text-sm mb-2">三、课堂自测（点击展开）</h3>
+        <div class="space-y-2">
+          <details class="review-q"><summary>1. 碳在生物群落内部以 CO₂ 形式沿食物链流动，对吗？</summary><p>不对。生物群落内部主要以<strong>含碳有机物</strong>形式沿食物链传递；CO₂ 主要在生物群落与非生物环境之间往返。</p></details>
+          <details class="review-q"><summary>2. 某生物体内汞含量最高，它一定处于最低营养级吗？</summary><p>通常相反。汞难降解且易生物富集，在题目符合沿食物链富集的情境下，浓度最高者往往处于<strong>较高营养级</strong>。</p></details>
+          <details class="review-q"><summary>3. 热带雨林分解快，所以土壤有机质一定最多吗？</summary><p>不一定。高温高湿下分解快，养分又被植物快速吸收，土壤有机质积累量可能较少；冻原低温分解慢，反而更易积累。</p></details>
+          <details class="review-q"><summary>4. 物质循环意味着能量也可以循环吗？</summary><p>不能。能量沿食物链单向流动，并最终以热能形式散失，需要太阳能等持续输入；物质则在生物圈中循环往复。</p></details>
+        </div>
+      </section>
+      <section class="p-4 rounded-xl bg-slate-900 text-white"><div class="eyebrow !text-slate-400 mb-2">Final mnemonic</div><p class="serif text-xl leading-relaxed">蓝碳跨界面，金碳走食链；<br>能量往下掉，毒物向上钻；<br>分解靠对照，能流是动力。</p></section>
+    </div>
+  </aside>
+
+  <script>
+    'use strict';
+    const NS = 'http://www.w3.org/2000/svg';
+    const NPG = { coral:'#E64B35', cyan:'#4DBBD5', green:'#00A087', navy:'#3C5488', amber:'#F39B7F' };
+    let ggTheme = 'gray';
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function svgEl(tag, attrs = {}, value = '') {
+      const node = document.createElementNS(NS, tag);
+      Object.entries(attrs).forEach(([key, val]) => node.setAttribute(key, String(val)));
+      if (value !== '') node.textContent = value;
+      return node;
+    }
+    function add(parent, tag, attrs = {}, value = '') {
+      const node = svgEl(tag, attrs, value); parent.appendChild(node); return node;
+    }
+    function ggColors() {
+      return ggTheme === 'gray'
+        ? { panel:'#EBEBEB', major:'#FFFFFF', minor:'#FFFFFF', majorW:1.5, minorW:.75, strip:'#D9D9D9', axis:'#555555', border:'none', borderW:0 }
+        : { panel:'#FFFFFF', major:'#D9D9D9', minor:'#EDEDED', majorW:.8, minorW:.5, strip:'#D9D9D9', axis:'#333333', border:'#333333', borderW:1 };
+    }
+    function strip(svg, x, y, w, label) {
+      add(svg, 'rect', { x, y, width:w, height:30, fill:ggColors().strip });
+      add(svg, 'text', { x:x+w/2, y:y+20, 'text-anchor':'middle', class:'gg-strip-text' }, label);
+    }
+    function panel(svg, cfg) {
+      const c = ggColors();
+      add(svg, 'rect', { x:cfg.x, y:cfg.y, width:cfg.w, height:cfg.h, fill:c.panel, stroke:c.border, 'stroke-width':c.borderW });
+      const xTicks = cfg.xTicks || [], yTicks = cfg.yTicks || [];
+      xTicks.forEach(t => {
+        const px = cfg.xScale(t);
+        add(svg, 'line', { x1:px, y1:cfg.y, x2:px, y2:cfg.y+cfg.h, stroke:c.minor, 'stroke-width':c.minorW });
+      });
+      yTicks.forEach(t => {
+        const py = cfg.yScale(t);
+        add(svg, 'line', { x1:cfg.x, y1:py, x2:cfg.x+cfg.w, y2:py, stroke:c.minor, 'stroke-width':c.minorW });
+      });
+      (cfg.xMinor || []).forEach(t => {
+        const px = cfg.xScale(t);
+        add(svg, 'line', { x1:px, y1:cfg.y, x2:px, y2:cfg.y+cfg.h, stroke:c.major, 'stroke-width':c.majorW });
+      });
+      (cfg.yMinor || []).forEach(t => {
+        const py = cfg.yScale(t);
+        add(svg, 'line', { x1:cfg.x, y1:py, x2:cfg.x+cfg.w, y2:py, stroke:c.major, 'stroke-width':c.majorW });
+      });
+    }
+    function axisText(svg, x, y, value, anchor='middle', extra={}) {
+      return add(svg, 'text', { x, y, 'text-anchor':anchor, class:'gg-axis-text', ...extra }, value);
+    }
+    function pathFrom(points) { return points.map((p,i) => `${i?'L':'M'}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(' '); }
+    function legendItem(svg, x, y, color, label, line=false) {
+      if (line) add(svg, 'line', { x1:x, y1:y-4, x2:x+24, y2:y-4, stroke:color, 'stroke-width':3 });
+      else add(svg, 'rect', { x, y:y-13, width:18, height:18, rx:2, fill:color });
+      add(svg, 'text', { x:x+31, y, class:'gg-legend-text' }, label);
+    }
+
+    function drawKeeling() {
+      const svg = document.getElementById('keelingChart'); svg.replaceChildren();
+      const x=62, w=650, y1=54, h1=235, y2=365, h2=132;
+      const seasonal=[-.4,.2,1.1,2.2,3,1.7,0,-1.7,-3,-2.1,-1.2,-.7];
+      const monthly=[];
+      for(let yr=1958; yr<=2025; yr++) for(let m=0;m<12;m++) {
+        const time=yr+m/12;
+        monthly.push({time, value:315+(time-1958)*1.64+seasonal[m]});
+      }
+      const annual=Array.from({length:68},(_,i)=>({time:1958+i+.5,value:315+(1958+i+.5-1958)*1.64}));
+      const xS=t=>x+(t-1958)/(2026-1958)*w;
+      const yS=v=>y1+h1-(v-310)/(435-310)*h1;
+      strip(svg,x,12,w,'facet_wrap(~ Trophic_Process) · Long-term trend: 1958–2025');
+      panel(svg,{x,y:y1,w,h:h1,xTicks:[],yTicks:[],xMinor:[1960,1980,2000,2020],yMinor:[320,350,380,410],xScale:xS,yScale:yS});
+      const upper=annual.map(d=>[xS(d.time),yS(d.value+.8)]), lower=annual.map(d=>[xS(d.time),yS(d.value-.8)]).reverse();
+      add(svg,'path',{d:pathFrom(upper.concat(lower))+' Z',fill:NPG.navy,opacity:.16});
+      add(svg,'path',{d:pathFrom(monthly.map(d=>[xS(d.time),yS(d.value)])),fill:'none',stroke:NPG.coral,'stroke-width':1.25});
+      add(svg,'path',{d:pathFrom(annual.map(d=>[xS(d.time),yS(d.value)])),fill:'none',stroke:NPG.navy,'stroke-width':2.1,opacity:.9});
+      [310,340,370,400,430].forEach(v=>axisText(svg,x-9,yS(v)+3,String(v),'end'));
+      [1960,1980,2000,2020].forEach(v=>axisText(svg,xS(v),y1+h1+18,String(v)));
+      axisText(svg,22,y1+h1/2,'Atmospheric CO₂ (ppm)','middle',{transform:`rotate(-90 22 ${y1+h1/2})`});
+      add(svg,'text',{x:x+15,y:y1+23,class:'gg-title'},'Keeling Curve · Mauna Loa Observatory');
+      add(svg,'text',{x:x+w-14,y:y1+23,'text-anchor':'end',class:'gg-axis-text'},'315 → 425 ppm');
+      add(svg,'rect',{x:x+14,y:y1+34,width:198,height:54,rx:4,fill:ggColors().panel,stroke:ggTheme==='bw'?'#777':'none'});
+      legendItem(svg,x+26,y1+55,NPG.coral,'Monthly observations',true);
+      legendItem(svg,x+26,y1+78,NPG.navy,'Annual trend + ribbon',true);
+
+      const monthVals=[.2,1,2.2,3,2.8,1.4,-.5,-2.4,-3,-1.8,-.8,0];
+      const xm=m=>x+35+m*(w-70)/11, ym=v=>y2+h2/2-v*h2/8;
+      strip(svg,x,323,w,'facet_wrap(~ Process) · Seasonal cycle, one idealized year');
+      panel(svg,{x,y:y2,w,h:h2,xTicks:[],yTicks:[],xScale:v=>v,yScale:v=>v});
+      [-3,0,3].forEach(v=>add(svg,'line',{x1:x,y1:ym(v),x2:x+w,y2:ym(v),stroke:ggColors().major,'stroke-width':ggColors().majorW}));
+      for(let m=0;m<12;m++) add(svg,'line',{x1:xm(m),y1:y2,x2:xm(m),y2:y2+h2,stroke:ggColors().minor,'stroke-width':ggColors().minorW});
+      const upper2=monthVals.map((v,m)=>[xm(m),ym(v+.55)]), lower2=monthVals.map((v,m)=>[xm(m),ym(v-.55)]).reverse();
+      add(svg,'path',{d:pathFrom(upper2.concat(lower2))+' Z',fill:NPG.cyan,opacity:.2});
+      add(svg,'path',{d:pathFrom(monthVals.map((v,m)=>[xm(m),ym(v)])),fill:'none',stroke:NPG.cyan,'stroke-width':3});
+      monthVals.forEach((v,m)=>add(svg,'circle',{cx:xm(m),cy:ym(v),r:2.8,fill:NPG.cyan}));
+      ['Jan','Mar','May','Jul','Sep','Nov'].forEach((lab,i)=>axisText(svg,xm(i*2),y2+h2+20,lab));
+      axisText(svg,22,y2+h2/2,'Seasonal ΔCO₂','middle',{transform:`rotate(-90 22 ${y2+h2/2})`});
+      add(svg,'text',{x:xm(5.8),y:y2+72,class:'gg-title',fill:NPG.navy},'5–9月：光合吸收 > 呼吸释放 ↓');
+      add(svg,'text',{x:xm(1),y:y2+22,class:'gg-title'},'10–次年4月：释放 > 固定 ↑');
+      add(svg,'text',{x:62,y:557,class:'gg-code'},'geom_line(aes(color=Process)) + geom_ribbon(alpha=.25) + facet_wrap(~Process, scales="free_y")');
+    }
+
+    function drawDDT() {
+      const svg=document.getElementById('ddtChart'); svg.replaceChildren();
+      const y=58,h=255, left={x:52,w:302}, right={x:414,w:318};
+      strip(svg,left.x,16,left.w,'facet_wrap(~ Metric) · Assimilated Energy ↓');
+      strip(svg,right.x,16,right.w,'facet_wrap(~ Metric) · DDT [ppm, log10] ↑');
+      const eVals=[10000,1500,250,40], eX=i=>left.x+44+i*70, eY=v=>y+h-v/10000*h;
+      panel(svg,{x:left.x,y,w:left.w,h,xTicks:[],yTicks:[],xMinor:[],yMinor:[],xScale:v=>v,yScale:v=>v});
+      [0,2500,5000,7500,10000].forEach(v=>{add(svg,'line',{x1:left.x,y1:eY(v),x2:left.x+left.w,y2:eY(v),stroke:ggColors().major,'stroke-width':ggColors().majorW});axisText(svg,left.x-7,eY(v)+3,v===0?'0':v/1000+'k','end');});
+      eVals.forEach((v,i)=>{const bw=40,bh=y+h-eY(v);add(svg,'rect',{x:eX(i)-bw/2,y:eY(v),width:bw,height:bh,fill:NPG.green});axisText(svg,eX(i),y+h+19,'T'+(i+1));axisText(svg,eX(i),eY(v)-6,String(v));});
+      axisText(svg,18,y+h/2,'Assimilated energy (a.u.)','middle',{transform:`rotate(-90 18 ${y+h/2})`});
+      const cats=['Water','Plankton','Minnow','Needlefish','Osprey'], vals=[.00005,.04,.5,2,25];
+      const minLog=-5,maxLog=Math.log10(50), dX=i=>right.x+34+i*60, dY=v=>y+h-(Math.log10(v)-minLog)/(maxLog-minLog)*h;
+      add(svg,'rect',{x:right.x,y,width:right.w,height:h,fill:ggColors().panel,stroke:ggColors().border,'stroke-width':ggColors().borderW});
+      [.00001,.001,.1,10].forEach(v=>{add(svg,'line',{x1:right.x,y1:dY(v),x2:right.x+right.w,y2:dY(v),stroke:ggColors().major,'stroke-width':ggColors().majorW});axisText(svg,right.x-7,dY(v)+3,v===.00001?'10⁻⁵':v===.001?'10⁻³':v===.1?'10⁻¹':'10¹','end');});
+      vals.forEach((v,i)=>{const bw=38,top=dY(v),bottom=dY(.00001);add(svg,'rect',{x:dX(i)-bw/2,y:top,width:bw,height:Math.max(2,bottom-top),fill:NPG.coral});axisText(svg,dX(i),y+h+18,cats[i],'middle',{'font-size':8.5});axisText(svg,dX(i),top-6,i===0?'5×10⁻⁵':String(v),'middle',{'font-size':8.5});});
+      for(let i=0;i<5;i++) add(svg,'line',{x1:dX(i),y1:y,x2:dX(i),y2:y+h,stroke:ggColors().minor,'stroke-width':ggColors().minorW});
+      axisText(svg,392,y+h/2,'DDT (ppm, log₁₀)','middle',{transform:`rotate(-90 392 ${y+h/2})`});
+      add(svg,'path',{d:pathFrom(vals.map((v,i)=>[dX(i),dY(v)])),fill:'none',stroke:NPG.navy,'stroke-width':2,opacity:.85});
+      vals.forEach((v,i)=>add(svg,'circle',{cx:dX(i),cy:dY(v),r:3.4,fill:NPG.navy}));
+      add(svg,'rect',{x:460,y:342,width:300,height:66,rx:4,fill:ggColors().panel,stroke:ggTheme==='bw'?'#777':'none'});
+      legendItem(svg,477,365,NPG.green,'Energy · geometric decrease');
+      legendItem(svg,477,391,NPG.coral,'DDT · log₁₀ magnification');
+      add(svg,'text',{x:414,y:330,class:'gg-code'},'Trophic Level: T1 → T4 · Water = baseline');
+      add(svg,'text',{x:52,y:435,class:'gg-code'},'geom_col() + facet_wrap(~Metric, scales="free_y") + scale_y_log10() · NPG palette');
+    }
+
+    function drawLitter() {
+      const svg=document.getElementById('litterChart'); svg.replaceChildren();
+      const x=58,y=60,w=540,h=298;
+      strip(svg,x,16,w+165,'Litter Mass Remaining · Biome comparison, X/X₀ = e⁻ᵏᵗ');
+      const xS=t=>x+t/24*w, yS=v=>y+h-v/100*h;
+      panel(svg,{x,y,w,h,xTicks:[],yTicks:[],xMinor:[0,6,12,18,24],yMinor:[0,25,50,75,100],xScale:xS,yScale:yS});
+      [0,25,50,75,100].forEach(v=>axisText(svg,x-9,yS(v)+3,String(v),'end'));
+      [0,6,12,18,24].forEach(v=>axisText(svg,xS(v),y+h+20,String(v)));
+      axisText(svg,x+w/2,y+h+43,'Time (Months)');
+      axisText(svg,18,y+h/2,'Litter Mass Remaining (%)','middle',{transform:`rotate(-90 18 ${y+h/2})`});
+      const times=[0,3,6,12,18,24];
+      const series=[
+        {name:'Tropical Rainforest',color:NPG.coral,vals:[100,28,6,1,.4,.1]},
+        {name:'Temperate Forest',color:NPG.cyan,vals:[100,76,56,35,23,15]},
+        {name:'Arctic Tundra',color:NPG.navy,vals:[100,96,91,84,79,74]}
+      ];
+      series.forEach(s=>{
+        const upper=s.vals.map((v,i)=>[xS(times[i]),yS(Math.min(100,v+5))]);
+        const lower=s.vals.map((v,i)=>[xS(times[i]),yS(Math.max(0,v-5))]).reverse();
+        add(svg,'path',{d:pathFrom(upper.concat(lower))+' Z',fill:s.color,opacity:.16,stroke:'none'});
+        add(svg,'path',{d:pathFrom(s.vals.map((v,i)=>[xS(times[i]),yS(v)])),fill:'none',stroke:s.color,'stroke-width':3});
+        s.vals.forEach((v,i)=>add(svg,'circle',{cx:xS(times[i]),cy:yS(v),r:3.1,fill:s.color,stroke:ggColors().panel,'stroke-width':1}));
+      });
+      add(svg,'rect',{x:620,y:70,width:143,height:121,rx:4,fill:ggColors().panel,stroke:ggTheme==='bw'?'#777':'none'});
+      add(svg,'text',{x:633,y:91,class:'gg-title'},'Biome');
+      series.forEach((s,i)=>legendItem(svg,632,118+i*30,s.color,s.name,true));
+      add(svg,'text',{x:624,y:221,class:'gg-axis-text'},'Fast k ↑');add(svg,'text',{x:624,y:239,class:'gg-axis-text'},'warm + humid');
+      add(svg,'text',{x:58,y:446,class:'gg-code'},'geom_line(size=1) + geom_ribbon(alpha=.25) + ggsci::scale_color_npg()');
+    }
+
+    function renderCharts(){ drawKeeling(); drawDDT(); drawLitter(); }
+
+    function makeParticleEngine(svgId, defs, auto=true) {
+      const svg=document.getElementById(svgId), layer=svg.querySelector('g[id$="Particles"]');
+      const particles=[], multipliers={};
+      defs.forEach(def=>{
+        multipliers[def.id]=1;
+        const path=svg.querySelector('#'+def.id), length=path.getTotalLength();
+        for(let i=0;i<def.count;i++){
+          const circle=add(layer,'circle',{r:def.r||4,fill:def.color,stroke:'#fff','stroke-width':.8,opacity:.92});
+          particles.push({circle,path,length,t:(i/def.count+Math.random()*.08)%1,speed:def.speed*(.8+Math.random()*.4),id:def.id});
+        }
+      });
+      const engine={running:auto&&!reducedMotion,multipliers,last:performance.now(),
+        step(now){const dt=Math.min(50,now-this.last)/1000;this.last=now;if(this.running){particles.forEach(p=>{p.t=(p.t+dt*p.speed*(this.multipliers[p.id]||1)/p.length)%1;const pt=p.path.getPointAtLength(p.t*p.length);p.circle.setAttribute('cx',pt.x);p.circle.setAttribute('cy',pt.y);});}requestAnimationFrame(t=>this.step(t));},
+        setMultipliers(values){Object.assign(this.multipliers,values);},
+        toggle(){this.running=!this.running;return this.running;}
+      };
+      particles.forEach(p=>{const pt=p.path.getPointAtLength(p.t*p.length);p.circle.setAttribute('cx',pt.x);p.circle.setAttribute('cy',pt.y);});
+      requestAnimationFrame(t=>engine.step(t)); return engine;
+    }
+
+    renderCharts();
+    const carbonEngine=makeParticleEngine('carbonScene',[
+      {id:'pPhoto',color:'#38BDF8',count:5,speed:54,r:4.3},{id:'pRespP',color:'#38BDF8',count:4,speed:48,r:4.1},
+      {id:'pRespC1',color:'#38BDF8',count:3,speed:48,r:4},{id:'pRespC2',color:'#38BDF8',count:3,speed:48,r:4},
+      {id:'pDecomp',color:'#38BDF8',count:4,speed:50,r:4},{id:'pCombust',color:'#38BDF8',count:7,speed:70,r:4.5},
+      {id:'pOrg1',color:'#D99A2B',count:3,speed:42,r:4.3},{id:'pOrg2',color:'#D99A2B',count:3,speed:42,r:4.3},
+      {id:'pOrgDet1',color:'#D99A2B',count:3,speed:40,r:4.2},{id:'pOrgDet2',color:'#D99A2B',count:3,speed:40,r:4.2},
+      {id:'pOrgDet3',color:'#D99A2B',count:3,speed:40,r:4.2}
+    ]);
+    let carbonMode='high',co2Current=425,co2Target=455;
+    function setCarbonMode(mode){
+      carbonMode=mode;document.body.classList.toggle('scenario-high',mode==='high');document.body.classList.toggle('scenario-neutral',mode==='neutral');
+      document.getElementById('highCarbonBtn').classList.toggle('active',mode==='high');document.getElementById('neutralCarbonBtn').classList.toggle('active',mode==='neutral');
+      co2Target=mode==='high'?455:425;
+      const state=document.getElementById('co2State');state.textContent=mode==='high'?'模拟读数：释放 ＞ 固定':'模拟读数：释放 = 固定，读数趋于稳定';state.style.fill=mode==='high'?'#B91C1C':'#00816B';
+      carbonEngine.setMultipliers(mode==='high'?{pCombust:2.1,pPhoto:1,pDecomp:1.1}:{pCombust:.16,pPhoto:1.65,pDecomp:.85,pRespP:.85,pRespC1:.85,pRespC2:.85});
+    }
+    document.getElementById('highCarbonBtn').addEventListener('click',()=>setCarbonMode('high'));
+    document.getElementById('neutralCarbonBtn').addEventListener('click',()=>setCarbonMode('neutral'));
+    document.body.classList.add('scenario-high'); setCarbonMode('high');
+    function animateCO2(){co2Current+=(co2Target-co2Current)*.025;document.getElementById('co2Readout').textContent=Math.round(co2Current)+' ppm';document.getElementById('co2Readout').style.fill=carbonMode==='high'?'#B91C1C':'#00816B';requestAnimationFrame(animateCO2);}requestAnimationFrame(animateCO2);
+    document.getElementById('carbonPause').addEventListener('click',function(){const running=carbonEngine.toggle();this.querySelector('span').textContent=running?'暂停粒子':'继续粒子';this.querySelector('svg')?.remove();this.insertAdjacentHTML('afterbegin',`<i data-lucide="${running?'pause':'play'}" class="w-4 h-4"></i>`);if(window.lucide)lucide.createIcons();});
+
+    const ddtEngine=makeParticleEngine('ddtScene',[{id:'ddtRoute',color:'#B91C1C',count:14,speed:55,r:4.2}],false);
+    document.getElementById('ddtRun').addEventListener('click',function(){const running=ddtEngine.toggle();document.getElementById('ddtScene').classList.toggle('ddt-active',running);this.querySelector('span').textContent=running?'暂停 DDT 富集':'启动 DDT 沿链富集';this.classList.toggle('active',running);});
+    document.getElementById('eggToggle').addEventListener('click',function(){const thin=document.getElementById('eggScene').classList.toggle('egg-thin');this.querySelector('span').textContent=thin?'恢复正常蛋壳':'观察鱼鹰蛋壳';this.classList.toggle('active',thin);});
+
+    document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');
+      document.querySelectorAll('.experiment-panel').forEach(p=>p.classList.remove('active'));
+      document.getElementById('exp-'+tab.dataset.exp).classList.add('active');
+    }));
+    function resetLeaf(){
+      document.getElementById('leafScene').classList.remove('decomposed');document.getElementById('leafResult').classList.remove('result-shown');
+      document.getElementById('massA').style.width='100%';document.getElementById('massB').style.width='100%';
+      document.getElementById('massALabel').textContent='100%';document.getElementById('massBLabel').textContent='100%';
+      document.getElementById('leafAText').textContent='落叶完整，等待培养';document.getElementById('leafBText').textContent='落叶完整，等待培养';
+    }
+    document.getElementById('leafRun').addEventListener('click',()=>{
+      resetLeaf();void document.getElementById('leafScene').offsetWidth;document.getElementById('leafScene').classList.add('decomposed');
+      setTimeout(()=>{document.getElementById('massA').style.width='28%';document.getElementById('massB').style.width='97%';document.getElementById('massALabel').textContent='28%';document.getElementById('massBLabel').textContent='97%';document.getElementById('leafAText').textContent='菌丝蔓延，落叶大量腐烂';document.getElementById('leafBText').textContent='微生物被排除，落叶基本完好';document.getElementById('leafResult').classList.add('result-shown');},120);
+    });
+    document.getElementById('leafReset').addEventListener('click',resetLeaf);
+
+    let iodineDone=false,fehlingDone=false;
+    function checkStarchResult(){if(iodineDone&&fehlingDone)document.getElementById('starchResult').style.display='block';}
+    document.getElementById('iodineBtn').addEventListener('click',function(){document.getElementById('liquidA1').setAttribute('fill','#F3E5A5');document.getElementById('liquidB1').setAttribute('fill','#263D8F');document.getElementById('labelA1').textContent='不变蓝：淀粉已分解';document.getElementById('labelB1').textContent='深蓝：淀粉仍存在';this.classList.add('active');iodineDone=true;checkStarchResult();});
+    document.getElementById('fehlingBtn').addEventListener('click',function(){document.getElementById('bath').classList.add('show');document.getElementById('liquidA2').setAttribute('fill','#B65339');document.getElementById('liquidB2').setAttribute('fill','#82B9DB');document.getElementById('precipA2').classList.add('show');document.getElementById('labelA2').textContent='砖红色：有还原糖';document.getElementById('labelB2').textContent='浅蓝：无砖红沉淀';this.classList.add('active');fehlingDone=true;checkStarchResult();});
+    document.getElementById('starchReset').addEventListener('click',()=>{
+      iodineDone=false;fehlingDone=false;document.getElementById('bath').classList.remove('show');document.getElementById('precipA2').classList.remove('show');document.getElementById('starchResult').style.display='none';
+      ['liquidA1','liquidB1'].forEach(id=>document.getElementById(id).setAttribute('fill','#F2E8CF'));['liquidA2','liquidB2'].forEach(id=>document.getElementById(id).setAttribute('fill','#A9D3E8'));
+      ['labelA1','labelB1','labelA2','labelB2'].forEach(id=>document.getElementById(id).textContent='等待显色');document.getElementById('iodineBtn').classList.remove('active');document.getElementById('fehlingBtn').classList.remove('active');
+    });
+
+    document.getElementById('gearToggle').addEventListener('click',function(){const paused=document.getElementById('gearScene').classList.toggle('paused');this.querySelector('span').textContent=paused?'启动齿轮':'暂停齿轮';});
+
+    document.getElementById('themeToggle').addEventListener('click',()=>{ggTheme=ggTheme==='gray'?'bw':'gray';document.getElementById('themeLabel').textContent=`theme_${ggTheme}()`;renderCharts();});
+    const drawer=document.getElementById('reviewDrawer'),overlay=document.getElementById('drawerOverlay');
+    function openDrawer(){drawer.classList.add('open');overlay.classList.add('show');drawer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+    function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('show');drawer.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+    ['reviewOpenTop','reviewOpenBottom','reviewFloating'].forEach(id=>document.getElementById(id).addEventListener('click',openDrawer));
+    document.getElementById('reviewClose').addEventListener('click',closeDrawer);overlay.addEventListener('click',closeDrawer);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+    window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('scrollProgress').style.width=(max>0?window.scrollY/max*100:0)+'%';},{passive:true});
+    if(window.lucide)lucide.createIcons();
+  </script>
+</body>
+</html>

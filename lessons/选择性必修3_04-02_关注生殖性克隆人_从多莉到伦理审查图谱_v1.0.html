@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>关注生殖性克隆人｜从多莉到伦理审查 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从多莉到伦理审查<small>CLONING & BIOETHICS / 04.02</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 4 章 · 第 2 节</p><h1>关注生殖性克隆人</h1><p class="subtitle">追踪多莉的三个来源，重读同一例活产，再看不同用途在哪里分岔。</p></div>
+<div class="intro-note"><i>CLONING & BIOETHICS</i><p>动物实验说明了什么？如果目标改为获得细胞系或使个体出生，证据与伦理边界会怎样改变？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 多莉的三个来源</a><a href="#figure2">02 同一例活产</a><a href="#figure3">03 分岔与终点</a><a href="#figure4">04 伦理审议</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / DOLLY / THREE SOURCES</p><h2 id="heading1">三只母羊参与实验，各自提供了什么？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="origin"><button type="button" data-group="origin" data-value="nuclear" aria-pressed="true">追踪核 DNA</button><button type="button" data-group="origin" data-value="mito" aria-pressed="false">追踪线粒体 DNA</button><button type="button" data-group="origin" data-value="gestation" aria-pressed="false">追踪妊娠环境</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="三只母羊参与实验，各自提供了什么？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>供核细胞取自成年芬兰多塞特母羊的乳腺。卵母细胞与承担妊娠的受体母羊都属苏格兰黑脸羊，但在实验中是不同个体。体细胞与去除自身核遗传物质的卵母细胞融合，形成重构体，经早期发育后再移植。这里动画追踪遗传物质来源，实验中的实际操作是细胞融合。</p><p>多莉的核基因组追溯到供核母羊。Evans 等在多莉样本中检出了卵母细胞来源的线粒体 DNA，未检测到体细胞供体来源的线粒体 DNA。受体母羊提供子宫内发育环境，其生理状况可影响胚胎发育。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 原创机制示意。供核与核移植早期过程为压缩动画，多莉于 1996 年出生。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1038/12696" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / WILMUT ET AL. / TABLE 1</p><h2 id="heading2">同一例活产，为什么能算出两个百分数？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="base"><button type="button" data-group="base" data-value="fused" aria-pressed="true">以 277 个融合重构体为起点</button><button type="button" data-group="base" data-value="transferred" aria-pressed="false">以 29 个移植胚为起点</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="同一例活产，为什么能算出两个百分数？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>该组共有 277 个融合重构体，从输卵管回收 247 个，29 个发育至桑椹胚或囊胚并用于移植，最终 1 只羊羔活产。这 29 个胚移入 13 只受体母羊，其中 1 只妊娠。胚胎数和母羊数是两种统计单位。</p><p>1/277≈0.36% 是以融合成功为起点的换算，1/29≈3.45% 是以移植为起点的换算（原表保留一位小数，写为 3.4%）。回收前后的差额涉及实验操作与回收条件，不能都解释成胚胎死亡。这是一个动物实验队列。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> Wilmut 等表 1 的成年乳腺上皮细胞组，百分数由图示计数计算。 <sup class="cites"><a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / PURPOSE & ENDPOINT</p><h2 id="heading3">起点相近，为什么用途和伦理边界不同？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="route"><button type="button" data-group="route" data-value="birth" aria-pressed="false">生殖性克隆 · 动物实例</button><button type="button" data-group="route" data-value="study" aria-pressed="true">治疗性克隆 · 研究用途</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="起点相近，为什么用途和伦理边界不同？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>生殖性克隆的目标是使新个体出生，包含胚胎移植、妊娠和出生环节，图中实例为多莉。人体生殖性克隆受到禁止。两条分支只比较原理，物种、实验材料与条件各不相同。</p><p>治疗性克隆的教材定义着眼于获得细胞、组织等以研究修复或替代。2013 年 Tachibana 等获得人核移植胚胎干细胞系并检验其多能性，研究材料未用于妊娠。建系、定向分化、可移植产品和临床疗效分别需要证据。相关研究还涉及卵母细胞获取和胚胎研究的专门伦理审查。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 依据多莉实验和人核移植胚胎干细胞建系研究绘制。时间与结构均为示意。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1016/j.cell.2013.05.006" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://www.cncbd.org.cn/TColumn/Detail/3376" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / ETHICS / REASONING CASES</p><h2 id="heading4">在作判断之前，要说清谁承担什么风险？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="caseMode"><button type="button" data-group="caseMode" data-value="animal" aria-pressed="true">动物成功能外推吗</button><button type="button" data-group="caseMode" data-value="therapy" aria-pressed="false">有了细胞系能治病吗</button><button type="button" data-group="caseMode" data-value="identity" aria-pressed="false">同一核 DNA 等于同一个人吗</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="在作判断之前，要说清谁承担什么风险？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>课堂可让学生用三句话回答：证据在哪个对象和终点上成立？谁承担风险、谁可作出同意？这个目的与做法适用哪项规则？涉及生殖性克隆时，安全性与人的尊严、自主性需要分别讨论。</p><p>教材归纳我国对生殖性克隆人的四不原则：不赞成、不允许、不支持、不接受。原科技部与卫生部发布的指导原则禁止生殖性克隆人的任何研究，并规定研究用人囊胚不得植入人或其他动物的生殖系统。以医学应用为目标的研究仍须按规定经过严格审查。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 三份原创课堂情境。依次区分证据、受影响者和判断，依据教材与公开伦理文件。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.cell.2013.05.006" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://www.cncbd.org.cn/TColumn/Detail/3376" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://www.unesco.org/en/legal-affairs/universal-declaration-human-genome-and-human-rights" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://www.isscr.org/resources/guidelines-for-stem-cell-research" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 4 章第 2 节，术语、伦理讨论与教材立场。</span></li><li id="ref-2"><a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer">[2] Wilmut et al., 1997 · Nature ↗</a><span>成年乳腺细胞供核，表 1 的实验记录。</span></li><li id="ref-3"><a href="https://doi.org/10.1038/12696" target="_blank" rel="noopener noreferrer">[3] Evans et al., 1999 · Nature Genetics ↗</a><span>多莉等克隆羊的线粒体 DNA 来源。</span></li><li id="ref-4"><a href="https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly" target="_blank" rel="noopener noreferrer">[4] 爱丁堡大学 Roslin Institute · The Life of Dolly ↗</a><span>三只母羊的角色、品种与出生日期。</span></li><li id="ref-5"><a href="https://doi.org/10.1016/j.cell.2013.05.006" target="_blank" rel="noopener noreferrer">[5] Tachibana et al., 2013 · Cell ↗</a><span>通过核移植建立人胚胎干细胞系，检测核与线粒体 DNA 来源。</span></li><li id="ref-6"><a href="https://www.cncbd.org.cn/TColumn/Detail/3376" target="_blank" rel="noopener noreferrer">[6] 原科技部、卫生部 · 人胚胎干细胞研究伦理指导原则 ↗</a><span>禁止生殖性克隆人，规定研究用囊胚的边界与审查。</span></li><li id="ref-7"><a href="https://www.unesco.org/en/legal-affairs/universal-declaration-human-genome-and-human-rights" target="_blank" rel="noopener noreferrer">[7] UNESCO · 世界人类基因组与人权宣言 ↗</a><span>第 11 条，以人的尊严为依据反对人类生殖性克隆。</span></li><li id="ref-8"><a href="https://www.isscr.org/resources/guidelines-for-stem-cell-research" target="_blank" rel="noopener noreferrer">[8] ISSCR · 干细胞研究与临床转化指南 ↗</a><span>区分实验室研究、临床转化及禁止的活动。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>关注生殖性克隆人 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">关注生殖性克隆人 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">三个来源</th><td>供核细胞提供核 DNA，去核卵母细胞提供胞质及主要线粒体 DNA，受体母羊提供妊娠环境。</td></tr><tr><th scope="row">核移植原理</th><td>重构体经早期发育后才进入后续环节。核移植过程没有精卵受精。</td></tr><tr><th scope="row">原始数据</th><td>明确分子、分母、对象和终点。1/277 与 1/29 分别回答从融合和从移植起算的两个问题。</td></tr><tr><th scope="row">目的与终点</th><td>生殖性克隆以个体出生为目标；治疗性克隆以获得细胞、组织等为治疗研究服务。</td></tr><tr><th scope="row">我国立场</th><td>不赞成、不允许、不支持、不接受任何生殖性克隆人实验。严格审查与监督相关研究。</td></tr><tr><th scope="row">伦理作答</th><td>先写事实和适用条件，再说明对捐献者、妊娠者或后代的影响，并联系安全、知情同意和人的尊严。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={origin:'nuclear',base:'fused',route:'study',caseMode:'animal'};
+const ink=C.ink,muted='#405e62',violet='#6c4c86',green='#177164',ochre='#8d5b21',red='#a53945',blue='#355888';
+const ease=(t,start,end)=>{
+  const f=clamp((t-start)/(end-start));
+  return f*f*(3-2*f);
+};
+const highlights={nuclear:violet,mito:green,gestation:ochre};
+function mitoArt(x,y,s,a){
+  return G(x,y,s,P('M-18-5Q-10-16 8-10Q22-7 19 5Q16 16-4 11Q-22 9-18-5Z','#b8ded2',green,2)+
+    P('M-13-2q4-5 7 2t7-1t7 1t7 1','none',green,1.6),a);
+}
+function nucleusArt(x,y,s){
+  return G(x,y,s,E(0,0,31,26,'#d9c7e4',violet)+E(1,0,25,20,'#e8d9ed','#af91b7')+
+    P('M-17 5q9-20 15-8t15 2m-22 8q6 10 12-1t12 1','none',violet,2.5)+E(8,-8,4,3,'#9a78ad'));
+}
+function somaticArt(x,y,s){
+  return G(x,y,s,P('M-67-21Q-51-60-20-55Q7-68 38-47Q70-35 70-1Q66 34 41 43Q8 64-24 48Q-61 53-66 21Q-79 5-67-21Z','#eadfed','#9c7aa7',2.8)+
+    P('M-52-16Q-42-47-20-42M-46 28q17 10 28 4m37-56q16 2 22 13m-10 34q18-7 20-20','none','#c0a5c8',3)+
+    E(-44,-5,5,3,'#bda0c8')+E(44,10,5,3,'#bda0c8'));
+}
+function eggArt(x,y,s,haveNucleus=false){
+  return G(x,y,s,E(0,0,65,62,'#eef5e9','#8eaa93')+E(0,0,56,54,'#d7eae0',green)+
+    E(0,0,49,47,'#e7f2e7','#aec9b7')+E(-39,-38,7,6,'#cee1d3','#80a28c')+
+    [[-28,13,-29],[-20,-24,31],[29,13,-33],[12,30,12],[26,-25,53]].map(([a,b,r])=>mitoArt(a,b,.49,r)).join('')+
+    (haveNucleus?nucleusArt(0,0,.65):''));
+}
+function blastocystArt(x,y,s){
+  const rim=many(16,i=>{
+    const a=i*Math.PI/8;
+    return E(Math.cos(a)*42,Math.sin(a)*37,8,7,'#b4d7ca','#67978a');
+  });
+  return G(x,y,s,E(0,0,54,49,'#eff6f0','#9bbfb0')+E(0,0,44,40,'#dfeee9',green)+rim+
+    [[-24,1],[-26,-9],[-16,-7],[-15,3],[-7,-4],[-17,13],[-27,10]].map(([a,b])=>E(a,b,6,5,'#8e6ca5',violet)).join(''));
+}
+function cleavageArt(x,y,s,t){
+  const amount=t<.42?2:4;
+  return G(x,y,s,E(0,0,42,40,'#eef5eb','#779e8f')+many(amount,i=>{
+    const a=(i+.5)*2*Math.PI/amount;
+    const u=Math.cos(a)*19,v=Math.sin(a)*17;
+    return E(u,v,amount===2?20:16,amount===2?19:15,'#c8e4d6','#77a595')+nucleusArt(u,v,.23);
+  }));
+}
+function sheepArt(x,y,s,blackface=false,uterus=0){
+  const face=blackface?'#3c4346':'#eadcc7',foot=blackface?'#555e60':'#ad957d';
+  return G(x,y,s,E(-6,60,108,8,'#41584919')+
+    P('M-67 13l-2 44h14l7-36m74-1 4 37h13l5-50M-43 23v35h12l6-30m74-4 8 33h12l2-48',foot,'#756b5a',2.5)+
+    P('M-78-16q-23 0-26 22q10 5 24-5','#e8ddc6','#8a7f67',2)+
+    P('M-83-20Q-92-44-63-44Q-57-60-32-48Q-17-65 6-50Q26-60 41-46Q66-51 77-24Q90-14 75 6Q77 24 49 29Q24 45 3 33Q-18 47-38 32Q-69 39-78 14Q-96 5-83-20Z','#fff5de','#8d806a',2.6)+
+    P('M-66-17q12-10 23-3m-3 29q11-8 20 0m22-27q9-11 21-5m-11 33q12-8 24-2m22-27q7-6 13-4','none','#e0d3b5',2.5)+
+    P('M66-22Q65-44 83-48Q99-51 106-33L112-18Q119 0 101 6Q85 12 76-4Z',face,'#80715f',2)+
+    P('M78-42Q57-49 53-37Q66-26 77-34M92-45q8-14 23-12q1 13-12 19',face,'#80715f',2.2)+
+    E(100,-23,3.2,3.4,blackface?'#fff8e9':ink)+P('M104-6q3 2 7 0','none','#9d7e6f',1.8)+
+    O(uterus,E(-3,2,28,21,'#f6e5bf',ochre)+P('M-18-5q8-15 20-6q12 5 10 17q-1 8-14 8q-10-1-6-8q5-5 12 0','none',ochre,2.8)+E(0,-2,3.8,3.8,ochre)));
+}
+function dishArt(x,y,s){
+  return G(x,y,s,E(0,10,68,25,'#d3e8e0','#6c9b8b')+E(0,0,68,25,'#f5faf7','#6c9b8b')+
+    E(0,0,57,18,'#e1f0e7','#a2c6b5')+many(11,i=>{
+      const a=i*2.4;
+      return E(Math.sin(a)*(14+i*3),Math.cos(a)*(4+i*.7),4,3,'#af95bb',violet);
+    }));
+}
+function routePulse(ax,ay,bx,by,t,color,size=5){
+  return O(.94,E(mix(ax,bx,t),mix(ay,by,t),size,size,color,'#fff'));
+}
+function quadraticPoint(start,control,end,t){
+  return start.map((v,i)=>mix(mix(v,control[i],t),mix(control[i],end[i],t),t));
+}
+
+const origins={
+  nuclear:{title:'核 DNA · 成年母羊乳腺细胞',sub:'芬兰多塞特羊提供核遗传信息',result:'核基因组追溯至成年体细胞',note:'核移植成功后，成年体细胞的核可在卵母细胞质中被重编程。'},
+  mito:{title:'线粒体 DNA · 去核卵母细胞',sub:'苏格兰黑脸羊提供胞质与细胞器',result:'多莉的线粒体 DNA 来自卵母细胞',note:'Evans 等在多莉样本中未检测到供核体细胞来源的线粒体 DNA。'},
+  gestation:{title:'妊娠环境 · 受体母羊',sub:'另一只苏格兰黑脸羊承担妊娠',result:'受体母羊提供子宫内发育环境',note:'妊娠环境可影响发育，受体母羊在此承担妊娠角色。'}
+};
+const originPhases=[
+  ['辨认三种来源','先找到供核细胞、卵母细胞与受体母羊。'],
+  ['融合形成重构体','来自乳腺细胞的核遗传信息进入卵母细胞质。'],
+  ['早期发育','部分重构体发育至桑椹胚或囊胚，再进入移植环节。'],
+  ['受体妊娠与活产','移植后的胚胎在受体母羊子宫内继续发育。']
+];
+function view1(t){
+  const mode=state.origin,active=origins[mode],color=highlights[mode];
+  const transfer=ease(t,.12,.40),develop=ease(t,.41,.64),mature=ease(t,.54,.64);
+  const implant=ease(t,.65,.85),born=ease(t,.86,1);
+  const [embryoX,embryoY]=quadraticPoint([268,317],[197,344],[180,442],implant);
+  const glow=(x,y,rx,ry,key)=>mode===key?E(x,y,rx,ry,'none',color):'';
+  const movement=nucleusArt(mix(152,405,transfer),172-38*Math.sin(transfer*Math.PI),1-.32*transfer);
+  const art=glow(152,172,77,66,'nuclear')+glow(405,172,72,69,'mito')+glow(184,442,116,78,'gestation')+
+    somaticArt(152,172,.96)+eggArt(405,172,.96)+
+    spark('M221 161Q281 110 342 161',violet,2,'6 5')+movement+
+    arrow('M405 244Q404 274 347 285',green)+O(develop*(1-mature),cleavageArt(303,294,.96,develop))+
+    O(mature,blastocystArt(303,294,.78))+
+    spark('M268 317Q220 335 196 387',mature>.8?ochre:'#ad9b7d',2.6,'6 5')+
+    arrow('M300 459h67',ochre)+sheepArt(182,442,.94,true,implant*(1-born))+
+    O(implant*(1-born),E(embryoX,embryoY,6,6,ochre,'#fff'))+
+    O(.19+.81*born,sheepArt(443,460,.65))+
+    label(81,239,'乳腺供核细胞')+label(334,75,transfer>.98?'融合后的重构体':'去核卵母细胞')+
+    label(257,342,mature>.6?'早期囊胚':'早期卵裂')+label(116,512,'受体母羊')+label(411,512,'多莉')+
+    tile(43,565,501,59,'动画追踪来源，实际实验采用细胞融合','',violet);
+  const ledger=Object.entries(origins).map(([key,data],i)=>{
+    const y=99+113*i,on=mode===key;
+    const badges=[nucleusArt(670,y+44,.64),mitoArt(670,y+44,.91,-20),sheepArt(668,y+40,.23,true,1)];
+    return R(624,y,524,88,on?['#f1e8f4','#e6f2eb','#fbf1de'][i]:'#f5f7f3',on?highlights[key]:'#cfddd2',11)+
+      E(670,y+44,27,27,'#fff',on?highlights[key]:'#d8e1d9')+badges[i]+
+      txt(716,y+34,data.title,'start',ink,20,on?800:650)+txt(716,y+62,data.sub,'start',muted,17);
+  }).join('');
+  const step=transfer<.99?t<.12?0:1:implant<.2?2:3;
+  const [title,detail]=originPhases[step];
+  const stage=tile(624,469,524,82,title,detail,color)+
+    R(624,582,524,7,'#e1ebe4','none',4)+R(624,582,524*t,7,color,'none',4)+
+    txt(625,620,'紫 · 核遗传信息     绿 · 胞质     赭 · 妊娠环境','start',muted,16);
+  draw(1,headings('沿着遗传物质追踪多莉','区分三个来源的角色')+art+ledger+stage);
+  say(1,'DOLLY / 0'+(step+1),title,detail,active.result,active.note);
+}
+
+const dollyCounts={fused:277,recovered:247,transferred:29,births:1,recipients:13,pregnancies:1};
+const rate=key=>100*dollyCounts.births/dollyCounts[key];
+const pipeline=[['fused','融合成功的重构体','队列起点'],['recovered','从输卵管回收','进入后续观察'],
+  ['transferred','移植的桑椹胚或囊胚','移植起点'],['births','活产羊羔','多莉']];
+function cohortArt(t,selected){
+  return pipeline.map(([key,name,sub],i)=>{
+    const y=106+i*109,on=key===selected,end=key==='births';
+    const color=on?violet:end?green:'#718b80';
+    const f=ease(t,i*.17,.30+i*.18);
+    return R(49,y,488,81,on?'#f0e8f2':end?'#e8f2eb':'#f6f8f2',color,10)+
+      R(53,y+6,4,69,color,'none',2)+txt(76,y+30,name,'start',ink,19,750)+
+      txt(76,y+56,sub,'start',muted,16)+
+      txt(510,y+53,String(dollyCounts[key]),'end',color,33,800)+
+      (i<3?arrow(`M305 ${y+83}v20`,'#9db0a6')+O(f,routePulse(305,y+85,305,y+104,f,color,3.8)):'');
+  }).join('')+txt(51,580,'计数来自同一组，回收差额并非全是胚胎死亡。','start',muted,16)+
+    txt(51,609,'描边突出当前分母，绿色保留同一个活产终点。','start',muted,16);
+}
+function cohortPlot(t,selected){
+  const p=plot('cloning-rates',682,158,437,272,[0,1,2,3],[0,1,2,3,4],
+    '同一例活产 · 按两个起点换算','','活产数 ÷ 指定起点数 (%)',()=>null);
+  const marks=['fused','transferred'].map((key,i)=>{
+    const x=p.X(i+1),y=p.Y(rate(key)),active=key===selected;
+    return R(x-34,y,68,p.Y(0)-y,active?violet:'#a9b9bc','none',4)+
+      txt(x,y-11,rate(key).toFixed(2)+'%','middle',ink,20,800)+
+      txt(x,459,i===0?'1 / 277':'1 / 29','middle',ink,17,800)+
+      (active?O(ease(t,.45,.9),E(x,y,5.5,5.5,ochre,'#fff')):'');
+  }).join('');
+  return p.svg+marks+tile(624,492,524,70,'另一个统计单位 · 受体母羊','13 只受体中有 1 只妊娠',ochre,'#f8f1e4')+
+    rScript(636,614,['ggplot(cohort, aes(baseline, live_birth_pct)) + geom_col()']);
+}
+function view2(t){
+  const key=state.base,n=dollyCounts[key];
+  draw(2,headings('沿成年乳腺细胞组追溯记录','核对分子和分母')+cohortArt(t,key)+cohortPlot(t,key));
+  say(2,'TABLE 1 / '+(key==='fused'?'融合起点':'移植起点'),'活产的分子始终是 1',
+    key==='fused'?'以融合成功的 277 个重构体为分母，回答从融合到活产的比例。':'以实际移植的 29 个胚为分母，回答从移植到活产的比例。',
+    `1 / ${n} ≈ ${rate(key).toFixed(2)}%`,'动物实验的条件、分母和终点随数据一起保留。');
+}
+
+const routeInfo={
+  birth:{title:'生殖性克隆 · 目标是出生',colors:ochre,result:'实际观察 · 多莉活产',note:'动物结果支持特定条件下的可行性，不能用于证明人类应用安全。',last:'动物实例 · 多莉',sub:'胚胎移植后妊娠、出生'},
+  study:{title:'治疗性克隆 · 体外研究',colors:green,result:'实际观察 · 人核移植胚胎干细胞建系',note:'建系支持体外研究，还需要专门证据才能评价临床应用。',last:'实验终点 · 干细胞系',sub:'体外建系并检验细胞多能性'}
+};
+function branchArt(t,mode){
+  const birth=mode==='birth',c=routeInfo[mode].colors;
+  const track=ease(t,.21,.77),arrive=ease(t,.68,.95);
+  const routeY=birth?231:443;
+  const pathUpper='M207 324Q248 324 280 277Q312 231 352 231';
+  const pathLower='M207 324Q248 324 280 382Q312 443 352 443';
+  const activeCurve=(birth?pathUpper:pathLower);
+  const elbow=[280,birth?277:382];
+  const [px,py]=track<.5?quadraticPoint([207,324],[248,324],elbow,track*2):
+    quadraticPoint(elbow,[312,routeY],[352,routeY],track*2-1);
+  return tile(43,86,501,70,'共同起点 · 核移植后的早期发育','以下分支比较目的，不代表使用同一批材料',violet)+
+    blastocystArt(132,325,1.14)+call(60,210,108,322,'内细胞团')+label(68,399,'早期囊胚')+
+    spark(pathUpper,birth?ochre:'#b9ad93',birth?4:2,birth?'':'6 6')+
+    spark(pathLower,birth?'#9ab7aa':green,birth?2:4,birth?'6 6':'')+
+    O(track>0&&track<1?1:0,E(px,py,7,7,c,'#fff'))+
+    O(arrive*.7,spark(activeCurve,c,4))+
+    O(birth?1:.5,sheepArt(birth?411:436,229,birth?.49:.62,true,birth?.65*(1-arrive):.4))+
+    O(birth?arrive:0,sheepArt(501,249,.31))+
+    O(birth?.55:1,dishArt(441,443,.95))+
+    label(371,288,'动物移植与妊娠')+label(371,491,'体外细胞建系')+
+    tile(43,561,501,61,birth?'人体边界 · 禁止以生殖为目的植入':'研究分支终止于体外，不进入妊娠','',birth?red:green,birth?'#f9edf0':'#eef5ee');
+}
+function routeLedger(t,mode){
+  const birth=mode==='birth',d=routeInfo[mode],finish=ease(t,.55,.9);
+  const rows=[['生殖性克隆','目标 · 使个体出生','动物实例有妊娠和活产记录',ochre,'#faf1df',birth],
+    ['治疗性克隆','目标 · 获得细胞等供治疗研究','人核移植研究获得体外干细胞系',green,'#e6f2eb',!birth]];
+  return rows.map(([title,sub,evidence,color,fill,on],i)=>{
+    const y=108+i*155;
+    return R(624,y,524,124,on?fill:'#f6f7f3',on?color:'#ccd9d0',11)+R(624,y,5,124,color,'none',2)+
+      txt(644,y+31,title,'start',ink,21,800)+txt(644,y+60,sub,'start',ink,17,650)+
+      txt(644,y+94,evidence,'start',muted,17)+
+      (on?E(1118,y+31,7,7,color):'');
+  }).join('')+
+    tile(624,450,524,76,finish>.7?d.last:'顺着高亮分支追踪终点',finish>.7?d.sub:'用“是否进入妊娠”区分后续路径',d.colors)+
+    tile(624,550,524,72,birth?'伦理边界 · 禁止生殖性克隆人':'证据边界 · 建系与疗效分别验证',
+      birth?'动物数据不可推出人类安全性':'细胞质量、安全性和疗效各需证据',birth?red:blue,birth?'#fbf0f0':'#edf2f7');
+}
+function view3(t){
+  const mode=state.route,d=routeInfo[mode];
+  draw(3,headings('一个起点，两种用途','比较已观察到的终点')+branchArt(t,mode)+routeLedger(t,mode));
+  say(3,'ENDPOINT / '+(mode==='birth'?'妊娠与活产':'体外建系'),d.title,
+    mode==='birth'?'观察早期胚胎走向动物妊娠的分支，并指出人体生殖性克隆的禁止边界。':'观察囊胚内细胞团与体外干细胞系，区分研究结果和潜在医学用途。',d.result,d.note);
+}
+
+const hearing={
+  animal:{index:'01',title:'动物成功可以外推到人吗？',statement:'“羊能克隆出生，说明人类也可以安全进行。”',tag:'动物可行性 → 人体安全？',
+    lines:['同一动物队列中记录到一例活产。','还要分别考虑妊娠者和未来子代。','本组数据不能支持人体安全；禁止生殖性克隆人。'],
+    result:'动物活产只回答特定动物与条件下的可行性。',note:'风险不仅是胚胎能否出生，也包括妊娠安全和长期健康。'},
+  therapy:{index:'02',title:'能建系就可以进入临床吗？',statement:'“既然已经得到干细胞系，就可以直接用于治疗。”',tag:'体外建系 → 临床疗效？',
+    lines:['原研究获得体外细胞系并检验多能性。','保障卵母细胞捐献者的知情同意。','建系、产品安全与疗效需要分别验证。'],
+    result:'先区分研究进展与临床终点。',note:'潜在医学价值不能代替安全证据、疗效证据和伦理审查。'},
+  identity:{index:'03',title:'核 DNA 相同等于同一个人吗？',statement:'“如果核 DNA 一样，就能复制一个人的人格。”',tag:'核遗传相似 → 人格相同？',
+    lines:['核遗传信息只解释个体特征的一部分。','每个人拥有独立的经历、权利和自主性。','不能以复制某人或提供器官为由把人当作工具。'],
+    result:'用人的尊严、自主性和权利来审视主张。',note:'发育环境、生活经历和社会关系也会影响个体的形成。'}
+};
+function genomePair(x,y,s){
+  const strand=direction=>Array.from({length:29},(_,i)=>{
+    const y=-56+i*4;
+    return `${i?'L':'M'}${direction*26*Math.cos(y*Math.PI/43)} ${y}`;
+  }).join('');
+  const rungs=many(10,i=>{
+    const y=-54+i*12,x=26*Math.abs(Math.cos(y*Math.PI/43));
+    return P(`M${-x} ${y}H${x}`,'none','#9e81ac',3);
+  });
+  return G(x,y,s,rungs+P(strand(1),'none',violet,4.5)+P(strand(-1),'none','#876498',4.5));
+}
+function profile(x,y,s,facing,color){
+  return `<g transform="translate(${x} ${y}) scale(${s*facing} ${s})">`+
+    P('M-56 50Q-54 24-26 19L-21 3Q-38-15-24-43Q-11-65 20-55Q43-48 45-24L54-13Q61-7 46-1L44 17Q40 28 22 23L17 40Q49 43 60 61H-56Z',color,'#697d81',2.4)+
+    P('M24-18l11-1M40 8l7-2','none','#52636a',1.6)+'</g>';
+}
+function hearingArt(t,mode,d){
+  const signal=ease(t,.18,.75);
+  const a=mode==='animal'?sheepArt(159,340,.78)+profile(438,335,.98,-1,'#efddd2'):
+    mode==='therapy'?dishArt(153,338,1.02)+P('M402 300v78m-39-39h78','none','#7a9f90',17)+E(402,339,66,66,'none','#8baca0'):
+      profile(125,331,.93,1,'#e9d8eb')+genomePair(293,326,.69)+profile(455,331,.93,-1,'#dde9e0');
+  const stop=O(signal,spark(mode==='identity'?'M353 339h35':'M234 337h65',ochre,3,'5 5')+
+    P('M304 317l20 20m0-20-20 20','none',red,3.5));
+  return tile(43,88,501,76,'课堂案卷 · '+d.index,d.tag,violet)+
+    R(43,187,501,91,'#f1e9f3','#d6c6d8',10)+txt(61,218,'待审主张','start',violet,17,800)+
+    txt(61,252,d.statement,'start',ink,17,650)+a+stop+
+    tile(43,487,501,88,d.title,'先判断，再播放查看三层理由。',ochre,'#f8f0e1')+
+    txt(45,619,'这三份案卷均为课堂假设。','start',muted,16);
+}
+function view4(t){
+  const mode=state.caseMode,d=hearing[mode];
+  const step=Math.min(2,Math.floor(t*3));
+  const stages=['核对事实证据','找出受影响者','给出有依据的判断'];
+  const cards=stages.map((title,i)=>{
+    const y=111+i*142,visible=i<=step,active=i===step;
+    const c=active?violet:visible?green:'#859b90';
+    return E(653,y+41,19,19,active?c:'#fff',c)+txt(653,y+48,i+1,'middle',active?'#fff':ink,18,800)+
+      tile(684,y,464,96,title,visible?d.lines[i]:'推进播放，展开这一层依据',c,active?'#f1e9f5':'#f5f8f2')+
+      (i<2?arrow(`M653 ${y+67}v49`,'#a4b9ad'):'');
+  }).join('');
+  draw(4,headings('辨认主张跨过了哪一步','分三层组织答辩')+hearingArt(t,mode,d)+cards+
+    tile(624,557,524,60,'答辩顺序 · 对象与终点 → 影响 → 规则','',green));
+  say(4,'CASE '+d.index+' / 0'+(step+1),stages[step],d.lines[step],
+    step===2?d.result:'目前展开 '+(step+1)+' / 3 层理由',step===2?d.note:'选一个案卷，先陈述预测，再推进时间轴。');
+}
+
+const views=[view1,view2,view3,view4],durations=[12,11,11,12],initialTimes=[.27,.6,.47,0];
+const groups={
+  origin(value){state.origin=value;redraw(0)},
+  base(value){state.base=value;redraw(1)},
+  route(value){state.route=value;redraw(2)},
+  caseMode(value){state.caseMode=value;clocks[3].seek(0)}
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

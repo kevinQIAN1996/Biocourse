@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>生态系统的稳定性｜反馈与恢复力图谱 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+
+.context .variable{flex:1;max-width:630px;min-width:min(100%,260px)}
+.history-tables{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.history-tables caption{text-align:left;padding:8px;font-weight:750}
+.intro h1 em{color:#315e60}.references a{text-underline-offset:2px}
+@media(max-width:620px){.history-tables{grid-template-columns:1fr}.context .variable{flex-basis:100%}}
+</style>
+</head><body>
+<header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">∿</span><span>反馈与恢复力图谱<small>ECOLOGICAL RESILIENCE / 03.05</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第 3 章 · 第 5 节</p><h1>生态系统的<em>稳定性</em></h1><p class="subtitle">从草地的一次扰动，到封闭生态缸的一天一夜。沿着曲线辨认反馈、偏离和恢复。</p></div>
+<div class="intro-note"><i>Feedback<br>&amp; Recovery</i><p>先定义正常带，再看系统如何回应。</p><span class="pill">4 幅图谱 · 播放、暂停与回拖</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 反馈与势阱</a><a href="#figure2">02 抵抗力 × 恢复力</a><a href="#figure3">03 生态缸实验</a><a href="#figure4">04 管理与历史</a></nav>
+<div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d4c29e"/><stop offset="1" stop-color="#ae9977"/></linearGradient>
+<linearGradient id="hare" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+<linearGradient id="glass-house" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf9f4"/><stop offset="1" stop-color="#a6c6bf"/></linearGradient>
+<marker id="end-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker></defs></svg></div>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+  <div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / BALANCE / FEEDBACK LOOPS</p><h2 id="heading1">生态平衡怎样维持，什么时候会失稳？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+  <div class="context"><div class="segmented" role="group" aria-label="反馈机制"><button type="button" data-set="feedback" data-value="negative" aria-pressed="true">A · 负反馈：草—兔—狼</button><button type="button" data-set="feedback" data-value="positive" aria-pressed="false">B · 正反馈：湖泊缺氧</button></div></div>
+  <div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 重看</button><label><span class="sr-only">第 1 图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+  <div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 820" role="img" aria-label="生态平衡怎样维持，什么时候会失稳？"></svg></div>
+  <p class="scroll-hint">↔ 横向滑动查看完整分面图</p>
+  <div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+  <details class="extra"><summary>反馈与生态平衡的判断依据</summary><p><b>先确定起始变量。</b> 若回路使原偏差变小，属于负反馈。若使原偏差增大，属于正反馈。正、负描述方向。是否发生状态转换还取决于外力与初始状态。</p><p><b>生态平衡有波动。</b> 结构看组成比例，功能看生产、消费、分解等过程，收支看可利用有机物的相对平稳。势阱中的状态变量与图中测量指标分别定义。</p></details><p class="fig-caption"><b>Figure 1.</b> 两组曲线均为归一化教学模型。势阱表示系统状态受小扰动时的去向。湖泊中持续外源输入可能改变状态，缺氧引起的死亡和分解耗氧使变化自我放大。 <sup class="cites"><a href="https://doi.org/10.1146/annurev.es.04.110173.000245" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/35098000" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+  <div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / DISTURBANCE / RESPONSE GEOMETRY</p><h2 id="heading2">同一次扰动，谁偏得更少，谁回来得更快？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+  <div class="context"><label class="variable" for="disturbance"><span>外来干扰强度</span><output id="disturbanceValue" for="disturbance"></output><input id="disturbance" type="range" min="0" max="100" step="1" value="44"></label><div class="segmented" role="group" aria-label="典型扰动强度"><button type="button" data-strength="15">轻度</button><button type="button" data-strength="44">中度</button><button type="button" data-strength="95">极端</button></div></div>
+  <div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 重看</button><label><span class="sr-only">第 2 图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+  <div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 820" role="img" aria-label="同一次扰动，谁偏得更少，谁回来得更快？"></svg></div>
+  <p class="scroll-hint">↔ 横向滑动查看完整分面图</p>
+  <div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+  <details class="extra"><summary>三个几何量与象限图怎么判读</summary><p><b>抵抗力</b>看同样的扰动导致多大偏离。<b>恢复力</b>看偏离后多久回到指定范围。草原火后再生可用于解释恢复力，结果取决于火强度、发生频率、种源和水分。</p><p><b>S</b> 为第 5–45 日 max(0, 90 − 功能指数) 对时间的积分。未超带时 x、y、S 均为 0。始终未回带时 x 标为「观测窗内未恢复」。A、B 模型转换阈值分别为 88 和 72。右图中的冻原和荒漠仅表示某些受扰情景可出现双低。</p><p>研究文献还用「韧性」描述系统能承受多大的扰动而维持原状态域。答题时可按题目给定的操作定义判读。</p></details><p class="fig-caption"><b>Figure 2.</b> A、B 是同指标和同一干扰下的示意情景。横向箭头 x 从第 5 日到首次回带，纵向箭头 y 从正常带下界量到最大偏离。S 以相同观察窗积分比较。右图点位和带均为示意。 <sup class="cites"><a href="https://doi.org/10.1146/annurev.es.04.110173.000245" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/307321a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1038/367363a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.1126/science.1131634" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+  <div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / MICROCOSM / OXYGEN BUDGET</p><h2 id="heading3">同样密封，为什么生态缸走向不同？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+  <div class="context"><div class="segmented" role="group" aria-label="生态缸工况"><button type="button" data-set="tank" data-value="standard" aria-pressed="true">标准设计</button><button type="button" data-set="tank" data-value="direct" aria-pressed="false">强光直晒</button><button type="button" data-set="tank" data-value="dark" aria-pressed="false">遮光</button><button type="button" data-set="tank" data-value="crowded" aria-pressed="false">投鱼过多</button></div></div>
+  <div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 重看</button><label><span class="sr-only">第 3 图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+  <div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 820" role="img" aria-label="同样密封，为什么生态缸走向不同？"></svg></div>
+  <p class="scroll-hint">↔ 横向滑动查看完整分面图</p>
+  <div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+  <details class="extra"><summary>生态缸操作与模型边界</summary><p>透明盖隔绝大部分物质交换，放散射光处以减小升温。适量水草供生产，少量消费者与底泥共同参与物质循环。缸内气体可在水和空气之间再分配，能量持续输入并散失。</p><p>每隔 1/8 模型日更新水中溶解氧、气相氧和存活率。水体 DO 变化来自光合生产、呼吸需求和水气交换，存活概率随低氧及热应激改变。高温极值、耗氧参数、天数与生物图标均用于模型对照。</p><p>若考查低分解能力，应将投鱼量固定，并比较残体积累与营养元素回归。缺少河泥仍可有其他来源的微生物。</p></details><p class="fig-caption"><b>Figure 3.</b> 30 日为虚拟监测，光照和生态缸剖面与选中曲线同步。标准组为比较基线。光可为系统提供能量，水与头空间之间可交换气体。透明盖和约 1/5 空气层是教学设计示例。 <sup class="cites"><a href="https://doi.org/10.2307/4440414" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+  <div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / MANAGEMENT / HISTORICAL RECORD</p><h2 id="heading4">维持稳定，需要怎样管理输入和输出？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+  <div class="context"><div class="segmented" role="group" aria-label="管理与历史案例"><button type="button" data-set="management" data-value="grazing" aria-pressed="false">自然系统 · 适度利用</button><button type="button" data-set="management" data-value="farming" aria-pressed="false">农田 · 持续投入</button><button type="button" data-set="management" data-value="biosphere" aria-pressed="true">生物圈 2 号</button></div></div>
+  <div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 重看</button><label><span class="sr-only">第 4 图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+  <div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 820" role="img" aria-label="维持稳定，需要怎样管理输入和输出？"></svg></div>
+  <p class="scroll-hint">↔ 横向滑动查看完整分面图</p>
+  <div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+  <details class="extra"><summary>原图读点与生物圈 2 号的碳氧收支</summary><p>首次封闭试验为 1991 年 9 月至 1993 年 9 月。此处历史图覆盖前约 700 天，点间虚线及游标为近似插读。Dempster 报告第 475–494 日注氧。土壤呼吸消耗 O₂，部分 CO₂ 被混凝土碳化和除碳装置截留。用空气中的 CO₂ 增量反推全部氧耗会漏掉这些去路。</p><div class="history-tables"><div class="table-scroll"><table><caption>大气 O₂ · 原图近似读点</caption><thead><tr><th scope="col">封闭后 / 日</th><th scope="col">图读值</th></tr></thead><tbody id="history-oxygen"></tbody></table></div><div class="table-scroll"><table><caption>大气 CO₂ · 原图近似读点</caption><thead><tr><th scope="col">封闭后 / 日</th><th scope="col">图读值</th></tr></thead><tbody id="history-carbon"></tbody></table></div></div></details><p class="fig-caption"><b>Figure 4.</b> 历史图依据 Dempster 1999 图 3–4 的走势作近似重绘，注氧区间来自原图图注。两种气体纵轴独立。初期氧气约 21%，约 16 个月后约 14%。CO₂ 走势有季节变化。 <sup class="cites"><a href="https://doi.org/10.1029/94EO00285" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1016/S0925-8574(98)00090-1" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://doi.org/10.2307/1312123" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://doi.org/10.1126/science.274.5290.1150" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据出处</h2><p>机制图为原创示意，统计图采用 ggplot2 的 SVG 视觉实现。模型、历史读点与引文用途分别标记。</p>
+<ol><li id="ref-1"><a href="https://doi.org/10.1146/annurev.es.04.110173.000245" target="_blank" rel="noopener noreferrer">[1] Holling, 1973 · Annual Review of Ecology and Systematics 4, 1–23 ↗</a><span>提出以吸收扰动并维持关系的能力理解生态韧性。</span></li><li id="ref-2"><a href="https://doi.org/10.1038/35098000" target="_blank" rel="noopener noreferrer">[2] Scheffer et al., 2001 · Nature 413, 591–596 ↗</a><span>讨论反馈、不同稳定态与生态系统突变。</span></li><li id="ref-3"><a href="https://doi.org/10.1038/307321a0" target="_blank" rel="noopener noreferrer">[3] Pimm, 1984 · Nature 307, 321–326 ↗</a><span>区分稳定性多种属性及其与复杂性的联系。</span></li><li id="ref-4"><a href="https://doi.org/10.1038/367363a0" target="_blank" rel="noopener noreferrer">[4] Tilman &amp; Downing, 1994 · Nature 367, 363–365 ↗</a><span>草地物种丰富度与干旱下地上生物量变化的野外关系。</span></li><li id="ref-5"><a href="https://doi.org/10.1126/science.1131634" target="_blank" rel="noopener noreferrer">[5] Reynolds et al., 2007 · Science 316, 847–851 ↗</a><span>干旱区发展与荒漠化框架。提供干旱区背景。</span></li><li id="ref-6"><a href="https://doi.org/10.2307/4440414" target="_blank" rel="noopener noreferrer">[6] Beyers, 1963 · The American Biology Teacher 25, 422–429 ↗</a><span>介绍平衡水生微生态系统的昼夜代谢模式。</span></li><li id="ref-7"><a href="https://doi.org/10.1029/94EO00285" target="_blank" rel="noopener noreferrer">[7] Severinghaus et al., 1994 · Eos 75, 33–37 ↗</a><span>土壤呼吸耗氧及混凝土吸收呼吸产生的 CO₂ 的证据。</span></li><li id="ref-8"><a href="https://doi.org/10.1016/S0925-8574(98)00090-1" target="_blank" rel="noopener noreferrer">[8] Dempster, 1999 · Ecological Engineering 13, 31–42 ↗</a><span>工程报告图 3 与图 4 提供两种气体历史走势和注氧时段。</span></li><li id="ref-9"><a href="https://doi.org/10.2307/1312123" target="_blank" rel="noopener noreferrer">[9] Nelson et al., 1993 · BioScience 43, 225–236 ↗</a><span>早期封闭试验结果，比较冬夏光照与 CO₂。</span></li><li id="ref-10"><a href="https://doi.org/10.1126/science.274.5290.1150" target="_blank" rel="noopener noreferrer">[10] Cohen &amp; Tilman, 1996 · Science 274, 1150–1151 ↗</a><span>从生物多样性与生态系统研究角度评述试验。</span></li><li id="ref-11"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer">[11] 人教版 · 选择性必修 2《生物与环境》 ↗</a><span>第 3 章第 5 节《生态系统的稳定性》。官方教材入口。</span></li><li id="ref-12"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank" rel="noopener noreferrer">[12] ggplot2 · Complete themes ↗</a><span>灰底和白底主题、面板与网格的官方参考。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>生态系统的稳定性 / v1.0 · 2026-11-08</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY / ECOLOGICAL RESILIENCE</p><h2 id="reviewTitle">生态平衡、稳定性与生态缸速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">生态平衡</th><td>结构、功能和收支在一定时间内相对稳定，允许波动。</td></tr><tr><th scope="row">反馈判读</th><td>回路抑制起始偏差是负反馈，放大起始偏差是正反馈。负反馈是生态系统自我调节的重要基础。</td></tr><tr><th scope="row">抵抗力与恢复力</th><td>同样扰动，偏离小则该指标抵抗力高。越早回到同一正常带，恢复越快。</td></tr><tr><th scope="row">x、y、S</th><td>x 是返回耗时，y 是最大超带偏离，S 是指定窗口的累计超带面积。极端情景可在观察期内始终未恢复。</td></tr><tr><th scope="row">双低判读</th><td>气候极端、补充和再生受限的生态系统在某些扰动下可能双低。结合题设的状态变量、时间和扰动。</td></tr><tr><th scope="row">生态缸</th><td>透明密封、留空气、散射光、适量生产者与消费者及参与分解的微生物。气体可在内部交换，能量需持续输入。</td></tr><tr><th scope="row">提高稳定性</th><td>自然系统适度利用，人工生态系统合理持续投入水、物质和能量，补充消耗与输出。</td></tr><tr><th scope="row">生物圈 2 号</th><td>微生物呼吸耗氧，部分 CO₂ 进入碳酸盐。人工注氧是外部干预，读历史数据时应分辨。</td></tr></tbody></table></div></dialog>
+<script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function wolf(x,y,s=1,t=0){return G(x,y,s,P('M-57 -4Q-90 -28 -82 -44Q-57 -35 -48 -21','none','#a9a99b',13)+P('M-54 12Q-68 -25 -23 -30L17 -25L35 -45L54 -31L66 -23L83 -17L79 -5L53 0L32 12L26 39H9L9 9L-21 10L-37 40H-55L-46 8Z','#a8aea0','#647565',1.5)+P('M31 -39L32 -62L48 -42M48 -34L58 -53L61 -26','#9ca698','#647565',1.5)+P('M31 -5Q39 7 57 -5L42 14Z','#e0dfce')+E(53,-27,3,2,'#243e3a')+E(80,-16,4,3,'#41544a'),Math.sin(t*8)*1.2)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const state = {feedback:'negative', disturbance:44, tank:'standard', management:'biosphere'};
+const grid = (from, to, count, value) => Array.from({length:count+1}, (_,i) => {
+  const x = from + (to-from)*i/count;
+  return {x,y:value(x)};
+});
+const round = (n,d=1) => Number(n).toFixed(d);
+const smooth = x => clamp(x)**2 * (3-2*clamp(x));
+
+function feedbackAt(day) {
+  const rabbit = 0.46*Math.exp(-day/7.7)*Math.cos(day*.58);
+  const seed = .18, elapsed = Math.max(0,day-7);
+  const basin = day<=7 ? mix(-1,seed,smooth(day/7)) :
+    1/Math.sqrt(1 + (1/(seed*seed)-1)*Math.exp(-.63*elapsed));
+  const bloom = clamp((basin+1)/2);
+  const oxygen = 1-.84*smooth(phase(bloom,.15,.96));
+  const mortality = .92*smooth(phase(day,8,25))*smooth(bloom);
+  return {rabbit, basin, bloom, oxygen, mortality};
+}
+const feedbackCurves = Object.fromEntries(['rabbit','bloom','oxygen','mortality'].map(key=>[
+  key,grid(0,32,192,d=>key==='rabbit'?100*feedbackAt(d)[key]+50:100*feedbackAt(d)[key])
+]));
+
+const disturbanceDay = 5, observationEnd = 45, floor = 90, baseline = 100;
+function responseModel(key, strength) {
+  const forest = key==='A';
+  const magnitude = Math.min(93,strength*(forest?.78:1.04));
+  const timeConstant = forest?11.5:4.4;
+  const shifted = strength >= (forest?88:72);
+  const newLevel = forest?59:37;
+  const at = day => {
+    if (day < disturbanceDay) return baseline;
+    const transient = Math.exp(-(day-disturbanceDay)/timeConstant);
+    const target = shifted?newLevel:baseline;
+    return target + (baseline-magnitude-target)*transient;
+  };
+  const data = [{x:0,y:baseline},{x:disturbanceDay,y:baseline},...grid(disturbanceDay,observationEnd,160,at)];
+  const y = Math.max(0, floor - Math.min(at(disturbanceDay),at(observationEnd)));
+  const recovery = y===0?0:shifted?null:timeConstant*Math.log(magnitude/(baseline-floor));
+  const outside = day => Math.max(0,floor-at(day));
+  const area = grid(disturbanceDay,observationEnd,400,outside).reduce((sum,p,i,arr)=>
+    i ? sum+(p.x-arr[i-1].x)*(p.y+arr[i-1].y)/2 : sum,0);
+  return {at,data,y,recovery:recovery!==null&&recovery<=observationEnd-disturbanceDay?recovery:null,area,shifted};
+}
+
+const tankModes = {
+  standard:{name:'标准设计',color:C.green,animals:3,note:'光照期水草净产氧，黑暗期呼吸持续。标准组在这个模型中保持昼夜波动。'},
+  direct:{name:'强光直晒',color:C.red,animals:3,note:'温度上升，水中氧饱和度和水草状态改变。即使某时刻有光，热应激与后续低氧也会降低存活率。'},
+  dark:{name:'遮光',color:C.blue,animals:3,note:'光合供氧项降为零，呼吸耗氧继续。头空间仍有氧，水中溶解氧受限于气体交换速率。'},
+  crowded:{name:'投鱼过多',color:'#a66947',animals:7,note:'消费者增加提高耗氧需求。密封容器内空气与水之间虽能换气，整体氧收支仍可能失衡。'}
+};
+const tankStep = .125;
+function simulateTank(mode) {
+  let oxygen=7.35, headspace=69, survival=1;
+  const out=[];
+  for(let i=0;i<=30/tankStep;i++){
+    const day=i*tankStep;
+    const daylight=Math.max(0,Math.sin(2*Math.PI*(day-.25)));
+    const temp=mode==='direct'?24+18*(1-Math.exp(-day/1.3)):24;
+    const plants=mode==='direct'?Math.exp(-.18*day):mode==='dark'?Math.exp(-.11*day):1;
+    const light=mode==='dark'?0:daylight;
+    const production=3.7*light*plants*(mode==='direct'?1.15:1);
+    const demand=mode==='crowded'?(3.25+.4*survival):mode==='direct'?1.25+.20*(temp-24):mode==='dark'?3.1:1.18;
+    const saturation=7.7*(headspace/69)*(1-.015*(temp-24));
+    const exchange=Math.max(-oxygen/tankStep,Math.min(headspace/tankStep,.40*(saturation-oxygen)));
+    out.push({day,oxygen,headspace,survival,temp,plants,light,production,demand,exchange});
+    oxygen=Math.max(0,oxygen+tankStep*(production-demand+exchange));
+    headspace=Math.max(0,headspace-tankStep*exchange);
+    const hazard=.62*Math.max(0,(3.5-oxygen)/3.5)+.079*Math.max(0,temp-32);
+    survival*=Math.exp(-hazard*tankStep);
+  }
+  return out;
+}
+const tankData=Object.fromEntries(Object.keys(tankModes).map(mode=>[mode,simulateTank(mode)]));
+function tankAt(mode,day) {
+  const rows=tankData[mode], index=Math.min(rows.length-2,Math.floor(day/tankStep));
+  const a=rows[index], b=rows[index+1], f=(day-a.day)/tankStep;
+  return Object.fromEntries(Object.keys(a).map(k=>[k,mix(a[k],b[k],f)]));
+}
+const tankCurves=Object.fromEntries(Object.entries(tankData).map(([key,rows])=>[
+  key,{oxygen:rows.map(r=>({x:r.day,y:r.oxygen})),survival:rows.map(r=>({x:r.day,y:100*r.survival}))}
+]));
+
+// Sparse approximate readings from Dempster (1999), figures 3–4. Connecting lines are guides.
+const history = {
+  oxygen:[[0,20.9],[95,19.0],[140,18.6],[205,17.5],[300,16.6],[405,15.1],[475,14.4],[494,19.2],[570,18.7],[635,18.1],[700,17.4]],
+  carbon:[[35,1550],[100,3500],[155,2400],[245,1350],[320,1650],[400,3200],[475,4250],[520,4100],[600,2200],[660,2500],[700,3000]]
+};
+const historySeries=Object.fromEntries(Object.entries(history).map(([k,rows])=>[k,rows.map(([x,y])=>({x,y}))]));
+function historicalAt(key, day) {
+  const data=historySeries[key];
+  if (day<data[0].x||day>data.at(-1).x) return null;
+  const i=data.findIndex(p=>p.x>=day);
+  if(i===0)return data[0].y;
+  return mix(data[i-1].y,data[i].y,(day-data[i-1].x)/(data[i].x-data[i-1].x));
+}
+
+const svgAt = i => $('svg'+i);
+const panel = (x,y,w,h,f='#f1f5ef')=>R(x,y,w,h,f,'#cad8cf',12);
+const title = (x,y,t)=>txt(x,y,t,'start',C.ink,22,750);
+const sub = (x,y,t)=>txt(x,y,t,'start','#476461',17,650);
+function tag(x,y,text,color=C.ink) {
+  return BioAtlas.label({x,y,title:text,color,bounds:{width:1200,height:820},padding:7});
+}
+function mathArrow(x1,y1,x2,y2,color, both=false, dash='') {
+  return `<path d="M${x1} ${y1}L${x2} ${y2}" fill="none" stroke="${color}" stroke-width="2" stroke-dasharray="${dash}" marker-end="url(#end-arrow)" ${both?'marker-start="url(#end-arrow)"':''}/>`;
+}
+function guide(d,color='#46646c',dash='') {
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="1.45" stroke-dasharray="${dash}"/>`;
+}
+function keyRows(x,y,keys) {
+  return keys.map(([name,color,dash],i)=>{
+    const yy=y+i*35;
+    return R(x,yy-17,22,22,'var(--panel)','none',0)+guide(`M${x+3} ${yy-6}h16`,color,dash||'')+
+      E(x+11,yy-6,2.7,2.7,color)+txt(x+30,yy,name,'start',C.ink,17);
+  }).join('');
+}
+function rHint(x,y,text) {
+  return `<text x="${x}" y="${y}" font-size="14" font-family="'Fira Code',Consolas,monospace" fill="#49606a">${esc(text)}</text>`;
+}
+function balancePillars() {
+  const rows=[['01','结构平衡','组成与比例相对稳定'],['02','功能平衡','生产、消费与分解持续'],['03','收支平衡','可利用有机物供给相对平稳']];
+  return rows.map(([n,a,b],i)=>{
+    const x=32+i*390;
+    return panel(x,28,356,92,'#fff')+R(x+14,44,39,31,'#3e6d62')+txt(x+33,66,n,'middle','#fff',17,700)+
+      txt(x+64,66,a,'start',C.ink,20,700)+txt(x+18,100,b,'start',C.ink,17)+
+      (i<2?mathArrow(x+360,74,x+384,74,'#719b8c',true):'');
+  }).join('');
+}
+function attractor(s,mode) {
+  const positive=mode==='positive', mapX=u=>279+155*u;
+  const mapY=u=>positive?313-64*(1-u*u)**2:315-53*u*u;
+  const data=grid(-1.33,1.33,96,mapY);
+  const path=linePath(data,mapX,y=>y);
+  const u=positive?s.basin:s.rabbit*1.9;
+  const ballX=mapX(u),ballY=mapY(u)-12;
+  let art=panel(32,146,508,280,'#f6f1e6')+title(54,181,positive?'双势阱 · 跨过盆脊':'单势阱 · 受扰后回归');
+  art+=P(path+'L485 364H73Z','url(#soil)','#b4a78f',1.2)+P(path,'none','#6a7b67',3.1);
+  art+=E(ballX,ballY,13,13,positive?C.red:C.green,'#fff')+
+    (positive?guide('M279 230V325','#92734d','4 5')+txt(131,349,'较清水态','middle')+txt(435,349,'富藻态','middle'):txt(279,352,'吸引子 · 稳态','middle'));
+  art+=txt(54,401,positive?'持续外推使小球跨过盆脊，之后变化自我放大。':'回到谷底仍可有波动，波动幅度逐渐收敛。','start',C.ink,17);
+  return art;
+}
+function flowBox(x,y,w,titleText,detail,color,active) {
+  return R(x,y,w,60,active?'#fff':'#fafbf8',active?color:'#c9d7ce',8)+
+    txt(x+12,y+23,titleText,'start',active?color:C.ink,18,750)+txt(x+12,y+46,detail,'start',C.ink,17);
+}
+function feedbackScene(s,t,mode) {
+  const positive=mode==='positive', color=positive?'#a94735':'#286f5a';
+  let svg=panel(559,146,610,280,positive?'#f6efe8':'#edf4ec');
+  svg+=title(578,181,positive?'湖泊 · 缺氧如何加剧缺氧？':'草地 · 什么限制兔继续增长？');
+  if(positive){
+    svg+=P('M580 248Q632 231 683 243T783 244V321H580Z',s.bloom>.55?'#87a56d':'#adcfd4','#708e7d',1.5);
+    svg+=P('M581 254Q627 244 671 251T782 251','none','#e9f1e3',2);
+    svg+=many(Math.round(25*s.bloom),i=>E(585+i*7.8,251+Math.sin(i*2.3+t*31)*5,4.5,2,'#597e4d'));
+    svg+=fish(654,285,.65,s.mortality>.48?180:Math.sin(t*17)*8,s.mortality>.48);
+    svg+=fish(734,297,.45,s.mortality>.7?180:0,s.mortality>.7);
+    svg+=tag(574,200,'氮磷输入 → 水华',color);
+    svg+=flowBox(806,196,335,'① 水体缺氧','水华遮光，呼吸与分解耗氧',color,t<.36);
+    svg+=flowBox(806,262,335,'② 缺氧增加鱼类死亡','死亡增加有机残体',color,t>=.36&&t<.68);
+    svg+=flowBox(806,328,335,'③ 分解耗氧进一步加剧缺氧','闭环符号：三个作用均为促进',color,t>=.68);
+    svg+=mathArrow(994,257,994,262,color)+mathArrow(994,323,994,328,color);
+    svg+=`<path d="M807 358H793V227H806" fill="none" stroke="${color}" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#end-arrow)"/>`;
+    svg+=sub(578,356,'DO · 水中溶解氧')+tag(575,369,`当前 DO 指数 ${round(s.oxygen*100,0)}`,color);
+  } else {
+    svg+=P('M581 312Q674 293 791 311V325H581Z','#d9e8d5','none');
+    svg+=grass(613,307,.9)+grass(646,305,.58)+hare(690+12*Math.sin(t*14),292,.56)+wolf(754,285,.49,t);
+    svg+=flowBox(806,196,335,'① 兔密度受扰升高','消耗草资源，兔成为更多猎物',color,t<.36);
+    svg+=flowBox(806,262,335,'② 资源与天敌施加压力','食物受限，捕食增加死亡',color,t>=.36&&t<.68);
+    svg+=flowBox(806,328,335,'③ 兔增长受限，偏差减弱','作用回到起始变量，形成负反馈',color,t>=.68);
+    svg+=mathArrow(994,257,994,262,color)+mathArrow(994,323,994,328,color);
+    svg+=`<path d="M806 358H793V228H803" fill="none" stroke="${color}" stroke-width="2" stroke-dasharray="4 4"/><path d="M803 221V235" stroke="${color}" stroke-width="2"/>`;
+    svg+=sub(578,356,'草 → 兔 → 狼')+tag(575,369,`兔密度指数 ${round(50+s.rabbit*100,0)}`,color);
+  }
+  return svg;
+}
+function renderFeedback(t) {
+  const active=state.feedback, d=32*t, s=feedbackAt(d);
+  const a=plot('feedback-a',79,505,386,202,[0,8,16,24,32],[0,25,50,75,100],'负反馈 · 密度逐步收敛','模型日','兔密度 · 相对指数');
+  const b=plot('feedback-b',538,505,458,202,[0,8,16,24,32],[0,25,50,75,100],'正反馈 · 状态转换','模型日','相对指数');
+  let art=balancePillars()+attractor(s,active)+feedbackScene(s,t,active)+a.svg+b.svg;
+  art+=guide(`M${a.x} ${a.Y(50)}h${a.w}`,'#677879','6 5');
+  art+=series(a,feedbackCurves.rabbit,C.green,active==='negative'?t:1);
+  art+=guide(`M${b.X(5.4)} ${b.y}v${b.h}`,'#9a6c51','5 4');
+  art+=series(b,feedbackCurves.bloom,C.red,active==='positive'?t:1)+series(b,feedbackCurves.oxygen,C.blue,active==='positive'?t:1,'6 4')+
+    series(b,feedbackCurves.mortality,'#aa733f',active==='positive'?t:1,'3 4');
+  art+=keyRows(1019,538,[['藻量',C.red],['DO',C.blue,'6 3'],['死鱼指数','#aa733f','3 3']])+tag(1019,657,'盆脊阈值');
+  art+=rHint(80,796,'ggplot(feedback, aes(day, index, colour = process)) + geom_line() + facet_wrap(~ mode)');
+  svgAt(1).innerHTML=art;
+  const positive=active==='positive';
+  say(1,positive?'POSITIVE FEEDBACK':'NEGATIVE FEEDBACK',positive?'缺氧—死亡—分解，偏差继续放大。':'兔密度受扰，资源和捕食压力使偏差回落。',
+    positive?'氮磷输入可触发水华。水华与分解造成的缺氧增加死亡，新增残体又提高耗氧需求。':'兔增多后，草的消耗和捕食压力上升，限制兔的进一步增长。阻尼曲线保留了短时波动。',
+    positive?`第 ${round(d)} 日 · DO 指数 ${round(100*s.oxygen,0)}`:`第 ${round(d)} 日 · 兔密度指数 ${round(50+100*s.rabbit,0)}`,
+    positive?'曲线和势阱为机制示意。能否跨过阈值取决于干扰、初始状态与调节条件。':'生态平衡是结构、功能与收支在一段时间内相对稳定的动态状态。');
+}
+
+function responseArea(p,m,color,day) {
+  if(day<=disturbanceDay) return '';
+  const points=grid(disturbanceDay,day,140,x=>Math.min(floor,m.at(x)));
+  return p.clip(ribbon(points.map(d=>({x:d.x,lo:d.y,hi:floor})),p.X,p.Y,color,.22));
+}
+function metricsPanel(x,y,k,m,color) {
+  let art=panel(x,y,266,100,'#f4f7f3')+tag(x+11,y+10,`情景 ${k} · ${k==='A'?'森林型':'草原型'}`,color);
+  art+=txt(x+14,y+65,`y ${round(m.y)} · S ${round(m.area,0)} 指数·日`,'start',C.ink,17);
+  art+=txt(x+14,y+89,m.recovery===null?'x · 观测窗内未恢复':`x · ${round(m.recovery)} 日`,'start',C.ink,17,700);
+  return art;
+}
+function scatter(t) {
+  const p=plot('stability-b',663,150,473,365,[0,25,50,75,100],[0,25,50,75,100],'二维稳定性 · 教学示意','抵抗力稳定性 →','恢复力稳定性 ↑');
+  const points=[
+    {x:29,y:82,label:'温带草原',lx:815,ly:184},
+    {x:54,y:64,label:'温带阔叶林',lx:928,ly:225},
+    {x:80,y:40,label:'热带雨林',lx:1008,ly:302},
+    {x:15,y:17,label:'北极冻原',lx:808,ly:418,low:true},
+    {x:8,y:9,label:'极端荒漠',lx:816,ly:471,low:true}
+  ];
+  const band=grid(17,90,38,x=>100-.75*x).map(d=>({x:d.x,lo:d.y-10,hi:d.y+10}));
+  let svg=p.svg+p.clip(ribbon(band,p.X,p.Y,C.cyan,.29)+
+    guide(`M${p.X(50)} ${p.y}v${p.h}M${p.x} ${p.Y(50)}h${p.w}`,'#a4b3b5','6 5'));
+  for(const point of points){
+    const x=p.X(point.x),y=p.Y(point.y);
+    svg+=guide(`M${x} ${y}L${point.lx-10} ${point.ly+17}H${point.lx}`,'#8b9a92');
+    const halo=12+3*Math.sin(2*Math.PI*t);
+    svg+=point.low?E(x,y,halo,halo,'#F6CCBF',C.red):'';
+    svg+=E(x,y,6,6,point.low?C.red:C.blue,'#fff')+tag(point.lx,point.ly,point.label,point.low?'#a23d30':C.ink);
+  }
+  svg+=panel(654,606,511,117,'#f8f1e7')+tag(669,616,'左下象限 · 可能双低','#923e31');
+  svg+=txt(669,679,'特定扰动下，干旱或严寒可限制补充与再生。','start',C.ink,17)+
+    txt(669,706,'点位为概念例图，排序随指标和干扰改变。','start',C.ink,17);
+  return svg;
+}
+function renderResponse(t) {
+  const a=responseModel('A',state.disturbance),b=responseModel('B',state.disturbance),day=observationEnd*t;
+  const p=plot('stability-a',81,150,484,365,[0,5,15,25,35,45],[0,30,60,90,120],'相同干扰 · 两条恢复轨迹','模型日','系统功能指数');
+  let art=p.svg+scatter(t);
+  art+=p.clip(R(p.x,p.Y(110),p.w,p.Y(90)-p.Y(110),'#bed5c1','none',0)+
+    guide(`M${p.x} ${p.Y(110)}h${p.w}M${p.x} ${p.Y(90)}h${p.w}`,'#52675d','6 4'));
+  art+=responseArea(p,a,C.red,day)+responseArea(p,b,C.cyan,day)+
+    series(p,a.data,C.red,t)+series(p,b.data,'#287e96',t,'7 4')+scan(p,day);
+  art+=tag(370,164,'正常带 · 90–110')+tag(340,74,'第 5 日施扰');
+  if(day>=disturbanceDay && Math.max(a.y,b.y)>0){
+    for(const [m,c,level,dx] of [[a,C.red,77,10],[b,'#287e96',69,-10]]){
+      if(m.y===0) continue;
+      const end=Math.max(0,Math.min(m.at(disturbanceDay),m.at(observationEnd)));
+      art+=mathArrow(p.X(disturbanceDay)+dx,p.Y(90),p.X(disturbanceDay)+dx,p.Y(end),c,true);
+      if(m.recovery!==null && m.recovery>1.6){
+        art+=mathArrow(p.X(disturbanceDay),p.Y(level),p.X(disturbanceDay+m.recovery),p.Y(level),c,true);
+        art+=txt(p.X(disturbanceDay+m.recovery)+11,p.Y(level)+6,m===a?'x A':'x B','start',c,17,700);
+      }
+    }
+    art+=tag(83,574,'y · 超带幅度')+tag(364,441,'阴影 · S 累积偏离');
+  }
+  art+=metricsPanel(32,614,'A',a,'#a33c2f')+metricsPanel(310,614,'B',b,'#246f83');
+  art+=rHint(81,786,'ggplot(response, aes(day, index)) + geom_ribbon(alpha = .25) + geom_line()');
+  svgAt(2).innerHTML=art;
+  $('disturbanceValue').textContent=state.disturbance+' / 100';
+  const heading=a.recovery===null?'两条曲线在观测窗内均未回到正常带。':
+    b.recovery===null?'同一次干扰，只有情景 A 回到正常带。':
+    a.y===0&&b.y===0?'两条曲线始终在正常带内。':'比较偏离幅度与返回时间。';
+  say(2,'RESISTANCE × RECOVERY',heading,
+    'y 取窗口内最大超带距离，越小表示该指标越抗扰。x 从施扰算到首次回到正常带，越小表示恢复越快。S 为第 5–45 日的累计超带面积。',
+    `第 ${round(day)} 日 · A ${round(a.at(day))} / B ${round(b.at(day))}`,
+    '两个系统采用相同功能指标和同一干扰。S 只比较指定窗口内的累计偏离。抵抗力和恢复力可以同高、同低或一高一低。');
+}
+
+function fish(x,y,s,angle=0,dead=false) {
+  const color=dead?'#e1d9b9':'#d59c68';
+  return G(x,y,s,P('M-31 1Q-12 -17 17 -10L35 -20L31 0L36 18L16 10Q-9 19 -31 1Z',color,'#866d53',1.3)+
+    P('M-8 -11Q0 -19 9 -13L13 -7M-6 9Q4 17 14 8M-17 -7Q-8 1 -17 7','none','#a17157',1.2)+
+    P('M-12 1Q3 -2 19 1','none','#f4c891',1)+
+    (dead?P('M-25 -4l5 5m-5 0l5 -5','none','#4c5553',1.3):E(-22,-3,2.3,2.3,'#243739')),angle);
+}
+function snail(x,y,s) {
+  return G(x,y,s,P('M-26 7Q-20 2 8 1Q19 -7 25 0L29 10Q17 16 -17 14Z','#b9a582','#7d7760')+
+    E(-3,-8,15,14,'#a28866','#6e654f')+P('M6 -5C11 -18 -8 -20 -12 -11C-17 -2 -2 6 3 -3Q6 -9 -1 -10','none','#d0b894',2)+
+    P('M22 2l0 -10m5 9l3 -10','none','#6c6e51',1.4));
+}
+function aquaticPlant(x,y,h,t,health) {
+  const green=health>.5?'#527d58':health>.2?'#788b59':'#9a815d';
+  const stem=d=>x+Math.sin(d*5+t*11)*d*9;
+  let svg=P(`M${x} ${y}Q${stem(.4)} ${y-h*.58} ${stem(1)} ${y-h}`,'none',green,3.1);
+  for(let j=1;j<=8;j++){
+    const d=j/9,xx=stem(d),yy=y-d*h,L=26*(1.1-d*.47);
+    svg+=P(`M${xx} ${yy}q${-L*.49} ${-L*.8} ${-L} ${-L*.52}q${L*.17} ${L*.41} ${L} ${L*.52}q${L*.41} ${-L*.62} ${L} ${-L*.52}q${-L*.24} ${L*.43} ${-L} ${L*.52}Z`,green,'#6b8c67',.7);
+  }
+  return svg;
+}
+function tankPicture(t,s,mode) {
+  let svg=panel(32,27,537,739,'#eef4ef')+title(54,64,'密封生态缸 · 水体与头空间');
+  svg+=sub(54,91,'约 1/5 空气层 · 给水体留出气体交换空间');
+  const dark=mode==='dark',hot=mode==='direct';
+  const water=dark?'#adbec5':hot&&s.temp>32?'#c5b888':mode==='crowded'&&s.oxygen<3?'#aebd94':'#bedde1';
+  svg+=`<defs><clipPath id="tank-vessel"><rect x="83" y="169" width="405" height="402" rx="18"/></clipPath></defs>`;
+  let tank=R(83,169,405,402,'#e7f1ed','none',18)+R(83,249,405,322,water,'none',0)+
+    P('M84 249Q137 241 184 249T282 249T380 249T489 249','none','#527f85',2)+
+    P('M83 517Q177 494 247 513T489 507V571H83Z','url(#soil)','#85785a',1.1);
+  tank+=many(28,i=>E(94+(i*81)%388,523+(i*29)%40,3+(i%4),2.2,i%2?'#90785f':'#c7b08b'));
+  tank+=many(13,i=>P(`M${108+(i*97)%355} ${531+(i*11)%31}q4 -4 7 1`,'none','#8a6758',1.3));
+  tank+=aquaticPlant(142,530,146+54*s.plants,t,s.plants)+aquaticPlant(189,526,104+43*s.plants,t,s.plants)+
+    aquaticPlant(418,529,113+48*s.plants,t+.1,s.plants)+aquaticPlant(453,527,74+40*s.plants,t+.2,s.plants);
+  tank+=snail(238+15*t,516,.76);
+  const fishCount=tankModes[mode].animals;
+  const liveIcons=s.survival<.005?0:Math.max(1,Math.round(s.survival*fishCount));
+  tank+=many(fishCount,i=>{
+    const dead=i>=liveIcons;
+    const x=210+i%3*67+(!dead?23*Math.sin(t*25+i*2):0);
+    const y=dead?281+Math.floor(i/3)*13:346+Math.floor(i/3)*55+17*Math.cos(t*15+i);
+    return fish(x,y,.63,dead?166:Math.sin(t*12+i)*7,dead);
+  });
+  tank+=many(Math.round(9*clamp((s.production-s.demand)/2)),i=>{
+    const age=(t*12+i*.27)%1;
+    return E(146+i*31%105+8*Math.sin(age*8+i),495-age*236,3+age*2,3+age*2,'#f7fffa','#61979a');
+  });
+  if(dark) tank+=R(83,169,405,402,'#293a541d','none',0);
+  svg+=`<g clip-path="url(#tank-vessel)">${tank}</g>`+
+    R(83,169,405,402,'none','#517782',18)+R(71,151,429,24,dark?'#445068':'#d7ece9','#65868a',6)+
+    P('M100 191V517M468 193V495','none','#f6fffd',3);
+  svg+=hot?many(4,i=>mathArrow(121+i*90,110,152+i*90,149,C.red)):
+    dark?P('M103 130H464','none','#344764',10):
+    many(4,i=>mathArrow(118+i*89,113,146+i*89,148,'#b69048',false,'4 4'));
+  svg+=sub(57,603,'设计标记 · 气泡仅示意模型净产氧期');
+  svg+=call(52,622,89,163,'① 透明盖','阻隔物质交换，允许光能输入')+
+    call(306,622,492,200,'② 空气层','气体缓冲空间')+
+    call(52,697,119,122,hot?'③ 直射强光':dark?'③ 遮光对照':'③ 散射光',hot?'热风险上升':dark?'无光合供氧':'避免直射升温');
+  svg+=call(292,697,437,526,'④ 水草与少量鱼螺','⑤ 河泥微生物参与分解');
+  return svg;
+}
+function renderTank(t) {
+  const mode=state.tank,s=tankAt(mode,t*30),theme=tankModes[mode];
+  const a=plot('tank-oxygen',628,121,376,219,[0,5,10,15,20,25,30],[0,2,4,6,8,10],'DO · 30 日监测','模型日','溶解氧 / mg·L⁻¹');
+  const b=plot('tank-survival',628,453,376,219,[0,5,10,15,20,25,30],[0,25,50,75,100],'鱼存活率 · 30 日监测','模型日','存活率 / %');
+  const styles={'standard':'','direct':'7 4','dark':'3 4','crowded':'11 5'};
+  let art=tankPicture(t,s,mode)+a.svg+b.svg;
+  for(const [key,meta] of Object.entries(tankModes)){
+    if(key!==mode) art+=O(.34,series(a,tankCurves[key].oxygen,meta.color,1,styles[key])+series(b,tankCurves[key].survival,meta.color,1,styles[key]));
+  }
+  art+=series(a,tankCurves[mode].oxygen,theme.color,t,styles[mode])+series(b,tankCurves[mode].survival,theme.color,t,styles[mode])+scan(a,s.day)+scan(b,s.day);
+  art+=keyRows(1024,151,Object.entries(tankModes).map(([key,meta])=>[meta.name,meta.color,styles[key]]));
+  const d=plot('tank-detail',1034,471,116,115,[0,1,2],mode==='standard'?[6,7,8,9]:[0,5,10],'昼夜放大');
+  art+=d.svg+d.clip(P(linePath(tankCurves[mode].oxygen.filter(row=>row.x<=2),d.X,d.Y),'none',theme.color,2.6));
+  art+=txt(1092,631,'前 2 日 DO','middle',C.ink,17);
+  art+=rHint(628,770,'geom_line() + facet_grid(parameter ~ .)');
+  svgAt(3).innerHTML=art;
+  say(3,'AQUATIC MICROCOSM',theme.name,theme.note,
+    `第 ${round(s.day)} 日 · DO ${round(s.oxygen,2)} mg/L · ${round(s.temp)} °C · 存活 ${round(s.survival*100,0)}%`,
+    '各曲线是同一教学模型的四种工况，42°C 为直晒情景设定。容器、光强和物种会影响缺氧与死亡的时间。低分解能力会减慢矿化，无河泥也仍可能有微生物。');
+}
+
+const managementModes={
+  biosphere:{title:'生物圈 2 号 · 外部注氧与碳化',kicker:'CLOSED SYSTEM / 1991–1993'},
+  grazing:{title:'自然系统 · 适度利用',kicker:'NATURAL SYSTEM'},
+  farming:{title:'农田系统 · 持续投入',kicker:'MANAGED ECOSYSTEM'}
+};
+function greenhouse(t,day) {
+  const injection=day>=475&&day<=494, pulse=phase(day,0,475);
+  let art=P('M68 365L144 212L216 365ZM193 365L266 182L382 365ZM365 365V273L460 226L530 276V365Z','url(#glass-house)','#638689',2);
+  art+=P('M144 212V365M68 365l118 -65M216 365l-99 -95M266 182L271 365M215 316L342 305M246 232L320 267M458 226V365M365 274L530 276M498 253V365M400 255V365M365 318H529','none','#79a3a5',1.3);
+  art+=P('M64 366H536V399H64Z','url(#soil)','#938975',1.2)+
+    grass(121,356,1.1)+grass(249,358,1.34)+grass(299,359,.73)+grass(463,361,.96);
+  art+=R(264,416,265,144,'#dbd9cb','#9b9d8d',9)+R(274,435,102,95,'#c2c4b8','none',2)+
+    many(12,i=>E(282+(i*37)%80,449+(i*19)%67,2.4,2.4,'#e6e6d8'));
+  art+=P('M72 435Q132 409 249 430V536H72Z','url(#soil)','#918365')+
+    many(11,i=>P(`M${87+(i*33)%140} ${453+(i*17)%70}q4 -5 9 0`,'none','#8e6852',1.7));
+  art+=mathArrow(157,393,161,437,C.blue)+mathArrow(213,476,274,476,C.red)+dotFlow([214,476],[274,476],t,C.red,5);
+  if(injection){
+    art+=mathArrow(527,194,479,251,C.blue,false,'5 4')+dotFlow([527,194],[479,251],t,C.blue,4)+tag(361,166,'外部注氧','#365282');
+  }
+  art+=sub(73,575,'土壤微生物耗 O₂')+sub(267,575,'部分 CO₂ 形成碳酸盐');
+  art+=tag(72,628,injection?'第 475–494 日 · 工程干预':pulse<1?'封闭后 · 氧气持续走低':'注氧后 · 氧气仍有变化');
+  art+=txt(72,699,'土壤呼吸、光合、混凝土碳化共同影响大气收支。','start',C.ink,17);
+  return art;
+}
+function fieldManagement(t,mode) {
+  const grazing=mode==='grazing', sky=grazing?'#dcebe0':'#dfede8';
+  let art=R(61,160,474,412,sky,'#adc7bb',12)+E(117,221,26,26,'#efd193','#cfa66a');
+  art+=P('M62 366Q190 286 282 370Q384 322 534 381V570H62Z',grazing?'#c0d6ad':'#cbb490','none');
+  if(grazing){
+    art+=many(14,i=>grass(77+(i*43)%432,404+(i*23)%111,.65+(i%3)*.24));
+    art+=cow(342-25*Math.sin(t*4),387,1,t)+mathArrow(163,309,237,364,C.green,false,'7 4')+
+      mathArrow(374,451,464,478,C.red,false,'7 4');
+    art+=tag(66,614,'资源再生 → 合理放牧、适度捕捞');
+    art+=txt(68,690,'让利用强度处在系统能补充和更新的范围内。','start',C.ink,17);
+  } else {
+    for(let i=0;i<7;i++) art+=corn(111+i*53,406+(i%2)*40,.41+smooth(t)*.33);
+    art+=P('M64 499Q219 468 530 513M65 529Q299 497 534 546','none','#927855',2);
+    art+=mathArrow(77,292,172,365,C.blue)+dotFlow([77,292],[172,365],t,C.blue,6)+
+      mathArrow(465,404,520,454,C.red)+dotFlow([465,404],[520,454],t,C.red,5);
+    art+=tag(69,260,'灌溉、施肥')+tag(385,344,'收获输出');
+    art+=tag(65,614,'输入 · 补充水、矿质元素与作业能源');
+    art+=txt(68,690,'光能驱动生产，收获带走有机物与矿质元素。','start',C.ink,17);
+  }
+  return art;
+}
+function historyPlot(key,id,y,ys,titleText,ylabel,t,color) {
+  const p=plot(id,637,y,389,217,[0,120,240,360,480,600,720],ys,titleText,'封闭后的天数 / d',ylabel);
+  const data=historySeries[key], day=t*700, value=historicalAt(key,day);
+  let art=p.svg+p.clip(R(p.X(475),p.y,p.X(494)-p.X(475),p.h,'#edc99e99','none',0));
+  art+=p.clip(guide(linePath(data,p.X,p.Y),color,'6 4')+data.map(row=>E(p.X(row.x),p.Y(row.y),4.5,4.5,color,'#fff')).join(''));
+  art+=scan(p,day)+(value===null?'':E(p.X(day),p.Y(value),6,6,'#fff',color));
+  return art;
+}
+function renderManagement(t) {
+  const mode=state.management, meta=managementModes[mode],day=700*t,oxygen=historicalAt('oxygen',day),carbon=historicalAt('carbon',day);
+  let art=panel(32,27,538,738,'#f1f5ec')+title(54,65,meta.title)+sub(54,99,mode==='biosphere'?'首次封闭试验 · 玻璃温室剖面':'物质与能量收支 · 管理示意');
+  art+=mode==='biosphere'?greenhouse(t,day):fieldManagement(t,mode);
+  art+=historyPlot('oxygen','hist-o',117,[12,14,16,18,20,22],'O₂ · 工程记录读点','大气 O₂ / %',t,C.blue);
+  art+=historyPlot('carbon','hist-c',448,[0,1000,2000,3000,4000,5000],'CO₂ · 工程记录读点','大气 CO₂ / ppm',t,C.green);
+  art+=keyRows(1042,155,[['读点',C.blue,'4 3'],['注氧期','#a87542'],['时间游标','#354d71']]);
+  art+=tag(1032,491,'有季节波动')+txt(1042,550,'两图独立纵轴','start',C.ink,17);
+  art+=rHint(637,766,'geom_point() + facet_wrap(~ gas)');
+  svgAt(4).innerHTML=art;
+  const body={
+    biosphere:'第一次封闭试验中，富含有机物的土壤呼吸消耗氧。部分 CO₂ 与混凝土反应形成碳酸盐，使空气中的 CO₂ 增量无法直接解释全部耗氧。',
+    grazing:'合理放牧和适度捕捞要看资源的补充速度与恢复条件。持续移除超过补充时，即使短期产出高，资源也会逐步减少。',
+    farming:'收获会带走物质。农业系统常需补充矿质元素与水，并投入作业能源和管理，维持结构、功能和收支。'
+  };
+  say(4,meta.kicker,meta.title,body[mode],
+    `第 ${round(day,0)} 日 · O₂ ≈ ${round(oxygen)}%${carbon===null?' · CO₂ 暂无读点':' · CO₂ ≈ '+round(carbon,0)+' ppm'}`,
+    '右图依据 Dempster 图 3、4 的走势作近似重绘。虚线只供导读，游标值为插读。阴影标出第 475–494 日，期间有人工注氧。');
+}
+
+const renderers=[renderFeedback,renderResponse,renderTank,renderManagement];
+const clocks=renderers.map((render,i)=>BioAtlas.createTimeline({
+  duration:[22,18,24,25][i],
+  initial:i===1?.65:0,
+  render,
+  onState({t,playing,duration}){
+    document.querySelector(`[data-time="${i}"]`).value=t*100;
+    const button=document.querySelector(`[data-play="${i}"]`);
+    button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+    button.setAttribute('aria-pressed',String(playing));
+    $('time'+i).textContent=`${Math.round(t*100)}% · ${duration}秒演示`;
+  }
+}));
+for(const button of document.querySelectorAll('[data-play]')){
+  button.addEventListener('click',()=>{
+    const clock=clocks[Number(button.dataset.play)];
+    if(clock.state.playing)clock.pause();
+    else clock.play();
+  });
+}
+for(const button of document.querySelectorAll('[data-reset]')){
+  button.addEventListener('click',()=>clocks[Number(button.dataset.reset)].reset());
+}
+for(const input of document.querySelectorAll('[data-time]')){
+  input.addEventListener('input',()=>clocks[Number(input.dataset.time)].seek(Number(input.value)/100));
+}
+const sceneOf={feedback:0,tank:2,management:3};
+for(const button of document.querySelectorAll('[data-set]')){
+  button.addEventListener('click',()=>{
+    const {set,value}=button.dataset;
+    state[set]=value;
+    for(const option of document.querySelectorAll(`[data-set="${set}"]`)){
+      option.setAttribute('aria-pressed',String(option===button));
+    }
+    clocks[sceneOf[set]].reset();
+  });
+}
+function setDisturbance(value){
+  state.disturbance=value;
+  $('disturbance').value=value;
+  for(const button of document.querySelectorAll('[data-strength]')){
+    button.setAttribute('aria-pressed',String(Number(button.dataset.strength)===value));
+  }
+  clocks[1].seek(clocks[1].state.t);
+}
+$('disturbance').addEventListener('input',event=>setDisturbance(Number(event.currentTarget.value)));
+for(const button of document.querySelectorAll('[data-strength]')){
+  button.addEventListener('click',()=>setDisturbance(Number(button.dataset.strength)));
+}
+setDisturbance(state.disturbance);
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme!=='bw';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{
+  BioAtlas.pauseAll();
+  $('review').showModal();
+});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const visibilityObserver=new IntersectionObserver(entries=>{
+  for(const entry of entries){
+    if(!entry.isIntersecting)clocks[Number(entry.target.dataset.figure)].pause();
+  }
+});
+document.querySelectorAll('.figure').forEach(section=>visibilityObserver.observe(section));
+
+for(const [key,unit] of [['oxygen','%'],['carbon','ppm']]){
+  const rows=history[key].map(([day,value])=>`<tr><th scope="row">${day}</th><td>≈ ${value} ${unit}</td></tr>`).join('');
+  $('history-'+key).innerHTML=rows;
+}
+globalThis.atlasQA={clocks,state,feedbackAt,responseModel,tankAt,tankData,history,historicalAt};
+</script></body></html>

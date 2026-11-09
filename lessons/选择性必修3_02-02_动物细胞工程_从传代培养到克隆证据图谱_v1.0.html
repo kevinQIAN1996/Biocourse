@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>动物细胞工程｜从传代培养到克隆证据 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从传代培养到克隆证据<small>ANIMAL CELL ENGINEERING / 02.02</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 2 章 · 第 2 节</p><h1>动物细胞工程</h1><p class="subtitle">在培养瓶里看增殖，在筛选板上验证抗体，在克隆实验里追踪细胞核的去向。</p></div>
+<div class="intro-note"><i>ANIMAL CELL ENGINEERING</i><p>从细胞长出来，到确认它做成了什么，中间还要补哪些证据？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 培养与传代</a><a href="#figure2">02 干细胞证据</a><a href="#figure3">03 融合与抗体</a><a href="#figure4">04 核移植与克隆</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / CELL CULTURE & PASSAGING</p><h2 id="heading1">瓶底铺满后，分瓶能改变什么？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="culture"><button type="button" data-group="culture" data-value="stay" aria-pressed="false">贴壁 · 不分瓶</button><button type="button" data-group="culture" data-value="split" aria-pressed="true">贴壁 · 第 4 天分瓶</button><button type="button" data-group="culture" data-value="suspension" aria-pressed="false">悬浮培养</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="瓶底铺满后，分瓶能改变什么？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>取组织，经机械或适宜的酶处理获得细胞悬液。由动物组织开始的初次培养为原代培养，分瓶后为传代培养。贴壁细胞可用胰蛋白酶等解离后收集、分瓶，悬浮细胞可直接离心收集再重悬。接触抑制用于解释部分贴壁细胞的增殖放缓，具体细胞类型与条件有差异。</p><p>培养需无菌、适宜的营养、渗透压、温度、pH 和气体条件；可使用含血清或经验证的无血清配方。对于常见碳酸氢盐缓冲培养液，培养箱 CO₂ 与培养液平衡有助维持 pH。模型中贴壁两组在第 4 天前完全相同，等分后瞬时合计守恒；悬浮组采用独立示意参数。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 模拟同一初始接种量。纵轴为每瓶模型细胞数；分瓶后按每个子瓶计。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.atcc.org/resources/culture-guides/animal-cell-culture-guide" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / STEM CELLS & REPROGRAMMING</p><h2 id="heading2">三类干细胞都能分化，范围一样吗？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="stem"><button type="button" data-group="stem" data-value="esc" aria-pressed="false">胚胎干细胞</button><button type="button" data-group="stem" data-value="hsc" aria-pressed="false">成体造血干细胞</button><button type="button" data-group="stem" data-value="ips" aria-pressed="true">诱导多能干细胞</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="三类干细胞都能分化，范围一样吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>胚胎干细胞可从囊胚内细胞团获得。在适宜条件下，胚胎干细胞和诱导多能干细胞可形成三个胚层来源的多种细胞。成体造血干细胞是成体干细胞的一例，可维持血细胞谱系。血小板来自巨核细胞的胞质片段。</p><p>经典小鼠 iPSC 实验使用 Oct3/4、Sox2、Klf4 和 c-Myc 重编程成纤维细胞。多能性关注可分化范围，完整个体发育是不同层级的判断。细胞身份和功能仍需检验。应用可包括疾病模型、药物测试与再生医学研究。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 分化路线及证据表为定性机制示意。不同来源需要各自适用的验证方案。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1126/science.282.5391.1145" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1016/j.cell.2006.07.024" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / HYBRIDOMA & ANTIBODY SCREEN</p><h2 id="heading3">培养基里活下来的克隆，为什么还要再筛？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="selection"><button type="button" data-group="selection" data-value="hat" aria-pressed="true">HAT 选择培养基</button><button type="button" data-group="selection" data-value="plain" aria-pressed="false">普通培养基对照</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="培养基里活下来的克隆，为什么还要再筛？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>免疫后获得的 B 细胞与选定的骨髓瘤细胞可用 PEG 等方法诱导融合。HAT 中氨基蝶呤阻断核苷酸从头合成，细胞需通过补救途径利用次黄嘌呤和胸苷。选定的 HGPRT 缺陷骨髓瘤及其同型融合物不能持久扩增；未融合正常 B 细胞能短期存活但难以持续扩增。B×骨髓瘤杂交瘤具备持续培养的潜力。</p><p>抗原筛选比较目标抗原与无关抗原。候选还要单细胞克隆、复验、扩增并纯化。模型用目标吸光度 ≥0.60 且无关抗原 ≤0.15 作为课堂判据。实际阈值应按方法与对照确定。</p><p>hCG 检测试剂应用特异性结合。以 T-DM1 为例，抗体结合 HER2 后内吞，经溶酶体降解释放含 DM1 的细胞毒性产物。抗体承担识别，接头连接载荷。机制示意用于理解靶向与胞内释放。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> HAT 选择和抗原筛选回答不同问题。ELISA 吸光度为课堂模拟，两个抗原的对照来自同一组候选克隆。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/256495a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://doi.org/10.1126/science.145.3633.709" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/125427s121lbl.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / NUCLEAR TRANSFER & OUTCOMES</p><h2 id="heading4">同一个克隆实验，为什么会有几个成功率？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="donor"><button type="button" data-group="donor" data-value="fetal" aria-pressed="true">胎儿成纤维细胞</button><button type="button" data-group="donor" data-value="adult" aria-pressed="false">成年卵丘细胞</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="同一个克隆实验，为什么会有几个成功率？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>从 MⅡ 期卵母细胞移走纺锤体—染色体复合体，导入体细胞核或融合带核体细胞，激活重构胚，在体外培养后移入同期受体。核 DNA 来自核供体，线粒体 DNA 主要来自卵母细胞供体，受体提供妊娠环境。多莉是用成年体细胞核移植获得的经典案例。</p><p>论文胎儿成纤维细胞组为 127 枚卵母细胞、109 枚重构胚、79 枚移植胚、21 只受体、6 只妊娠受体、2 只活产、2 只观察存活。成年卵丘细胞组对应 290、192、181、42、22、2、0。妊娠率以受体为分母，活产和观察存活比例以移植胚为分母。不同供体细胞类型和实验条件使这组数据适合描述性比较。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 猕猴数据取自 Liu 等 2018 年 Cell Table 1。三项比例为原始计数换算，分母各有定义。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://doi.org/10.1016/j.cell.2018.01.020" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 生物学选择性必修 3 ↗</a><span>第 2 章第 2 节动物细胞工程。</span></li><li id="ref-2"><a href="https://www.atcc.org/resources/culture-guides/animal-cell-culture-guide" target="_blank" rel="noopener noreferrer">[2] ATCC · Animal Cell Culture Guide ↗</a><span>贴壁、悬浮、原代细胞与培养条件。</span></li><li id="ref-3"><a href="https://doi.org/10.1126/science.282.5391.1145" target="_blank" rel="noopener noreferrer">[3] Thomson et al., 1998 · Science ↗</a><span>人囊胚来源胚胎干细胞系。</span></li><li id="ref-4"><a href="https://doi.org/10.1016/j.cell.2006.07.024" target="_blank" rel="noopener noreferrer">[4] Takahashi &amp; Yamanaka, 2006 · Cell ↗</a><span>四因子诱导小鼠成纤维细胞重编程。</span></li><li id="ref-5"><a href="https://doi.org/10.1038/256495a0" target="_blank" rel="noopener noreferrer">[5] Köhler &amp; Milstein, 1975 · Nature ↗</a><span>融合免疫脾细胞与骨髓瘤细胞，获得可持续产抗体的细胞系。</span></li><li id="ref-6"><a href="https://doi.org/10.1126/science.145.3633.709" target="_blank" rel="noopener noreferrer">[6] Littlefield, 1964 · Science ↗</a><span>杂种细胞选择培养的经典研究。</span></li><li id="ref-7"><a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/125427s121lbl.pdf" target="_blank" rel="noopener noreferrer">[7] FDA · KADCYLA Prescribing Information ↗</a><span>T-DM1 靶向结合、内吞、溶酶体降解与载荷释放。</span></li><li id="ref-8"><a href="https://doi.org/10.1038/385810a0" target="_blank" rel="noopener noreferrer">[8] Wilmut et al., 1997 · Nature ↗</a><span>成年、胎儿及胚胎细胞来源核移植的绵羊实验。</span></li><li id="ref-9"><a href="https://doi.org/10.1016/j.cell.2018.01.020" target="_blank" rel="noopener noreferrer">[9] Liu et al., 2018 · Cell ↗</a><span>体细胞核移植克隆猕猴及 Table 1 的原始计数。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>动物细胞工程 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">动物细胞工程 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">原代与传代</th><td>组织来源细胞的初次培养为原代；分瓶后为传代。贴壁细胞通常需解离，悬浮细胞可直接收集。</td></tr><tr><th scope="row">培养环境</th><td>营养、渗透压、温度、无菌和气体条件都要合适。含碳酸氢盐的培养液常与培养箱 CO₂ 一起调节 pH。</td></tr><tr><th scope="row">干细胞</th><td>自我更新与分化潜能分别验证。ESC 和 iPSC 具多能性，造血干细胞主要形成血细胞谱系。</td></tr><tr><th scope="row">两次筛选</th><td>HAT 选择可持续增殖的杂交瘤；抗原检测筛目标抗体，再经单细胞克隆与复验。</td></tr><tr><th scope="row">ADC</th><td>抗体识别、接头连接、载荷起效。以 T-DM1 为例，内吞后经溶酶体降解。</td></tr><tr><th scope="row">核移植</th><td>去除卵母细胞染色体，导入供体核，激活培养后移植。核 DNA、线粒体与妊娠环境分开追踪。</td></tr><tr><th scope="row">克隆数据</th><td>妊娠受体除以受体数；本文示例的活产、观察存活分别除以移植胚数。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={culture:'split',stem:'ips',selection:'hat',donor:'fetal'};
+const membrane='#789ca6',forest='#185f51',blueInk='#304b78',violet='#957eaf';
+const ink=(x,y,s,size=17)=>txt(x,y,s,'middle',C.ink,size,700);
+const stageAt=(t,n)=>Math.min(n-1,Math.floor(t*n));
+const pointList=(n,fn)=>Array.from({length:n},(_,i)=>fn(i));
+function node(x,y,s,active,w=108){
+  return R(x,y-21,w,37,active?'#e1efe7':'#f1f5f2',active?'#69a28e':'#ccded6',6)+ink(x+w/2,y+4,s,16);
+}
+function strip(items,y,active,x=40,step=126,w=111){
+  return items.map((name,i)=>{
+    const a=x+i*step;
+    return (i?flowLine([a-step+w+2,y-2],[a-3,y-2],'#6d8992'):'')+node(a,y,name,i===active,w);
+  }).join('');
+}
+function xNames(p,names){
+  let i=0;
+  return p.svg.replace(/(<text\b[^>]*text-anchor="middle"[^>]*>)\d+(<\/text>)/g,(_,a,b)=>a+esc(names[i++]??'')+b);
+}
+function bar(p,x,y,color,w=41){
+  return R(p.X(x)-w/2,p.Y(y),w,Math.max(0,p.Y(0)-p.Y(y)),color,'none',2);
+}
+function fibro(x,y,s=1,angle=0,color='#a4c9bf'){
+  return G(x,y,s,P('M-34 7Q-22-6-12-7Q-7-19 8-11Q13-9 35-14Q25 2 13 7Q7 19-7 11Q-17 8-34 7Z',color,'#5b9383',1.6)+
+    P('M-22 5Q0-2 21-9M-12 8Q5 5 16-2','none','#59948780',1.2)+E(-1,0,7,4,'#5b718e'),angle);
+}
+function roundCell(x,y,s=1,fill='#c5e5e7',edge=membrane){
+  return G(x,y,s,P('M-16-8Q-12-18 2-18Q15-16 18-5Q23 9 9 17Q-3 23-14 14Q-23 8-16-8Z',fill,edge,1.8)+
+    E(2,-1,7,7,'#758aa7')+E(-1,-4,2,2,'#c4cfdd')+E(-9,-7,1.8,1.8,'#f7fffd')+E(10,9,1.8,1.8,'#6da498'));
+}
+const initialCount=12,passageDay=4;
+function grow(day,start=initialCount,limit=84,rate=.97){
+  return limit/(1+(limit/start-1)*Math.exp(-day*rate));
+}
+const parentAtSplit=grow(passageDay);
+function cultureAt(mode,day){
+  if(mode==='suspension')return grow(day,initialCount,148,.70);
+  return mode==='split'&&day>=passageDay?grow(day-passageDay,parentAtSplit/2):grow(day);
+}
+function flask(x,y,s,count,mode){
+  const hull='M-166-63H86Q100-63 113-47L135-24H164V24H135L113 47Q99 63 86 63H-166Q-181 63-181 49V-49Q-181-63-166-63Z';
+  const cells=Math.min(76,Math.round(count*(mode==='suspension'?.48:.92)));
+  return G(x,y,s,P(hull,'#eef5f6',membrane,2.5)+R(153,-28,19,56,'#a0b6c6',blueInk,3)+
+    P('M-167-48H82Q96-48 110-30L132-13V14L108 34Q97 49 82 49H-165Q-172 49-172 41V-41Q-172-48-167-48Z',mode==='suspension'?'#cce8ef':'#e7e9d0','#9fbdc0',1.4)+
+    P('M-168-53H76M-169 53H77','none','#fff',2.2)+
+    many(cells,i=>{
+      const j=(i*31)%77,cx=-153+(j%11)*22+(Math.floor(j/11)%2)*6,cy=-37+Math.floor(j/11)*12;
+      return mode==='suspension'?roundCell(cx,cy+(i%3)*2,.27,'#dbedf4'):
+        fibro(cx,cy,.35+Math.min(count/84,1)*.07,((i*13)%46)-23);
+    }));
+}
+const cultureCopy={
+  stay:{name:'贴壁培养 · 不分瓶',text:'细胞沿瓶底铺展，接触和高密度可能使部分贴壁细胞增殖放缓。',note:'模型用每瓶承载量表示密度限制。真实细胞的接触抑制程度因类型而异。'},
+  split:{name:'贴壁培养 · 第 4 天分瓶',text:'先解离并收集贴壁细胞，再等分入两个新瓶。每瓶起始密度下降，随后再次增殖。',note:'折点表示分配到两个瓶。分瓶瞬间两瓶细胞合计与原瓶模型数相同。'},
+  suspension:{name:'悬浮培养 · 液层内增殖',text:'细胞分布在培养液中。需要收集时可离心后重悬，再进行后续培养。',note:'悬浮组使用独立模型，密度限制仍可能发生。'}
+};
+function cultureStage(day){
+  const mode=state.culture,v=cultureAt(mode,day),divided=mode==='split'&&day>=4;
+  const stage=day<.8?0:mode==='split'?(day<4?1:day<4.6?2:3):(day<3.2?1:day<5.2?2:3);
+  let art=strip(['组织分散','接种培养',mode==='split'?'解离与分瓶':'持续观察',mode==='split'?'继续增殖':'密度变化'],94,stage);
+  art+=R(42,136,501,355,'#edf4ef','#d2e0d6',10);
+  if(stage===0){
+    art+=E(151,337,90,19,'#b7d2ce','#94b4ae')+E(151,329,86,18,'#e8ede0',membrane)+
+      G(151,287,.96,P('M-61 19L-46-19L-2-35L55-20L61 18L12 42L-34 34Z','#e3b9ac','#b88781',2)+
+        many(10,i=>P('M'+(-43+i*9)+' '+(i%3*8-10)+'l13 24','none','#b17f7a',1.5)))+
+      arrow('M246 297h71',C.green)+many(8,i=>roundCell(347+(i*38)%129,259+(i*29)%84,.70))+
+      ink(149,420,'小块动物组织')+ink(405,420,'分散的细胞悬液');
+  }else if(divided){
+    const recovery=phase(day,4,4.6);
+    art+=flask(286,218,.96,v,recovery<.37?'suspension':'adherent')+flask(286,385,.96,v,recovery<.37?'suspension':'adherent')+
+      ink(292,469,recovery<.37?'解离、等分 · 重新接种':'子瓶 A 与 B · 同量接种',17);
+  }else{
+    art+=flask(294,304,1.22,v,mode)+
+      call(65,172,182,269,mode==='suspension'?'液层中的细胞':'细胞沿瓶底铺展')+
+      ink(293,462,day<.8?'组织分散后的初次培养':mode==='suspension'?'悬浮细胞可离心收集':'细胞接触增多，增殖趋缓');
+  }
+  return art+tile(43,523,500,82,cultureCopy[mode].name,stage===0?'培养前处理示意':divided?'模型显示单个子瓶':'模型显示一个培养瓶',C.green);
+}
+function cultureChart(day){
+  const p=plot('culture-growth',689,147,433,276,[0,2,4,6,8],[0,40,80,120,160],'培养时间与每瓶细胞数','培养时间（天）','每瓶模型细胞数');
+  const rows=(mode,from,to)=>pointList(41,i=>{const x=mix(from,to,i/40);return{x,y:cultureAt(mode,x)}});
+  let art=p.svg+line(rows('stay',0,8),p,C.blue,3)+line(rows('suspension',0,8),p,C.cyan,3,'5 4')+
+    line(rows('split',4,8),p,C.green,3)+line([{x:4,y:parentAtSplit},{x:4,y:parentAtSplit/2}],p,C.green,2,'5 3')+
+    scan(p,day)+p.clip(chartDot(p,day,cultureAt(state.culture,day),C.red,6));
+  art+=legend(682,505,'图例',[['贴壁不分瓶',C.blue,'solid'],['第 4 天分瓶',C.green,'solid']])+legend(934,505,'',[['悬浮培养',C.cyan,'dash']]);
+  return art+rScript(640,624,['ggplot(culture, aes(day, cells, colour = mode)) + geom_line()']);
+}
+function view1(t){
+  const day=t*8,m=cultureCopy[state.culture],v=cultureAt(state.culture,day);
+  draw(1,headings('培养瓶 · 贴壁与悬浮','单瓶读数 · 传代模型')+cultureStage(day)+cultureChart(day));
+  say(1,'CULTURE / '+day.toFixed(1)+' 天',m.name,m.text,'每瓶 '+v.toFixed(1)+' 模型细胞',m.note);
+}
+
+const stemModes={
+  esc:{name:'胚胎干细胞 ESC',source:'囊胚内细胞团',potential:'三个胚层来源的多种细胞',body:'从囊胚内细胞团建立胚胎干细胞系，在适宜条件下自我更新并分化。'},
+  hsc:{name:'成体造血干细胞 HSC',source:'骨髓造血微环境',potential:'血细胞谱系',body:'造血干细胞可自我更新，也可产生分化的血细胞。此处以骨髓中的造血干细胞为例。'},
+  ips:{name:'诱导多能干细胞 iPSC',source:'体细胞经因子重编程',potential:'三个胚层来源的多种细胞',body:'经典小鼠研究用 Oct3/4、Sox2、Klf4 与 c-Myc 重编程成纤维细胞。'}
+};
+function blastocyst(x,y,s){
+  return G(x,y,s,E(0,0,75,65,'#e5f0f3','#83a4ae')+
+    many(17,i=>{const a=i*Math.PI*2/17;return roundCell(Math.cos(a)*69,Math.sin(a)*57,.47,'#ecdcca')})+
+    many(9,i=>roundCell(-44+(i%3)*12,-27+Math.floor(i/3)*12,.45,'#b9dfd7')));
+}
+function marrow(x,y,s){
+  return G(x,y,s,P('M-59-43Q-81-59-66-76Q-50-88-29-65L37 21Q63 29 67 54Q65 72 42 73Q20 69 14 54L-49-29Z','#eee2cc','#a79374',2)+
+    P('M-44-52L53 52L29 57L-57-44Z','#edbab3','#b47c78',1.4)+
+    many(13,i=>E(-43+i*7,-43+i*7+(i%3)*4,4.4,3.3,i%3?'#b96a74':'#f6e8d7')));
+}
+function neuron(x,y,s){
+  return G(x,y,s,P('M-63-34l24 21-10-28m10 28 28 10M-61 25l25-16-15 28m15-28 24-8M0 4q19 5 35 15h44l20-14m-20 14 19 15','none','#5e829f',3.6)+
+    P('M-25-11L-10-19L10-7L17 9L-6 17L-22 8Z','#b0cde5','#597b9c',2)+E(-5,-2,6,6,'#5d7697'));
+}
+function cardiomyocyte(x,y,s){
+  return G(x,y,s,P('M-66-16Q-45-28-18-14L14-13Q30-32 61-35L71-22L40 5L63 18L55 30L16 22L-16 18Q-42 31-66 18Z','#eac0b8','#b27678',2)+
+    many(10,i=>P('M'+(-48+i*10)+' -13v31','none','#bd8185',1.5))+E(3,4,10,6,'#967088'));
+}
+function epithelium(x,y,s){
+  return G(x,y,s,many(6,i=>{const x=-58+i*19;return R(x,-25,18,52,'#e2ddb6','#a19d74',6)+
+    E(x+9,13,4,6,'#8d8d78')+P('M'+(x+3)+' -26v-9m4 9v-10m4 10v-9m4 9v-8','none','#9ba274',1.5)}));
+}
+function blood(x,y,s,kind){
+  if(kind===0)return G(x,y,s,many(3,i=>G((i-1)*28,i%2*11,1,E(0,0,19,12,'#dc9188','#b56e6c')+E(0,0,10,5,'#f0b5a5'),i*21)));
+  if(kind===1)return roundCell(x,y,s*1.7,'#e5d8f4',violet);
+  return G(x,y,s,many(6,i=>E((i%3-1)*21,Math.floor(i/3)*19-9,7,4,'#b6aad0',violet)));
+}
+function stemStage(t){
+  const key=state.stem,m=stemModes[key],stage=stageAt(t,4),hsc=key==='hsc';
+  let art=strip(['追踪来源','扩增培养','诱导分化','观察产物'],94,stage)+R(42,138,501,353,'#edf4ef','#d2e0d6',10);
+  if(stage===0){
+    if(key==='esc')art+=blastocyst(272,300,1.56)+call(376,171,224,265,'内细胞团')+
+      call(58,419,170,309,'滋养外胚层')+call(405,414,301,329,'囊胚腔');
+    if(hsc)art+=marrow(271,298,1.5)+call(359,166,293,314,'骨髓造血微环境');
+    if(key==='ips')art+=fibro(268,287,3.3,-8)+call(377,173,254,282,'成纤维细胞')+
+      ink(292,412,'导入重编程因子')+ink(292,447,'Oct3/4 · Sox2 · Klf4 · c-Myc',16);
+  }else if(stage===1){
+    art+=E(291,363,173,37,'#dce8e5','#98b7b0')+E(291,350,171,36,'#e5eacf',membrane)+
+      many(25,i=>roundCell(195+(i*43)%189,255+(i*27)%109,.51,'#b8ded5'))+
+      ink(291,436,key==='ips'?'重编程后形成 iPSC 克隆':'适宜条件下自我更新');
+  }else{
+    const colors=[C.blue,C.red,C.green];
+    const xs=[123,286,449];
+    art+=roundCell(286,200,1.36,'#c0e0d2');
+    art+=xs.map((x,i)=>arrow(`M286 225Q${x} 244 ${x} 286`,colors[i])+
+      O(stage===3?1:.62,hsc?blood(x,333,1.02,i):[neuron,cardiomyocyte,epithelium][i](x,333,.86))+
+      ink(x,418,(hsc?['红细胞','白细胞','血小板'] : ['神经元','心肌细胞','肠上皮'])[i])).join('');
+    if(hsc)art+=txt(448,448,'经巨核细胞','middle',C.ink,15);
+    else art+=['外胚层','中胚层','内胚层'].map((s,i)=>txt(xs[i],449,s,'middle',C.ink,15)).join('');
+  }
+  return art+tile(43,526,499,78,m.name,m.source,C.blue);
+}
+function stemEvidence(){
+  const entries=Object.entries(stemModes);
+  let art=tile(619,80,531,63,'证据矩阵 · 把来源与功能分开','',C.blue);
+  art+=entries.map(([key,m],i)=>{
+    const y=164+i*114,active=key===state.stem;
+    return R(620,y,529,96,active?'#e6f2ec':'#f6f8f4',active?'#80ae9e':'#d1dfd6',7)+
+      txt(639,y+26,m.name,'start',C.ink,18,750)+
+      txt(639,y+50,'来源 · '+m.source,'start',C.ink,16)+txt(639,y+76,'分化 · '+m.potential,'start',forest,16,750)+
+      txt(1128,y+27,'可自我更新','end',C.ink,15);
+  }).join('');
+  art+=txt(630,544,'多能性由分化范围等证据支持','start',C.ink,18,750)+
+    txt(630,580,'目标细胞还要验证身份与功能','start',C.ink,16);
+  return art;
+}
+function view2(t){
+  const m=stemModes[state.stem];
+  draw(2,headings('来源 → 培养 → 分化','证据矩阵 · 三条路线')+stemStage(t)+stemEvidence());
+  say(2,'STEM CELLS / 0'+(stageAt(t,4)+1),m.name,m.body,m.potential,'自我更新、细胞身份和功能分别记录。多能性与完整个体发育是不同层级的判断。');
+}
+const clones=[
+  {name:'A',target:.88,other:.09},{name:'B',target:.91,other:.61},
+  {name:'C',target:.31,other:.07},{name:'D',target:.10,other:.11}
+];
+const targetFloor=.60,otherCeiling=.15;
+const qualifies=d=>d.target>=targetFloor&&d.other<=otherCeiling;
+function antibody(x,y,s=1,color=C.blue,payload=false){
+  return G(x,y,s,P('M-25-32L-8-14L0-6L8-14L25-32M0-6V24','none',color,7)+
+    P('M-23-31L-9-18M23-31L9-18','none','#e3edf5',2)+
+    (payload?P('M1 19H24','none','#7d859a',2.4)+P('M24 11l10 8-10 9-10-9Z',C.orange,'#ac624d',1.5):''));
+}
+function hybrid(x,y,s){
+  return G(x,y,s,P('M-50-5Q-57-35-21-47Q4-60 31-43Q59-38 56-12Q67 16 41 37Q23 55-5 44Q-44 53-52 24Z','#e3e6f2','#9086b2',2.3)+
+    E(-13,-6,18,15,'#8a95b2')+E(17,10,15,12,'#b190b3')+
+    P('M-43 19q10-6 19 4t20 3m19-53q12-6 22 4m-6 51l10-3','none','#a09bb9',2.4)+
+    many(9,i=>E(-39+(i*23)%79,-27+(i*17)%59,2.3,2,'#6f91a2')));
+}
+function wells(x,y,s){
+  return G(x,y,s,R(-103,-54,206,106,'#e4eef1',membrane,8)+
+    clones.map((d,i)=>[d.target,d.other].map((n,j)=>E(-73+i*49,-23+j*43,16,14,'#fff9ef',membrane)+
+      O(n,E(-73+i*49,-23+j*43,13,11,j?C.orange:C.green))).join('')).join(''));
+}
+function hybridStage(t){
+  const stage=stageAt(t,5),hat=state.selection==='hat',f=t*5%1;
+  let art=strip(['取两类细胞','诱导融合','培养选择','筛选抗体','克隆与复验'],94,stage,40,103,92)+
+    R(42,137,501,346,'#edf4ef','#d2e0d6',10);
+  if(stage<=1){
+    const dx=stage===1?phase(f,0,.95)*74:0;
+    art+=roundCell(161+dx,291,3,'#d5ecf3')+roundCell(416-dx,291,3,'#eeddf0',violet)+
+      ink(160,406,'免疫后取 B 细胞')+ink(414,406,'骨髓瘤细胞');
+    if(stage===1)art+=node(242,178,'PEG 诱导',true,100);
+  }else if(stage===2||!hat){
+    art+=O(hat?.37:1,roundCell(142,293,2.4,'#d5ecf3'))+hybrid(293,289,1.14)+
+      O(hat?.30:1,roundCell(447,293,2.5,'#eeddf0',violet))+
+      ink(141,398,hat?'不能持续扩增':'正常 B 细胞',16)+
+      ink(291,398,'B × 瘤细胞',16)+ink(447,398,hat?'HAT 淘汰':'骨髓瘤细胞',16)+
+      ink(294,443,hat?'长期可增殖的杂交瘤被富集':'细胞混杂，无法靠培养基区分',17);
+  }else if(stage===3){
+    art+=wells(292,290,1.68)+call(59,161,169,253,'目标抗原')+call(57,407,169,326,'无关抗原')+
+      ink(293,449,'每一列对应一个候选克隆');
+  }else{
+    art+=hybrid(186,308,1.22)+arrow('M255 303H319',C.green)+
+      many(6,i=>antibody(351+(i%3)*54,265+Math.floor(i/3)*80,.65,C.blue))+
+      ink(185,422,'单细胞克隆')+ink(411,422,'扩增与抗体纯化');
+  }
+  return art+tile(43,520,499,85,hat?'先选能持续增殖的细胞':'普通培养基对照',hat?'再选分泌所需特异性抗体的克隆':'无选择压力，混合细胞持续干扰判读',hat?C.green:C.blue);
+}
+function applicationInset(){
+  return R(622,459,524,146,'#eff5f1','#d2ded5',8)+
+    txt(635,483,'抗体的两种用途','start',C.ink,18,750)+
+    antibody(661,539,.66)+E(660,508,9,6,'#a9d2bb','#5b9b80')+
+    txt(699,524,'诊断 · 识别 hCG','start',C.ink,16,750)+txt(699,550,'特异性结合产生检测信号','start',C.ink,15)+
+    antibody(909,539,.62,C.blue,true)+
+    txt(947,524,'ADC · 靶向递送','start',C.ink,16,750)+txt(947,550,'结合 → 内吞 → 释放','start',C.ink,15)+
+    txt(635,586,'ADC = 抗体 ＋ 接头 ＋ 药物载荷','start',C.ink,16);
+}
+function hybridEvidence(t){
+  const p=plot('elisa-chart',687,126,437,190,[0,1,2,3,4,5],[0,.25,.5,.75,1],'双抗原判读 · ELISA 模拟','','吸光度（相对读数）');
+  const ready=state.selection==='hat'&&stageAt(t,5)>=3;
+  let art=xNames(p,['','A','B','C','D','']);
+  if(ready){
+    art+=clones.map((d,i)=>p.clip(O(qualifies(d)?.13:0,R(p.X(i+1)-36,p.y,72,p.h,C.green,'none',2)))+
+      bar(p,i+1-.18,d.target,C.green,23)+bar(p,i+1+.18,d.other,C.orange,23)).join('');
+    art+=line([{x:0,y:targetFloor},{x:5,y:targetFloor}],p,'#526d72',1.6,'4 5')+
+      line([{x:0,y:otherCeiling},{x:5,y:otherCeiling}],p,'#9f684f',1.6,'2 4');
+  }else{
+    art+=node(791,210,state.selection==='hat'?'等待抗原检测':'对照组仍为混合细胞',false,238);
+  }
+  art+=R(684,360,15,14,C.green,'none',2)+txt(708,372,'目标抗原','start',C.ink,16)+
+    R(840,360,15,14,C.orange,'none',2)+txt(864,372,'无关抗原','start',C.ink,16);
+  art+=txt(685,413,ready?'A 合格 · B 对两种抗原都有较高读数':'先判断细胞来源，再比较抗体特异性','start',C.ink,16,750);
+  if(ready)art+=txt(685,438,'课堂判据 · 目标 ≥0.60 且无关 ≤0.15','start',C.ink,15);
+  return art+applicationInset()+rScript(640,628,['ggplot(elisa, aes(clone, absorbance, fill = antigen)) + geom_col()']);
+}
+function view3(t){
+  const stage=stageAt(t,5),hat=state.selection==='hat';
+  const status=['获得两类亲本细胞','融合液中包含多种细胞','观察选择培养结果','比较目标与无关抗原','单细胞克隆、复验与扩增'][stage];
+  const candidate=clones.find(qualifies);
+  const result=!hat&&stage>=2?'无选择压力 · 仍为混合培养':hat&&stage>=3?
+    '候选 '+candidate.name+' · 目标 '+candidate.target.toFixed(2)+' / 无关 '+candidate.other.toFixed(2):status;
+  draw(3,headings('杂交瘤 · 两道筛选','抗原检测与产品用途')+hybridStage(t)+hybridEvidence(t));
+  say(3,'HYBRIDOMA / 0'+(stage+1),status,'持续生长与抗体特异性分别检测。单细胞克隆与复验可建立稳定的抗体来源。',result,
+    '课堂判据为目标 ≥0.60、无关 ≤0.15。此吸光度只示意结合筛查。');
+}
+const donors={
+  fetal:{name:'胎儿成纤维细胞组',short:'胎儿成纤维细胞',oocytes:127,reconstructed:109,transferred:79,surrogates:21,pregnancies:6,births:2,survived:2,color:C.blue},
+  adult:{name:'成年卵丘细胞组',short:'成年卵丘细胞',oocytes:290,reconstructed:192,transferred:181,surrogates:42,pregnancies:22,births:2,survived:0,color:C.orange}
+};
+const metrics=[
+  ['妊娠受体 / 受体','pregnancies','surrogates'],
+  ['活产 / 移植胚','births','transferred'],
+  ['观察存活 / 移植胚','survived','transferred']
+];
+function ratioText(d,n,dn){return d[n]+'/'+d[dn]+'  ·  '+(100*d[n]/d[dn]).toFixed(1)+'%'}
+function oocyte(x,y,s,interior=''){
+  return G(x,y,s,E(0,0,76,74,'#ddf1f3','#83adb9')+E(0,0,67,65,'#bde2e8','#6499ad')+
+    E(-13,-17,45,38,'#d5eced')+
+    many(14,i=>G(Math.cos(i*2.29)*(24+i%5*8),Math.sin(i*2.29)*(23+i%3*11),1,
+      E(0,0,5.8,2.7,'#85b4bb','#6396a4')+P('M-3 0H3','none','#dcf1eb',1.1),i*51))+interior);
+}
+function spindle(x,y,s){
+  return G(x,y,s,P('M-18 0Q0-19 18 0Q0 19-18 0Z','#f3eaf5','#9e83b7',1.5)+
+    P('M-17 0h34m-23-7 12 14m-12 0 12-14m-2-4v21','none',violet,2));
+}
+function microPipette(x,y,s,angle=0){
+  return G(x,y,s,P('M-108-12H-45L-17-5H9V5H-17L-45 12H-108Z','#e8f3f5',membrane,2)+P('M-98-5H-49L-19-1H6','none','#fff',2),angle);
+}
+function monkey(x,y,s,fill='#b9a88c'){
+  return G(x,y,s,
+    P('M38 42Q92 47 92 10Q89-7 75 7','none','#958264',8)+
+    P('M-38 52Q-60 22-39-8Q-23-28 15-18Q37-8 41 22Q54 41 40 62L15 59Q5 51-4 45L-14 65H-42Z',fill,'#958264',2.4)+
+    E(-35,-30,29,30,fill,'#958264')+E(-61,-28,9,11,'#d0ac99','#958264')+
+    P('M-56-36Q-55-55-40-52Q-32-59-22-48Q-12-44-13-29Q-15-9-34-8Q-51-12-56-36Z','#e0b9a7','#a9897e',1.4)+
+    E(-43,-35,3.1,3,C.ink)+E(-26,-35,3.1,3,C.ink)+P('M-40-20q6 4 12-1','none','#9c7770',1.5));
+}
+function donorStage(t){
+  const stage=stageAt(t,5),d=donors[state.donor],f=clamp(t*5-stage);
+  let art=strip(['去核','导入供体核','激活与卵裂','移植给受体','观察后代'],94,stage,40,104,96)+
+    R(42,138,501,348,'#edf4ef','#d2e0d6',10);
+  if(stage===0){
+    const travel=phase(f,.20,.82),x=mix(332,429,travel),y=mix(244,205,travel);
+    art+=oocyte(284,302,1.48)+microPipette(x,y,1.06,158)+spindle(x,y,1.05)+
+      call(52,165,230,255,'MⅡ 期卵母细胞')+call(360,398,x,y,'纺锤体—染色体');
+  }else if(stage===1){
+    const dx=phase(f,.10,.90),x=mix(140,283,dx);
+    art+=oocyte(312,299,1.42)+microPipette(x,299,1)+E(x,299,18,16,C.orange,'#aa715a')+
+      call(68,178,x,282,'供体核 DNA')+call(379,397,358,343,'卵母细胞胞质');
+  }else if(stage===2){
+    art+=oocyte(291,306,1.42,many(f>.58?4:2,i=>roundCell((i%2-.5)*47,Math.floor(i/2)*46-(f>.58?23:0),1.25,'#efcdb8')))+
+      call(60,171,215,266,'激活重构胚')+call(391,396,322,302,'早期卵裂');
+  }else if(stage===3){
+    art+=blastocyst(161,296,.85)+arrow('M237 294h63',C.green)+monkey(407,291,1.38)+
+      call(57,399,155,323,'培养后的重构胚')+call(363,165,375,239,'妊娠受体');
+  }else{
+    const ending=phase(f,.25,.70),visibility=d.survived?1:1-.56*ending;
+    art+=monkey(311,292,1.3)+O(visibility,monkey(163,315,.82,'#d3ad8a')+monkey(447,319,.76,'#d3ad8a'))+
+      ink(291,415,'本组活产 '+d.births+' 只 · 论文观察存活 '+d.survived+' 只',17)+
+      txt(291,449,d.survived?'两只均在论文观察中存活':'两只均为短时存活','middle',C.ink,16);
+  }
+  const roles=[['核 DNA · 体细胞',C.orange],['线粒体 · 主要来自卵',C.cyan],['妊娠 · 同期受体',C.green]];
+  art+=roles.map(([name,color],i)=>{
+    const x=47+i*166;
+    return R(x,515,157,44,'#f7faf6','#cedcd4',6)+R(x+6,524,5,26,color,'none',2)+txt(x+17,543,name,'start',C.ink,15,700);
+  }).join('');
+  return art+txt(48,601,'卵母细胞胞质参与核重编程；图为操作示意','start',C.ink,16,700);
+}
+function donorEvidence(){
+  const p=plot('scnt-data',691,128,432,157,[0,1,2,3,4],[0,100,200,300],'Cell Table 1 · 操作阶段原始计数');
+  const entries=Object.values(donors),active=donors[state.donor],keys=['oocytes','reconstructed','transferred'];
+  let art=xNames(p,['','卵母细胞','重构胚','移植胚','']);
+  art+=keys.map((key,i)=>entries.map((d,j)=>{
+    const x=i+1+(j-.5)*.29,n=d[key];
+    return O(d===active?1:.62,bar(p,x,n,d.color,25))+txt(p.X(x),Math.max(p.y+13,p.Y(n)-7),n,'middle',C.ink,14,750);
+  }).join('')).join('');
+  art+=entries.map((d,i)=>R([681,913][i],330,14,13,d.color,'none',2)+
+    txt([704,936][i],342,d.short,'start',C.ink,16,d===active?750:500)).join('');
+  art+=R(621,366,530,35,'#e8eee9','#d0ded5',5)+txt(635,389,'终点与分母','start',C.ink,16,750)+
+    txt(925,389,'胎儿组','middle',C.ink,16,750)+txt(1072,389,'成年组','middle',C.ink,16,750);
+  art+=metrics.map(([title,n,dn],i)=>{
+    const y=409+i*49;
+    return R(621,y,530,40,'#f4f7f4','#dae5dc',4)+txt(633,y+25,title,'start',C.ink,16,650)+
+      entries.map((d,j)=>txt([925,1072][j],y+25,ratioText(d,n,dn),'middle',C.ink,15,d===active?750:500)).join('');
+  }).join('');
+  art+=txt(631,577,'受体妊娠与单胚结局使用不同分母','start',C.ink,16,750);
+  return art+rScript(640,610,['ggplot(scnt, aes(stage, count, fill = donor)) +','geom_col(position = "dodge")']);
+}
+function view4(t){
+  const d=donors[state.donor],stage=stageAt(t,5);
+  draw(4,headings('体细胞核移植 · 三种来源','猕猴克隆 · 用原始分母读数')+donorStage(t)+donorEvidence());
+  say(4,'SCNT / 0'+(stage+1),d.name,'观察存活的后代不能只看妊娠数。把受体结局和移植胚结局分开读。',
+    '观察存活 / 移植胚 · '+ratioText(d,'survived','transferred'),'本表为论文中的描述性结果。两组还存在供体细胞类型与实验条件差异。');
+}
+const views=[view1,view2,view3,view4],durations=[13,10,13,12],initialTimes=[.50,.12,.44,.11];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={
+  culture:value=>change(0,'culture',value),
+  stem:value=>change(1,'stem',value),
+  selection:value=>change(2,'selection',value),
+  donor:value=>change(3,'donor',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

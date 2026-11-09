@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>基因工程的基本操作程序｜从 PCR 到抗虫证据 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+.intro h1 span{display:inline-block}</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从 PCR 到抗虫证据<small>GENETIC ENGINEERING WORKFLOW / 03.02</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 3 章 · 第 2 节</p><h1><span>基因工程的</span><wbr><span>基本操作程序</span></h1><p class="subtitle">沿抗虫棉案例，从获得 Bt 目的基因出发，追踪表达盒、导入路线和最终的抗虫证据。</p></div>
+<div class="intro-note"><i>GENETIC ENGINEERING WORKFLOW</i><p>一条目的片段的电泳带亮了。要判断抗虫棉是否培育成功，还需要看什么？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 筛选与获取</a><a href="#figure2">02 构建表达载体</a><a href="#figure3">03 导入受体</a><a href="#figure4">04 检测与鉴定</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / TARGET SELECTION & PCR</p><h2 id="heading1">两条引物，怎样共同限定目的片段？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="primer"><button type="button" data-group="primer" data-value="both" aria-pressed="true">双引物</button><button type="button" data-group="primer" data-value="one" aria-pressed="false">缺反向引物</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="两条引物，怎样共同限定目的片段？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>目标性状、基因功能与序列信息有助于筛选目的基因。教材用 Bt 抗虫棉作例，目的基因可由人工合成、PCR 或从基因文库获取。PCR 需要模板、两条方向相对的引物、四种脱氧核苷三磷酸、耐热 DNA 聚合酶与适宜缓冲体系。变性以高温分开双链，复性靠互补配对，延伸从引物 3′ 端加核苷酸。常规 PCR 使用 DNA 作模板，若从 RNA 出发需先逆转录。</p><p>双引物模型中，每轮完成后双链总数理想为 2ⁿ。两条原始模板及此前形成的单端限定长链，每轮共留下 2n 个非定长双链分子，所以 n≥1 时定长双链为 2ⁿ−2n，第 3 轮首次出现。第 2 轮的图并列展示两条来自不同产物的新生链作为模板。缺反向引物对照只演示保留方向，不能按 2ⁿ 推算总量。温度与动画节奏均为示意。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 以一分子长双链模板起始，前两轮慢放，随后快进。模型从双链原始模板两端均超过引物界限的情形起算。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1126/science.2448875" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / EXPRESSION VECTOR</p><h2 id="heading2">质粒里已经有目的基因，转录能从哪里开始？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="cassette"><button type="button" data-group="cassette" data-value="full" aria-pressed="true">完整表达盒</button><button type="button" data-group="cassette" data-value="noP" aria-pressed="false">缺目标启动子</button><button type="button" data-group="cassette" data-value="noT" aria-pressed="false">缺目标终止子</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="质粒里已经有目的基因，转录能从哪里开始？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>启动子是转录调控用 DNA 区域，决定何处与何向启动；终止子参与转录终止或 3′ 端形成。起始密码子、终止密码子控制翻译的起止，作用层级不同。图示 RNA 沿表达方向 5′→3′ 生长，省略加工步骤。删除目标启动子后，本模型未设替代启动位点；缺目标终止子时演示读穿目标边界，真实结局还取决于其他序列和宿主。</p><p>复制起点关系到载体在适宜宿主中的维持；筛选标记帮助选择候选。农杆菌路线中，将植物表达盒放入 T-DNA 左右边界之间。图中的筛选标记为载体骨架上的例示元件；真实载体还可以在 T-DNA 内设植物筛选标记。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 植物表达盒结构示意。长短和弧段位置未按真实序列比例绘制。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/322706a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / DELIVERY ROUTES</p><h2 id="heading3">受体变了，目的 DNA 走哪条路线？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="host"><button type="button" data-group="host" data-value="plant" aria-pressed="true">植物 · 农杆菌</button><button type="button" data-group="host" data-value="animal" aria-pressed="false">动物 · 显微注射</button><button type="button" data-group="host" data-value="bacterium" aria-pressed="false">细菌 · 感受态</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="受体变了，目的 DNA 走哪条路线？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>植物路线用农杆菌递送 T-DNA。典型转移中间体是单链 T-DNA，图上只追踪目标片段。载体骨架主要留在细菌端；真实转化可能检出边界外序列。T-DNA 可整合进植物染色体，筛选转化细胞并再生。教材的早期抗虫棉案例采用花粉管通道法，本图以农杆菌法作机制示范。</p><p>动物原核显微注射示意以小鼠受精卵为例，导入后仍需检测稳定整合或表达。大肠杆菌可用 Ca²⁺ 处理获得感受态，再在适宜条件下导入质粒；质粒能否维持取决于复制起点和宿主等条件。DNA 进入和获得可稳定遗传的表达是不同检查点。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 三条常见导入路线的结构与路径示意。动物和细菌图是同一教材步骤的不同宿主案例。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/322706a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1126/science.223.4635.496" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.1073/pnas.77.12.7380" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / GEL & EVIDENCE LADDER</p><h2 id="heading4">样品有 600 bp 条带，能直接判定抗虫吗？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="caseMode"><button type="button" data-group="caseMode" data-value="pass" aria-pressed="true">完整证据</button><button type="button" data-group="caseMode" data-value="silent" aria-pressed="false">只检出 DNA</button><button type="button" data-group="caseMode" data-value="dirty" aria-pressed="false">无模板对照也有带</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="样品有 600 bp 条带，能直接判定抗虫吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>凝胶中的 DNA 在此条件下从负极向正极迁移。相同构象的线性 DNA 较短者一般迁移更远，M 为长度参照。已知阳性验证该批反应能扩增；无模板对照监测可能的污染。若无模板对照出现 600 bp 条带，应查明原因并复测。阳性不出带时不能用该轮阴性判定样品。与预期大小相符只支持检出相应序列，确认基因组整合可检查插入接头等证据。</p><p>转录检测可将 RNA 逆转录为 cDNA 后用 PCR 扩增，配无逆转录对照监测残余 DNA；蛋白可用特异抗体检测。抗虫鉴定按同样条件饲喂适龄幼虫，比较候选与非转基因对照。这里的“完整证据”表示四层观察均支持结论，稳定遗传仍需整合位点或后代验证。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 600 bp、凝胶条带和饲喂结果均为课堂模拟。以同一套判据区分序列、转录、蛋白和表型证据。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1126/science.223.4635.496" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.3791/3923" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://doi.org/10.1373/clinchem.2008.112797" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 3 章第 2 节，抗虫棉案例、四步流程和 PCR／凝胶实验。</span></li><li id="ref-2"><a href="https://doi.org/10.1126/science.2448875" target="_blank" rel="noopener noreferrer">[2] Saiki et al., 1988 · Science ↗</a><span>耐热聚合酶与两条引物定向扩增 DNA。</span></li><li id="ref-3"><a href="https://doi.org/10.1038/322706a0" target="_blank" rel="noopener noreferrer">[3] Stachel et al., 1986 · Nature ↗</a><span>农杆菌 T-DNA 转移早期产生线性单链中间体。</span></li><li id="ref-4"><a href="https://doi.org/10.1126/science.223.4635.496" target="_blank" rel="noopener noreferrer">[4] Horsch et al., 1984 · Science ↗</a><span>区分再生植物中外源基因的检出、表达与后代遗传。</span></li><li id="ref-5"><a href="https://doi.org/10.1073/pnas.77.12.7380" target="_blank" rel="noopener noreferrer">[5] Gordon et al., 1980 · PNAS ↗</a><span>小鼠受精卵原核显微注射的早期研究。</span></li><li id="ref-6"><a href="https://doi.org/10.3791/3923" target="_blank" rel="noopener noreferrer">[6] Lee et al., 2012 · Journal of Visualized Experiments ↗</a><span>琼脂糖凝胶分离 DNA 与长度参照。</span></li><li id="ref-7"><a href="https://doi.org/10.1373/clinchem.2008.112797" target="_blank" rel="noopener noreferrer">[7] Bustin et al., 2009 · Clinical Chemistry ↗</a><span>PCR 中无模板和无逆转录等对照的设计原则。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>基因工程的基本操作程序 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">基因工程的基本操作程序 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">四步顺序</th><td>筛选和获取目的基因 → 构建基因表达载体 → 导入受体 → 检测与鉴定。</td></tr><tr><th scope="row">PCR</th><td>热变性分开双链；引物互补复性；耐热聚合酶从引物 3′ 端按 5′→3′ 延伸。</td></tr><tr><th scope="row">表达盒</th><td>启动子和终止子属于转录层级；起始与终止密码子属于翻译层级。</td></tr><tr><th scope="row">导入</th><td>植物常用农杆菌法，受精卵可显微注射，大肠杆菌可制成感受态。</td></tr><tr><th scope="row">条带对照</th><td>样品带与预期位置一致，且阳性和无模板对照符合预期，才支持检出目标大小片段。</td></tr><tr><th scope="row">分层检测</th><td>DNA 检序列；cDNA PCR 检转录；特异抗体检蛋白；同条件对照饲喂检表型。</td></tr><tr><th scope="row">证据边界</th><td>一个层面的阳性不能替代下一层检测；基因组整合和遗传稳定性还要单独验证。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={primer:'both',cassette:'full',host:'plant',caseMode:'pass'};
+const ink=C.ink,blue='#315781',teal='#127a69',gold='#94601f',purpleDNA='#70518d',red='#ad4038',dim='#455e64';
+const prog=(t,a,b)=>clamp((t-a)/(b-a));
+const lensTitle=['热变性','引物复性','从 3′ 端延伸'];
+const temps=['95 ℃','约 55 ℃','约 72 ℃'];
+function phaseOf(t){
+  if(t<.57)return {cycle:1,progress:t/.57};
+  if(t<.82)return {cycle:2,progress:(t-.57)/.25};
+  return {cycle:Math.min(8,2+Math.floor((t-.82)/.18*7)),progress:1};
+}
+function copies(n,both){
+  const total=2**n;
+  return {total:both?total:null,exact:both&&n>0?total-2*n:0};
+}
+function templateLine(x1,x2,y,color){
+  return spark(`M${x1} ${y}H${x2}`,color,6)+
+    many(Math.floor((x2-x1)/15),i=>P(`M${x1+9+i*15} ${y-4}v8`,'none','#ffffff9a',1.3));
+}
+function pairing(x1,x2,y1,y2,opacity){
+  return O(opacity,many(4,i=>spark(`M${mix(x1+6,x2-6,i/3)} ${y1+4}V${y2-4}`,'#8c9f96',1.4,'2 3')));
+}
+function pcrScene(u,cycle,both){
+  const first=cycle===1;
+  const separation=prog(u,0,.27),anneal=prog(u,.30,.52),grow=prog(u,.60,.94);
+  const mainY=324,upper=mainY-mix(15,52,separation),lower=mainY+mix(15,60,separation);
+  const x0=104,x1=465,left=153,right=418,fw=214,rv=357;
+  const shortTop=!first,shortBottom=!first&&both;
+  const topColor=shortTop?teal:blue,bottomColor=shortBottom?teal:blue;
+  const topX=shortTop?left:x0,bottomEnd=shortBottom?right:x1;
+  const forwardEnd=mix(fw,bottomEnd,grow),reverseEnd=mix(rv,topX,grow);
+  const upPrimer=upper+mix(54,24,anneal),loPrimer=lower+mix(54,24,anneal);
+  let a=tile(42,87,503,75,first?'起始 · 一分子长双链 DNA':'并列查看可用的模板链',
+    first?'两条母链方向相反':both?'两条新生模板各有一端由引物限定':'新生链缺少可供正向引物复用的结合位点',blue)+
+    R(left-2,191,right-left+4,44,'#e8f3ef','#b1d0c2',7)+
+    txt(286,219,'两引物界定的目标区','middle',teal,17,800)+
+    spark(`M${left} 239V459M${right} 239V459`,'#8faba0',1.3,'4 6');
+  if(first&&separation<.99)a+=O(1-separation,many(22,i=>P(`M${112+i*16} ${upper+4}V${lower-4}`,'none','#95a8b3',1.5)));
+  a+=templateLine(topX,x1,upper,topColor)+templateLine(x0,bottomEnd,lower,bottomColor)+
+    txt(topX-12,upper+6,'5′','end',topColor,18,750)+txt(x1+12,upper+6,'3′','start',topColor,18,750)+
+    txt(x0-12,lower+6,'3′','end',bottomColor,18,750)+txt(bottomEnd+12,lower+6,'5′','start',bottomColor,18,750);
+  if(u>=.30){
+    a+=pairing(left,fw,lower,loPrimer,anneal)+templateLine(left,fw,loPrimer,gold)+txt(left-9,loPrimer+6,'5′','end',gold,16,800)+
+        (grow>0?arrow(`M${fw} ${loPrimer}H${forwardEnd}`,teal):'')+
+        txt((grow>0?forwardEnd:fw)+12,loPrimer+6,'3′','start',grow>0?teal:gold,16,800);
+    if(!first&&!both)a+=label(102,456,'原始下链仍可重复作模板');
+    if(both){
+      a+=pairing(rv,right,upper,upPrimer,anneal)+templateLine(rv,right,upPrimer,gold)+txt(right+9,upPrimer+6,'5′','start',gold,16,800)+
+        (grow>0?arrow(`M${rv} ${upPrimer}H${reverseEnd}`,teal):'')+
+        txt((grow>0?reverseEnd:rv)-12,upPrimer+6,'3′','end',grow>0?teal:gold,16,800);
+    }else a+=label(352,335,'无反向引物');
+  }
+  const k=Math.min(2,Math.floor(u*3));
+  return a+['变性','复性','延伸'].map((name,i)=>{
+    const x=44+169*i;
+    return R(x,522,160,83,i===k?'#e5f2ec':'#f2f5f1',i===k?'#8fbbb0':'#d6e0d9',9)+
+      txt(x+80,556,name,'middle',i===k?teal:ink,19,800)+txt(x+80,582,temps[i],'middle',dim,17);
+  }).join('');
+}
+function copyEvidence(n,both){
+  const p=plot('ops-pcr-copies',685,151,439,274,[0,1,2,3,4,5,6,7,8],[0,64,128,192,256,288],
+    '理想长模板模型 · 已完成循环','循环次数','双链分子数');
+  const data=Array.from({length:n+1},(_,x)=>({x,...copies(x,both)}));
+  const latest=data.at(-1);
+  const plotLine=(key,color,dash='')=>line(data.map(d=>({x:d.x,y:d[key]})),p,color,3.7,dash)+chartDot(p,n,latest[key],color,6);
+  return p.svg+scan(p,n)+(both?plotLine('total',blue,'8 5'):'')+plotLine('exact',teal)+
+    tile(624,504,250,66,both?'总双链 · '+latest.total:'总双链 · 不套用倍增',both?'蓝色虚线 · 2ⁿ':'单引物情景',blue,'#edf3fa')+
+    tile(888,504,257,66,'定长双链 · '+latest.exact,'绿色实线 · 两端由引物限定',teal)+
+    rScript(640,609,['ggplot(pcr, aes(cycle, dsDNA, linetype = product)) +','geom_line() + geom_point()  # ideal model']);
+}
+function view1(t){
+  const both=state.primer==='both',{cycle,progress}=phaseOf(t),n=progress>=.94?cycle:cycle-1;
+  const i=Math.min(2,Math.floor(progress*3)),count=copies(n,both);
+  const body=[
+    '高温使双链分开。两条模板仍然各有明确的 5′ 和 3′ 方向。',
+    both?'两条引物分别和相反模板互补，3′ 端朝向目标区。':'去掉反向引物后，保留正向引物的互补位置。后续缺少另一方向的有效扩增。',
+    both?(cycle===1?'耐热 DNA 聚合酶从引物 3′ 端延伸。第一轮的新生链只有一端由引物确定。':'短模板使一部分新生链两端定长。第三轮起才得到两条链都定长的双链。'):'只能在可结合正向引物的模板上延伸，本模型没有定长双链积累。'
+  ];
+  draw(1,headings('双链方向与引物位置','区分总双链和定长双链')+pcrScene(progress,cycle,both)+copyEvidence(n,both));
+  say(1,'PCR / 第 '+cycle+' 轮',lensTitle[i]+' · '+temps[i],body[i],
+    '已完成 '+n+' 轮 · 定长双链 '+count.exact,'理想模型按一分子长双链起算。第 1、2 轮慢放，之后快进。');
+}
+
+function arcD(x,y,r,a,b){
+  const at=deg=>[x+r*Math.cos(deg*Math.PI/180),y+r*Math.sin(deg*Math.PI/180)].map(v=>v.toFixed(2)).join(' ');
+  return `M${at(a)}A${r} ${r} 0 ${b-a>180?1:0} 1 ${at(b)}`;
+}
+function vectorRing(x,y,r){
+  return E(x,y,r,r,'#eef4f7',blue)+E(x,y,r-7,r-7,'#f7f8f6','#9cb4c5')+
+    spark(arcD(x,y,r,-147,-35),teal,9)+spark(arcD(x,y,r,21,85),purpleDNA,8)+
+    spark(arcD(x,y,r,125,190),gold,8);
+}
+function vectorArt(mode){
+  return vectorRing(292,323,126)+txt(292,317,'重组载体','middle',ink,24,800)+
+    txt(292,348,'环状双链 DNA','middle',dim,17)+
+    call(42,136,186,250,'左边界 LB')+call(392,136,394,251,'右边界 RB')+
+    call(43,477,169,353,'复制起点','供相容宿主维持')+call(373,477,355,431,'筛选标记','骨架元件示意')+
+    txt(294,93,'绿色弧段 · 可转移的 T-DNA','middle',teal,19,800)+
+    tile(43,560,503,59,mode==='full'?'目标表达盒位于两边界之间':mode==='noP'?'保留 Bt · 缺少目标启动子':'保留 Bt · 缺少目标终止子','',teal);
+}
+function cassetteArt(t,mode){
+  const promoter=mode!=='noP',term=mode!=='noT';
+  const initiated=promoter&&t>=.28;
+  const end=term?1014:1120;
+  const x=mix(731,end,prog(t,.28,.84));
+  let a=tile(624,86,522,71,'放大 T-DNA 中的表达盒','从左向右读取所示转录方向',teal)+
+    spark('M637 300H1140',blue,5)+spark('M637 323H1140',blue,5)+
+    P('M646 286v51M1135 286v51','none','#7d9c94',3)+
+    txt(646,274,'LB','middle',dim,17,750)+txt(1135,274,'RB','middle',dim,17,750)+
+    R(691,282,67,60,promoter?'#f2e2c5':'#f8f4ed',promoter?gold:'#b59a84',6)+
+    P('M776 282H934L963 311L934 342H776Z','#acdacf','#378e7b',2)+
+    R(983,282,68,60,term?'#dfd4ea':'#f6f1f6',term?purpleDNA:'#a290af',6)+
+    txt(724,315,promoter?'P':'缺 P','middle',ink,18,800)+txt(856,318,'Bt','middle',ink,22,800)+
+    txt(1017,315,term?'T':'缺 T','middle',ink,18,800)+
+    label(671,209,'启动子')+label(817,209,'目的基因')+label(971,209,'终止子');
+  if(initiated){
+    const run=t<.84?1:1-prog(t,.84,.96);
+    a+=O(run,P(`M${x} 364v65`,'none','#a393b7',1.5)+E(x,350,23,15,'#bfc6e0','#6e80a6')+E(x-6,345,12,10,'#d5dcf0','#8292b1'))+
+      spark(`M731 434H${Math.max(733,x-4)}`,purpleDNA,5)+
+      txt(712,441,'5′','end',purpleDNA,16,800)+txt(Math.min(x+8,1131),441,'3′','start',purpleDNA,16,800)+
+      txt(625,445,'RNA','start',purpleDNA,18,800);
+  }
+  return a+tile(624,513,523,87,!promoter?'本模型未启动转录':initiated?(t<.84?'RNA 聚合酶沿表达盒移动':term?'转录在目标边界附近结束':'观察到转录读穿'):'等待转录启动',
+    !promoter?'图中未设其他可用启动子':term?'转录起止与翻译起止属于不同层级':'RNA 越过目标终止区，继续延伸',
+    promoter?purpleDNA:red,'#f1edf6');
+}
+function view2(t){
+  const mode=state.cassette,stage=t<.28?0:t<.84?1:2;
+  draw(2,headings('读出重组载体的功能区域','跟踪 RNA 聚合酶与转录本')+vectorArt(mode)+cassetteArt(t,mode));
+  say(2,'VECTOR / 0'+(stage+1),['定位表达盒','观察是否启动','比较 RNA 终点'][stage],
+    mode==='noP'?'保留 Bt 序列，但图示表达盒失去了目标启动子，模型没有替代启动位点。':
+    mode==='noT'?'目标终止子缺失，图上 RNA 延伸越过原定边界。实际转录结果还取决于周围序列。':
+    '启动子为转录启动提供条件。RNA 聚合酶经过 Bt，终止区域参与结束转录。',
+    mode==='noP'?'无转录启动':stage===2?(mode==='full'?'到达目标终止区':'越过目标终止区'):stage===0?'查看启动条件':'已产生新生 RNA',
+    '启动子和终止子是 DNA 上的转录元件。起始密码子和终止密码子用于翻译。');
+}
+
+const routeInfo={
+  plant:{
+    title:'叶盘 · 农杆菌 T-DNA 递送',end:'筛选转化细胞并再生',
+    steps:[['接触外植体','携带载体的农杆菌接触叶盘的细胞。'],['递送 T-DNA','典型转移中间体为单链，表达盒随 T-DNA 进入。'],['进入植物核','T-DNA 可整合进植物染色体，图示一条成功路径。'],['筛选与再生','选得候选转化细胞后培养再生，仍需验证结果。']],
+    note:'教材中的早期抗虫棉用花粉管通道法。本图演示另一条植物导入路径。'
+  },
+  animal:{
+    title:'受精卵 · 原核显微注射',end:'胚胎发育与后续验证',
+    steps:[['固定受精卵','吸持管固定受精卵，显微镜下定位原核。'],['定位后送针','注射针穿过卵外结构，进入所选原核。'],['释放外源 DNA','外源 DNA 到达原核，稳定整合还需检测。'],['发育与鉴定','对发育后的个体检测整合、表达及所需性状。']],
+    note:'以动物受精卵原核注射作例。注射成功仅说明 DNA 到达图示部位。'
+  },
+  bacterium:{
+    title:'细菌 · 感受态摄取质粒',end:'相容质粒维持并筛选',
+    steps:[['制备感受态','Ca²⁺ 处理是教材所举的感受态制备方式。'],['外源质粒接近','质粒带有适合该受体的复制起点与筛选标记。'],['质粒进入细胞','在适宜条件下，部分受体可摄取外源质粒。'],['维持与筛选','相容的质粒可在受体内维持，之后筛选并检验。']],
+    note:'质粒可位于拟核之外。能否稳定维持取决于质粒和宿主。'
+  }
+};
+function tracePoint(points,t){
+  const j=t*(points.length-1),i=Math.floor(j);
+  const a=points[i],b=points[i+1]??a;
+  return [mix(a[0],b[0],j-i),mix(a[1],b[1],j-i)];
+}
+function shortDNA(x,y,color=teal,s=1){
+  return G(x,y,s,P('M-21 4q8-14 19-7t22 2','none',color,3.8)+
+    P('M-19 8q8-14 19-7t20 2','none',color,1.7));
+}
+function rod(x,y,s){
+  return G(x,y,s,P('M-72-28Q-96-23-96 4Q-96 30-70 35Q4 44 72 28Q91 20 88-6Q84-30 58-32Z','#deede6','#6e9d92',2.4)+
+    P('M-73-20Q-87-17-87 4Q-86 23-68 26Q4 34 68 21Q80 16 80-7Q75-21 57-23Z','none','#b8d5c8',1.6)+
+    many(15,i=>E(-64+i*9,(i*17)%34-17,2,2,'#80aaa1')));
+}
+function plantArt(t){
+  if(t>=.79)return regenerationArt(t);
+  const go=prog(t,.21,.66),after=t>=.69;
+  const [x,y]=tracePoint([[162,302],[218,313],[265,324],[316,330],[376,337]],go);
+  return R(232,186,300,307,'#e9f2df','#829c74',19)+
+    R(241,196,282,288,'#f5f8ed','#a2b398',16)+
+    P('M273 378Q253 327 273 275Q292 239 323 235Q305 286 313 335Q314 380 275 414Z','#e0edd8','#bad0af',1.6)+
+    rod(131,303,.79)+G(143,304,.24,vectorRing(0,0,64))+
+    E(385,339,75,67,'#e5e5f3','#8b8eb3')+
+    P('M346 347q13-48 32-23t23 1q21-22 29 0t-19 18q-15 2-19 13t-31 6','none','#746993',3.2)+
+    spark('M166 305C236 308 272 327 379 337','#80ab9b',2,'5 6')+
+    (go>0&&!after?P(`M${x-18} ${y+6}q10-18 20-6t18-5`,'none',teal,4):'')+
+    (after?P('M371 321q5 2 12 14t16-4','none',teal,5):'')+
+    call(43,171,151,291,'农杆菌')+call(361,159,416,213,'植物细胞壁')+
+    call(359,438,385,360,'植物细胞核')+
+    call(42,421,143,304,'载体骨架','示意留在细菌端')+
+    label(265,515,after?'T-DNA 整合示意':'T-DNA 转移路径');
+}
+function regenerationArt(t){
+  const growth=prog(t,.81,.97);
+  const shoots=G(465,415,.35+.65*growth,
+    P('M0 0Q-4-58 6-106M1-39Q-14-57-36-66M1-63Q24-73 42-82M0 0Q-8 15-29 21M0 0Q4 16 22 27','none','#488369',3)+
+    P('M-33-65Q-55-63-53-86Q-28-89-24-58ZM19-72Q19-97 48-99Q58-80 19-72ZM6-103Q-9-118 7-135Q22-124 6-103Z','#a2c28d','#51866b',2));
+  return E(122,369,72,40,'#eef5ed','#9ebfb0')+E(122,365,65,31,'#e6efe5','#b4cabd')+
+    E(119,363,39,20,'#8eaf79','#598764')+P('M89 364q26 10 57-7M112 370l-3-9m20 3-1-9','none','#c7d6b4',2)+
+    E(286,369,66,40,'#eef5ed','#9ebfb0')+E(286,365,61,31,'#e6efe5','#b4cabd')+
+    many(12,i=>E(263+(i*17)%48,352+(i*11)%29,8,6,'#c9d19a','#9aa773'))+
+    arrow('M192 366H218','#829e8d')+arrow('M352 366H385','#829e8d')+
+    E(465,418,50,17,'#dcebdd','#aac0ad')+shoots+
+    label(65,457,'外植体 · 叶盘')+label(224,457,'筛选候选细胞')+label(403,457,'再生植株');
+}
+function animalArt(t){
+  const insert=prog(t,.20,.56),released=prog(t,.54,.75);
+  const tip=mix(458,323,insert);
+  return E(282,344,136,128,'#e4eff3','#759eaa')+E(282,344,122,115,'#f7e8d1','#bc987c')+
+    many(31,i=>{const a=i*2.397,r=22+(i*19)%85;return E(282+Math.cos(a)*r,344+Math.sin(a)*r*.87,1.9,1.9,'#b6937f7a')})+
+    E(245,354,38,35,'#efe4f0','#a381a8')+E(327,313,43,40,'#dde8f4','#7290b4')+
+    E(248,352,7,6,purpleDNA)+E(329,309,8,7,blue)+E(299,224,7,6,'#ead7c6','#af8d75')+
+    P('M42 308H127L164 326V363L126 382H42V363H119L143 349V338L118 327H42Z','#dce9ef','#7797a6',2)+
+    P(`M548 282L${tip+40} 296L${tip} 312L${tip+46} 309L548 302Z`,'#d3e4eb','#638996',1.6)+
+    (released>0?shortDNA(327+17*released,313+16*released,teal,.66):'')+
+    call(41,187,125,317,'吸持管')+call(393,183,tip+56,297,'注射针')+
+    call(382,460,340,340,'被注射的原核')+call(43,460,194,411,'受精卵');
+}
+function bacteriumArt(t){
+  const uptake=prog(t,.27,.64),[x,y]=tracePoint([[73,233],[133,248],[205,272],[265,296],[317,318]],uptake);
+  return rod(325,344,2.09)+
+    P('M335 359q-22-14-15-30t48-4q43-15 56 10t-38 23-21-9-11 13','none','#788c8b',3.2)+
+    spark('M78 237C141 239 204 270 317 318','#80ab9b',2,'5 6')+
+    G(x,y,uptake>.88?.38:.48,vectorRing(0,0,42))+
+    (uptake<.85?many(5,i=>E(127+i*18,263+Math.sin(i+t*10)*11,4,4,'#b18c55','#fff')):'')+
+    call(43,174,x,y,'外源质粒')+call(401,199,459,296,'细胞膜与细胞壁')+call(397,459,400,348,'拟核')+
+    label(46,478,uptake>.88?'质粒已进入细胞':'Ca²⁺ 处理可诱导感受态');
+}
+function view3(t){
+  const mode=state.host,entry=routeInfo[mode],i=t<.22?0:t<.52?1:t<.77?2:3;
+  const [current,body]=entry.steps[i];
+  const stage=({plant:plantArt,animal:animalArt,bacterium:bacteriumArt}[mode])(t)+
+    tile(43,91,501,58,entry.title,'',teal)+tile(43,569,501,50,entry.end,'',blue);
+  const ladder=entry.steps.map(([title],j)=>{
+    const y=104+j*109,on=j===i,color=on?teal:'#718882';
+    return (j<3?P(`M652 ${y+54}v52`,'none','#c0cdc4',2):'')+
+      E(652,y+32,17,17,on?color:'#fff',color)+txt(652,y+38,String(j+1),'middle',on?'#fff':dim,17,800)+
+      tile(684,y,464,74,title,j===i?'当前观察':j<i?'已演示':'待演示',color,on?'#e6f3ed':'#f5f7f2');
+  }).join('')+tile(624,558,526,59,'导入、稳定维持与表达要分开验证','',gold,'#fbf2e7');
+  draw(3,headings('受体结构与 DNA 路径','导入过程检查点')+stage+ladder);
+  say(3,'DELIVERY / 0'+(i+1),current,body,entry.end,entry.note);
+}
+
+const bands=[1200,900,600,400,250];
+const targetBP=600;
+const sizes=bp=>216+Math.log(1200/bp)/Math.log(1200/250)*243;
+const evidenceCases={
+  pass:{sample:[600],positive:[600],ntc:[],rna:true,protein:true,phenotype:true},
+  silent:{sample:[600],positive:[600],ntc:[],rna:false,protein:false,phenotype:false},
+  dirty:{sample:[600],positive:[600],ntc:[600],rna:null,protein:null,phenotype:null}
+};
+function assayCase(key){
+  const d=evidenceCases[key],usable=d.positive.includes(targetBP)&&!d.ntc.includes(targetBP);
+  return {...d,usable,dna:usable?d.sample.includes(targetBP):null};
+}
+function gelArt(t,data){
+  const go=prog(t,.10,.51),ready=t>=.51;
+  const lanes=[['M',bands],['样品',data.sample],['阳性',data.positive],['无模板',data.ntc]];
+  const read=ready?(data.usable?'样品目标带 · 600 bp':'无模板对照出现目标带'):'DNA 从加样端向正极迁移';
+  const wells=lanes.map(([name,fragments],i)=>{
+    const x=152+i*99;
+    const warn=i===3&&!data.usable&&ready;
+    return R(x-38,157,76,348,warn?'#5b3948':'#263a51','none',7)+
+      R(x-29,171,58,14,'#152238','#536981',4)+
+      fragments.map(bp=>{
+        const y=mix(180,sizes(bp),go);
+        return O(prog(t,0,.08),R(x-28,y-5,56,11,warn?'#ffb3ab':bp===600?'#c2f4e3':'#c3d6ea','none',4)+
+          R(x-22,y-2,44,4,'#ffffff','none',2));
+      }).join('')+
+      txt(x,142,name,'middle',ink,18,800);
+  }).join('');
+  return R(80,152,448,360,'#203145','#36506b',13)+wells+
+    label(42,89,'−  加样端')+label(431,516,'+  正极')+
+    arrow('M497 188v286','#d7f1ec')+
+    (ready?bands.map(bp=>R(44,sizes(bp)-12,63,23,'#fff','#c5d9d4',5)+
+      txt(100,sizes(bp)+5,String(bp),'end',bp===600?teal:ink,17,bp===600?800:600)).join('')+
+      spark(`M104 ${sizes(targetBP)}H467`,'#a9cfbe',1.15,'5 7'):'')+
+    tile(43,565,501,56,read,'',data.usable?teal:red,data.usable?'#eaf4ef':'#f8eae8');
+}
+const assayLabels=[
+  ['DNA 序列','PCR · 检出目标大小片段'],
+  ['RNA 转录','逆转录后 PCR · 配无逆转录对照'],
+  ['蛋白质产物','特异抗体检测 · 核对目标条带'],
+  ['个体抗虫性','同条件饲喂 · 比较幼虫表现']
+];
+function feedingIcon(x,y,affected){
+  const shape='M-22 9Q-7-17 13-10Q25-2 9 9Q-6 16-22 9Z';
+  const bite=affected?'':'M8-12q1 10 9 9';
+  return G(x,y,1,P(shape,'#dcebcf','#779c77',1.6)+P('M-16 8Q-3 0 14-7','none','#709071',1.4)+
+    (bite?P(bite,'none','#f6f1e8',4):'')+
+    O(affected?.6:1,many(5,i=>E(-11+i*5,-3-((i*2)%5),3.5,3.5,'#bda66c','#8b784a'))));
+}
+function proofRows(t,data){
+  const revealed=[.51,.66,.79,.93];
+  const readings=[data.dna,data.rna,data.protein,data.phenotype];
+  return assayLabels.map(([name,method],i)=>{
+    const active=t>=revealed[i],value=readings[i],x=625,y=87+i*132;
+    const status=!active?'待读取':value===null?i===0?'该轮无效':'暂不判读':value?i===3?'支持抗虫':'支持检出':i===3?'未见差异':'未检出';
+    const fill=!active?'#f4f7f4':value===null?'#f9eeeb':value?'#eaf4ef':'#f6f1e8';
+    const color=!active?dim:value===null?red:value?teal:gold;
+    return tile(x,y,524,95,name,method,color,fill)+
+      R(x+386,y+18,117,33,'#fff',color,8)+txt(x+444,y+41,status,'middle',color,17,800)+
+      (i<3?arrow(`M${x+22} ${y+102}v24`,'#8fa99e'):active&&value!==null?feedingIcon(x+443,y+72,value):'');
+  }).join('');
+}
+function view4(t){
+  const data=assayCase(state.caseMode);
+  const labelText=t<.51?'先读泳道与对照':!data.usable?'对照异常，先查明原因':t<.93?'分层读取后续证据':'用饲喂对照判断抗虫性';
+  const result=t<.51?'等待条带迁移':!data.usable?'暂停本轮判读 · 检查可能的污染':
+    t<.93?'DNA 目标大小条带出现':data.phenotype?'四层观察支持抗虫表型':'仅有目标大小 DNA 条带';
+  draw(4,headings('课堂模拟 · 600 bp PCR 凝胶','证据按层级逐项读取')+gelArt(t,data)+proofRows(t,data));
+  say(4,'VALIDATION / '+(t<.51?'跑胶':t<.93?'判读':'汇总'),labelText,
+    !data.usable&&t>=.51?'无模板对照与样品在相同位置出现目标带，提示可能有污染。先排查并复测。':
+    t>=.93?(data.phenotype?'本模拟中，候选叶片组幼虫取食受抑，非转基因对照组未出现同样结果。':'本模拟中，候选与非转基因对照的饲喂结果未见差异，也未检出目标 RNA 和蛋白。'):
+    'M 是长度标准；阳性对照验证反应可扩增，无模板对照检查背景。样品中的目标带是 DNA 层证据。',
+    result,'四层证据都支持时，若要证明稳定遗传，仍需整合与后代验证。');
+}
+
+const views=[view1,view2,view3,view4],durations=[18,11,13,13],initialTimes=[.29,.50,.37,.58];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={
+  primer:value=>change(0,'primer',value),cassette:value=>change(1,'cassette',value),
+  host:value=>change(2,'host',value),caseMode:value=>change(3,'caseMode',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

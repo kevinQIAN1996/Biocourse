@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>重组DNA技术的基本工具｜从酶切末端到质粒 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+.intro h1 span{display:inline-block}</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从酶切末端到质粒<small>RECOMBINANT DNA TOOLKIT / 03.01</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 3 章 · 第 1 节</p><h1><span>重组DNA技术的</span><wbr><span>基本工具</span></h1><p class="subtitle">读出切口、配对末端、修复骨架。用四幅图追踪一段 DNA 如何接入质粒，以及怎样给出实验依据。</p></div>
+<div class="intro-note"><i>RECOMBINANT DNA TOOLKIT</i><p>酶认哪段序列？切完留下什么末端？怎样知道最后得到的是目标产物？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 限制酶</a><a href="#figure2">02 DNA 连接酶</a><a href="#figure3">03 质粒载体</a><a href="#figure4">04 粗提取与鉴定</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / RESTRICTION ENDONUCLEASES</p><h2 id="heading1">识别序列一样长，切完的形状也一样吗？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="restriction"><button type="button" data-group="restriction" data-value="eco" aria-pressed="true">EcoRI</button><button type="button" data-group="restriction" data-value="sma" aria-pressed="false">SmaI</button><button type="button" data-group="restriction" data-value="bam" aria-pressed="false">BamHI</button><button type="button" data-group="restriction" data-value="bgl" aria-pressed="false">BglII</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="识别序列一样长，切完的形状也一样吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>常用Ⅱ型限制酶识别特定双链 DNA 序列，并在特定位置水解磷酸二酯键。图中四种酶的识别序列都可在两条链各自的 5′→3′ 方向读出相同字母顺序。EcoRI 错位切开产生 5′-AATT 突出端；SmaI 在相对位置切开形成平末端。BamHI 和 BglII 的识别序列不同，但均产生 5′-GATC 突出端。</p><p>许多细菌的限制—修饰系统能限制外源 DNA；宿主相应序列可通过甲基化获得保护。图中的左右分离同时画出突出端间互补碱基分开，限制酶实际水解的是同链的磷酸二酯键。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 常用Ⅱ型限制酶的切位示意。上链统一按 5′→3′ 写，末端从该突出链的 5′ 端读。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1073/pnas.69.11.3448" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://www.neb.com/en/tools-and-resources/selection-charts/alphabetized-list-of-recognition-specificities" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / LIGATION & COMPATIBILITY</p><h2 id="heading2">碱基已经配对，为什么还要缝合骨架？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="pair"><button type="button" data-group="pair" data-value="same" aria-pressed="false">EcoRI / EcoRI</button><button type="button" data-group="pair" data-value="mixed" aria-pressed="true">BamHI / BglII</button><button type="button" data-group="pair" data-value="mismatch" aria-pressed="false">EcoRI / BamHI</button><button type="button" data-group="pair" data-value="blunt" aria-pressed="false">SmaI / SmaI</button></div><div class="segmented" role="group" aria-label="ligase"><button type="button" data-group="ligase" data-value="none" aria-pressed="false">无连接酶</button><button type="button" data-group="ligase" data-value="coli" aria-pressed="false">大肠杆菌连接酶</button><button type="button" data-group="ligase" data-value="t4" aria-pressed="true">T4 连接酶</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="碱基已经配对，为什么还要缝合骨架？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>互补黏性末端先退火，两条链上各保留一个缺口。连接酶在相邻的 3′-OH 与 5′-磷酸基之间形成磷酸二酯键，无需逐个补入新核苷酸。DNA 聚合酶则以模板为依据延伸核酸链。平末端没有单链突出端，可以对齐，但没有跨接头的突出端互补退火。</p><p>按教材和常用实验条件，E. coli DNA 连接酶主要用于黏性末端，T4 DNA 连接酶可连接黏性和平末端。模型假定末端基团与辅因子合适，只演示指定片段的直接连接。BamHI 左片段与 BglII 右片段接出 GGATCT；此接头不再被 BamHI 或 BglII 识别。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 按上图定义切取第一种酶的左片段、第二种酶的右片段；右图用同一序列模型给出判据。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.neb.com/en/tools-and-resources/selection-charts/alphabetized-list-of-recognition-specificities" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://www.neb.com/en/products/m0202-t4-dna-ligase" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://www.neb.com/faqs/how-does-i-e-coli-i-dna-ligase-neb-m0205-differ-from-t4-dna-ligase-neb-m0202" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://www.neb.com/en/tools-and-resources/selection-charts/compatible-cohesive-ends-and-generation-of-new-restriction-sites" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / PLASMID MAP & DIRECTIONALITY</p><h2 id="heading3">看到带标记的菌落，就能判定插入方向吗？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="vector"><button type="button" data-group="vector" data-value="one" aria-pressed="false">EcoRI 单切</button><button type="button" data-group="vector" data-value="two" aria-pressed="true">EcoRI + BamHI 双切</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="看到带标记的菌落，就能判定插入方向吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>许多细菌质粒是染色体外的环状双链 DNA。用作载体的模型质粒有受体可识别的复制起点、可筛选的标记和供插入的切位。其他载体还包括某些噬菌体和动植物病毒；复制或维持方式取决于载体与宿主。</p><p>本双切模型假定酶切完全、目标区内部无这些切位、短切除片段已分离，左右两端互不相容。单切可出现自连及两种插入方向；双切使目标片段的方向受约束。图中只比较三种指定结构，不对真实实验的产物比例作预测。带筛选标记的载体可通过相应选择，是否有正确插入仍需后续核验。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 绘图使用虚拟质粒（骨架 4000 bp，插入 800 bp）。分类柱长表示模型结构长度。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.neb.com/en/tools-and-resources/selection-charts/compatible-cohesive-ends-and-generation-of-new-restriction-sites" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://doi.org/10.1073/pnas.70.11.3240" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / EXTRACTION & DIPHENYLAMINE TEST</p><h2 id="heading4">析出白色丝状物，就能认定它是 DNA 吗？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="extract"><button type="button" data-group="extract" data-value="complete" aria-pressed="true">完整流程</button><button type="button" data-group="extract" data-value="noAlcohol" aria-pressed="false">省略冷酒精</button><button type="button" data-group="extract" data-value="noHeat" aria-pressed="false">省略加热</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="析出白色丝状物，就能认定它是 DNA 吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>研磨破碎组织，过滤并取上清。冷酒精使 DNA 从溶液中析出，可收集丝状物或沉淀。将收集物溶于适宜浓度 NaCl 溶液，与仅有相同 NaCl 溶液的空白平行处理。两管都加二苯胺试剂，按教材条件加热，冷却后比色。</p><p>完整模拟的预期为样品管呈蓝色，空白管无明显蓝色。省略冷酒精的情景只问能否取得后续使用的沉淀；未取得沉淀不代表原液不含 DNA。省略加热不能由未显蓝推断没有 DNA。显色用于定性判读，粗提取产物可能含杂质。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 参照教材洋葱实验的课堂模拟。样品与空白使用相同盐溶液、试剂和各自情景的加热条件。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1042/bj0620315" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 3 章第 1 节，三种基本工具及洋葱 DNA 粗提取与鉴定。</span></li><li id="ref-2"><a href="https://doi.org/10.1073/pnas.69.11.3448" target="_blank" rel="noopener noreferrer">[2] Hedgpeth et al., 1972 · PNAS ↗</a><span>EcoRI 切位邻近 DNA 碱基序列的测定。</span></li><li id="ref-3"><a href="https://www.neb.com/en/tools-and-resources/selection-charts/alphabetized-list-of-recognition-specificities" target="_blank" rel="noopener noreferrer">[3] NEB · Recognition Specificities ↗</a><span>EcoRI、SmaI、BamHI 与 BglII 的识别序列和切位。</span></li><li id="ref-4"><a href="https://www.neb.com/en/products/m0202-t4-dna-ligase" target="_blank" rel="noopener noreferrer">[4] NEB · T4 DNA Ligase ↗</a><span>黏性末端、平末端和双链 DNA 缺口的连接。</span></li><li id="ref-5"><a href="https://www.neb.com/faqs/how-does-i-e-coli-i-dna-ligase-neb-m0205-differ-from-t4-dna-ligase-neb-m0202" target="_blank" rel="noopener noreferrer">[5] NEB · E. coli DNA Ligase ↗</a><span>标准条件下黏性末端与平末端的区别。</span></li><li id="ref-6"><a href="https://www.neb.com/en/tools-and-resources/selection-charts/compatible-cohesive-ends-and-generation-of-new-restriction-sites" target="_blank" rel="noopener noreferrer">[6] NEB · Compatible Cohesive Ends ↗</a><span>识别序列不同的酶可产生相容末端，连接后需重新判断切位。</span></li><li id="ref-7"><a href="https://doi.org/10.1073/pnas.70.11.3240" target="_blank" rel="noopener noreferrer">[7] Cohen et al., 1973 · PNAS ↗</a><span>经典细菌重组质粒的构建与功能验证。</span></li><li id="ref-8"><a href="https://doi.org/10.1042/bj0620315" target="_blank" rel="noopener noreferrer">[8] Burton, 1956 · Biochemical Journal ↗</a><span>DNA 二苯胺显色反应的条件和机理。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>重组DNA技术的基本工具 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">重组DNA技术的基本工具 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">限制酶</th><td>识别特定序列，切断同一条链上的磷酸二酯键。错位切割可形成黏性末端，平齐切割形成平末端。</td></tr><tr><th scope="row">末端相容性</th><td>比较突出端的序列和方向。不同酶也可能留下相容末端，如 BamHI 与 BglII。</td></tr><tr><th scope="row">连接酶</th><td>在相邻 3′-OH 与 5′-磷酸基之间形成磷酸二酯键。T4 可连黏性和平末端；教材常用大肠杆菌连接酶接黏性末端。</td></tr><tr><th scope="row">两类键</th><td>互补配对靠氢键；DNA 同一条链的糖—磷酸骨架靠磷酸二酯键相连。</td></tr><tr><th scope="row">质粒元件</th><td>复制起点支持在适宜宿主内复制；筛选标记用于选择；切位供外源 DNA 接入。</td></tr><tr><th scope="row">方向判断</th><td>两种不相容末端可约束方向。带标记或两组片段同样长，均不足以判断插入方向。</td></tr><tr><th scope="row">粗提取与鉴定</th><td>冷酒精析出，盐溶液复溶，二苯胺加热后与空白比较。预期样品显蓝，仅作定性判断。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={restriction:'eco',pair:'mixed',ligase:'t4',vector:'two',extract:'complete'};
+const ink=C.ink,blue='#315680',teal='#157969',red='#b8483b',gold='#9b641e',grey='#4b6269';
+const stageProgress=(t,a,b)=>clamp((t-a)/(b-a));
+const enzymes={
+  eco:{name:'EcoRI',seq:'GAATTC',top:1,bottom:5},
+  sma:{name:'SmaI',seq:'CCCGGG',top:3,bottom:3},
+  bam:{name:'BamHI',seq:'GGATCC',top:1,bottom:5},
+  bgl:{name:'BglII',seq:'AGATCT',top:1,bottom:5}
+};
+const complement=str=>[...str].map(c=>({A:'T',T:'A',G:'C',C:'G'})[c]).join('');
+const overhang=e=>e.seq.slice(e.top,e.bottom);
+const endDescription=e=>overhang(e)?'5′-'+overhang(e)+' 突出端':'平末端';
+const baseColors={A:'#f2e3ad',T:'#f4d8d1',G:'#cce4f0',C:'#d6ebd9'};
+const pos=i=>135+35*i;
+const splitSlots=e=>[2+e.top,2+e.bottom];
+const full=e=>'CT'+e.seq+'AC';
+function bond(x,y,y2,a,b,strength){
+  if(strength<=0)return '';
+  const n=a==='G'||a==='C'?3:2;
+  return O(strength,many(n,j=>spark(`M${x+(j-(n-1)/2)*4} ${y}V${y2}`,a===complement(b)?'#708078':red,1.5,'3 3')));
+}
+function track(seq,y,first,last,dx,color,row){
+  if(first>=last)return '';
+  const lineY=y+(row===0?-27:27);
+  return P(`M${pos(first)+dx-11} ${lineY}H${pos(last-1)+dx+11}`,'none',color,4.6)+
+    many(last-first,j=>{
+      const i=first+j,x=pos(i)+dx,b=seq[i];
+      return P(`M${x} ${lineY}V${y}`,'none',color,1.8)+E(x,lineY,3.8,3.8,color)+
+        R(x-12,y-13,24,26,baseColors[b],color,5)+txt(x,y+6,b,'middle',ink,18,800);
+    });
+}
+function strands(left,right,dx,dy,strength,joined=false,sameSource=false){
+  const l=[full(left),complement(full(left))],r=[full(right),complement(full(right))];
+  const lc=splitSlots(left),rc=splitSlots(right),ys=[298+dy,350+dy];
+  let pairLines='';
+  for(let i=0;i<10;i++){
+    const owners=lc.map((n,row)=>i<n?'left':i>=rc[row]?'right':'none');
+    if(owners.includes('none'))continue;
+    const x=i<lc[0]?pos(i)-dx:pos(i)+dx;
+    if(owners[0]===owners[1]){
+      const seq=owners[0]==='left'?l:r;
+      pairLines+=bond(x,ys[0]+13,ys[1]-13,seq[0][i],seq[1][i],.69);
+    }else if(strength>0){
+      pairLines+=bond(pos(i),ys[0]+13,ys[1]-13,r[0][i],l[1][i],strength);
+    }
+  }
+  return pairLines+ys.map((y,row)=>{
+    const cut=lc[row],middle=(pos(cut-1)+pos(cut))/2;
+    const color=sameSource?blue:teal;
+    return track(l[row],y,0,cut,-dx,blue,row)+track(r[row],y,rc[row],10,dx,color,row)+
+      (joined?P(`M${pos(cut-1)+11} ${y+(row===0?-27:27)}H${pos(cut)-11}`,'none',gold,5.6):'')+
+      txt(pos(0)-29-dx,y+6,row===0?'5′':'3′','end',blue,19,800)+
+      txt(pos(9)+28+dx,y+6,row===0?'3′':'5′','start',color,19,800)+
+      (joined?E(middle,y+(row===0?-27:27),4,4,gold,'#fff'):'');
+  }).join('');
+}
+function cutLines(e,dy){
+  const [a,b]=splitSlots(e).map(n=>pos(n)-17.5);
+  return P(`M${a} ${241+dy}V${318+dy}H${b}V${405+dy}`,'none',red,2.2)+
+    E(a,271+dy,5.7,5.7,red,'#fff')+E(b,377+dy,5.7,5.7,red,'#fff');
+}
+function cleanLadder(e){
+  const s=full(e),bottom=complement(s);
+  return many(10,i=>bond(pos(i),311,337,s[i],bottom[i],.69))+
+    track(s,298,0,10,0,blue,0)+track(bottom,350,0,10,0,blue,1)+
+    txt(106,304,'5′','end',blue,19,800)+txt(478,304,'3′','start',blue,19,800)+
+    txt(106,356,'3′','end',blue,19,800)+txt(478,356,'5′','start',blue,19,800);
+}
+function enzymeArt(x,y){
+  return G(x,y,1,P('M-67 4C-82-21-60-59-37-59C-15-78 17-65 32-55C50-56 80-40 77-14C78 7 62 23 41 20L23 8Q6-3-9 11L-31 25C-48 26-60 15-67 4Z','#e7d8ed','#786394',2)+
+    P('M-49-18Q-44-46-21-48M13-44Q37-42 53-20','none','#ac94ba',2.3)+
+    P('M-27 14Q-6-13 20 8','none','#fef9fa',4));
+}
+function view1(t){
+  const e=enzymes[state.restriction],q=stageProgress(t,.46,.82),severed=t>=.46;
+  const [up,down]=[e.seq,complement(e.seq)],part=(s,k)=>s.slice(0,k)+' │ '+s.slice(k);
+  const title=t<.24?'读取识别序列':t<.46?'定位两处切点':'查看生成的末端';
+  const cut=severed?strands(e,e,31*q,0,0,false,true):cleanLadder(e);
+  const visual=tile(43,89,500,74,e.name+' · 识别 '+e.seq,'两条链的 5′→3′ 方向相反',blue)+
+    O(1-stageProgress(t,.42,.54),G(294,mix(210,232,stageProgress(t,0,.30)),.80,enzymeArt(0,0)))+
+    O((1-q)*.65,R(183,253,221,142,'#eee6d2','#e7d4a7',9))+
+    cut+O(stageProgress(t,.20,.30)*(1-stageProgress(t,.46,.58)),cutLines(e,0))+
+    tile(43,462,500,85,severed?endDescription(e):'识别区位于米色底框内',severed?'突出序列按自身 5′→3′ 读':'每种酶在两条链上各有一个切点',severed?teal:blue)+
+    txt(46,601,'配对的虚线表示氢键；同色实线表示糖—磷酸骨架。','start',grey,16);
+  const evidence=tile(627,89,523,89,'两条链的切点','切位按识别区左端开始计数',blue)+
+    txt(642,222,'上链','start',grey,18,700)+txt(783,222,'5′ '+part(up,e.top)+' 3′','start',ink,22,750)+
+    txt(642,270,'下链','start',grey,18,700)+txt(783,270,'3′ '+part(down,e.bottom)+' 5′','start',ink,22,750)+
+    tile(627,312,523,83,'同一条链 · 磷酸二酯键','限制酶直接水解的键',red,'#fbefec')+
+    tile(627,410,523,83,'两条链之间 · 氢键','分开的突出端之间失去原有配对',teal)+
+    tile(627,508,523,83,overhang(e)?'错位切开 · 黏性末端':'平齐切开 · 平末端',endDescription(e),blue);
+  draw(1,headings('双链切点放大','读序列、切位与末端')+visual+evidence);
+  say(1,'RESTRICTION / '+e.name,title,
+    '识别区是 '+e.seq+'。从图左向右数，上、下链分别在识别区第 '+e.top+'、'+e.bottom+' 个碱基之后断开。',severed?endDescription(e):'双链识别区',
+    '比较 BamHI 与 BglII：识别序列不同，生成的突出端相同。');
+}
+
+const pairs={same:['eco','eco'],mixed:['bam','bgl'],mismatch:['eco','bam'],blunt:['sma','sma']};
+function ligationModel(pair,ligase){
+  const [left,right]=pairs[pair].map(k=>enzymes[k]),end=overhang(left);
+  const compatible=end===overhang(right);
+  const canSeal=compatible&&(ligase==='t4'||(ligase==='coli'&&end!==''));
+  const junction=canSeal?left.seq.slice(0,left.top)+right.seq.slice(right.top):'';
+  return {left,right,end,compatible,canSeal,junction};
+}
+function view2(t){
+  const m=ligationModel(state.pair,state.ligase);
+  const approach=stageProgress(t,.14,.48),aligned=t>=.48&&m.compatible;
+  const paired=aligned&&m.end!=='',sealed=t>=.76&&m.canSeal;
+  const dx=mix(36,m.compatible?0:20,approach);
+  const tag=sealed?'两条骨架已缝合':aligned?m.end?'碱基已配对 · 骨架留缺口':'平端已对齐 · 骨架留缺口':t<.48?'两段 DNA 接近':'突出端不相容';
+  const [cutA,cutB]=splitSlots(m.left).map(n=>pos(n)-17.5);
+  const visual=tile(43,88,241,74,m.left.name+' 左片段',endDescription(m.left),blue)+
+    tile(297,88,247,74,m.right.name+' 右片段',endDescription(m.right),teal)+
+    (aligned&&!sealed?P(`M${cutA} 246V280M${cutB} 368V403`,'none',red,2)+
+      E(cutA,271,5,5,red,'#fff')+E(cutB,377,5,5,red,'#fff'):'')+
+    (m.canSeal?O(stageProgress(t,.52,.64)*(1-stageProgress(t,.76,.92)),G(286,219,.67,enzymeArt(0,0))):'')+
+    strands(m.left,m.right,dx,0,paired?.85:0,sealed)+
+    tile(43,465,501,84,tag,sealed?'琥珀色短线：新形成的磷酸二酯键':m.compatible?'对齐后逐条检查骨架是否连续':'本组末端无法按本图方式直接配对',sealed?gold:m.compatible?teal:red)+
+    txt(45,601,'上链 5′→3′ 从左到右；下链 5′→3′ 从右到左。','start',grey,16);
+  const detail=sealed?(state.pair==='mixed'?'接头不再被 BamHI 或 BglII 识别':'接头恢复原识别位点'):m.compatible?(m.end?'相容末端可先退火':'平端可对齐，没有突出端'):'突出序列 AATT 与 GATC 不匹配';
+  const result=sealed?'5′-'+m.junction+'-3′':aligned?'尚有两个骨架缺口':!m.compatible&&t>=.48?'无法直接连接':'等待对齐';
+  const condition=state.ligase==='none'?'当前未加入连接酶':!m.compatible?'不相容的末端无法直接拼接':
+    m.canSeal?'当前酶可封合此接头':'该连接酶常规条件不接平末端';
+  const evidence=tile(626,88,523,73,'1  检查相容性',m.compatible?(m.end?'突出端相容 · '+m.end:'两段均为平末端'):'错配 · AATT / GATC',m.compatible?teal:red)+
+    tile(626,179,523,73,'2  查看连接条件',condition,m.canSeal?teal:red)+
+    tile(626,270,523,78,'3  读出接头',result,sealed?gold:blue)+
+    txt(632,393,detail,'start',ink,18,750)+
+    tile(626,430,523,76,'连接酶的任务','封合 3′-OH 与 5′-磷酸基之间的缺口',gold,'#f9f1e3')+
+    tile(626,521,523,76,'聚合酶的任务','根据模板延伸链，逐步加入核苷酸',blue,'#eef2f7');
+  draw(2,headings('DNA 末端装配','相容性、酶条件与产物')+visual+evidence);
+  say(2,'LIGATION / '+(t<.48?'01':t<.76?'02':'03'),tag,
+    sealed?'两条链分别补回磷酸二酯键。'+detail+'。':!m.compatible?'本对照的突出端不相容。':m.end?'互补末端可先退火。两个同链缺口仍需合适的连接酶封合。':'平末端没有可退火的突出链。T4 DNA 连接酶可在适宜条件下将对齐的片段连接。',
+    result,'假定末端的 3′-OH、5′-磷酸基及酶所需辅因子均满足反应条件。');
+}
+
+const backboneLength=4000,insertLength=800;
+const products=[
+  {key:'empty',name:'空载体自连',color:'#78818b'},
+  {key:'forward',name:'正向插入',color:teal},
+  {key:'reverse',name:'反向插入',color:'#7b6194'}
+];
+function vectorProducts(mode){
+  return products.map(p=>({...p,length:p.key==='empty'?backboneLength:backboneLength+insertLength,
+    possible:mode==='one'||p.key==='forward'}));
+}
+function plasmidArc(x,y,r,start,end){
+  if(end-start>=359.99)return plasmidArc(x,y,r,start,start+180)+plasmidArc(x,y,r,start+180,end);
+  const point=a=>[x+r*Math.cos(a*Math.PI/180),y+r*Math.sin(a*Math.PI/180)].map(n=>n.toFixed(2)).join(' ');
+  return `M${point(start)}A${r} ${r} 0 ${end-start>180?1:0} 1 ${point(end)}`;
+}
+function plasmidMarks(x,y,r,gap,both){
+  const left=x-r*Math.sin(gap),right=x+r*Math.sin(gap),py=y-r*Math.cos(gap);
+  return E(left,py,7,7,red,'#fff')+E(right,py,7,7,both?gold:red,'#fff');
+}
+function cellOutline(x,y){
+  return G(x,y,1,P('M-126-93C-170-73-178 11-152 64C-118 119 116 129 156 73C188 33 186-45 145-86C101-128-74-130-126-93Z','#e5f2e7','#89b3a5',2.5)+
+    P('M-118-83C-153-64-160 9-138 57C-107 105 110 114 145 65C171 31 172-41 134-77C93-113-67-116-118-83Z','none','#b6d2c6',2)+
+    P('M70 40q-31 20 1 34t57-12-8-21-32 7-15 12','none','#95a9a0',2.5)+
+    many(15,i=>E(-136+i*19,Math.sin(i*4)*16+55,2.6,2.6,'#9fb8ae')));
+}
+function plasmidScene(t,both){
+  const cx=290,cy=355,base=108;
+  const open=stageProgress(t,.16,.38),closure=stageProgress(t,.65,.8);
+  const arcStart=-90+33*open*(1-closure),arcEnd=270-33*open*(1-closure);
+  const yInsert=mix(181,cy-base,stageProgress(t,.35,.65));
+  const paired=t>=.65,inside=stageProgress(t,.81,.96),r=base-41*inside;
+  let a=tile(43,88,500,65,both?'双切 · AATT 与 GATC 两端':'单切 · 两边都是 AATT','',blue);
+  if(inside>0)a+=O(inside,cellOutline(cx,cy));
+  a+=spark(plasmidArc(cx,cy,r,arcStart,arcEnd),blue,8)+
+    spark(plasmidArc(cx,cy,r-11,arcStart,arcEnd),'#86a7c6',3.5)+
+    spark(plasmidArc(cx,cy,r,130,195),'#9b6a39',12)+spark(plasmidArc(cx,cy,r,6,69),'#756288',12)+
+    E(cx-r,cy-1,5,5,'#9b6a39')+
+    O(stageProgress(t,.18,.32)*(1-closure),plasmidMarks(cx,cy,r,33*open*(1-closure)*Math.PI/180,both));
+  if(!paired){
+    const w=mix(170,112,stageProgress(t,.35,.64)),fill='#8ac9b8';
+    a+=P(`M${cx-w/2} ${yInsert}h${w}m${-w} 11h${w}`,'none',teal,4)+
+      many(8,i=>P(`M${cx-w/2+7+i*(w-14)/7} ${yInsert}v11`,'none',fill,1.5))+
+      E(cx-w/2,yInsert,6,6,red,'#fff')+E(cx+w/2,yInsert,6,6,both?gold:red,'#fff')+
+      txt(cx,yInsert-12,'800 bp 插入片段','middle',teal,17,750);
+  }else{
+    a+=spark(plasmidArc(cx,cy,r,-123,-57),'#329b83',10)+
+      spark(plasmidArc(cx,cy,r-11,-123,-57),'#71baa7',3.5)+
+      arrow(`M${cx-19} ${cy-r-24}h39`,teal);
+  }
+  a+=txt(cx,cy-1,'质粒 DNA','middle',ink,23,800)+
+    txt(cx,cy+28,paired?'骨架 + 插入':'环状双链骨架','middle',grey,16)+
+    call(43,455,cx-r*.89,cy+r*.46,'复制起点')+call(390,470,cx+r*.67,cy+r*.74,'筛选标记')+
+    (inside>.45?call(39,171,155,272,'宿主细胞','细胞内部示意'):t<.16?call(44,183,cx,cy-r,'切位','模型拓扑示意'):'');
+  return a+tile(43,541,500,77,inside>.45?'带标记的质粒进入宿主':'当前演示正向组装路径',
+    inside>.45?'仍需核验是否插入及其方向':'其他可能产物在右图比较',teal);
+}
+function vectorEvidence(mode){
+  const p=plot('rdna-size',762,160,362,253,[0,1000,2000,3000,4000,5000],[0,1,2,3,4],
+    '模型长度 · 三种指定结构','长度 (bp)');
+  const labelledPlot=p.svg.replace(/<text x="751"[^>]*>\d<\/text>/g,'');
+  const bars=vectorProducts(mode).map((d,i)=>{
+    const y=p.Y(3-i);
+    return txt(749,y+5,d.name,'end',ink,16,750)+
+      (d.possible?R(p.X(0),y-14,p.X(d.length)-p.X(0),28,d.color,'none',4)+
+        txt(p.X(d.length)-8,y+6,String(d.length),'end','#fff',17,750):
+        txt(p.X(0)+13,y+6,'模型不支持','start',grey,16,650));
+  }).join('');
+  return labelledPlot+bars+
+    tile(625,482,523,82,mode==='one'?'正插与反插等长':'两个接口各有固定配对',
+      mode==='one'?'单靠长度无法分辨两种方向':'双切两端互不相容，方向受约束',blue,'#eef3f8')+
+    rScript(640,605,['ggplot(products, aes(length, construct)) +','geom_col()  # schematic sizes']);
+}
+function view3(t){
+  const mode=state.vector,both=mode==='two';
+  const idx=t<.16?0:t<.37?1:t<.65?2:t<.81?3:4;
+  const phases=[
+    ['先读质粒图谱','环状双链骨架上标出复制起点、筛选标记和可插入片段的切位。'],
+    ['打开骨架','本模型假定切位位于插入区，目标片段内部没有这些切位。'],
+    ['比较两端能否对接',both?'一端为 AATT，另一端为 GATC。分别配对才允许图示方向接入。':'两个接口均为 AATT。插入片段可按两种方向接入，载体也可能自连。'],
+    ['示范正向组装','载体骨架与插入片段长度相加。比较右图，正插和反插在长度上有差别吗？'],
+    ['进入宿主后还要核验','复制起点与宿主相适配时，载体可在宿主内维持。标记有助于筛选，后续仍需核对插入与方向。']
+  ];
+  draw(3,headings('环状双链载体与插入片段','哪些结构可形成？')+plasmidScene(t,both)+vectorEvidence(mode));
+  say(3,'VECTOR / 0'+(idx+1),phases[idx][0],phases[idx][1],
+    both?'双切模型支持正向插入':'单切模型支持三种结构','虚拟骨架 4000 bp，插入 800 bp。柱长只表达结构长度。');
+}
+
+const extractPhases=[
+  ['破碎组织','研磨洋葱，使组织和细胞破碎。原本在细胞内的物质进入研磨液。'],
+  ['过滤取上清','滤去较大的组织碎片，取处理后的上清液，供析出步骤使用。'],
+  ['冷酒精析出','加入冷酒精，收集析出的白色丝状物或沉淀。'],
+  ['盐溶液复溶','样品管用 NaCl 溶液复溶收集物。空白管用同样的 NaCl 溶液。'],
+  ['与空白一起鉴定','两管加入二苯胺试剂，完成加热并冷却后比较颜色。']
+];
+function extractionModel(mode,t){
+  const phase=Math.min(4,Math.floor(t*5));
+  const useAlcohol=mode!=='noAlcohol';
+  const precipitation=useAlcohol?stageProgress(t,.40,.53):0;
+  const collected=precipitation>=.98;
+  const reacted=phase===4&&mode!=='noHeat';
+  return {phase,useAlcohol,precipitation,collected,reacted,blueLevel:collected&&reacted?stageProgress(t,.89,.99):0};
+}
+function beaker(x,y,w,h,liquid,color='#c9e4ed'){
+  const p=y+h*(1-liquid);
+  return P(`M${x+6} ${p}Q${x+w*.5} ${p+9} ${x+w-6} ${p}V${y+h-13}Q${x+w-5} ${y+h-5} ${x+w-15} ${y+h-5}H${x+15}Q${x+6} ${y+h-5} ${x+6} ${y+h-14}Z`,color,'none')+
+    P(`M${x-7} ${y}H${x+w+7}M${x} ${y}V${y+h-14}Q${x} ${y+h} ${x+15} ${y+h}H${x+w-15}Q${x+w} ${y+h} ${x+w} ${y+h-14}V${y}`,'none','#698b96',2.5)+
+    many(4,i=>P(`M${x+w-18} ${y+24+i*20}h11`,'none','#8bb0b7',1.2));
+}
+function extractionArt(t,m){
+  const u=t*5-m.phase;
+  let a=tile(43,87,501,76,extractPhases[m.phase][0],
+    ['洋葱组织 → 研磨液','保留液相，分离较大的组织碎片',m.useAlcohol?'观察丝状物逐渐析出':'本情景省略冷酒精',m.collected?'收集物进入样品管':'本情景无收集物','右侧两管对照显色'][m.phase],teal);
+  if(m.phase===0){
+    a+=P('M150 335Q192 313 233 323Q257 346 239 385Q201 427 163 390Q142 366 150 335Z','#f3ddc4','#b18f71',2)+
+      many(4,i=>P(`M${150+10*i} ${335+7*i}Q198 ${375+8*i} ${240-10*i} ${343+8*i}`,'none','#bc9a7c',2))+
+      P('M165 336Q185 305 209 288M187 328Q211 304 231 298','none','#9caa70',4)+
+      P('M231 372Q311 397 434 370Q434 448 384 471Q321 501 269 455Q236 422 231 372Z','#e3e7e5','#7c9091',3)+
+      E(333,371,102,27,'#f3f5f1','#7c9091')+
+      E(334,377,75,16,'#d9c3a4','#b7a487')+
+      G(337,369+24*Math.sin(t*45),1,R(-13,-136,26,133,'#98abac','#648185',11)+E(0,-5,13,15,'#98abac','#648185'),-23)+
+      call(45,240,175,349,'洋葱组织')+call(374,245,375,287,'研杵');
+  }else if(m.phase===1){
+    a+=beaker(221,374,144,121,.21+u*.24,'#eddfc6')+
+      P('M164 243H423L323 345V397H273V345Z','#e5edf1','#74919b',2.5)+
+      P('M175 252Q267 315 413 251','none','#ae9269',7)+
+      many(21,i=>E(189+(i*29)%200,259+(i*23)%24,3,2,'#a18a66'))+
+      P('M284 352H313V392','none','#8d9e98',1.8)+
+      E(297,397+(u%1)*42,5,8,'#c6a468')+
+      call(45,229,211,270,'纱布过滤')+call(383,406,347,457,'取上清');
+  }else if(m.phase===2){
+    const strands=m.precipitation;
+    a+=beaker(179,266,222,232,m.useAlcohol?mix(.42,.66,strands):.42,'#d3c5a9')+
+      (m.useAlcohol?O(strands,R(184,342,212,51,'#d8ecf2','none',0)+many(15,i=>{
+        const x=213+(i*33)%153,y=374+(i*19)%52;
+        return P(`M${x} ${y}q18 -24 32 -8t-12 29t-16 -13`,'none','#fffdf3',2.8);
+      })): '')+
+      (m.useAlcohol?O(strands,call(372,215,344,368,'丝状析出物')):call(373,220,337,396,'DNA 仍在液相'))+
+      tile(43,535,501,78,m.collected?'可收集析出物':m.useAlcohol?'析出过程':'本情景不收集沉淀',
+        m.useAlcohol?'白色丝状物需要进一步鉴定':'原液仍可能含 DNA',m.useAlcohol?teal:red);
+  }else{
+    a+=beaker(111,302,150,168,.47,'#dfe9e8')+
+      O(m.collected?1-stageProgress(t,.61,.77):0,many(9,i=>P(`M${142+(i*19)%81} ${394+(i*7)%42}q19 -22 36 -11t-15 22`,'none','#fffaf0',2.7)))+
+      G(413,363,1,P('M-51-56H51V62Q44 78 21 80H-28Q-51 74-51 59Z','#eff6f5','#819ea4',2)+
+        R(-24,-76,48,21,'#78959b','#59767c',5)+R(-46,-8,92,50,'#f4ecdb','#d0be9a',6)+txt(0,23,'NaCl','middle',ink,22,750))+
+      arrow('M350 354H283',gold)+call(39,218,158,389,m.collected?(m.phase===3?'溶解收集物':'已复溶的样液'):'无收集物可复溶')+
+      tile(43,535,501,78,'样品与空白配对','两管加入相同试剂，按当前情景处理',teal);
+  }
+  return a;
+}
+function assayTube(x,y,level,fill,blueLevel){
+  const surface=y+225*(1-level);
+  const shape=`M${x-35} ${surface}Q${x} ${surface+10} ${x+35} ${surface}V${y+185}Q${x+35} ${y+218} ${x} ${y+218}Q${x-35} ${y+218} ${x-35} ${y+185}Z`;
+  return (level>0?P(shape,fill,'none')+O(blueLevel,P(shape,'#2664b4','none')):'')+
+    P(`M${x-40} ${y}V${y+187}Q${x-40} ${y+223} ${x} ${y+223}Q${x+40} ${y+223} ${x+40} ${y+187}V${y}M${x-48} ${y}H${x+48}`,'none','#607f8a',2.8)+
+    P(`M${x-25} ${y+19}v156`,'none','#ffffffa3',3);
+}
+function assay(t,m){
+  const step=stageProgress(t,.8,.99),level=m.phase>=3?.36+.18*step:0;
+  const hot=m.reacted&&t>=.87&&t<.965;
+  const finish=t>=.965,blueShown=m.blueLevel>=.72;
+  const status=m.phase<3?'等待样品':m.phase===3?'盐溶液复溶':t<.87?'滴加二苯胺':!m.reacted?'未加热':'二苯胺处理'+(finish?' · 冷却读数':' · 加热');
+  let a=tile(626,87,523,75,status,'两管只比较是否加入收集物',blue)+
+    label(720,189,'样品管')+label(970,189,'空白管');
+  if(hot)a+=R(685,356,422,122,'#e1eff1','#93b7c0',15)+
+    many(17,i=>{const x=706+i*23,y=388+((i*17+t*108)%72);return E(x,y,3,3,'#aacbd1')})+
+    label(825,379,'水浴加热');
+  a+=assayTube(765,240,level,'#eee5c9',m.blueLevel)+assayTube(1014,240,level,'#eee5c9',0);
+  if(m.phase===4&&step<.35){
+    const dropY=218+step*360;
+    a+=E(765,dropY,4,7,gold)+E(1014,dropY,4,7,gold);
+  }
+  return a+tile(626,519,255,78,blueShown?'显蓝':finish?'未见明显蓝色':'观察样品颜色',
+    m.phase<3?'待装样':m.collected?'加入了收集物':'未加入收集物',blueShown?blue:teal)+
+    tile(894,519,255,78,finish?'未见明显蓝色':'观察空白颜色','仅盐溶液与相同试剂',blue);
+}
+function view4(t){
+  const m=extractionModel(state.extract,t),[heading,body]=extractPhases[m.phase];
+  const end=t>=.965;
+  const text=m.phase===2&&!m.useAlcohol?'省略冷酒精析出时，原液未在这一步形成可收集的沉淀。':
+    m.phase===3&&!m.collected?'本情景没有收集物，样品管也只加入盐溶液。':
+    m.phase===4&&t>=.87&&!m.reacted?'两管已加试剂，但省略了教材要求的加热条件。':body;
+  const result=end?(m.blueLevel>=.72?'样品显蓝 · 空白未显蓝':m.reacted?'两管均未见明显蓝色':'未满足鉴定的加热条件'):
+    m.collected?'有可收集的析出物':m.phase>=2&&!m.useAlcohol?'本流程未取得沉淀':m.phase===2?'等待析出完成':'等待析出步骤';
+  draw(4,headings('洋葱组织到粗提取物','二苯胺显色 · 预期现象示意')+extractionArt(t,m)+assay(t,m));
+  say(4,'EXTRACTION / 0'+(m.phase+1),heading,text,result,'白色沉淀可含杂质；未按流程显色时，不能据此判定原样无 DNA。');
+}
+
+const views=[view1,view2,view3,view4],durations=[11,12,13,16],initialTimes=[.31,.58,.29,.49];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={
+  restriction:value=>change(0,'restriction',value),
+  pair:value=>change(1,'pair',value),
+  ligase:value=>change(1,'ligase',value),
+  vector:value=>change(2,'vector',value),
+  extract:value=>change(3,'extract',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

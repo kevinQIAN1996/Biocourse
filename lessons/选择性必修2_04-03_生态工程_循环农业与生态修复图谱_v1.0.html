@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>生态工程｜循环农业与生态修复图谱 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>循环农业与生态修复图谱<small>ECOLOGICAL ENGINEERING / 04.03</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第 4 章 · 第 3 节</p><h1>生态工程<em>，怎样设计？</em></h1><p class="subtitle">从四条设计原理出发，追踪一份秸秆、一股污水和一片矿区的去向。</p></div>
+<div class="intro-note"><i>ECOLOGICAL ENGINEERING</i><p>先改变哪个条件，系统才有能力恢复？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 四大原理</a><a href="#figure2">02 沼气循环</a><a href="#figure3">03 湿地净水</a><a href="#figure4">04 矿区修复</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / DESIGN PRINCIPLES / SITE MATCH</p><h2 id="heading1">改变的是组分、去路、承载力，还是整体关系？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="principle"><button type="button" data-group="principle" data-value="self" aria-pressed="false">01 自生</button><button type="button" data-group="principle" data-value="cycle" aria-pressed="false">02 循环</button><button type="button" data-group="principle" data-value="match" aria-pressed="true">03 协调</button><button type="button" data-group="principle" data-value="whole" aria-pressed="false">04 整体</button></div><div class="segmented" role="group" aria-label="habitat"><button type="button" data-group="habitat" data-value="plant" aria-pressed="true">适地适树</button><button type="button" data-group="habitat" data-value="stock" aria-pressed="false">放牧压力与 K</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="group" aria-label="改变的是组分、去路、承载力，还是整体关系？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>自生重在有利于自组织的物种和环境配置；循环重在物质回用；协调重在与当地环境、承载力相适应；整体重在组分的结构比例及自然、经济和社会条件。旧版的物种多样性、物质循环再生、协调与平衡、系统整体性等表述可作联系，具体题目以关注的因果关系为准。</p><p>土壤体积含水率和存活率均是教学模型。同一初值下用指数型趋近函数呈现不同水分消耗和存活趋势。Cao 等讨论区域造林限制，未将图中曲线、降水硬阈值或某个树种存活率作为通用结论。K 随资源与环境变化，图中放牧情景以一条管理参照线演示。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 左侧四舱可点击。右侧以 20 年课堂模型比较同一偏干立地下两种种植情景。带为参数敏感性范围。 <sup class="cites"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.ecoleng.2003.05.001" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1016/j.earscirev.2010.11.002" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://yswkapi.csdl.ac.cn/mobile/mobile_zylxlistnew.action?bh=1980C16&amp;id=1&amp;lx=cj_%E8%AE%BA%E6%96%87" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / INTEGRATED AGRICULTURE / FLOW</p><h2 id="heading2">同一批秸秆，物质与能量分别去了哪里？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="flow"><button type="button" data-group="flow" data-value="material" aria-pressed="true">追踪 C、N、P</button><button type="button" data-group="flow" data-value="energy" aria-pressed="false">追踪能量去向</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="同一批秸秆，物质与能量分别去了哪里？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>教材介绍北京郊区某村以沼气工程为核心，图中用窦店村式模式展示关联。鱼塘、蚯蚓等支路按处理能力管理，消化产物应按污染状况和养分需求利用。系统仍有外源输入、产品输出、泄漏与排放。</p><p>传统情景设为 100。综合情景以回用系数 r＝0.70 计算：化肥投入 100−50r，废弃排放 100−80r，有用能回收 100＋70r，净收入 100＋30r。线段表示 r＝0.50–0.90 的参数范围。四项基准和斜率为课堂假设，能量回收指数是相对量。</p><p>Hou 等在不同地区调查发现，建设、运行维护和沼气泄漏等会影响净温室气体效应。合理循环可以提高资源利用程度，能量经各支路利用后以热等形式离开。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 以教材北京郊区某村为背景，蚯蚓和部分支路是课堂拓展示意。绩效对照采用指数模型。 <sup class="cites"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.ecoleng.2003.05.001" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.3390/en10020239" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / CONSTRUCTED WETLAND / NUTRIENTS</p><h2 id="heading3">水走得更快，或者芦苇留在床里，结果会怎样？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="harvest"><button type="button" data-group="harvest" data-value="remove" aria-pressed="true">10 月收割并外运</button><button type="button" data-group="harvest" data-value="leave" aria-pressed="false">枯体留床</button></div><div class="variables"><label class="variable"><span>相对进水流速</span><output id="out-inflow" for="inflow">100</output><input id="inflow" data-input="inflow" type="range" min="65" max="165" step="5" value="100"></label></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="水走得更快，或者芦苇留在床里，结果会怎样？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>假定进水浓度与床体有效体积不变，停留时间与流速成反比。沿程相对残留为 100·exp(−k·距离/相对流速)，COD、TN、TP、藻类指标的模型 k 分别为 0.035、0.018、0.022、0.025 m⁻¹。COD 是化学需氧量，TN/TP 是总氮/总磷。藻类指标用于有藻进水的过滤示意。</p><p>季节基准由同一 TP 沿程模型的 50 m 出水和轻微季节项计算。模型中地上部有可释放的磷库，留床后分解使部分磷进入水体。收割外运减少这部分回流，根和未收部分仍会参与循环。实际效果受污染负荷、基质饱和度、水温与收获量等影响。图中末端不能用于判定排放达标。</p><p>根际供氧创造局部有氧微区，硝化与反硝化需要不同氧条件。潜流床主要依靠介质与生物过程。挺水植物遮光对敞水区藻类可能有影响，化感需针对物种验证。含污染物的收割物需合规处置。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 上分面是沿程相对残留，下分面是季节出水总磷。切换管理后，比较 10 月及以后的磷去向。 <sup class="cites"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.scitotenv.2006.09.014" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://doi.org/10.1016/S0273-1223(97)00047-4" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1016/j.scitotenv.2008.08.032" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / POST-MINING RESTORATION / RHIZOSPHERE</p><h2 id="heading4">矿区先改土还是先种树？怎样判断修复起效？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="stage"><button type="button" data-group="stage" data-value="0" aria-pressed="true">0 受损基底</button><button type="button" data-group="stage" data-value="1" aria-pressed="false">1 地形与土层</button><button type="button" data-group="stage" data-value="2" aria-pressed="false">2 先锋草灌</button><button type="button" data-group="stage" data-value="3" aria-pressed="false">3 监测与利用</button></div><div class="segmented" role="group" aria-label="amf"><button type="button" data-group="amf" data-value="control" aria-pressed="false">覆土＋植被</button><button type="button" data-group="amf" data-value="inoculated" aria-pressed="true">加适配 AMF</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="矿区先改土还是先种树？怎样判断修复起效？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>教材中的元宝山矿区通过排石整地、植树种草等措施开展综合修复。工程先调查水文、边坡和污染风险，再决定隔离、覆盖、排水与侵蚀控制。工程基底与植物根区的压实要求不同。</p><p>图中 0–12 年为课堂情景。两个方案使用同一初始表土与先锋植被，只有在植被引入后，假设适配菌株接种带来额外增长。对照也可自然定殖。两项指数各自归一，阴影是参数敏感性范围。</p><p>西北矿区的沙棘与神东煤田研究支持检验菌根效应的思路。现场结果随菌株、宿主、土壤和污染水平改变，不能直接移用为元宝山实测。种植、放牧、开放等后续用途取决于地块风险和监测结论。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 元宝山案例提供工程背景。矿区 0–12 年双指标和带为课堂模拟。AMF 为丛枝菌根真菌。 <sup class="cites"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/S0925-8574(97)00022-0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://doi.org/10.4014/jmb.1907.07007" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a> <a href="https://doi.org/10.1038/srep34336" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 2《生物与环境》 ↗</a><span>第 4 章第 3 节，四项原理、桑基鱼塘与综合恢复案例。</span></li><li id="ref-2"><a href="https://doi.org/10.1016/j.ecoleng.2003.05.001" target="_blank" rel="noopener noreferrer">[2] Mitsch &amp; Jørgensen, 2003 · Ecological Engineering 20, 363–377 ↗</a><span>生态工程的系统设计与自组织。</span></li><li id="ref-3"><a href="https://doi.org/10.1016/j.earscirev.2010.11.002" target="_blank" rel="noopener noreferrer">[3] Cao 等, 2011 · Earth-Science Reviews 104, 240–245 ↗</a><span>干旱和半干旱区造林受水文、土壤与植物配置限制。</span></li><li id="ref-4"><a href="https://yswkapi.csdl.ac.cn/mobile/mobile_zylxlistnew.action?bh=1980C16&amp;id=1&amp;lx=cj_%E8%AE%BA%E6%96%87" target="_blank" rel="noopener noreferrer">[4] 马世骏、王如松, 1984 · 生态学报 4(1), 1–9 ↗</a><span>社会、经济和自然复合生态系统，链接中科院馆藏书目。</span></li><li id="ref-5"><a href="https://doi.org/10.3390/en10020239" target="_blank" rel="noopener noreferrer">[5] Hou 等, 2017 · Energies 10, 239 ↗</a><span>调查与生命周期核算，沼气设施的管理、泄漏和气候会改变温室气体收支。</span></li><li id="ref-6"><a href="https://doi.org/10.1016/j.scitotenv.2006.09.014" target="_blank" rel="noopener noreferrer">[6] Vymazal, 2007 · Science of the Total Environment 380, 48–65 ↗</a><span>人工湿地氮磷去除机制与收割效应的适用条件。</span></li><li id="ref-7"><a href="https://doi.org/10.1016/S0273-1223(97)00047-4" target="_blank" rel="noopener noreferrer">[7] Brix, 1997 · Water Science and Technology 35, 11–17 ↗</a><span>大型水生植物的多项作用以及不同湿地构型的差异。</span></li><li id="ref-8"><a href="https://doi.org/10.1016/j.scitotenv.2008.08.032" target="_blank" rel="noopener noreferrer">[8] Vymazal &amp; Kröpfelová, 2009 · Science of the Total Environment 407, 3911–3922 ↗</a><span>水平潜流人工湿地有机物去除现场经验。</span></li><li id="ref-9"><a href="https://doi.org/10.1016/S0925-8574(97)00022-0" target="_blank" rel="noopener noreferrer">[9] Bradshaw, 1997 · Ecological Engineering 8, 255–269 ↗</a><span>采矿扰动后的基底限制和利用自然过程恢复。</span></li><li id="ref-10"><a href="https://doi.org/10.4014/jmb.1907.07007" target="_blank" rel="noopener noreferrer">[10] Zhang 等, 2020 · Journal of Microbiology and Biotechnology 30, 848–855 ↗</a><span>西北煤矿塌陷区沙棘野外试验，测试接种 AMF 后的生长及根际变化。</span></li><li id="ref-11"><a href="https://doi.org/10.1038/srep34336" target="_blank" rel="noopener noreferrer">[11] Wang 等, 2016 · Scientific Reports 6, 34336 ↗</a><span>神东煤田研究了菌根、植物及土壤碳过程。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>生态工程 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">生态工程 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">自生</th><td>配置合适的生物组分和非生物条件，利用种间作用和系统自组织、自我调节。</td></tr><tr><th scope="row">循环</th><td>让一种过程的有机残余物成为下一环节的原料。先追踪物质去向，再说明减排与转化条件。</td></tr><tr><th scope="row">协调</th><td>物种适应当地水土与气候，生物数量匹配环境容纳量。</td></tr><tr><th scope="row">整体</th><td>优化系统组分及其比例，把生态功能、生产收益、社区与制度一并纳入。</td></tr><tr><th scope="row">桑基鱼塘</th><td>桑叶饲蚕，蚕沙用于养鱼，塘泥培桑。也要考虑陆水面积、物种配置和市场需求。</td></tr><tr><th scope="row">沼气生态农业</th><td>物质可在系统内反复利用，能量单向流动。多级利用可增加可用产出，营养级传递效率是另一指标。</td></tr><tr><th scope="row">湿地两问</th><td>适当控制流速，让过滤、微生物转化与吸收有足够时间。收割并外运植物，可把一部分已同化氮磷移出系统。</td></tr><tr><th scope="row">矿区步骤</th><td>先评估风险并重建适合生长的基底，再恢复植被与土壤生物过程，最后根据监测决定用途。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={principle:'match',habitat:'plant',flow:'material',harvest:'remove',inflow:100,amf:'inoculated',stage:0};
+const earthGreen='#608C65',waterBlue='#4f9db7',soilBrown='#967258';
+const principleData={
+  self:['自生','合适组分与环境','利用生物互作与自组织','配置分层水生植物和适宜的水、光条件，为微生物和动物提供生境。系统可借助互作和自我调节逐步形成。'],
+  cycle:['循环','把残余物接回流程','废弃物资源化','秸秆、粪污和消化产物各有去路。处理与施用得当时，部分物质可以回到农田。'],
+  match:['协调','与当地条件相适应','适地适树 · 承载力','同一偏干立地上，比较高耗水乔木与适地灌草。物种配置要与水土条件相适应。'],
+  whole:['整体','把外部条件纳入设计','自然 · 经济 · 社会','修复植被时兼顾生态功能、农户收益与社区参与。优化系统组成比例，还要看长期运行条件。']
+};
+function pline(points){return points.map((p,i)=>(i?'L':'M')+p.join(' ')).join(' ')}
+function conduit(points,t,color,n=4,dash=''){
+  const d=pline(points);
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" stroke-dasharray="${dash}" marker-end="url(#arrow)"/>`+
+    pulse(points,t,color,n,3.4);
+}
+function rootFan(x,y,s=1){
+  return G(x,y,s,spark('M0-4Q1 28-4 49T2 104M0 18Q-18 29-23 61M-6 32Q20 44 19 75M-5 48Q-30 56-37 83M0 58Q16 80 33 90M-3 74L-19 100','#9c7752',2.1));
+}
+function reed(x,y,s=1,cut=1){
+  return G(x,y,s,spark(`M0 4Q0 -25 -3 ${-115*cut}M2 1Q9 -25 14 ${-94*cut}M-3 1Q-8 -18 -14 ${-83*cut}`,'#658451',3)+
+    (cut>.5?P('M-3-31Q-28-56-37-50Q-21-32-3-26M3-41Q29-70 37-62Q21-42 3-36M-2-64Q-23-83-30-77Q-12-62-2-59','#89a46f','#668653',1.3)+
+      [[-3,-112*cut],[14,-93*cut],[-14,-82*cut]].map(([px,py])=>many(7,j=>{
+        const k=j-3,endX=px+k*3,endY=py-20+Math.abs(k)*4;
+        return spark(`M${px} ${py+4}Q${px+k} ${py-6} ${endX} ${endY}`,'#876948',1.2)+E(endX,endY,1.7,2.7,'#b19169');
+      })).join(''):''));
+}
+function lilyPad(x,y,s=1){
+  return G(x,y,s,P('M-32 1C-30-11-13-14 7-10C31-12 43 1 30 7C14 16-22 11-32 1Z','#83ab77','#487f62',2)+
+    P('M4 0L31-3L25 4Z','#a4cccf','#487f62')+P('M-7-1Q-22-15-10-23L0-13L8-26Q24-13 14-3Z','#e8b49e','#a86d69',1.8)+
+    spark('M-2-1Q-6 29-12 53','#648364',2));
+}
+function duck(x,y,s=1){
+  return G(x,y,s,P('M-37 4Q-18-15 5-9L15-25Q19-40 31-30L36-22L49-19L38-12L31-13Q32 3 21 10Q-6 23-37 4Z','#e7d7ac','#8b8060',1.7)+
+    P('M-20 5Q-3-6 18-1Q0 15-20 5Z','#c49a63','#927452')+E(28,-26,2.5,2.5,C.ink));
+}
+function mushrooms(x,y,s=1){
+  return G(x,y,s,many(3,i=>{const dx=-17+i*17,dy=(i===1?-10:4);return R(dx-3,dy,6,20,'#dec5a3','#997053',2)+
+    P(`M${dx-14} ${dy+2}Q${dx} ${dy-28} ${dx+14} ${dy+2}Q${dx} ${dy+7} ${dx-14} ${dy+2}Z`,'#ce9a73','#895d47',1.5)}));
+}
+function hills(x,y,w,h,fill){
+  return P(`M${x} ${y+h}V${y+h*.64}Q${x+w*.21} ${y-h*.15} ${x+w*.45} ${y+h*.46}T${x+w} ${y+h*.3}V${y+h}Z`,fill,'#879d82',1.3);
+}
+function smallHouse(x,y,s=1){
+  return G(x,y,s,R(-21,-8,42,29,'#e8d4b2','#8c7564',2)+P('M-27-8L0-34L28-8Z','#b98671','#805847',2)+R(-5,4,10,17,'#9c7761')+R(9,-2,8,8,'#bdd6d8','#7c9597',1));
+}
+function principleArt(t){
+  const selected=state.principle,stock=state.habitat==='stock';
+  if(selected==='self'){
+    return R(43,245,499,286,'#e6f0e9','#cbd9d1',10)+
+      P('M45 373Q149 348 261 370T540 359V494H45Z','url(#water)','#7eabaf',2)+
+      P('M45 464Q186 503 269 473T540 454V527H45Z','url(#soil)','#a89374',2)+
+      rootFan(118,473,.43)+rootFan(151,472,.43)+reed(118,472,1.02)+reed(151,472,.94)+lilyPad(275,370,1.15)+duck(411,355,1.02)+
+      many(7,i=>P(`M451 464Q${426+i*7} 433 ${413+i*10} ${421-i%3*13}Q${430+i*7} 432 454 464Z`,'#75a780','#528366',1.2))+
+      fishArt(312,421,.61)+
+      pulse([[155,465],[220,453],[311,443],[421,460]],t,C.green,7)+
+      label(60,261,'挺水 · 芦苇')+label(205,308,'浮叶 · 睡莲')+label(392,473,'沉水 · 苦草');
+  }
+  if(selected==='cycle'){
+    return R(43,245,499,286,'#eef4e6','#cbd9d1',10)+
+      conduit([[132,362],[258,312]],t,C.green,4)+conduit([[314,314],[438,363]],t,C.green,4)+
+      conduit([[437,402],[312,474],[111,464],[108,404]],t,C.green,8)+
+      G(111,357,.75,corn(0,0,1))+G(286,309,.74,cow(0,0,1))+digester(465,382,.8,t)+
+      label(58,372,'农田 · 秸秆')+label(239,339,'畜禽 · 粪污')+label(415,414,'厌氧消化')+label(170,475,'消化产物按需还田');
+  }
+  if(selected==='whole'){
+    return R(43,245,499,286,'#edf4ea','#cbd9d1',10)+hills(44,340,496,188,'#c1d4ae')+
+      conduit([[138,355],[288,315],[436,354]],t,C.green,6)+conduit([[434,407],[288,471],[141,407]],t,C.blue,6)+
+      tree(120,359,1.3)+smallHouse(291,306,1.2)+smallHouse(466,366,1.05)+
+      label(55,375,'自然 · 保土保水')+label(223,251,'社会 · 社区与政策')+label(344,382,'经济 · 就业与收益')+
+      label(182,477,'林草配置与生计同步考虑');
+  }
+  if(stock){
+    const p=phase(t,.28,.82);
+    return R(43,245,499,286,'#eef2e8','#cbd9d1',10)+hills(44,343,496,185,mix(0,1,p)>.5?'#d5bc8c':'#b9cda6')+
+      many(17,i=>G(58+(i*39)%471,433+(i*17)%54,.40,grass(0,0,1)))+
+      many(3,i=>G(107+i*148,401,.58,cow(0,0,1)))+
+      O(p,many(3,i=>G(164+i*148,455,.57,cow(0,0,1))))+
+      O(p,spark('M261 481l-16 12 22 9m103-26l-12 16 19 13','#8d715b',3))+
+      label(59,261,'草场补充量有限','K 随气候和管理变化')+
+      label(324,466,p>.5?'长期超载 · 草地退化':'负荷接近承载力');
+  }
+  const p=phase(t,.06,.94);
+  return R(43,245,499,286,'#eff3e7','#cbd9d1',10)+R(44,401,496,126,'url(#soil)')+
+    spark('M44 402H540','#788f70',3)+spark('M293 258V521','#a9b2a3',1.5,'5 6')+
+    E(161,465,85,27,`rgba(77,155,183,${.35-.28*p})`)+E(430,465,88,26,'#8cc1be80')+
+    rootFan(162,403,1.08)+rootFan(429,403,1.12)+
+    spark('M162 405Q164 359 166 299M165 344L140 324M165 335L188 313',soilBrown,5)+
+    O(1-.79*p,E(164,307,35,28,'#91b17c','#63865f'))+
+    many(9,i=>leaf(427+Math.sin(i*3.3)*29,395-i%4*13,.6+(.18*p),i%2?57:-54,'#7eac77'))+
+    label(57,260,'高耗水乔木','以不适地杨树为例')+label(343,260,'适地耐旱灌草','如适地柠条或沙棘')+
+    label(58,484,p>.55?'深层水分明显下降':'深层土壤水')+label(342,484,'保留较多土壤水');
+}
+function trend(x,a,b,k){return b+(a-b)*Math.exp(-x*k)}
+const site={
+  survival:(x,fit)=>trend(x,100,fit?84:21,fit?.22:.105),
+  moisture:(x,fit)=>trend(x,18,fit?15.7:6,.13)
+};
+const range=(max,step,f)=>Array.from({length:Math.round(max/step)+1},(_,i)=>({x:i*step,...f(i*step)}));
+function timeFacet(p,at,keys,yValue,delta=()=>0,selected=''){
+  return p.svg+keys.map(([key,color,dash])=>{
+    const data=range(p.max??20,.25,x=>{const y=yValue(x,key),d=delta(x,key);return{y,lo:y-d,hi:y+d}});
+    return O(selected&&selected!==key?.70:1,p.clip(ribbon(data,p.X,p.Y,color,.25))+line(data,p,color,selected===key?4:3,dash));
+  }).join('')+scan(p,at)+keys.map(([key,color])=>chartDot(p,at,yValue(at,key),color,5.8)).join('');
+}
+function renderPrinciple(t){
+  const year=20*t,active=principleData[state.principle],keys=[['poor',C.red,'7 5'],['fit',C.green,'']];
+  const cards=Object.entries(principleData).map(([id,[title,sub]],i)=>{
+    const x=43+(i%2)*253,y=72+Math.floor(i/2)*82,on=state.principle===id;
+    return `<g data-principle="${id}" style="cursor:pointer">${tile(x,y,246,72,'0'+(i+1)+'  '+title,sub,on?C.green:'#b8c9bf',on?'#e2f1e7':'#f7faf5')}</g>`;
+  }).join('');
+  const p=plot('site-survival',644,135,355,141,[0,5,10,15,20],[0,25,50,75,100],'同一偏干立地 · 存活率','种植后 / 年','存活率 / %');
+  const q=plot('site-moisture',644,410,355,115,[0,5,10,15,20],[0,5,10,15,20],'深层土壤 · 水分','种植后 / 年','体积含水率 / %');
+  draw(1,headings('四项原理 · 点击矩阵切换','适地适树 · 两种情景的 20 年推演')+cards+principleArt(t)+
+    tile(43,551,499,73,active[0],active[2],C.green)+
+    timeFacet(p,year,keys,(x,k)=>site.survival(x,k==='fit'),x=>5*(1-Math.exp(-x/7)))+
+    timeFacet(q,year,keys,(x,k)=>site.moisture(x,k==='fit'),x=>.8*(1-Math.exp(-x/6)))+
+    legend(1013,163,'种植情景',[['高耗水乔木',C.red,'dash'],['适地灌草',C.green,'line'],['敏感性范围',C.green,'band']])+
+    rScript(628,611,['ggplot(site, aes(year, value, colour = scenario))',
+      '+ geom_line() + geom_ribbon(alpha = .25) + facet_wrap(~ metric)']));
+  const stocking=state.principle==='match'&&state.habitat==='stock';
+  say(1,'DESIGN PRINCIPLE · '+active[0],stocking?'承载力会随环境条件改变。':active[1],
+    stocking?'放牧持续超出草地的更新能力，植被可能退化，草场能长期承载的数量也会改变。':active[3],
+    '第 '+year.toFixed(1)+' 年 · 存活率 '+site.survival(year,false).toFixed(0)+'% / '+site.survival(year,true).toFixed(0)+'%',
+    '右图为高耗水乔木 / 适地灌草的独立课堂情景。阴影为参数范围。');
+}
+
+function digester(x,y,s=1,t=0){
+  return G(x,y,s,E(0,22,34,11,'#294b4630')+
+    P('M-40 3V-13Q-37-34 0-39Q37-34 40-13V12Q30 29-25 23Q-37 18-40 3Z','#d0dcb3','#677e65',2.5)+
+    P('M-36 1Q0 12 36 0V12Q21 27-25 21Q-34 16-36 1Z','#a3ad6f','#7b8557')+
+    spark('M-40-7H-51V-16M9-39V-55H30M38 4H50V16','#536f64',4)+
+    many(5,i=>E(-20+i*9,-7-18*((t*2+i/5)%1),2.8,2.8,'#f8f7d9','#7f8c62')));
+}
+const farmNodes={
+  crops:[121,179,'作物与秸秆'],animals:[290,179,'畜禽'],fungi:[458,179,'食用菌'],
+  pond:[121,347,'鱼塘'],gas:[290,347,'厌氧沼气池'],home:[458,347,'农户用能'],
+  soil:[121,515,'农田施肥'],worms:[290,515,'蚯蚓利用'],out:[458,515,'市场与输出']
+};
+const farmBase=[
+  [[179,179],[232,179]],[[144,125],[144,107],[435,107],[435,125]],
+  [[290,233],[290,293]],[[348,347],[400,347]],[[232,347],[179,347]],
+  [[458,233],[458,293]],[[290,401],[290,461]],[[348,515],[400,515]]
+];
+const recycleRoutes=[[[230,530],[179,530]],[[63,515],[52,515],[52,179],[63,179]],[[266,399],[205,441],[167,461]]];
+const powerRoutes=[
+  [[98,83],[121,125]],[[458,401],[458,461]],
+  [[400,228],[377,238],[377,432],[326,461]],
+  [[232,500],[206,500],[206,414],[174,392]]
+];
+function farmArt(t){
+  const isMaterial=state.flow==='material',color=isMaterial?C.blue:C.red;
+  const routes=isMaterial?[...farmBase,...recycleRoutes]:[...farmBase.filter((_,i)=>i!==4&&i!==6&&i!==7),...powerRoutes];
+  const art={crops:G(0,7,.66,corn(0,0,1)),animals:G(0,1,.59,cow(0,0,1)),fungi:mushrooms(0,0,.91),
+    pond:E(0,4,40,19,'#b1d8de','#6da3b4')+fishArt(5,1,.45),
+    gas:digester(0,4,.69,t),home:smallHouse(0,2,1),soil:G(0,4,.67,grass(0,0,1)),
+    worms:spark('M-30 8C-10-26 6 27 33-7','#ad725f',6),out:R(-24,-13,48,29,'#d9b37f','#9a7855',3)+spark('M-24-4H24M0-12V16','#9a7855',2)};
+  return R(42,75,501,509,'#f2f7ef','#d5e2d7',12)+
+    (!isMaterial?E(92,82,14,14,'#f0c774','#b7944b'):'')+
+    routes.map((pts,i)=>conduit(pts,t+i*.07,color,pts.length>2?5:3,i===routes.length-1?'5 3':'')).join('')+
+    Object.entries(farmNodes).map(([key,[x,y,title]])=>{
+      const inactive=!isMaterial&&key==='soil';
+      return O(inactive?.5:1,R(x-58,y-54,116,108,key==='gas'?'#e5eee0':'#fff','#adc4b4',11)+
+        G(x,y-12,1,art[key])+txt(x,y+39,!isMaterial&&key==='out'?'有用能与散热':title,'middle',C.ink,16,750));
+    }).join('')+
+    txt(287,610,isMaterial?'部分养分回用 · 系统仍有输入与输出':'有用能沿支路利用 · 余能以热散失','middle',C.ink,18,700);
+}
+const farmMetrics=[['化肥投入',-50],['废弃排放',-80],['有用能回收',70],['净收入',30]];
+function renderFarm(t){
+  const color=state.flow==='material'?C.blue:C.red;
+  const p=plot('farm-index',754,150,363,337,[0,40,80,120,160,180],[0,1,2,3,4],'传统情景 = 100 · 课堂模型','相对基准 / 指数');
+  let chart=p.svg.replace(/<text[^>]*text-anchor="end"[^>]*>[^<]*<\/text>/g,'');
+  for(const [[name,d],i] of farmMetrics.map((item,i)=>[item,i])){
+    const y=p.Y(3.5-i),v=100+.7*d,a=p.X(100+.5*d),b=p.X(100+.9*d),x=p.X(v);
+    chart+=txt(743,y+6,name,'end',C.ink,17,750)+R(p.x,y-24,p.X(100)-p.x,19,'#a9b8c7','none',1)+R(p.x,y+3,x-p.x,19,color,'none',1)+
+      spark(`M${a} ${y+6}v15m0-7.5H${b}m0-7.5v15`,C.ink,1.7)+txt(Math.max(a,b)+8,y+19,v,'start',C.ink,16,750);
+  }
+  chart+=R(705,555,16,16,'#a9b8c7')+txt(729,569,'传统情景')+R(841,555,16,16,color)+txt(865,569,'循环情景')+
+    spark('M976 563h19m-19-5v10m19-10v10',C.ink,1.6)+txt(1003,569,'参数范围')+
+    rScript(628,611,['ggplot(farm, aes(value, metric, fill = design)) + geom_col()',
+      '+ geom_errorbar(aes(xmin = low, xmax = high))']);
+  draw(2,headings('窦店村式综合农业 · 教学拓扑','四项绩效 · 同基准比较')+farmArt(t)+chart);
+  const material=state.flow==='material';
+  say(2,material?'MATTER / C, N, P':'ENERGY / ONE-WAY FLOW',
+    material?'养分可以回到农田。':'能量沿支路逐级利用。',material?
+      '追踪秸秆、粪污和消化产物。部分氮磷回到作物生产，其余可能从产品、排放或泄漏离开。':
+      '太阳能经光合作用成为有机物中的化学能。秸秆、畜禽、菌菇和沼气提供不同的利用机会，系统也向外散热。',
+    material?'追踪闭环 · 找到回田路径':'追踪输入与散热',material?'消化产物处理后按养分需求施用。':'多级利用增加可用产出。营养级间传递效率需另行计算。');
+}
+
+const wetMetrics=[
+  ['cod','COD',C.orange,.035,''],['tn','TN',C.blue,.018,'7 4'],['tp','TP',C.green,.022,''],['algae','藻类指标',C.red,.025,'2 4']
+];
+function residue(distance,k,flow=state.inflow){
+  return 100*Math.exp(-k*distance/(flow/100));
+}
+function phosphorus(month,harvest,flow=state.inflow){
+  const base=5.2*residue(50,.022,flow)/100+.19*Math.cos((month-1)*Math.PI/6);
+  const release=(harvest==='remove'?.42:2.5)*(1-Math.exp(-.92*Math.max(0,month-10)));
+  return base+release;
+}
+function gravels(x,y,w,h){
+  return many(84,i=>{
+    const px=x+9+(i*53)%Math.round(w-18),py=y+9+(i*37)%Math.round(h-18),r=3+i%6;
+    return E(px,py,r*1.34,r*.65,['#d7c6a5','#b7bbb0','#c4b8a0','#e1d6be'][i%4],'#a89e8a');
+  });
+}
+function wetArt(t){
+  const month=1+11*t,cut=state.harvest==='remove'?1-.78*phase(month,10,10.7):1;
+  const decay=state.harvest==='leave'?phase(month,10,12):0;
+  const x=76+450*t,fluidT=t*state.inflow/100;
+  let svg=R(43,77,500,497,'#ecf3eb','#cbd9d1',11)+
+    P('M48 245L79 497H507L538 245Z','#aaa48a','#6c776b',3)+
+    P('M55 249L87 473H500L533 249Z','#ccbfa0','#94866c',1.6)+
+    P('M68 315L91 469H497L520 315Z','#a3c9c5','#6e9fa8',1.7)+gravels(87,263,410,199)+
+    spark('M53 254V304H91M498 352H535V337','#537784',12)+
+    conduit([[84,342],[193,372],[294,391],[401,374],[498,351]],fluidT,waterBlue,13);
+  svg+=many(9,i=>{
+    const xx=104+i*47,rx=.74+(i%4)*.1;
+    return rootFan(xx,251,rx)+O(1-.70*decay,reed(xx,250,rx,cut))+
+      (decay>0?O(decay,G(xx,250,rx,spark('M0 2Q-11-24-25-53M4 2Q13-21 18-34','#94704c',3.4))):'');
+  });
+  svg+=E(284,334,66,36,'#c4ebda80','#82ae9d')+
+    many(10,i=>E(235+(i*31)%98,317+(i*13)%32,3.1,2.1,i%2?'#63ad91':'#b48c61','#fff'))+
+    many(7,i=>E(374+(i*17)%85,399+(i*13)%38,3.2,3.2,'#5b839b','#fff'))+
+    pulse([[368,405],[380,374],[389,323],[405,259],[413,210]],fluidT,C.blue,5,3)+
+    O(decay,pulse([[131,235],[171,283],[226,352],[303,371]],t,C.red,12,4.4))+
+    (cut<.94?O(phase(month,10,10.7),conduit([[304,210],[384,164],[481,146]],t,C.green,6)):'')+
+    spark(`M${x} 299V452`,C.ink,1.5,'4 5')+E(x,454,5,5,C.ink,'#fff')+
+    call(51,94,85,306,'过滤 · 吸附','砾石拦截，特定基质吸附')+
+    call(309,95,412,251,cut<.94?'收割物外运':decay>0?'枯体逐步分解':'根系吸收无机氮磷',cut<.94?'把部分氮、磷带走':decay>0?'部分磷回到水中':'根际局部供氧')+
+    label(49,205,'预处理来水')+label(441,198,'出水')+
+    call(63,393,259,337,'有氧微区','微生物分解、硝化')+
+    call(324,477,433,410,'外侧低氧区','反硝化可释放 N₂')+
+    label(56,529,'若有敞水区，叶片遮光可改变藻类受光');
+  return svg+tile(43,588,499,43,'游标 '+(50*t).toFixed(0)+' m · '+month.toFixed(1)+' 月','',C.blue);
+}
+function renderWet(t){
+  const at=50*t,month=1+11*t,h=state.harvest;
+  const p=plot('wet-distance',644,139,354,140,[0,10,20,30,40,50],[0,25,50,75,100],'潜流床 · 沿程剩余比例','离进水口距离 / m','占进水比例 / %');
+  const q=plot('wet-season',644,410,354,117,[1,4,7,10,12],[0,2,4,6,8],'出水 TP · 收割试验','月份','浓度 / mg·L⁻¹');
+  const curves=wetMetrics.map(([,label,color,k,dash])=>
+    line(range(50,.5,x=>({y:residue(x,k)})),p,color,3,dash)+chartDot(p,at,residue(at,k),color,4.7)
+  ).join('');
+  const seasonal=[['remove','收割外运',C.green,''],['leave','枯体留床',C.red,'6 4']];
+  let graph=p.svg+scan(p,at)+curves+legend(1017,151,'水质指标',wetMetrics.map(([,label,color,,dash])=>[label,color,dash?'dash':'line']))+
+    q.svg+scan(q,10)+scan(q,month);
+  for(const [key,,color,dash] of seasonal){
+    const points=range(11,.125,x=>({y:phosphorus(x+1,key)})).map(d=>({...d,x:d.x+1}));
+    graph+=line(points,q,color,key===h?4:2.4,dash);
+  }
+  graph+=chartDot(q,month,phosphorus(month,h),h==='remove'?C.green:C.red,6)+
+    legend(1017,439,'管理对照',seasonal.map(([,label,color,dash])=>[label,color,dash?'dash':'line']))+
+    rScript(628,611,['ggplot(wetland, aes(position, value, colour = series))',
+      '+ geom_line(linewidth = 1.2) + facet_wrap(~ monitoring)']);
+  draw(3,headings('水平潜流人工湿地 · 连续剖面','空间处理与季节管理分面')+wetArt(t)+graph);
+  values('inflow',(state.inflow/100).toFixed(2)+' 倍');
+  say(3,'WETLAND / FILTRATION + BIOLOGY',h==='remove'?'收割将部分养分带出床体。':'枯体分解可把磷送回水中。',
+    '固定床体下，流速较高时停留时间缩短。沿程曲线展示相对残留，季节曲线追踪收割后的出水总磷变化。',
+    month.toFixed(1)+' 月 · 出水 TP '+phosphorus(month,h).toFixed(2)+' mg/L',
+    '两个监测分面分别按距离和月份读取。这里的浓度由教学参数生成。');
+}
+
+const stages=[
+  ['受损基底','排查边坡、尾矿与污染风险','裸露岩土、坡面侵蚀和根区缺失使植物难以定植。先明确风险与恢复目标。'],
+  ['地形与土层','稳坡排水、隔离与覆盖','平整和稳定必要部位，按风险布置隔离层和排水。上覆适合生根的土层。'],
+  ['先锋草灌','恢复植被和根际过程','适地先锋草灌提供覆盖与有机输入，微生物帮助建立土壤过程。适配 AMF 可作为受控试验措施。'],
+  ['监测与利用','用监测结果决定后续用途','监测植被、土壤和污染风险。达到相应条件时，才逐步扩大植物配置并考虑复合利用。']
+];
+function stageOf(year){return year<.7?0:year<2?1:year<7.5?2:3}
+function mineValue(year,key,plus){
+  const growth=Math.max(0,year-2),early=phase(year,.65,2),factor=Number(plus);
+  if(key==='biomass')return (58+28*factor)*(1-Math.exp(-growth*(.21+.035*factor)));
+  return 8+8*early+(42+23*factor)*(1-Math.exp(-growth*(.14+.036*factor)));
+}
+function rock(x,y,s=1){
+  return G(x,y,s,P('M-24 7L-16-10L-2-20L19-9L27 8L10 14L-13 13Z','#adb3ae','#707b77',2)+
+    spark('M-16-10L1-7L19-9M1-7L-2-20M1-7L10 14','#7d8983',1.4));
+}
+function loader(x,y,s=1){
+  return G(x,y,s,R(-41,5,83,18,'#706c5e','#494f48',8)+many(5,i=>E(-30+i*15,14,5,5,'#acaa90'))+
+    R(-32,-20,49,26,'#d8a75f','#8a683e',4)+P('M-15-21V-39H4L13-21Z','#b7d5d8','#758785',2)+
+    spark('M16-9L45-30L64-11','#bf8a49',7)+P('M58-9L81-8L82 3L61 8Z','#aa9c83','#74644f',2));
+}
+function mycelium(x,y,s,t){
+  return G(x,y,s,O(.66,spark('M-54 8Q-22-16 3-2T57 16M-31-1L-49-23M-24-3L-18-26M-9-3L-31 27M1-2L11-26M17 4L24 26M29 9L51-12M-27 21L-5 32','#8c78a9',2.4))+
+    pulse([[-51,8],[-25,-3],[3,-2],[30,8],[54,16]],t,purple,5,2.9));
+}
+function mineArt(t,stage){
+  const year=12*t,plus=state.amf==='inoculated',green=phase(year,2,7);
+  let svg=R(43,85,499,457,'#e6eee5','#c8d7cc',11)+hills(45,192,495,216,'#b8c7a8');
+  if(stage===0){
+    svg+=P('M46 246H143L179 284H225L260 320H325L358 293H417L448 250H539V533H46Z','#afaa99','#756f60',2)+
+      P('M46 316H117L163 353H220L268 394H356L412 342H539V533H46Z','#847e70','#69675d',2)+
+      many(17,i=>rock(67+(i*81)%456,339+(i*19)%174,.48+i%3*.2))+
+      call(66,117,184,286,'表土流失','裸露基底和陡坡')+call(306,420,399,355,'潜在污染','先取样评估风险');
+  }else{
+    svg+=P('M46 349Q172 320 275 343T539 329V532H46Z','#8d8676','#736d61',2)+
+      P('M46 334Q172 305 275 328T539 314L539 350Q402 364 274 350T46 367Z','#d7c19b','#ae9674',1.8)+
+      P('M46 308Q172 279 275 302T539 288L539 314Q401 330 273 326T46 345Z','url(#soil)','#907858',2)+
+      P('M46 420Q172 395 275 418T539 407V532H46Z','#847e71','#736d61')+
+      spark('M48 419Q179 395 275 418T536 407','#637d8a',3.2,'6 4')+
+      many(19,i=>rock(66+(i*71)%461,442+(i*43)%78,.29+i%4*.13));
+    if(stage===1){
+      svg+=loader(150+60*phase(t,.06,.17),281,.86)+
+        call(63,112,204,299,'整地并恢复表土','根区保有适宜孔隙')+
+        call(302,451,411,416,'隔离与导排','按污染、水文风险配置');
+    }else{
+      svg+=many(13,i=>{
+        const x=65+i*36,y=303-12*Math.sin(i*.53);
+        return G(x,y,.43+green*.53,grass(0,0,1))+rootFan(x,y,.48+green*.27);
+      })+many(stage===3?6:3,i=>{
+        const x=89+i*(stage===3?73:170),y=298-7*(i%2);
+        return (stage===3?tree(x,y,.66+green*.35):many(5,j=>leaf(x+(j-2)*9,y,.48+green*.25,(j-2)*28)))+
+          rootFan(x,y,.72);
+      })+(plus?mycelium(164,374,1.18,t)+mycelium(357,369,1.15,t):mycelium(164,376,.66,t))+
+      call(63,104,148,274,stage===3?'监测后调整配置':'先锋草灌建立','根据当地水土与物种配置')+
+      call(289,435,357,367,plus?'AMF 菌丝与根际':'自然定殖的根际微生物',plus?'适配宿主与场地':'作为不额外接种的对照');
+    }
+  }
+  return svg+tile(43,566,499,65,'阶段 '+stage+' · '+stages[stage][0],stages[stage][1],C.green);
+}
+function renderMine(t){
+  const year=12*t,stage=stageOf(year),r=stages[stage],plus=state.amf==='inoculated';
+  state.stage=stage;
+  pick('[data-group="stage"]',String(stage));
+  const p=plot('mine-biomass',644,141,354,136,[0,3,6,9,12],[0,25,50,75,100],'植物地上生物量 · 模拟','修复推进 / 年','生物量指数');
+  const q=plot('mine-carbon',644,406,354,121,[0,3,6,9,12],[0,25,50,75,100],'表层土壤有机碳 · 模拟','修复推进 / 年','土壤碳指数');
+  p.max=q.max=12;
+  const keys=[['control',C.blue,'6 4'],['inoculated',C.green,'']];
+  const band=x=>5*phase(x,2,7);
+  const svg=headings('元宝山矿区 · 修复过程示意','覆土＋植被与 AMF 方案对照')+mineArt(t,stage)+
+    timeFacet(p,year,keys,(x,k)=>mineValue(x,'biomass',k==='inoculated'),band,state.amf)+
+    timeFacet(q,year,keys,(x,k)=>mineValue(x,'carbon',k==='inoculated'),band,state.amf)+
+    legend(1016,153,'修复情景',[['覆土＋植被',C.blue,'dash'],['加适配 AMF',C.green,'line'],['敏感性范围',C.green,'band']])+
+    rScript(628,611,['ggplot(mine, aes(year, index, colour = treatment))',
+      '+ geom_line() + geom_ribbon(alpha = .25) + facet_wrap(~ metric)']);
+  draw(4,svg);
+  say(4,'RESTORATION · STAGE '+stage,r[0],r[2],
+    '第 '+year.toFixed(1)+' 年 · 生物量 '+mineValue(year,'biomass',plus).toFixed(0)+' / 土壤碳 '+mineValue(year,'carbon',plus).toFixed(0),
+    (plus?'显示加适配 AMF 方案指数。':'显示覆土＋植被方案指数。')+' 两方案在定植前条件相同。');
+}
+
+const views=[renderPrinciple,renderFarm,renderWet,renderMine],durations=[18,17,19,20],initialTimes=[0,0,0,0];
+function selectPrinciple(value){
+  state.principle=value;
+  pick('[data-group="principle"]',value);
+  document.querySelector('[data-group="habitat"]').parentElement.hidden=value!=='match';
+  clocks[0].reset();
+}
+const groups={
+  principle:selectPrinciple,
+  habitat:v=>{state.habitat=v;clocks[0].reset()},
+  flow:v=>{state.flow=v;clocks[1].reset()},
+  harvest:v=>{state.harvest=v;redraw(2)},
+  stage:v=>clocks[3].seek([0,1.3,4.2,10][Number(v)]/12),
+  amf:v=>{state.amf=v;if(state.stage<2)clocks[3].seek(4.2/12);else redraw(3)}
+};
+const inputs={inflow:v=>{state.inflow=v;redraw(2)}};
+function wireChapter(){
+  $('svg1').addEventListener('click',event=>{
+    const selected=event.target.closest('[data-principle]')?.dataset.principle;
+    if(selected)selectPrinciple(selected);
+  });
+}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

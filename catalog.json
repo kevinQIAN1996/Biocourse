@@ -7723,5 +7723,2171 @@
     "preferredVersionId": "quantitative-atlas-v1",
     "latestPolicy": "默认优先更新版本；教师指定的课堂优先方案保持，历史入口保留。",
     "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。"
+  },
+  {
+    "id": "community-structure",
+    "title": "群落的结构",
+    "category": "eco",
+    "summary": "区分群落的物种组成、种间关系和空间结构。",
+    "design": "先描述观察到的结构，再用资源与种间关系解释共存。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "群落结构与生态位 · 学术图谱",
+        "file": "lessons/选择性必修2_02-01_群落的结构_群落结构与生态位图谱_v1.0.html",
+        "route": "courses/community-structure/atlas-v1/",
+        "sourceFilename": "选择性必修2_02-01_群落的结构_群落结构与生态位图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "区分群落的物种组成、种间关系和空间结构。",
+        "features": [
+          "种间关系对照",
+          "群落分层与空间结构",
+          "资源利用与生态位重叠"
+        ],
+        "approach": "先描述观察到的结构，再用资源与种间关系解释共存。",
+        "design": "先描述观察到的结构，再用资源与种间关系解释共存。",
+        "difference": "本版侧重种间关系对照、群落分层与空间结构、资源利用与生态位重叠。",
+        "suitableFor": "适合围绕“种间关系对照”组织过程观察与证据讨论。",
+        "comparisonScope": "第2章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "种间关系对照",
+          "群落分层与空间结构",
+          "资源利用与生态位重叠",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-06T03:38:54.014Z",
+        "sourceSha256": "48da18be9cad6b22e0b093d285516d7e5362bf142c034c1ba041dcdfbb2bb390",
+        "contentSha256": "48da18be9cad6b22e0b093d285516d7e5362bf142c034c1ba041dcdfbb2bb390",
+        "bytes": 81521,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "种间关系对照",
+              "群落分层与空间结构",
+              "资源利用与生态位重叠",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/community-structure--atlas-v1.webp",
+          "thumbnail": "assets/previews/community-structure--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "群落的结构 · 群落结构与生态位 · 学术图谱真实课件画面",
+          "scene": "区分群落的物种组成、种间关系和空间结构。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 2,
+      "chapterTitle": "群落及其演替",
+      "sections": [
+        {
+          "number": 1,
+          "title": "群落的结构"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第1节"
+    },
+    "inquiry": "区分群落的物种组成、种间关系和空间结构。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/community-structure--atlas-v1.webp",
+      "thumbnail": "assets/previews/community-structure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "群落的结构 · 群落结构与生态位 · 学术图谱真实课件画面",
+      "scene": "区分群落的物种组成、种间关系和空间结构。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "community-types-succession",
+    "title": "群落的主要类型与演替",
+    "category": "eco",
+    "summary": "把不同气候下的群落类型与同一地点随时间发生的演替分开。",
+    "design": "先比较空间上的群落类型，再回到同一地点追踪时间变化。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "群落时空图谱 · 学术图谱",
+        "file": "lessons/选择性必修2_02-02-03_群落的主要类型与演替_群落时空生态图谱_v1.0.html",
+        "route": "courses/community-types-succession/atlas-v1/",
+        "sourceFilename": "选择性必修2_02-02-03_群落的主要类型与演替_群落时空生态图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "把不同气候下的群落类型与同一地点随时间发生的演替分开。",
+        "features": [
+          "气候与群落类型",
+          "原生演替与次生演替",
+          "演替指标与人类干扰"
+        ],
+        "approach": "先比较空间上的群落类型，再回到同一地点追踪时间变化。",
+        "design": "先比较空间上的群落类型，再回到同一地点追踪时间变化。",
+        "difference": "本版侧重气候与群落类型、原生演替与次生演替、演替指标与人类干扰。",
+        "suitableFor": "适合围绕“气候与群落类型”组织过程观察与证据讨论。",
+        "comparisonScope": "第2章 · 第2–3节合讲",
+        "changes": [
+          "本版本首次在本站公开。",
+          "气候与群落类型",
+          "原生演替与次生演替",
+          "演替指标与人类干扰",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-06T12:43:16.812Z",
+        "sourceSha256": "62441ece3e667cfac70c6fd1ea5d8fd5e9724d8914b4b255c134655da8d27d8c",
+        "contentSha256": "62441ece3e667cfac70c6fd1ea5d8fd5e9724d8914b4b255c134655da8d27d8c",
+        "bytes": 73137,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "气候与群落类型",
+              "原生演替与次生演替",
+              "演替指标与人类干扰",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/community-types-succession--atlas-v1.webp",
+          "thumbnail": "assets/previews/community-types-succession--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "群落的主要类型与演替 · 群落时空图谱 · 学术图谱真实课件画面",
+          "scene": "把不同气候下的群落类型与同一地点随时间发生的演替分开。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 2,
+      "chapterTitle": "群落及其演替",
+      "sections": [
+        {
+          "number": 2,
+          "title": "群落的主要类型"
+        },
+        {
+          "number": 3,
+          "title": "群落的演替"
+        }
+      ],
+      "integrated": true,
+      "label": "第2章 · 第2–3节合讲"
+    },
+    "inquiry": "把不同气候下的群落类型与同一地点随时间发生的演替分开。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/community-types-succession--atlas-v1.webp",
+      "thumbnail": "assets/previews/community-types-succession--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "群落的主要类型与演替 · 群落时空图谱 · 学术图谱真实课件画面",
+      "scene": "把不同气候下的群落类型与同一地点随时间发生的演替分开。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecosystem-structure",
+    "title": "生态系统的结构",
+    "category": "eco",
+    "summary": "沿食物网追踪营养关系，辨认生态系统各组成成分。",
+    "design": "先沿单条路径判断营养位置，再比较多个路径给出的结果。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "生态网络与营养路径 · 学术图谱",
+        "file": "lessons/选择性必修2_03-01_生态系统的结构_生态网络与营养路径图谱_v1.0.html",
+        "route": "courses/ecosystem-structure/atlas-v1/",
+        "sourceFilename": "选择性必修2_03-01_生态系统的结构_生态网络与营养路径图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "沿食物网追踪营养关系，辨认生态系统各组成成分。",
+        "features": [
+          "生产者、消费者、分解者",
+          "同一物种的不同营养位置",
+          "食物网变化与替代路径"
+        ],
+        "approach": "先沿单条路径判断营养位置，再比较多个路径给出的结果。",
+        "design": "先沿单条路径判断营养位置，再比较多个路径给出的结果。",
+        "difference": "本版侧重生产者、消费者、分解者、同一物种的不同营养位置、食物网变化与替代路径。",
+        "suitableFor": "适合围绕“生产者、消费者、分解者”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "生产者、消费者、分解者",
+          "同一物种的不同营养位置",
+          "食物网变化与替代路径",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-06T13:13:27.691Z",
+        "sourceSha256": "4565ed25eb294ec798fc49d6ffd4ac2ff662aea850f274587abe0efaef19fe69",
+        "contentSha256": "4565ed25eb294ec798fc49d6ffd4ac2ff662aea850f274587abe0efaef19fe69",
+        "bytes": 75600,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "生产者、消费者、分解者",
+              "同一物种的不同营养位置",
+              "食物网变化与替代路径",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecosystem-structure--atlas-v1.webp",
+          "thumbnail": "assets/previews/ecosystem-structure--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态系统的结构 · 生态网络与营养路径 · 学术图谱真实课件画面",
+          "scene": "沿食物网追踪营养关系，辨认生态系统各组成成分。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 3,
+      "chapterTitle": "生态系统及其稳定性",
+      "sections": [
+        {
+          "number": 1,
+          "title": "生态系统的结构"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第1节"
+    },
+    "inquiry": "沿食物网追踪营养关系，辨认生态系统各组成成分。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecosystem-structure--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-structure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的结构 · 生态网络与营养路径 · 学术图谱真实课件画面",
+      "scene": "沿食物网追踪营养关系，辨认生态系统各组成成分。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecosystem-energy",
+    "title": "生态系统的能量流动",
+    "category": "eco",
+    "summary": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。",
+    "design": "先确定系统边界和单位，再沿图核对每笔能量去向。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "能量账本与生态金字塔 · 学术图谱",
+        "file": "lessons/选择性必修2_03-02_生态系统的能量流动_能量账本与生态金字塔图谱_v1.0.html",
+        "route": "courses/ecosystem-energy/atlas-v1/",
+        "sourceFilename": "选择性必修2_03-02_生态系统的能量流动_能量账本与生态金字塔图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。",
+        "features": [
+          "能量账本与同化量",
+          "营养环节与传递效率",
+          "三类生态金字塔与能量利用"
+        ],
+        "approach": "先确定系统边界和单位，再沿图核对每笔能量去向。",
+        "design": "先确定系统边界和单位，再沿图核对每笔能量去向。",
+        "difference": "本版侧重能量账本与同化量、营养环节与传递效率、三类生态金字塔与能量利用。",
+        "suitableFor": "适合围绕“能量账本与同化量”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "能量账本与同化量",
+          "营养环节与传递效率",
+          "三类生态金字塔与能量利用",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-06T13:42:32.034Z",
+        "sourceSha256": "be64e66d5534f2756ced408220416638e534c6e90b5ed59383ef07fe69fbdea5",
+        "contentSha256": "be64e66d5534f2756ced408220416638e534c6e90b5ed59383ef07fe69fbdea5",
+        "bytes": 70256,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "能量账本与同化量",
+              "营养环节与传递效率",
+              "三类生态金字塔与能量利用",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecosystem-energy--atlas-v1.webp",
+          "thumbnail": "assets/previews/ecosystem-energy--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态系统的能量流动 · 能量账本与生态金字塔 · 学术图谱真实课件画面",
+          "scene": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 3,
+      "chapterTitle": "生态系统及其稳定性",
+      "sections": [
+        {
+          "number": 2,
+          "title": "生态系统的能量流动"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
+    },
+    "inquiry": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecosystem-energy--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-energy--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的能量流动 · 能量账本与生态金字塔 · 学术图谱真实课件画面",
+      "scene": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecosystem-material-cycle",
+    "title": "生态系统的物质循环",
+    "category": "eco",
+    "summary": "把碳循环、生物富集和分解对照实验放在同一节课中比较。",
+    "design": "先沿箭头追踪物质，再比较分解实验的对照条件。",
+    "versions": [
+      {
+        "id": "workbuddy-v1",
+        "label": "1.0",
+        "edition": "WorkBuddy · 碳循环与生物富集",
+        "file": "lessons/选择性必修2_03-03_生态系统的物质循环_WorkBuddy版.html",
+        "route": "courses/ecosystem-material-cycle/workbuddy-v1/",
+        "sourceFilename": "选必二3.3生态系统的物质循环.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "WorkBuddy 本地课件首次在本站公开，平台编号 v1.0；公开日期不等同于原始创作日期。",
+        "summary": "把碳循环、生物富集和分解对照实验放在同一节课中比较。",
+        "features": [
+          "碳库之间的碳流",
+          "生物富集与食物链",
+          "土壤微生物分解的对照"
+        ],
+        "approach": "先沿箭头追踪物质，再比较分解实验的对照条件。",
+        "design": "先沿箭头追踪物质，再比较分解实验的对照条件。",
+        "difference": "本版侧重碳库之间的碳流、生物富集与食物链、土壤微生物分解的对照。",
+        "suitableFor": "适合围绕“碳库之间的碳流”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "碳库之间的碳流",
+          "生物富集与食物链",
+          "土壤微生物分解的对照",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-07T04:40:44.247Z",
+        "sourceSha256": "883ac7fbfba8887d85b38d32fad96105f44d19680ed7d5c66017bb829a2f94f8",
+        "contentSha256": "883ac7fbfba8887d85b38d32fad96105f44d19680ed7d5c66017bb829a2f94f8",
+        "bytes": 85131,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "碳库之间的碳流",
+              "生物富集与食物链",
+              "土壤微生物分解的对照",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecosystem-material-cycle--workbuddy-v1.webp",
+          "thumbnail": "assets/previews/ecosystem-material-cycle--workbuddy-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态系统的物质循环 · WorkBuddy · 碳循环与生物富集真实课件画面",
+          "scene": "把碳循环、生物富集和分解对照实验放在同一节课中比较。"
+        }
+      }
+    ],
+    "latestVersionId": "workbuddy-v1",
+    "preferredVersionId": "workbuddy-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 3,
+      "chapterTitle": "生态系统及其稳定性",
+      "sections": [
+        {
+          "number": 3,
+          "title": "生态系统的物质循环"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第3节"
+    },
+    "inquiry": "把碳循环、生物富集和分解对照实验放在同一节课中比较。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecosystem-material-cycle--workbuddy-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-material-cycle--workbuddy-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的物质循环 · WorkBuddy · 碳循环与生物富集真实课件画面",
+      "scene": "把碳循环、生物富集和分解对照实验放在同一节课中比较。",
+      "versionId": "workbuddy-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecosystem-information",
+    "title": "生态系统的信息传递",
+    "category": "eco",
+    "summary": "从蜂舞、种子萌发和植物挥发物比较生态信息。",
+    "design": "先辨认信源和接收者，再判断同一信息作用在哪个层次。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "生态信号网络 · 学术图谱",
+        "file": "lessons/选择性必修2_03-04_生态系统的信息传递_生态信号网络图谱_v1.0.html",
+        "route": "courses/ecosystem-information/atlas-v1/",
+        "sourceFilename": "选择性必修2_03-04_生态系统的信息传递_生态信号网络图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "从蜂舞、种子萌发和植物挥发物比较生态信息。",
+        "features": [
+          "蜜蜂摇摆舞解码",
+          "光信号与萌发",
+          "种间化学信息与农业应用"
+        ],
+        "approach": "先辨认信源和接收者，再判断同一信息作用在哪个层次。",
+        "design": "先辨认信源和接收者，再判断同一信息作用在哪个层次。",
+        "difference": "本版侧重蜜蜂摇摆舞解码、光信号与萌发、种间化学信息与农业应用。",
+        "suitableFor": "适合围绕“蜜蜂摇摆舞解码”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第4节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "蜜蜂摇摆舞解码",
+          "光信号与萌发",
+          "种间化学信息与农业应用",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-07T08:48:24.251Z",
+        "sourceSha256": "3be0adfc9bbb8efe28911e91984c53da0c2ff47cb5ed7fc52490eae7c060c4e7",
+        "contentSha256": "3be0adfc9bbb8efe28911e91984c53da0c2ff47cb5ed7fc52490eae7c060c4e7",
+        "bytes": 94200,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "蜜蜂摇摆舞解码",
+              "光信号与萌发",
+              "种间化学信息与农业应用",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecosystem-information--atlas-v1.webp",
+          "thumbnail": "assets/previews/ecosystem-information--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态系统的信息传递 · 生态信号网络 · 学术图谱真实课件画面",
+          "scene": "从蜂舞、种子萌发和植物挥发物比较生态信息。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 3,
+      "chapterTitle": "生态系统及其稳定性",
+      "sections": [
+        {
+          "number": 4,
+          "title": "生态系统的信息传递"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第4节"
+    },
+    "inquiry": "从蜂舞、种子萌发和植物挥发物比较生态信息。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecosystem-information--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-information--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的信息传递 · 生态信号网络 · 学术图谱真实课件画面",
+      "scene": "从蜂舞、种子萌发和植物挥发物比较生态信息。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecosystem-stability",
+    "title": "生态系统的稳定性",
+    "category": "eco",
+    "summary": "以扰动响应比较抵抗力、恢复力及系统的调节限度。",
+    "design": "用同一次扰动比较偏离幅度和恢复速度，再解释差异。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "反馈与恢复力 · 学术图谱",
+        "file": "lessons/选择性必修2_03-05_生态系统的稳定性_反馈与恢复力图谱_v1.0.html",
+        "route": "courses/ecosystem-stability/atlas-v1/",
+        "sourceFilename": "选择性必修2_03-05_生态系统的稳定性_反馈与恢复力图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "以扰动响应比较抵抗力、恢复力及系统的调节限度。",
+        "features": [
+          "负反馈与调节限度",
+          "抵抗力与恢复力对照",
+          "生态缸和系统管理"
+        ],
+        "approach": "用同一次扰动比较偏离幅度和恢复速度，再解释差异。",
+        "design": "用同一次扰动比较偏离幅度和恢复速度，再解释差异。",
+        "difference": "本版侧重负反馈与调节限度、抵抗力与恢复力对照、生态缸和系统管理。",
+        "suitableFor": "适合围绕“负反馈与调节限度”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第5节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "负反馈与调节限度",
+          "抵抗力与恢复力对照",
+          "生态缸和系统管理",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-08T15:50:44.311Z",
+        "sourceSha256": "2dbc416ad4091f5ed7474c41c6aed9659cd294debfe99c22a056ec95b0b2125b",
+        "contentSha256": "2dbc416ad4091f5ed7474c41c6aed9659cd294debfe99c22a056ec95b0b2125b",
+        "bytes": 73675,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "负反馈与调节限度",
+              "抵抗力与恢复力对照",
+              "生态缸和系统管理",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecosystem-stability--atlas-v1.webp",
+          "thumbnail": "assets/previews/ecosystem-stability--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态系统的稳定性 · 反馈与恢复力 · 学术图谱真实课件画面",
+          "scene": "以扰动响应比较抵抗力、恢复力及系统的调节限度。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 3,
+      "chapterTitle": "生态系统及其稳定性",
+      "sections": [
+        {
+          "number": 5,
+          "title": "生态系统的稳定性"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第5节"
+    },
+    "inquiry": "以扰动响应比较抵抗力、恢复力及系统的调节限度。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecosystem-stability--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-stability--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的稳定性 · 反馈与恢复力 · 学术图谱真实课件画面",
+      "scene": "以扰动响应比较抵抗力、恢复力及系统的调节限度。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "human-environment-impact",
+    "title": "人类活动对生态环境的影响",
+    "category": "eco",
+    "summary": "从生态需求和再生供给认识人类活动的环境影响。",
+    "design": "先区分压力指标，再用证据选一个可实施的干预位置。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "生态足迹与全球变化 · 学术图谱",
+        "file": "lessons/选择性必修2_04-01_人类活动对生态环境的影响_生态足迹与全球变化图谱_v1.0.html",
+        "route": "courses/human-environment-impact/atlas-v1/",
+        "sourceFilename": "选择性必修2_04-01_人类活动对生态环境的影响_生态足迹与全球变化图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "从生态需求和再生供给认识人类活动的环境影响。",
+        "features": [
+          "生态足迹与承载力",
+          "生态需求的长期变化",
+          "污染过程与干预位置"
+        ],
+        "approach": "先区分压力指标，再用证据选一个可实施的干预位置。",
+        "design": "先区分压力指标，再用证据选一个可实施的干预位置。",
+        "difference": "本版侧重生态足迹与承载力、生态需求的长期变化、污染过程与干预位置。",
+        "suitableFor": "适合围绕“生态足迹与承载力”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "生态足迹与承载力",
+          "生态需求的长期变化",
+          "污染过程与干预位置",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-08T16:44:10.469Z",
+        "sourceSha256": "c0e0548ca18621b2fc35c9b63abbe05b50a1e9cbe40caa2f5a41029d0827b387",
+        "contentSha256": "c0e0548ca18621b2fc35c9b63abbe05b50a1e9cbe40caa2f5a41029d0827b387",
+        "bytes": 68236,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "生态足迹与承载力",
+              "生态需求的长期变化",
+              "污染过程与干预位置",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/human-environment-impact--atlas-v1.webp",
+          "thumbnail": "assets/previews/human-environment-impact--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "人类活动对生态环境的影响 · 生态足迹与全球变化 · 学术图谱真实课件画面",
+          "scene": "从生态需求和再生供给认识人类活动的环境影响。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 4,
+      "chapterTitle": "人与环境",
+      "sections": [
+        {
+          "number": 1,
+          "title": "人类活动对生态环境的影响"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第1节"
+    },
+    "inquiry": "从生态需求和再生供给认识人类活动的环境影响。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/human-environment-impact--atlas-v1.webp",
+      "thumbnail": "assets/previews/human-environment-impact--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "人类活动对生态环境的影响 · 生态足迹与全球变化 · 学术图谱真实课件画面",
+      "scene": "从生态需求和再生供给认识人类活动的环境影响。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "biodiversity-conservation",
+    "title": "生物多样性及其保护",
+    "category": "eco",
+    "summary": "联系多样性层次、生态价值和栖息地保护。",
+    "design": "比较道路与廊道条件，再解释保护措施作用在哪一层。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "景观连通与保护 · 学术图谱",
+        "file": "lessons/选择性必修2_04-02_生物多样性及其保护_景观连通与保护生物学图谱_v1.0.html",
+        "route": "courses/biodiversity-conservation/atlas-v1/",
+        "sourceFilename": "选择性必修2_04-02_生物多样性及其保护_景观连通与保护生物学图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "联系多样性层次、生态价值和栖息地保护。",
+        "features": [
+          "遗传、物种和生态系统多样性",
+          "湿地的多种价值",
+          "生境连通与保护措施组合"
+        ],
+        "approach": "比较道路与廊道条件，再解释保护措施作用在哪一层。",
+        "design": "比较道路与廊道条件，再解释保护措施作用在哪一层。",
+        "difference": "本版侧重遗传、物种和生态系统多样性、湿地的多种价值、生境连通与保护措施组合。",
+        "suitableFor": "适合围绕“遗传、物种和生态系统多样性”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "遗传、物种和生态系统多样性",
+          "湿地的多种价值",
+          "生境连通与保护措施组合",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-08T16:44:10.479Z",
+        "sourceSha256": "037f2f1903627938c9714e623fa447a2e1ee9d2c682bd35b4a040772d9323889",
+        "contentSha256": "037f2f1903627938c9714e623fa447a2e1ee9d2c682bd35b4a040772d9323889",
+        "bytes": 65815,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "遗传、物种和生态系统多样性",
+              "湿地的多种价值",
+              "生境连通与保护措施组合",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/biodiversity-conservation--atlas-v1.webp",
+          "thumbnail": "assets/previews/biodiversity-conservation--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生物多样性及其保护 · 景观连通与保护 · 学术图谱真实课件画面",
+          "scene": "联系多样性层次、生态价值和栖息地保护。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 4,
+      "chapterTitle": "人与环境",
+      "sections": [
+        {
+          "number": 2,
+          "title": "生物多样性及其保护"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第2节"
+    },
+    "inquiry": "联系多样性层次、生态价值和栖息地保护。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/biodiversity-conservation--atlas-v1.webp",
+      "thumbnail": "assets/previews/biodiversity-conservation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生物多样性及其保护 · 景观连通与保护 · 学术图谱真实课件画面",
+      "scene": "联系多样性层次、生态价值和栖息地保护。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "ecological-engineering",
+    "title": "生态工程",
+    "category": "eco",
+    "summary": "用循环农业、人工湿地和矿区修复理解生态工程。",
+    "design": "先指明系统中的物质和能量去向，再比较干预如何改变结果。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "循环农业与生态修复 · 学术图谱",
+        "file": "lessons/选择性必修2_04-03_生态工程_循环农业与生态修复图谱_v1.0.html",
+        "route": "courses/ecological-engineering/atlas-v1/",
+        "sourceFilename": "选择性必修2_04-03_生态工程_循环农业与生态修复图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "用循环农业、人工湿地和矿区修复理解生态工程。",
+        "features": [
+          "生态工程的基本原理",
+          "循环农业与人工湿地",
+          "矿区修复的过程与指标"
+        ],
+        "approach": "先指明系统中的物质和能量去向，再比较干预如何改变结果。",
+        "design": "先指明系统中的物质和能量去向，再比较干预如何改变结果。",
+        "difference": "本版侧重生态工程的基本原理、循环农业与人工湿地、矿区修复的过程与指标。",
+        "suitableFor": "适合围绕“生态工程的基本原理”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "生态工程的基本原理",
+          "循环农业与人工湿地",
+          "矿区修复的过程与指标",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-08T23:43:00.516Z",
+        "sourceSha256": "486d3a901a9242bdcad38dc211c4fd36569f457f6b077fbc8905471916ae6875",
+        "contentSha256": "486d3a901a9242bdcad38dc211c4fd36569f457f6b077fbc8905471916ae6875",
+        "bytes": 73642,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "生态工程的基本原理",
+              "循环农业与人工湿地",
+              "矿区修复的过程与指标",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/ecological-engineering--atlas-v1.webp",
+          "thumbnail": "assets/previews/ecological-engineering--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "生态工程 · 循环农业与生态修复 · 学术图谱真实课件画面",
+          "scene": "用循环农业、人工湿地和矿区修复理解生态工程。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 2 · 生物与环境",
+      "chapter": 4,
+      "chapterTitle": "人与环境",
+      "sections": [
+        {
+          "number": 3,
+          "title": "生态工程"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第3节"
+    },
+    "inquiry": "用循环农业、人工湿地和矿区修复理解生态工程。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/ecological-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecological-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态工程 · 循环农业与生态修复 · 学术图谱真实课件画面",
+      "scene": "用循环农业、人工湿地和矿区修复理解生态工程。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "traditional-fermentation",
+    "title": "传统发酵技术的应用",
+    "category": "biotech",
+    "summary": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。",
+    "design": "先预测供氧等条件怎样改变产物，再沿装置与曲线验证。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "微生物代谢与发酵装置 · 学术图谱",
+        "file": "lessons/选择性必修3_01-01_传统发酵技术的应用_微生物代谢与发酵装置图谱_v1.0.html",
+        "route": "courses/traditional-fermentation/atlas-v1/",
+        "sourceFilename": "选择性必修3_01-01_传统发酵技术的应用_微生物代谢与发酵装置图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。",
+        "features": [
+          "果酒和果醋的条件对照",
+          "发酵装置与气体交换",
+          "泡菜和腐乳中的微生物作用"
+        ],
+        "approach": "先预测供氧等条件怎样改变产物，再沿装置与曲线验证。",
+        "design": "先预测供氧等条件怎样改变产物，再沿装置与曲线验证。",
+        "difference": "本版侧重果酒和果醋的条件对照、发酵装置与气体交换、泡菜和腐乳中的微生物作用。",
+        "suitableFor": "适合围绕“果酒和果醋的条件对照”组织过程观察与证据讨论。",
+        "comparisonScope": "第1章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "果酒和果醋的条件对照",
+          "发酵装置与气体交换",
+          "泡菜和腐乳中的微生物作用",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T00:57:07.909Z",
+        "sourceSha256": "d4e453c2edadc302647beb449003b6edee719b1c6eea0d48a366bdd909f51b01",
+        "contentSha256": "d4e453c2edadc302647beb449003b6edee719b1c6eea0d48a366bdd909f51b01",
+        "bytes": 76580,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "果酒和果醋的条件对照",
+              "发酵装置与气体交换",
+              "泡菜和腐乳中的微生物作用",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/traditional-fermentation--atlas-v1.webp",
+          "thumbnail": "assets/previews/traditional-fermentation--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "传统发酵技术的应用 · 微生物代谢与发酵装置 · 学术图谱真实课件画面",
+          "scene": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 1,
+      "chapterTitle": "发酵工程",
+      "sections": [
+        {
+          "number": 1,
+          "title": "传统发酵技术的应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第1节"
+    },
+    "inquiry": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/traditional-fermentation--atlas-v1.webp",
+      "thumbnail": "assets/previews/traditional-fermentation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "传统发酵技术的应用 · 微生物代谢与发酵装置 · 学术图谱真实课件画面",
+      "scene": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "microbial-culture",
+    "title": "微生物的培养技术及应用",
+    "category": "biotech",
+    "summary": "把无菌操作、纯培养、计数和筛选的证据连起来。",
+    "design": "区分分离、计数和筛选三个目标，再选各自的观察指标。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "纯培养与定量筛选 · 学术图谱",
+        "file": "lessons/选择性必修3_01-02_微生物的培养技术及应用_纯培养与定量筛选图谱_v1.0.html",
+        "route": "courses/microbial-culture/atlas-v1/",
+        "sourceFilename": "选择性必修3_01-02_微生物的培养技术及应用_纯培养与定量筛选图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "把无菌操作、纯培养、计数和筛选的证据连起来。",
+        "features": [
+          "培养流程与无菌操作",
+          "划线分离与稀释涂布",
+          "筛选结果与对照设计"
+        ],
+        "approach": "区分分离、计数和筛选三个目标，再选各自的观察指标。",
+        "design": "区分分离、计数和筛选三个目标，再选各自的观察指标。",
+        "difference": "本版侧重培养流程与无菌操作、划线分离与稀释涂布、筛选结果与对照设计。",
+        "suitableFor": "适合围绕“培养流程与无菌操作”组织过程观察与证据讨论。",
+        "comparisonScope": "第1章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "培养流程与无菌操作",
+          "划线分离与稀释涂布",
+          "筛选结果与对照设计",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T01:24:02.091Z",
+        "sourceSha256": "4968207e7628b17745982aaa771c73fd6469d76a324f5e51501d7003f207a6a9",
+        "contentSha256": "4968207e7628b17745982aaa771c73fd6469d76a324f5e51501d7003f207a6a9",
+        "bytes": 74941,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "培养流程与无菌操作",
+              "划线分离与稀释涂布",
+              "筛选结果与对照设计",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/microbial-culture--atlas-v1.webp",
+          "thumbnail": "assets/previews/microbial-culture--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "微生物的培养技术及应用 · 纯培养与定量筛选 · 学术图谱真实课件画面",
+          "scene": "把无菌操作、纯培养、计数和筛选的证据连起来。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 1,
+      "chapterTitle": "发酵工程",
+      "sections": [
+        {
+          "number": 2,
+          "title": "微生物的培养技术及应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第2节"
+    },
+    "inquiry": "把无菌操作、纯培养、计数和筛选的证据连起来。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/microbial-culture--atlas-v1.webp",
+      "thumbnail": "assets/previews/microbial-culture--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "微生物的培养技术及应用 · 纯培养与定量筛选 · 学术图谱真实课件画面",
+      "scene": "把无菌操作、纯培养、计数和筛选的证据连起来。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "industrial-fermentation",
+    "title": "发酵工程及其应用",
+    "category": "biotech",
+    "summary": "沿工业发酵流程观察供氧、移热和产品分离。",
+    "design": "从产物和所在位置反推过程控制与下游分离方案。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从发酵罐到工业产品 · 学术图谱",
+        "file": "lessons/选择性必修3_01-03_发酵工程及其应用_从搅拌发酵罐到工业产品图谱_v1.0.html",
+        "route": "courses/industrial-fermentation/atlas-v1/",
+        "sourceFilename": "选择性必修3_01-03_发酵工程及其应用_从搅拌发酵罐到工业产品图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "沿工业发酵流程观察供氧、移热和产品分离。",
+        "features": [
+          "发酵罐的环境控制",
+          "代谢条件与产物",
+          "菌体和上清的分离选择"
+        ],
+        "approach": "从产物和所在位置反推过程控制与下游分离方案。",
+        "design": "从产物和所在位置反推过程控制与下游分离方案。",
+        "difference": "本版侧重发酵罐的环境控制、代谢条件与产物、菌体和上清的分离选择。",
+        "suitableFor": "适合围绕“发酵罐的环境控制”组织过程观察与证据讨论。",
+        "comparisonScope": "第1章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "发酵罐的环境控制",
+          "代谢条件与产物",
+          "菌体和上清的分离选择",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T01:46:34.589Z",
+        "sourceSha256": "1d8997956f6c1cc76d563346bb828a9e55bbf3bd8d86fc6ebe506e2ffa431f9e",
+        "contentSha256": "1d8997956f6c1cc76d563346bb828a9e55bbf3bd8d86fc6ebe506e2ffa431f9e",
+        "bytes": 81328,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "发酵罐的环境控制",
+              "代谢条件与产物",
+              "菌体和上清的分离选择",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/industrial-fermentation--atlas-v1.webp",
+          "thumbnail": "assets/previews/industrial-fermentation--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "发酵工程及其应用 · 从发酵罐到工业产品 · 学术图谱真实课件画面",
+          "scene": "沿工业发酵流程观察供氧、移热和产品分离。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 1,
+      "chapterTitle": "发酵工程",
+      "sections": [
+        {
+          "number": 3,
+          "title": "发酵工程及其应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第1章 · 第3节"
+    },
+    "inquiry": "沿工业发酵流程观察供氧、移热和产品分离。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/industrial-fermentation--atlas-v1.webp",
+      "thumbnail": "assets/previews/industrial-fermentation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "发酵工程及其应用 · 从发酵罐到工业产品 · 学术图谱真实课件画面",
+      "scene": "沿工业发酵流程观察供氧、移热和产品分离。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "plant-cell-engineering",
+    "title": "植物细胞工程",
+    "category": "biotech",
+    "summary": "追踪离体再生、原生质体融合和植物细胞工程应用。",
+    "design": "让学生依据材料、条件、发育终点区分三种证据。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从外植体到再生植株 · 学术图谱",
+        "file": "lessons/选择性必修3_02-01_植物细胞工程_从外植体到再生植株图谱_v1.0.html",
+        "route": "courses/plant-cell-engineering/atlas-v1/",
+        "sourceFilename": "选择性必修3_02-01_植物细胞工程_从外植体到再生植株图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "追踪离体再生、原生质体融合和植物细胞工程应用。",
+        "features": [
+          "脱分化与再分化",
+          "培养条件和器官发生",
+          "体细胞杂交与杂种证据"
+        ],
+        "approach": "让学生依据材料、条件、发育终点区分三种证据。",
+        "design": "让学生依据材料、条件、发育终点区分三种证据。",
+        "difference": "本版侧重脱分化与再分化、培养条件和器官发生、体细胞杂交与杂种证据。",
+        "suitableFor": "适合围绕“脱分化与再分化”组织过程观察与证据讨论。",
+        "comparisonScope": "第2章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "脱分化与再分化",
+          "培养条件和器官发生",
+          "体细胞杂交与杂种证据",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T02:09:21.054Z",
+        "sourceSha256": "6cb15a9d8bff08919ff94e75b5f343c36697447115c325472ae4de119d620b2f",
+        "contentSha256": "6cb15a9d8bff08919ff94e75b5f343c36697447115c325472ae4de119d620b2f",
+        "bytes": 75514,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "脱分化与再分化",
+              "培养条件和器官发生",
+              "体细胞杂交与杂种证据",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/plant-cell-engineering--atlas-v1.webp",
+          "thumbnail": "assets/previews/plant-cell-engineering--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "植物细胞工程 · 从外植体到再生植株 · 学术图谱真实课件画面",
+          "scene": "追踪离体再生、原生质体融合和植物细胞工程应用。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 2,
+      "chapterTitle": "细胞工程",
+      "sections": [
+        {
+          "number": 1,
+          "title": "植物细胞工程"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第1节"
+    },
+    "inquiry": "追踪离体再生、原生质体融合和植物细胞工程应用。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/plant-cell-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/plant-cell-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物细胞工程 · 从外植体到再生植株 · 学术图谱真实课件画面",
+      "scene": "追踪离体再生、原生质体融合和植物细胞工程应用。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "animal-cell-engineering",
+    "title": "动物细胞工程",
+    "category": "biotech",
+    "summary": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。",
+    "design": "每条路线先明确想得到的细胞或产物，再解释筛选依据。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从传代培养到克隆证据 · 学术图谱",
+        "file": "lessons/选择性必修3_02-02_动物细胞工程_从传代培养到克隆证据图谱_v1.0.html",
+        "route": "courses/animal-cell-engineering/atlas-v1/",
+        "sourceFilename": "选择性必修3_02-02_动物细胞工程_从传代培养到克隆证据图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。",
+        "features": [
+          "原代与传代培养",
+          "干细胞的分化范围",
+          "杂交瘤筛选与克隆数据"
+        ],
+        "approach": "每条路线先明确想得到的细胞或产物，再解释筛选依据。",
+        "design": "每条路线先明确想得到的细胞或产物，再解释筛选依据。",
+        "difference": "本版侧重原代与传代培养、干细胞的分化范围、杂交瘤筛选与克隆数据。",
+        "suitableFor": "适合围绕“原代与传代培养”组织过程观察与证据讨论。",
+        "comparisonScope": "第2章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "原代与传代培养",
+          "干细胞的分化范围",
+          "杂交瘤筛选与克隆数据",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T02:25:05.803Z",
+        "sourceSha256": "f614325b06e70d8ce8867513e8815d3c79952915ef4f415f0003effd34317812",
+        "contentSha256": "f614325b06e70d8ce8867513e8815d3c79952915ef4f415f0003effd34317812",
+        "bytes": 69531,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "原代与传代培养",
+              "干细胞的分化范围",
+              "杂交瘤筛选与克隆数据",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/animal-cell-engineering--atlas-v1.webp",
+          "thumbnail": "assets/previews/animal-cell-engineering--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "动物细胞工程 · 从传代培养到克隆证据 · 学术图谱真实课件画面",
+          "scene": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 2,
+      "chapterTitle": "细胞工程",
+      "sections": [
+        {
+          "number": 2,
+          "title": "动物细胞工程"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第2节"
+    },
+    "inquiry": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/animal-cell-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/animal-cell-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "动物细胞工程 · 从传代培养到克隆证据 · 学术图谱真实课件画面",
+      "scene": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "embryo-engineering",
+    "title": "胚胎工程",
+    "category": "biotech",
+    "summary": "从配子与受精开始，追踪早期胚胎、移植与分割。",
+    "design": "以胚胎所处发育阶段为主线，追问每个操作的必要条件。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从受精到胚胎移植 · 学术图谱",
+        "file": "lessons/选择性必修3_02-03_胚胎工程_从受精到胚胎移植图谱_v1.0.html",
+        "route": "courses/embryo-engineering/atlas-v1/",
+        "sourceFilename": "选择性必修3_02-03_胚胎工程_从受精到胚胎移植图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "从配子与受精开始，追踪早期胚胎、移植与分割。",
+        "features": [
+          "受精与卵裂",
+          "胚胎移植与受体同期",
+          "囊胚分割和内细胞团"
+        ],
+        "approach": "以胚胎所处发育阶段为主线，追问每个操作的必要条件。",
+        "design": "以胚胎所处发育阶段为主线，追问每个操作的必要条件。",
+        "difference": "本版侧重受精与卵裂、胚胎移植与受体同期、囊胚分割和内细胞团。",
+        "suitableFor": "适合围绕“受精与卵裂”组织过程观察与证据讨论。",
+        "comparisonScope": "第2章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "受精与卵裂",
+          "胚胎移植与受体同期",
+          "囊胚分割和内细胞团",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T02:37:28.723Z",
+        "sourceSha256": "4039e8a4714854482d3125e7081546537e4cc6b800027f00cfecc06ef9636886",
+        "contentSha256": "4039e8a4714854482d3125e7081546537e4cc6b800027f00cfecc06ef9636886",
+        "bytes": 64859,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "受精与卵裂",
+              "胚胎移植与受体同期",
+              "囊胚分割和内细胞团",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/embryo-engineering--atlas-v1.webp",
+          "thumbnail": "assets/previews/embryo-engineering--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "胚胎工程 · 从受精到胚胎移植 · 学术图谱真实课件画面",
+          "scene": "从配子与受精开始，追踪早期胚胎、移植与分割。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 2,
+      "chapterTitle": "细胞工程",
+      "sections": [
+        {
+          "number": 3,
+          "title": "胚胎工程"
+        }
+      ],
+      "integrated": false,
+      "label": "第2章 · 第3节"
+    },
+    "inquiry": "从配子与受精开始，追踪早期胚胎、移植与分割。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/embryo-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/embryo-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "胚胎工程 · 从受精到胚胎移植 · 学术图谱真实课件画面",
+      "scene": "从配子与受精开始，追踪早期胚胎、移植与分割。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "recombinant-dna-tools",
+    "title": "重组DNA技术的基本工具",
+    "category": "biotech",
+    "summary": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。",
+    "design": "先读末端，再对照载体和筛选结果解释重组证据。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从酶切末端到质粒 · 学术图谱",
+        "file": "lessons/选择性必修3_03-01_重组DNA技术的基本工具_从酶切末端到质粒图谱_v1.0.html",
+        "route": "courses/recombinant-dna-tools/atlas-v1/",
+        "sourceFilename": "选择性必修3_03-01_重组DNA技术的基本工具_从酶切末端到质粒图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。",
+        "features": [
+          "限制酶与切割末端",
+          "DNA 连接与骨架封口",
+          "质粒图谱和插入方向"
+        ],
+        "approach": "先读末端，再对照载体和筛选结果解释重组证据。",
+        "design": "先读末端，再对照载体和筛选结果解释重组证据。",
+        "difference": "本版侧重限制酶与切割末端、DNA 连接与骨架封口、质粒图谱和插入方向。",
+        "suitableFor": "适合围绕“限制酶与切割末端”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "限制酶与切割末端",
+          "DNA 连接与骨架封口",
+          "质粒图谱和插入方向",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T03:01:37.480Z",
+        "sourceSha256": "bb5201fc1144213f6de1fea933082db664f1333283feb3bf706768b976cae6eb",
+        "contentSha256": "bb5201fc1144213f6de1fea933082db664f1333283feb3bf706768b976cae6eb",
+        "bytes": 69722,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "限制酶与切割末端",
+              "DNA 连接与骨架封口",
+              "质粒图谱和插入方向",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/recombinant-dna-tools--atlas-v1.webp",
+          "thumbnail": "assets/previews/recombinant-dna-tools--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "重组DNA技术的基本工具 · 从酶切末端到质粒 · 学术图谱真实课件画面",
+          "scene": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 3,
+      "chapterTitle": "基因工程",
+      "sections": [
+        {
+          "number": 1,
+          "title": "重组DNA技术的基本工具"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第1节"
+    },
+    "inquiry": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/recombinant-dna-tools--atlas-v1.webp",
+      "thumbnail": "assets/previews/recombinant-dna-tools--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "重组DNA技术的基本工具 · 从酶切末端到质粒 · 学术图谱真实课件画面",
+      "scene": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "gene-engineering-procedure",
+    "title": "基因工程的基本操作程序",
+    "category": "biotech",
+    "summary": "追踪目的基因获取、表达载体构建、导入及检测。",
+    "design": "沿四步流程寻找证据，区分检测到片段和验证目标性状。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从 PCR 到抗虫证据 · 学术图谱",
+        "file": "lessons/选择性必修3_03-02_基因工程的基本操作程序_从PCR到抗虫证据图谱_v1.0.html",
+        "route": "courses/gene-engineering-procedure/atlas-v1/",
+        "sourceFilename": "选择性必修3_03-02_基因工程的基本操作程序_从PCR到抗虫证据图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "追踪目的基因获取、表达载体构建、导入及检测。",
+        "features": [
+          "PCR 引物限定扩增片段",
+          "表达载体与受体导入",
+          "分子检测与抗虫表型"
+        ],
+        "approach": "沿四步流程寻找证据，区分检测到片段和验证目标性状。",
+        "design": "沿四步流程寻找证据，区分检测到片段和验证目标性状。",
+        "difference": "本版侧重PCR 引物限定扩增片段、表达载体与受体导入、分子检测与抗虫表型。",
+        "suitableFor": "适合围绕“PCR 引物限定扩增片段”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "PCR 引物限定扩增片段",
+          "表达载体与受体导入",
+          "分子检测与抗虫表型",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T03:10:40.943Z",
+        "sourceSha256": "5a5805b01a893e94628d19f2b94ec93252e489e3703cb372983ba7bccc8d3e98",
+        "contentSha256": "5a5805b01a893e94628d19f2b94ec93252e489e3703cb372983ba7bccc8d3e98",
+        "bytes": 67587,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "PCR 引物限定扩增片段",
+              "表达载体与受体导入",
+              "分子检测与抗虫表型",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/gene-engineering-procedure--atlas-v1.webp",
+          "thumbnail": "assets/previews/gene-engineering-procedure--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因工程的基本操作程序 · 从 PCR 到抗虫证据 · 学术图谱真实课件画面",
+          "scene": "追踪目的基因获取、表达载体构建、导入及检测。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 3,
+      "chapterTitle": "基因工程",
+      "sections": [
+        {
+          "number": 2,
+          "title": "基因工程的基本操作程序"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第2节"
+    },
+    "inquiry": "追踪目的基因获取、表达载体构建、导入及检测。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/gene-engineering-procedure--atlas-v1.webp",
+      "thumbnail": "assets/previews/gene-engineering-procedure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因工程的基本操作程序 · 从 PCR 到抗虫证据 · 学术图谱真实课件画面",
+      "scene": "追踪目的基因获取、表达载体构建、导入及检测。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "gene-engineering-applications",
+    "title": "基因工程的应用",
+    "category": "biotech",
+    "summary": "比较作物、动物、医药和食品中的基因工程应用与验证。",
+    "design": "从具体应用目标反推该测什么，并区分实测与教学模型。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从性状改良到产品制造 · 学术图谱",
+        "file": "lessons/选择性必修3_03-03_基因工程的应用_从性状改良到产品制造图谱_v1.0.html",
+        "route": "courses/gene-engineering-applications/atlas-v1/",
+        "sourceFilename": "选择性必修3_03-03_基因工程的应用_从性状改良到产品制造图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "比较作物、动物、医药和食品中的基因工程应用与验证。",
+        "features": [
+          "作物性状与黄金米成分",
+          "转基因动物与产品指标",
+          "药用蛋白与凝乳酶对照"
+        ],
+        "approach": "从具体应用目标反推该测什么，并区分实测与教学模型。",
+        "design": "从具体应用目标反推该测什么，并区分实测与教学模型。",
+        "difference": "本版侧重作物性状与黄金米成分、转基因动物与产品指标、药用蛋白与凝乳酶对照。",
+        "suitableFor": "适合围绕“作物性状与黄金米成分”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "作物性状与黄金米成分",
+          "转基因动物与产品指标",
+          "药用蛋白与凝乳酶对照",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T03:21:34.762Z",
+        "sourceSha256": "dfd81ba4e03c5419211d1f104a66aca9f402adf01307c661954c27e9bfcc9eaf",
+        "contentSha256": "dfd81ba4e03c5419211d1f104a66aca9f402adf01307c661954c27e9bfcc9eaf",
+        "bytes": 71419,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "作物性状与黄金米成分",
+              "转基因动物与产品指标",
+              "药用蛋白与凝乳酶对照",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/gene-engineering-applications--atlas-v1.webp",
+          "thumbnail": "assets/previews/gene-engineering-applications--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "基因工程的应用 · 从性状改良到产品制造 · 学术图谱真实课件画面",
+          "scene": "比较作物、动物、医药和食品中的基因工程应用与验证。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 3,
+      "chapterTitle": "基因工程",
+      "sections": [
+        {
+          "number": 3,
+          "title": "基因工程的应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第3节"
+    },
+    "inquiry": "比较作物、动物、医药和食品中的基因工程应用与验证。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/gene-engineering-applications--atlas-v1.webp",
+      "thumbnail": "assets/previews/gene-engineering-applications--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因工程的应用 · 从性状改良到产品制造 · 学术图谱真实课件画面",
+      "scene": "比较作物、动物、医药和食品中的基因工程应用与验证。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "protein-engineering",
+    "title": "蛋白质工程的原理和应用",
+    "category": "biotech",
+    "summary": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。",
+    "design": "先从功能倒推候选结构与序列，再为每个判断配一个验证指标。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从功能倒推到实验验证 · 学术图谱",
+        "file": "lessons/选择性必修3_03-04_蛋白质工程的原理和应用_从功能倒推到实验验证图谱_v1.0.html",
+        "route": "courses/protein-engineering/atlas-v1/",
+        "sourceFilename": "选择性必修3_03-04_蛋白质工程的原理和应用_从功能倒推到实验验证图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。",
+        "features": [
+          "逆向设计与正向表达",
+          "胰岛素类似物与自聚集",
+          "二硫键、热稳定性与反馈改造"
+        ],
+        "approach": "先从功能倒推候选结构与序列，再为每个判断配一个验证指标。",
+        "design": "先从功能倒推候选结构与序列，再为每个判断配一个验证指标。",
+        "difference": "本版侧重逆向设计与正向表达、胰岛素类似物与自聚集、二硫键、热稳定性与反馈改造。",
+        "suitableFor": "适合围绕“逆向设计与正向表达”组织过程观察与证据讨论。",
+        "comparisonScope": "第3章 · 第4节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "逆向设计与正向表达",
+          "胰岛素类似物与自聚集",
+          "二硫键、热稳定性与反馈改造",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T05:47:11.140Z",
+        "sourceSha256": "8569462f79245dead2ad94459c6a57afa56f29aec4182b7f20d8430d7a0f2188",
+        "contentSha256": "8569462f79245dead2ad94459c6a57afa56f29aec4182b7f20d8430d7a0f2188",
+        "bytes": 58861,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "逆向设计与正向表达",
+              "胰岛素类似物与自聚集",
+              "二硫键、热稳定性与反馈改造",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/protein-engineering--atlas-v1.webp",
+          "thumbnail": "assets/previews/protein-engineering--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "蛋白质工程的原理和应用 · 从功能倒推到实验验证 · 学术图谱真实课件画面",
+          "scene": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 3,
+      "chapterTitle": "基因工程",
+      "sections": [
+        {
+          "number": 4,
+          "title": "蛋白质工程的原理和应用"
+        }
+      ],
+      "integrated": false,
+      "label": "第3章 · 第4节"
+    },
+    "inquiry": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/protein-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/protein-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "蛋白质工程的原理和应用 · 从功能倒推到实验验证 · 学术图谱真实课件画面",
+      "scene": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "gm-product-safety",
+    "title": "转基因产品的安全性",
+    "category": "biotech",
+    "summary": "把转基因产品的评估落实到用途、对照、暴露与证据。",
+    "design": "先界定产品和用途，再解释一条证据支持的结论范围。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从证据审查到风险管理 · 学术图谱",
+        "file": "lessons/选择性必修3_04-01_转基因产品的安全性_从证据审查到风险管理图谱_v1.0.html",
+        "route": "courses/gm-product-safety/atlas-v1/",
+        "sourceFilename": "选择性必修3_04-01_转基因产品的安全性_从证据审查到风险管理图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "把转基因产品的评估落实到用途、对照、暴露与证据。",
+        "features": [
+          "食用和种植情景",
+          "配对致敏试验与玉米异交数据",
+          "标签、用途与风险判断"
+        ],
+        "approach": "先界定产品和用途，再解释一条证据支持的结论范围。",
+        "design": "先界定产品和用途，再解释一条证据支持的结论范围。",
+        "difference": "本版侧重食用和种植情景、配对致敏试验与玉米异交数据、标签、用途与风险判断。",
+        "suitableFor": "适合围绕“食用和种植情景”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第1节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "食用和种植情景",
+          "配对致敏试验与玉米异交数据",
+          "标签、用途与风险判断",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T05:44:55.031Z",
+        "sourceSha256": "5e3811556ad9f20de7f78e1cbc1f78472ae59f1fcb405d8b377e6f6cc31ea847",
+        "contentSha256": "5e3811556ad9f20de7f78e1cbc1f78472ae59f1fcb405d8b377e6f6cc31ea847",
+        "bytes": 58879,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "食用和种植情景",
+              "配对致敏试验与玉米异交数据",
+              "标签、用途与风险判断",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/gm-product-safety--atlas-v1.webp",
+          "thumbnail": "assets/previews/gm-product-safety--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "转基因产品的安全性 · 从证据审查到风险管理 · 学术图谱真实课件画面",
+          "scene": "把转基因产品的评估落实到用途、对照、暴露与证据。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 4,
+      "chapterTitle": "生物技术的安全性与伦理问题",
+      "sections": [
+        {
+          "number": 1,
+          "title": "转基因产品的安全性"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第1节"
+    },
+    "inquiry": "把转基因产品的评估落实到用途、对照、暴露与证据。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/gm-product-safety--atlas-v1.webp",
+      "thumbnail": "assets/previews/gm-product-safety--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "转基因产品的安全性 · 从证据审查到风险管理 · 学术图谱真实课件画面",
+      "scene": "把转基因产品的评估落实到用途、对照、暴露与证据。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "reproductive-cloning",
+    "title": "关注生殖性克隆人",
+    "category": "biotech",
+    "summary": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。",
+    "design": "先读动物证据，再用三个案卷练习把事实、影响和规则分开。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从多莉到伦理审查 · 学术图谱",
+        "file": "lessons/选择性必修3_04-02_关注生殖性克隆人_从多莉到伦理审查图谱_v1.0.html",
+        "route": "courses/reproductive-cloning/atlas-v1/",
+        "sourceFilename": "选择性必修3_04-02_关注生殖性克隆人_从多莉到伦理审查图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。",
+        "features": [
+          "多莉的三个来源",
+          "同一例活产的两个分母",
+          "研究终点与伦理案卷"
+        ],
+        "approach": "先读动物证据，再用三个案卷练习把事实、影响和规则分开。",
+        "design": "先读动物证据，再用三个案卷练习把事实、影响和规则分开。",
+        "difference": "本版侧重多莉的三个来源、同一例活产的两个分母、研究终点与伦理案卷。",
+        "suitableFor": "适合围绕“多莉的三个来源”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第2节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "多莉的三个来源",
+          "同一例活产的两个分母",
+          "研究终点与伦理案卷",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T06:01:06.091Z",
+        "sourceSha256": "40e8669fd2f86ae7da254b5241cf1dbe17e497c9b74169652155f0ae0c963954",
+        "contentSha256": "40e8669fd2f86ae7da254b5241cf1dbe17e497c9b74169652155f0ae0c963954",
+        "bytes": 64589,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "多莉的三个来源",
+              "同一例活产的两个分母",
+              "研究终点与伦理案卷",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/reproductive-cloning--atlas-v1.webp",
+          "thumbnail": "assets/previews/reproductive-cloning--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "关注生殖性克隆人 · 从多莉到伦理审查 · 学术图谱真实课件画面",
+          "scene": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 4,
+      "chapterTitle": "生物技术的安全性与伦理问题",
+      "sections": [
+        {
+          "number": 2,
+          "title": "关注生殖性克隆人"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第2节"
+    },
+    "inquiry": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/reproductive-cloning--atlas-v1.webp",
+      "thumbnail": "assets/previews/reproductive-cloning--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "关注生殖性克隆人 · 从多莉到伦理审查 · 学术图谱真实课件画面",
+      "scene": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
+  },
+  {
+    "id": "biological-weapons-ban",
+    "title": "禁止生物武器",
+    "category": "biotech",
+    "summary": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。",
+    "design": "先比较调查分母，再区分异常信号、病因证据与故意归因。",
+    "versions": [
+      {
+        "id": "atlas-v1",
+        "label": "1.0",
+        "edition": "从公共卫生证据到国际公约 · 学术图谱",
+        "file": "lessons/选择性必修3_04-03_禁止生物武器_从公共卫生证据到国际公约图谱_v1.0.html",
+        "route": "courses/biological-weapons-ban/atlas-v1/",
+        "sourceFilename": "选择性必修3_04-03_禁止生物武器_从公共卫生证据到国际公约图谱_v1.0.html",
+        "published": "2026-11-09",
+        "platformUpdated": "2026-11-09",
+        "dateNote": "本站首次公开日期；不等同于原始创作日期。",
+        "summary": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。",
+        "features": [
+          "危害类别与历史调查",
+          "调查证据和公众保护",
+          "禁止生物武器公约与履约"
+        ],
+        "approach": "先比较调查分母，再区分异常信号、病因证据与故意归因。",
+        "design": "先比较调查分母，再区分异常信号、病因证据与故意归因。",
+        "difference": "本版侧重危害类别与历史调查、调查证据和公众保护、禁止生物武器公约与履约。",
+        "suitableFor": "适合围绕“危害类别与历史调查”组织过程观察与证据讨论。",
+        "comparisonScope": "第4章 · 第3节",
+        "changes": [
+          "本版本首次在本站公开。",
+          "危害类别与历史调查",
+          "调查证据和公众保护",
+          "禁止生物武器公约与履约",
+          "新增独立入口、课件实景封面及章节讨论。"
+        ],
+        "sourceModifiedAt": "2026-11-09T06:10:36.638Z",
+        "sourceSha256": "e542840ecb78c8c284d6cbc70aaebee71651dd93de129fe10907d10f3a634c74",
+        "contentSha256": "e542840ecb78c8c284d6cbc70aaebee71651dd93de129fe10907d10f3a634c74",
+        "bytes": 65972,
+        "releaseHistory": [
+          {
+            "date": "2026-11-09",
+            "title": "本版本首次上线",
+            "changes": [
+              "本版本首次在本站公开。",
+              "危害类别与历史调查",
+              "调查证据和公众保护",
+              "禁止生物武器公约与履约",
+              "新增独立入口、课件实景封面及章节讨论。"
+            ]
+          }
+        ],
+        "preview": {
+          "image": "assets/previews/biological-weapons-ban--atlas-v1.webp",
+          "thumbnail": "assets/previews/biological-weapons-ban--atlas-v1-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "禁止生物武器 · 从公共卫生证据到国际公约 · 学术图谱真实课件画面",
+          "scene": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。"
+        }
+      }
+    ],
+    "latestVersionId": "atlas-v1",
+    "preferredVersionId": "atlas-v1",
+    "curriculum": {
+      "publisher": "人民教育出版社",
+      "book": "选择性必修 3 · 生物技术与工程",
+      "chapter": 4,
+      "chapterTitle": "生物技术的安全性与伦理问题",
+      "sections": [
+        {
+          "number": 3,
+          "title": "禁止生物武器"
+        }
+      ],
+      "integrated": false,
+      "label": "第4章 · 第3节"
+    },
+    "inquiry": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。",
+    "activities": [
+      "过程观察",
+      "证据解释"
+    ],
+    "preview": {
+      "image": "assets/previews/biological-weapons-ban--atlas-v1.webp",
+      "thumbnail": "assets/previews/biological-weapons-ban--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "禁止生物武器 · 从公共卫生证据到国际公约 · 学术图谱真实课件画面",
+      "scene": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。",
+      "versionId": "atlas-v1"
+    },
+    "latestPolicy": "同主题保留独立版本入口。"
   }
 ]

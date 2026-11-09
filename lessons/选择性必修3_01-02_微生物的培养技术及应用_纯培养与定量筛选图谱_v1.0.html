@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>微生物的培养技术及应用｜纯培养与定量筛选图谱 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+.mobile-only{display:none}@media(max-width:540px){.mobile-only{display:initial}.intro h1{font-size:clamp(28px,8.6vw,36px)}}</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>纯培养与定量筛选图谱<small>PURE CULTURE & SCREENING / 01.02</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 1 章 · 第 2 节</p><h1>微生物的培养<br class="mobile-only">技术及应用</h1><p class="subtitle">从五区划线的最后一笔，到一圈透明带：把培养、计数、筛选和对照连成一条证据链。</p></div>
+<div class="intro-note"><i>PURE CULTURE & SCREENING</i><p>同一克土样，为什么显微镜里看到的细胞数和培养皿里的菌落数会不同？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 无菌与倒置</a><a href="#figure2">02 划线与计数</a><a href="#figure3">03 功能菌筛选</a><a href="#figure4">04 双对照</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / ASEPSIS & INCUBATION</p><h2 id="heading1">从配制到培养：把冷凝水留在哪里？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="method"><button type="button" data-group="method" data-value="milk" aria-pressed="false">巴氏消毒</button><button type="button" data-group="method" data-value="steam" aria-pressed="true">湿热灭菌</button><button type="button" data-group="method" data-value="dry" aria-pressed="false">干热灭菌</button><button type="button" data-group="method" data-value="flame" aria-pressed="false">灼烧灭菌</button></div><div class="segmented" role="group" aria-label="orientation"><button type="button" data-group="orientation" data-value="inverted" aria-pressed="true">倒置培养</button><button type="button" data-group="orientation" data-value="upright" aria-pressed="false">正放培养</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="从配制到培养：把冷凝水留在哪里？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>常规琼脂培养基先调 pH，再灭菌。无菌倒平板时适当打开皿盖，尽量缩短暴露时间。教学流程可在火焰附近操作，实际按实验室规程选择无菌操作条件。对热敏成分，可先单独除菌，再无菌加入。</p><p>倒置后冷凝水留在下方盖内，避免滴到琼脂和冲散菌落。培养基过快失水还受温湿度与皿盖条件影响。右图以 log₁₀(N) = 6 − t/D 模拟等温段，1 CFU 等效线以下仍是模型期望量。灭菌有效性需要验证。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 同一时间游标下比较热处理曲线。所有菌数与斜率为教学模型；消毒与灭菌示例条件来自指南。 <sup class="cites"><a href="https://edoc.rki.de/handle/176904/5146" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/steam-sterilization.html" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/other-sterilization-methods.html" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dairy-product-manufacturers-attachment-1-4" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://www.sciencehistory.org/wp-content/uploads/2025/11/small_modification_plating_technique_koch_pgs279-280.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://doi.org/10.3791/3064" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / ISOLATION & ENUMERATION</p><h2 id="heading2">五区、六次灼烧，一克土样有多少 CFU？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="streak"><button type="button" data-group="streak" data-value="1" aria-pressed="true">① 取菌前</button><button type="button" data-group="streak" data-value="2" aria-pressed="false">② 转入 2 区</button><button type="button" data-group="streak" data-value="3" aria-pressed="false">③ 转入 3 区</button><button type="button" data-group="streak" data-value="4" aria-pressed="false">④ 转入 4 区</button><button type="button" data-group="streak" data-value="5" aria-pressed="false">⑤ 转入 5 区</button><button type="button" data-group="streak" data-value="6" aria-pressed="false">⑥ 收尾灼烧</button></div><div class="segmented" role="group" aria-label="dilution"><button type="button" data-group="dilution" data-value="3" aria-pressed="false">10³ 倍</button><button type="button" data-group="dilution" data-value="4" aria-pressed="false">10⁴ 倍</button><button type="button" data-group="dilution" data-value="5" aria-pressed="true">10⁵ 倍</button><button type="button" data-group="dilution" data-value="6" aria-pressed="false">10⁶ 倍</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="五区、六次灼烧，一克土样有多少 CFU？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>划线常在进入下一区时适当旋转培养皿，典型演示约 60～70°，角度取决于分区。冷却后从上一区划线末端挑带少量菌体，第 5 区避开第 1 区。</p><p>取 1 g 土样与 9 mL 无菌水制备约 1∶10 悬液后逐级十倍稀释。若每皿涂布 0.1 mL，10⁵ 倍稀释相当于每皿接种 10⁻⁶ g 原土。三皿均值 160，结果为 1.6×10⁸ CFU/g。30～300 是本课采用的窗口；具体方法以相应标准为准。课堂演示中，浸过酒精的涂布器经规定的火焰处理后要等酒精燃尽并冷却，再接触菌液。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 平板划线观察分离，稀释涂布可估算可培养 CFU。教学重复数据误差线为样本标准差；高密度平板只标超出计数窗口。 <sup class="cites"><a href="https://edoc.rki.de/handle/176904/5146" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.3791/3064" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://doi.org/10.1128/jb.1.3.321-331.1916" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://www.fda.gov/food/laboratory-methods-food/bam-chapter-3-aerobic-plate-count" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 13">[13]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / SELECTIVE MEDIA & CLEAR ZONES</p><h2 id="heading3">酚红为什么变红？透明圈该比直径还是比值？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="screen"><button type="button" data-group="screen" data-value="urea" aria-pressed="false">尿素 · 酚红</button><button type="button" data-group="screen" data-value="cmc" aria-pressed="true">CMC · 刚果红</button></div><div class="segmented" role="group" aria-label="isolate"><button type="button" data-group="isolate" data-value="1" aria-pressed="true">菌落 #1</button><button type="button" data-group="isolate" data-value="2" aria-pressed="false">菌落 #2</button><button type="button" data-group="isolate" data-value="3" aria-pressed="false">菌落 #3</button><button type="button" data-group="isolate" data-value="4" aria-pressed="false">菌落 #4</button><button type="button" data-group="isolate" data-value="5" aria-pressed="false">菌落 #5</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="group" aria-label="酚红为什么变红？透明圈该比直径还是比值？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>尿素选择配方中，以葡萄糖为碳源与能源，尿素为唯一添加的氮源，另加 KH₂PO₄、Na₂HPO₄、MgSO₄ 与琼脂。含酚红的鉴别读数来自脲酶水解释放氨引起的 pH 升高。历史上的 Christensen 鉴别配方与这套选择培养基有区别。</p><p>CMC-Na 为水溶性纤维素衍生物。筛选中可设为唯一添加的碳源。刚果红结合未被充分水解的底物，显圈说明周边发生了足以改变染色的降解。天然纤维素的彻底水解常需多种酶协作。透明圈还受菌落生长、酶扩散和培养时长影响，初筛后用独立酶活测定复核。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 在相同实验条件下比较 D/d 可确定初筛优先顺序。所示菌落与读数为课堂构造，端点用于比较。 <sup class="cites"><a href="https://doi.org/10.1128/jb.52.4.461-466.1946" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://doi.org/10.1128/aem.43.4.777-780.1982" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a> <a href="https://doi.org/10.1128/aem.61.5.2016-2019.1995" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a> <a href="https://doi.org/10.3791/2942" target="_blank" rel="noopener noreferrer" aria-label="参考资料 12">[12]↗</a> <a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 13">[13]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / DUAL CONTROLS</p><h2 id="heading4">同样是对照，两只培养皿各回答什么问题？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="controls"><button type="button" data-group="controls" data-value="valid" aria-pressed="true">条件匹配</button><button type="button" data-group="controls" data-value="blank" aria-pressed="false">故障 · 空白长菌</button><button type="button" data-group="controls" data-value="mismatch" aria-pressed="false">故障 · 稀释倍数不同</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="同样是对照，两只培养皿各回答什么问题？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>同批、同种培养基分别设未接种空白，培养后无可见菌落支持本次无菌操作合格，判断受检测条件所限。空白有菌落时应追查培养基、器具或操作污染。</p><p>比较选择作用时，同一样液、同一稀释度、同一体积和培养条件，仅改变培养基。一般培养基菌落更多，支持选择培养基限制部分微生物生长；目标菌身份需用鉴别培养或独立实验确认。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 模拟菌落数与形态型来自同一组观察记录。形态型是培养皿上的外观分类；目标功能还须进一步鉴别。 <sup class="cites"><a href="https://doi.org/10.1128/jb.1.3.321-331.1916" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1128/aem.61.5.2016-2019.1995" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a> <a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 13">[13]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://edoc.rki.de/handle/176904/5146" target="_blank" rel="noopener noreferrer">[1] Koch, 1881 · RKI 历史原文 ↗</a><span>早期平板培养法与微生物分离。</span></li><li id="ref-2"><a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/steam-sterilization.html" target="_blank" rel="noopener noreferrer">[2] CDC · Steam Sterilization ↗</a><span>蒸汽接触、温度、压力与时间的关系，芽孢生物指示与 D 值。</span></li><li id="ref-3"><a href="https://www.cdc.gov/infection-control/hcp/disinfection-sterilization/other-sterilization-methods.html" target="_blank" rel="noopener noreferrer">[3] CDC · Other Sterilization Methods ↗</a><span>典型干热工况与适用材料。</span></li><li id="ref-4"><a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dairy-product-manufacturers-attachment-1-4" target="_blank" rel="noopener noreferrer">[4] FDA · Dairy Product Manufacturers, Attachment 3 ↗</a><span>牛乳巴氏处理的典型温度和时间组合。</span></li><li id="ref-5"><a href="https://www.sciencehistory.org/wp-content/uploads/2025/11/small_modification_plating_technique_koch_pgs279-280.pdf" target="_blank" rel="noopener noreferrer">[5] Petri, 1887 · Centralblatt für Bakteriologie ↗</a><span>平板法改良原文，Science History Institute 馆藏扫描。</span></li><li id="ref-6"><a href="https://doi.org/10.3791/3064" target="_blank" rel="noopener noreferrer">[6] Sanders, 2012 · Journal of Visualized Experiments ↗</a><span>无菌划线、稀释涂布与倒平板操作协议。</span></li><li id="ref-7"><a href="https://doi.org/10.1128/jb.1.3.321-331.1916" target="_blank" rel="noopener noreferrer">[7] Breed &amp; Dotterrer, 1916 · Journal of Bacteriology ↗</a><span>讨论菌落密度对计数的影响。</span></li><li id="ref-8"><a href="https://www.fda.gov/food/laboratory-methods-food/bam-chapter-3-aerobic-plate-count" target="_blank" rel="noopener noreferrer">[8] FDA · Bacteriological Analytical Manual, Ch. 3 ↗</a><span>食品好氧平板计数方法示例，计数窗口与统计按具体方法规定。</span></li><li id="ref-9"><a href="https://doi.org/10.1128/jb.52.4.461-466.1946" target="_blank" rel="noopener noreferrer">[9] Christensen, 1946 · Journal of Bacteriology ↗</a><span>用尿素水解与 pH 显色鉴别菌株。</span></li><li id="ref-10"><a href="https://doi.org/10.1128/aem.43.4.777-780.1982" target="_blank" rel="noopener noreferrer">[10] Teather &amp; Wood, 1982 · Applied and Environmental Microbiology ↗</a><span>利用刚果红与多糖的相互作用检测纤维素降解。</span></li><li id="ref-11"><a href="https://doi.org/10.1128/aem.61.5.2016-2019.1995" target="_blank" rel="noopener noreferrer">[11] Hendricks et al., 1995 · Applied and Environmental Microbiology ↗</a><span>面向土壤纤维素利用细菌的固体培养基和计数方法。</span></li><li id="ref-12"><a href="https://doi.org/10.3791/2942" target="_blank" rel="noopener noreferrer">[12] Farrow &amp; Arnold, 2011 · Journal of Visualized Experiments ↗</a><span>用 CMC–刚果红法筛查内切葡聚糖酶活性，并说明量化局限。</span></li><li id="ref-13"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[13] 人民教育出版社 · 选择性必修 3《生物技术与工程》 ↗</a><span>第 1 章第 2 节，国家中小学智慧教育平台教材 PDF。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>微生物的培养技术及应用 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">微生物的培养技术及应用 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">巴氏消毒与煮沸</th><td>降低微生物负荷，耐热芽孢可能存活。</td></tr><tr><th scope="row">湿热、干热、灼烧</th><td>培养基常用高压蒸汽；适宜的玻璃或金属器具可用干热；接种环充分灼烧后须冷却。</td></tr><tr><th scope="row">配制和倒置</th><td>普通琼脂培养基先调 pH 再灭菌，降至约 50 ℃ 无菌倒平板。凝固后倒置可防皿盖冷凝水滴到琼脂。</td></tr><tr><th scope="row">五区六次灼烧</th><td>取菌前 1 次、转区 4 次、结束后 1 次。冷却后接上一区末端，末区避开首区。</td></tr><tr><th scope="row">每克 CFU</th><td>同一合适稀释度的重复平板均值 C ÷ 涂布体积 V × 稀释倍数 M。0.1 mL 要除以 0.1。</td></tr><tr><th scope="row">显微计数与平板计数</th><td>无活死区分的显微计数可含死细胞；聚团或不能在该条件下生长均可降低所测 CFU。</td></tr><tr><th scope="row">尿素与透明圈</th><td>尿素唯一氮源用于选择；酚红由黄转红提示产氨升高 pH。CMC 刚果红初筛在同条件下比较 D/d。</td></tr><tr><th scope="row">无菌空白与选择对照</th><td>不接种空白查污染；同量同稀释度接种的一般培养基比较选择作用。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={method:'steam',orientation:'inverted',streak:'1',dilution:'5',screen:'cmc',isolate:'1',controls:'valid'};
+const glass='#56838b',steel='#b6d7db',agar='#f4d892',amber='#a45e39',soft='#f3f8f5';
+const methods={
+  milk:['巴氏消毒','牛乳 · 降低微生物负荷','63 ℃ × 30 min 或 72 ℃ × 15 s','典型条件可降低牛乳中的病原微生物负荷，耐热芽孢仍可能存活。'],
+  steam:['湿热灭菌','普通培养基、耐热水性材料','121 ℃ · 表压约 100 kPa','教学示例保温 15～30 min，实际程序还需依据装载与验证。'],
+  dry:['干热灭菌','耐热干燥玻璃、金属器具','160 ℃ × 120 min（示例）','同样温度下，干热通常需要更长时间。器具须适合干热处理。'],
+  flame:['灼烧灭菌','接种环、接种针','环丝充分灼烧，随后冷却','试管口常作短暂过焰以减少污染，与接种环充分灼烧的目的和操作有别。']
+};
+const heat=[
+  {name:'100 ℃ · 营养体',d:.9,color:C.cyan,dash:''},
+  {name:'100 ℃ · 芽孢',d:20,color:C.red,dash:'8 5'},
+  {name:'121 ℃ · 芽孢',d:1.5,color:C.red,dash:''}
+];
+const heatAt=(minutes,d)=>6-minutes/d;
+const dilutions={3:null,4:null,5:[152,160,168],6:[13,16,19]};
+const mean=xs=>xs.reduce((a,b)=>a+b,0)/xs.length;
+const sd=xs=>Math.sqrt(xs.reduce((a,b)=>a+(b-mean(xs))**2,0)/(xs.length-1));
+const cfu=(xs,exponent,volume=.1)=>mean(xs)*10**exponent/volume;
+const isolates=[{D:12,d:5},{D:9,d:1.5},{D:14,d:4},{D:7.2,d:2.4},{D:10.5,d:2.5}];
+const ratio=({D,d})=>D/d;
+const profiles={
+  valid:{counts:[0,280,32],types:[0,7,3],heading:'两种对照回答两个问题',note:'同量、同稀释度和同培养条件。280 对 32 支持选择作用；32 个菌落还需进一步鉴别。'},
+  blank:{counts:[8,280,32],types:[2,7,3],heading:'空白长菌，先调查污染',note:'先排查培养基、器具或操作。当前结果不足以支持可靠的选择作用判断。'},
+  mismatch:{counts:[0,280,4],types:[0,7,2],heading:'只改培养基，才能比较选择作用',note:'选择皿多稀释了一档，菌落减少同时受到接种量影响。重新等量接种同一稀释液。'}
+};
+
+const droplet=(x,y,s=1,fill=C.cyan)=>G(x,y,s,P('M0-10C2-5 7 1 7 5C7 13-7 13-7 5C-7 1-2-5 0-10Z',fill,'#438795',1)+P('M-4 5Q-4 8-1 9','none','#fff',1.2));
+function tube(x,y,fill='#add6dd',s=1){
+  return G(x,y,s,P('M-13-30H13V26Q13 43 0 43Q-13 43-13 26Z','#edf8f8',glass,1.5)+P('M-11 3Q0 8 11 3V26Q11 40 0 41Q-11 40-11 26Z',fill,'none')+R(-15,-33,30,6,'#d7edf0',glass,2)+P('M-8-22V24','none','#fff',2));
+}
+function lamp(x,y,s,t=.5){
+  return G(x,y,s,E(0,31,40,8,'#49687125')+P('M-12-13H12L16 1C39 7 39 27 30 32H-30C-39 27-39 7-16 1Z','#dbedef',glass,1.8)+
+    P('M-30 13Q0 19 30 13L32 26L29 30H-29Z','#a9d1d9','none')+R(-14,-18,28,9,steel,glass,3)+P('M0-15V-27','none','#60514e',3)+
+    G(0,-24,1+.04*Math.sin(t*56),P('M0 0C-25-3-18-23-8-33C0-43-3-50 0-58C6-43 24-29 19-13C17-4 9 1 0 0Z','#f5a06a','#c86043',1.5)+P('M0 0C-13-1-10-17 0-35C6-25 13-9 6-2Z','#ffdfa4','none')+P('M0 0C-5-4-4-12 0-16C5-9 6-3 0 0Z',C.cyan,'none')));
+}
+function equipment(key,t){
+  const gauge=(x,y)=>E(x,y,20,20,'#fbfdfb',glass)+E(x,y,15,15,'#e3f3f0',glass)+P('M'+x+' '+y+'l8-9','none',C.red,2)+E(x,y,2.5,2.5,C.ink);
+  if(key==='flame')return lamp(152,346,.96,t)+P('M157 301L224 253','none','#54737b',4)+E(151,305,9,5,'none',C.red);
+  if(key==='milk')return P('M79 291H225L215 369H89Z','#deeff0',glass,2)+P('M87 323Q115 316 145 323T218 322L214 366H91Z','#91cddb','none')+
+    P('M127 264H163L161 345Q145 353 129 345Z','#fffcdf',glass,2)+R(125,257,40,8,'#d7edf0',glass,2)+P('M179 271V339','none',C.red,4)+E(179,342,7,7,C.red)+P('M182 278h10m-10 12h7m-7 12h10','none',glass,1);
+  if(key==='dry')return R(74,264,155,106,'#a9bcc9',glass,12)+R(86,277,98,79,'#456376','#334e57',6)+R(92,283,86,66,'#f2d5a0',amber,4)+P('M95 318H175','none',amber,2)+
+    E(135,310,33,8,'#fff9d9',amber)+E(135,336,25,6,'#fff9d9',amber)+R(194,281,26,17,'#e1f4ea',glass,3)+E(208,324,8,8,'#d9e9e8',glass);
+  return E(149,373,75,9,'#49687125')+R(92,281,113,90,'#a9c6cd',glass,15)+R(103,293,14,63,'#dbeaec','none',6)+E(149,283,63,13,'#c3dbdf',glass)+
+    P('M92 283v9m114-9v9M121 273v-9h50v9','none',glass,3)+gauge(151,319)+P('M172 270v-19h12','none',glass,3)+
+    O(.55+.2*Math.sin(t*19),P('M186 249q-11-9 1-18q11-10 0-18','none',C.cyan,2.4));
+}
+function sidePlate(inverted,t){
+  const x=48,y=467,travel=phase(t,.07,.57),grown=phase(t,.32,.9);
+  const dish=P('M0 14v58q0 7 9 7h442q9 0 9-7V14','none',glass,3)+P('M-5 28V11Q-5 5 4 5h452q9 0 9 6v17','none',glass,4)+
+    R(4,61,452,14,agar,amber,3)+P('M1 33h458','none','#b8d7da',2);
+  const spores=([48,116,188,260,332,405]).map((dx,i)=>{
+    const depth=inverted?0:travel*(i%2?9:5);
+    return E(x+dx,y+(inverted?26:60)-depth,(inverted?5+i%3:mix(4,24,grown))*(.4+.6*grown),mix(2,4,grown),inverted?C.green:amber);
+  }).join('');
+  return (inverted?G(x+460,y+84,1,dish,180):G(x,y,1,dish))+
+    many(5,i=>inverted?droplet(x+66+i*81,y+71,.5):droplet(x+61+i*82,y+mix(15,57,clamp(travel*(1+i*.1))),.55))+
+    O(inverted?0:grown*.42,E(282,y+58,201,7,'#c47f4c'))+spores+
+    txt(278,578,inverted?'琼脂在上，冷凝水留在下方皿盖':'冷凝水落到琼脂，冲散菌落','middle',C.ink,18,750)+
+    txt(278,607,inverted?'先凝固，再倒置培养':'同一平板更难分辨单菌落','middle','#405661',17);
+}
+const superDigits='⁰¹²³⁴⁵⁶⁷⁸⁹';
+const superscript=n=>String(n).split('').map(c=>c==='-'?'⁻':superDigits[+c]).join('');
+const scientific=n=>n.toExponential(1).replace(/e\+?(-?\d+)/,(_,exponent)=>' × 10'+superscript(+exponent));
+const heatLabel=value=>value<0?'＜1 CFU 等效':scientific(10**value)+' CFU 等效';
+function view1(t){
+  const minutes=30*t,method=methods[state.method],inverted=state.orientation==='inverted';
+  const p=plot('heat-chart',676,145,448,280,[0,5,10,15,20,25,30],[-2,0,2,4,6],'热处理后的模型存活量','等温处理时间（min）','log₁₀（CFU 等效）');
+  let content=headings('培养基 · 无菌操作台','热处理 · 对数存活曲线');
+  const parts=['水','碳源','氮源','无机盐'];
+  content+=parts.map((part,i)=>R(38+i*126,72,116,39,['#e9f5fa','#fff1dc','#fce8e2','#e7f4ed'][i],'#cedcd7',8)+txt(96+i*126,97,part,'middle',C.ink,19,750)).join('');
+  content+=txt(42,140,'按菌种调整 pH、氧条件及特殊营养（如维生素）');
+  content+=R(38,157,508,77,soft,'#d0dfd7',8)+caption(51,183,['称量 → 溶化 → 调 pH → 灭菌','降至约 50 ℃ → 无菌倒平板 → 冷却凝固']);
+  content+=equipment(state.method,t)+tile(239,268,305,101,method[0],method[1],C.green)+txt(255,346,method[2],'start',C.ink,17,700);
+  content+=P('M39 399H546','none','#d7e4da')+txt(39,432,'冷凝水追踪 · 培养皿侧视','start',C.ink,19,700)+sidePlate(inverted,t);
+  content+=p.svg+p.clip(O(.23,R(p.x,p.Y(0),p.w,p.Y(-2)-p.Y(0),'#a4aabe','none',0)))+
+    p.clip(spark(`M${p.x} ${p.Y(0)}h${p.w}`,'#5d6876',2,'4 5'));
+  content+=heat.map(h=>line([{x:0,y:6},{x:Math.min(30,8*h.d),y:heatAt(Math.min(30,8*h.d),h.d)}],p,h.color,3.4,h.dash)).join('');
+  content+=scan(p,minutes)+p.clip(heat.map(h=>chartDot(p,minutes,heatAt(minutes,h.d),h.color,6)).join(''));
+  content+=legend(646,503,'图例',[[heat[0].name,C.cyan,'solid']])+legend(827,503,'',[ [heat[1].name,C.red,'dash']])+legend(977,503,'',[[heat[2].name,C.red,'solid']]);
+  content+=txt(646,572,'阴影区低于 1 CFU 等效 · 曲线为教学模型','start',C.ink,16,700);
+  content+=rScript(641,609,['ggplot(thermal, aes(min, survivors, colour = condition)) +','geom_line() + scale_y_log10() + theme_gray()']);
+  draw(1,content);
+  say(1,'ASEPSIS / '+minutes.toFixed(1)+' min',method[0]+' · '+(inverted?'倒置培养':'正放培养'),method[3],
+    '121 ℃ 芽孢模型：'+heatLabel(heatAt(minutes,heat[2].d)),inverted?'倒置让冷凝水留在皿盖，减少滴落冲散菌落。':'正放时水滴可落到琼脂，扩散后的菌落更难单独挑取。');
+}
+
+function plateTop(x,y,r,fill=agar){
+  return E(x,y+8,r+5,r+3,'#617f741b')+E(x,y,r+3,r+3,'#d0e2df',glass)+E(x,y,r,r,fill,'#7d9f96')+E(x,y,r-6,r-6,'none','#ffffffa0')+
+    P(`M${x-r*.77} ${y-r*.52}Q${x-r*.53} ${y-r*.86} ${x-r*.20} ${y-r*.91}`,'none','#ffffffc8',3);
+}
+const polar=(cx,cy,r,a)=>[cx+r*Math.cos(a*Math.PI/180),cy+r*Math.sin(a*Math.PI/180)];
+const px=(points)=>points.map(p=>p.map(x=>x.toFixed(2)).join(' '));
+const trailPath=points=>'M'+px(points).join('L');
+const trails=Array.from({length:5},(_,i)=>{
+  const a=-122+i*65;
+  const starts=i===0?[]:[polar(276,296,145,a-13)];
+  return [...starts,...[[76,a-3],[145,a+3],[85,a+11],[148,a+17],[92,a+24],[147,a+30],[98,a+36],[145,a+52]].map(([r,h])=>polar(276,296,r,h))];
+});
+function pointOn(points,u){
+  const q=clamp(u)*(points.length-1),i=Math.min(Math.floor(q),points.length-2);
+  return [mix(points[i][0],points[i+1][0],q-i),mix(points[i][1],points[i+1][1],q-i)];
+}
+const stepAt=t=>Math.min(6,Math.floor(t*6)+1);
+function streakDiagram(t){
+  const step=stepAt(t),f=clamp(t*6-(step-1)),flaming=f<.29;
+  let art=plateTop(276,296,181,'#f9e3ab')+
+    many(5,i=>{
+      const a=-122+i*65,done=clamp(t*6-i),pts=trails[i],amount=phase(done,.47,.92),touched=pointOn(pts,amount);
+      const guide=polar(276,296,169,a+23),separator=polar(276,296,171,a-9);
+      let marks='';
+      if(amount>0){
+        const segment=pts.slice(0,Math.floor(amount*(pts.length-1))+1);
+        marks=spark(trailPath([...segment,touched]),'#9d673e',mix(6,2,i/4));
+        marks+=many([28,22,15,10,6][i],j=>{
+          const u=(j+.5)/([28,22,15,10,6][i]),[x,y]=pointOn(pts,u);
+          return u<=amount?E(x+Math.sin(j*2.7)*5,y+Math.cos(j*4.3)*5,i<2?2:3,i<2?2:3,i<2?'#aa7040':'#fbfbde','#935a32'):'';
+        });
+      }
+      return spark(`M276 296L${separator.join(' ')}`,'#d1a772',1.2,'3 6')+marks+txt(guide[0],guide[1]+6,(i+1)+'区','middle',C.ink,16,750);
+    });
+  const gap=polar(276,296,174,202),gapEnd=polar(276,296,102,202);
+  art+=spark(`M${gap.join(' ')}L${gapEnd.join(' ')}`,C.red,3,'6 5')+E(276,296,33,33,'#fff8e5','#cfab77')+txt(276,302,'琼脂','middle',C.ink,16,750);
+  art+=lamp(101,544,1,t)+tube(216,534,'#e8ad75',.69);
+  const between=(a,b,u)=>a.map((v,i)=>mix(v,b[i],u));
+  const flame=[103,496],cool=[153,482],sample=[215,525];
+  const start=trails[Math.min(step,5)-1][0];
+  let target=flame;
+  if(step===6||f<.39)target=between(flame,cool,phase(f,.29,.37));
+  else if(step===1&&f<.49)target=f<.44?between(cool,sample,phase(f,.39,.44)):between(sample,start,phase(f,.44,.49));
+  else if(f<.49)target=between(cool,start,phase(f,.39,.49));
+  else target=pointOn(trails[step-1],phase(f,.49,.92));
+  const [x,y]=target;
+  art+=spark(`M${x+7} ${y-3}l43-26`,flaming?C.red:glass,3)+spark(`M${x+50} ${y-29}l18-11`,'#52616c',7)+E(x,y,8,4,'none',flaming?C.red:'#43636b');
+  art+=tile(255,497,287,77,step+' / 6 次灼烧',flaming?'环丝加热':step===6?'灼烧完成 · 停止划线':f<.39?'在无菌条件下冷却':f<.49&&step===1?'冷却后蘸取菌液':'轻触并沿琼脂表面划线',C.red);
+  art+=txt(44,606,'转区约 60～70° · 5 区末端避开 1 区','start',C.ink,17,750);
+  return art;
+}
+function categorical(p,labels){
+  let i=0;
+  return p.svg.replace(/(<text\b[^>]*text-anchor="middle"[^>]*>)-?\d+(<\/text>)/g,(_,start,end)=>start+esc(labels[i++]??'')+end);
+}
+const stripTicks=(start,end)=>Array.from({length:end-start+1},(_,i)=>start+i);
+function stem(p,x,lo,hi,color=C.blue){
+  const a=p.X(x),l=p.Y(lo),h=p.Y(hi);
+  return P(`M${a} ${l}V${h}M${a-6} ${l}h12M${a-6} ${h}h12`,'none',color,2);
+}
+function bar(p,x,y,color,w=24){
+  return R(p.X(x)-w/2,p.Y(y),w,Math.max(0,p.Y(0)-p.Y(y)),color,'none',2);
+}
+function dilutionProcess(){
+  let art=txt(631,80,'1 g 土样 ＋ 9 mL 无菌水','start',C.ink,16,750)+
+    txt(1017,80,'取 0.1 mL 涂布','middle',C.ink,16,750);
+  art+=many(6,i=>{
+    const x=660+i*52;
+    return tube(x,112,['#b38559','#c99e71','#d8b98a','#e6cca1','#efddb4','#f3e7ca'][i],.56)+txt(x,155,'10'+superscript(i+1),'middle',C.ink,16,750)+
+      (i===5?'':flowLine([x+13,111],[x+38,111],'#63828a'));
+  });
+  return art+flowLine([944,111],[980,111],'#63828a')+E(1058,128,49,12,'#f5dda5',glass)+P('M1009 128v5q49 21 98 0v-5','none',glass,1.5)+
+    P('M1118 89l-53 24v13h-29','none',glass,4)+droplet(1029,107,.42,C.cyan)+
+    txt(1059,157,'L 形涂布器先冷却','middle',C.ink,16);
+}
+function countPlots(){
+  const selected=+state.dilution;
+  const a=plot('dilution-chart',675,210,449,123,[2,3,4,5,6,7],[0,100,200,300,400],'平板计数 · 每个点代表一个重复');
+  const b=plot('count-type-chart',675,448,449,104,[0,1,2,3,4],[0,1,2,3],'同一样品 · 每克数量（×10⁸）');
+  let art=categorical(a,['','10³','10⁴','10⁵','10⁶',''])+
+    a.clip(O(.21,R(a.x,a.Y(300),a.w,a.Y(30)-a.Y(300),C.green,'none',0)))+
+    a.clip([30,300].map(v=>spark(`M${a.x} ${a.Y(v)}h${a.w}`,C.green,1.7,'5 5')).join(''))+
+    a.clip(O(.18,R(a.X(selected)-25,a.y,50,a.h,C.blue,'none',0)));
+  art+=stripTicks(3,6).map(k=>{
+    const xs=dilutions[k],color=k===selected?C.blue:(k===5?C.green:'#728ca4');
+    if(!xs)return P(`M${a.X(k)-7} ${a.Y(337)}l7-12 7 12Z`,k===selected?C.red:C.orange,'none')+txt(a.X(k),a.Y(384)+5,'＞300','middle',C.ink,15,700);
+    return stem(a,k,mean(xs)-sd(xs),mean(xs)+sd(xs),color)+xs.map((n,i)=>chartDot(a,k+(i-1)*.16,n,color,5.5)).join('');
+  }).join('');
+  art+=R(675,371,17,14,'#c5ddd1',C.green,2)+txt(701,383,'30～300 课堂窗口','start',C.ink,16)+E(886,378,5,5,C.blue)+txt(900,383,'重复平板','start',C.ink,16);
+  art+=categorical(b,['','显微细胞','设定活菌','平板 CFU','']);
+  art+=[2.4,2,1.6].map((v,i)=>bar(b,i+1,v,[C.cyan,C.orange,C.green][i],53)+txt(b.X(i+1),b.Y(v)-8,v.toFixed(1),'middle',C.ink,16,750)).join('');
+  return art+rScript(641,609,['ggplot(plates, aes(dilution, colonies)) + geom_point() +','geom_errorbar() + geom_hline(yintercept = c(30, 300))']);
+}
+function view2(t){
+  const step=stepAt(t),key=String(step),xs=dilutions[state.dilution];
+  state.streak=key;
+  pick('[data-group="streak"]',key);
+  const result=!xs?'超出 300，换更高稀释度':mean(xs)<30?xs.join('、')+' · 低于课堂窗口':
+    mean(xs)+' ÷ 0.1 × 10'+superscript(+state.dilution)+' = '+scientific(cfu(xs,+state.dilution))+' CFU/g';
+  const title=step===1?'取菌前先灼烧':step===6?'结束后灼烧接种环':'第 '+step+' 区 · 从上一区末端接入';
+  const description=step===1?'灼烧降低接种环带入杂菌的风险。先冷却，再取菌液。':step===6?'及时处理环丝上的残留菌，降低对实验台和操作者的污染风险。':'先灼烧去除环丝上残留的菌，冷却后从前一区末端挑带少量菌。逐区稀释利于获得单菌落。';
+  draw(2,headings('单菌落分离 · 5 区划线','定量计数 · 十倍系列稀释')+streakDiagram(t)+dilutionProcess()+countPlots());
+  say(2,'FLAME / '+step+' OF 6',title,description,result,'CFU 是菌落形成单位。聚团可只长成一个菌落，部分活菌在所给培养条件下也可能不形成可见菌落。');
+}
+const colonies=[[154,287],[307,227],[375,340],[280,444],[178,414]];
+function selectArea(x,y,r,index){
+  return `<circle cx="${x}" cy="${y}" r="${r}" fill="transparent" style="cursor:pointer" data-isolate-hit="${index}" aria-hidden="true"/>`;
+}
+function cmcPlate(t,selected){
+  const growth=phase(t,.05,.61),stain=phase(t,.39,.65),rinse=phase(t,.64,.9);
+  const center=[268,318],r=193;
+  let art=plateTop(...center,r,'#f4d393')+
+    O(stain,E(...center,r-8,r-8,'#a9403d','#863a39'))+O(stain*.55,E(...center,r-14,r-14,'none','#fbb6a0'));
+  art+=isolates.map(({D,d},i)=>{
+    const [x,y]=colonies[i],active=selected===i+1,halo=D*5,inner=d*5;
+    return O(rinse,E(x,y,halo,halo,'#ffe8b4',active?'#2b674f':'#ffd293'))+
+      O(growth,E(x,y,inner*growth,inner*growth,'#f9ffdc','#675e3a'))+
+      (active?O(rinse,P(`M${x-halo} ${y}h${2*halo}m${-halo} ${-halo}v${2*halo}`,'none','#4b675b',1.7)+
+        P(`M${x-inner} ${y-7}h${2*inner}`,'none',C.red,2.2)):'')+
+      E(x+halo*.72,y-halo*.73,17,14,active?C.blue:'#fff7e2',active?C.blue:'#a5775d')+
+      txt(x+halo*.72,y-halo*.73+5,'#'+(i+1),'middle',active?'#fff':C.ink,15,750)+selectArea(x,y,halo,i+1);
+  }).join('');
+  const s=isolates[selected-1];
+  art+=txt(48,94,t<.35?'接种并培养候选菌落':t<.64?'加刚果红，底物区域着色':t<.90?'洗去浮色，透明圈渐显':'同批平板 · 读端点','start',C.ink,18,750);
+  art+=tile(42,540,503,79,'#'+selected+'   D '+s.D+' mm  ÷  d '+s.d+' mm  =  '+ratio(s).toFixed(1),'D 为整个透明区直径，包含菌落；d 为菌落直径',C.blue);
+  return art;
+}
+function cmcPlots(t,selected){
+  const a=plot('halo-points',681,125,436,176,[6,8,10,12,14,16],[0,2,4,6,8],'候选菌 · 透明圈大小与 D/d','透明圈直径 D（mm）');
+  const b=plot('halo-bars',681,416,436,125,[0,1,2,3,4,5,6],[0,2,4,6,8],'初筛排序依据 · D/d');
+  let art=a.svg+categorical(b,['','#1','#2','#3','#4','#5','']);
+  const visibility=.28+.72*phase(t,.64,.94);
+  art+=O(visibility,isolates.map((s,i)=>{
+    const value=ratio(s),chosen=selected===i+1,color=chosen?C.blue:i===1?C.green:C.cyan;
+    return chartDot(a,s.D,value,color,chosen?9:6)+txt(a.X(s.D)+13,a.Y(value)-7,'#'+(i+1),'start',C.ink,16,700)+selectArea(a.X(s.D),a.Y(value),15,i+1)+
+      bar(b,i+1,value,color,31)+txt(b.X(i+1),b.Y(value)-8,value.toFixed(1),'middle',C.ink,16,750);
+  }).join(''));
+  return art+R(683,575,18,16,'#EBEBEB','none',0)+E(692,583,4,4,C.blue)+txt(711,590,'当前候选', 'start',C.ink,16)+
+    R(851,575,18,16,'#EBEBEB','none',0)+E(860,583,4,4,C.green)+txt(879,590,'端点最大 D/d','start',C.ink,16)+
+    rScript(641,616,['ggplot(isolates, aes(D, D / d)) + geom_point(size = 3.5)']);
+}
+function ureaPlate(t){
+  const colony=phase(t,.05,.66),pink=phase(t,.37,.85),r=160;
+  let art=tile(41,70,503,84,'尿素是唯一添加氮源','葡萄糖、KH₂PO₄、Na₂HPO₄、MgSO₄、尿素、琼脂',C.orange,'#fff8e9');
+  art+=plateTop(283,339,r,'#f8d986')+
+    O(pink,E(245,296,48,42,'#cc4164','#9b394c')+E(341,363,41,39,'#d74568','#9b394c'))+
+    O(pink*.48,E(245,296,55,49,'none','#ed6485')+E(341,363,48,46,'none','#ed6485'))+
+    O(colony,E(245,296,14,12,'#f9e9b7','#a46c3e')+E(341,363,11,10,'#fff4c2','#a46c3e'))+
+    call(43,466,215,323,'阳性：局部变红','产氨后 pH 升高')+
+    txt(46,554,'酚红鉴别读数与是否能在选择培养基生长分开。','start',C.ink,17,750)+
+    txt(46,588,'（NH₂）₂CO + H₂O → 2 NH₃ + CO₂','start',C.blue,19,750);
+  return art;
+}
+function ureaPlots(t){
+  const p=plot('urea-ph',681,149,438,250,[0,1,2,3,4],[5,6,7,8,9],'酚红 · 模拟 pH 走势','培养阶段（示意）','pH');
+  const xy=Array.from({length:21},(_,i)=>({x:i/5,y:6.7+1.9*phase(i/20,.18,.88)}));
+  return p.svg+line([{x:0,y:6.7},{x:4,y:6.7}],p,C.orange,3,'7 5')+series(p,xy,C.red,t)+
+    legend(678,488,'图例',[['有脲酶 · pH 上升',C.red,'solid'],['对照 · 维持近初值',C.orange,'dash']])+
+    rScript(641,611,['ggplot(urease_model, aes(stage, pH, colour = sample)) +','geom_line() + theme_gray()']);
+}
+function view3(t){
+  const selected=+state.isolate,show=state.screen==='cmc';
+  document.querySelector('[data-group="isolate"]').parentElement.hidden=!show;
+  draw(3,headings(show?'刚果红 · 直径读数':'尿素平板 · 酚红鉴别',show?'同批端点 · 初筛数据':'产氨提高 pH · 机制模型')+
+    (show?cmcPlate(t,selected)+cmcPlots(t,selected):ureaPlate(t)+ureaPlots(t)));
+  const s=isolates[selected-1];
+  if(show)say(3,'CMC / ISOLATE #'+selected,'一个圈，两个直径','同样条件下，先按 D/d 排优先顺序。#3 的透明圈直径最大，#2 的 D/d 最大。','D/d = '+ratio(s).toFixed(1),'显圈支持局部底物降解。结合独立酶活实验复核；圈径和比值均受菌落生长与扩散影响。');
+  else say(3,'UREA / PHENOL RED','脲酶分解尿素，产氨令酚红变红','先用唯一氮源筛选，再用酚红显色鉴别。加入指示剂后，菌落周围的红色反映碱性增强。',t<.4?'接种培养 · 初始偏黄':'产氨 · 出现红色环带','这套示意把选择和鉴别的作用分开；曲线是机制演示。');
+}
+function smallPlate(x,y,n,k,t,kind){
+  const g=phase(t,.24,.92),visible=Math.round(n*g);
+  let art=plateTop(x,y,69,kind===2?'#f0d29c':'#f6e3b8');
+  art+=many(visible,j=>{
+    const [px,py]=polar(x,y,60*Math.sqrt((j+.5)/n),j*137.508);
+    const id=j%k,fill=['#a45e39','#8d8067','#f3c36d','#a47d9a','#fff8e1','#a89955','#bf927c'][id];
+    const r=kind===1?1.15+(id%3)*.5:2+(id%3)*.55;
+    return E(px,py,r,r*(id%2?.72:1),fill,'#89613b88');
+  });
+  return art;
+}
+function view4(t){
+  const m=profiles[state.controls],isBlank=state.controls==='blank',isMismatch=state.controls==='mismatch',g=phase(t,.24,.92);
+  const currentCounts=m.counts.map(n=>Math.round(n*g));
+  const currentTypes=m.types.map((n,i)=>Math.min(n,currentCounts[i]));
+  const a=plot('control-count',682,122,435,171,[0,1,2,3,4],[0,100,200,300,400],'培养结果 · 菌落数');
+  const b=plot('control-types',682,402,435,146,[0,1,2,3,4],[0,2,4,6,8],'培养结果 · 菌落形态型数');
+  const keys=['','空白','一般','选择',''],colors=[isBlank?C.red:C.orange,C.blue,isMismatch?C.orange:C.green];
+  let art=headings('同一批实验 · 三只培养皿','双对照 · 读取结果');
+  art+=tile(38,76,510,77,'对照 A  查污染   ｜   对照 B  查选择作用','仅在接种与培养条件可比时解读皿 2 和皿 3',C.green);
+  const labels=['空白皿','一般培养基','尿素选择基'],x=[119,293,467];
+  art+=many(3,i=>txt(x[i],197,labels[i],'middle',C.ink,18,750)+smallPlate(x[i],298,m.counts[i],m.types[i],t,i)+
+    txt(x[i],404,(t<.24?'培养中':currentCounts[i]+' 个菌落'),'middle',C.ink,18,750)+
+    txt(x[i],438,['未接种','10⁴ 倍 · 等体积',isMismatch?'10⁵ 倍 · 等体积':'10⁴ 倍 · 等体积'][i],'middle',C.ink,16));
+  art+=tile(38,491,510,102,m.heading,isBlank?'重新检查培养基、器具和无菌操作。':isMismatch?'接种量不同，重新做同量同稀释度接种。':'无菌空白无可见生长；一般皿与选择皿可比较。',isBlank||isMismatch?C.red:C.green);
+  art+=categorical(a,keys)+categorical(b,keys);
+  for(const [p,counts] of [[a,currentCounts],[b,currentTypes]]){
+    art+=counts.map((n,i)=>bar(p,i+1,n,colors[i],54)+txt(p.X(i+1),p.Y(n)-8,String(n),'middle',C.ink,17,750)).join('');
+  }
+  art+=colors.map((color,i)=>R(695+i*140,584,17,15,color,'none',2)+txt(720+i*140,598,keys[i+1],'start',C.ink,16)).join('');
+  art+=rScript(641,627,['ggplot(controls, aes(plate, value)) + geom_col() + facet_wrap(~ metric)']);
+  draw(4,art);
+  say(4,'CONTROLS / '+(t>=.92?'END POINT':'INCUBATING'),m.heading,m.note,
+    t>=.92?m.counts.join(' / ')+' 个菌落':'培养模拟进行中',
+    '未接种空白用于查污染。选择培养皿上的菌落仍需做功能鉴别，外观也不能直接换算为物种数。');
+}
+
+const views=[view1,view2,view3,view4],durations=[10,20,8,8],initialTimes=[.5,.12,1,1];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+function preview(i,start,end){
+  clocks[i].seek(reduced.matches?end:start);
+  if(!reduced.matches)clocks[i].play({until:end});
+}
+const groups={
+  method(value){state.method=value;redraw(0)},
+  orientation(value){state.orientation=value;preview(0,.03,.93)},
+  streak(value){preview(1,(+value-1+.05)/6,(+value-.015)/6)},
+  dilution(value){state.dilution=value;redraw(1)},
+  screen(value){state.screen=value;preview(2,.05,1)},
+  isolate(value){state.isolate=value;clocks[2].seek(1)},
+  controls(value){state.controls=value;preview(3,.22,1)}
+};
+const inputs={};
+function wireChapter(){
+  $('svg3').addEventListener('click',event=>{
+    const isolate=event.target.dataset.isolateHit;
+    if(isolate)document.querySelector(`[data-group="isolate"][data-value="${isolate}"]`).click();
+  });
+}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

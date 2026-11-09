@@ -1474,5 +1474,419 @@
     "design": "以四个可回看的问题驱动学术机制图和统计图；把数据、模型、解释与证据边界放在一起，减少零碎操作。",
     "difference": "本站当前独立方案，重点包括：四季林冠与温光水条件、草本和蚊成虫观测指数联动；1900—1920年历史毛皮记录、峰值游标与双轴尺度对照。",
     "suitableFor": "适合围绕四季林冠与温光水条件、草本和蚊成虫观测指数联动组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_02-01_群落的结构_群落结构与生态位图谱_v1.0.html",
+    "title": "群落的结构 群落结构与生态位 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/community-structure--atlas-v1.webp",
+      "thumbnail": "assets/previews/community-structure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "群落的结构 · 群落结构与生态位 · 学术图谱真实课件画面",
+      "scene": "区分群落的物种组成、种间关系和空间结构。"
+    },
+    "latest": true,
+    "route": "courses/community-structure/atlas-v1/",
+    "design": "先描述观察到的结构，再用资源与种间关系解释共存。",
+    "difference": "本版侧重种间关系对照、群落分层与空间结构、资源利用与生态位重叠。",
+    "suitableFor": "适合围绕“种间关系对照”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_02-02-03_群落的主要类型与演替_群落时空生态图谱_v1.0.html",
+    "title": "群落的主要类型与演替 群落时空图谱 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/community-types-succession--atlas-v1.webp",
+      "thumbnail": "assets/previews/community-types-succession--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "群落的主要类型与演替 · 群落时空图谱 · 学术图谱真实课件画面",
+      "scene": "把不同气候下的群落类型与同一地点随时间发生的演替分开。"
+    },
+    "latest": true,
+    "route": "courses/community-types-succession/atlas-v1/",
+    "design": "先比较空间上的群落类型，再回到同一地点追踪时间变化。",
+    "difference": "本版侧重气候与群落类型、原生演替与次生演替、演替指标与人类干扰。",
+    "suitableFor": "适合围绕“气候与群落类型”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_03-01_生态系统的结构_生态网络与营养路径图谱_v1.0.html",
+    "title": "生态系统的结构 生态网络与营养路径 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecosystem-structure--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-structure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的结构 · 生态网络与营养路径 · 学术图谱真实课件画面",
+      "scene": "沿食物网追踪营养关系，辨认生态系统各组成成分。"
+    },
+    "latest": true,
+    "route": "courses/ecosystem-structure/atlas-v1/",
+    "design": "先沿单条路径判断营养位置，再比较多个路径给出的结果。",
+    "difference": "本版侧重生产者、消费者、分解者、同一物种的不同营养位置、食物网变化与替代路径。",
+    "suitableFor": "适合围绕“生产者、消费者、分解者”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_03-02_生态系统的能量流动_能量账本与生态金字塔图谱_v1.0.html",
+    "title": "生态系统的能量流动 能量账本与生态金字塔 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecosystem-energy--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-energy--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的能量流动 · 能量账本与生态金字塔 · 学术图谱真实课件画面",
+      "scene": "追踪摄入、同化、呼吸及传递，区分现存量和能量通量。"
+    },
+    "latest": true,
+    "route": "courses/ecosystem-energy/atlas-v1/",
+    "design": "先确定系统边界和单位，再沿图核对每笔能量去向。",
+    "difference": "本版侧重能量账本与同化量、营养环节与传递效率、三类生态金字塔与能量利用。",
+    "suitableFor": "适合围绕“能量账本与同化量”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_03-03_生态系统的物质循环_WorkBuddy版.html",
+    "title": "生态系统的物质循环 WorkBuddy · 碳循环与生物富集 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecosystem-material-cycle--workbuddy-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-material-cycle--workbuddy-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的物质循环 · WorkBuddy · 碳循环与生物富集真实课件画面",
+      "scene": "把碳循环、生物富集和分解对照实验放在同一节课中比较。"
+    },
+    "latest": true,
+    "route": "courses/ecosystem-material-cycle/workbuddy-v1/",
+    "design": "先沿箭头追踪物质，再比较分解实验的对照条件。",
+    "difference": "本版侧重碳库之间的碳流、生物富集与食物链、土壤微生物分解的对照。",
+    "suitableFor": "适合围绕“碳库之间的碳流”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_03-04_生态系统的信息传递_生态信号网络图谱_v1.0.html",
+    "title": "生态系统的信息传递 生态信号网络 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecosystem-information--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-information--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的信息传递 · 生态信号网络 · 学术图谱真实课件画面",
+      "scene": "从蜂舞、种子萌发和植物挥发物比较生态信息。"
+    },
+    "latest": true,
+    "route": "courses/ecosystem-information/atlas-v1/",
+    "design": "先辨认信源和接收者，再判断同一信息作用在哪个层次。",
+    "difference": "本版侧重蜜蜂摇摆舞解码、光信号与萌发、种间化学信息与农业应用。",
+    "suitableFor": "适合围绕“蜜蜂摇摆舞解码”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_03-05_生态系统的稳定性_反馈与恢复力图谱_v1.0.html",
+    "title": "生态系统的稳定性 反馈与恢复力 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecosystem-stability--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecosystem-stability--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态系统的稳定性 · 反馈与恢复力 · 学术图谱真实课件画面",
+      "scene": "以扰动响应比较抵抗力、恢复力及系统的调节限度。"
+    },
+    "latest": true,
+    "route": "courses/ecosystem-stability/atlas-v1/",
+    "design": "用同一次扰动比较偏离幅度和恢复速度，再解释差异。",
+    "difference": "本版侧重负反馈与调节限度、抵抗力与恢复力对照、生态缸和系统管理。",
+    "suitableFor": "适合围绕“负反馈与调节限度”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_04-01_人类活动对生态环境的影响_生态足迹与全球变化图谱_v1.0.html",
+    "title": "人类活动对生态环境的影响 生态足迹与全球变化 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/human-environment-impact--atlas-v1.webp",
+      "thumbnail": "assets/previews/human-environment-impact--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "人类活动对生态环境的影响 · 生态足迹与全球变化 · 学术图谱真实课件画面",
+      "scene": "从生态需求和再生供给认识人类活动的环境影响。"
+    },
+    "latest": true,
+    "route": "courses/human-environment-impact/atlas-v1/",
+    "design": "先区分压力指标，再用证据选一个可实施的干预位置。",
+    "difference": "本版侧重生态足迹与承载力、生态需求的长期变化、污染过程与干预位置。",
+    "suitableFor": "适合围绕“生态足迹与承载力”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_04-02_生物多样性及其保护_景观连通与保护生物学图谱_v1.0.html",
+    "title": "生物多样性及其保护 景观连通与保护 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/biodiversity-conservation--atlas-v1.webp",
+      "thumbnail": "assets/previews/biodiversity-conservation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生物多样性及其保护 · 景观连通与保护 · 学术图谱真实课件画面",
+      "scene": "联系多样性层次、生态价值和栖息地保护。"
+    },
+    "latest": true,
+    "route": "courses/biodiversity-conservation/atlas-v1/",
+    "design": "比较道路与廊道条件，再解释保护措施作用在哪一层。",
+    "difference": "本版侧重遗传、物种和生态系统多样性、湿地的多种价值、生境连通与保护措施组合。",
+    "suitableFor": "适合围绕“遗传、物种和生态系统多样性”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修2_04-03_生态工程_循环农业与生态修复图谱_v1.0.html",
+    "title": "生态工程 循环农业与生态修复 · 学术图谱 1.0",
+    "category": "eco",
+    "preview": {
+      "image": "assets/previews/ecological-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/ecological-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "生态工程 · 循环农业与生态修复 · 学术图谱真实课件画面",
+      "scene": "用循环农业、人工湿地和矿区修复理解生态工程。"
+    },
+    "latest": true,
+    "route": "courses/ecological-engineering/atlas-v1/",
+    "design": "先指明系统中的物质和能量去向，再比较干预如何改变结果。",
+    "difference": "本版侧重生态工程的基本原理、循环农业与人工湿地、矿区修复的过程与指标。",
+    "suitableFor": "适合围绕“生态工程的基本原理”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_01-01_传统发酵技术的应用_微生物代谢与发酵装置图谱_v1.0.html",
+    "title": "传统发酵技术的应用 微生物代谢与发酵装置 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/traditional-fermentation--atlas-v1.webp",
+      "thumbnail": "assets/previews/traditional-fermentation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "传统发酵技术的应用 · 微生物代谢与发酵装置 · 学术图谱真实课件画面",
+      "scene": "从果酒果醋到泡菜、腐乳，比较微生物及其发酵条件。"
+    },
+    "latest": true,
+    "route": "courses/traditional-fermentation/atlas-v1/",
+    "design": "先预测供氧等条件怎样改变产物，再沿装置与曲线验证。",
+    "difference": "本版侧重果酒和果醋的条件对照、发酵装置与气体交换、泡菜和腐乳中的微生物作用。",
+    "suitableFor": "适合围绕“果酒和果醋的条件对照”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_01-02_微生物的培养技术及应用_纯培养与定量筛选图谱_v1.0.html",
+    "title": "微生物的培养技术及应用 纯培养与定量筛选 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/microbial-culture--atlas-v1.webp",
+      "thumbnail": "assets/previews/microbial-culture--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "微生物的培养技术及应用 · 纯培养与定量筛选 · 学术图谱真实课件画面",
+      "scene": "把无菌操作、纯培养、计数和筛选的证据连起来。"
+    },
+    "latest": true,
+    "route": "courses/microbial-culture/atlas-v1/",
+    "design": "区分分离、计数和筛选三个目标，再选各自的观察指标。",
+    "difference": "本版侧重培养流程与无菌操作、划线分离与稀释涂布、筛选结果与对照设计。",
+    "suitableFor": "适合围绕“培养流程与无菌操作”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_01-03_发酵工程及其应用_从搅拌发酵罐到工业产品图谱_v1.0.html",
+    "title": "发酵工程及其应用 从发酵罐到工业产品 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/industrial-fermentation--atlas-v1.webp",
+      "thumbnail": "assets/previews/industrial-fermentation--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "发酵工程及其应用 · 从发酵罐到工业产品 · 学术图谱真实课件画面",
+      "scene": "沿工业发酵流程观察供氧、移热和产品分离。"
+    },
+    "latest": true,
+    "route": "courses/industrial-fermentation/atlas-v1/",
+    "design": "从产物和所在位置反推过程控制与下游分离方案。",
+    "difference": "本版侧重发酵罐的环境控制、代谢条件与产物、菌体和上清的分离选择。",
+    "suitableFor": "适合围绕“发酵罐的环境控制”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_02-01_植物细胞工程_从外植体到再生植株图谱_v1.0.html",
+    "title": "植物细胞工程 从外植体到再生植株 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/plant-cell-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/plant-cell-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物细胞工程 · 从外植体到再生植株 · 学术图谱真实课件画面",
+      "scene": "追踪离体再生、原生质体融合和植物细胞工程应用。"
+    },
+    "latest": true,
+    "route": "courses/plant-cell-engineering/atlas-v1/",
+    "design": "让学生依据材料、条件、发育终点区分三种证据。",
+    "difference": "本版侧重脱分化与再分化、培养条件和器官发生、体细胞杂交与杂种证据。",
+    "suitableFor": "适合围绕“脱分化与再分化”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_02-02_动物细胞工程_从传代培养到克隆证据图谱_v1.0.html",
+    "title": "动物细胞工程 从传代培养到克隆证据 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/animal-cell-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/animal-cell-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "动物细胞工程 · 从传代培养到克隆证据 · 学术图谱真实课件画面",
+      "scene": "比较动物细胞培养、干细胞、杂交瘤和核移植的不同终点。"
+    },
+    "latest": true,
+    "route": "courses/animal-cell-engineering/atlas-v1/",
+    "design": "每条路线先明确想得到的细胞或产物，再解释筛选依据。",
+    "difference": "本版侧重原代与传代培养、干细胞的分化范围、杂交瘤筛选与克隆数据。",
+    "suitableFor": "适合围绕“原代与传代培养”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_02-03_胚胎工程_从受精到胚胎移植图谱_v1.0.html",
+    "title": "胚胎工程 从受精到胚胎移植 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/embryo-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/embryo-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "胚胎工程 · 从受精到胚胎移植 · 学术图谱真实课件画面",
+      "scene": "从配子与受精开始，追踪早期胚胎、移植与分割。"
+    },
+    "latest": true,
+    "route": "courses/embryo-engineering/atlas-v1/",
+    "design": "以胚胎所处发育阶段为主线，追问每个操作的必要条件。",
+    "difference": "本版侧重受精与卵裂、胚胎移植与受体同期、囊胚分割和内细胞团。",
+    "suitableFor": "适合围绕“受精与卵裂”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_03-01_重组DNA技术的基本工具_从酶切末端到质粒图谱_v1.0.html",
+    "title": "重组DNA技术的基本工具 从酶切末端到质粒 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/recombinant-dna-tools--atlas-v1.webp",
+      "thumbnail": "assets/previews/recombinant-dna-tools--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "重组DNA技术的基本工具 · 从酶切末端到质粒 · 学术图谱真实课件画面",
+      "scene": "辨认限制酶、连接酶和载体在重组 DNA 技术中的分工。"
+    },
+    "latest": true,
+    "route": "courses/recombinant-dna-tools/atlas-v1/",
+    "design": "先读末端，再对照载体和筛选结果解释重组证据。",
+    "difference": "本版侧重限制酶与切割末端、DNA 连接与骨架封口、质粒图谱和插入方向。",
+    "suitableFor": "适合围绕“限制酶与切割末端”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_03-02_基因工程的基本操作程序_从PCR到抗虫证据图谱_v1.0.html",
+    "title": "基因工程的基本操作程序 从 PCR 到抗虫证据 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/gene-engineering-procedure--atlas-v1.webp",
+      "thumbnail": "assets/previews/gene-engineering-procedure--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因工程的基本操作程序 · 从 PCR 到抗虫证据 · 学术图谱真实课件画面",
+      "scene": "追踪目的基因获取、表达载体构建、导入及检测。"
+    },
+    "latest": true,
+    "route": "courses/gene-engineering-procedure/atlas-v1/",
+    "design": "沿四步流程寻找证据，区分检测到片段和验证目标性状。",
+    "difference": "本版侧重PCR 引物限定扩增片段、表达载体与受体导入、分子检测与抗虫表型。",
+    "suitableFor": "适合围绕“PCR 引物限定扩增片段”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_03-03_基因工程的应用_从性状改良到产品制造图谱_v1.0.html",
+    "title": "基因工程的应用 从性状改良到产品制造 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/gene-engineering-applications--atlas-v1.webp",
+      "thumbnail": "assets/previews/gene-engineering-applications--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "基因工程的应用 · 从性状改良到产品制造 · 学术图谱真实课件画面",
+      "scene": "比较作物、动物、医药和食品中的基因工程应用与验证。"
+    },
+    "latest": true,
+    "route": "courses/gene-engineering-applications/atlas-v1/",
+    "design": "从具体应用目标反推该测什么，并区分实测与教学模型。",
+    "difference": "本版侧重作物性状与黄金米成分、转基因动物与产品指标、药用蛋白与凝乳酶对照。",
+    "suitableFor": "适合围绕“作物性状与黄金米成分”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_03-04_蛋白质工程的原理和应用_从功能倒推到实验验证图谱_v1.0.html",
+    "title": "蛋白质工程的原理和应用 从功能倒推到实验验证 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/protein-engineering--atlas-v1.webp",
+      "thumbnail": "assets/previews/protein-engineering--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "蛋白质工程的原理和应用 · 从功能倒推到实验验证 · 学术图谱真实课件画面",
+      "scene": "通过编码、胰岛素和溶菌酶案例理解蛋白质工程的设计与验证。"
+    },
+    "latest": true,
+    "route": "courses/protein-engineering/atlas-v1/",
+    "design": "先从功能倒推候选结构与序列，再为每个判断配一个验证指标。",
+    "difference": "本版侧重逆向设计与正向表达、胰岛素类似物与自聚集、二硫键、热稳定性与反馈改造。",
+    "suitableFor": "适合围绕“逆向设计与正向表达”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_04-01_转基因产品的安全性_从证据审查到风险管理图谱_v1.0.html",
+    "title": "转基因产品的安全性 从证据审查到风险管理 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/gm-product-safety--atlas-v1.webp",
+      "thumbnail": "assets/previews/gm-product-safety--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "转基因产品的安全性 · 从证据审查到风险管理 · 学术图谱真实课件画面",
+      "scene": "把转基因产品的评估落实到用途、对照、暴露与证据。"
+    },
+    "latest": true,
+    "route": "courses/gm-product-safety/atlas-v1/",
+    "design": "先界定产品和用途，再解释一条证据支持的结论范围。",
+    "difference": "本版侧重食用和种植情景、配对致敏试验与玉米异交数据、标签、用途与风险判断。",
+    "suitableFor": "适合围绕“食用和种植情景”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_04-02_关注生殖性克隆人_从多莉到伦理审查图谱_v1.0.html",
+    "title": "关注生殖性克隆人 从多莉到伦理审查 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/reproductive-cloning--atlas-v1.webp",
+      "thumbnail": "assets/previews/reproductive-cloning--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "关注生殖性克隆人 · 从多莉到伦理审查 · 学术图谱真实课件画面",
+      "scene": "追踪多莉的来源和实验分母，区分动物克隆与干细胞研究的终点。"
+    },
+    "latest": true,
+    "route": "courses/reproductive-cloning/atlas-v1/",
+    "design": "先读动物证据，再用三个案卷练习把事实、影响和规则分开。",
+    "difference": "本版侧重多莉的三个来源、同一例活产的两个分母、研究终点与伦理案卷。",
+    "suitableFor": "适合围绕“多莉的三个来源”组织过程观察与证据讨论。"
+  },
+  {
+    "file": "lessons/选择性必修3_04-03_禁止生物武器_从公共卫生证据到国际公约图谱_v1.0.html",
+    "title": "禁止生物武器 从公共卫生证据到国际公约 · 学术图谱 1.0",
+    "category": "biotech",
+    "preview": {
+      "image": "assets/previews/biological-weapons-ban--atlas-v1.webp",
+      "thumbnail": "assets/previews/biological-weapons-ban--atlas-v1-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "禁止生物武器 · 从公共卫生证据到国际公约 · 学术图谱真实课件画面",
+      "scene": "从历史调查和公共卫生响应理解生物武器禁制及和平利用。"
+    },
+    "latest": true,
+    "route": "courses/biological-weapons-ban/atlas-v1/",
+    "design": "先比较调查分母，再区分异常信号、病因证据与故意归因。",
+    "difference": "本版侧重危害类别与历史调查、调查证据和公众保护、禁止生物武器公约与履约。",
+    "suitableFor": "适合围绕“危害类别与历史调查”组织过程观察与证据讨论。"
   }
 ]

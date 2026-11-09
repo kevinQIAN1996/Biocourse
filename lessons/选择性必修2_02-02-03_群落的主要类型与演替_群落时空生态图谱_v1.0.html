@@ -1,0 +1,331 @@
+<!doctype html><html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5"><title>群落的主要类型与演替｜群落时空生态图谱 v1.0</title><link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap"><script async src="https://cdn.tailwindcss.com"></script><script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script><style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+
+.brand-mark{background:#35594d;border-radius:50%}.head-actions button{display:flex;align-items:center;gap:7px}.head-actions svg{width:17px;height:17px}.segmented{display:flex;flex-wrap:wrap;gap:8px}.segmented button{font-size:16px;padding:9px 15px}.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}.context select{font-size:16px}.context [hidden]{display:none!important}.subcontext{display:flex;gap:8px;align-items:center}.subcontext span{font-weight:600}.scroll-hint{display:none;padding:8px 20px;color:#334750;font-size:14px}.reading{min-height:250px}.context .hint{max-width:760px}.biome-target{cursor:pointer}.biome-target:focus{outline:none}.biome-target:focus-visible polygon{stroke:#111;stroke-width:5;stroke-dasharray:4 2}.references li:target{background:#edf3e9;outline:1px solid #bdcdb9}.model-note{font-size:16px;background:#f4f6ef;padding:15px;border-left:3px solid #5e7867}.extra code{white-space:normal;overflow-wrap:anywhere}#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}#svgLibrary svg{position:absolute;width:0;height:0}.table-scroll{overflow:auto}footer{font-size:14px}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){.segmented button{font-size:15px;padding:8px 11px}.fig-heading .eyebrow{font-size:11px;letter-spacing:0;overflow-wrap:anywhere}.context select{max-width:100%}.subcontext{flex-wrap:wrap}.reading{min-height:0}.toolbar output{min-width:160px}.context .hint{font-size:15px}}
+</style></head><body><header><a class="brand" href="#top"><span class="brand-mark">E</span><span>群落时空图谱<small>SPATIO-TEMPORAL ECOLOGY / 02.02–03</small></span></a><div class="head-actions"><button id="theme" aria-pressed="false">theme_gray() → bw</button><button id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>演替与适应速查 ↗</button></div></header><main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第2章 · 第2、3节</p><h1>土地有不同的面貌，<br>也有<em>自己的时间。</em></h1><p class="subtitle">群落的主要类型与演替 · Community Types & Succession<br>从气候包络，到叶片适应；从岩石表面，到生态恢复。</p></div><div class="intro-note"><i>Across climates.<br>Through time.</i><p>先比较环境，<br>再观察同一地点怎样改变。<br>把图像、读数与原因连起来。</p><span class="pill">4 幅图谱 · 一个连贯的课堂问题</span></div></section><nav aria-label="图谱导航"><a href="#figure1">01 气候与适应</a><a href="#figure2">02 演替剖面</a><a href="#figure3">03 定量规律</a><a href="#figure4">04 人类干预</a></nav><div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="canopy" x2="0" y2="1"><stop stop-color="#b3c9a2"/><stop offset="1" stop-color="#729775"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs></svg></div><section class="figure" id="figure1" data-figure="0"><div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / SPACE / CLIMATE & ADAPTATION</p><h2>不同的气候，如何写出不同的生命结构？</h2></div><span class="fig-number">01</span></div><div class="context"><div class="segmented" role="group"><button data-biome="desert" aria-pressed="true">荒漠</button><button data-biome="grass" aria-pressed="false">温带草原</button><button data-biome="rainforest" aria-pressed="false">热带雨林</button><button data-biome="deciduous" aria-pressed="false">温带落叶林</button><button data-biome="taiga" aria-pressed="false">北方针叶林</button><button data-biome="tundra" aria-pressed="false">苔原</button></div><div class="subcontext" id="dayControls"><span>CAM气孔</span><div class="segmented" role="group"><button data-night="false" aria-pressed="true">☀ 白天</button><button data-night="true" aria-pressed="false">☾ 夜晚</button></div></div></div><div class="toolbar"><button data-play="0" class="play" aria-pressed="false">▶ 播放过程</button><button data-reset="0">↺ 重看</button><label><span class="sr-only">第1图时间轴</span><input data-time="0" type="range" min="0" max="100" step=".1" value="0"></label><output id="time0"></output></div><div class="scroll-stage" tabindex="0" aria-label="第1图，可横向滚动"><svg id="svg1" role="img" aria-label="不同的气候，如何写出不同的生命结构？" viewBox="0 0 1200 820"></svg></div><p class="scroll-hint">↔ 横向滑动查看完整图谱，保留图中字的清晰度</p><p class="code-note">R图形语法参考 · SVG实现：ggplot(biomes, aes(Temp, Precip, fill = Biome)) + geom_polygon(alpha = 0.65) + theme_gray()</p><div class="reading"><div><p id="phase1" class="phase"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前状态与证据</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div><details class="extra"><summary>三大群落的典型适应与读图边界</summary><div class="table-scroll"><table><thead><tr><th>群落</th><th>常见植物适应</th><th>常见动物适应</th></tr></thead><tbody><tr><td>荒漠</td><td>肉质茎储水、刺、深/广根系；部分植物CAM</td><td>角质鳞片、节水排氮、夜行等</td></tr><tr><td>草原</td><td>叶片狭窄或卷曲、根系发达；并非所有草都相同</td><td>奔跑、掘洞与隐蔽</td></tr><tr><td>森林</td><td>垂直分层；阳生叶/阴生叶的结构与生理差异</td><td>栖息与食物分层，多样的行为适应</td></tr></tbody></table></div><p>年均温、年降水是重要因素，但季节性、火、土壤和生物历史同样影响群落。六类没有覆盖全部陆地生物群落，空白区不表示“没有生命”。阴生叶常有较低叶绿素a/b比值、较高单位质量叶绿素；单位面积结果可能不同。针叶林与雨林的叶结构不能由两块切片完整概括。</p><p>深根图不表示统一15m；适应不是生物为了目的临时改变，而是遗传性状、环境筛选和表型可塑性等过程的结果。</p></details><p class="fig-caption"><b>Figure 1.</b> 气候多边形为Whittaker式原创近似包络，未覆盖全部生物群落，不是精确分类界线。叶片、根系与动物为典型适应示意；叶绿体放大图着重基粒层叠，不主张所有阴生叶都有更大的叶绿体。 <span class="cites"><a href="https://www.nasa.gov/wp-content/uploads/2016/08/an_evolutionary_computation_system_design_concept_for_developing_controlled_closed_ecosystems.pdf" target="_blank" rel="noopener noreferrer" title="Whittaker, 1975 · Communities and Ecosystems, 2nd ed.">[1] ↗</a> <a href="https://doi.org/10.1146/annurev.pp.29.060178.002115" target="_blank" rel="noopener noreferrer" title="Osmond, 1978 · Annual Review of Plant Physiology 29, 379–414">[2] ↗</a> <a href="https://doi.org/10.1146/annurev.pp.28.060177.002035" target="_blank" rel="noopener noreferrer" title="Boardman, 1977 · Annual Review of Plant Physiology 28, 355–377">[3] ↗</a> <a href="https://doi.org/10.1111/nph.16640" target="_blank" rel="noopener noreferrer" title="Lefoulon et al., 2020 · New Phytologist">[11] ↗</a> <a href="https://doi.org/10.1016/0005-2728(73)90217-X" target="_blank" rel="noopener noreferrer" title="Anderson, Goodchild & Boardman, 1973 · BBA Bioenergetics 325, 573–585">[12] ↗</a> <a href="https://openstax.org/books/biology/pages/41-4-nitrogenous-wastes" target="_blank" rel="noopener noreferrer" title="OpenStax Biology · 41.4 Nitrogenous Wastes">[14] ↗</a></span></p></section><section class="figure" id="figure2" data-figure="1"><div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / TIME / ABOVE & BELOW GROUND</p><h2>从一块岩石，到一片可供共存的土地。</h2></div><span class="fig-number">02</span></div><div class="context"><div class="segmented" role="group"><button data-kind="primary" aria-pressed="true">初生 · 光裸岩石</button><button data-kind="secondary" aria-pressed="false">次生 · 弃耕农田</button></div><label for="climate">气候条件</label><select id="climate"><option value="moist">湿润适宜</option><option value="dry">干旱受限</option></select><span class="hint">此滑块同时驱动图2剖面与图3曲线。</span></div><div class="toolbar"><button data-play="1" class="play" aria-pressed="false">▶ 播放过程</button><button data-reset="1">↺ 重看</button><label><span class="sr-only">第2图时间轴</span><input data-time="1" type="range" min="0" max="100" step=".1" value="0"></label><output id="time1"></output></div><div class="scroll-stage" tabindex="0" aria-label="第2图，可横向滚动"><svg id="svg2" role="img" aria-label="从一块岩石，到一片可供共存的土地。" viewBox="0 0 1200 820"></svg></div><p class="scroll-hint">↔ 横向滑动查看完整图谱，保留图中字的清晰度</p><p class="code-note">R图形语法参考 · SVG实现：succession_state(time, origin, climate) → vegetation + soil + roots</p><div class="reading"><div><p id="phase2" class="phase"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前状态与证据</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div><details class="extra"><summary>判断初生与次生：看现场留下了什么</summary><div class="table-scroll"><table><thead><tr><th>情境</th><th>判断与依据</th></tr></thead><tbody><tr><td>光裸岩面或新基质</td><td>原有土壤缺乏，生物定居需克服基质限制，属于初生演替情景</td></tr><tr><td>弃耕农田</td><td>保留原有土壤及种子/根状茎，属于次生演替</td></tr><tr><td>普通火烧后森林</td><td>土壤基本保留，常留繁殖体，通常为次生演替</td></tr><tr><td>极端干扰彻底剥去土层</td><td>不能仅凭“火灾/洪水”名称定性，要核对实际基质</td></tr><tr><td>演替中优势地位改变</td><td>不要求前一阶段物种全部消失，也不保证每个旧物种永远保留</td></tr></tbody></table></div><p>示例土层锚点：初生0/0.5/3/15/23/35cm；次生30/30.5/32/35cm。干旱情景乘0.72，阶段之间平滑插值。这些数值不出自Chapin研究，也不作为野外判断阈值。地衣与苔藓并非每一次初生演替都首先出现，光照竞争也不是唯一驱动力。</p></details><p class="fig-caption"><b>Figure 2.</b> 六阶段与四阶段是有条件的教学路径，不是每个地区必经的固定顺序。土层与年数均为模拟示例；初生/次生的核心差异是原有基质与生物遗产，而非“先发生/后发生”。 <span class="cites"><a href="https://doi.org/10.1016/S0341-8162(99)00085-5" target="_blank" rel="noopener noreferrer" title="Chen, Blume & Beyer, 2000 · CATENA 39, 121–146">[4] ↗</a> <a href="https://doi.org/10.5962/bhl.title.56234" target="_blank" rel="noopener noreferrer" title="Clements, 1916 · Carnegie Institution of Washington">[5] ↗</a> <a href="https://doi.org/10.2307/2937039" target="_blank" rel="noopener noreferrer" title="Chapin et al., 1994 · Ecological Monographs 64, 149–175">[7] ↗</a> <a href="https://www.adfg.alaska.gov/static/education/educators/curricula/alaskawildlifecurriculum/pdfs/alaskas_forests_wildlife_curriculum.pdf" target="_blank" rel="noopener noreferrer" title="Alaska Department of Fish and Game · Alaska’s Forests & Wildlife">[10] ↗</a></span></p></section><section class="figure" id="figure3" data-figure="2"><div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / QUANTITATIVE ECOLOGY / FLUX & STOCK</p><h2>看见曲线之前，先看清它量的是什么。</h2></div><span class="fig-number">03</span></div><div class="context"><span class="pill">与图2共享时间、起点和气候</span><a href="#figure2">返回选择演替条件 ↑</a><span class="hint">初生窗口300模型年；次生窗口60模型年。</span></div><div class="toolbar"><button data-play="2" class="play" aria-pressed="false">▶ 播放过程</button><button data-reset="2">↺ 重看</button><label><span class="sr-only">第3图时间轴</span><input data-time="2" type="range" min="0" max="100" step=".1" value="0"></label><output id="time2"></output></div><div class="scroll-stage" tabindex="0" aria-label="第3图，可横向滚动"><svg id="svg3" role="img" aria-label="看见曲线之前，先看清它量的是什么。" viewBox="0 0 1200 820"></svg></div><p class="scroll-hint">↔ 横向滑动查看完整图谱，保留图中字的清晰度</p><p class="code-note">R图形语法参考 · SVG实现：ggplot(model, aes(Year, Value)) + geom_line() + geom_ribbon(aes(ymin = R, ymax = P), alpha = 0.25) + facet_wrap(~ Metric)</p><div class="reading"><div><p id="phase3" class="phase"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前状态与证据</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div><details class="extra"><summary>模型方程、单位与可下载记录</summary><p>记标准化时间u=min(模型年/T,1)，T初生=300，次生=60。F(u,k)=(1−exp(−ku))/(1−exp(−k))。</p><div class="table-scroll"><table><thead><tr><th>量</th><th>初生</th><th>次生</th></tr></thead><tbody><tr><td>丰富度相对指数</td><td>90F(u²,4)</td><td>22+68F(u,3)</td></tr><tr><td>土壤有机质相对指数</td><td>90F(u³,4)</td><td>35+55F(u,2)</td></tr><tr><td>GPP总初级生产P</td><td>9F(u²,4)</td><td>1.2+7.8F(u,4)</td></tr><tr><td>净生态系统生产NEP</td><td>0.7P(1−u)²</td><td>0.7P(1−u)²</td></tr><tr><td>群落总呼吸R</td><td>P−NEP</td><td>P−NEP</td></tr><tr><td>有机碳初始存量</td><td>0</td><td>35</td></tr></tbody></table></div><p>干旱情景相对指标乘0.62，P乘0.55。通量单位为相对碳单位/年，存量为相对碳单位。存量用年步长梯形积分计算∫(P−R)dt，加初始存量；假定无有机物外输和外来输入，包含活体与土壤有机碳，所以不直接称为总活体生物量。年内读数线性插值。P=R=0时P/R未定义。</p><p>丰富度的真实变化可非单调，成熟森林也未必是最大丰富度或零碳汇。本课展示Odum经典自养演替框架的一种简化。源文不是图中逐年数字的来源。</p><button id="export">下载当前情景模拟数据 CSV</button></details><p class="fig-caption"><b>Figure 3.</b> 四个面板分开表示丰富度、土壤有机质、碳通量和有机碳存量。全部是确定性教学模型，不是原论文实测。初生/次生不能仅凭曲线截距定性；能量稳态也不意味着没有生命活动。 <span class="cites"><a href="https://doi.org/10.1126/science.164.3877.262" target="_blank" rel="noopener noreferrer" title="Odum, 1969 · Science 164, 262–270">[6] ↗</a> <a href="https://doi.org/10.2307/2937039" target="_blank" rel="noopener noreferrer" title="Chapin et al., 1994 · Ecological Monographs 64, 149–175">[7] ↗</a></span></p></section><section class="figure" id="figure4" data-figure="3"><div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / HUMAN ACTION / TRAJECTORIES</p><h2>同一起点，能走向不同的未来吗？</h2></div><span class="fig-number">04</span></div><div class="context"><div class="segmented" role="group"><button data-intervention="natural" aria-pressed="true">自然恢复</button><button data-intervention="overgraze" aria-pressed="false">持续过度放牧</button><button data-intervention="restore" aria-pressed="false">生态修复</button></div><label for="restoreClimate">水分条件</label><select id="restoreClimate"><option value="moist">湿润适宜</option><option value="dry">干旱受限</option></select></div><div class="toolbar"><button data-play="3" class="play" aria-pressed="false">▶ 播放过程</button><button data-reset="3">↺ 重看</button><label><span class="sr-only">第4图时间轴</span><input data-time="3" type="range" min="0" max="100" step=".1" value="0"></label><output id="time3"></output></div><div class="scroll-stage" tabindex="0" aria-label="第4图，可横向滚动"><svg id="svg4" role="img" aria-label="同一起点，能走向不同的未来吗？" viewBox="0 0 1200 820"></svg></div><p class="scroll-hint">↔ 横向滑动查看完整图谱，保留图中字的清晰度</p><p class="code-note">R图形语法参考 · SVG实现：ggplot(scenarios, aes(Year, Cover, colour = Intervention)) + geom_line() + geom_ribbon(aes(ymin = Low, ymax = High), alpha = 0.25)</p><div class="reading"><div><p id="phase4" class="phase"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前状态与证据</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div><details class="extra"><summary>塞罕坝、外来入侵与模型边界</summary><p><b>塞罕坝：</b>联合国环境规划署记录了退化土地恢复与几代林业工作者的持续投入。该案例说明长期生态工程可以改善退化土地；其成果依赖历史基底、适宜树种和持续管理，不能推出天然荒漠都可复制为密林。<span class="cites"><a href="https://www.unep.org/en/news-and-stories/story/meet-three-environmental-pioneers-pushing-back-against-land-degradation" target="_blank" rel="noopener noreferrer" title="UNEP · Meet three environmental pioneers pushing back against land degradation">[13] ↗</a></span></p><p><b>外来入侵：</b>紫茎泽兰、水葫芦在某些地区会扩展并影响本地群落。外来不等于入侵；本地物种减少也不等于总物种数在任何阶段都必然下降。</p><p>模型：y=32+(K−32)F(u,k)，u=年/60。湿润自然K77/k1.6、修复K91/k3.8、过牧K8/k2.5；干旱自然K52、修复K69、过牧K8。上下情景分别把K改为K−8/K+6（过牧K−4/K+6），k改为0.85k/1.15k，逐点取较低/较高形成包络。变量是覆盖度，不能换称物种数或生态系统健康总分。</p></details><p class="fig-caption"><b>Figure 4.</b> 三线从同一32%覆盖度出发，图中阴影是模型参数上下情景包络，非统计置信区间。景观与曲线共用覆盖度；本图不将模拟轨迹归为塞罕坝实测，也不把所有自然演替预设成森林。 <span class="cites"><a href="https://doi.org/10.1038/s41586-018-0280-2" target="_blank" rel="noopener noreferrer" title="Bryan et al., 2018 · Nature 559, 193–204">[8] ↗</a> <a href="https://www.unep.org/en/news-and-stories/story/meet-three-environmental-pioneers-pushing-back-against-land-degradation" target="_blank" rel="noopener noreferrer" title="UNEP · Meet three environmental pioneers pushing back against land degradation">[13] ↗</a></span></p></section><section class="references"><h2>References / 图像背后的证据</h2><p>本课采用原创SVG插画与ggplot2风格图表，非期刊、BioRender或软件官方出品。模拟与近似已在对应图注说明；图书、教材或官方资料无DOI时使用真实资源链接。</p><ol><li id="ref-1"><a href="https://www.nasa.gov/wp-content/uploads/2016/08/an_evolutionary_computation_system_design_concept_for_developing_controlled_closed_ecosystems.pdf" target="_blank" rel="noopener noreferrer">[1] Whittaker, 1975 · Communities and Ecosystems, 2nd ed. ↗</a><span>经典群落气候图书；未检得本书DOI、未读取全文。链接为NASA技术报告中引用该图的公开说明。此处包络是原创近似。</span></li><li id="ref-2"><a href="https://doi.org/10.1146/annurev.pp.29.060178.002115" target="_blank" rel="noopener noreferrer">[2] Osmond, 1978 · Annual Review of Plant Physiology 29, 379–414 ↗</a><span>Crassulacean Acid Metabolism: A Curiosity in Context. CAM的生态生理背景；书目已核实，全文访问受限。</span></li><li id="ref-3"><a href="https://doi.org/10.1146/annurev.pp.28.060177.002035" target="_blank" rel="noopener noreferrer">[3] Boardman, 1977 · Annual Review of Plant Physiology 28, 355–377 ↗</a><span>Comparative Photosynthesis of Sun and Shade Plants. 日照与叶片适应综述；全文访问受限，不将统一叶绿体尺寸归因于此文。</span></li><li id="ref-4"><a href="https://doi.org/10.1016/S0341-8162(99)00085-5" target="_blank" rel="noopener noreferrer">[4] Chen, Blume & Beyer, 2000 · CATENA 39, 121–146 ↗</a><span>Weathering of rocks induced by lichen colonization—a review. 菌丝物理作用与有机酸参与矿物风化，不提供本课土层厘米数。</span></li><li id="ref-5"><a href="https://doi.org/10.5962/bhl.title.56234" target="_blank" rel="noopener noreferrer">[5] Clements, 1916 · Carnegie Institution of Washington ↗</a><span>Plant Succession: An Analysis of the Development of Vegetation. 演替理论史；BHL核实原著书目。历史顶极观不等于现代普遍必然终点。</span></li><li id="ref-6"><a href="https://doi.org/10.1126/science.164.3877.262" target="_blank" rel="noopener noreferrer">[6] Odum, 1969 · Science 164, 262–270 ↗</a><span>The Strategy of Ecosystem Development. 经典自养演替能量框架；图3是原创概念模型，非论文数据或原图。</span></li><li id="ref-7"><a href="https://doi.org/10.2307/2937039" target="_blank" rel="noopener noreferrer">[7] Chapin et al., 1994 · Ecological Monographs 64, 149–175 ↗</a><span>Mechanisms of Primary Succession Following Deglaciation at Glacier Bay, Alaska. 生活史、促进、竞争共同参与演替，不能归结为单一因素。</span></li><li id="ref-8"><a href="https://doi.org/10.1038/s41586-018-0280-2" target="_blank" rel="noopener noreferrer">[8] Bryan et al., 2018 · Nature 559, 193–204 ↗</a><span>China’s response to a national land-system sustainability emergency. 中国土地生态治理措施综述；不是图4模拟数据来源。</span></li><li id="ref-9"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer">[9] 人民教育出版社 · 选择性必修2《生物与环境》 ↗</a><span>第2章第2节《群落的主要类型》、第3节《群落的演替》。按章节定位，未核验具体印次页码。无DOI；链接为教材平台。</span></li><li id="ref-10"><a href="https://www.adfg.alaska.gov/static/education/educators/curricula/alaskawildlifecurriculum/pdfs/alaskas_forests_wildlife_curriculum.pdf" target="_blank" rel="noopener noreferrer">[10] Alaska Department of Fish and Game · Alaska’s Forests & Wildlife ↗</a><span>原有土壤和繁殖体与初生/次生分类，及干扰后恢复。官方教学材料，无DOI。</span></li><li id="ref-11"><a href="https://doi.org/10.1111/nph.16640" target="_blank" rel="noopener noreferrer">[11] Lefoulon et al., 2020 · New Phytologist ↗</a><span>Crassulacean acid metabolism guard cell anion channel activity follows transcript abundance and is suppressed by apoplastic malate. 夜间摄碳、液泡储存苹果酸与白天脱羧的机制。</span></li><li id="ref-12"><a href="https://doi.org/10.1016/0005-2728(73)90217-X" target="_blank" rel="noopener noreferrer">[12] Anderson, Goodchild & Boardman, 1973 · BBA Bioenergetics 325, 573–585 ↗</a><span>Composition of the photosystems and chloroplast structure in extreme shade plants. 特定极阴生植物的基粒及色素差异，不等于所有阴生叶的尺寸定律。</span></li><li id="ref-13"><a href="https://www.unep.org/en/news-and-stories/story/meet-three-environmental-pioneers-pushing-back-against-land-degradation" target="_blank" rel="noopener noreferrer">[13] UNEP · Meet three environmental pioneers pushing back against land degradation ↗</a><span>塞罕坝生态恢复的官方案例；本课不据此补造逐年曲线。无DOI。</span></li><li id="ref-14"><a href="https://openstax.org/books/biology/pages/41-4-nitrogenous-wastes" target="_blank" rel="noopener noreferrer">[14] OpenStax Biology · 41.4 Nitrogenous Wastes ↗</a><span>陆生爬行动物以尿酸为主排氮的节水意义；不是所有爬行动物都只排尿酸。开放教材，无DOI。</span></li><li id="ref-15"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank" rel="noopener noreferrer">[15] ggplot2 / Complete themes ↗</a><span>theme_gray与theme_bw官方规范；本课用SVG实现视觉语法。无DOI。</span></li><li id="ref-16"><a href="https://nanx.me/ggsci/reference/scale_npg.html" target="_blank" rel="noopener noreferrer">[16] ggsci / NPG colour scales ↗</a><span>NPG调色参考；不代表期刊或软件官方课件。无DOI。</span></li></ol></section><footer><span>林默然生物课件 · 原创交互图谱</span><span>群落类型与演替 / v1.0 · 2026-11-06</span></footer></main><dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY / COMMUNITY TYPES & SUCCESSION</p><h2 id="reviewTitle">起点、条件与变量，<br>比背下一条曲线更重要。</h2><div class="table-scroll"><table><thead><tr><th>考点</th><th>核心判断</th></tr></thead><tbody><tr><td>群落主要类型</td><td>荒漠、草原、森林等与气候密切相关；温度/降水不等于唯一决定因素</td></tr><tr><td>日照适应</td><td>阳生叶常较厚，阴生叶常更有利于弱光利用；叶绿体大小、叶绿素计量基准不可一概而论</td></tr><tr><td>初生 / 次生</td><td>看起始基质与生物遗产；不是先后次序，也不能只看某条曲线截距</td></tr><tr><td>演替实质</td><td>随时间，一个群落被另一个群落代替；优势更替不等于旧物种全部消失</td></tr><tr><td>速度与终点</td><td>次生通常更快；水分、传播、土壤与干扰等制约终态，不必全部到森林</td></tr><tr><td>典型过程</td><td>本例初生：裸岩→地衣→苔藓→草本→灌木→湿润地区乔木；不是普遍必经序列</td></tr><tr><td>P、R与存量</td><td>P−R是净生态系统生产；封闭模型中其积分是有机碳存量变化，不能混同活体生物量</td></tr><tr><td>人类活动</td><td>往往改变演替方向和速度；恢复目标需适地适生，不是到处造林</td></tr><tr><td>规范答句</td><td>因……起始条件保留/缺失……，导致……；观察到……支持……，但还受……限制。</td></tr></tbody></table></div></dialog><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+const state={biome:'desert',night:false,kind:'primary',climate:'moist',intervention:'natural',restoreClimate:'moist'};
+const biomes=[
+ {id:'desert',name:'荒漠',color:C.orange,points:[[-5,0],[30,0],[30,350],[20,330],[8,240],[-5,120]],desc:'水少，如何减少失水？'},
+ {id:'grass',name:'温带草原',color:C.red,points:[[-3,130],[8,240],[20,330],[20,850],[8,1000],[-2,650]],desc:'旱生禾草与奔跑、掘洞的动物'},
+ {id:'rainforest',name:'热带雨林',color:C.green,points:[[20,1900],[26,2100],[30,2400],[30,4000],[24,3800],[20,3000]],desc:'全年温暖湿润，冠层与林下异质'},
+ {id:'deciduous',name:'温带落叶林',color:C.cyan,points:[[4,700],[12,950],[19,1200],[19,2500],[12,2600],[5,1750]],desc:'季节变化与林下弱光适应'},
+ {id:'taiga',name:'北方针叶林',color:C.blue,points:[[-8,300],[-3,500],[5,700],[5,1750],[-2,1700],[-7,900]],desc:'寒冷季节长，针叶与锥形树冠'},
+ {id:'tundra',name:'苔原',color:'#8491B4',points:[[-15,0],[-5,0],[-5,330],[-8,600],[-12,500],[-15,170]],desc:'低矮植株，短生长季与冻土限制'}
+];
+const stages={primary:['裸岩','地衣','苔藓','草本','灌木','乔木林'],secondary:['弃耕地','一年生草本','多年生草本 / 灌木','乔木林']};
+const smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+function interp(values,t){let k=t*(values.length-1),i=Math.min(values.length-2,Math.floor(k));return mix(values[i],values[i+1],smooth(k-i))}
+const smoothRange=(t,a,b)=>smooth((t-a)/(b-a));
+function succession(t,kind=state.kind,climate=state.climate){
+ const secondary=kind==='secondary',dry=climate==='dry',u=t*(secondary?3:5),index=Math.min(stages[kind].length-1,Math.floor(u+.000001));
+ const soil=interp(secondary?[30,30.5,32,35]:[0,.5,3,15,23,35],t)*(dry?.72:1);
+ const a=secondary?{lichen:.12,moss:.16,grass:1-.35*smoothRange(t,.7,1),shrub:smoothRange(t,.35,.85),tree:smoothRange(t,.65,1)}:{lichen:smoothRange(t,.02,.2)*(1-.68*smoothRange(t,.6,1)),moss:smoothRange(t,.2,.4)*(1-.6*smoothRange(t,.7,1)),grass:smoothRange(t,.38,.6)*(1-.55*smoothRange(t,.75,1)),shrub:smoothRange(t,.58,.82),tree:smoothRange(t,.78,1)};
+ if(dry){a.tree=0;a.shrub*=.65;a.grass=Math.max(a.grass,smoothRange(t,.42,.75))}
+ return{t,kind,climate,year:t*(secondary?60:300),index,stage:dry&&index===stages[kind].length-1?'草本 / 灌丛':stages[kind][index],soil,...a};
+}
+const sat=(t,k=4)=>clamp((1-Math.exp(-k*t))/(1-Math.exp(-k)));
+function metrics(year,kind,climate='moist'){
+ const s=kind==='secondary',t=clamp(year/(s?60:300)),cap=climate==='dry'?.62:1;
+ return{richness:cap*(s?22+68*sat(t,3):90*sat(t*t,4)),som:cap*(s?35+55*sat(t,2):90*sat(t*t*t,4))};
+}
+function energy(year,kind,climate='moist'){
+ const s=kind==='secondary',t=clamp(year/(s?60:300)),cap=climate==='dry'?.55:1;
+ const P=cap*(s?1.2+7.8*sat(t,4):9*sat(t*t,4));
+ const net=P*.7*(1-t)**2,Rr=P-net;
+ return{x:year,P,R:Rr,net};
+}
+function energyRows(kind,climate){let stock=kind==='secondary'?35:0,last=energy(0,kind,climate),rows=[{...last,stock}];for(let year=1;year<=300;year++){const cur=energy(year,kind,climate);stock+=(cur.net+last.net)/2;rows.push({...cur,stock});last=cur}return rows}
+const energyCache={};for(const k of ['primary','secondary'])for(const c of ['moist','dry'])energyCache[k+'-'+c]=energyRows(k,c);
+function atEnergy(year,kind=state.kind,climate=state.climate){const rows=energyCache[kind+'-'+climate],i=Math.min(299,Math.floor(year)),d=year-i;return{...energy(year,kind,climate),stock:mix(rows[i].stock,rows[i+1].stock,d)}}
+function intervention(t,mode,climate){const dry=climate==='dry',start=32,target=mode==='natural'?(dry?52:77):mode==='restore'?(dry?69:91):8,k=mode==='restore'?3.8:mode==='natural'?1.6:2.5;const y=start+(target-start)*sat(t,k);const lowTarget=target+(mode==='overgraze'?-4:-8),highTarget=target+(mode==='overgraze'?6:6);return{x:t*60,y,lo:start+(lowTarget-start)*sat(t,k*.85),hi:start+(highTarget-start)*sat(t,k*1.15)}}
+const modelExports={biomes,stages,energyCache};
+
+function tree(x,y,s=1,kind='broad'){let crown=kind==='pine'?P('M0 -280L-72 -157L-34 -165L-94 -91L-28 -103L-112 -34H112L29 -103L92 -91L34 -166L70 -157Z','#93ad88','#456c55',1.5):P('M-70 -100C-116 -110 -115 -162 -91 -180C-118 -221 -67 -254 -44 -236C-25 -285 35 -280 51 -245C91 -266 118 -221 103 -201C144 -173 117 -127 91 -128Q78 -83 39 -95Q7 -67 -30 -98Q-47 -76 -70 -100Z','url(#canopy)','#52775b',1.5);return G(x,y,s,P('M-13 0L-8 -160L-28 -204L-7 -178L2 -230L12 -171L43 -196L13 -152L15 0Z','#a88f72','#725b49',1.3)+crown+P('M-5 -68L-5 -170M-5 -139L-54 -184M4 -119L58 -169','none','#647e59',2)+P('M-13 0Q-25 18 -67 24M-6 0Q-8 25 -37 41M7 0Q25 13 63 17M12 1Q29 32 47 49','none','#8a735e',2))}
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function bird(x,y,s=1,type=0,a=0){const colors=['#879ca7','#3C5488','#af805c'],c=colors[type];return G(x,y,s,P('M-13 9L-19 28M-5 11L1 27','none','#695d47',1.5)+P('M-29 3L-57 20L-45 1Q-42 -14 -17 -18Q-3 -22 4 -36Q20 -45 29 -33Q36 -16 18 -11Q10 11 -12 12Z',c,'#344f57',1.5)+P('M-34 -5Q-20 -19 4 -11L-10 4Z','#e1e4d6','#57717a',1)+P(type===1?'M28 -28L55 -26L27 -23Z':'M28 -28L42 -26L28 -22Z','#665e4a','#344f57')+E(21,-30,2.3,2.3,'#152a31')+(type===1?P('M10 -38L22 -47L26 -36Z',C.red):P('M12 -34L25 -34','none','#f4e9c9',2)),a)}
+
+function cactus(x,y,s=1){return G(x,y,s,P('M-14 0V-118Q-14 -145 4 -145Q22 -145 22 -118V-58H42V-95Q42 -108 55 -108Q68 -108 68 -95V-46Q68 -26 43 -26H22V0Z','#81a98b','#3f6c59',2)+P('M-14 -61H-34Q-61 -61 -61 -87V-113Q-61 -128 -47 -128Q-34 -128 -34 -112V-87H-14Z','#81a98b','#3f6c59',2)+P('M3 -130V-5M-46 -115V-78L-15 -74M54 -95V-44L22 -42','none','#bfd1a1',2)+many(14,i=>{let xx=i%2?24:-17,yy=-18-Math.floor(i/2)*16;return P(`M${xx} ${yy}l${i%2?8:-8} -5`,'none','#6e6d4f',1.2)}))}
+function lizard(x,y,s=1,t=0){return G(x,y,s,P('M-32 0Q-63 -7 -76 12Q-85 27 -116 21Q-89 36 -68 23Q-45 7 -29 13Q0 28 30 9L49 0L29 -13Q-5 -21 -32 0Z','#ae9971','#685f49',1.6)+P('M-20 -6l-17 -15l-20 2M9 -10l13 -19l19 1M-19 13l-15 21l-20 3M17 11l18 19l21 -4','none','#7d7355',4)+many(13,i=>E(-31+(i%7)*10,-4+Math.floor(i/7)*10,2,2,'#d2bd8e'))+E(33,-4,2,2,'#243b35'),Math.sin(t*6)*2)}
+function shrub(x,y,s=1){return G(x,y,s,P('M0 0L-4 -74M-4 -31L-41 -65M-3 -41L28 -84M1 -12L42 -44','none','#8a7654',4)+many(7,i=>E(Math.sin(i*2)*40,-42-Math.abs(Math.cos(i*2))*40,22,16,i%2?'#9eb68b':'#7f9e78','#607e5b')))}
+function lichen(x,y,s=1){return G(x,y,s,P('M-30 0L-34 -9L-20 -14L-25 -23L-8 -19L1 -30L12 -18L25 -23L22 -9L38 -1L22 5L28 15L11 13L1 25L-9 13L-26 18L-23 6Z','#b2b881','#707e5d',1.2)+many(8,i=>E(Math.sin(i*2)*18,Math.cos(i*2)*10,2,2,'#e0ca85')))}
+function mammal(x,y,s=1,t=0){return G(x,y,s,P('M-35 0Q-39 -22 -16 -24L17 -21L29 -39L42 -32L34 -10L15 3L9 28H0L-2 2L-19 3L-27 28H-36L-29 1Z','#bcab87','#7d6e53',1.5)+P('M31 -38L26 -63M38 -35L43 -60M-34 -12L-46 -20','none','#695c47',3)+E(34,-27,2,2,'#263e37')+P('M-27 24l-5 5M4 24l6 4','none','#6c6654',3),Math.sin(t*15)*2)}
+function leafSlice(x,y,w,sun,t){let h=sun?170:103,cell=sun?30:48;return R(x,y,w,h,'#ecf3dc','#718e69',12)+R(x,y,w,sun?12:5,'#aabf8e','none',5)+many(10,i=>R(x+i*w/10+2,y+14,w/10-4,17,'#d6e8bf','#90a875',5))+many(sun?20:10,i=>{let xx=x+5+i%10*w/10,yy=y+36+Math.floor(i/10)*48;return R(xx,yy,w/10-8,sun?45:40,sun?'#bad89f':'#c9dfa9','#83a875',9)+many(sun?4:5,j=>E(xx+5+(j%2)*(w/10-19),yy+7+Math.floor(j/2)*12,3.5,5,sun?'#739c5b':'#4f884e'))})+many(sun?11:6,i=>E(x+18+i*(w-36)/(sun?11:6),y+h-30+(i%2)*8,sun?12:19,12,'#c6ddb0','#91ac7a'))+R(x,y+h-10,w,10,'#d5e2bf','#91ac7a',4)+many(7,i=>{let f=(t*2+i/7)%1;return E(x+25+i*(w-50)/7,y-18+f*40,3,3,'#e6b94b')})}
+function chloroplast(x,y,s=1,shade=false){return G(x,y,s,E(0,0,67,32,'#bad3a5','#4f784a')+E(0,0,62,28,'#dce8c5','#6b8f55')+many(5,i=>{let xx=-42+i*21;return many(shade?6:3,j=>R(xx-7,-13+j*4,14,3,'#5b8c53','#436c40',1))+P(`M${xx} 3h21`,'none','#719b62',1)}))}
+function rock(x,y,s=1){return G(x,y,s,P('M-57 7L-45 -32L-9 -45L23 -35L58 -6L43 19L-15 25Z','#b4b6ac','#727c76',1.4)+P('M-12 -42L-19 -12L-1 8L-8 24M23 -35L11 -13L37 6','none','#818b83',1.3))}
+function landscape(x,y,w,h,model,t,mode='succession'){
+ const ground=y+h*.64,soilPx=mode==='succession'?model.soil/35*100:45+model.cover*.5,cover=mode==='succession'?1:model.cover/100;
+ const clipId=`land-${mode}-${x}-${y}`;
+ let s=R(x,y,w,h,'#f2f5ed','#d2dacf',8)+`<defs><clipPath id="${clipId}"><rect x="${x+1}" y="${y+1}" width="${w-2}" height="${h-2}" rx="8"/></clipPath></defs><g clip-path="url(#${clipId})">`;
+ s+=P(`M${x} ${ground-100}Q${x+w*.3} ${ground-155} ${x+w*.6} ${ground-90}T${x+w} ${ground-120}V${ground}H${x}Z`,'#e5ecdf');
+ s+=R(x,ground,w,h,'#b8b8a8','none',0)+many(12,i=>rock(x+30+i*w/11,ground+45+(i%3)*30,.75));
+ s+=R(x,ground,w,soilPx,'#bca17b','none',0)+R(x,ground,w,Math.min(18,soilPx*.28),'#776b50','none',0);
+ s+=O(smoothRange(soilPx,0,10),many(40,i=>E(x+12+(i*83%(w-24)),ground+4+(i*19%Math.max(1,soilPx-8)),1.8,1.1,'#6d674b')));
+ if(mode==='succession'){
+  s+=many(12,i=>O(model.lichen,lichen(x+35+i*(w-60)/12,ground-2,.32)));
+  s+=many(20,i=>O(model.moss,P(`M${x+20+i*(w-40)/20} ${ground}q-6 -17 0 -25q8 9 4 25`,'#8eaa79','#6b8660',1)));
+  s+=many(19,i=>O(model.grass,grass(x+20+i*(w-40)/19,ground,.65+.2*Math.sin(i))));
+  s+=many(5,i=>O(model.shrub,shrub(x+65+i*(w-130)/4,ground,.65*(.15+.85*model.shrub))));
+  s+=many(4,i=>O(model.tree,tree(x+100+i*(w-200)/3,ground,.9*(.12+.88*model.tree),'broad')));
+  s+=many(13,i=>{let xx=x+25+i*(w-50)/13,depth=soilPx*(.4+.5*Math.abs(Math.sin(i)));return O(model.grass+model.tree,P(`M${xx} ${ground}q${Math.sin(i)*20} ${depth*.5} ${Math.sin(i)*34} ${depth}m${-Math.sin(i)*20} ${-depth*.45}l19 8`,'none','#6b7352',1.3))});
+  if(model.kind==='secondary')s+=many(9,i=>E(x+30+i*(w-60)/9,ground+10,3,2,'#685c40'));
+  s+=O(model.grass,bird(x+w*.7+Math.sin(t*8)*10,ground-83,.35));
+  s+=O(model.kind==='secondary'?0:1-smoothRange(t,.3,.55),many(6,i=>rock(x+35+i*(w-70)/5,ground-5,.5)));
+ }else{
+  s+=many(26,i=>O(smoothRange(cover,(i*11%26)/26-.02,(i*11%26)/26+.02),grass(x+12+i*(w-25)/26,ground,.45+.5*cover)));
+  const trees=state.restoreClimate==='moist'?smoothRange(cover,.5,.9):0;
+  s+=many(4,i=>O(trees,tree(x+70+i*(w-140)/3,ground,.45+.25*trees,'pine')));
+  s+=many(4,i=>O(cover*.7,shrub(x+30+i*(w-60)/4,ground,.3)));
+  if(state.intervention==='overgraze')s+=mammal(x+w*.52,ground-12,.5,t)+P(`M${x+20} ${ground+20}q80 30 140 65m-65 -38l100 55`,'none','#8e8067',3);
+ }
+ return s+'</g>';
+}
+
+function renderClimate(t){
+ const b=biomes.find(b=>b.id===state.biome),forest=['rainforest','deciduous','taiga'].includes(b.id);
+ const p=plot('climateClip',85,150,420,460,[-15,-5,5,15,25,30],[0,1000,2000,3000,4000],'a · 生物群落气候包络','年平均温度 / °C','年降水量 / mm');
+ let s=p.svg+biomes.map(v=>{const selected=v.id===b.id;return `<g class="biome-target" data-biome="${v.id}" role="button" tabindex="0" aria-label="选择${v.name}" aria-pressed="${selected}"><polygon points="${v.points.map(([x,y])=>p.X(x)+','+p.Y(y)).join(' ')}" fill="${v.color}" fill-opacity="${selected?.83:.48}" stroke="${selected?'#182b36':v.color}" stroke-width="${selected?3:1.5}"/></g>`}).join('');
+ s+=E(p.X(b.points.reduce((a,v)=>a+v[0],0)/b.points.length),p.Y(b.points.reduce((a,v)=>a+v[1],0)/b.points.length),5,5,'#fff','#182b36');
+ s+=biomes.map((v,i)=>{let x=65+(i%2)*255,y=696+Math.floor(i/2)*35;return R(x,y-14,18,18,v.color,'#53666a',0)+txt(x+28,y,v.name,'start',C.ink,17,state.biome===v.id?700:500)}).join('');
+ s+=R(570,75,600,695,'#f6f7f0','#d1d9ce',8)+label(590,92,'b · '+b.name+'：结构与环境','原创示意 · 不按统一物种尺寸绘制');
+ if(b.id==='desert'){
+  s+=R(590,197,270,330,'#f0ead9','none',10)+P('M590 388Q690 360 860 387V527H590Z','#d2bd91')+cactus(650,382,1.1)+shrub(789,380,.48)+P('M789 381Q768 451 795 510M784 426l-32 40M789 465l39 35','none','#816b4a',3)+lizard(741,372,.49,t);
+  s+=call(600,551,791,480,'深根进入更深土层','深度依物种与环境而异');
+  const open=state.night?13:1;
+  s+=E(1000,340,110,85,'#d9e7c4','#96ab7b')+E(983-open/2,336,18,49,'#80ad78','#4e7a4f')+E(1017+open/2,336,18,49,'#80ad78','#4e7a4f')+E(1000,336,open,33,'#faf9f5','#5c8157');
+  s+=label(883,211,state.night?'夜：气孔开放':'昼：气孔紧闭','典型CAM节水模式');
+  if(state.night)s+=dotFlow([1000,260],[1000,375],t,C.blue,4)+E(1000,405,54,22,'#d8c1a0','#997f58')+label(893,450,'CO₂ → 苹果酸储存','大液泡中暂存碳');
+  else s+=dotFlow([1000,405],[1060,342],t,C.orange,4)+label(890,450,'苹果酸脱羧供CO₂','白天进行光合作用');
+  s+=label(600,650,'肉质茎储水 · 叶退化为刺','蜥蜴鳞片与以尿酸为主排氮有利节水');
+ }else if(forest){
+  s+=label(590,189,'阳生叶：常较厚','较发达的栅栏组织');
+  s+=leafSlice(610,270,300,true,t)+chloroplast(1060,345,.85,false);
+  s+=label(590,464,'阴生叶：常较薄','弱光利用能力较强');
+  s+=leafSlice(610,545,300,false,t)+chloroplast(1060,583,.85,true);
+  s+=label(600,690,b.id==='taiga'?'针叶与锥形冠：寒地适应':b.id==='rainforest'?'多层林冠：光环境差异大':'落叶与季节性：并非全年同一光照','叶绿体大小并非固定判据；放大图示基粒差异');
+ }else if(b.id==='grass'){
+  s+=landscape(590,200,555,410,{soil:30,lichen:0,moss:.1,grass:1,shrub:.15,tree:0,kind:'primary'},t)+mammal(925,445,.95,t);
+  s+=E(727,490,30,17,'#6c6754')+P('M720 490Q704 525 742 550','none','#5d644b',5)+P('M680 465Q655 410 672 340Q687 407 680 465M694 466Q725 399 711 350','none','#8c9b62',3);
+  s+=label(600,650,'狭窄 / 卷曲的叶片减少失水','根系、奔跑与掘洞共同适应开放环境');
+ }else{
+  s+=R(595,210,550,400,'#edf1ed','none',8)+R(595,470,550,140,'#c7d8dc','none',0)+many(8,i=>shrub(625+i*68,466,.17))+many(12,i=>P(`M${615+i*43} 470v${20+i%3*9}`,'none','#8c8e73',1.5));
+  s+=P('M610 270l10 14m-5 -20v25m-11 -15l22 6','none',C.cyan,2)+label(625,324,'低矮垫状植株 · 浅根','短生长季；冻土层限制根系');
+  s+=label(600,650,'苔原不是“完全没有植物”','环境约束影响群落高度与物种组成');
+ }
+ $('svg1').innerHTML=s;
+ say(1,'SPACE / CLIMATE & ADAPTATION',b.name+' · '+b.desc,forest?'比较的是典型日照适应：阳生叶常具有较厚、发达的栅栏组织；阴生叶常有利于利用弱光的结构与色素配置。具体性状因物种与计量基准不同而变化。':b.id==='desert'?'夜间摄入CO₂、暂存为有机酸，白天关闭气孔时再提供CO₂。这种时间上的分工减少高温时的失水。':b.id==='grass'?'有限降水与开放环境筛选出相适应的叶片、根系与动物行为。看见一种适应，并不意味着所有物种都具有同一性状。':'低温、冻土和短生长季限制高大植株的建立，低矮植被仍可形成有层次的生命系统。',forest?'叶片形态 + 光环境':b.id==='desert'?(state.night?'夜间开放 · 摄入CO₂':'白天关闭 · 减少蒸腾'):'环境条件 → 适应性状','气候包络为近似教学示意。未列出的稀树草原、温带雨林等未被并入六类；年均温和降水不能单独决定群落。');
+}
+function renderSuccession(t){
+ const m=succession(t),dry=state.climate==='dry',scond=state.kind==='secondary';
+ let s=label(38,30,'a · 同一地点，地上与地下共同改变','阶段与厘米数为教学模型；剖面纵向夸张')+landscape(35,122,785,540,m,t);
+ s+=P(`M791 ${468}v${m.soil/35*100}m-7 0h14M784 468h14`,'none','#554f3e',2);
+ s+=label(51,680,`土层 ${m.soil.toFixed(1)} cm · ${m.stage}`,`${m.year.toFixed(1)} 模型年 / ${scond?'60':'300'}年观察窗口`);
+ const y=755,n=stages[state.kind].length;
+ s+=stages[state.kind].map((name,i)=>{let title=dry&&i===n-1?'草 / 灌':name.replace('多年生草本 / 灌木','草本 / 灌木');return R(40+i*780/n,y,780/n-8,38,i===m.index?'#3c5488':'#edf1e9','#b5c3b7',5)+txt(40+(i+.5)*780/n-4,y+25,title,'middle',i===m.index?'#fff':C.ink,17,600)}).join('');
+ s+=R(850,122,315,540,'#f6f5ec','#d2d8ca',8)+label(871,145,'b · '+(m.index<3&&!scond?'开路先锋':'优势地位如何改变？'));
+ if(m.index<3&&!scond){
+  const colonized=smoothRange(t,.02,.2);
+  s+=E(1006,350,120,119,'#edf0df','#94a885')+rock(1005,383,1.6)+O(colonized,lichen(1000,328,1.2)+P('M974 339Q986 362 991 399M1015 343Q998 360 1008 394','none','#81956c',3)+many(10,i=>{const f=(t*4+i/10)%1;return E(975+i%3*17,350+f*57,3,3,C.orange)})+many(5,i=>E(961+i*22,414+Math.sin(t*12+i)*5,4,3,'#9eab8f')));
+  s+=label(871,500,colonized===0?'尚未定居的裸岩基质':'菌丝 + 有机酸 → 风化',colonized===0?'先预测：第一层土壤从哪里来？':'矿物颗粒 + 生物遗体 → 初始薄土');
+ }else if(scond&&m.index===0){
+  s+=R(886,280,239,170,'#c7af88','#9b896a',10)+many(12,i=>E(905+(i%4)*60,305+Math.floor(i/4)*45,6,4,'#73664b'))+P('M910 383q40 -35 72 0t100 -5','none','#8b7955',7)+P('M981 381q-12 45 7 68M1032 374q20 30 18 60','none','#7d7756',2);
+  s+=label(872,500,'已有种子与地下根茎','不用从完全无土的基质重新起步');
+ }else{
+  s+=tree(1009,449,.65)+grass(960,449,.6)+shrub(1073,449,.5)+many(4,i=>dotFlow([940+i*44,275],[940+i*44,430],t,'#d0b66a',2));
+  s+=label(870,500,dry?'水分限制木本建立':'光、养分与空间竞争','促进与竞争可同时存在');
+ }
+ s+=label(870,596,'优势取代 ≠ 全部消失','适宜微生境可保留部分早期类群');
+ $('svg2').innerHTML=s;
+ say(2,scond?'SECONDARY / SOIL & LEGACIES':'PRIMARY / NEW SUBSTRATE',m.stage+' · '+(dry?'干旱情景':'湿润情景'),scond?'弃耕时已经保留土壤、种子和地下根状茎，恢复可利用这些生物遗产。其速度通常较快，但不取决于“次生”二字本身。':'在本例裸岩上，地衣的生物活动参与风化和土壤形成。此后环境改变与物种生活史、传播和资源竞争共同推动优势种变化。',`当前 ${m.year.toFixed(1)} 模型年 · 土层 ${m.soil.toFixed(1)} cm`,dry?'干旱条件下本例止于草本/灌丛，不能预设所有地区最终成为森林。':'演替是优势地位与组成的改变；部分早期类群可保留，也可能有物种消失。数值与阶段是教学路径，不是统一时间表。');
+}
+function renderQuant(t){
+ const m=succession(t),year=m.year,clim=state.climate;
+ const a=plot('richClip',85,135,365,220,[0,100,200,300],[0,25,50,75,100],'a · 丰富度相对指数','模型年','指数 / 非实测物种数');
+ const b=plot('somClip',85,505,365,220,[0,100,200,300],[0,25,50,75,100],'a′ · 土壤有机质相对指数','模型年','指数 / 独立指标');
+ const c=plot('energyClip',650,135,345,220,[0,100,200,300],[0,3,6,9],'b · 总生产与群落呼吸','模型年','碳通量 / 相对碳单位·年⁻¹');
+ const d=plot('stockClip',650,505,345,220,[0,100,200,300],[0,50,100,150,200],'b′ · 积累的有机碳存量','模型年','有机碳 / 相对碳单位');
+ let s=a.svg+b.svg+c.svg+d.svg;
+ for(const [kind,color,dash] of [['primary',C.red,''],['secondary',C.cyan,'7 4']]){
+  const rows=Array.from({length:301},(_,x)=>({x,...metrics(x,kind,clim)}));
+  s+=series(a,rows.map(r=>({x:r.x,y:r.richness})),color,year/300,dash)+series(b,rows.map(r=>({x:r.x,y:r.som})),color,year/300,dash);
+ }
+ const energyData=energyCache[state.kind+'-'+clim],e=atEnergy(year);
+ const band=energyData.filter(r=>r.x<=year).map(r=>({x:r.x,lo:r.R,hi:r.P}));band.push({x:year,lo:e.R,hi:e.P});
+ s+=c.clip(ribbon(band,c.X,c.Y,C.green,.25))+series(c,energyData.map(r=>({x:r.x,y:r.P})),C.green,year/300)+series(c,energyData.map(r=>({x:r.x,y:r.R})),C.blue,year/300,'6 4')+series(d,energyData.map(r=>({x:r.x,y:r.stock})),C.orange,year/300,'8 3');
+ s+=[a,b,c,d].map(p=>scan(p,year)).join('');
+ s+=legend(470,120,'演替类型',[['初生',C.red],['次生',C.cyan,'dash']])+legend(1013,120,'能量预算',[['总生产 P',C.green],['总呼吸 R',C.blue,'dash'],['P − R',C.green,'band']])+legend(1013,510,'存量',[['有机碳',C.orange,'dash']]);
+ s+=label(40,15,'同一时间轴 · '+(state.kind==='primary'?'初生':'次生')+' / '+(clim==='moist'?'湿润':'干旱'))+label(650,15,`当前 ${year.toFixed(1)} 年 · 图2与图3联动`);
+ $('svg3').innerHTML=s;
+ const ratio=e.R>1e-10?(e.P/e.R).toFixed(2):'未定义';
+ say(3,'TIME / FLUX IS NOT STOCK','净通量累积成存量，但两者单位不同。','这里的P是总初级生产，R是整个群落呼吸。P−R为净生态系统生产；在无外来有机碳和输出的模型中，它的时间积分等于有机碳存量的变化。',`P/R = ${ratio} · 净积累 ${e.net.toFixed(2)}`,`当前有机碳 ${e.stock.toFixed(1)} 相对单位，包含活体和土壤有机碳。经典自养演替模型后期趋于P≈R；真实成熟森林仍可能是碳汇。截距不能脱离初始基质单独用于分类。`);
+}
+function renderHuman(t){
+ const mode=state.intervention,clim=state.restoreClimate,cur=intervention(t,mode,clim),names={natural:'自然恢复',restore:'生态修复',overgraze:'持续过度放牧'},colors={natural:C.blue,restore:C.green,overgraze:C.red};
+ let s=label(40,30,'a · '+names[mode]+' / '+(clim==='moist'?'湿润':'干旱')+'条件','共同起点：32%覆盖度的退化地 · 教学模拟')+landscape(35,155,500,470,{cover:cur.y},t,'human');
+ s+=label(55,670,`当前覆盖度 ${cur.y.toFixed(1)}%`,`${(t*60).toFixed(1)} 模型年 · 植被结构随条件变化`);
+ const p=plot('humanClip',625,155,355,470,[0,15,30,45,60],[0,25,50,75,100],'b · 相同起点，不同轨迹','模型年','植被覆盖度 / %');
+ s+=p.svg;
+ for(const k of ['natural','overgraze','restore']){
+  const rows=Array.from({length:121},(_,i)=>intervention(i/120,k,clim)),selected=k===mode,done=rows.filter(r=>r.x<=t*60);done.push(intervention(t,k,clim));
+  s+=p.clip(ribbon(done,p.X,p.Y,colors[k],selected?.25:.10))+series(p,rows,colors[k],t,k==='natural'?'6 4':'');
+ }
+ s+=scan(p,t*60)+legend(1000,160,'干预方式',[['自然恢复',C.blue,'dash'],['过度放牧',C.red],['生态修复',C.green],['情景包络',C.green,'band']])+label(620,711,'阴影是参数情景范围','不是置信区间；非塞罕坝实测曲线');
+ $('svg4').innerHTML=s;
+ say(4,'HUMAN ACTION / DIRECTION & RATE',names[mode]+'：改变方向，也改变速度。',mode==='restore'?'减少干扰、恢复适宜植被和持续管护，可以改善退化地。恢复目标须服从水分和原有生态系统：草原与荒漠不能一律改造成森林。':mode==='overgraze'?'持续超出承载能力的放牧会削弱植被覆盖、扩大裸露地表，进一步改变土壤与水分条件。本图展示一种退化情景，不是所有草地的统一终点。':'去除持续干扰后，物种传播、土壤条件与气候共同决定恢复路径。自然恢复的速度和终态因地点不同而不同。',`${names[mode]} · ${cur.y.toFixed(1)}%`,clim==='dry'?'干旱情景优先恢复草本与灌丛。适地适树、适地适草，比简单追求树木数量更重要。':'绿色曲线不等于“种树越多越好”；覆盖度不是物种丰富度，也不等于生态系统全部功能。');
+}
+
+let clock0,clockSucc,clockHuman;
+function controls(indices,{t,playing,duration}){for(const i of indices){document.querySelector(`[data-time="${i}"]`).value=t*100;const b=document.querySelector(`[data-play="${i}"]`);b.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';b.setAttribute('aria-pressed',String(playing));$('time'+i).textContent=i===1||i===2?`${(t*(state.kind==='primary'?300:60)).toFixed(1)} 模型年 · ${duration}秒演示`:`${Math.round(t*100)}% · ${duration}秒演示`}}
+clock0=BioAtlas.createTimeline({duration:18,render:renderClimate,onState:s=>controls([0],s)});
+clockSucc=BioAtlas.createTimeline({duration:30,render:t=>{renderSuccession(t);renderQuant(t)},onState:s=>controls([1,2],s)});
+clockHuman=BioAtlas.createTimeline({duration:24,render:renderHuman,onState:s=>controls([3],s)});
+const clocks=[clock0,clockSucc,clockSucc,clockHuman];
+document.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];c.state.playing?c.pause():c.play()}));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>clocks[+b.dataset.reset].reset()));
+document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('input',()=>clocks[+b.dataset.time].seek(+b.value/100)));
+function chooseBiome(id){state.biome=id;document.querySelectorAll('button[data-biome]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.biome===id)));$('dayControls').hidden=id!=='desert';clock0.reset()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-biome]');if(b)chooseBiome(b.dataset.biome)});
+document.addEventListener('keydown',e=>{const b=e.target.closest('g[data-biome]');if(b&&(e.key==='Enter'||e.key===' ')){e.preventDefault();chooseBiome(b.dataset.biome)}});
+document.querySelectorAll('[data-night]').forEach(b=>b.addEventListener('click',()=>{state.night=b.dataset.night==='true';document.querySelectorAll('[data-night]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));clock0.reset()}));
+document.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{state.kind=b.dataset.kind;document.querySelectorAll('[data-kind]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));clockSucc.reset()}));
+$('climate').addEventListener('change',e=>{state.climate=e.target.value;clockSucc.seek(clockSucc.state.t)});
+document.querySelectorAll('[data-intervention]').forEach(b=>b.addEventListener('click',()=>{state.intervention=b.dataset.intervention;document.querySelectorAll('[data-intervention]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));clockHuman.reset()}));
+$('restoreClimate').addEventListener('change',e=>{state.restoreClimate=e.target.value;clockHuman.seek(clockHuman.state.t)});
+$('theme').addEventListener('click',()=>{const bw=document.documentElement.dataset.theme!=='bw';document.documentElement.dataset.theme=bw?'bw':'gray';$('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';$('theme').setAttribute('aria-pressed',String(bw))});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+document.querySelectorAll('nav a').forEach(b=>b.addEventListener('click',()=>BioAtlas.pauseAll()));
+const observer=new IntersectionObserver(entries=>{for(const e of entries){const i=+e.target.dataset.figure;if(i===1||i===2){if(!document.querySelector('#figure2').getBoundingClientRect().bottom||!clockSucc)continue;const a=$('figure2').getBoundingClientRect(),b=$('figure3').getBoundingClientRect();if((a.bottom<0||a.top>innerHeight)&&(b.bottom<0||b.top>innerHeight))clockSucc.pause()}else if(!e.isIntersecting)clocks[i].pause()}});document.querySelectorAll('.figure').forEach(e=>observer.observe(e));
+$('export').addEventListener('click',()=>{const header='model_year,richness_primary,richness_secondary,som_primary,som_secondary,gpp,respiration,nep,organic_carbon_stock';const csv=header+'\n'+Array.from({length:301},(_,year)=>{const a=metrics(year,'primary',state.climate),b=metrics(year,'secondary',state.climate),e=atEnergy(year);return[year,a.richness,b.richness,a.som,b.som,e.P,e.R,e.net,e.stock].map(v=>Number(v).toFixed(5)).join(',')}).join('\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=`演替模拟_${state.kind}_${state.climate}.csv`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+globalThis.atlasQA={clocks,state,succession,metrics,energy,atEnergy,intervention,energyCache,biomes,modelExports,chooseBiome};
+</script></body></html>

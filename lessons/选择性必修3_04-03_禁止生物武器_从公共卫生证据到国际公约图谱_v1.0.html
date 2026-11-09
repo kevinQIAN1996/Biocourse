@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>禁止生物武器｜从公共卫生证据到国际公约 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从公共卫生证据到国际公约<small>BIOSECURITY & PUBLIC HEALTH / 04.03</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 4 章 · 第 3 节</p><h1>禁止生物武器</h1><p class="subtitle">区分三类危害，读懂调查记录，再从公众保护走到国际公约。</p></div>
+<div class="intro-note"><i>BIOSECURITY & PUBLIC HEALTH</i><p>一种生物因子能引起疾病、一次事件值得调查、某种活动违反公约。各需要什么依据？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 三类危害</a><a href="#figure2">02 调查与档案</a><a href="#figure3">03 线索与响应</a><a href="#figure4">04 公约与履约</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / AGENTS & EFFECTS</p><h2 id="heading1">致病菌、病毒与生物毒素，有什么不同？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="agent"><button type="button" data-group="agent" data-value="bacterium" aria-pressed="true">致病菌</button><button type="button" data-group="agent" data-value="virus" aria-pressed="false">病毒</button><button type="button" data-group="agent" data-value="toxin" aria-pressed="false">生物毒素</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="致病菌、病毒与生物毒素，有什么不同？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>教材列举了致病菌类、病毒类和生化毒剂类。图中细菌、病毒和生物毒素分别用细胞、病毒颗粒和分子表示。病毒依赖宿主细胞复制；毒素作为物质，本身不能增殖。病原体可通过多种机制致病，例如某些细菌也会产毒。</p><p>伤害可能涉及人、动物、植物及环境，是否产生二次传播取决于因子和情境。公约第 I 条考察生物剂或毒素的种类、数量有无预防、防护或其他和平目的的正当理由，同时禁止为敌对目的或武装冲突而设计的相关武器、设备或运载工具。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 原创通用结构示意，图形大小和动画速度不表示真实尺度。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.who.int/news-room/fact-sheets/detail/deliberate-events" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://static.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.37_conv%20biological%20weapons.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / SURVEILLANCE & HISTORICAL RECORDS</p><h2 id="heading2">同一事件，病例分类和结局分别回答什么？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="record"><button type="button" data-group="record" data-value="cases" aria-pressed="true">2001 年 · 病例分类</button><button type="button" data-group="record" data-value="outcome" aria-pressed="false">2001 年 · 结局分母</button><button type="button" data-group="record" data-value="history" aria-pressed="false">历史档案 · 731 部队</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="同一事件，病例分类和结局分别回答什么？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>该调查记录 11 例吸入型（均确诊）和 11 例皮肤型（7 例确诊、4 例疑似）。5 例死亡均发生在吸入型组。5/22 是全部调查病例中的死亡比例，5/11 是吸入型调查病例中的死亡比例。两项的分子相同，分母与回答的问题不同；这些数据属于该历史事件。</p><p>中央档案馆公开的审讯记录、调查报告和官方函电，与其他档案及历史遗址相互印证，记录了侵华日军 731 部队相关细菌战罪行。历史分支使用抽象文件插图，重在史料来源、受害者处境及防止重演。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 病例取自 Jernigan 等 2002 年调查的 22 例；历史档案分面为抽象图示。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.3201/eid0810.020353" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://www.saac.gov.cn/daj/yaow/202512/a558fdda226c4bf2a3d0ae94bff618b6.shtml" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / INVESTIGATION & RESPONSE</p><h2 id="heading3">相似病例增多，哪些判断可以先做？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="signal"><button type="button" data-group="signal" data-value="alert" aria-pressed="true">异常监测</button><button type="button" data-group="signal" data-value="trace" aria-pressed="false">流行病学调查</button><button type="button" data-group="signal" data-value="verify" aria-pressed="false">多源核实</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="相似病例增多，哪些判断可以先做？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>先核对病例定义和常态基线；继续比较时间、地点、人群和共同暴露，再把流行病学、临床及专业检测结果相互核验。异常聚集可以提示调查。病因与人为故意需要不同层次的证据，核实来源时应保留自然发生、意外事件和故意事件等可能解释。</p><p>归因调查与保护公众可并行。根据风险启动报告、救治和风险沟通；怀疑故意事件时，公共卫生响应与有权部门的取证依法协调。课堂图展示判断原则与职责分工。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 左图为虚构课堂情境，符号数量不代表实测。右图依据 WHO 公共卫生资料组织。 <sup class="cites"><a href="https://www.who.int/news-room/fact-sheets/detail/deliberate-events" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://www.who.int/emergencies/outbreak-toolkit/standardized-data-collection-tools/investigating-outbreak-of-unknown-disease" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / CONVENTION & PEACEFUL USE</p><h2 id="heading4">公约禁止哪些活动，又支持哪些合作？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="law"><button type="button" data-group="law" data-value="ban" aria-pressed="true">公约禁止</button><button type="button" data-group="law" data-value="compliance" aria-pressed="false">销毁与履约</button><button type="button" data-group="law" data-value="peace" aria-pressed="false">和平合作</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="公约禁止哪些活动，又支持哪些合作？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>第 I 条禁止发展、生产、储存或以其他方式获取、保有公约所禁止的生物剂、毒素及相关武器。第 II 条涉及销毁或转用于和平目的，第 III 条涉及不转让和不协助，第 IV 条要求国内防止措施。第 X 条促进和平目的的交流与合作。</p><p>中国于 1984 年 11 月 15 日加入公约，主张全面禁止和彻底销毁生物武器，反对扩散。《中华人民共和国生物安全法》自 2021 年 4 月 15 日施行，第七章规定防范生物恐怖与生物武器威胁相关工作；此处采用 2024 年修正文本作为条文来源。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 公约条文采用中文释义；时间轴按事件顺序排列，间距不表示年数。 <sup class="cites"><a href="https://treaty.mfa.gov.cn/tykfiles/20180718/1531876082776.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://www.mfa.gov.cn/web/wjb_673085/zzjg_673183/jks_674633/zclc_674645/hwhsh_674653/200802/t20080229_7669102.shtml" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://static.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.37_conv%20biological%20weapons.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://wb.flk.npc.gov.cn/flfg/PDF/497947320c8547be92ef45d0893ae8f1.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 4 章第 3 节，生物武器类型、历史与我国立场。</span></li><li id="ref-2"><a href="https://www.who.int/news-room/fact-sheets/detail/deliberate-events" target="_blank" rel="noopener noreferrer">[2] WHO · Deliberate events ↗</a><span>危害范围、公共卫生响应与安全调查的职责。</span></li><li id="ref-3"><a href="https://doi.org/10.3201/eid0810.020353" target="_blank" rel="noopener noreferrer">[3] Jernigan et al., 2002 · Emerging Infectious Diseases ↗</a><span>2001 年炭疽事件的病例分类、定义和结局。</span></li><li id="ref-4"><a href="https://www.saac.gov.cn/daj/yaow/202512/a558fdda226c4bf2a3d0ae94bff618b6.shtml" target="_blank" rel="noopener noreferrer">[4] 中央档案馆 · 日本 731 部队罪行档案 ↗</a><span>档案类型、伯力审判背景与证据来源。</span></li><li id="ref-5"><a href="https://www.who.int/emergencies/outbreak-toolkit/standardized-data-collection-tools/investigating-outbreak-of-unknown-disease" target="_blank" rel="noopener noreferrer">[5] WHO · Stages of an outbreak investigation ↗</a><span>监测基线、病例定义、时地人调查与风险沟通。</span></li><li id="ref-6"><a href="https://treaty.mfa.gov.cn/tykfiles/20180718/1531876082776.pdf" target="_blank" rel="noopener noreferrer">[6] 外交部 · 禁止生物武器公约中文版 ↗</a><span>重点参阅第一至第四条、第十条。</span></li><li id="ref-7"><a href="https://www.mfa.gov.cn/web/wjb_673085/zzjg_673183/jks_674633/zclc_674645/hwhsh_674653/200802/t20080229_7669102.shtml" target="_blank" rel="noopener noreferrer">[7] 外交部 · 禁止生物武器公约专题 ↗</a><span>公约历程、中国加入和立场。</span></li><li id="ref-8"><a href="https://static.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.37_conv%20biological%20weapons.pdf" target="_blank" rel="noopener noreferrer">[8] 联合国 · 生物及毒素武器公约原文 ↗</a><span>一般目的标准、武器禁制与和平合作。</span></li><li id="ref-9"><a href="https://wb.flk.npc.gov.cn/flfg/PDF/497947320c8547be92ef45d0893ae8f1.pdf" target="_blank" rel="noopener noreferrer">[9] 全国人大常委会公报 · 中华人民共和国生物安全法 ↗</a><span>2024 年修正文本，第七章及施行日期。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>禁止生物武器 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">禁止生物武器 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">类型区别</th><td>致病菌有细胞结构；病毒利用宿主细胞复制；毒素是物质，自身不增殖。</td></tr><tr><th scope="row">伤害范围</th><td>可危及人、动物、植物及环境。传播性、严重程度和影响范围因病因与情境而异。</td></tr><tr><th scope="row">数据判读</th><td>先界定病例和分母，再写结论的适用对象。聚集是调查信号；故意归因需要独立证据。</td></tr><tr><th scope="row">并行响应</th><td>核查共同暴露、病因和来源的同时，按风险开展救治、报告和风险沟通。</td></tr><tr><th scope="row">公约与和平用途</th><td>禁止发展、生产和储存等武器相关活动，防止扩散，支持受规范约束的和平合作。</td></tr><tr><th scope="row">中国立场</th><td>1984 年加入公约。主张全面禁止和彻底销毁生物武器，并以国内立法落实防范与应对。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={agent:'bacterium',record:'cases',signal:'alert',law:'ban'};
+const ink=C.ink,muted='#425d63',green='#14675a',blue='#315880',red='#9c3742',gold='#8d5d24',plum='#704c87';
+const ease=(t,a,b)=>{
+  const v=clamp((t-a)/(b-a));
+  return v*v*(3-2*v);
+};
+function band(x,y,w,h,color,fill,title,lines){
+  return R(x,y,w,h,fill,'#cedbd2',11)+R(x,y,5,h,color,'none',3)+
+    txt(x+16,y+31,title,'start',ink,19,800)+
+    lines.map((s,i)=>txt(x+16,y+59+24*i,s,'start',muted,17,500)).join('');
+}
+function centeredTag(x,y,w,labelText,fill='#fff',color=ink){
+  return R(x-w/2,y,w,34,fill,'#d2ded5',7)+txt(x,y+23,labelText,'middle',color,17,750);
+}
+function traveler(x1,y1,x2,y2,t,color,r=5){
+  return E(mix(x1,x2,t),mix(y1,y2,t),r,r,color,'#fff');
+}
+function badge(x,y,n,color,active){
+  return E(x,y,18,18,active?color:'#fff',color)+txt(x,y+6,n,'middle',active?'#fff':ink,17,800);
+}
+
+const agents={
+  bacterium:{name:'致病菌',nature:'具有细胞结构',structure:'细胞包被、胞质、遗传物质',way:'条件适宜时可进行细胞分裂',effect:'感染及相应的宿主反应',title:'从细菌结构观察增殖',note:'部分致病菌也通过产生毒素造成损害。',color:blue,fill:'#e8eff7'},
+  virus:{name:'病毒',nature:'病毒颗粒，无细胞结构',structure:'遗传物质、蛋白质外壳',way:'依赖宿主细胞复制',effect:'感染及相应的宿主反应',title:'病毒复制依赖宿主细胞',note:'这里绘制通用病毒颗粒，实际结构因病毒而异。',color:plum,fill:'#f1e8f3'},
+  toxin:{name:'生物毒素',nature:'生物来源的有害物质',structure:'此处画作一个通用分子',way:'毒素自身不能增殖',effect:'干扰生理过程，造成中毒',title:'毒素通过作用于机体致害',note:'受影响的过程随毒素不同而变。图中膜作用位点为示意。',color:gold,fill:'#faf0dc'}
+};
+function bacteriumArt(x,y,s,turn=0){
+  return G(x,y,s,R(-58,-31,116,62,'#dceaf3',blue,31)+R(-52,-25,104,50,'#c1d7e9','#799fb8',25)+
+    P('M-28 6c13-19 25 12 37-4s15-14 24-7m-50 16c12 11 22-10 34-4','none',blue,3.6)+
+    many(9,i=>E(-40+i*10,Math.sin(i*2.1)*16,2,2,'#6489ac')),turn);
+}
+function virusArt(x,y,s){
+  const shell='M0-39L35-19L35 19L0 39L-35 19L-35-19Z';
+  return G(x,y,s,P(shell,'#e1d0e9',plum,2.6)+P('M0-39V-22L35-19M-35-19L0-22L35 19M-35 19L0-22V39','none','#af90bd',1.7)+
+    P('M-15 8q11-24 16-8t13-3q4-4 6 2','none',plum,3.4));
+}
+function toxinArt(x,y,s,a=0){
+  return G(x,y,s,P('M-36-13Q-41-31-20-34Q-3-53 12-37Q33-39 37-20Q55-6 38 10Q40 29 20 33Q7 48-10 34Q-28 42-36 21Q-51 11-36-13Z','#ecd6a5','#9d733a',2.5)+
+    P('M-29 5q13-16 29-5q13 5 28-13M-6-32q-2 16 7 29m-7 28q13-14 27-10','none','#a97733',3)+E(20,-15,5,4,'#f9edc9'),a);
+}
+function hostArt(x,y,s,stress){
+  return G(x,y,s,P('M-95-2Q-92-68-37-77Q21-96 67-60Q112-43 105 13Q99 72 43 80Q-12 96-61 69Q-100 51-95-2Z','#e3efe5','#7ca397',2.8)+
+    P('M-81-10Q-73-59-32-66M45-62Q84-47 90-20m-5 38q-5 34-32 47m-115-16q-11-10-15-22','none','#acc8b8',2.8)+
+    E(8,4,35,28,'#d7dfef','#859abb')+E(14,1,9,7,'#a5b4cf')+
+    P('M-43-19q8-8 17 1m-16 36q8-10 16-4m62-34q9 4 16-2m-10 44q8 2 15-4','none','#77a99b',3)+
+    O(stress,P('M-79-30q-15 16-13 42','none',red,5)+E(-75,-32,4,4,red)+E(-81,17,4,4,red)));
+}
+function agentArt(t,key,d){
+  const flow=ease(t,.2,.71),center=414;
+  const effect=ease(t,{bacterium:.48,virus:.71,toxin:.65}[key],.94);
+  let left='',right='';
+  if(key==='bacterium'){
+    left=bacteriumArt(150,309-35*effect,1.06,-14)+O(effect,bacteriumArt(150,309+46*effect,1,-14));
+    right=O(effect,E(329,295,8,8,blue,'#fff')+E(331,321,5,5,blue,'#fff'));
+  }else if(key==='virus'){
+    left=virusArt(150,309,1.09)+O(flow,virusArt(mix(195,335,flow),309,.39));
+    right=O(effect,virusArt(388,282,.28)+virusArt(436,343,.28)+virusArt(441,277,.25));
+  }else{
+    left=toxinArt(mix(150,317,flow),309,1-.57*flow,17*flow);
+    right=O(effect,P('M329 296l-9 11 8 5-9 11','none',gold,3));
+  }
+  return band(43,88,500,79,d.color,d.fill,'观察对象 · '+d.name,[d.nature])+
+    spark('M218 309H318',d.color,2.5,'7 6')+hostArt(center,311,1,effect*(key==='virus'?.7:1))+left+right+
+    (key==='toxin'?call(76,419,mix(150,317,flow),326,'毒素分子'):
+      centeredTag(150,427,135,key==='virus'?'病毒颗粒':'细菌细胞'))+centeredTag(center,427,144,'宿主细胞示意')+
+    band(43,521,500,89,d.color,'#f5f8f2',d.title,[key==='bacterium'?'分裂动画只示意细菌的增殖方式。':key==='virus'?'颗粒进入后，宿主内出现复制产物。':'同一个分子作用于机体，数量不增加。']);
+}
+function view1(t){
+  const key=state.agent,d=agents[key],step=t<.2?0:t<.55?1:2;
+  const rows=[['有什么结构？',d.structure],['能否增殖或复制？',d.way],['怎样造成伤害？',d.effect]];
+  const ledger=rows.map(([h,sub],i)=>band(624,104+i*119,523,91,i===step?d.color:'#78938b',i===step?d.fill:'#f5f8f2',h,[sub])).join('');
+  draw(1,headings('三类生物因子的作用示意','同一组问题，比较三种性质')+agentArt(t,key,d)+ledger+
+    band(624,493,523,110,green,'#edf5ed','判断公约适用还要问什么？',['生物剂或毒素的种类、数量和目的。','相关武器、设备等的设计目的。']));
+  say(1,'MECHANISM / 0'+(step+1),rows[step][0],rows[step][1],d.title,d.note);
+}
+
+const anthrax=[
+  {label:'吸入型',confirmed:11,suspected:0,deaths:5},
+  {label:'皮肤型',confirmed:7,suspected:4,deaths:0}
+];
+const groupTotal=group=>group.confirmed+group.suspected;
+const totalCases=anthrax.reduce((sum,g)=>sum+groupTotal(g),0);
+const totalDeaths=anthrax.reduce((sum,g)=>sum+g.deaths,0);
+const denominators=[totalCases,groupTotal(anthrax[0])];
+const deathShare=n=>100*totalDeaths/n;
+function patient(x,y,color,death){
+  return death?P(`M${x} ${y-10}l10 10-10 10-10-10Z`,color,'#fff',1.3):E(x,y,8.7,8.7,color,'#fff');
+}
+function casesArt(t,mode){
+  const outcome=mode==='outcome',progress=ease(t,.09,.92);
+  return band(43,86,500,76,blue,'#eaf1f6','2001 年美国炭疽事件',['此调查记录 '+totalCases+' 例 · 计数取自论文'])+
+    anthrax.map((g,k)=>{
+      const y=190+k*149;
+      return R(43,y,500,122,'#f4f7f2','#cfddd2',11)+
+        txt(61,y+31,g.label+' · '+groupTotal(g)+' 例','start',ink,19,800)+
+        many(groupTotal(g),i=>{
+          const color=outcome?(i<g.deaths?red:'#5d9286'):(i<g.confirmed?blue:'#b68d4c');
+          return O(.28+.72*ease(progress,i*.038+k*.08,i*.038+k*.08+.22),patient(71+i*37,y+63,color,outcome&&i<g.deaths));
+        })+
+        txt(61,y+101,outcome?'死亡 '+g.deaths+' 例 · 其余 '+(groupTotal(g)-g.deaths)+' 例':'确诊 '+g.confirmed+' 例 · 疑似 '+g.suspected+' 例','start',muted,17);
+    }).join('')+
+    band(43,510,500,102,outcome?red:blue,outcome?'#faeded':'#edf3f7',outcome?'菱形标出死亡记录':'每个圆点对应一例调查病例',
+      [outcome?'5 例死亡均属吸入型。':'皮肤型组含 4 例疑似病例。',outcome?'本图按组汇总，无病例个体顺序。':'两组病例数恰好相同。']);
+}
+function casePlot(outcome,t){
+  const p=outcome?plot('bio-deaths',685,164,434,252,[0,1,2,3],[0,10,20,30,40,50,60],
+    '同一分子 · 比较两个分母','','事件内死亡比例 (%)',()=>null):
+    plot('bio-cases',685,164,434,252,[0,1,2,3],[0,4,8,12,16],
+      '按临床类型与病例定义分组','','调查病例 (例)',()=>null);
+  const series=outcome?denominators.map(n=>({name:totalDeaths+' / '+n,lo:deathShare(n),hi:0})):
+    anthrax.map(g=>({name:g.label,lo:g.confirmed,hi:g.suspected}));
+  const columns=series.map(({name,lo,hi},i)=>{
+    const x=p.X(i+1),base=p.Y(0),low=p.Y(lo),top=p.Y(lo+hi);
+    return R(x-35,low,70,base-low,outcome?(i===0?'#b8848d':red):blue,'none',3)+
+      (hi?R(x-35,top,70,low-top,'#b68d4c','none',3):'')+
+      txt(x,top-12,outcome?(lo+hi).toFixed(1)+'%':String(lo+hi),'middle',ink,18,800)+
+      txt(x,447,name,'middle',ink,17,750)+
+      (outcome?txt(x,471,i===0?'全部调查病例':'吸入型病例','middle',muted,16):'')+
+      (outcome?O(ease(t,.4+i*.13,.8+i*.13),E(x,top,5,5,'#f4c998','#fff')):'');
+  }).join('');
+  const key=outcome?band(624,493,524,82,red,'#f9eded','分子相同 · 问题随分母改变',['两个结果都限定在这一次事件。']):
+    R(635,482,14,14,blue,'none',3)+txt(657,496,'确诊','start',ink,17,700)+
+    R(729,482,14,14,'#b68d4c','none',3)+txt(751,496,'疑似','start',ink,17,700)+
+    txt(635,546,'吸入型 11 例均确诊。','start',muted,17);
+  return p.svg+columns+key+rScript(635,611,[outcome?'ggplot(outcomes, aes(group, pct)) + geom_col()':'ggplot(cases, aes(type, n, fill = status)) + geom_col()']);
+}
+function docArt(x,y,s,color,angle=0){
+  return G(x,y,s,P('M-34-46H17L34-29V46H-34Z','#fffcf2',color,2.6)+P('M17-46v17h17','none',color,2.5)+
+    R(-23,-26,26,8,color,'none',2)+P('M-23-7h45m-45 12h44m-44 11h39m-39 11h45','none','#a3ac9d',2.5),angle);
+}
+function historyArt(t){
+  const f=ease(t,.16,.84);
+  const tags=[['审讯记录',blue],['调查报告',green],['官方函电',gold]];
+  const art=tags.map(([name,c],i)=>{
+    const x=117+i*177,y=mix(255,285,f);
+    return docArt(x,y,1.24,c,(i-1)*7*(1-f))+
+      centeredTag(x,356,115,name,'#fff',c)+spark(`M${x} 402Q${x} 441 293 471`,c,2,'6 5');
+  }).join('');
+  return band(43,86,500,79,gold,'#f9f0e0','侵华日军 731 部队相关档案',['中央档案馆公开解密材料'])+
+    art+O(f,traveler(117,405,293,471,f,blue))+O(f,traveler(471,405,293,471,f,gold))+
+    band(43,512,500,94,gold,'#faf2e6','档案可相互印证',['图形代表文献类别，按公开档案说明绘制。']);
+}
+function historyLedger(t){
+  const rows=[['追溯材料来源','记录形成于何时，由谁形成？'],['对照独立材料','将审讯、调查与相关遗址档案对照。'],['辨认所支持的结论','用材料说明历史伤害，并关注受害者。']];
+  return rows.map(([h,s],i)=>{
+    const y=111+i*148,on=i<=Math.floor(t*3);
+    return badge(653,y+43,i+1,gold,on)+band(686,y,461,91,on?gold:'#82988a',on?'#f9f0e0':'#f5f8f2',h,[s]);
+  }).join('')+txt(626,615,'史料阅读关注来源、内容与证据之间的关系。','start',muted,17);
+}
+function view2(t){
+  const key=state.record;
+  if(key==='history'){
+    draw(2,headings('沿来源阅读历史档案','三步核对档案所支持的判断')+historyArt(t)+historyLedger(t));
+    say(2,'ARCHIVE / 历史档案','多种材料相互印证','对照档案来源和形成背景，了解侵华日军细菌战给受害者造成的伤害。','追溯来源 · 核对史料 · 尊重受害者','档案分支呈现材料的类型和相互关系。');
+    return;
+  }
+  const outcome=key==='outcome';
+  draw(2,headings('逐组点亮调查记录',outcome?'分子相同，分母不同':'类型和确诊状态分开读')+casesArt(t,key)+casePlot(outcome,t));
+  say(2,'JERNIGAN ET AL. / '+(outcome?'结局':'病例'),'比较同一事件的两种读法',outcome?'先说清是按全部调查病例，还是只按吸入型病例计算。':'临床类型与病例是否确诊，是两个不同的分类维度。',
+    outcome?'全部 5 / 22 · 吸入型 5 / 11':'22 例 · 吸入型 11 · 皮肤型 11',
+    '这是该次事件的调查记录。两个比例均受对应分母和事件条件限制。');
+}
+
+const signals={
+  alert:{name:'发现异常信号',title:'与平时的报告基线比较',result:'相似病例集中，启动核实',note:'报告制度或就诊行为变化也可改变表面计数。',left:'虚构情境 · 医疗机构报告相似病例增多',steps:['了解常态基线','核对报告是否异常','启动公共卫生调查']},
+  trace:{name:'流行病学调查',title:'用统一病例定义核对记录',result:'比较时、地、人和共同暴露',note:'发现可能的共同暴露，可形成有待检验的假设。',left:'调查记录 · 同一病例定义',steps:['确定调查对象','比较时间、地点与人群','追踪共同暴露线索']},
+  verify:{name:'多源证据核实',title:'分开核对病因和故意归因',result:'病因证据与故意归因分开',note:'如有依据怀疑故意事件，依法由有权部门调查。',left:'证据对照 · 流行病学与专业检测',steps:['结合病例与专业检测','审查线索是否彼此一致','另行核实故意归因证据']}
+};
+function facility(x,y,s){
+  return G(x,y,s,R(-43,-30,86,64,'#e7efe9','#789b8e',6)+R(-52,-37,104,12,'#6e9c91','#5b867b',4)+
+    R(-10,6,20,28,'#bdd2cc','#789b8e',3)+R(-30,-13,15,14,'#bdd2cc','#789b8e',3)+R(15,-13,15,14,'#bdd2cc','#789b8e',3)+
+    P('M0-18v16m-8-8h16','none',green,4));
+}
+function recordsArt(x,y,s,key){
+  return G(x,y,s,R(-60,-69,120,138,'#fff','#799d95',8)+R(-23,-76,46,15,'#b2cbbf','#799d95',4)+
+    R(-45,-49,74,9,key,'none',3)+many(3,i=>R(-44,-24+i*24,12,12,'#e3eee9',key,3)+P(`M-21 ${-18+i*24}h59`,'none','#9db2a8',3)));
+}
+function evidenceArt(t,mode,d){
+  const f=ease(t,.10,.87);
+  let scene;
+  if(mode==='alert'){
+    const curve1='M79 411Q144 393 188 412T291 412T415 405T511 412';
+    const curve2='M79 411Q144 393 188 412T291 412Q345 417 385 391T511 373';
+    scene=facility(153,266,1.05)+facility(436,266,1.05)+
+      spark('M218 259H365',blue,2.2,'6 5')+traveler(218,259,365,259,f,blue,6)+
+      centeredTag(153,319,152,'医院汇集报告')+centeredTag(436,319,152,'监测发现信号')+
+      spark(curve1,'#829b91',3,'6 5')+O(f,spark(curve2,gold,3.2))+
+      centeredTag(137,447,125,'常态基线')+centeredTag(431,447,148,'报告增多示意','#fff5e7',gold);
+  }else if(mode==='trace'){
+    scene=recordsArt(115,319,.75,blue)+recordsArt(293,319,.75,blue)+recordsArt(469,319,.75,blue)+
+      arrow('M170 319h65',blue)+arrow('M348 319h62',blue)+
+      traveler(170,319,235,319,f,blue)+traveler(348,319,410,319,f,blue)+
+      centeredTag(115,419,125,'时间分布')+centeredTag(293,419,125,'地点分布')+centeredTag(469,419,125,'人群与暴露');
+  }else{
+    scene=recordsArt(127,291,.78,blue)+docArt(460,291,1.17,plum)+
+      spark('M185 296Q229 310 272 357',blue,3)+spark('M404 296Q363 306 316 357',plum,3)+
+      traveler(185,296,272,357,f,blue)+traveler(404,296,316,357,f,plum)+
+      O(.4+.6*f,E(294,375,31,31,'#e4f2e8',green)+P('M281 375l9 10 18-20','none',green,4))+
+      centeredTag(127,377,130,'流调记录')+centeredTag(460,377,130,'专业检测')+centeredTag(294,434,132,'交叉核验');
+  }
+  return band(43,86,500,78,blue,'#edf3f7',d.left,['课堂情境 · 证据类型与流程示意'])+
+    scene+band(43,524,500,90,blue,'#edf3f7',d.title,[mode==='verify'?'核对病因后，故意归因仍需独立证据。':'每一步只支持与当前资料相符的判断。']);
+}
+function responseArt(t,d){
+  const step=Math.min(2,Math.floor(t*3));
+  const rows=d.steps.map((s,i)=>{
+    const y=156+i*68,on=step===i;
+    return badge(655,y+20,i+1,blue,on)+R(688,y,440,47,on?'#e9f0f7':'#f5f8f2','#ccd9d1',8)+
+      txt(706,y+31,s,'start',ink,18,on?800:600);
+  }).join('');
+  return band(624,87,523,55,blue,'#edf3f7','调查线 · 归因随证据推进',[])+rows+
+    band(624,393,523,82,green,'#e8f3e9','保护线 · 可按风险同步启动',['报告、救治和可信的风险沟通。'])+
+    P('M660 500H1094','none','#a9c5b5',4)+E(660,500,5,5,green)+E(1094,500,5,5,green)+traveler(660,500,1094,500,t,green,7)+
+    band(624,534,523,86,gold,'#faf0df','两条工作线可以同时进行',['保护措施的启动无需等待故意归因。']);
+}
+function view3(t){
+  const key=state.signal,d=signals[key];
+  draw(3,headings('从信号到证据的课堂情境','归因调查与公众保护并行')+evidenceArt(t,key,d)+responseArt(t,d));
+  say(3,'PUBLIC HEALTH / '+d.name,d.title,d.steps[Math.min(2,Math.floor(t*3))],d.result,d.note);
+}
+
+const milestones=[['1972.04.10','公约开放签署'],['1975.03.26','公约生效'],['1984.11.15','中国加入公约'],['2021.04.15','中国《生物安全法》施行']];
+const laws={
+  ban:{article:'第 I 条',name:'公约禁止',heading:'识别武器相关活动',lines:['核对生物剂、毒素的种类和数量有无和平用途依据。','禁止发展、生产、储存或获取、保有受禁物项。','禁止为敌对目的或武装冲突设计的相关武器。'],color:red,fill:'#f8ecee',result:'以敌对目的为指向的武器活动属于禁止范围。',note:'使用生物武器也受到禁止。教材强调全面禁止和彻底销毁。'},
+  compliance:{article:'第 II–IV 条',name:'销毁与履约',heading:'把国际义务落实到行动',lines:['按公约销毁相关物项，或转用于和平目的。','禁止转让受禁物项，禁止协助他方取得。','采取必要的国内措施，防止相关活动。'],color:blue,fill:'#ecf1f7',result:'销毁、反扩散和国内措施是不同的履约环节。',note:'中国《生物安全法》第七章涉及防范、监测及应对。'},
+  peace:{article:'第 X 条',name:'和平合作',heading:'依法推进和平目的交流与合作',lines:['缔约国可在和平目的下开展科学交流。','疾病预防、疫苗研发等可属于和平利用。','有关活动仍受生物安全和相关规范约束。'],color:green,fill:'#eaf3e9',result:'公约支持和平目的的科学交流与合作。',note:'疫苗研发的正当用途与为武器目的开展的活动应分别判断。'}
+};
+function treatyTimeline(t){
+  const y0=130,dist=119,active=Math.min(3,Math.floor(t*4));
+  return P(`M79 ${y0}v${dist*3}`,'none','#b5c9bf',4)+P(`M79 ${y0}v${dist*3*t}`,'none',green,4)+
+    milestones.map(([date,event],i)=>{
+      const y=y0+dist*i,on=active===i;
+      return E(79,y,10,10,on?green:'#fff',green)+R(110,y-37,419,76,on?'#e6f2e9':'#f7f9f4','#cadbd1',9)+
+        txt(128,y-7,date,'start',green,19,800)+txt(128,y+21,event,'start',ink,18,on?800:650);
+    }).join('')+txt(52,621,'按事件排序，节点间距不表示实际年数。','start',muted,17);
+}
+function treatyClauses(t,d){
+  const step=Math.min(2,Math.floor(t*3));
+  return docArt(680,146,.72,d.color)+band(730,98,417,88,d.color,d.fill,d.article,[d.heading])+
+    d.lines.map((s,i)=>{
+      const y=212+i*71,on=step===i;
+      return badge(652,y+23,i+1,d.color,on)+R(683,y,464,49,on?d.fill:'#f6f8f2','#cbdad1',7)+
+        txt(696,y+31,s,'start',ink,17,on?800:550);
+    }).join('')+
+    band(624,468,523,67,green,'#e8f3e9','受监管的疫苗研发 · 和平用途',[])+
+    band(624,549,523,67,red,'#f8ecee','以发展生物武器为目的的活动 · 禁止',[]);
+}
+function view4(t){
+  const d=laws[state.law];
+  draw(4,headings('从开放签署到中国履约','用条款核对目的和义务')+treatyTimeline(t)+treatyClauses(t,d));
+  say(4,'BWC / '+d.article,d.heading,d.lines[Math.min(2,Math.floor(t*3))],d.result,d.note);
+}
+
+const views=[view1,view2,view3,view4],durations=[11,11,10,11],initialTimes=[.22,.6,0,.2];
+function change(i,key,value){state[key]=value;clocks[i].seek(0)}
+const groups={agent:v=>change(0,'agent',v),record:v=>change(1,'record',v),signal:v=>change(2,'signal',v),law:v=>change(3,'law',v)};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

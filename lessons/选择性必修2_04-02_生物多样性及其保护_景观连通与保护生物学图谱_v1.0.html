@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>生物多样性及其保护｜景观连通与保护生物学图谱 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>景观连通与保护生物学图谱<small>CONSERVATION BIOLOGY / 04.02</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修二 / 第 4 章 · 第 2 节</p><h1>生物多样性<em>及其保护</em></h1><p class="subtitle">给五个案例归类，读懂红树林的生态服务，再为被道路分开的森林设计通道。</p></div>
+<div class="intro-note"><i>CONSERVATION BIOLOGY</i><p>你要保护的是等位基因、物种，还是支持它们的整个生态系统？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 多样性三层</a><a href="#figure2">02 价值辨析</a><a href="#figure3">03 碎片化与廊道</a><a href="#figure4">04 保护与利用</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / LEVELS / COEVOLUTION</p><h2 id="heading1">五份生态档案，应该放在哪一层？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="case"><button type="button" data-group="case" data-value="rice" aria-pressed="true">水稻不同品种</button><button type="button" data-group="case" data-value="community" aria-pressed="false">神农架多物种</button><button type="button" data-group="case" data-value="biomes" aria-pressed="false">森林、草原与湿地</button><button type="button" data-group="case" data-value="dogs" aria-pressed="false">同种犬不同品种</button><button type="button" data-group="case" data-value="pair" aria-pressed="false">传粉者与长筒花</button></div></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="五份生态档案，应该放在哪一层？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>遗传多样性体现在同一物种内的遗传差异，分子基础包括 DNA 序列差异，未必都表现为蛋白质差异。同一物种的不同品种归入遗传层次，题目中的野生近缘种需要按给定物种身份判断。</p><p>示意 Hₑ 为期望杂合度。群体遗传多样性与抗病风险有关，但实际结果取决于具体抗病等位基因、病原体和环境。回归的 95% 带使用 t 临界值计算均值置信区间。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 右图种群点为模拟样本，回归线及带由固定点集计算。置信带针对线性模型均值。 <sup class="cites"><a href="https://doi.org/10.1111/j.1558-5646.1964.tb01674.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1016/j.biocon.2005.05.002" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / ECOSYSTEM SERVICES / VALUATION</p><h2 id="heading2">一片湿地的价值，哪些没有出现在交易单里？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="value"><button type="button" data-group="value" data-value="direct" aria-pressed="false">直接 · 产品、科研与观赏</button><button type="button" data-group="value" data-value="indirect" aria-pressed="true">间接 · 生态功能</button><button type="button" data-group="value" data-value="potential" aria-pressed="false">潜在 · 尚未发现用途</button></div><div class="segmented" role="group" aria-label="discovery"><button type="button" data-group="discovery" data-value="unknown" aria-pressed="true">未知用途</button><button type="button" data-group="discovery" data-value="known" aria-pressed="false">模拟发现候选药物</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="一片湿地的价值，哪些没有出现在交易单里？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>两组分别为干扰调节与养分循环的已列数值之和，以及食物生产与原材料之和。原表空白表示未列估值，不能解释为零。各条只代表选定项目，不涵盖观鸟、科研等非商品直接价值，也不应用于当前单个湿地定价。</p><div class="table-scroll"><table><caption>Costanza 等表 2 摘列</caption><thead><tr><th>生态系统</th><th>干扰调节</th><th>养分循环</th><th>食物生产</th><th>原材料</th></tr></thead><tbody id="value-table"></tbody></table></div></details>
+<p class="fig-caption"><b>Figure 2.</b> Costanza 1997 表 2 历史估值。仅比较所选间接服务与物质产品项目，统计单位为 1994 年美元/公顷/年。 <sup class="cites"><a href="https://doi.org/10.1038/387253a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1038/nm.2471" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / LANDSCAPE / GENE FLOW</p><h2 id="heading3">道路还在，生态廊道能改变什么？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="landscape"><button type="button" data-group="landscape" data-value="continuous" aria-pressed="false">A · 连续栖息地</button><button type="button" data-group="landscape" data-value="isolated" aria-pressed="false">B · 道路隔离</button><button type="button" data-group="landscape" data-value="corridor" aria-pressed="true">C · 增设生态廊道</button></div><div class="variables"><label class="variable"><span>保留栖息地面积</span><output id="out-area" for="area">10</output><input id="area" data-input="area" type="range" min="1" max="100" step="1" value="10"></label><label class="variable"><span>追踪代数</span><output id="out-generation" for="generation">26</output><input id="generation" data-input="generation" type="range" min="0" max="50" step="1" value="26"></label></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="道路还在，生态廊道能改变什么？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>面积模型 S/S₀=(A/A₀)^z。主线 z=0.30，带的边界为 z=0.20 和 0.35，表示参数敏感性，非置信区间。面积剩 10% 时，主模型的丰富度约剩 50.1%，实际灭绝风险还取决于景观与时间。</p><p>漂变期望 H(t+1)=H(t)[1−1/(2Ne)]。初始 H=0.76，大种群 Ne=240，小种群 Ne=18。廊道从第 21 代起每代将 10% 权重赋予迁入来源 H=0.78，作为补充遗传变异的简化情景。粒子颜色数量只做直观提示。</p><p>跨斑块移动与基因流分别需要移动、繁殖证据。廊道荟萃分析约 50% 的提升针对移动，不能直接套为基因交流频率、遗传多样性或 K 值的升幅。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 秦岭意象为原创示意。面积和杂合度是两个独立教学模型，读数不用于预测秦岭大熊猫。 <sup class="cites"><a href="https://doi.org/10.1515/9781400881376" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a> <a href="https://doi.org/10.1126/sciadv.1500052" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://doi.org/10.1111/j.1523-1739.2010.01450.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1038/nature09985" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / CONSERVATION / MANAGEMENT</p><h2 id="heading4">原地保护、易地保种与合理利用，怎样组合？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="action"><button type="button" data-group="action" data-value="site" aria-pressed="true">就地保护</button><button type="button" data-group="action" data-value="ex" aria-pressed="false">易地保护</button><button type="button" data-group="action" data-value="bank" aria-pressed="false">种质保存与技术</button><button type="button" data-group="action" data-value="policy" aria-pressed="false">立法与合理利用</button></div><div class="variables"><label class="variable"><span>干扰或利用强度（情景）</span><output id="out-disturbance" for="disturbance">40</output><input id="disturbance" data-input="disturbance" type="range" min="0" max="100" step="1" value="40"></label></div></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="原地保护、易地保种与合理利用，怎样组合？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>就地保护优先保留物种、栖息地及种间关系，易地保护和种质库为补充。保存材料还需评估活力、遗传代表性和回归自然的条件。管理应根据物种、历史干扰和风险监测来制定。</p><p>中度干扰假说描述特定条件下可能出现的中间峰值。群落也可单调下降。不能据一条假设曲线推断任何保护区都适宜放牧或开发。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 两条响应曲线均为假设示意，展示同一强度可在不同群落产生不同结果。 <sup class="cites"><a href="https://doi.org/10.1126/science.199.4335.1302" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://doi.org/10.1111/j.1461-0248.2007.01149.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://doi.org/10.1111/j.1558-5646.1964.tb01674.x" target="_blank" rel="noopener noreferrer">[1] Ehrlich &amp; Raven, 1964 · Evolution ↗</a><span>植物防御与植食性昆虫协同进化的经典研究。</span></li><li id="ref-2"><a href="https://doi.org/10.1016/j.biocon.2005.05.002" target="_blank" rel="noopener noreferrer">[2] Frankham, 2005 · Biological Conservation ↗</a><span>综述小种群遗传多样性丧失、近交和灭绝风险。</span></li><li id="ref-3"><a href="https://doi.org/10.1038/387253a0" target="_blank" rel="noopener noreferrer">[3] Costanza et al., 1997 · Nature ↗</a><span>表 2 提供生态系统服务历史估值及数据口径。</span></li><li id="ref-4"><a href="https://doi.org/10.1038/nm.2471" target="_blank" rel="noopener noreferrer">[4] Tu, 2011 · Nature Medicine ↗</a><span>青蒿素发现过程及其抗疟应用。</span></li><li id="ref-5"><a href="https://doi.org/10.1515/9781400881376" target="_blank" rel="noopener noreferrer">[5] MacArthur &amp; Wilson, 1967 · Princeton University Press ↗</a><span>岛屿生物地理学，物种数、面积与迁入的理论背景。</span></li><li id="ref-6"><a href="https://doi.org/10.1126/sciadv.1500052" target="_blank" rel="noopener noreferrer">[6] Haddad et al., 2015 · Science Advances ↗</a><span>跨生态系统长期碎片化实验的综合研究。</span></li><li id="ref-7"><a href="https://doi.org/10.1111/j.1523-1739.2010.01450.x" target="_blank" rel="noopener noreferrer">[7] Gilbert-Norton et al., 2010 · Conservation Biology ↗</a><span>78 个实验的荟萃分析，廊道提高斑块间移动约 50%。</span></li><li id="ref-8"><a href="https://doi.org/10.1126/science.199.4335.1302" target="_blank" rel="noopener noreferrer">[8] Connell, 1978 · Science ↗</a><span>热带森林和珊瑚礁中度干扰假说的经典来源。</span></li><li id="ref-9"><a href="https://doi.org/10.1111/j.1461-0248.2007.01149.x" target="_blank" rel="noopener noreferrer">[9] Haddad et al., 2008 · Ecology Letters ↗</a><span>研究干扰、生产力和物种特征，说明响应依情境变化。</span></li><li id="ref-10"><a href="https://doi.org/10.1038/nature09985" target="_blank" rel="noopener noreferrer">[10] He &amp; Hubbell, 2011 · Nature ↗</a><span>讨论以物种—面积关系反推灭绝风险的局限。</span></li><li id="ref-11"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer">[11] 人民教育出版社 · 选择性必修 2《生物与环境》 ↗</a><span>第 4 章第 2 节。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>生物多样性及其保护 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">生物多样性及其保护 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">三层次</th><td>同种个体或品种的遗传差异属于遗传层次，区域内不同物种属于物种层次，不同类型的生态系统属于生态系统层次。</td></tr><tr><th scope="row">协同进化</th><td>生物之间、生物与非生物环境之间的相互影响推动演化。具体互作中的协同进化需要相互选择证据。</td></tr><tr><th scope="row">直接价值</th><td>食药工业原料等实用价值，以及科研、观赏、仿生和文学艺术等用途。</td></tr><tr><th scope="row">间接与潜在价值</th><td>净水、消浪、水源涵养、调节气候属于生态功能，体现间接价值。尚未了解的用途属于潜在价值。</td></tr><tr><th scope="row">碎片化因果链</th><td>栖息地斑块缩小或连通性降低 → 个体迁移受限 → 小种群基因流减弱、漂变与近交风险增大。</td></tr><tr><th scope="row">廊道大题句式</th><td>连接破碎斑块，促进个体迁移和不同斑块间交配，增加基因交流，有利于维持种群遗传多样性。实际效果取决于利用率和生境质量。</td></tr><tr><th scope="row">保护措施</th><td>优先就地保护生态系统与种间关系。以易地繁育和种质资源保存补充，结合立法、执法和监测。</td></tr><tr><th scope="row">利用边界</th><td>合理利用取决于承载能力和保护目标。中度干扰峰值是可能的情景，管理应按证据决定。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={case:'rice',value:'indirect',discovery:'unknown',landscape:'corridor',area:10,generation:26,disturbance:40,action:'site'};
+const cases={
+  rice:[0,'同一物种的不同水稻品种','杂交稻与其他同种栽培稻可以具有不同的等位基因组合。题目若给出野生近缘种，要根据物种身份另判。'],
+  community:[1,'神农架的不同物种','金丝猴、珙桐和冷杉属于不同物种。这里比较同一群落中的物种构成。'],
+  biomes:[2,'森林、草原与湿地','比较不同的生物群落与相应的非生物环境，属于生态系统层次。'],
+  dogs:[0,'同种犬的不同品种','同种犬可以在体型、毛色和遗传组成上明显不同。'],
+  pair:[3,'传粉者与长筒花','形态匹配可以提出协同进化假说。要检验这种解释，还需证明彼此造成选择压力并推动对方的遗传改变。']
+};
+const levels=['遗传多样性','物种多样性','生态系统多样性','协同进化机制'];
+function dna(x,y,s=1){
+  const a=Array.from({length:49},(_,i)=>({x:i*3.8,y:Math.sin(i/5)*17}));
+  return G(x,y,s,spark(linePath(a,v=>v,v=>v),C.blue,3.8)+spark(linePath(a,v=>v,v=>-v),C.red,3.8)+many(13,i=>{
+    const d=a[i*4];return P(`M${d.x} ${d.y}V${-d.y}`,'none',palette[i%6],2.2);
+  }));
+}
+const samples=[[.12,30],[.19,36],[.25,34],[.30,47],[.33,42],[.39,44],[.44,57],[.48,51],[.52,63],[.59,62],[.61,58],[.65,72],[.71,67],[.75,82],[.80,76]];
+function regression(data){
+  const n=data.length,avg=i=>data.reduce((sum,d)=>sum+d[i],0)/n;
+  const xMean=avg(0),yMean=avg(1);
+  const xx=data.reduce((sum,[x])=>sum+(x-xMean)**2,0);
+  const slope=data.reduce((sum,[x,y])=>sum+(x-xMean)*(y-yMean),0)/xx;
+  const predict=x=>yMean+slope*(x-xMean);
+  const sd=Math.sqrt(data.reduce((sum,[x,y])=>sum+(y-predict(x))**2,0)/(n-2));
+  return Array.from({length:61},(_,i)=>{
+    const x=.12+.68*i/60,y=predict(x),ci=2.1604*sd*Math.sqrt(1/n+(x-xMean)**2/xx);
+    return{x,y,lo:y-ci,hi:y+ci};
+  });
+}
+const fit=regression(samples);
+function lily(x,y,s=1){
+  return G(x,y,s,P('M-4 39Q-15 6 1-20M-5 23Q-33 1-34 21Q-17 31-5 23M-5 31Q19 9 23 21Q14 37-5 31','none','#438267',3)+P('M0-7Q-17-25-7-40Q3-31 9-37Q27-23 0-7Z','#efb58e','#ae624e',2)+P('M0-11L4-30','none','#79553e',1.8));
+}
+function bird(x,y,s=1){
+  return G(x,y,s,P('M-28 10Q-15 1-9-4Q-18-21 0-25Q19-29 21-13L48-9L21-5Q22 11 4 16L-16 13Z','#f2ede1','#48676f',2)+P('M-7 16L-14 35M4 16L1 35','none','#ba644e',2)+E(12,-17,3,3,C.ink));
+}
+function renderLevels(){
+  const [active,title,body]=cases[state.case],x=285,y=300;
+  let scene=E(x,y,211,211,active===2?'#bddbe3':'#edf3e8',active===2?C.blue:'#b6ceba')+
+    E(x,y,156,156,active===1?'#baddcd':'#dfeee1',active===1?C.green:'#a9c7b7')+
+    E(x,y,96,96,active===0?'#fff0d2':'#fff9ec',active===0?sand:'#d2bd98')+
+    dna(222,310,.67)+txt(x,353,'A / a     B / b','middle',C.ink,19,760)+
+    tree(190,249,.83)+bird(381,233,.75)+panda(190,399,1)+
+    P('M380 353Q403 335 427 352L443 369H373Z','#b2b788','#63866e',1.6)+
+    P('M378 383Q397 371 417 382M383 393Q401 381 420 393','none',C.cyan,3)+
+    txt(x,119,levels[2],'middle',C.ink,19,750)+txt(x,174,levels[1],'middle',C.ink,19,750)+txt(x,249,levels[0],'middle',C.ink,19,750);
+  if(active===2)scene+=tree(143,437,.54)+G(265,491,.58,grass(0,0,1))+
+    P('M337 456q23 -10 39 0t39 0m-69 12q21 -8 38 0','none',C.blue,2.5)+
+    txt(147,467,'森林','middle',C.ink,17,700)+txt(264,513,'草原','middle',C.ink,17,700)+txt(389,498,'湿地','middle',C.ink,17,700);
+  if(active===3)scene+=E(x,y,218,218,'none',purple)+spark('M103 169Q285 30 465 168',purple,4,'8 6')+lily(458,461,.9)+bird(391,479,.68);
+  scene+=tile(43,536,499,75,levels[active],['等位基因与 DNA 序列','群落物种构成','景观中的不同生态系统','互作双方施加选择压力'][active],[sand,C.green,C.blue,purple][active]);
+  const p=plot('reg',646,151,352,353,[0,.2,.4,.6,.8,1],[0,25,50,75,100],'虚拟种群 · 线性模型','期望杂合度 Hₑ','病原暴露后存活率 / %');
+  const graph=p.svg+p.clip(ribbon(fit,p.X,p.Y,C.cyan,.32))+line(fit,p,C.blue,3)+samples.map(([x,y])=>chartDot(p,x,y,C.blue,5.5)).join('')+
+    legend(1018,181,'模型元素',[['模拟样本',C.blue],['拟合均值',C.blue,'line'],['95% 置信带',C.cyan,'band']])+
+    rScript(629,590,['ggplot(pop, aes(He, survival)) + geom_point()',
+      '+ geom_smooth(method = "lm", se = TRUE)']);
+  draw(1,headings('三层多样性嵌套关系','杂合度与存活 · 教学模型')+scene+graph);
+  say(1,'CLASSIFY / EXPLAIN',title,body,levels[active],'右图展示一种可能的正相关。抗病结果还取决于具体基因型与病原体。');
+}
+
+const services=[['湿地',4539,4177,256,106],['热带森林',5,922,32,315],['珊瑚礁',2750,58,220,27],['河口',567,21100,521,25]];
+const valueText={
+  direct:['直接价值','医药、食物和原材料，以及科研、仿生、旅游观赏和文艺创作，都是已被直接使用的价值。','青蒿素 · 科研 · 观赏'],
+  indirect:['间接价值','红树林根系和地上结构可减缓波浪。湿地植被与微生物能截留或转化氮磷，参与碳循环。','消浪护岸 · 净水 · 调节气候'],
+  potential:['潜在价值','未来可能发现目前尚未知的用途。','野草 A · 用途尚未发现']
+};
+function mangrove(x,y,s=1){
+  return G(x,y,s,P('M-9 13L-4-73H8L13 12Z','#a48669','#765b47',2)+
+    many(7,i=>spark(`M${i-2} -20Q${(i-3)*7} ${i%2?-9:6} ${(i-3)*11} ${12+i%3*4}`,'#795c48',3.5))+
+    P('M-50-65Q-61-87-35-94Q-21-125 3-105Q26-118 40-97Q62-99 62-77Q50-59 26-61Q-18-48-50-65Z','#7fad7d','#4c7b60',2)+
+    many(10,i=>leaf(-42+i*9,-76-(i*7)%23,.3,-70+i*12,'#96b984')));
+}
+function artemisia(x,y,s=1){
+  return G(x,y,s,P('M0 60Q-4 13 2-81M-1 47L-49 8M-2 27L38-5M-2 2L-35-27M2-22L33-58','none','#567852',3)+
+    many(20,i=>leaf(i%2===0?-8-(i*13)%41:8+(i*17)%35,-76+i*6,.36,i%2===0?-56:52,'#84a971'))+
+    many(6,i=>E(-19+i*8,-76+(i*11)%28,3.6,3.6,'#e0bb60','#947949')));
+}
+function wetlandArt(t){
+  const m=state.value,known=state.discovery==='known';
+  let s=R(43,90,499,400,'#e9f3ee','#bdcfc4',10)+
+    P('M43 269Q120 243 178 253T315 221T542 232V481H43Z','url(#water)','#84afb4',2)+
+    P('M44 369Q159 398 253 313T541 315V480H44Z','url(#soil)','#9b9071',2)+
+    P('M44 366Q164 399 258 307T541 310L541 335Q397 309 258 326T44 395Z','#88ad7d','#6a956c',1.5)+
+    mangrove(327,325,1.38)+mangrove(419,308,1.15)+mangrove(493,311,.87)+
+    fishArt(137,335,.8)+fishArt(212,361,.48,'#e8be78');
+  if(m==='indirect'){
+    s+=many(4,i=>spark(`M${60+i*34} ${265+i*16}q22 -16 45 0t45 0`,'#418cab',3))+
+      pulse([[72,307],[162,308],[219,311],[290,318]],t,C.cyan,8)+
+      call(58,110,327,319,'根系减弱波浪','湿地截留或转化营养盐');
+  }else if(m==='direct'){
+    s+=R(56,115,171,159,'#fffcf4','#d4cab0',10)+artemisia(139,200,.8)+txt(139,258,'黄花蒿','middle',C.ink,17,750)+
+      flowLine([230,173],[268,173],sand)+
+      R(273,130,248,78,'#fffdf4','#ccba9f',9)+txt(289,159,'提取 · 青蒿素','start',C.ink,19,750)+
+      txt(289,189,'过氧桥：–O–O–','start','#654c48',17,650)+
+      label(278,216,'科研、观鸟与药用','已被人直接利用');
+  }else{
+    s+=artemisia(251,361,.62)+call(56,105,251,319,known?'假设发现候选药物':'样本 A · 未知用途',known?'未知用途 → 已知直接用途':'尚未明确的人类用途')+
+      (known?pulse([[245,314],[193,281],[149,233],[113,187]],t,C.green,6):'');
+  }
+  return s+tile(43,526,499,88,m==='potential'&&known?'发现后 · 直接价值示例':valueText[m][0],
+    m==='potential'&&known?'课堂虚构发现，仍需证据验证':valueText[m][2],m==='indirect'?C.green:C.orange);
+}
+const comma=n=>n.toLocaleString('en-US');
+function renderValue(t){
+  const mode=state.value,known=state.discovery==='known',row=valueText[mode];
+  const p=plot('value',723,143,393,340,[0,5000,10000,15000,20000,25000],[0,1,2,3,4],'Costanza 等 · 1997 年表 2','1994 年美元 / 公顷 / 年');
+  let graph=p.svg.replace(/<text[^>]*text-anchor="end"[^>]*>[^<]*<\/text>/g,'');
+  services.forEach(([name,reg,cycle,food,raw],i)=>{
+    const y=p.Y(3.5-i),a=reg+cycle,b=food+raw;
+    graph+=txt(710,y+5,name,'end',C.ink,17,750)+
+      R(p.x,y-20,p.X(a)-p.x,16,C.green,'none',1)+R(p.x,y+3,p.X(b)-p.x,16,C.orange,'none',1)+
+      txt(p.X(a)+7,y-7,comma(a),'start',C.ink,15,700)+txt(p.X(b)+7,y+17,comma(b),'start',C.ink,15,700);
+  });
+  graph+=R(722,558,22,22,'#EBEBEB','none',1)+R(725,561,16,16,C.green)+txt(751,575,'干扰调节＋养分循环')+
+    R(930,558,22,22,'#EBEBEB','none',1)+R(933,561,16,16,C.orange)+txt(960,575,'食物＋原材料')+
+    rScript(629,623,['ggplot(services, aes(value, biome, fill = service)) + geom_col()']);
+  draw(2,headings('红树林湿地与可利用资源','生态服务选定项目的历史估值')+wetlandArt(t)+graph);
+  document.querySelector('[data-group="discovery"]').parentElement.hidden=mode!=='potential';
+  say(2,'VALUE LENS',mode==='potential'&&known?'假设发现候选药物用途':row[0],mode==='potential'&&known?
+    '样本 A 的某项未知用途成为可研究的直接药用价值。本场景只演示分类变化。':row[1],
+    mode==='potential'&&known?'潜在 → 直接':row[2],'柱状图仅比较论文中的选定服务。科研、旅游等直接价值没有进入橙色小计。');
+}
+
+const landscapeText={
+  continuous:['连续栖息地','大熊猫可以在较连续的适宜生境间觅食和移动，较大的有效种群规模有助于减缓遗传漂变。',C.green],
+  isolated:['道路隔离','公路与护栏降低斑块间移动。斑块内种群小，长期隔离时漂变与近交风险可能增大。',C.red],
+  corridor:['增设生态廊道','适合目标动物使用的廊道提高斑块连通性。个体在迁移后成功繁殖，才构成基因流。',C.cyan]
+};
+const seriesH={continuous:[{x:0,y:.76}],isolated:[{x:0,y:.76}],corridor:[{x:0,y:.76}]};
+for(let x=1;x<=50;x++){
+  const next=(key,Ne)=>seriesH[key].at(-1).y*(1-1/(2*Ne));
+  seriesH.continuous.push({x,y:next('continuous',240)});
+  seriesH.isolated.push({x,y:next('isolated',18)});
+  seriesH.corridor.push({x,y:x>20?.9*next('corridor',18)+.1*.78:next('corridor',18)});
+}
+const richness=Array.from({length:101},(_,x)=>({x,y:100*(x/100)**.30,lo:100*(x/100)**.35,hi:100*(x/100)**.20}));
+function bamboo(x,y,s=1){
+  return G(x,y,s,spark('M-8 3L-12-58M1 4L4-72M11 4L17-62','#548664',3)+
+    many(8,i=>leaf(-10+(i*9)%24,-18-i*5,.42,i%2?58:-63,'#7cab74')));
+}
+function landscapeArt(t){
+  const m=state.landscape,continuous=m==='continuous',bridge=m==='corridor';
+  const forest=R(44,90,498,426,'#c8ddba','#8cb196',12)+
+    P('M46 176Q121 119 204 140T373 144T539 102V348Q431 312 347 380T174 370T46 398Z','#99bd98','#87aa87',1.2)+
+    P('M46 446Q143 382 247 438T403 423T539 403V512H46Z','#9dbb90','#8cab7d',1.2)+
+    many(32,i=>bamboo(62+(i*89)%466,152+(i*47)%346,.53+i%4*.14));
+  const roads=spark('M286 100Q295 219 285 309T297 509','#536774',32)+
+    spark('M50 310Q157 297 273 312T535 305','#536774',32)+
+    spark('M286 100Q295 219 285 309T297 509','#eee9c8',2.2,'9 7')+
+    spark('M50 310Q157 297 273 312T535 305','#eee9c8',2.2,'9 7');
+  const links=bridge?spark('M154 223Q278 177 411 210M416 232Q399 303 424 390M418 401Q291 427 173 391','#315c4f',31)+
+    spark('M154 223Q278 177 411 210M416 232Q399 303 424 390M418 401Q291 427 173 391','#bad09b',24):'';
+  const route=continuous?[[133,214],[276,269],[406,236],[432,378],[180,415],[133,214]]:
+    bridge?[[155,219],[282,194],[411,213],[411,300],[424,391],[289,417],[173,391]]:[[140,218],[201,233],[254,229],[199,244],[140,218]];
+  const p=(t*2)%1,n=p*(route.length-1),idx=Math.floor(n);
+  const from=route[idx],to=route[idx+1],px=mix(from[0],to[0],n-idx),py=mix(from[1],to[1],n-idx);
+  const colorCount=Math.max(1,Math.round(seriesH[m][state.generation].y/.76*4));
+  const geneColors=[C.orange,C.blue,C.green,sand].slice(0,colorCount);
+  let s=forest+(continuous?'':roads)+links+
+    (!bridge&&!continuous?R(258,205,9,57,'#b6544b','#fff',3):'')+
+    pulse(route,t,geneColors,9,4)+panda(px,py,1.1)+
+    [[171,405],[425,223],[437,404]].map(([x,y],i)=>panda(x,y,.73)+
+      E(x+20,y-11,5,5,geneColors[i%geneColors.length],'#fff')).join('');
+  if(!continuous)s+=label(67,116,'斑块 1')+label(352,117,'斑块 2')+label(67,335,'斑块 3')+label(352,335,'斑块 4');
+  if(bridge)s+=call(307,455,292,414,'植被天桥','跨路连通示意');
+  return s+tile(43,545,499,71,landscapeText[m][0],continuous?'森林连片':bridge?'迁移、繁殖与基因流分别取证':'分散斑块与边缘效应',landscapeText[m][2]);
+}
+function renderLandscape(t){
+  const m=state.landscape,g=state.generation,row=landscapeText[m];
+  const p=plot('plot-area',643,125,352,129,[0,25,50,75,100],[0,50,100],'物种—面积 · 幂函数','保留面积 / %','相对丰富度 / %');
+  const q=plot('diversity',643,402,352,129,[0,10,20,30,40,50],[0,.2,.4,.6,.8],'杂合度 · 漂变与迁入','代数','杂合度 H');
+  let graph=p.svg+p.clip(ribbon(richness,p.X,p.Y,C.cyan,.25))+line(richness,p,C.blue,3)+
+    scan(p,state.area)+chartDot(p,state.area,richness[state.area].y,C.blue,6)+legend(1017,151,'面积模型',[['z = 0.30',C.blue,'line'],['敏感性范围',C.cyan,'band']])+
+    q.svg+scan(q,20)+scan(q,g);
+  for(const [key,data] of Object.entries(seriesH)){
+    graph+=line(data,q,landscapeText[key][2],key===m?4:2.5,key==='isolated'?'6 3':'');
+  }
+  graph+=chartDot(q,g,seriesH[m][g].y,row[2],6)+legend(1017,425,'景观模型',[
+    ['连续栖息地',C.green,'line'],['道路隔离',C.red,'dash'],['廊道 · 20 代后',C.cyan,'line']
+  ])+rScript(629,622,['ggplot(sim, aes(generation, H, colour = design)) + geom_line()']);
+  draw(3,headings('秦岭竹林与道路的景观示意','分别读面积与连通性的效果')+landscapeArt(t)+graph);
+  values('area',state.area+'%');values('generation','第 '+g+' 代');
+  say(3,'CONNECTIVITY / GENE FLOW',row[0],row[1],
+    '相对丰富度 '+richness[state.area].y.toFixed(1)+'% · H '+seriesH[m][g].y.toFixed(3),
+    '左图的动物移动是机制演示。右图面积和遗传曲线是两个独立模型。');
+}
+
+const actionText={
+  site:['就地保护','在原生境保留物种、栖息地和种间关系。自然保护区和国家公园可为此提供长期空间。','原地 · 同时保留生态过程'],
+  ex:['易地保护','动物园、植物园与繁育中心可为濒危物种维持繁殖群体，为恢复和野放作准备。','迁地 · 作为就地保护的补充'],
+  bank:['种质保存与技术','以种子库、精子库和组织保存补充保护，记录采样来源，监测材料活力和代表性。','离体 · 保存可利用的遗传材料'],
+  policy:['立法与合理利用','规定可利用区域、时段、强度与监测指标。对承压的核心栖息地可采取严格保护。','管理 · 根据监测结果调整']
+};
+function actionArt(){
+  const m=state.action,row=actionText[m];
+  let s=R(43,93,499,387,'#eaf3e9','#bfd1c4',11);
+  if(m==='site'||m==='policy'){
+    s+=P('M44 341Q135 153 237 218T389 176T540 207V479H44Z','#8eaf88','#608969',2)+
+      P('M44 380Q178 296 277 371T540 353V479H44Z','#749c80','#618976',2)+
+      many(19,i=>tree(62+(i*83)%461,267+(i*49)%189,.56+(i%4)*.14))+
+      panda(170,402,1.45)+panda(427,365,1.08)+
+      (m==='policy'?spark('M73 404Q185 315 286 354T518 329','#efcb80',4,'10 7'):'')+
+      call(61,119,229,304,m==='site'?'国家公园与保护区':'分区与监测',m==='site'?'原地维持生境与食物网':'设置低扰动区和核心保护区');
+  }else if(m==='ex'){
+    s+=P('M89 421V246L210 169L331 246V421Z','#dce5cd','#789683',3)+R(99,260,220,155,'#e6f2e9','#879f92',0)+
+      P('M118 407V274M152 407V274M187 407V274M222 407V274M257 407V274M291 407V274','none','#7fa092',2)+
+      tree(405,376,1.3)+panda(210,380,1.45)+bird(408,356,1.25)+
+      call(63,114,213,241,'迁地繁育中心','管理繁殖群与回归条件');
+  }else{
+    s+=R(95,185,392,254,'#c7dfe0','#658a90',9)+R(109,202,364,220,'#f5faf5','#71948f',5)+
+      many(12,i=>{const x=128+i%6*56,y=228+Math.floor(i/6)*103;
+        return R(x,y,31,67,'#dcecf0','#6d919b',5)+R(x-2,y-5,35,10,'#769faf','#577681',2)+
+          many(4,j=>E(x+8+j%2*14,y+29+j*8,4,3,i%2?'#bd8b54':'#6c9868','#776e57'));
+      })+call(61,114,400,233,'种质保存','低温保存、活力检测与建档');
+  }
+  return s+tile(43,517,499,92,row[0],row[2],m==='policy'?C.blue:C.green);
+}
+const disturbanceCurves=Array.from({length:101},(_,x)=>({x,peak:38+52*Math.exp(-(((x-42)/30)**2)),decline:87-.53*x}));
+function renderAction(){
+  const row=actionText[state.action],x=state.disturbance,now=disturbanceCurves[x];
+  const p=plot('plot-disturbance',643,160,352,336,[0,25,50,75,100],[0,25,50,75,100],'同一强度 · 两种响应假设','干扰 / 利用强度','相对多样性指数');
+  const graph=p.svg+line(disturbanceCurves.map(d=>({x:d.x,y:d.peak})),p,C.green,3.4)+
+    line(disturbanceCurves.map(d=>({x:d.x,y:d.decline})),p,C.red,3,'7 4')+
+    scan(p,x)+chartDot(p,x,now.peak,C.green)+chartDot(p,x,now.decline,C.red)+
+    legend(1017,195,'情景',[['中间有峰',C.green,'line'],['持续下降',C.red,'dash']])+
+    rScript(629,592,['ggplot(scenario, aes(intensity, diversity, colour = response))',
+      '+ geom_line() + scale_colour_npg()']);
+  draw(4,headings('保护措施对应不同对象','中度干扰：可能响应与反例')+actionArt()+graph);
+  values('disturbance',x+'/100');
+  say(4,'CONSERVATION DECISION',row[0],row[1],
+    '峰形 '+now.peak.toFixed(0)+' · 下降型 '+now.decline.toFixed(0),'两条是教学情景。适度干扰有时维持多样性，也可能增加敏感物种风险。');
+}
+const views=[renderLevels,renderValue,renderLandscape,renderAction],durations=[16,15,18,16],initialTimes=[0,0,0,0];
+const groups={
+  case:v=>{state.case=v;redraw(0)},value:v=>{state.value=v;clocks[1].reset()},
+  discovery:v=>{state.discovery=v;redraw(1)},landscape:v=>{state.landscape=v;clocks[2].reset()},
+  action:v=>{state.action=v;redraw(3)}
+};
+const inputs={
+  area:v=>{state.area=v;redraw(2)},generation:v=>{state.generation=v;redraw(2)},
+  disturbance:v=>{state.disturbance=v;redraw(3)}
+};
+function wireChapter(){
+  $('value-table').innerHTML=services.map(([name,...v])=>`<tr><th scope="row">${name}</th>${v.map(n=>'<td>'+comma(n)+'</td>').join('')}</tr>`).join('');
+}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

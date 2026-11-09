@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>基因工程的应用｜从性状改良到产品制造 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从性状改良到产品制造<small>GENETIC ENGINEERING APPLICATIONS / 03.03</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 3 章 · 第 3 节</p><h1>基因工程的应用</h1><p class="subtitle">从田间抗性、动物生长，到药用蛋白与奶酪。沿四幅图追踪表达的位置、改造的结果与验证依据。</p></div>
+<div class="intro-note"><i>GENETIC ENGINEERING APPLICATIONS</i><p>用了基因工程，最后需要的是一个新品种、一种纯化产物，还是待验证的供体器官？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 作物性状</a><a href="#figure2">02 动物改良</a><a href="#figure3">03 医药卫生</a><a href="#figure4">04 食品工业</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / CROP TRAITS & PATHWAYS</p><h2 id="heading1">同样导入外源基因，作物需要怎样的证据？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="crop"><button type="button" data-group="crop" data-value="bt" aria-pressed="true">Bt 抗虫棉</button><button type="button" data-group="crop" data-value="papaya" aria-pressed="false">抗病毒番木瓜</button><button type="button" data-group="crop" data-value="epsps" aria-pressed="false">耐草甘膦作物</button><button type="button" data-group="crop" data-value="rice" aria-pressed="false">黄金米</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="同样导入外源基因，作物需要怎样的证据？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>Bt 抗虫棉产生的 Cry 蛋白可在敏感幼虫中肠发挥作用，涉及蛋白加工、特异受体和膜孔。不同 Cry 蛋白、虫种与抗性背景结果不同。番木瓜抗病案例使用番木瓜环斑病毒（PRSV）外壳蛋白基因来源的序列；效果可因毒株而异，图示不把抗病机制简化成外壳蛋白直接杀病毒。CP4 EPSPS 对草甘膦的敏感性较低，在相应条件下可维持莽草酸途径。耐受结论限定药剂、剂量和实验条件。</p><p>黄金米改造稻米胚乳的类胡萝卜素合成。Paine 等用玉米 psy 与细菌 crtI 开发黄金米 2。柱图给出 SGR2A1、SGR2T1、SGR2Z1 的 T₂ 种子胚乳总类胡萝卜素均值，每事件分析 3 株 T₁ 植株；论文还列出其他事件。β-胡萝卜素是其中一种成分，也是维生素 A 前体。色泽只作示意，营养改善需要成分与摄入证据。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 三类抗性以机制和实验设计示意。黄金米数据取自 Paine 等 Table 2 的三个选列事件。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1128/aem.02505-21" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1590/S1678-3921.pab2005.v40.6982" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a> <a href="https://doi.org/10.1073/pnas.0603638103" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.1038/nbt1082" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / ANIMAL GROWTH & MILK COMPOSITION</p><h2 id="heading2">生长更快和乳糖更少，各该测什么？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="animal"><button type="button" data-group="animal" data-value="salmon" aria-pressed="true">大西洋鲑 · 生长</button><button type="button" data-group="animal" data-value="lactose" aria-pressed="false">转基因小鼠 · 低乳糖</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="生长更快和乳糖更少，各该测什么？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>AquAdvantage 以大西洋鲑为宿主，构建包含大鳞大麻哈鱼（Chinook）来源生长激素编码区和 ocean pout 来源的调控序列。FDA 2015 审评 Table 42 的两组分别为二倍体对照和三倍体转基因。首次摄食后累计 2700 ℃·日，记录超过 100 g 的比例为 15/306 和 364/369。这个比较没有单独分离倍性等因素，结果不能用来断定最终体型。℃·日表示累积温度时间。</p><p>教材用降低奶牛乳汁乳糖作为品质改良例。这里的量化依据来自转基因小鼠：在乳腺表达肠乳糖酶后，乳糖含量下降 50%–85%，论文未报告明显的脂肪和蛋白浓度变化。该区间不能外推到奶牛。乳糖酶水解一分子乳糖产生一分子葡萄糖和一分子半乳糖。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 鲑鱼为 FDA Table 42 的特定观察节点。低乳糖区间来自 Jost 等小鼠研究，糖粒子为结构示意。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://www.fda.gov/animal-veterinary/aquadvantage-salmon/aquadvantage-salmon-fact-sheet" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a> <a href="https://www.fda.gov/files/animal%20%26%20veterinary/published/AquAdvantage-Salmon-FOI-Summary.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1038/6158" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / BIOPHARMACEUTICALS & ORGAN DONORS</p><h2 id="heading3">生产药用蛋白与改造供体器官，有什么不同？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="medicine"><button type="button" data-group="medicine" data-value="insulin" aria-pressed="true">微生物 · 人胰岛素</button><button type="button" data-group="medicine" data-value="goat" aria-pressed="false">山羊 · 乳腺反应器</button><button type="button" data-group="medicine" data-value="organ" aria-pressed="false">猪 · 供体器官</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="生产药用蛋白与改造供体器官，有什么不同？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>早期重组胰岛素路线在工程大肠杆菌中分别表达带 A 链或 B 链的融合蛋白，处理并回收两链后组装。成熟人胰岛素 A 链 21 个氨基酸，B 链 30 个；有两对链间二硫键与一对 A 链内二硫键。现代还可从单链前体加工得到成熟胰岛素。教材另举重组人干扰素等药物。</p><p>ATryn 标签记载人抗凝血酶编码序列与乳腺特异调控序列共同导入山羊，蛋白进入乳汁，经回收纯化与质量检测后形成制剂。乳汁是生产原料。供体器官路线则改变器官相关特性，例如敲除猪 GGTA1 以减少 α-Gal 抗原，再结合克隆等手段获得供体。减少一个抗原只影响部分免疫反应，仍需评估其他抗原、补体、凝血与感染等问题。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 胰岛素图为早期历史路线。ATryn 取自产品说明书。猪器官只作抗原改造原理示意。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1073/pnas.76.1.106" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://www.fda.gov/media/75529/download" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a> <a href="https://doi.org/10.1126/science.1078942" target="_blank" rel="noopener noreferrer" aria-label="参考资料 11">[11]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / FOOD ENZYMES & MILK CLOTTING</p><h2 id="heading4">加的是凝乳酶，真正发生了哪两步变化？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="enzyme"><button type="button" data-group="enzyme" data-value="active" aria-pressed="true">活性凝乳酶</button><button type="button" data-group="enzyme" data-value="none" aria-pressed="false">未加酶</button><button type="button" data-group="enzyme" data-value="heated" aria-pressed="false">热失活对照</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="加的是凝乳酶，真正发生了哪两步变化？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>工程菌可生产凝乳酶等食品工业用酶，也可用于生产氨基酸等。图示牛源凝乳酶在适宜微生物宿主表达、发酵、回收并配制制剂，再加入奶液。凝乳酶剪切 κ-酪蛋白，使胶束表面稳定层减弱，随后胶束在适宜条件下聚集。图中省略实际工艺中钙离子、温度、乳酸菌和其他加工因素。</p><p>活性组切割比例采用 1−e⁻³·²ᵗ。教学模型在切割比例超过 0.42 后才画出聚集，再随切割程度增加。未加酶和热失活对照在这个只考虑酶促凝聚的模型内保持基线。三个条件使用相同起点，数值不代表实验测量。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 图示重组凝乳酶作用于奶液的教学模型。右图为归一化机制曲线，时间不对应实际生产时长。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1038/nbt0491-349" target="_blank" rel="noopener noreferrer" aria-label="参考资料 12">[12]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 选择性必修 3 ↗</a><span>第 3 章第 3 节，品种改良、医药卫生、食品工业。</span></li><li id="ref-2"><a href="https://doi.org/10.1128/aem.02505-21" target="_blank" rel="noopener noreferrer">[2] Cry1Ac 中肠受体研究 · Applied and Environmental Microbiology ↗</a><span>棉铃虫中肠受体参与 Cry1Ac 活性。</span></li><li id="ref-3"><a href="https://doi.org/10.1590/S1678-3921.pab2005.v40.6982" target="_blank" rel="noopener noreferrer">[3] Embrapa · Pesquisa Agropecuária Brasileira ↗</a><span>PRSV 毒株、外壳蛋白转基因序列与抗病范围。</span></li><li id="ref-4"><a href="https://doi.org/10.1073/pnas.0603638103" target="_blank" rel="noopener noreferrer">[4] Funke et al., 2006 · PNAS ↗</a><span>CP4 EPSPS 的草甘膦耐受机制。</span></li><li id="ref-5"><a href="https://doi.org/10.1038/nbt1082" target="_blank" rel="noopener noreferrer">[5] Paine et al., 2005 · Nature Biotechnology ↗</a><span>黄金米 2 的胚乳类胡萝卜素与 Table 2。</span></li><li id="ref-6"><a href="https://www.fda.gov/animal-veterinary/aquadvantage-salmon/aquadvantage-salmon-fact-sheet" target="_blank" rel="noopener noreferrer">[6] FDA · AquAdvantage Salmon Fact Sheet ↗</a><span>宿主及重组表达构建的物种来源。</span></li><li id="ref-7"><a href="https://www.fda.gov/files/animal%20%26%20veterinary/published/AquAdvantage-Salmon-FOI-Summary.pdf" target="_blank" rel="noopener noreferrer">[7] FDA · NADA 141-454 (2015), Table 42 ↗</a><span>鲑鱼生长终点、样本数和组别。</span></li><li id="ref-8"><a href="https://doi.org/10.1038/6158" target="_blank" rel="noopener noreferrer">[8] Jost et al., 1999 · Nature Biotechnology ↗</a><span>在小鼠乳腺异位表达乳糖酶。</span></li><li id="ref-9"><a href="https://doi.org/10.1073/pnas.76.1.106" target="_blank" rel="noopener noreferrer">[9] Goeddel et al., 1979 · PNAS ↗</a><span>合成胰岛素基因、细菌表达与两链组装。</span></li><li id="ref-10"><a href="https://www.fda.gov/media/75529/download" target="_blank" rel="noopener noreferrer">[10] FDA · ATryn 标签 ↗</a><span>重组人抗凝血酶由转基因山羊乳汁回收。</span></li><li id="ref-11"><a href="https://doi.org/10.1126/science.1078942" target="_blank" rel="noopener noreferrer">[11] Phelps et al., 2003 · Science ↗</a><span>缺乏 α1,3-半乳糖基转移酶的猪。</span></li><li id="ref-12"><a href="https://doi.org/10.1038/nbt0491-349" target="_blank" rel="noopener noreferrer">[12] Flamm, 1991 · Nature Biotechnology ↗</a><span>重组凝乳酶生产及 κ-酪蛋白作用机制。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>基因工程的应用 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">基因工程的应用 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">抗虫、抗病、耐除草剂</th><td>写明作用对象与相同处理条件，分别比较害虫表现、病害或病毒量、用药后作物表现。</td></tr><tr><th scope="row">品质改良</th><td>测定目标成分或性状。黄金米柱图为总类胡萝卜素，维生素 A 前体只是其中一部分。</td></tr><tr><th scope="row">速生动物</th><td>固定养殖条件与判定节点。生长速率和最终体型是不同指标。</td></tr><tr><th scope="row">乳腺生物反应器</th><td>乳腺特异调控元件驱动泌乳期表达，从乳汁分离纯化目标蛋白。</td></tr><tr><th scope="row">供体器官</th><td>降低部分抗原相关反应。器官功能和其他排斥风险仍需验证。</td></tr><tr><th scope="row">食品用酶</th><td>工程微生物用于制造酶制剂，随后在食品加工中利用该酶。</td></tr><tr><th scope="row">证据边界</th><td>分清实测分母、选择的材料与观察条件；示意粒子和模型曲线只解释机制。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel='',xTickLabel=v=>v){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);const tick=vertical?xTickLabel(v):v;if(tick!==null)svg+=vertical?txt(p,y+h+25,tick,'middle'):txt(x-11,p+6,tick,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={crop:'bt',animal:'salmon',medicine:'insulin',enzyme:'active'};
+const ink=C.ink,teal='#157665',blue='#31597e',gold='#946019',warm='#ac493b',plum='#725785',muted='#455b63';
+const progress=(t,a,b)=>clamp((t-a)/(b-a));
+const riceData=[{name:'SGR2A1',value:8.8,n:3},{name:'SGR2T1',value:23,n:3},{name:'SGR2Z1',value:36.7,n:3}];
+const salmonData=[{name:'二倍体对照',passed:15,n:306},{name:'三倍体转基因',passed:364,n:369}];
+const lactoseData={low:50,high:85};
+const rate=row=>100*row.passed/row.n;
+function appBars(id,data,t,facet,ylabel,ticks,format){
+  const p=plot(id,690,174,431,284,[0,...data.map((_,i)=>i+1),data.length+1],ticks,facet,'',ylabel,()=>null);
+  const reveal=progress(t,.13,.81);
+  return p.svg+data.map((d,i)=>{
+    const x=p.X(i+1),y=p.Y(d.value),c=i===data.length-1?teal:blue;
+    const top=mix(p.Y(0),y,reveal);
+    const inside=d.value>ticks.at(-1)*.93;
+    return R(x-35,top,70,p.Y(0)-top,c,'none',4)+
+      O(progress(reveal,.85,1),txt(x,y+(inside?24:-11),format(d.value),'middle',inside?'#fff':ink,17,800))+
+      txt(x,487,d.name,'middle',ink,16,750);
+  }).join('');
+}
+function appLeaf(x,y,s,fill='#a2be85',angle=0){
+  return G(x,y,s,P('M-83 16C-55-25-15-54 29-51C49-50 75-56 97-58C88-22 78 16 48 38C9 66-47 57-83 16Z',fill,'#548268',2.4)+
+    P('M-91 31Q-3-13 79-41M-37 6Q-40-13-24-31M-17-1Q-5 23 16 32M19-17Q25-37 44-46M36-22Q50-4 66 0','none','#5b906a',2),angle);
+}
+function plantSprig(x,y,s,stressed=false){
+  return G(x,y,s,P(stressed?'M0 2Q-15-46 3-88Q14-106 38-101':'M0 2Q-3-57 4-129','none',stressed?'#9e774f':'#4e805f',4)+
+    appLeaf(stressed?-15:-23,-56,.31,stressed?'#cabb8e':'#9eb981',195)+
+    appLeaf(stressed?34:25,-92,.33,stressed?'#bc9e78':'#82ad78',-9)+
+    P('M0 2q-9 16-28 22M0 2q7 15 22 20','none','#9f815c',2));
+}
+function insect(x,y,s){
+  return G(x,y,s,many(8,i=>E(-55+i*14,Math.sin(i*.63)*10,12,14-i*.43,i%2?'#d7aa62':'#b88b51','#805c3c'))+
+    P('M-47 10l-5 12m16-8-3 14m16-13 1 11m14-13 4 12','none','#8f6743',2)+
+    E(51,-8,12,13,'#b78150','#805c3c')+E(55,-11,2.5,2.5,ink));
+}
+function token(x,y,fill=teal,r=7){
+  return P(`M${x} ${y-r}l${r*.91} ${r*.5}v${r}l${-r*.91} ${r*.5}l${-r*.91} ${-r*.5}v${-r}z`,fill,'#fff',1.15);
+}
+function cropBt(t){
+  const bind=progress(t,.32,.75),pores=progress(t,.63,.89);
+  return appLeaf(170,262,1.03)+insect(166,220,.88)+
+    many(5,i=>token(136+i*14,274+(i%2)*9,gold,7))+
+    call(49,121,162,211,'敏感幼虫取食')+call(78,364,157,273,'叶片表达 Cry')+
+    arrow('M272 275H325',gold)+
+    R(329,179,214,268,'#eef4ef','#9bb6a8',13)+
+    many(12,i=>P(`M${340+i*17} 355v-15q4-15 9 0v15`,'#bad3b9','#729f8c',1.4))+
+    R(338,354,196,69,'#dce9d8','#91b39f',5)+
+    many(5,i=>E(354+i*39,392,11,8,'#b6c5b6','#829b8e'))+
+    P('M407 355v-24l-7-9m7 9 7-9m60 33v-24l-7-9m7 9 7-9','none',blue,3.5)+
+    many(5,i=>token(mix(353+i*30,399+(i%2)*68,bind),mix(232+(i%3)*16,314+i%2*7,bind),gold,6))+
+    O(pores,R(433,343,12,42,'#fff',warm,5)+R(493,343,12,42,'#fff',warm,5)+
+      many(5,i=>E(439+(i%2)*60,346+(i*11+36*t)%35,2.6,2.6,warm)))+
+    label(342,190,'幼虫中肠剖面')+label(340,457,'上皮刷状缘')+
+    label(339,501,pores>.45?'膜孔出现':'受体参与识别');
+}
+function papayaPlant(x,y,s,ill){
+  const lc=ill?'#c2ad6d':'#8bb384';
+  return G(x,y,s,P('M0 30Q-4-43 1-133','none','#907754',8)+
+    appLeaf(-39,-113,.55,lc,188)+appLeaf(44,-125,.54,lc,-17)+appLeaf(18,-151,.44,lc,-49)+
+    E(-14,-56,16,28,'#b5c68b','#6c956b')+E(15,-72,15,26,'#b5c68b','#6c956b')+
+    (ill?E(-14,-53,8,12,'none','#a16d43')+E(14,-73,7,9,'none','#a16d43'):''));
+}
+function cropPapaya(t){
+  const symptoms=progress(t,.43,.83);
+  return papayaPlant(160,422,1,symptoms>.45)+papayaPlant(419,422,1,false)+
+    many(8,i=>token((i<4?95:354)+(i%4)*34,205+Math.sin(i*1.3+t*4)*13,warm,8))+
+    arrow('M150 235v31',warm)+arrow('M408 235v31',warm)+
+    label(84,124,'同一毒株挑战')+label(316,124,'PRSV 外壳蛋白基因')+
+    label(74,491,symptoms>.45?'对照 · 可见环斑':'对照番木瓜')+
+    label(315,491,symptoms>.45?'耐病材料 · 症状较轻':'抗病番木瓜');
+}
+function cropHerbicide(t){
+  const on=progress(t,.30,.74),outcome=on>.56;
+  const area=(x,treated)=>R(x,220,224,235,'#eef0dd','#b3bd9d',12)+
+    P(`M${x+10} 400Q${x+114} 380 ${x+214} 401v43H${x+10}Z`,'#d6c3a0','#b19e7d',1.4)+
+    plantSprig(x+89,398,.99,outcome&&!treated)+plantSprig(x+163,408,.67,outcome)+
+    O(on*(1-progress(t,.65,.92)),many(12,i=>E(x+22+(i*29)%176,244+(i*19+108*t)%126,2.8,4.6,blue)))+
+    label(x+14,465,treated?'CP4 EPSPS 作物':'非转基因对照');
+  return label(47,121,'两组均施用草甘膦')+
+    P('M227 184h94v14h-40l-12 16h-11l9-16h-40Z','#b5cddd','#7197ac',2)+
+    area(48,false)+area(311,true)+
+    tile(48,531,224,53,outcome?'常规 EPSPS 受抑':'常规 EPSPS','',outcome?warm:blue)+
+    tile(311,531,224,53,outcome?'CP4 EPSPS 维持通路':'CP4 EPSPS','',teal)+
+    txt(50,614,outcome?'同剂量喷药后比较作物与杂草的表现。':'预测两组作物和杂草的反应。','start',muted,16);
+}
+function cropRice(t){
+  const bright=progress(t,.23,.87);
+  return G(289,325,1.18,P('M-145 24C-113-50-56-77 10-67C68-59 111-36 146 0C106 42 50 65-8 64C-63 62-106 48-145 24Z','#e9d7a5','#9b8050',3)+
+    P('M-126 20C-92-37-55-56 10-51C58-47 101-25 130 2C93 34 47 50-10 48C-62 47-100 37-126 20Z','#f8f1db','#b9a573',1.6)+
+    O(bright,P('M-126 20C-92-37-55-56 10-51C58-47 101-25 130 2C93 34 47 50-10 48C-62 47-100 37-126 20Z','#ecc870','none'))+
+    P('M-128 21C-113-3-93-13-74-12C-67 6-80 32-102 34Z','#e5b88b','#ad8359',2)+
+    many(18,i=>O(bright*.7,E(-68+(i*31)%169,-29+(i*23)%62,2.7,2.7,'#c98b2b'))))+
+    call(43,149,284,299,'胚乳','类胡萝卜素在此积累')+call(400,427,181,337,'胚')+
+    tile(43,477,503,81,'玉米 psy + 细菌 crtI','补足胚乳的类胡萝卜素合成路径',gold,'#f7f0dc');
+}
+const cropInfo={
+  bt:{name:'Bt 抗虫棉',steps:['Cry 基因在棉花表达','敏感幼虫摄入 Cry 蛋白','中肠受体与膜孔参与作用'],evidence:'同条件饲喂 · 比较取食或存活',boundary:'抗虫范围取决于 Cry 类型和害虫敏感性。',art:cropBt},
+  papaya:{name:'抗病毒番木瓜',steps:['导入 PRSV 外壳蛋白基因来源序列','以指定毒株挑战两组番木瓜','比较症状和病毒量'],evidence:'病毒挑战 · 对照与抗病材料',boundary:'抗病结果随毒株和材料变化。',art:cropPapaya},
+  epsps:{name:'耐草甘膦作物',steps:['表达 CP4 EPSPS','同剂量草甘膦处理','观察代谢维持和作物表现'],evidence:'同药同剂量 · 比较作物受损',boundary:'结论限定于指定药剂、剂量及实验条件。',art:cropHerbicide},
+  rice:{name:'黄金米 2',steps:['补入胚乳合成通路','种子胚乳积累类胡萝卜素','比较转化事件的测定值'],evidence:'总类胡萝卜素 · 按干重测定',boundary:'柱图为三个选列事件的均值，不等同于维生素 A 含量。',art:cropRice}
+};
+function checklist(rows,t){
+  const active=Math.min(rows.length-1,Math.floor(t*rows.length));
+  return rows.map(([head,body],i)=>{
+    const y=99+i*121,on=i===active;
+    return E(652,y+33,17,17,on?teal:'#fff',teal)+txt(652,y+39,String(i+1),'middle',on?'#fff':teal,17,800)+
+      tile(683,y,465,79,head,body,on?teal:'#7c9790',on?'#e7f2ed':'#f3f6f2')+
+      (i<rows.length-1?arrow(`M652 ${y+58}v47`,'#a1b9ae'):'');
+  }).join('');
+}
+function view1(t){
+  const mode=state.crop,d=cropInfo[mode],i=Math.min(2,Math.floor(t*3));
+  const stats=mode==='rice'?appBars('app-rice',riceData,t,'Paine 等 · Table 2（三个选列事件）','总类胡萝卜素（μg/g 干重）',[0,10,20,30,40],v=>v.toFixed(1))+
+    tile(624,526,524,58,'各事件分析 3 株 T₁ 植株','',gold,'#f8f1e1')+
+    rScript(640,614,['ggplot(rice, aes(event, total_carotenoids)) + geom_col()']):
+    checklist([['改造对象',d.steps[0]],['改变条件',d.steps[1]],['要验证的结果',d.steps[2]]],t)+
+    tile(624,500,525,98,d.evidence,d.boundary,teal);
+  draw(1,headings('作物结构与目标性状',mode==='rice'?'从成分测量读品质':'从实验条件读抗性')+d.art(t)+stats);
+  say(1,'CROP / 0'+(i+1),d.name,d.steps[i],d.evidence,d.boundary);
+}
+
+function salmonArt(x,y,s,t,fill){
+  const sway=5*Math.sin(t*32);
+  return G(x,y,s,P(`M-92-3Q-117-11-139 ${-39+sway}Q-132-9-132 0Q-132 10-141 ${35+sway}Q-110 20-91 10Z`,'#9eb0af','#617a7a',2.4)+
+    P('M-105 3C-72-35-19-56 40-41C65-37 89-24 110-9Q124 2 102 15C40 51-37 45-105 3Z',fill,'#537f80',2.4)+
+    P('M-104 3C-51 21-11 33 39 24Q71 19 108 5C76 37 37 42-8 41C-42 38-79 24-104 3Z','#d9e0d7','none')+
+    P('M-33-43Q-19-65 6-71L12-46M-55 34l13 20 15-17M44 14Q24 26 18 44Q46 38 58 17','#89a5a1','#628b88',2)+
+    P('M82-29Q64-9 80 21M102 7q7 1 14-2M-82 0q75 18 149-3','none','#6b9791',1.8)+
+    E(91,-12,6,6,'#edf2de','#7c9485')+E(93,-12,2.7,2.7,ink)+
+    many(15,i=>E(-61+(i*23)%135,-24+(i*13)%26,2.1,1.7,'#4d7871')));
+}
+function salmonScene(t){
+  const p=progress(t,.20,.90),y=242;
+  return tile(43,87,501,73,'宿主 · 大西洋鲑','Chinook 生长激素基因 + ocean pout 启动子',blue,'#edf4f7')+
+    R(43,179,501,369,'#eaf2f2','#a4bebc',12)+
+    many(8,i=>P(`M53 ${205+i*41}Q160 ${193+i*41} 272 ${205+i*41}T533 ${205+i*41}`,'none','#d3e6e4',2))+
+    salmonArt(305+Math.sin(t*9)*21,y+36,mix(.61,.89,p),t,'#a9bbba')+
+    salmonArt(296+Math.sin(t*7)*18,y+183,mix(.61,1.31,p),t+.27,'#8cafaa')+
+    label(56,199,'非转基因对照')+label(56,348,'转基因组')+
+    tile(43,565,501,54,'体形用于示意，右图用称重结果比较','',teal);
+}
+function sugarIcon(x,y,color,s=1){
+  return G(x,y,s,token(0,0,color,17)+E(4,-3,2.8,2.8,'#ffffffa0'));
+}
+function lactoseScene(t){
+  const split=progress(t,.25,.78);
+  return tile(43,87,501,76,'乳腺中特异表达肠乳糖酶','小鼠研究 · 模拟一分子乳糖的水解',blue,'#edf4f7')+
+    P('M55 351C94 301 169 274 283 286C390 270 467 304 531 352V482Q437 515 298 501Q151 517 55 479Z','#eef4ef','#9ab6a8',2)+
+    P('M56 351Q210 403 356 356Q430 325 531 352','none','#81a899',4)+
+    many(10,i=>E(75+i*48,337+(i%4)*8,13,9,'#d8e8dc','#87ab9c'))+
+    G(288,307,1.0,P('M-41-3Q-43-29-15-31Q0-43 15-27Q39-29 44-12Q45 15 18 16L6 6Q-4 2-14 14Q-34 24-41-3Z','#dfd4eb','#9175a7',2))+
+    O(1-split,spark('M266 421h40','#9c9c79',4))+
+    sugarIcon(mix(269,160,split),mix(421,433,split),blue,1.06)+
+    sugarIcon(mix(306,422,split),mix(421,433,split),'#b37432',1.06)+
+    call(218,195,292,287,'乳糖酶')+
+    (split>.45?label(101,467,'葡萄糖')+label(369,467,'半乳糖'):label(252,467,'乳糖'))+
+    tile(43,561,501,58,'一个二糖 → 两个单糖','',teal);
+}
+function lactoseEvidence(t){
+  const p=plot('app-lactose',690,174,431,250,[0,25,50,75,100],[0,1,2],
+    'Jost 等 · 小鼠乳汁的乳糖降幅','相对对照的降幅 (%)');
+  const grid=p.svg.replace(/<text x="679"[^>]*>\d<\/text>/g,'');
+  const y=p.Y(1),show=progress(t,.20,.8),{low,high}=lactoseData;
+  return grid+O(show,spark(`M${p.X(low)} ${y}H${p.X(high)}`,teal,9)+
+    E(p.X(low),y,7,7,teal,'#fff')+E(p.X(high),y,7,7,teal,'#fff')+
+    txt(p.X(low),y-21,low+'%','middle',ink,18,800)+txt(p.X(high),y-21,high+'%','middle',ink,18,800))+
+    tile(624,514,526,89,'原论文报告范围 · 50%–85%','区间端点为报告降幅范围，不能外推到奶牛',teal);
+}
+function view2(t){
+  const fish=state.animal==='salmon',i=Math.min(2,Math.floor(t*3));
+  const graph=fish?appBars('app-salmon',salmonData.map(d=>({...d,value:rate(d)})),t,'FDA Table 42 · 累计 2700 ℃·日','超过 100 g 的鱼 (%)',[0,25,50,75,100],v=>v.toFixed(1)+'%')+
+    tile(624,524,250,69,'对照 · 15 / 306','分子 / 组内样本数',blue,'#edf4f7')+
+    tile(888,524,260,69,'转基因 · 364 / 369','分子 / 组内样本数',teal)+
+    rScript(640,619,['ggplot(salmon, aes(group, 100 * passed / n)) + geom_col()']):
+    lactoseEvidence(t);
+  draw(2,headings('改造的部位和可见结果',fish?'同一个生长终点的比较':'同一个成分的前后比较')+
+    (fish?salmonScene(t):lactoseScene(t))+graph);
+  say(2,(fish?'GROWTH':'MILK')+' / 0'+(i+1),fish?'转基因大西洋鲑':'小鼠乳腺的乳糖水解',
+    fish?['生长激素基因和调控元件来自不同物种。受体仍是大西洋鲑。','两组在相同累计温度时间节点接受称重。','读出样本数与超过 100 g 的组内比例，比较该试验终点。'][i]:
+    ['将肠乳糖酶表达定位到乳腺。','乳糖酶将乳糖水解为葡萄糖和半乳糖。','比较乳汁中的乳糖含量。原论文报告小鼠乳糖下降 50%–85%。'][i],
+    fish?(t>=.81?'4.9% 对照 · 98.6% 转基因':'等待达到比较节点'):(t>=.8?'报告降幅 · 50%–85%':'观察糖分子的结构变化'),
+    fish?'两组倍性不同。此处比较生长节点，最终体型需要其他数据。':'数据对应转基因小鼠。教材奶牛案例属于应用方向。');
+}
+
+const cystinePairs=[['A6','A11'],['A7','B7'],['A20','B19']];
+function peptidePoint(chain,index,shift=0){
+  return chain==='A'?[104+(index-1)*14,273+8*Math.sin(index*.43)-shift]:
+    [104+(index-1)*14,385+8*Math.sin(index*.36)+shift];
+}
+function peptide(chain,count,color,shift){
+  const points=Array.from({length:count},(_,i)=>peptidePoint(chain,i+1,shift));
+  return spark('M'+points.map(p=>p.join(' ')).join('L'),color,3)+points.map(([x,y])=>E(x,y,5.7,5.7,color,'#fff')).join('');
+}
+function insulinScene(t){
+  const join=progress(t,.28,.82),shift=26*(1-join);
+  const at=id=>peptidePoint(id[0],+id.slice(1),shift);
+  return tile(43,86,501,76,'早期路线 · 两批工程大肠杆菌','分别表达含 A 链或 B 链的融合蛋白',blue,'#edf4f7')+
+    label(48,182,'A 链 · 21 个氨基酸')+label(48,440,'B 链 · 30 个氨基酸')+
+    O(progress(t,.46,.88),cystinePairs.map(([l,r],i)=>{
+      const [x,y]=at(l),[u,v]=at(r);
+      return spark(i===0?`M${x} ${y}Q${(x+u)/2} ${y-68} ${u} ${v}`:`M${x} ${y}L${u} ${v}`,gold,4,'5 3');
+    }).join(''))+peptide('A',21,blue,shift)+peptide('B',30,teal,shift)+
+    tile(43,531,501,84,join>.86?'组装得到具有二硫键的人胰岛素':'分离 A、B 链，准备重新组装',
+      '链内 A6–A11 · 链间 A7–B7、A20–B19',gold,'#f8f0df');
+}
+function goatScene(t){
+  const sec=progress(t,.28,.75),collect=progress(t,.60,.92);
+  return tile(43,87,501,74,'乳腺特异调控序列 + 人抗凝血酶基因','转基因山羊 · 泌乳期表达',blue,'#edf4f7')+
+    P('M82 291Q88 222 142 209C180 205 223 220 240 265Q250 304 232 339Q210 379 190 396Q151 423 103 393Q65 364 82 291Z','#f1e4e4','#b49b9d',2.4)+
+    many(15,i=>{
+      const a=i*2.399,r=15+i*3.8,x=152+Math.cos(a)*r,y=311+Math.sin(a)*r;
+      return E(x,y,12,9,'#e2c3c7','#bb939a')+E(x,y,3.4,3.4,'#f8e9e8');
+    })+P('M155 319Q189 349 237 337Q278 330 314 364','none','#bd8e9d',10)+
+    many(7,i=>{
+      const u=(sec*.85+i*.09)%1;
+      return O(sec,token(mix(150,305,u),mix(309,361,u)+Math.sin(u*Math.PI)*12,teal,5.2));
+    })+
+    G(359,416,1,P('M-41-51H42L36 43Q35 54 23 55H-22Q-36 54-36 43Z','#f1f8f5','#8cac9f',2)+
+      R(-36,11,71,38,'#f1ede0','none',7)+many(6,i=>O(sec,token(-22+i*9,25+(i%2)*9,teal,3.8))))+
+    arrow('M404 418H450',gold)+G(491,416,1,R(-24,-44,48,88,'#ecf4f5','#7597a0',8)+R(-24,-52,48,17,'#72969c','#567781',4)+
+      O(collect,R(-19,14,38,23,'#a9d5c8','none',5)))+
+    call(40,173,128,238,'乳腺分泌上皮')+label(314,490,'收集乳汁')+label(431,490,'纯化制剂')+
+    tile(43,550,501,67,collect>.75?'从乳汁获得并检验目标蛋白':'乳汁携带分泌的重组蛋白','',teal);
+}
+function organScene(t){
+  const k=progress(t,.21,.74);
+  const kidney=(x,modified)=>G(x,345,.92,
+    P('M-38-108C-116-95-107 37-58 72C-28 94 23 66 25 39C26 16 9 2 7-19C7-38 36-42 32-65C29-95-1-115-38-108Z','#e7aca3','#a5635e',2.7)+
+    P('M11-20q32-7 60 10M16-9q26 7 52 32M9 4q19 17 29 60','none','#9a5b63',5)+
+    many(9,i=>O(modified?1-k:1,token(-59+(i*19)%58,-73+(i*17)%115,warm,5)))+
+    many(4,i=>E(-47+(i%2)*29,-41+i*26,4,4,plum)));
+  return tile(43,86,501,73,'猪器官 · 降低一个关键异种抗原','图示 GGTA1 缺失与 α-Gal 抗原减少',warm,'#f8ebe8')+
+    kidney(179,false)+kidney(433,true)+arrow('M244 337H333',gold)+
+    label(69,465,'对照供体')+label(323,465,'改造供体')+
+    tile(43,536,501,78,'α-Gal 减少后仍需评估排斥','紫点示意其他需评估的抗原',warm,'#f8ebe8');
+}
+const medInfo={
+  insulin:{art:insulinScene,head:'工程大肠杆菌制备人胰岛素',steps:[['改造对象','微生物 · 分别表达两条链'],['表达和回收','处理融合产物并分离两条链'],['制备产物','组装、纯化并确认活性']],end:'收集的是重组蛋白',note:'图示 1979 年早期路线。现代工艺还可从单链前体加工。'},
+  goat:{art:goatScene,head:'乳腺生物反应器生产抗凝血酶',steps:[['改造对象','山羊 · 将表达定位在泌乳组织'],['产物位置','重组人抗凝血酶进入乳汁'],['制备产物','从乳汁回收纯化并进行质控']],end:'乳汁是生产原料',note:'参考 ATryn 标签。乳腺特异表达指表达位置有选择。'},
+  organ:{art:organScene,head:'供体器官的免疫相容性改造',steps:[['改造对象','器官供体猪 · 选择抗原相关靶点'],['改变位置','减少器官组织表面部分异种抗原'],['评价对象','供体器官本身的功能和相容性']],end:'评价的是器官功能与相容性',note:'减少一个异种抗原后，还需检测其他免疫和生理问题。'}
+};
+function view3(t){
+  const d=medInfo[state.medicine],i=Math.min(2,Math.floor(t*3));
+  draw(3,headings('表达、分泌或抗原改造','比较受体、产物和证据')+d.art(t)+
+    checklist(d.steps,t)+tile(624,502,525,94,d.end,'比较改造的生物与最终使用的对象',teal));
+  say(3,'MEDICINE / 0'+(i+1),d.head,d.steps[i][1],d.end,d.note);
+}
+
+const curdThreshold=.42;
+function clot(u,mode){
+  const cleavage=mode==='active'?1-Math.exp(-3.2*u):0;
+  const aggregation=clamp((cleavage-curdThreshold)/(1-curdThreshold))**1.45;
+  return {cleavage,aggregation};
+}
+function fermenter(x,y,s){
+  return G(x,y,s,
+    P('M-57-35Q-57-62 0-62Q57-62 57-35V32Q55 64 0 64Q-55 64-57 32Z','#e4eef3','#72919f',2.4)+
+    P('M-49 3Q0 15 49 3V30Q45 54 0 54Q-45 54-49 30Z','#c8ddd4','#a0bbad',1.4)+
+    P('M0-73v108m-21-9h42m-25 8h48m-71 31v18m56-18v18M57 18h19v19h15','none','#688f9d',3.1)+
+    many(12,i=>E(-40+(i*17)%80,11+(i*11)%34,2.1,2.1,'#85ab9c')));
+}
+function micelle(x,y,s,cut){
+  return G(x,y,s,many(11,i=>{
+    const a=i*Math.PI*2/11,r=cut?15:26;
+    return P(`M${Math.cos(a)*12} ${Math.sin(a)*12}Q${Math.cos(a+.13)*20} ${Math.sin(a+.13)*20} ${Math.cos(a)*r} ${Math.sin(a)*r}`,
+      'none',cut?'#9eaec5':'#728bb0',2.2);
+  })+E(0,0,15,14,cut?'#9cb9a6':'#b4c5dc',cut?'#668e76':'#7790ad')+
+    many(8,i=>E(-9+(i*7)%18,-8+(i*11)%16,2.2,2.2,'#eef2ef')));
+}
+function milkArt(t,mode,model){
+  const {cleavage,aggregation}=model;
+  const cutCount=Math.round(cleavage*12),fill=mode==='active'?teal:mode==='heated'?warm:muted;
+  const upper=tile(42,88,503,62,'工程微生物表达 → 回收凝乳酶','',blue,'#edf4f7')+
+    fermenter(108,217,.69)+arrow('M180 215H242','#7d9e96')+
+    G(284,215,.8,R(-26,-42,52,89,'#eff5f1','#8aa7a0',8)+R(-26,-50,52,15,'#87a5a2','#638987',4)+
+      R(-20,7,40,29,'#bdccdb','none',4))+arrow('M327 214H401','#7d9e96')+
+    R(414,177,111,73,'#f2ede2','#c6af80',8)+
+    txt(469,205,mode==='active'?'活性酶':mode==='heated'?'失活酶':'未加酶','middle',fill,18,800)+
+    txt(469,230,mode==='none'?'空白处理':'加入奶液','middle',muted,16)+
+    O(mode==='none'?0:progress(t,.10,.13)*(1-progress(t,.22,.27)),E(469,251+64*progress(t,.11,.24),4.8,6.6,fill));
+  const scene=R(43,310,501,238,'#f1f5f5','#a9b8bd',11)+
+    R(52,319,483,220,aggregation>.42?'#f4f0dc':'#ecf3f3','none',10)+
+    many(12,i=>{
+      const col=i%6,row=Math.floor(i/6);
+      const x=mix(86+83*col,249+24*(i%4),aggregation);
+      const y=mix(374+111*row,462+19*Math.floor(i/4),aggregation);
+      return micelle(x,y,.91,i<cutCount);
+    })+
+    O(aggregation>.38?progress(aggregation,.38,.8):0,P('M173 516Q210 490 233 509Q254 480 272 505Q316 482 334 506Q365 492 394 518Z','#d7bc86','#a58a5b',2))+
+    (aggregation>.42?label(57,326,'淡黄液相 · 乳清示意'):'')+
+    tile(43,563,501,53,aggregation>.4?'胶束聚集 · 凝乳与乳清分开':cleavage>0?'胶束表面的稳定层正在减弱':'κ-酪蛋白外层稳定胶束','',teal);
+  return upper+scene;
+}
+function clotPlot(u,mode,model){
+  const p=plot('app-curd',688,163,439,271,[0,25,50,75,100],[0,25,50,75,100],
+    '教学模型 · 相同起点与不同处理','模拟反应进度 (%)','归一化读数 (%)');
+  const pts=Array.from({length:41},(_,i)=>{
+    const x=i/40*u;return {x:x*100,...clot(x,mode)};
+  });
+  const lineFor=(key,color,dash)=>line(pts.map(d=>({x:d.x,y:d[key]*100})),p,color,4,dash);
+  const exact=(v)=>Math.round(v*100)+'%';
+  return p.svg+scan(p,u*100)+lineFor('cleavage',blue,'7 5')+lineFor('aggregation',teal,'')+
+    chartDot(p,u*100,model.cleavage*100,blue,6)+chartDot(p,u*100,model.aggregation*100,teal,4.5)+
+    tile(624,513,250,70,'κ-酪蛋白切割 · '+exact(model.cleavage),'蓝色虚线',blue,'#edf3f7')+
+    tile(888,513,261,70,'胶束聚集 · '+exact(model.aggregation),'绿色实线',teal)+
+    rScript(640,615,['ggplot(clot, aes(progress, response)) + geom_line()']);
+}
+function view4(t){
+  const mode=state.enzyme,u=progress(t,.24,1),model=clot(u,mode);
+  const status=t<.24?'先追踪凝乳酶的来源':mode!=='active'?'对照组的胶束仍然分散':model.aggregation>.42?'胶束聚集，逐渐形成凝乳':model.cleavage>curdThreshold?'切割之后，开始聚集':'先观察 κ-酪蛋白切割';
+  const condition={active:'活性凝乳酶',none:'未加酶',heated:'热失活对照'}[mode];
+  draw(4,headings('从工程菌到奶液中的胶束','把切割和聚集分开记录')+milkArt(t,mode,model)+clotPlot(u,mode,model));
+  say(4,'FOOD ENZYME / '+condition,status,
+    t<.24?'用工程微生物表达、回收凝乳酶，再把酶制剂用于食品加工。':
+    mode==='active'?'切割表面 κ-酪蛋白削弱胶束的稳定层，随后胶束在适宜条件下聚集。':
+    '本对照缺少活性凝乳酶。相同起点下，酶促切割和随后的聚集在模型中保持基线。',
+    '切割 '+Math.round(model.cleavage*100)+'% · 聚集 '+Math.round(model.aggregation*100)+'%',
+    mode==='active'?'归一化教学模型。动画进度不等同于真实工艺时间。':'两条模型曲线在 0 处重合。');
+}
+
+const views=[view1,view2,view3,view4],durations=[12,13,12,14],initialTimes=[.54,.42,.54,.46];
+function change(i,key,value){state[key]=value;redraw(i)}
+const groups={crop:value=>change(0,'crop',value),animal:value=>change(1,'animal',value),
+  medicine:value=>change(2,'medicine',value),enzyme:value=>change(3,'enzyme',value)};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>

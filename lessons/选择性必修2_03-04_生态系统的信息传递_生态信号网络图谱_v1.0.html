@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FAF9F5">
+<title>生态系统的信息传递｜生态信号网络图谱 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+</style>
+</head>
+<body>
+<header>
+  <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">Σ</span><span>生态信号网络<small>ECOLOGICAL INFORMATION / 03.04</small></span></a>
+  <div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div>
+</header>
+<main id="top">
+  <section class="intro"><div><p class="eyebrow">选择性必修二 / 第3章 · 第4节</p><h1>生态系统的<em>信息传递</em></h1><p class="subtitle">从蜂巢里的舞步，到叶片释放的气味。四幅互动图追踪信号从产生、传播到被感知的过程。</p></div>
+  <div class="intro-note"><i>Ecological<br>Information Networks</i><p>转动蜜源方位，改写光照顺序，<br>再比较同一生态场景的三条轨道。</p><span class="pill">4 幅图谱 · 播放、暂停与回拖</span></div></section>
+  <nav aria-label="图谱目录"><a href="#figure1">01 信息编码</a><a href="#figure2">02 三个作用层次</a><a href="#figure3">03 农业应用</a><a href="#figure4">04 功能总图</a></nav>
+  <div id="svgLibrary" aria-hidden="true"><svg><defs><linearGradient id="sun-disc" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f5dc98"/><stop offset="1" stop-color="#d9a059"/></linearGradient><linearGradient id="wing" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f3f9f6"/><stop offset="1" stop-color="#a8c4c5"/></linearGradient><linearGradient id="bee-body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#efc279"/><stop offset="1" stop-color="#b17b3f"/></linearGradient><linearGradient id="wasp-body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ca955c"/><stop offset="1" stop-color="#7f573f"/></linearGradient><linearGradient id="bat-wing" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#a39eb1"/><stop offset="1" stop-color="#716f85"/></linearGradient><linearGradient id="moth-wing" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f0dfbf"/><stop offset="1" stop-color="#bd9b79"/></linearGradient><linearGradient id="seed-coat" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ddba89"/><stop offset="1" stop-color="#9b724c"/></linearGradient><linearGradient id="bird-body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#b2c6c4"/><stop offset="1" stop-color="#729092"/></linearGradient><linearGradient id="hen-body" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ebd7b2"/><stop offset="1" stop-color="#c79a70"/></linearGradient><linearGradient id="leaf-fill" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#b9cfa1"/><stop offset="1" stop-color="#729d71"/></linearGradient><linearGradient id="fungus-cap" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#d3bda0"/><stop offset="1" stop-color="#a38870"/></linearGradient><marker id="info-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker></defs></svg></div>
+  <section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+    <div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / ENCODE / TRANSMIT / RECEIVE</p><h2 id="heading1">蜜蜂怎样用一段舞传递方位和距离？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+    <div class="context"><div class="segmented" role="group" aria-label="信息分类"><button type="button" data-set="signal" data-value="physical" aria-pressed="false">物理信息</button><button type="button" data-set="signal" data-value="chemical" aria-pressed="false">化学信息</button><button type="button" data-set="signal" data-value="behavior" aria-pressed="true">行为信息</button><button type="button" data-set="signal" data-value="internal" aria-pressed="false">辨析 · 个体内信号</button></div><div class="variables"><label class="variable" for="angle"><span>蜜源方位 α</span><output id="angleValue" for="angle"></output><input id="angle" type="range" min="-90" max="90" step="1" value="36"></label><label class="variable" for="distance"><span>蜜源距离 D</span><output id="distanceValue" for="distance"></output><input id="distance" type="range" min="200" max="3000" step="10" value="1400"></label></div></div>
+    <div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 重看</button><label><span class="sr-only">第1图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+    <div class="scroll-stage" tabindex="0" aria-label="第1图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 820" role="img" aria-label="蜜蜂怎样用一段舞传递方位和距离？"></svg></div>
+    <p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+    <p class="code-note">R 图形语法 · SVG 实现　ggplot(waggle, aes(Distance_m, Duration_s)) + geom_point() + geom_smooth(method = &quot;lm&quot;, se = TRUE) + theme_gray()</p>
+    <div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+    <details class="extra"><summary>查看模拟观测、拟合与分类依据</summary><div id="fitSummary"></div><div id="danceTable"></div><p>绿色、超声、闪光、蛛网振动按传播载体可判为物理信息。孔雀开屏与摇摆舞侧重作为信息的动作。蚕蛾醇、能影响受体的樟树挥发物可构成生态化学信息。同一个体内的激素和神经递质另按生理调节讨论。</p><p>距离和直段时长的校准取决于蜂群、环境和飞行视觉线索等条件。蓝带描述拟合均值的不确定度，单次舞段波动可更大。动画腹摆频率固定用于显示动作，回环示意持续 0.65 秒。</p></details><p class="fig-caption"><b>Figure 1.</b> 左图用同一个角度参数连接太阳参照与巢脾竖直参照。32 个距离—时长点为教学模拟，蓝带是回归均值的 95% 置信区间。 <sup class="cites"><a href="https://doi.org/10.1126/science.185.4152.663" target="_blank" rel="noopener noreferrer" aria-label="参考资料1：von Frisch, 1974 · Science 185, 663–668">[1]↗</a> <a href="https://doi.org/10.1016/j.anbehav.2019.01.016" target="_blank" rel="noopener noreferrer" aria-label="参考资料2：Schürch et al., 2019 · Animal Behaviour 150, 139–145">[2]↗</a> <a href="https://doi.org/10.1515/znb-1959-0417" target="_blank" rel="noopener noreferrer" aria-label="参考资料3：Butenandt et al., 1959 · Zeitschrift für Naturforschung B 14, 283–284">[3]↗</a> <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料10：Shannon, 1948 · Bell System Technical Journal 27, 379–423">[10]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料13：人民教育出版社 · 选择性必修2《生物与环境》">[13]↗</a></sup></p>
+  </section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+    <div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / RESPONSE / REPRODUCTION / RELATIONSHIPS</p><h2 id="heading2">光和气味怎样改变萌发、繁殖与种间关系？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+    <div class="context"><div class="segmented" role="group" aria-label="作用层次"><button type="button" data-set="level" data-value="individual" aria-pressed="true">I · 个体</button><button type="button" data-set="level" data-value="population" aria-pressed="false">II · 种群</button><button type="button" data-set="level" data-value="community" aria-pressed="false">III · 种间关系</button></div><div class="dependent" data-level-panel="individual"><div class="segmented" role="group" aria-label="莴苣光照">
+        <button type="button" data-pulse="R">照射红光 R</button><button type="button" data-pulse="F">照射远红光 FR</button><button type="button" id="clearPulses">清空光照</button>
+      </div><p class="sequence">照射历史 <output id="pulseHistory"></output></p></div>
+      <div class="dependent" data-level-panel="population" hidden><div class="segmented" role="group" aria-label="光周期"><button type="button" data-set="daylength" data-value="long" aria-pressed="true">长日 · 16 小时</button><button type="button" data-set="daylength" data-value="short" aria-pressed="false">短日 · 8 小时</button></div></div>
+      <div class="dependent" data-level-panel="community" hidden><div class="segmented" role="group" aria-label="叶片气味处理"><button type="button" data-set="odor" data-value="intact" aria-pressed="false">健康叶</button><button type="button" data-set="odor" data-value="wound" aria-pressed="false">机械伤</button><button type="button" data-set="odor" data-value="herbivore" aria-pressed="true">虫害 / 伤口加口腔分泌物</button></div></div></div>
+    <div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 重看</button><label><span class="sr-only">第2图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+    <div class="scroll-stage" tabindex="0" aria-label="第2图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 820" role="img" aria-label="光和气味怎样改变萌发、繁殖与种间关系？"></svg></div>
+    <p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+    <p class="code-note">R 图形语法 · SVG 实现　ggplot(assay, aes(Treatment, Response, fill = Treatment)) + geom_col() + geom_errorbar(aes(ymin = Lo, ymax = Hi)) + facet_wrap(~ Assay, scales = &quot;free_x&quot;)</p>
+    <div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+    <details class="extra"><summary>查看莴苣原表、气味对照与实验条件</summary><div id="lettuceTable"></div><div id="odorTable"></div><p>原论文用 IR 表示所用远红波段。各组由 R 开始交替，依次比较末次有效照射的效果。温度、吸胀、波长、剂量与种子状态均会影响萌发。Pfr 条仅作机制示意。Wilson 区间假设各组计数为独立二项记录，原表未报告此误差条。</p><p>Volicitin 属脂肪酸–氨基酸结合物，可诱导植物释放挥发物。幼虫口腔分泌物接触伤口与寄生蜂接收空气气味是两条信息路径。气味图的分母为每种处理的独立测试次数，包含未趋向目标气味的试次。</p></details><p class="fig-caption"><b>Figure 2.</b> 莴苣原表每组 200 粒。远红光逆转表现为萌发率降低，在原实验条件下仍有种子萌发。气味柱为教学独立比较（各 100 次），误差线均为按计数补算的 Wilson 95% 区间。 <sup class="cites"><a href="https://doi.org/10.1515/znb-1959-0417" target="_blank" rel="noopener noreferrer" aria-label="参考资料3：Butenandt et al., 1959 · Zeitschrift für Naturforschung B 14, 283–284">[3]↗</a> <a href="https://doi.org/10.1073/pnas.38.8.662" target="_blank" rel="noopener noreferrer" aria-label="参考资料4：Borthwick et al., 1952 · PNAS 38, 662–666">[4]↗</a> <a href="https://ndlsearch.ndl.go.jp/books/R100000136-I1573105976197360128" target="_blank" rel="noopener noreferrer" aria-label="参考资料5：Garner &amp; Allard, 1920 · Journal of Agricultural Research 18, 553–606">[5]↗</a> <a href="https://doi.org/10.1126/science.250.4985.1251" target="_blank" rel="noopener noreferrer" aria-label="参考资料6：Turlings, Tumlinson &amp; Lewis, 1990 · Science 250, 1251–1253">[6]↗</a> <a href="https://doi.org/10.1126/science.276.5314.945" target="_blank" rel="noopener noreferrer" aria-label="参考资料7：Alborn et al., 1997 · Science 276, 945–949">[7]↗</a> <a href="https://doi.org/10.1016/j.cub.2010.02.052" target="_blank" rel="noopener noreferrer" aria-label="参考资料9：Baldwin, 2010 · Current Biology 20, R392–R397">[9]↗</a></sup></p>
+  </section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+    <div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / AGRICULTURE / COMPARE THE INTERVENTION</p><h2 id="heading3">同样为了控害，三种手段在哪个环节起作用？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+    <div class="context"><div class="segmented" role="group" aria-label="农业应用"><button type="button" data-set="application" data-value="light" aria-pressed="true">调光产蛋</button><button type="button" data-set="application" data-value="sound" aria-pressed="false">模拟声与传粉</button><button type="button" data-set="application" data-value="lamp" aria-pressed="false">黑光灯</button><button type="button" data-set="application" data-value="pheromone" aria-pressed="false">性信息素</button><button type="button" data-set="application" data-value="bird" aria-pressed="false">鸟类警戒声</button></div><div class="dependent"><span class="hint">右图对照方案</span><div class="segmented" role="group" aria-label="防治模型"><button type="button" data-set="treatment" data-value="all" aria-pressed="true">全部比较</button><button type="button" data-set="treatment" data-value="chemical" aria-pressed="false">化学农药</button><button type="button" data-set="treatment" data-value="pheromone" aria-pressed="false">性信息素迷向</button><button type="button" data-set="treatment" data-value="mechanical" aria-pressed="false">机械捕除</button></div></div></div>
+    <div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 重看</button><label><span class="sr-only">第3图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+    <div class="scroll-stage" tabindex="0" aria-label="第3图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 820" role="img" aria-label="同样为了控害，三种手段在哪个环节起作用？"></svg></div>
+    <p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+    <p class="code-note">R 图形语法 · SVG 实现　ggplot(pests, aes(Day, Index, colour = Treatment)) + geom_line() + geom_hline(yintercept = 40); ggplot(metrics, aes(Treatment, Value, fill = Treatment)) + geom_col() + facet_wrap(~ Metric, scales = &quot;free_y&quot;)</p>
+    <div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+    <details class="extra"><summary>查看模型假设和三项指标的读法</summary><div id="metricTable"></div><p>初始害虫指数为62，日增长项含密度反馈、繁殖系数和天敌作用。第5日的广谱药使易感个体保留21%、抗性个体保留70%、天敌保留28%。药后天敌逐步恢复。图中抗性比例的跳升来自当次筛选，后续回升主要由模型中暂时减弱的天敌压力与密度反馈驱动。</p><p>迷向从第5日起降低交配带来的补充量。机械捕除从第5日起每10天进行一次。残留压力为模型中0–100指数的峰值，天敌保留为第7日相对初值，持续日数为第5至56日内低于40的最长连续天数。真实治理还受药剂选择性、田块大小、害虫密度、天敌及监测结果影响。</p></details><p class="fig-caption"><b>Figure 3.</b> 右侧为同起点教学模型。药、迷、机分别表示化学农药、性信息素迷向和机械捕除。各柱使用自己的单位，示意阈值用于比较曲线。 <sup class="cites"><a href="https://doi.org/10.1007/s10886-009-9737-y" target="_blank" rel="noopener noreferrer" aria-label="参考资料8：Witzgall, Kirsch &amp; Cork, 2010 · Journal of Chemical Ecology 36, 80–100">[8]↗</a> <a href="https://doi.org/10.1093/ps/79.5.778" target="_blank" rel="noopener noreferrer" aria-label="参考资料11：Nøddegaard, Talbot &amp; Sharp, 2000 · Poultry Science 79, 778–783">[11]↗</a> <a href="https://ageconsearch.umn.edu/record/381505/files/v29n02p081.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料12：Stern et al., 1959 · Hilgardia 29, 81–101">[12]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料13：人民教育出版社 · 选择性必修2《生物与环境》">[13]↗</a> <a href="https://ipm.ucanr.edu/what-is-ipm/" target="_blank" rel="noopener noreferrer" aria-label="参考资料14：UC Statewide IPM Program · What is IPM?">[14]↗</a></sup></p>
+  </section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+    <div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / SYNTHESIS / THREE FUNCTIONS, ONE ECOSYSTEM</p><h2 id="heading4">同一片田里，能量、元素和信号各走哪条路？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+    <div class="context"><div class="segmented" role="group" aria-label="生态系统功能轨道"><button type="button" data-set="layer" data-value="all" aria-pressed="true">三轨叠加</button><button type="button" data-set="layer" data-value="energy" aria-pressed="false">能量 · 实线</button><button type="button" data-set="layer" data-value="matter" aria-pressed="false">物质 · 长虚线</button><button type="button" data-set="layer" data-value="info" aria-pressed="false">信息 · 点线</button></div></div>
+    <div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 重看</button><label><span class="sr-only">第4图时间轴</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+    <div class="scroll-stage" tabindex="0" aria-label="第4图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 820" role="img" aria-label="同一片田里，能量、元素和信号各走哪条路？"></svg></div>
+    <p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+    
+    <div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+    <details class="extra"><summary>三大功能答题矩阵</summary><div class="table-scroll"><table><caption>同一过程的三个视角</caption><thead><tr><th scope="col">比较项</th><th scope="col">能量流动</th><th scope="col">物质循环</th><th scope="col">信息传递</th></tr></thead><tbody><tr><th scope="row">方向</th><td>单向，沿营养级传递逐级递减</td><td>元素在环境与生物群落间循环</td><td>生物之间常有双向联系，单条信号有方向</td></tr><tr><th scope="row">途径</th><td>摄食、碎屑和热散失</td><td>固定、摄食、排泄、分解、呼吸</td><td>信道可为空气、水、基质等，受体感知后产生效应</td></tr><tr><th scope="row">范围</th><td>明确时间与系统输入输出</td><td>局部系统开放，元素循环可达全球尺度</td><td>随信号强度、媒介及受体而变</td></tr><tr><th scope="row">联系</th><td>提供生命活动动力</td><td>构成结构并携带能量</td><td>调节能流和物流的途径与速率</td></tr></tbody></table></div></details><p class="fig-caption"><b>Figure 4.</b> 青绿路线以碳为例。外界可同时交换输入和输出，全球尺度可见元素循环。紫色各箭头各有自己的发出方与接收方。 <sup class="cites"><a href="https://doi.org/10.1126/science.250.4985.1251" target="_blank" rel="noopener noreferrer" aria-label="参考资料6：Turlings, Tumlinson &amp; Lewis, 1990 · Science 250, 1251–1253">[6]↗</a> <a href="https://doi.org/10.1016/j.cub.2010.02.052" target="_blank" rel="noopener noreferrer" aria-label="参考资料9：Baldwin, 2010 · Current Biology 20, R392–R397">[9]↗</a> <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料10：Shannon, 1948 · Bell System Technical Journal 27, 379–423">[10]↗</a> <a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer" aria-label="参考资料13：人民教育出版社 · 选择性必修2《生物与环境》">[13]↗</a></sup></p>
+  </section>
+  <section class="references"><h2>References / 原文与数据出处</h2><p>插画为原创机制示意，统计图为 ggplot2 视觉语法的 SVG 实现。各图标明原表记录、概念示意与教学模拟。</p>
+    <ol><li id="ref-1"><a href="https://doi.org/10.1126/science.185.4152.663" target="_blank" rel="noopener noreferrer">[1] von Frisch, 1974 · Science 185, 663–668 ↗</a><span>Decoding the Language of the Bee。1973 年诺奖演讲的期刊版，支持舞蹈编码方向与距离。</span></li><li id="ref-2"><a href="https://doi.org/10.1016/j.anbehav.2019.01.016" target="_blank" rel="noopener noreferrer">[2] Schürch et al., 2019 · Animal Behaviour 150, 139–145 ↗</a><span>Dismantling Babel。对已知觅食距离做摇摆舞校准。图1拟合使用教学模拟样本。</span></li><li id="ref-3"><a href="https://doi.org/10.1515/znb-1959-0417" target="_blank" rel="noopener noreferrer">[3] Butenandt et al., 1959 · Zeitschrift für Naturforschung B 14, 283–284 ↗</a><span>家蚕蛾性吸引物质的分离及结构鉴定。</span></li><li id="ref-4"><a href="https://doi.org/10.1073/pnas.38.8.662" target="_blank" rel="noopener noreferrer">[4] Borthwick et al., 1952 · PNAS 38, 662–666 ↗</a><span>A Reversible Photoreaction Controlling Seed Germination。表1为图2莴苣的数值来源。</span></li><li id="ref-5"><a href="https://ndlsearch.ndl.go.jp/books/R100000136-I1573105976197360128" target="_blank" rel="noopener noreferrer">[5] Garner &amp; Allard, 1920 · Journal of Agricultural Research 18, 553–606 ↗</a><span>日夜相对长度影响植物生长和繁殖的经典研究。链接为日本国立国会图书馆书目。</span></li><li id="ref-6"><a href="https://doi.org/10.1126/science.250.4985.1251" target="_blank" rel="noopener noreferrer">[6] Turlings, Tumlinson &amp; Lewis, 1990 · Science 250, 1251–1253 ↗</a><span>玉米受害诱导萜类挥发物，绒茧蜂可学习利用这些气味寻找宿主。</span></li><li id="ref-7"><a href="https://doi.org/10.1126/science.276.5314.945" target="_blank" rel="noopener noreferrer">[7] Alborn et al., 1997 · Science 276, 945–949 ↗</a><span>从甜菜夜蛾幼虫口腔分泌物中鉴定 Volicitin，验证伤口施加后的诱导作用。</span></li><li id="ref-8"><a href="https://doi.org/10.1007/s10886-009-9737-y" target="_blank" rel="noopener noreferrer">[8] Witzgall, Kirsch &amp; Cork, 2010 · Journal of Chemical Ecology 36, 80–100 ↗</a><span>昆虫性信息素用于监测、诱捕及交配干扰的综述。</span></li><li id="ref-9"><a href="https://doi.org/10.1016/j.cub.2010.02.052" target="_blank" rel="noopener noreferrer">[9] Baldwin, 2010 · Current Biology 20, R392–R397 ↗</a><span>Plant Volatiles。植物挥发物的生态作用综述。</span></li><li id="ref-10"><a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x" target="_blank" rel="noopener noreferrer">[10] Shannon, 1948 · Bell System Technical Journal 27, 379–423 ↗</a><span>A Mathematical Theory of Communication。通信链术语的理论背景。</span></li><li id="ref-11"><a href="https://doi.org/10.1093/ps/79.5.778" target="_blank" rel="noopener noreferrer">[11] Nøddegaard, Talbot &amp; Sharp, 2000 · Poultry Science 79, 778–783 ↗</a><span>光刺激可影响试验母鸡的促黄体生成素与产蛋表现，效果依生理条件变化。</span></li><li id="ref-12"><a href="https://ageconsearch.umn.edu/record/381505/files/v29n02p081.pdf" target="_blank" rel="noopener noreferrer">[12] Stern et al., 1959 · Hilgardia 29, 81–101 ↗</a><span>The Integrated Control Concept。区分经济阈值与经济损害水平。</span></li><li id="ref-13"><a href="https://jc.pep.com.cn/" target="_blank" rel="noopener noreferrer">[13] 人民教育出版社 · 选择性必修2《生物与环境》 ↗</a><span>第3章第4节《生态系统的信息传递》。链接为教材入口，页码随印次核对。</span></li><li id="ref-14"><a href="https://ipm.ucanr.edu/what-is-ipm/" target="_blank" rel="noopener noreferrer">[14] UC Statewide IPM Program · What is IPM? ↗</a><span>综合治理工具包括生物、耕作、物理/机械及化学手段，依据作用机制区分。</span></li><li id="ref-15"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank" rel="noopener noreferrer">[15] ggplot2 · Complete themes ↗</a><span>绘图区、网格与分面条的主题规范。</span></li><li id="ref-16"><a href="https://nanx.me/ggsci/reference/scale_npg.html" target="_blank" rel="noopener noreferrer">[16] ggsci · NPG journal color scales ↗</a><span>NPG 配色尺度的官方参考。</span></li></ol>
+  </section>
+  <footer><span>林默然生物课件 · 原创交互图谱</span><span>生态系统的信息传递 / v1.0 · 2026-11-07</span></footer>
+</main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY / ECOLOGICAL INFORMATION</p><h2 id="reviewTitle">信息类型、作用层次与防治速查</h2><div class="table-scroll"><table><caption>答题时先指出发送者、媒介与接收者</caption><thead><tr><th scope="col">主题</th><th scope="col">可用表述</th></tr></thead><tbody><tr><th scope="row">信息四环节</th><td>谁产生信息，经哪种信道，被谁接收，发生了什么变化？</td></tr><tr><th scope="row">三类信息</th><td>光、声、振动为物理线索。信息素和挥发物是化学线索。舞蹈、求偶动作可按行为信息判别。</td></tr><tr><th scope="row">作用层次</th><td>个体活动受到调节，种群繁殖受影响，种间关系改变后可影响群落和生态系统稳定。</td></tr><tr><th scope="row">末次照射</th><td>在所给处理条件下，末次有效照射的波段主要改变 Pr 与 Pfr 的平衡，并改变萌发趋势。</td></tr><tr><th scope="row">三个防治类别</th><td>化学药剂杀伤、利用天敌等生物防治、装置捕除等物理或机械防治。信息素迷向是行为调控，分类需结合题目口径。</td></tr><tr><th scope="row">农业判断</th><td>诱捕使部分个体被移除，迷向干扰交配。以同一物种与样地的实际监测验证效果。</td></tr><tr><th scope="row">三个基本功能</th><td>能量提供动力，物质构成并携带，信息调节活动、相互作用及过程。</td></tr></tbody></table></div></dialog>
+<script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+const palette = {...C, violet:'#7656A1', gold:'#A77033', sage:'#577C64', soil:'#E8D8C5'};
+const states = {signal:'behavior', angle:36, distance:1400, level:'individual', pulses:[], daylength:'long', odor:'herbivore', application:'light', treatment:'all', layer:'all'};
+const signalCases = {
+  physical:{name:'物理信息', color:'#346685', rows:[['蝙蝠发声','超声波与回波'],['空气','波传播并反射'],['蝙蝠听觉系统','耳接收回声'],['判断猎物位置','调整飞行路径']], note:'超声、萤火虫发光、蛛网振动、草地的绿色都可按物理信号理解。示例包括生物与环境之间的往返过程。'},
+  chemical:{name:'化学信息', color:'#257467', rows:[['雌家蚕蛾','释放蚕蛾醇'],['空气','气味随气流传播'],['雄家蚕蛾','触角感受挥发物'],['趋向雌蛾','有助于找到配偶']], note:'蚕蛾醇是种内信息素。樟树释放的萜类若被其他生物感知并引起响应，也可构成生态化学信息。'},
+  behavior:{name:'行为信息', color:'#7656A1', rows:[['侦察蜂','产生摇摆舞'],['蜂巢表面及近场','振动、接触等线索'],['跟随蜂','触角等感觉结构'],['定位蜜源','按方向与距离搜寻']], note:'蜜蜂摇摆舞、孔雀开屏按所编码的动作判为行为信息。接收动作时也可能用到振动、气流等物理载体。'},
+  internal:{name:'个体内信号', color:'#AC443B', rows:[['分泌细胞','例如甲状腺细胞'],['同一个体内部','例如血液运输'],['同一个体内靶细胞','通过受体接收'],['调节个体生理','例如代谢改变']], note:'生长素、甲状腺激素和神经递质在本例中调节同一个体内部。分类前先划定边界：生态信息发生在个体之间，或生物与非生物环境之间。'}
+};
+
+// Fixed teaching observations. Independent calibration is assumed for the illustrative confidence band.
+const beeDistances = [200,500,850,1200,1650,2100,2550,3000];
+const beeResiduals = [
+  [-.10,.02,.07,-.02], [.13,-.07,-.13,.04], [.01,-.12,.08,.16], [-.17,.10,.03,-.07],
+  [.17,.03,-.11,-.06], [-.13,.05,.19,-.01], [-.17,-.05,.05,.15], [.19,-.07,.07,-.15]
+];
+const danceObservations = beeDistances.flatMap((x,i)=>beeResiduals[i].map(e=>({x,y:+(.29+.00087*x+e).toFixed(3)})));
+const nDance = danceObservations.length;
+const xMean = danceObservations.reduce((s,d)=>s+d.x,0)/nDance;
+const yMean = danceObservations.reduce((s,d)=>s+d.y,0)/nDance;
+const sxx = danceObservations.reduce((s,d)=>s+(d.x-xMean)**2,0);
+const slope = danceObservations.reduce((s,d)=>s+(d.x-xMean)*(d.y-yMean),0)/sxx;
+const intercept = yMean-slope*xMean;
+const fitDance = x=>intercept+slope*x;
+const sse = danceObservations.reduce((s,d)=>s+(d.y-fitDance(d.x))**2,0);
+const sst = danceObservations.reduce((s,d)=>s+(d.y-yMean)**2,0);
+const residualSD = Math.sqrt(sse/(nDance-2));
+const danceFit = {n:nDance,slope,intercept,r2:1-sse/sst,residualSD,at:fitDance,band(x){
+  const margin = 2.042272456*residualSD*Math.sqrt(1/nDance+(x-xMean)**2/sxx);
+  return {x,y:fitDance(x),lo:fitDance(x)-margin,hi:fitDance(x)+margin};
+}};
+const danceBand = Array.from({length:71},(_,i)=>danceFit.band(200+i*40));
+
+function wilson(k,n){
+  const z=1.95996398454, p=k/n, a=1+z*z/n;
+  const middle=(p+z*z/(2*n))/a;
+  const half=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/a;
+  return {value:100*p,lo:100*clamp(middle-half),hi:100*clamp(middle+half)};
+}
+const lettuceCounts = [17,196,108,200,86,198,108,196];
+const lettuce = lettuceCounts.map((k,i)=>{
+  const key=Array.from({length:i},(_,j)=>j%2?'F':'R').join('');
+  return {key,k,n:200,label:key.replaceAll('F','FR')||'暗对照', ...wilson(k,200)};
+});
+const odors = [
+  {id:'intact',label:'健康叶',k:5,n:100,color:'#899D9B'},
+  {id:'wound',label:'机械伤',k:12,n:100,color:C.orange},
+  {id:'herbivore',label:'虫害处理',k:86,n:100,color:C.green}
+].map(d=>({...d,...wilson(d.k,d.n)}));
+function photoState(pulses){
+  let fraction=.12;
+  for(const pulse of pulses) fraction=pulse==='R'?.89+.09*fraction:.32+.12*fraction;
+  const match=lettuce.find(row=>row.key===pulses.join(''));
+  return {fraction,match,last:pulses.at(-1)||'dark',sprout:match?match.value/100:clamp((fraction-.08)/.82)};
+}
+const treatmentStyles = {
+  control:{label:'未处理',color:'#68777F',dash:'5 5'},
+  chemical:{label:'化学农药',color:C.red,dash:''},
+  pheromone:{label:'性信息素迷向',color:C.green,dash:'8 4'},
+  mechanical:{label:'机械捕除',color:C.blue,dash:'2 5'}
+};
+const days = 56, threshold = 40;
+function pestTrajectory(mode){
+  let abundance=62, enemy=1, resistant=.08;
+  const rows=[{x:0,y:abundance,enemy,resistant,residue:0}];
+  for(let day=1;day<=days;day++){
+    enemy += .022*(1-enemy);
+    const mating = mode==='pheromone'&&day>=5?.075:1;
+    abundance *= 1+.143*mating*(1-abundance/132)-.042*enemy;
+    if(mode==='chemical'&&day===5){
+      const survivors=.21*(1-resistant)+.7*resistant;
+      abundance*=survivors;
+      resistant*=.7/survivors;
+      enemy*=.28;
+    }
+    if(mode==='mechanical'&&day>=5&&(day-5)%10===0){
+      abundance*=.73;
+      enemy*=.96;
+    }
+    const residue = mode==='chemical'&&day>=5?85*Math.exp(-.115*(day-5)):0;
+    rows.push({x:day,y:abundance,enemy,resistant,residue});
+  }
+  return rows;
+}
+const treatmentData = Object.fromEntries(Object.keys(treatmentStyles).map(key=>[key,pestTrajectory(key)]));
+const treatmentKeys = ['chemical','pheromone','mechanical'];
+function longestBelow(rows){
+  let run=0,longest=0;
+  for(const d of rows.slice(5)){
+    run=d.y<threshold?run+1:0;
+    longest=Math.max(longest,run);
+  }
+  return longest;
+}
+const metrics = treatmentKeys.map(id=>{
+  const rows=treatmentData[id];
+  return {id,residue:Math.max(...rows.map(r=>r.residue)),enemy:rows[7].enemy*100,duration:longestBelow(rows)};
+});
+const functionRows = [
+  ['方向','单向，逐级递减','元素循环往复','常见双向，单条有向'],
+  ['途径','摄食、碎屑与散热','生物群落 ↔ 环境','随信道传至受体'],
+  ['尺度','按系统边界核算','局部交换、全球循环','随信号与接收范围'],
+  ['联系','提供生命活动动力','构成生物和物质载体','调节途径与速率']
+];
+
+const point = (x,y,r,deg) => [x+r*Math.sin(deg*Math.PI/180),y-r*Math.cos(deg*Math.PI/180)];
+const curve = (a,b,c,d,t) => a.map((v,i)=>v*(1-t)**3+3*b[i]*(1-t)**2*t+3*c[i]*(1-t)*t*t+d[i]*t**3);
+function trail(a,b,c,d,t,color,count=12){
+  return many(count,i=>{
+    const f=(t*1.8+i/count)%1, [x,y]=curve(a,b,c,d,f);
+    return O(.32+.62*Math.sin(f*Math.PI),E(x,y,2.6+(i%3)*.6,2.6+(i%3)*.6,color));
+  });
+}
+function arcs(x,y,t,color,heading=0,scale=1){
+  return G(x,y,scale,many(4,i=>{
+    const f=(t*1.7+i/4)%1,r=12+f*72;
+    return O(1-f,P(`M${r*.72} ${-r*.69}A${r} ${r} 0 0 1 ${r*.72} ${r*.69}`,'none',color,2.6));
+  }),heading);
+}
+function vector(d,color,width=3,marker='info-arrow',dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${width}" stroke-linecap="round" stroke-dasharray="${dash}" marker-end="url(#${marker})"/>`;
+}
+function sun(x,y,s){
+  return G(x,y,s,many(12,i=>{const a=i*30, u=point(0,0,25,a), v=point(0,0,34,a);return P(`M${u.join(' ')}L${v.join(' ')}`,'none','#AF772C',2.5)})+E(0,0,19,19,'url(#sun-disc)','#A77531'));
+}
+function bee(x,y,s,heading=0,flap=0,kind='bee'){
+  const wasp=kind==='wasp', dark=wasp?'#492E25':'#543D2C';
+  const wings = [-1,1].map(side=>`<g transform="scale(${side} 1) rotate(${flap*side})">`+
+    P('M5 -3C16 -24 44 -36 45 -23C48 -9 28 7 11 11Z','url(#wing)','#749499',1)+
+    P('M8 6C29 -1 36 4 31 13C27 21 15 23 8 16Z','#c9e2dfbb','#749499',.8)+
+    P('M9 5Q28 -12 42 -23M20 -5l8 -13M20 -5l11 -1M11 12l16 1','none','#8ca5a2',.85)+'</g>').join('');
+  const legs = [-1,1].map(side=>`<g transform="scale(${side} 1)">`+
+    P('M8 -9L19 -16L25 -13M9 -1L23 2L27 8M8 7L20 18L27 19','none',dark,1.5)+
+    P('M4 -22Q12 -35 16 -36','none',dark,1.5)+E(16,-36,2,1.4,dark)+'</g>').join('');
+  const abdomen = wasp?
+    P('M-2 8L-1 19C-12 26 -10 44 0 49C11 42 11 25 1 19L2 8Z','url(#wasp-body)',dark,1.2)+P('M-8 30q8 4 16 0M-8 37q8 4 16 0','none','#aa6940',1)+P('M1 47q3 9 -1 17','none',dark,1):
+    P('M0 3C-14 3 -17 19 -11 31Q-5 43 0 44Q11 39 14 25C17 11 11 4 0 3Z','url(#bee-body)',dark,1.25)+
+    P('M-13 15Q0 22 13 15M-13 24Q0 31 13 24M-8 33Q0 38 8 33','none',dark,3.6);
+  return G(x,y,s,legs+wings+abdomen+E(0,-4,wasp?7:11,11,wasp?'#78543c':'#ad7234',dark)+E(0,-17,8,7,dark)+E(-4.5,-18,2.4,4.6,'#192a32')+E(4.5,-18,2.4,4.6,'#192a32'),heading);
+}
+function flower(x,y,s,shade='#DAA14F'){
+  return G(x,y,s,P('M0 50C-2 24 4 14 0 0M0 34Q-18 13 -26 24Q-13 37 0 37M1 28Q13 8 24 14Q17 28 1 30','#79a477','#557e5e',1.2)+many(8,i=>{
+    const [px,py]=point(0,0,10,i*45);return `<ellipse cx="${px}" cy="${py}" rx="5" ry="10" transform="rotate(${i*45} ${px} ${py})" fill="${shade}" stroke="#ad7656" stroke-width=".6"/>`;
+  })+E(0,0,7,7,'#986733','#78522f')+many(6,i=>{const [px,py]=point(0,0,3.5,i*60);return E(px,py,1,1,'#ebc674')}));
+}
+function bat(x,y,s,wing=0){
+  const wings = [-1,1].map(side=>`<g transform="scale(${side} 1) rotate(${wing*side})">`+
+    P('M2 2Q20 -11 35 -30Q56 -42 81 -31L104 -21Q82 -15 79 5Q64 -9 52 15Q38 4 29 24Q20 16 5 22Z','url(#bat-wing)','#4f526b',1.4)+
+    P('M5 9Q31 -14 44 -30M43 -27Q74 -30 100 -21M42 -25Q63 -16 79 5M42 -25Q44 -5 52 15M38 -20Q25 2 29 24','none','#727387',1)+'</g>').join('');
+  return G(x,y,s,wings+P('M-10 13Q-16 -3 -10 -11L-11 -29L-2 -21L5 -21L13 -29L10 -9Q17 6 9 19L1 28Z','#777185','#4d4b62',1.1)+E(-4,-12,1.5,1.5,'#f5dda4')+E(5,-12,1.5,1.5,'#f5dda4'));
+}
+function moth(x,y,s,angle=0){
+  const wings=[-1,1].map(side=>`<g transform="scale(${side} 1)">`+
+    P('M4 -3Q18 -13 37 -10Q55 5 42 24Q23 36 6 19Z','#e0cba6','#9b7e64',1.1)+
+    P('M3 -13Q19 -38 59 -37Q61 -22 50 -3Q30 15 6 12Z','url(#moth-wing)','#9a7c64',1.2)+
+    P('M7 -8Q30 -13 57 -31M13 -3Q25 -5 49 -12M16 3Q29 7 41 3','none','#a68a72',1)+
+    P('M28 -27q9 4 16 -3M32 -19q8 2 14 -3','none','#b2987a',2)+
+    P('M3 -20Q15 -37 22 -34M10 -30l0 -7m3 4l4 -6m-1 5l6 -3','none','#6b5749',1.2)+'</g>').join('');
+  return G(x,y,s,wings+E(0,10,7,20,'#bca185','#795e4d')+E(0,-9,8,12,'#c6af93','#795e4d')+E(0,-20,5,5,'#927661'),angle);
+}
+function seed(x,y,s,growth=0){
+  const g=clamp(growth), d=18*g, leaf=phase(g,.52,1);
+  return G(x,y,s,P('M-15 8C-22 -8 -8 -31 11 -27C28 -18 22 5 8 19Q-5 27 -15 8Z','url(#seed-coat)','#79583d',1.1)+
+    P('M-11 10Q-2 -11 11 -21M-6 15Q5 6 15 -13','none','#c39c6e',.9)+
+    (g>0?P(`M7 15Q22 ${18+d*.5} 11 ${21+d}T15 ${23+d*2.1}`,'none','#f7edc6',3.5)+P(`M1 -18Q0 ${-25-d*.5} -4 ${-25-d*1.3}`,'none','#4a8b67',2):'')+
+    O(leaf,P(`M-4 ${-25-d*1.3}q-11 -12 -23 -7q9 15 23 7q10 -14 21 -12q-4 12 -21 12Z`,'#73a37a','#3f7b57',1)));
+}
+function cornPlant(x,y,s,damage=0){
+  const leaves=[
+    'M0 -102C-21 -145 -42 -141 -74 -132C-36 -132 -22 -106 0 -92Z',
+    'M1 -136C20 -178 52 -171 84 -162C45 -164 23 -132 1 -128Z',
+    'M2 -171C-23 -204 -51 -208 -81 -191C-51 -199 -25 -170 2 -158Z',
+    'M3 -188C29 -231 61 -217 89 -202C47 -220 22 -188 3 -180Z',
+    'M3 -211C-11 -244 -35 -261 -57 -254C-25 -247 -13 -220 3 -207Z'
+  ];
+  return G(x,y,s,P('M0 0Q-4 -103 4 -228','none','#568153',6)+leaves.map((d,i)=>P(d,i%2?'#88ad76':'#71a075','#4f805a',1.2)).join('')+
+    P('M1 -96Q-34 -127 -63 -132M2 -134Q44 -169 73 -162M3 -164Q-27 -193 -68 -194M4 -183Q43 -212 76 -205M4 -216Q-21 -249 -49 -252','none','#aac5a0',1.5)+
+    P('M3 -222l-2 -43m1 23l-16 -19m17 17l16 -22m-17 12l-8 -20m10 17l10 -18','none','#ab8e51',2)+
+    P('M-2 -126Q-28 -144 -20 -165Q-5 -176 1 -157Z','#b6ba78','#64844f',1.1)+
+    P('M-16 -150q-11 -15 -12 -25m12 20q-4 -13 -3 -20','none','#b49a62',1.2)+
+    (damage?P('M72 -205q-2 7 8 9l11 -6l-6 -9l-13 -3Z','#EFF4EB','none')+E(54,-204,5,2,'#e2ead9','#4f805a'):''));
+}
+function caterpillar(x,y,s,flex=0){
+  return G(x,y,s,many(7,i=>{
+    const xx=i*10-32, yy=Math.sin(i*.9+flex)*2;
+    return P(`M${xx-2} ${yy+7}q-2 9 3 8M${xx+3} ${yy+6}q3 9 7 6`,'none','#526044',1.5)+E(xx,yy,9,8,i%2?'#8aa76b':'#9ab57b','#657f59')+P(`M${xx-6} ${yy-2}q6 3 12 0`,'none','#dde4aa',1)+E(xx,yy-4,1.4,1.3,'#596e52');
+  })+E(-39,-2,8,8,'#b7ac6f','#696f4b')+E(-43,-4,1.5,1.5,'#384537')+P('M-46 -2l-4 -3m4 6l-5 1','none','#5d5d43',1));
+}
+function bird(x,y,s,angle=0){
+  return G(x,y,s,P('M-47 10L-74 32L-32 20Q-3 31 15 13Q25 8 29 -7L43 -11L29 -15Q14 -29 2 -14Q-19 -12 -47 10Z','url(#bird-body)','#4a6367',1.3)+P('M-40 9Q-13 -11 11 1Q-3 18 -40 9Z','#779095','#50676c',1)+P('M-33 10L-6 3M-30 13L-5 7M-9 19l-2 12m8 -13l4 12','none','#69817f',1)+E(19,-14,2,2,'#213239'),angle);
+}
+function hen(x,y,s,peck=0){
+  return G(x,y,s,P('M-53 9Q-67 -19 -69 -32Q-41 -27 -27 -8Q-13 -24 8 -16Q21 -13 27 -1Q49 27 22 40Q-11 49 -41 30Z','url(#hen-body)','#9b775b',1.4)+P('M-46 13Q-15 -8 12 4Q6 29 -23 33Q-39 31 -46 13Z','#d1ab7e','#ae8b69',1.15)+P('M-36 21q21 4 38 -12M-31 26q15 2 26 -5M-18 41l-3 17m2 -2h12m18 -18l0 17m0 -2h12','none','#9b775b',1.5)+
+    G(20,2,1,P('M-2 9Q-4 -9 2 -20Q15 -34 25 -21Q31 -12 23 -5L19 13Z','#dfbd96','#9b775b',1.1)+P('M5 -23q-2 -11 4 -8q2 -11 7 -4q5 -6 8 6l0 6Z','#c66452','#a54d42',1)+P('M26 -19l14 5l-14 5Z','#e6bd70','#9b775b',1)+E(20,-21,2.2,2.2,'#273239'),peck));
+}
+function leaf(x,y,s,damage=false){
+  return G(x,y,s,P(damage?'M-48 24Q-12 -43 43 -28L36 -19L42 -14L32 -8L36 -1Q15 37 -48 24Z':'M-48 24Q-15 -43 45 -30Q38 28 -48 24Z','url(#leaf-fill)','#527d58',1.2)+P('M-53 29L34 -22M-28 16l9 -26m-4 24l28 3m-4 -17l7 -20m4 14l18 3','none','#6d966a',1.15));
+}
+function fungi(x,y,s){
+  return G(x,y,s,[-1,0,1].map((v,i)=>G(v*28,i===1?-8:7,i===1?1:.78,P('M-4 -1L-7 24Q1 29 9 24L4 -1Z','#e1d0ab','#947a60',1)+P('M-26 1Q-22 -23 0 -23Q22 -20 27 0Q3 10 -26 1Z','url(#fungus-cap)','#947a60',1.2)+P('M-20 2L-4 5m3 -1l18 -3','none','#aa8a6e',1))).join('')+P('M-34 31q14 6 26 0m11 2q15 5 28 -1m-42 2l-12 9m35 -8l12 7','none','#a78a6e',1.25));
+}
+
+const fieldPanel = (x,y,w,h,color='#F0F4ED')=>R(x,y,w,h,color,'#cbd7ce',12);
+const panelTitle = (x,y,kicker,title)=>txt(x,y,kicker,'start','#38585b',17,750)+txt(x,y+29,title,'start',C.ink,22,700);
+const degText = value=>`${value>0?'+':value<0?'−':''}${Math.abs(value)}°`;
+const panelLegend = (x,y,color,caption,dash='')=>
+  R(x,y-17,29,22,'var(--panel)','none',1)+P(`M${x+4} ${y-6}h21`,'none',color,3).replace('/>',` stroke-dasharray="${dash}"/>`)+txt(x+39,y,caption,'start',C.ink,17);
+
+function signalChain(){
+  const model=signalCases[states.signal], names=['信源','信道','受体','效应'];
+  let art=txt(35,47,'a · 一条信息经过四个环节','start',C.ink,22,700);
+  model.rows.forEach(([title,subtitle],i)=>{
+    const x=35+i*295;
+    art+=R(x,68,247,126,'#ffffff','#c5d2c9',10);
+    art+=R(x+14,82,34,30,model.color,'none',5)+txt(x+31,104,'0'+(i+1),'middle','#fff',17,700);
+    art+=txt(x+60,104,names[i],'start',model.color,18,700)+txt(x+15,143,title,'start',C.ink,21,700)+txt(x+15,175,subtitle,'start',C.ink,17);
+    if(i<3) art+=vector(`M${x+256} 131h27`,model.color,2);
+  });
+  return art;
+}
+function geometricArc(x,y,r,angle,color){
+  if(angle===0) return '';
+  const [ax,ay]=point(x,y,r,angle);
+  return P(`M${x} ${y-r}A${r} ${r} 0 0 ${angle>0?1:0} ${ax} ${ay}`,'none',color,2.3);
+}
+function flightCompass(angle,distance){
+  const x=177,y=493,r=63+47*(distance-200)/2800, [fx,fy]=point(x,y,r,angle);
+  let art=fieldPanel(34,238,289,450)+panelTitle(53,267,'方位地图','相对太阳方向');
+  art+=E(x,y,111,111,'none','#c6d6c4')+E(x,y,74,74,'none','#d2e0d0');
+  art+=P(`M${x-108} ${y}h216M${x} ${y-122}v245`,'none','#adbbb1',1.2);
+  art+=vector(`M${x} ${y}V371`,'#a17739',2)+sun(x,350,.8)+vector(`M${x} ${y}L${fx} ${fy}`,palette.violet,3);
+  art+=geometricArc(x,y,38,angle,palette.violet)+E(x,y,10,10,'#506b5c','#fff')+flower(fx,fy,.62);
+  art+=label(52,616,'蜂箱 → 蜜源',`α = ${degText(angle)}  ·  D = ${distance} m`);
+  return art;
+}
+function combPattern(){
+  let svg='';
+  for(let row=0;row<11;row++)for(let col=0;col<11;col++){
+    const cx=365+col*28+(row%2)*14,cy=334+row*24;
+    const path=Array.from({length:6},(_,i)=>point(cx,cy,15,i*60).join(' ')).join('L');
+    svg+=P('M'+path+'Z','#faf2df','#e3d6b8',.9);
+  }
+  return svg;
+}
+const honeycomb=combPattern();
+function danceTrack(t,angle,duration){
+  const x=510,y=470;
+  const seconds=t*22, returnDuration=.65, round=duration+returnDuration;
+  const index=Math.floor(seconds/round), local=seconds%round, side=index%2?1:-1;
+  const running=local<duration, fraction=running?local/duration:(local-duration)/returnDuration;
+  const start=[0,83], end=[0,-84];
+  const xy=running?[Math.sin(seconds*2*Math.PI*7)*6,mix(start[1],end[1],fraction)]:
+    curve(end,[side*145,-120],[side*145,109],start,fraction);
+  const ahead=running?[0,xy[1]-1]:curve(end,[side*145,-120],[side*145,109],start,Math.min(1,fraction+.015));
+  const behind=running?xy:curve(end,[side*145,-120],[side*145,109],start,Math.max(0,fraction-.015));
+  const heading=running?0:Math.atan2(ahead[0]-behind[0],behind[1]-ahead[1])*180/Math.PI;
+  const track=vector('M0 83V-84',palette.violet,3.5)+
+    P('M0 -84C-145 -120 -145 109 0 83M0 -84C145 -120 145 109 0 83','none','#8d7751',2.4)+
+    bee(xy[0],xy[1],.74,heading,Math.sin(seconds*15)*3);
+  let svg=fieldPanel(341,238,354,450,'#fbf7ed')+panelTitle(360,267,'垂直巢脾','摇摆直段与回环');
+  svg+=`<defs><clipPath id="comb-clip"><rect x="355" y="316" width="326" height="292" rx="10"/></clipPath></defs><g clip-path="url(#comb-clip)">${honeycomb}</g>`;
+  svg+=vector(`M${x} 590V336`,'#a17739',2.2,'info-arrow','6 5')+geometricArc(x,y,46,angle,palette.violet);
+  svg+=G(x,y,1,track,angle)+label(360,616,running?'直段：摆腹前进':'回环：返回起点',`向上代表太阳  ·  直段 ${duration.toFixed(2)} s`);
+  return svg;
+}
+function danceChart(distance,duration){
+  const p=plot('dance-fit',766,338,377,264,[0,800,1600,2400,3200],[0,1,2,3,4],'直段持续时间 / s','蜜源距离 / m');
+  let svg=panelTitle(741,267,'b · OLS / 32 个模拟观测','蜜源越远，单次直段越久')+p.svg;
+  svg+=p.clip(ribbon(danceBand,p.X,p.Y,C.blue,.23)+P(linePath(danceBand,p.X,p.Y),'none',C.blue,3)+
+    danceObservations.map(d=>E(p.X(d.x),p.Y(d.y),4.3,4.3,'#5674a4','#fff')).join(''));
+  svg+=scan(p,distance)+E(p.X(distance),p.Y(duration),8,8,C.red,'#fff');
+  svg+=panelLegend(745,686,C.blue,'OLS 均值及 95% CI')+panelLegend(1013,686,C.red,'当前距离');
+  return svg;
+}
+function signalStrip(t){
+  const colors=signalCases[states.signal], y=754;
+  let svg=fieldPanel(34,720,1132,72,'#eef2ed');
+  if(states.signal==='physical'){
+    svg+=bat(124,y,.43,Math.sin(t*24)*5)+arcs(164,y,t,'#436fa0',0,.62)+E(267,y,5,5,'#775b3e')+arcs(262,y,t+.24,'#5f89aa',180,.62);
+    return svg+txt(354,y+6,'超声到达猎物后反射，蝙蝠由回波估计方位。','start',C.ink,20,650);
+  }
+  if(states.signal==='chemical'){
+    svg+=moth(108,y,.52)+moth(286,y,.49,-60)+trail([150,y],[192,y-16],[219,y+12],[249,y],t,C.green,9);
+    return svg+txt(354,y+6,'雌蛾释放蚕蛾醇，雄蛾触角感知空气中的气味。','start',C.ink,20,650);
+  }
+  if(states.signal==='internal'){
+    svg+=E(104,y,32,23,'#e7b8af','#ae766e')+E(104,y,10,7,'#ae766e')+trail([145,y],[184,y],[225,y],[249,y],t,'#b45e59',9)+E(283,y,31,23,'#e9c1b7','#ae766e')+E(283,y,10,7,'#ae766e');
+    return svg+txt(354,y+6,'发生范围：同一个体内的细胞间调节。','start',colors.color,20,750);
+  }
+  return svg+bee(118,y,.55,60,Math.sin(t*22)*6)+bee(274,y,.43,-52,0)+arcs(157,y,t,palette.violet,0,.62)+txt(354,y+6,'动作携带信息，跟随蜂也会利用振动和接触线索。','start',C.ink,20,650);
+}
+function renderSignals(t){
+  const {angle,distance,signal}=states, d=fitDance(distance), active=signalCases[signal];
+  $('svg1').innerHTML=signalChain()+flightCompass(angle,distance)+danceTrack(t,angle,d)+danceChart(distance,d)+signalStrip(t);
+  $('angleValue').textContent=degText(angle);
+  $('distanceValue').textContent=distance+' m';
+  say(1,'编码与解码',active.name+'如何到达受体？',active.note,`${degText(angle)} · ${distance} m · ${d.toFixed(2)} s`,'方位参照由太阳方向转换为巢脾上的竖直向上。距离增大时直段延长，整个舞轮在演示中变慢。拟合及置信带来自教学散点。');
+}
+
+function photoScene(t){
+  const photo=photoState(states.pulses), isR=photo.last==='R', dark=photo.last==='dark';
+  const hue=dark?'#586985':isR?C.red:'#8b4b68';
+  let svg=fieldPanel(34,30,1132,367,'#f4f1e8')+panelTitle(54,62,'a · 个体水平','光的顺序怎样影响萌发？');
+  svg+=R(55,128,509,237,'#e9e0ce','#c7b69a',15);
+  svg+=R(75,150,469,193,'#f6eddb','#d2c1a5',11);
+  svg+=many(10,i=>{
+    const x=118+(i%5)*88,y=204+Math.floor(i/5)*88;
+    const starts=phase(t,.28+(i%4)*.07,.85+(i%3)*.055);
+    return seed(x,y,.75,starts*(i<Math.round(photo.sprout*10)?1:0));
+  });
+  if(!dark) svg+=many(6,i=>{const x=104+i*75,dy=(t*124+i*17)%34;return O(.56,P(`M${x} ${147+dy}l14 7`,'none',hue,2))});
+  svg+=label(595,131,'光敏色素 · 示意平衡',dark?'暗对照：未照射':isR?'末次红光 R · 约 660 nm':'末次远红光 FR · 约 730 nm');
+  svg+=E(681,253,48,39,'#bdc8d5','#70839a')+E(1053,253,48,39,'#e2aa93','#a86961');
+  svg+=vector('M748 235H983',C.red,3)+vector('M983 270H748','#925878',3);
+  svg+=txt(681,261,'Pr','middle',C.ink,25,750)+txt(1053,261,'Pfr','middle',C.ink,25,750)+txt(862,222,'红光','middle')+txt(862,300,'远红光','middle');
+  const f=photo.fraction;
+  svg+=R(598,323,535,18,'#cad1d9','none',8)+R(598,323,535*f,18,'#a35b4d','none',8);
+  svg+=txt(598,369,`Pfr 相对比例 ${Math.round(f*100)}% · 机制示意`,'start',C.ink,17,650);
+  svg+=txt(1108,369,'向右为高比例','end',C.ink,17);
+  return svg;
+}
+function reproductionScene(t){
+  const longer=states.daylength==='long', day=longer?16:8;
+  let svg=fieldPanel(34,30,1132,367,'#f1f4eb')+panelTitle(54,62,'a · 种群水平','开花和配偶定位都受信息调节');
+  svg+=R(54,131,526,228,'#fff','#ccd9cf',10)+R(601,131,544,228,'#fff','#ccd9cf',10);
+  svg+=txt(73,162,'典型长日植物 · 光周期','start',C.ink,20,700)+txt(619,162,'家蚕蛾 · 蚕蛾醇','start',C.ink,20,700);
+  svg+=R(74,181,472,19,'#6a788f','none',6)+R(74,181,472*day/24,19,'#dba65c','none',6);
+  svg+=txt(74,227,`光照 ${day} h / 黑暗 ${24-day} h`);
+  const floral=longer?phase(t,.14,.82):0;
+  svg+=P('M312 335Q305 297 314 255M310 319q-27 -25 -44 -17q14 22 44 17m2 -14q20 -29 39 -20q-13 20 -39 20','#78a17b','#4f7d60',1.6);
+  svg+=O(floral,flower(313,251,.8*floral,'#B97E9A'))+txt(78,310,longer?'花芽发育':'维持营养生长','start',C.ink,19,700);
+  const mx=mix(1066,830,phase(t,.17,.96));
+  svg+=moth(700,255,1.04,15)+trail([737,244],[835,199],[970,267],[1080,231],t,C.green,18)+moth(mx,253,.93,-65);
+  svg+=txt(623,332,'雌蛾 · 释放','start',C.ink,18,700)+txt(1124,332,'雄蛾 · 触角感知','end',C.ink,18,700);
+  return svg;
+}
+function parasitoidScene(t){
+  const damage=states.odor!=='intact', herb=states.odor==='herbivore';
+  const opacity=phase(t,.27,.53), move=herb?phase(t,.46,.92):phase(t,.54,.92)*.11;
+  const waspX=mix(979,547,move), waspY=mix(211,234,move);
+  let svg=fieldPanel(34,30,1132,367,'#eff4eb')+panelTitle(54,62,'a · 群落与生态系统水平','叶片被咬后，什么线索抵达天敌？');
+  if(herb){
+    const stage=t<.27?'① 取食，分泌物触及伤口':t<.53?'② 植物释放挥发物':t<.88?'③ 触角感知，循味趋近':'④ 接触宿主，产卵示意';
+    svg+=label(725,103,stage,'HIPVs · 虫害诱导植物挥发物');
+  }
+  svg+=P('M54 319Q226 310 421 320L421 354H54Z','#E4DAC8','none')+cornPlant(235,320,.79,damage);
+  svg+=leaf(480,240,1.12,damage)+vector('M310 257Q378 251 413 246','#6e8d6a',2,'info-arrow','5 4');
+  if(herb){
+    svg+=caterpillar(mix(551,507,phase(t,0,.24)),231,.79,t*12)+O(phase(t,.12,.30),E(464,243,6,4,C.orange,'#9c634d'));
+    svg+=O(opacity,trail([525,229],[643,151],[817,261],[968,207],t,C.green,24));
+    svg+=O(phase(t,.84,1),P(`M${waspX+22} ${waspY+15}L531 239`,'none','#875340',1.7)+E(530,239,3.4,2,'#f0dbc2'));
+  }else if(damage){
+    svg+=P('M529 186l-17 38m24 -32l-21 32','none','#748490',2)+E(532,184,5,6,'none','#748490')+E(539,190,5,6,'none','#748490');
+    svg+=O(.22*opacity,trail([525,229],[643,151],[817,261],[968,207],t,C.green,7));
+  }
+  svg+=bee(waspX,waspY,.94,-92,Math.sin(t*115)*6,'wasp');
+  svg+=label(63,333,'① 玉米','植物释放挥发物')+label(398,333,herb?'② 甜菜夜蛾幼虫':damage?'② 人工机械伤':'② 健康叶对照',herb?'口腔分泌物触及伤口':damage?'切伤而不加分泌物':'没有损伤处理')+label(817,333,'③ 寄生性绒茧蜂',herb?'触角定位 · 接触宿主后产卵':'当前气味线索弱');
+  return svg;
+}
+function bioassayPlot(id,x,y,w,h,rows,title,xlabel,active){
+  const p=plot(id,x,y,w,h,[0,rows.length],[0,25,50,75,100],title,'','响应率 / %');
+  let svg=p.svg.replace(/<text[^>]*>[\s\S]*?<\/text>/g,match=>match.includes(`y="${y+h+25}"`)?'':match);
+  rows.forEach((row,i)=>{
+    const xx=p.X(i+.5),yy=p.Y(row.value),width=Math.min(55,w/rows.length*.64), marked=active===i;
+    svg+=p.clip(R(xx-width/2,yy,width,p.Y(0)-yy,row.color||'#819597',marked?'#273c4d':'none',1)+
+      P(`M${xx} ${p.Y(row.lo)}V${p.Y(row.hi)}m-7 0h14M${xx-7} ${p.Y(row.lo)}h14`,'none','#273c4d',1.7));
+    const inside=row.value>89;
+    const textY=inside?p.Y(row.lo)+23:p.Y(row.hi)-7;
+    if(inside)svg+=R(xx-23,textY-17,46,22,'#fff','none',3);
+    svg+=txt(xx,textY,row.value+'%','middle',C.ink,17,marked?800:650)+txt(xx,p.y+p.h+27,row.tick,'middle',C.ink,17,marked?800:500);
+    if(marked) svg+=E(xx,p.y+p.h+45,4,4,C.ink);
+  });
+  return svg+txt(x+w/2,y+h+69,xlabel,'middle',C.ink,17,600);
+}
+function renderLevels(t){
+  const photo=photoState(states.pulses), odor=odors.find(d=>d.id===states.odor);
+  let svg=states.level==='individual'?photoScene(t):states.level==='population'?reproductionScene(t):parasitoidScene(t);
+  const photoIndex=states.level==='individual'?lettuce.indexOf(photo.match):-1;
+  const lettuceRows=lettuce.map((d,i)=>({...d,tick:String(i),color:i===0?'#8697A3':i%2?C.red:'#a57798'}));
+  svg+=bioassayPlot('lettuce-plot',91,485,467,224,lettuceRows,'b · 莴苣萌发 · 1952 年原表','交替照射次数（从 R 开始，0 为暗对照）',photoIndex);
+  svg+=bioassayPlot('odor-plot',682,485,467,224,odors.map(d=>({...d,tick:d.label})),'c · 寄生蜂趋向 · 教学模拟','各处理独立与空白气路比较',states.level==='community'?odors.indexOf(odor):-1);
+  svg+=panelLegend(208,436,'#8697A3','暗')+panelLegend(288,436,C.red,'末次 R')+panelLegend(403,436,'#a57798','末次 FR');
+  svg+=txt(91,807,'误差线：Wilson 95% 区间，按计数补算','start',C.ink,17)+txt(682,807,'各处理为独立测试，分母各为 100 次','start',C.ink,17);
+  $('svg2').innerHTML=svg;
+  const sequence=states.pulses.map(p=>p==='F'?'FR':'R');
+  $('pulseHistory').textContent=sequence.length?sequence.join(' → '):'暗对照';
+  if(states.level==='individual'){
+    say(2,'层次 I · 个体','种子的响应随光照顺序改变。',
+      '在这组莴苣实验中，红光处理后萌发率高。随后加远红光，萌发率降低，再加红光可恢复。胚根示意压缩了实际培养时间。',
+      photo.match?`原表 ${photo.match.k} / 200 · ${photo.match.value}% 萌发`:`模拟 Pfr 相对比例 ${Math.round(photo.fraction*100)}%`,
+      photo.match?'分面柱取 Borthwick 等原表。误差线为按种子独立二项假设补算的区间。':'当前是原表以外的序列。种子图标展示趋势，统计柱保留原表观察组。');
+  }else if(states.level==='population'){
+    say(2,'层次 II · 种群','环境线索会影响繁殖过程。','示例选择典型长日植物。另一条路径是雌家蚕蛾释放蚕蛾醇，雄蛾经触角感知并接近气味来源。',states.daylength==='long'?'16 h 光照 · 花芽启动示意':'8 h 光照 · 营养生长示意','开花或定位配偶是个体响应，其后果可体现在种群的繁殖上。光周期阈值与物种及品种有关。');
+  }else{
+    say(2,'层次 III · 种间关系',herbivoreHeadline(odor.id),'取食造成伤口，幼虫口腔分泌物中的诱导因子能促进玉米释放挥发物。寄生蜂利用气味定位宿主，接触后才可能产卵。',`${odor.label} · 模拟 ${odor.k} / ${odor.n} 趋向`,'Volicitin 的鉴定来自后续研究。蜂的学习经历、挥发物组成与环境会影响趋向强度。');
+  }
+}
+function herbivoreHeadline(id){
+  return {intact:'健康叶提供比较基线。',wound:'只有机械损伤时，信号较弱。',herbivore:'害虫取食触发植物的间接防御。'}[id];
+}
+
+const applicationCases = {
+  light:{name:'延长人工光照',type:'物理信息 · 产蛋管理',steps:['光周期改变','繁殖内分泌响应','产蛋受到影响'],note:'在适宜日龄、品种与饲养条件下，调整光周期可促进母鸡繁殖生理活动，影响开产和产蛋。'},
+  sound:{name:'模拟声音吸引传粉者',type:'物理信息 · 传粉管理',steps:['播放目标声音','记录昆虫到访','比较传粉效果'],note:'声音对昆虫到访的作用取决于物种、声音与环境。实际效果应比较播放组与静音组的访花、结实数据。'},
+  lamp:{name:'黑光灯诱杀',type:'物理信息 · 控害',steps:['灯发出特定光','趋光成虫接近','物理装置捕杀'],note:'先利用趋光性引来成虫，再由装置去除，作用可表现为死亡率增加。灯具也可能吸引非目标昆虫。'},
+  pheromone:{name:'性信息素诱捕或迷向',type:'化学信息 · 控害',steps:['散布性信息素','干扰定位配偶','交配成功率下降'],note:'迷向通过干扰配偶定位降低成功交配率。诱捕可移除部分个体，效果取决于捕获量和种群条件。'},
+  bird:{name:'播放鸟类警戒声',type:'物理信息 · 驱避',steps:['播放警戒或天敌声','鸟感知风险','离开目标区域'],note:'播放适当警戒信号可能促使目标鸟回避，效果随物种、地点和习惯化改变。'}
+};
+function applicationArt(t){
+  const key=states.application, app=applicationCases[key];
+  let svg=fieldPanel(34,38,548,405)+panelTitle(56,72,'a · 农业信息调控',app.name);
+  if(key==='light'){
+    svg+=sun(137,226,.85)+vector('M178 226Q223 244 263 249','#a27738',2.5)+hen(370,250,1.45,Math.sin(t*13)*7);
+    const daytime=mix(8,16,phase(t,0,.85));
+    svg+=R(57,149,500,13,'#62738a','none',6)+R(57,149,500*daytime/24,13,'#d8a75d','none',6);
+    svg+=txt(57,190,`光照 ${daytime.toFixed(1)} h · 演示条件`);
+    svg+=O(phase(t,.49,.9),E(449,318,13,19,'#f7ebcc','#ac9579')+E(477,314,12,17,'#f8e5c6','#ac9579'));
+  }else if(key==='sound'){
+    svg+=speaker(117,242)+arcs(148,242,t,'#456c9d')+arcs(188,237,t+.2,'#456c9d');
+    svg+=flower(427,245,1.17)+flower(473,264,.89,'#bf8194')+bee(mix(271,402,phase(t,.1,.86)),211+8*Math.sin(t*24),.72,90,Math.sin(t*76)*5);
+  }else if(key==='lamp'){
+    svg+=R(99,180,109,118,'#c9c6d9','#827894',13)+P('M117 190h73m-61 5v90m16 -90v90m16 -90v90m16 -90v90','none','#7656A1',4);
+    svg+=arcs(200,233,t,'#8666b7')+arcs(237,233,t+.25,'#8666b7')+moth(mix(456,224,phase(t,.08,.91)),229+17*Math.sin(t*12),.76,-78);
+  }else if(key==='pheromone'){
+    svg+=P('M100 279L128 198H183L214 279Z','#c6d8ca','#73907d',1.3)+R(131,221,47,35,'#85b697','#4e8165',5);
+    svg+=trail([161,222],[246,159],[330,280],[469,224],t,C.green,21)+moth(mix(475,305,phase(t,.12,.92)),232+15*Math.sin(t*16),.82,-70);
+    svg+=P('M347 189q39 -21 88 -5M362 267q45 26 93 2','none','#8db69e',2);
+  }else{
+    svg+=speaker(116,231)+arcs(146,231,t,'#567bac')+arcs(186,232,t+.21,'#567bac');
+    svg+=bird(mix(310,485,phase(t,.11,.92)),mix(247,192,t),1.06,-Math.sin(t*Math.PI)*12);
+  }
+  app.steps.forEach((s,i)=>{
+    const x=51+i*173, active=t>i*.28;
+    svg+=R(x,364,164,56,active?'#e7efe7':'#fff','#bacdbf',8)+txt(x+82,397,s,'middle',C.ink,17,650);
+  });
+  return svg;
+}
+function speaker(x,y){
+  return G(x,y,1,P('M-36 -15H-15L12 -37V37L-15 15H-36Z','#a9bfbd','#54777a',2)+E(13,0,7,37,'#c6d6d6','#54777a')+E(14,0,3,17,'#57787a'));
+}
+function managementKey(){
+  let svg=fieldPanel(34,466,548,323,'#f7f3e9')+panelTitle(55,501,'两个判断轴','信号类型与治理手段');
+  const cards=[
+    ['黑光灯','光 · 物理信息','趋光诱捕，可归入物理或机械措施。'],
+    ['性信息素','气味 · 化学信息','诱捕或迷向，属于行为调控工具。'],
+    ['释放天敌','利用生物的种间关系','严格意义上的生物防治。']
+  ];
+  cards.forEach(([title,subtitle,explanation],i)=>{
+    const y=548+i*75;
+    svg+=P(`M56 ${y}h506`,'none','#d3d7c9',1)+txt(57,y+27,title,'start',C.ink,19,750)+txt(227,y+27,subtitle,'start','#335d58',17,700)+txt(57,y+55,explanation,'start',C.ink,17);
+  });
+  return svg;
+}
+function pestChart(t,selection){
+  const p=plot('pest-chart',667,116,470,278,[0,14,28,42,56],[0,25,50,75,100,125],'种群轨迹 · 教学模型','干预过程 / d','害虫密度指数');
+  let svg=p.svg;
+  const day=Math.round(t*days);
+  svg+=p.clip(P(`M${p.X(0)} ${p.Y(threshold)}H${p.X(days)}`,'none','#a97d41',1.8).replace('/>',' stroke-dasharray="9 4"/>'));
+  svg+=txt(p.X(1),p.Y(threshold)-8,'示意阈值 40','start','#755522',17,700);
+  for(const [id,style] of Object.entries(treatmentStyles)){
+    const emphasized=selection==='all'||selection===id||id==='control';
+    svg+=O(emphasized?1:.27,series(p,treatmentData[id],style.color,day/days,style.dash));
+  }
+  svg+=scan(p,day);
+  Object.entries(treatmentStyles).forEach(([id,style],i)=>{
+    svg+=panelLegend(657+(i%2)*240,483+Math.floor(i/2)*31,style.color,style.label,style.dash);
+  });
+  return svg;
+}
+function treatmentMetrics(selection){
+  const axes=[
+    {key:'residue',title:'峰值残留压力',max:100,unit:'指数'},
+    {key:'enemy',title:'第7天天敌保留',max:100,unit:'%'},
+    {key:'duration',title:'连续低于阈值',max:56,unit:'日'}
+  ];
+  let svg='';
+  axes.forEach((axis,j)=>{
+    const x=662+j*164,y=583,w=145,h=141;
+    const p=plot('metric-'+j,x,y,w,h,[0,3],[0,axis.max/2,axis.max],axis.title);
+    svg+=p.svg.replace(/<text[^>]*>[\s\S]*?<\/text>/g,match=>match.includes(`y="${y+h+25}"`)||match.includes(`x="${x-11}"`)?'':match);
+    metrics.forEach((row,i)=>{
+      const v=row[axis.key],xx=p.X(i+.5),yy=p.Y(v), color=treatmentStyles[row.id].color;
+      svg+=R(xx-13,yy,26,p.Y(0)-yy,color,selection===row.id?C.ink:'none',1);
+      const inside=v>axis.max*.87, labelY=yy+(inside?21:-7);
+      if(inside)svg+=R(xx-15,labelY-17,30,21,'#fff','none',3);
+      svg+=txt(xx,labelY,Math.round(v),'middle',C.ink,17,700)+txt(xx,y+h+25,['药','迷','机'][i],'middle',C.ink,17,650);
+    });
+    svg+=txt(x+w/2,y+h+54,axis.unit,'middle',C.ink,17);
+  });
+  return svg;
+}
+function renderManagement(t){
+  const app=applicationCases[states.application], sel=states.treatment, day=Math.round(t*days);
+  $('svg3').innerHTML=applicationArt(t)+managementKey()+pestChart(t,sel)+treatmentMetrics(sel);
+  const snapshot=sel==='all'?
+    treatmentKeys.map(key=>Math.round(treatmentData[key][day].y)).join(' / '):
+    treatmentStyles[sel].label+' '+treatmentData[sel][day].y.toFixed(1);
+  let note='三条处理曲线采用共同初始值与密度反馈。并列柱分别用独立单位。灰色虚线是未处理对照。';
+  if(sel==='chemical') note+=' 此处模拟广谱用药一次，药后天敌减少，存活群体的抗性比例升高，后期可回升。';
+  if(sel==='pheromone') note+=' 此处从第5天起持续迷向，降低交配后补充量。';
+  if(sel==='mechanical') note+=' 此处每10天实施一次捕除，出现周期性降低。';
+  say(3,app.type,app.name,app.note,`第 ${day} 日 · ${snapshot}`,note);
+}
+
+const network = {
+  energy:{title:'能量流动',color:C.red,dash:'',routes:[
+    [[111,190],[117,245],[144,329],[202,408]],
+    [[254,386],[284,317],[320,287],[387,282]],
+    [[262,443],[333,437],[387,514],[493,548]],
+    [[445,300],[515,358],[513,458],[527,519]],
+    [[239,397],[289,365],[484,352],[625,341]],
+    [[447,276],[507,271],[556,297],[625,326]],
+    [[568,540],[619,502],[627,417],[643,355]]
+  ]},
+  matter:{title:'物质循环',color:'#007F78',dash:'8 5',routes:[
+    [[418,183],[312,166],[195,209],[211,382]],
+    [[258,405],[316,362],[343,311],[393,305]],
+    [[257,473],[343,519],[398,567],[489,573]],
+    [[436,313],[438,393],[450,490],[504,531]],
+    [[559,545],[638,495],[690,189],[500,161]],
+    [[420,264],[437,233],[435,203],[442,182]],
+    [[249,382],[269,242],[333,231],[425,180]]
+  ]},
+  info:{title:'信息传递',color:palette.violet,dash:'3 6',routes:[
+    [[130,178],[190,226],[157,325],[195,381]],
+    [[247,374],[263,286],[324,252],[385,265]],
+    [[387,319],[353,348],[312,382],[263,414]],
+    [[259,376],[310,188],[534,193],[586,219]]
+  ]}
+};
+function networkPath(a,b,c,d){
+  return `M${a.join(' ')}C${b.join(' ')} ${c.join(' ')} ${d.join(' ')}`;
+}
+function networkLandscape(t){
+  let svg=fieldPanel(34,64,656,650,'#edf3ec');
+  svg+=P('M35 480Q155 428 268 458T468 474Q589 448 689 474V713H35Z','#eaddc9','none');
+  svg+=P('M35 610Q177 552 320 613T689 602M35 656Q164 611 292 655T689 650','none','#cdb598',1.5);
+  svg+=many(24,i=>E(55+(i*81)%608,495+(i*49)%207,2+(i%3),1.5,'#c5aa87'));
+  svg+=P('M35 475Q155 430 268 458T468 474Q589 448 689 474','none','#9bac89',2);
+  for(const [key,link] of Object.entries(network)){
+    const opacity=states.layer==='all'?.84:states.layer===key?1:.09;
+    svg+=O(opacity,link.routes.map(points=>
+      vector(networkPath(...points),link.color,key==='energy'?3.4:2.8,'info-arrow',link.dash)
+      +trail(...points,t,link.color,states.layer==='all'?3:6)
+    ).join(''));
+  }
+  svg+=sun(105,146,.83)+E(457,149,61,31,'#D8E7E4','#71948D');
+  svg+=txt(457,155,'CO₂','middle','#2c645c',21,750);
+  svg+=cornPlant(232,462,.52)+caterpillar(422,283,.86,t*9)+bee(600,227,.69,140,Math.sin(t*100)*5,'wasp')+fungi(527,563,.88);
+  svg+=P('M636 303q-9 -13 0 -25m10 22q-9 -13 0 -26m10 24q-10 -13 0 -25','none','#a05a45',2.1);
+  svg+=label(52,88,'太阳光')+label(382,92,'非生物碳库')+label(164,478,'生产者 · 玉米')+
+    label(343,223,'植食者 · 夜蛾幼虫')+label(555,165,'天敌 · 寄生蜂')+label(588,367,'环境热')+label(463,614,'分解者 · 真菌');
+  const labelTexts={all:'三条轨道共享同一生态场景。',energy:'供给能量的物质被转化，热散入环境。',matter:'元素经有机物转移，也经呼吸等回到环境。',info:'同一相互作用可包含两个方向的线索。'};
+  return svg+txt(55,687,labelTexts[states.layer],'start',C.ink,18,650);
+}
+function comparisonMatrix(){
+  const keys=['energy','matter','info'], labels=['能量','物质','信息'];
+  let svg=panelTitle(726,74,'b · 三种基本功能','按方向、途径、尺度和联系比较');
+  functionRows.forEach(([title,...values],i)=>{
+    const y=131+i*147;
+    svg+=R(725,y,443,132,'#fff','#ccd6ce',10)+txt(745,y+28,title,'start',C.ink,20,750);
+    values.forEach((v,j)=>{
+      const yRow=y+53+j*27, link=network[keys[j]], selected=states.layer===keys[j];
+      if(selected)svg+=R(739,yRow-17,408,25,'#eaf0eb','none',4);
+      svg+=txt(749,yRow,labels[j],'start',C.ink,17,700)+P(`M797 ${yRow-5}h23`,'none',link.color,2.6).replace('/>',` stroke-dasharray="${link.dash}"/>`)+txt(835,yRow,v,'start',C.ink,17,selected?750:500);
+    });
+  });
+  return svg;
+}
+function renderNetwork(t){
+  let legend='';
+  Object.values(network).forEach((link,i)=>{
+    legend+=panelLegend(41+i*220,763,link.color,link.title,link.dash);
+  });
+  $('svg4').innerHTML=txt(34,41,'a · 同一生态剖面，三套路径','start',C.ink,22,700)+networkLandscape(t)+comparisonMatrix()+legend+
+    txt(41,798,'箭头表示路径，粒子数量与线宽不编码通量。','start',C.ink,17);
+  const view={
+    all:['同一生态系统内，三类过程怎样联系？','物质构成生物体并可携带能量，能量支持代谢，信息调节取食、趋避与繁殖等过程。','能量 · 物质 · 信息'],
+    energy:['能量沿哪些通道逐级转移？','生产者固定太阳能，有机物进入植食者和碎屑途径。生产者、消费者和分解者的呼吸都会向环境散热。','输入 → 转移 → 散热'],
+    matter:['碳怎样从环境进入生物再返回？','无机碳被固定成有机物，经摄食、碎屑和分解流转。生物呼吸等过程使碳回到非生物环境。','环境 → 群落 → 环境'],
+    info:['谁发出信号，谁能接收？','太阳光可作为环境线索。植食者取食与口腔分泌物能诱导植物响应，植物气味也可影响植食者或天敌的行为。','信源 → 信道 → 受体']
+  }[states.layer];
+  say(4,'生态系统基本功能',view[0],view[1],view[2],'同一次相互作用可以同时涉及三类过程。判断某条信息的方向时，应指出具体的发送者与受体。');
+}
+
+const renderers=[renderSignals,renderLevels,renderManagement,renderNetwork];
+const clocks=renderers.map((render,i)=>BioAtlas.createTimeline({
+  duration:[22,20,22,21][i],
+  render,
+  onState({t,playing,duration}){
+    document.querySelector(`[data-time="${i}"]`).value=t*100;
+    const button=document.querySelector(`[data-play="${i}"]`);
+    button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+    button.setAttribute('aria-pressed',String(playing));
+    $('time'+i).textContent=`${Math.round(t*100)}% · ${duration}秒演示`;
+  }
+}));
+for(const button of document.querySelectorAll('[data-play]')){
+  button.addEventListener('click',()=>{
+    const clock=clocks[Number(button.dataset.play)];
+    if(clock.state.playing)clock.pause();
+    else clock.play();
+  });
+}
+for(const button of document.querySelectorAll('[data-reset]')){
+  button.addEventListener('click',()=>clocks[Number(button.dataset.reset)].reset());
+}
+for(const input of document.querySelectorAll('[data-time]')){
+  input.addEventListener('input',()=>clocks[Number(input.dataset.time)].seek(Number(input.value)/100));
+}
+const sceneOf={signal:0,level:1,daylength:1,odor:1,application:2,treatment:2,layer:3};
+const replayAtCurrent=clock=>clock.seek(clock.state.t);
+for(const button of document.querySelectorAll('[data-set]')){
+  button.addEventListener('click',()=>{
+    const {set,value}=button.dataset;
+    states[set]=value;
+    for(const option of document.querySelectorAll(`[data-set="${set}"]`)){
+      option.setAttribute('aria-pressed',String(option===button));
+    }
+    if(set==='level'){
+      for(const panel of document.querySelectorAll('[data-level-panel]')){
+        panel.hidden=panel.dataset.levelPanel!==value;
+      }
+    }
+    const clock=clocks[sceneOf[set]];
+    if(set==='signal'||set==='treatment'||set==='layer')replayAtCurrent(clock);
+    else clock.reset();
+  });
+}
+for(const name of ['angle','distance']){
+  $(name).addEventListener('input',event=>{
+    states[name]=Number(event.currentTarget.value);
+    replayAtCurrent(clocks[0]);
+  });
+}
+const pulseButtons=[...document.querySelectorAll('[data-pulse]')];
+function syncPulseLimit(){
+  for(const button of pulseButtons)button.disabled=states.pulses.length>=12;
+}
+for(const button of pulseButtons){
+  button.addEventListener('click',()=>{
+    states.pulses.push(button.dataset.pulse);
+    syncPulseLimit();
+    clocks[1].reset();
+  });
+}
+$('clearPulses').addEventListener('click',()=>{
+  states.pulses.length=0;
+  syncPulseLimit();
+  clocks[1].reset();
+});
+
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme!=='bw';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{
+  BioAtlas.pauseAll();
+  $('review').showModal();
+});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const visibilityObserver=new IntersectionObserver(entries=>{
+  for(const entry of entries){
+    if(!entry.isIntersecting)clocks[Number(entry.target.dataset.figure)].pause();
+  }
+});
+document.querySelectorAll('.figure').forEach(section=>visibilityObserver.observe(section));
+
+function dataTable(title,headings,rows){
+  const body=rows.map(row=>'<tr>'+row.map((value,i)=>i===0?`<th scope="row">${esc(value)}</th>`:`<td>${esc(value)}</td>`).join('')+'</tr>').join('');
+  return `<div class="table-scroll"><table><caption>${esc(title)}</caption><thead><tr>${headings.map(text=>`<th scope="col">${esc(text)}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+const interval=row=>`${row.lo.toFixed(1)}–${row.hi.toFixed(1)}`;
+$('fitSummary').textContent=`OLS：时长 = ${intercept.toFixed(3)} + ${slope.toFixed(6)} × 距离。n = ${nDance}，R² = ${danceFit.r2.toFixed(3)}。`;
+$('danceTable').innerHTML=dataTable('模拟校准记录',['距离 / m','样本1 / s','样本2 / s','样本3 / s','样本4 / s'],
+  beeDistances.map(x=>[x,...danceObservations.filter(row=>row.x===x).map(row=>row.y.toFixed(3))]));
+$('lettuceTable').innerHTML=dataTable('Borthwick 等 1952 表1',['照射顺序','萌发 / 总数','萌发率 / %','补算 95% CI / %'],
+  lettuce.map(row=>[row.label,`${row.k} / ${row.n}`,row.value,interval(row)]));
+$('odorTable').innerHTML=dataTable('独立气味选择 · 教学模拟',['叶片处理','趋向 / 测试','趋向率 / %','Wilson 95% CI / %'],
+  odors.map(row=>[row.label,`${row.k} / ${row.n}`,row.value,interval(row)]));
+$('metricTable').innerHTML=dataTable('治理模型指标',['处理','峰值残留指数','第7天天敌 / %','最长连续达标 / 日'],
+  metrics.map(row=>[treatmentStyles[row.id].label,row.residue,row.enemy.toFixed(1),row.duration]));
+globalThis.atlasQA={clocks,states,danceObservations,danceFit,lettuce,odors,photoState,treatmentData,metrics,longestBelow,network};
+</script>
+</body>
+</html>

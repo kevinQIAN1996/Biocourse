@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FAF9F5">
+<title>植物细胞工程｜从外植体到再生植株 v1.0</title>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;family=Source+Serif+4:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<script async src="https://cdn.tailwindcss.com" onload="window.tailwind.config={corePlugins:{preflight:false}}"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide?.createIcons()"></script>
+<style>:root{color-scheme:light;--paper:#FAF9F5;--ink:#182B36;--muted:#3e5059;--panel:#EBEBEB;--major:#fff;--minor:#fff;--strip:#D9D9D9;--plot-border:transparent;--accent:#284a57}
+:root[data-theme=bw]{--panel:#fff;--major:#dedede;--minor:#ededed;--strip:#eee;--plot-border:#29343d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",Arial,sans-serif;font-size:18px;line-height:1.7}button,input,select{font:inherit}button,select{color:var(--ink);background:#fff;border:1px solid #aab7b7;border-radius:6px;padding:9px 15px;font-weight:600}button{cursor:pointer}button:hover,select:hover{background:#edf3ef;border-color:#335b59}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1d60ab;outline-offset:4px}a{color:#285d68}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.3}header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:15px max(24px,calc((100vw - 1450px)/2));background:#faf9f5f5;backdrop-filter:blur(12px);border-bottom:1px solid #d4dcd5;gap:16px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-size:18px;font-weight:700}.brand-mark{display:inline-grid;place-items:center;width:39px;height:39px;background:#254c4b;color:#fff;font-family:Georgia,serif;font-size:25px}.brand small{font-size:11px;letter-spacing:.12em;display:block;font-weight:500}.head-actions{display:flex;gap:10px}.head-actions button{font-size:15px;padding:8px 13px}.mono,code,.eyebrow,.timecode{font-family:"Fira Code",Consolas,monospace}.eyebrow{font-size:13px;letter-spacing:.10em;color:#3e5a59;font-weight:600}.intro{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end;padding:58px 0 38px}.intro h1{font-size:clamp(32px,4.1vw,60px);font-weight:650;letter-spacing:-.035em;margin-top:19px}.intro h1 em{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-weight:500}.subtitle{color:#334a52;max-width:750px;margin-top:25px;font-size:20px}.intro-note{border-left:1px solid #aabcb0;padding-left:28px}.intro-note i{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#476558}.intro-note p{font-size:16px;margin-top:15px;color:#3e5059}main{max-width:1450px;margin:auto;padding:0 28px}nav{display:flex;gap:0;border-block:1px solid #c5d1c7;margin-bottom:40px;flex-wrap:wrap}nav a{padding:17px 26px;text-decoration:none;font-size:16px;color:#2b454c}nav a:hover{background:#edf0e8}.figure{background:#fff;margin:0 0 46px;border:1px solid #c4cec7;border-radius:10px;overflow:hidden;box-shadow:0 7px 24px #1d382808}.fig-heading{display:flex;align-items:center;justify-content:space-between;padding:26px 29px 18px;gap:15px}.fig-heading h2{font-size:28px;margin-top:8px;letter-spacing:-.02em}.fig-number{font:italic 44px "Source Serif 4",Georgia,serif;color:#395a55}.context{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:8px 29px 22px;font-size:16px}.context label{font-weight:600}.context .switch{padding:8px 12px;background:#f5f6f1;border:1px solid #b8c5bb;border-radius:6px;display:inline-flex;align-items:center;gap:10px}.switch input{width:20px;height:20px;accent-color:#234e5b}.hint{font-size:15px;color:#3e5059}.scroll-stage{overflow:auto;overscroll-behavior-inline:contain;background:#fcfdfb;border-block:1px solid #e0e5dd}.scroll-stage svg{display:block;width:100%;min-width:960px;height:auto}.plot-panel{fill:var(--panel);stroke:var(--plot-border);stroke-width:1.2}svg text{user-select:none}.code-note{font:12px/1.6 "Fira Code",Consolas,monospace;color:#40545b;padding:10px 29px;background:#fafbf8;overflow:auto;white-space:nowrap}.reading{display:grid;grid-template-columns:1.25fr .9fr;gap:38px;padding:26px 29px 23px;border-top:1px solid #dde4db}.phase{font-size:13px;letter-spacing:.08em;font-weight:700;color:#3e5c57}.reading h3{font-size:23px;margin:8px 0 12px}.reading p{font-size:17px;color:#334750}.result{border-left:3px solid #3c5488;padding:9px 0 11px 18px;margin-bottom:14px}.result span{display:block;font-size:14px;color:#46575d;margin-bottom:8px}.result b{font-size:23px;font-weight:650}.reading .note{font-size:15px;color:#334750}.toolbar{display:flex;align-items:center;gap:12px;padding:16px 29px;border-block:1px solid #d7e0d7;background:#f5f7f2}.toolbar button{white-space:nowrap;font-size:16px}.toolbar button.play{background:#234a4a;color:white;border-color:#234a4a}.toolbar label{display:flex;flex:1;min-width:120px}.toolbar input{width:100%;accent-color:#3c5488;cursor:ew-resize;min-height:30px}.toolbar output{min-width:172px;text-align:right;font:13px Consolas,monospace;color:#344c53}.extra{margin:0 29px;padding:16px 0;border-bottom:1px solid #e3e8df}.extra summary{font-size:16px;font-weight:650;cursor:pointer;color:#2d5154}.extra p{font-size:16px;margin:12px 0;color:#334750}.extra .table-scroll{overflow:auto;max-height:460px;margin:15px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65}th,td{padding:10px 13px;border:1px solid #ccd7cf;text-align:left;vertical-align:top}th{background:#edf2ec;font-weight:650}caption{text-align:left;font-size:16px;font-weight:650;margin:0 0 10px}.fig-caption{padding:18px 29px 23px;font-size:14px;color:#334750}.cites,.cites a,.references li,.references li a,.references li span{font-size:11px!important;color:#64748B!important}.cites a{padding:0 2px}.references{padding:28px 0 35px}.references h2{font-family:"Source Serif 4",Georgia,serif;font-size:27px}.references>p{font-size:14px;color:#3e5059;margin:12px 0}.references ol{list-style:none;padding:0;columns:2;column-gap:40px}.references li{break-inside:avoid;padding:5px 0;line-height:1.8}.references li a{font-weight:600}.references li span{display:block}footer{border-top:1px solid #c4d2c5;padding:22px 0 36px;display:flex;justify-content:space-between;gap:20px;font-size:14px;color:#344b52}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid #afc0b3;width:min(760px,95vw);height:100dvh;max-height:100dvh;background:#fafbf8;color:var(--ink);padding:28px;box-shadow:-20px 0 60px #162e2333}dialog::backdrop{background:#142e345c;backdrop-filter:blur(3px)}dialog form{text-align:right;margin-bottom:20px}dialog h2{font-size:30px;margin:13px 0 25px}dialog th{min-width:130px}dialog p{margin-top:20px;font-size:17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#svgLibrary{height:0;overflow:hidden}.pill{display:inline-block;background:#eef2e9;border:1px solid #cad5c6;border-radius:20px;padding:4px 12px;font-size:14px;color:#284a47}.age-bars{display:flex;gap:25px;align-items:end;margin:20px 0;height:160px}.age-bars>div{flex:1;display:flex;gap:8px;align-items:end;height:100%}.age-bars span{display:block;background:#3c5488;color:#fff;padding:5px;font-size:14px;min-width:70px;text-align:center}
+@media(max-width:900px){header{padding:12px 18px}.brand small{display:none}.head-actions button{font-size:13px}.intro{grid-template-columns:1fr;padding-top:35px;gap:23px}.intro-note{display:none}main{padding:0 17px}.reading{grid-template-columns:1fr;gap:16px}.fig-heading h2{font-size:24px}.toolbar{flex-wrap:wrap}.toolbar label{order:4;flex-basis:100%}.toolbar output{margin-left:auto}.references ol{columns:1}nav a{padding:12px 15px}.fig-number{font-size:34px}}
+@media(max-width:520px){body{font-size:17px}header{flex-wrap:wrap;gap:9px}.brand{font-size:16px}.brand-mark{width:32px;height:32px}.head-actions{width:100%}.head-actions button{flex:1}main{padding:0 12px}.intro{padding:30px 3px}.intro h1{font-size:34px}.subtitle{font-size:18px}.eyebrow{font-size:11px}.fig-heading,.reading{padding:20px 18px}.fig-heading h2{font-size:23px}.fig-number{display:none}.context{padding:0 18px 16px}.context select{max-width:100%;font-size:15px}.toolbar{padding:14px 18px;gap:9px}.toolbar output{font-size:12px;min-width:140px}.toolbar button{font-size:15px;padding:8px 12px}.extra{margin:0 18px}.fig-caption,.code-note{padding-inline:18px}.reading h3{font-size:22px}footer{flex-direction:column}.references h2{font-size:23px}dialog{padding:20px}dialog table{font-size:15px}.age-bars{overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{header,.toolbar,.context,nav,dialog{display:none}.figure{break-inside:avoid}.scroll-stage svg{min-width:0}.reading{padding:15px}.references ol{columns:2}body{font-size:14px}}
+[hidden]{display:none!important}
+.brand-mark{border-radius:50%;background:#365e5b}
+.head-actions button{display:flex;align-items:center;gap:7px}
+.head-actions svg{width:18px;height:18px}
+.intro{padding-block:63px 38px}
+.intro h1 em{color:#315e60}
+.intro .pill{margin-top:18px}
+.fig-heading .eyebrow{overflow-wrap:anywhere}
+.segmented,.dependent{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.segmented button{font-size:16px;padding:8px 14px}
+.segmented button[aria-pressed=true]{background:#3C5488;border-color:#3C5488;color:#fff}
+.dependent{width:100%}
+.variables{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.variable{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;background:#f3f6f0;border:1px solid #d2ddd3;border-radius:8px;padding:10px 15px}
+.variable input{grid-column:1/-1;width:100%;accent-color:#3C5488;min-height:24px;margin:0}
+.variable output{color:#2d476e;font-variant-numeric:tabular-nums}
+.sequence{color:#334750;overflow-wrap:anywhere;min-width:0}
+.sequence output{padding-left:8px;color:#3c5488;font-weight:700}
+.scroll-hint{display:none;margin:0;padding:7px 18px;color:#334750;font-size:14px}
+.table-scroll{overflow:auto}
+.reading{min-height:180px}
+.reading .phase{font-weight:750}
+.reading .result b{font-variant-numeric:tabular-nums}
+.references li:target{background:#eef4ea;outline:1px solid #bccdbb}
+.references ol{background:#faf9f5}
+#svgLibrary{position:absolute;width:0;height:0;overflow:visible;pointer-events:none}
+#svgLibrary svg{position:absolute;width:0;height:0}
+svg text{pointer-events:none}
+button:disabled{opacity:.58;cursor:default}
+@media(max-width:1000px){.scroll-hint{display:block}}
+@media(max-width:520px){
+  html{scroll-padding-top:125px}
+  .variables{grid-template-columns:1fr;gap:7px}
+  .segmented button{font-size:15px;padding:8px 10px}
+  .context{gap:10px}
+  .reading{min-height:0}
+}
+#art-library{position:absolute;width:0;height:0;pointer-events:none}
+.brand-mark{flex:none}.intro-note i{font-size:23px}
+.context .variables:has(> :only-child){grid-template-columns:minmax(0,650px)}
+.context .variable[hidden]{display:none}
+.fig-caption{font-size:14px}.r-script{font-family:"Fira Code",Consolas,monospace}
+.curve-target{cursor:pointer;pointer-events:stroke}
+.table-scroll table{min-width:420px}
+.linked-result{min-height:80px}
+[data-theme=bw] .plot-panel{stroke-width:1.5}
+@media(max-width:520px){.brand{line-height:1.3}.head-actions button{min-height:42px}.intro-note{display:none}}
+</style></head>
+<body><header><a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>从外植体到再生植株<small>PLANT CELL ENGINEERING / 02.01</small></span></a>
+<div class="head-actions"><button type="button" id="theme" aria-pressed="false">theme_gray() → bw</button><button type="button" id="reviewOpen"><i data-lucide="book-open" aria-hidden="true"></i>高考速查 ↗</button></div></header>
+<main id="top"><section class="intro"><div><p class="eyebrow">选择性必修三 / 第 2 章 · 第 1 节</p><h1>植物细胞工程</h1><p class="subtitle">从一个可追踪的细胞、一瓶培养基和一次融合出发，读懂植株再生的证据。</p></div>
+<div class="intro-note"><i>PLANT CELL ENGINEERING</i><p>长出芽、得到完整植株、筛到双亲标记，各能证明什么？</p><span class="pill">4 幅机制与数据联动图</span></div></section>
+<nav aria-label="图谱目录"><a href="#figure1">01 全能性证据</a><a href="#figure2">02 菊花组织培养</a><a href="#figure3">03 体细胞杂交</a><a href="#figure4">04 五类应用</a></nav>
+<section class="figure" id="figure1" data-figure="0" aria-labelledby="heading1">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 01 / CELL LINEAGE & REGENERATION</p><h2 id="heading1">长出一团细胞，和长成一株植物的证据一样吗？</h2></div><span class="fig-number" aria-hidden="true">01</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="lineage"><button type="button" data-group="lineage" data-value="single" aria-pressed="true">单细胞追踪</button><button type="button" data-group="lineage" data-value="tissue" aria-pressed="false">组织块起始</button><button type="button" data-group="lineage" data-value="callus" aria-pressed="false">单细胞 · 停在愈伤组织</button></div></div><div class="toolbar"><button type="button" class="play" data-play="0" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="0">↺ 从头看</button><label><span class="sr-only">第 1 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="0"></label><output id="time0"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 1 图，可横向滚动"><svg id="svg1" viewBox="0 0 1200 660" role="img" aria-label="长出一团细胞，和长成一株植物的证据一样吗？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase1"></p><h3 id="title1"></h3><p id="text1"></p></div><div><div class="result"><span>当前观察</span><b id="result1"></b></div><p class="note" id="note1"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>全能性是分裂和分化潜能。追踪一个已分化的细胞，经培养得到完整植株，为该细胞在相应条件下表现全能性提供证据。只有愈伤组织支持增殖，只有芽或根支持发生分化。组织块再生表明该材料有再生能力，若要把完整植株归因于某一个细胞，须追踪来源。细胞类型与培养条件会影响实际表现。</p><p>左图用体细胞胚展示一条再生路线。球形、心形与鱼雷形属于双子叶植物体细胞胚的常见形态阶段；组织培养也可通过器官发生得到试管苗。</p></details>
+<p class="fig-caption"><b>Figure 1.</b> 胡萝卜根细胞再生为研究背景。图中培养路线与观察序列为机制示意，横轴为阶段。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1093/oxfordjournals.pcp.a079001" target="_blank" rel="noopener noreferrer" aria-label="参考资料 2">[2]↗</a> <a href="https://doi.org/10.1002/j.1537-2197.1960.tb07137.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料 3">[3]↗</a></sup></p></section>
+<section class="figure" id="figure2" data-figure="1" aria-labelledby="heading2">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 02 / TISSUE CULTURE & MEDIA</p><h2 id="heading2">同批培养材料，为什么走向愈伤、芽或根？</h2></div><span class="fig-number" aria-hidden="true">02</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="medium"><button type="button" data-group="medium" data-value="blank" aria-pressed="false">无添加</button><button type="button" data-group="medium" data-value="balance" aria-pressed="true">相对均衡</button><button type="button" data-group="medium" data-value="shoot" aria-pressed="false">细胞分裂素相对高</button><button type="button" data-group="medium" data-value="root" aria-pressed="false">生长素相对高</button><button type="button" data-group="medium" data-value="double" aria-pressed="false">同比例 · 更高总量</button></div></div><div class="toolbar"><button type="button" class="play" data-play="1" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="1">↺ 从头看</button><label><span class="sr-only">第 2 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="1"></label><output id="time1"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 2 图，可横向滚动"><svg id="svg2" viewBox="0 0 1200 660" role="img" aria-label="同批培养材料，为什么走向愈伤、芽或根？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase2"></p><h3 id="title2"></h3><p id="text2"></p></div><div><div class="result"><span>当前观察</span><b id="result2"></b></div><p class="note" id="note2"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>取幼嫩菊花茎段，表面消毒并用无菌水冲洗，使用灭菌器具在无菌条件下接种。依次诱导愈伤组织、转接诱导芽、转接诱导根；试管苗逐步开盖炼苗，清洗根部培养基后先移到适宜的过渡基质，再移栽。基础培养基提供矿质元素、糖源等。各阶段的温度、光照、营养和调节剂按材料与方案确定。</p><p>右图用同批愈伤组织随机分组，固定材料、基础培养基、培养时间和环境。相对剂量（生长素，细胞分裂素）依次为 (0,0)、(1,1)、(1,3)、(3,1)、(2,2)，只用于课堂比较，无实际浓度单位。相对高低借鉴经典烟草体系，真实反应还受浓度、植物材料和内源激素影响。</p></details>
+<p class="fig-caption"><b>Figure 2.</b> 上半左图为教材菊花流程。右侧为独立配方对照的终点模拟，每组 20 个培养单位，以主表型互斥计数。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://pubmed.ncbi.nlm.nih.gov/13486467/" target="_blank" rel="noopener noreferrer" aria-label="参考资料 4">[4]↗</a> <a href="https://doi.org/10.1111/j.1399-3054.1962.tb08052.x" target="_blank" rel="noopener noreferrer" aria-label="参考资料 5">[5]↗</a></sup></p></section>
+<section class="figure" id="figure3" data-figure="2" aria-labelledby="heading3">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 03 / PROTOPLAST FUSION & SELECTION</p><h2 id="heading3">看到两个亲本的信号，离确认杂种还有几步？</h2></div><span class="fig-number" aria-hidden="true">03</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="fusion"><button type="button" data-group="fusion" data-value="peg" aria-pressed="true">加 PEG 诱导</button><button type="button" data-group="fusion" data-value="mock" aria-pressed="false">同处理 · 无 PEG</button></div></div><div class="toolbar"><button type="button" class="play" data-play="2" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="2">↺ 从头看</button><label><span class="sr-only">第 3 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="2"></label><output id="time2"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 3 图，可横向滚动"><svg id="svg3" viewBox="0 0 1200 660" role="img" aria-label="看到两个亲本的信号，离确认杂种还有几步？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase3"></p><h3 id="title3"></h3><p id="text3"></p></div><div><div class="result"><span>当前观察</span><b id="result3"></b></div><p class="note" id="note3"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>用纤维素酶和果胶酶去壁，在适宜渗透条件下维持原生质体，质膜、细胞器和细胞核仍在。PEG 或电融合可促进质膜融合。早期可见双核，之后可发生核融合或遗传物质重组与丢失；细胞壁再生后，经分裂与组织培养可获得植株。融合体现膜的流动性，再生利用细胞的再生潜能。</p><p>比较相同来源、等量材料的加 PEG 与无 PEG 组。条带示意分别用两亲本作标记对照，无模板作空白；还需检测内参、倍性及多个位点，并验证性状与育性。双亲来源标记支持相应片段存在。番茄—马铃薯体细胞杂交的后代表型也受基因组合、表达和发育影响。</p></details>
+<p class="fig-caption"><b>Figure 3.</b> 白菜与甘蓝作教材示例。结果构成与 PCR 条带为教学示意；条带图的两个标记分别代表 A、C 亲本特异位点。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.1073/pnas.69.8.2292" target="_blank" rel="noopener noreferrer" aria-label="参考资料 6">[6]↗</a></sup></p></section>
+<section class="figure" id="figure4" data-figure="3" aria-labelledby="heading4">
+<div class="fig-heading"><div><p class="eyebrow">FIGURE 04 / APPLICATIONS & EVIDENCE</p><h2 id="heading4">离体培养的终点，是种苗、品系还是化合物？</h2></div><span class="fig-number" aria-hidden="true">04</span></div>
+<div class="context"><div class="segmented" role="group" aria-label="application"><button type="button" data-group="application" data-value="rapid" aria-pressed="false">快速繁殖</button><button type="button" data-group="application" data-value="virus" aria-pressed="true">马铃薯脱毒</button><button type="button" data-group="application" data-value="haploid" aria-pressed="false">单倍体育种</button><button type="button" data-group="application" data-value="mutant" aria-pressed="false">突变体筛选</button><button type="button" data-group="application" data-value="taxol" aria-pressed="false">紫杉醇生产</button></div><div class="segmented" role="group" aria-label="tip"><button type="button" data-group="tip" data-value="100" aria-pressed="true">100 μm</button><button type="button" data-group="tip" data-value="200" aria-pressed="false">200 μm</button><button type="button" data-group="tip" data-value="300" aria-pressed="false">300 μm</button></div></div><div class="toolbar"><button type="button" class="play" data-play="3" aria-pressed="false">▶ 播放过程</button><button type="button" data-reset="3">↺ 从头看</button><label><span class="sr-only">第 4 图播放进度</span><input type="range" min="0" max="100" step=".1" value="0" data-time="3"></label><output id="time3"></output></div>
+<div class="scroll-stage" tabindex="0" aria-label="第 4 图，可横向滚动"><svg id="svg4" viewBox="0 0 1200 660" role="img" aria-label="离体培养的终点，是种苗、品系还是化合物？"></svg></div>
+<p class="scroll-hint">↔ 横向滑动可查看完整分面图</p>
+<div class="reading"><div><p class="phase" id="phase4"></p><h3 id="title4"></h3><p id="text4"></p></div><div><div class="result"><span>当前观察</span><b id="result4"></b></div><p class="note" id="note4"></p></div></div>
+<details class="extra"><summary>查看依据与模型边界</summary><p>快速繁殖可保留优良母株性状，长期继代仍应做一致性检测。体细胞胚包埋可做人工种子，属于拓展应用。茎尖再生苗需检测目标病毒并防再感染。</p><p>马铃薯案例采用未额外处理的 Binella，100、200、300 μm 茎尖的存活率为 86%、94%、100%，再生苗中 PVY 感染率为 31%、38%、75%，图中用 100% 减感染率得到未检出率，两项指标的分母分别是接种茎尖和检测植株。检测为 DAS-ELISA，结果只针对本研究的 PVY 与检测条件。</p><p>单倍体育种图以二倍体 AaBb、两对基因独立分配为例。花药培养需确认再生苗来自小孢子而非花药壁。染色体加倍后仍需鉴定、选优。培养产生的变异或诱变后筛得的候选均需复验。红豆杉工艺可先增殖细胞，再调控代谢并提取紫杉醇；教材还有紫草宁和人参皂苷。</p></details>
+<p class="fig-caption"><b>Figure 4.</b> 茎尖脱毒分面取自 AlMaarri 等 Table 1 的 Binella 数据。其他数值为课堂模型，倍性流程为概念示意。 <sup class="cites"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer" aria-label="参考资料 1">[1]↗</a> <a href="https://doi.org/10.5511/plantbiotechnology.12.0215a" target="_blank" rel="noopener noreferrer" aria-label="参考资料 7">[7]↗</a> <a href="https://doi.org/10.1038/204497a0" target="_blank" rel="noopener noreferrer" aria-label="参考资料 8">[8]↗</a> <a href="https://doi.org/10.1038/nbt0996-1129" target="_blank" rel="noopener noreferrer" aria-label="参考资料 9">[9]↗</a> <a href="https://doi.org/10.1038/nbt0986-797" target="_blank" rel="noopener noreferrer" aria-label="参考资料 10">[10]↗</a></sup></p></section>
+<section class="references"><h2>References / 原文与数据</h2><p>图注区分论文统计、基于文献数据的换算和教学模拟。统计图为 SVG 实现。</p>
+<ol><li id="ref-1"><a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/d12ff6b6-b6cd-444a-9749-4642aa350482.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">[1] 人民教育出版社 · 高中生物学选择性必修 3 ↗</a><span>第 2 章第 1 节，教材 PDF。</span></li><li id="ref-2"><a href="https://doi.org/10.1093/oxfordjournals.pcp.a079001" target="_blank" rel="noopener noreferrer">[2] Kato &amp; Takeuchi, 1963 · Plant and Cell Physiology ↗</a><span>胡萝卜根的单细胞离体形态发生。</span></li><li id="ref-3"><a href="https://doi.org/10.1002/j.1537-2197.1960.tb07137.x" target="_blank" rel="noopener noreferrer">[3] Steward et al., 1960 · American Journal of Botany ↗</a><span>胡萝卜离体培养中的细胞核观察与再生过程。</span></li><li id="ref-4"><a href="https://pubmed.ncbi.nlm.nih.gov/13486467/" target="_blank" rel="noopener noreferrer">[4] Skoog &amp; Miller, 1957 · Symposia of the Society for Experimental Biology ↗</a><span>经典烟草组织培养与器官发生研究。</span></li><li id="ref-5"><a href="https://doi.org/10.1111/j.1399-3054.1962.tb08052.x" target="_blank" rel="noopener noreferrer">[5] Murashige &amp; Skoog, 1962 · Physiologia Plantarum ↗</a><span>经典 MS 基础培养基研究。</span></li><li id="ref-6"><a href="https://doi.org/10.1073/pnas.69.8.2292" target="_blank" rel="noopener noreferrer">[6] Carlson, Smith &amp; Dearing, 1972 · PNAS ↗</a><span>异种烟草的体细胞杂交及选择筛查。</span></li><li id="ref-7"><a href="https://doi.org/10.5511/plantbiotechnology.12.0215a" target="_blank" rel="noopener noreferrer">[7] AlMaarri, Massa &amp; AlBiski, 2012 · Plant Biotechnology ↗</a><span>Table 1 中 Binella 马铃薯茎尖长度、存活和 PVY 数据。</span></li><li id="ref-8"><a href="https://doi.org/10.1038/204497a0" target="_blank" rel="noopener noreferrer">[8] Guha &amp; Maheshwari, 1964 · Nature ↗</a><span>从曼陀罗离体花药获得胚。</span></li><li id="ref-9"><a href="https://doi.org/10.1038/nbt0996-1129" target="_blank" rel="noopener noreferrer">[9] Yukimune et al., 1996 · Nature Biotechnology ↗</a><span>茉莉酸甲酯诱导红豆杉悬浮细胞积累紫杉醇等产物。</span></li><li id="ref-10"><a href="https://doi.org/10.1038/nbt0986-797" target="_blank" rel="noopener noreferrer">[10] Redenbaugh et al., 1986 · Bio/Technology ↗</a><span>体细胞胚包埋制成人工种子的实验。</span></li></ol></section>
+<footer><span>林默然生物课件 · 原创交互图谱</span><span>植物细胞工程 / v1.0</span></footer></main>
+<dialog id="review" aria-labelledby="reviewTitle"><form method="dialog"><button autofocus>关闭 ×</button></form><p class="eyebrow">REVIEW SUMMARY</p><h2 id="reviewTitle">植物细胞工程 · 高考速查</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">考点</th><th scope="col">判断依据</th></tr></thead><tbody><tr><th scope="row">全能性证据</th><td>单个已分化细胞来源可追溯，且在适宜条件下形成完整植株。愈伤只支持增殖，芽或根支持分化。</td></tr><tr><th scope="row">两次转变</th><td>外植体→愈伤组织，脱分化。愈伤组织→芽、根等，属于再分化。</td></tr><tr><th scope="row">配方对照</th><td>两类激素的浓度、比例及培养阶段共同影响去向。固定材料、基础培养基、培养环境与观察时间。</td></tr><tr><th scope="row">体细胞杂交</th><td>去壁→诱导原生质体融合→再生壁与筛选→组织培养→鉴定杂种植株。</td></tr><tr><th scope="row">快繁与脱毒</th><td>快繁重在扩大优良材料；茎尖培养的再生苗须检测目标病毒。</td></tr><tr><th scope="row">单倍体育种</th><td>小孢子发育得到单倍体，经染色体加倍形成相应纯合二倍体，再选择目标性状。</td></tr><tr><th scope="row">突变体与细胞产物</th><td>突变体经筛选、复验和遗传稳定性验证；工厂化培养可直接收获化合物。</td></tr></tbody></table></div></dialog>
+<svg id="art-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L11 6L1 11Z" fill="context-stroke"/></marker>
+<radialGradient id="sphere" cx=".34" cy=".24" r=".76"><stop stop-color="#edf9fd"/><stop offset=".67" stop-color="#8accdf"/><stop offset="1" stop-color="#327d9b"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#c9edf4"/><stop offset="1" stop-color="#70b5cd"/></linearGradient>
+<linearGradient id="soil" x2="0" y2="1"><stop stop-color="#dbc8a6"/><stop offset="1" stop-color="#a68d66"/></linearGradient>
+<linearGradient id="hare"><stop stop-color="#f0e6cb"/><stop offset="1" stop-color="#c2a88b"/></linearGradient>
+</defs></svg><script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false, stopAt = 1;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = Math.min(stopAt, t + elapsed / duration);
+      if (t >= stopAt) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play({until = 1} = {}) {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        stopAt = clamp(until);
+        if (t >= stopAt) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const $=id=>document.getElementById(id),clamp=BioAtlas.clamp,mix=BioAtlas.mix,phase=BioAtlas.phase,esc=BioAtlas.escape;
+const C={red:'#E64B35',cyan:'#4DBBD5',green:'#00A087',blue:'#3C5488',orange:'#F39B7F',ink:'#182B36'};
+const many=(n,f)=>Array.from({length:n},(_,i)=>f(i)).join('');
+const P=(d,fill='none',stroke='#65766b',w=1.5)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const R=(x,y,w,h,f='#fff',s='none',rx=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" stroke="${s}" rx="${rx}"/>`;
+const E=(x,y,rx,ry,f,s='none')=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${f}" stroke="${s}"/>`;
+const G=(x,y,s,art,a=0)=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${s})">${art}</g>`;
+const O=(o,art)=>`<g opacity="${clamp(o)}">${art}</g>`;
+const txt=(x,y,text,anchor='start',fill=C.ink,size=18,weight=500)=>`<text x="${x}" y="${y}" text-anchor="${anchor}" fill="${fill}" font-size="${size}" font-weight="${weight}" font-family="Arial,Microsoft YaHei,sans-serif">${esc(text)}</text>`;
+const label=(x,y,title,subtitle='')=>BioAtlas.label({x,y,title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+const call=(x,y,px,py,title,subtitle='')=>BioAtlas.callout({x,y,from:[px,py],title,subtitle,color:C.ink,bounds:{width:1200,height:820}});
+function arrow(d,color=C.green,inhibit=false){return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" marker-end="url(#${inhibit?'bar':'arrow'})"/>`}
+function dotFlow(a,b,t,color=C.green,n=5){return many(n,i=>{const f=(t*2+i/n)%1;return E(mix(a[0],b[0],f),mix(a[1],b[1],f),3.5,3.5,color)})}
+function linePath(data,X,Y){return data.map((d,i)=>(i?'L':'M')+X(d.x).toFixed(2)+' '+Y(d.y).toFixed(2)).join(' ')}
+function ribbon(data,X,Y,color,opacity=.18){return `<path d="${linePath(data.map(d=>({x:d.x,y:d.hi})),X,Y)} ${data.slice().reverse().map(d=>'L'+X(d.x).toFixed(2)+' '+Y(d.lo).toFixed(2)).join(' ')}Z" fill="${color}" opacity="${opacity}"/>`}
+function plot(id,x,y,w,h,xt,yt,title,xlabel='',ylabel=''){
+ const X=v=>x+(v-xt[0])/(xt.at(-1)-xt[0])*w,Y=v=>y+h-(v-yt[0])/(yt.at(-1)-yt[0])*h;
+ let svg=`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs><rect x="${x}" y="${y}" width="${w}" height="${h}" class="plot-panel"/>`;
+ for(const [ticks,map,vertical] of [[xt,X,true],[yt,Y,false]]){ticks.forEach((v,i)=>{if(i){const p=map((v+ticks[i-1])/2);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--minor)',.75)}const p=map(v);svg+=P(vertical?`M${p} ${y}v${h}`:`M${x} ${p}h${w}`,'none','var(--major)',1.5);svg+=vertical?txt(p,y+h+25,v,'middle'):txt(x-11,p+6,v,'end')})}
+ svg+=`<rect x="${x}" y="${y-32}" width="${w}" height="30" fill="var(--strip)"/>`+txt(x+w/2,y-11,title,'middle',C.ink,18,600);
+ if(xlabel)svg+=txt(x+w/2,y+h+55,xlabel,'middle');if(ylabel)svg+=txt(x,y-47,ylabel);
+ return{X,Y,x,y,w,h,svg,clip:content=>`<g clip-path="url(#${id})">${content}</g>`};
+}
+function series(p,data,color,t=1,dash=''){
+ const edge=data[0].x+(data.at(-1).x-data[0].x)*t,done=data.filter(d=>d.x<=edge),next=data.find(d=>d.x>edge);
+ if(next&&done.length){const last=done.at(-1),u=(edge-last.x)/(next.x-last.x);done.push({x:edge,y:mix(last.y,next.y,u)})}
+ return p.clip(`<path d="${linePath(data,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="2" opacity=".22" stroke-dasharray="${dash}"/>`+`<path d="${linePath(done,p.X,p.Y)}" fill="none" stroke="${color}" stroke-width="3" stroke-dasharray="${dash}"/>`+(done.length?E(p.X(done.at(-1).x),p.Y(done.at(-1).y),4,4,color,'#fff'):''));
+}
+function legend(x,y,title,items){return txt(x,y,title,'start',C.ink,18,700)+items.map((a,i)=>R(x,y+17+i*38,26,26,'#EBEBEB','none',0)+(a[2]==='band'?O(.25,R(x+2,y+21+i*38,22,18,a[1],'none',0)):'')+`<path d="M${x+3} ${y+30+i*38}h20" fill="none" stroke="${a[1]}" stroke-width="${a[2]==='band'?2:3}" stroke-dasharray="${a[2]==='dash'?'6 3':a[2]==='dot'?'2 4':''}"/>`+(!a[2]?E(x+13,y+30+i*38,3,3,a[1]):'')+txt(x+35,y+36+i*38,a[0])).join('')}
+function scan(p,x){return p.clip(P(`M${p.X(x)} ${p.y}v${p.h}`,'none','#3C5488',1.5))}
+function say(i,kicker,heading,text,result,note){$('phase'+i).textContent=kicker;$('title'+i).textContent=heading;$('text'+i).textContent=text;$('result'+i).textContent=result;$('note'+i).textContent=note}
+
+function grass(x,y,s=1){return G(x,y,s,P('M0 0Q-4 -29 -23 -40Q-13 -21 0 0M0 0Q0 -42 10 -50Q8 -17 0 0M0 0Q12 -29 31 -27Q15 -15 0 0','none','#729876',2))}
+function hare(x,y,s=1,a=0){return G(x,y,s,E(-7,32,63,9,'#dde3dc')+P('M-62 12Q-87 4 -76 -8Q-64 -18 -55 -6','url(#hare)','#877965')+P('M-57 18C-72 -8 -40 -40 -8 -25Q13 -15 20 -34L40 -32Q66 -7 44 10L19 20L11 32H-6L1 14L-30 20L-48 32H-66L-46 15Z','url(#hare)','#887f6f',1.5)+P('M20 -29Q3 -89 15 -91Q28 -82 30 -33M35 -32Q29 -97 43 -92Q54 -77 44 -28','url(#hare)','#887f6f',1.5)+P('M21 -43L15 -78M40 -43L42 -80','none','#c8aa9a',4)+E(43,-18,3,3,'#1e292b')+E(56,-7,3,2,'#8b6458')+P('M51 -3l15 3m-15 -3l14 -4','none','#8b8679',.8),a)}
+function cow(x,y,s=1,t=0){return G(x,y,s,P('M-49 0Q-68 -9 -64 -38','none','#928777',3)+P('M-47 -16L25 -17L37 -36L60 -27L64 -6L47 5L32 5L26 34H13L14 4L-18 4L-23 34H-36L-39 2Z','#d1ccb8','#7d8674',1.5)+P('M-24 -15Q-44 -8 -22 3L-8 -3L-10 -16M10 -17L24 -7L19 3L4 -1Z','#8d9a89')+E(57,-9,13,7,'#c5b3a0','#7d8674')+E(50,-24,2,2,'#243c33')+P('M36 -34l-3 -13M55 -30l10 -10','none','#9a8f6e',3),Math.sin(t*8))}
+function corn(x,y,s=1){return G(x,y,s,P('M0 30V-90','none','#6b8a56',4)+P('M0 -45Q-68 -82 -60 -45Q-36 -27 0 -22M0 -5Q69 -50 61 -13Q40 7 0 15Z','#a1b77b','#6b8a56',1.4)+E(6,-66,13,35,'#dbbe72','#a89054')+many(18,i=>E(i%3*7-1,-90+Math.floor(i/3)*10,3,4,'#e7cc86','#c0a361')))}
+const purple='#8491B4',sand='#AD792C',paper='#FAF9F5';
+const palette=[C.orange,C.green,purple,C.cyan,sand,C.blue];
+function tile(x,y,w,h,heading,sub='',color=C.green,fill='#f5f8f2'){
+  return R(x,y,w,h,fill,'#cfddd2',10)+R(x,y,5,h,color,'none',3)+txt(x+16,y+29,heading,'start',C.ink,18,750)+(sub?txt(x+16,y+54,sub,'start','#415663',16):'');
+}
+function headings(a,b){
+  return R(18,17,550,626,'#fbfcf8','#d9e3d6',12)+R(586,17,596,626,'#fff','#d9e3d6',12)+txt(37,51,'a','start',C.blue,24,800)+txt(65,50,a,'start',C.ink,21,750)+txt(605,51,'b','start',C.blue,24,800)+txt(634,50,b,'start',C.ink,21,750);
+}
+function caption(x,y,lines,color=C.ink){
+  return lines.map((line,i)=>txt(x,y+25*i,line,'start',color,17,i===0?700:450)).join('');
+}
+function rScript(x,y,lines){
+  return R(x-10,y-21,540,lines.length*18+14,'#f3f5f0','#e0e7df',4)+lines.map((line,i)=>`<text x="${x}" y="${y+i*18}" class="r-script" font-size="13" fill="#344c52">${esc(line)}</text>`).join('');
+}
+function spark(d,color,w=3,dash=''){
+  return `<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function pulse(points,t,color=C.green,n=5,r=4){
+  return many(n,i=>{
+    const pos=((t*2+i/n)%1)*(points.length-1),j=Math.floor(pos),a=points[j],b=points[j+1]??a;
+    return E(mix(a[0],b[0],pos-j),mix(a[1],b[1],pos-j),r,r,Array.isArray(color)?color[i%color.length]:color,'#fff');
+  });
+}
+function leaf(x,y,s=1,a=0,fill='#76ad75'){
+  return G(x,y,s,P('M0 0C-19-17-15-35 4-47C22-31 24-14 0 0Z',fill,'#326851',1.6)+P('M0 0L4-34','none','#34745a',1.4),a);
+}
+function tree(x,y,s=1){
+  return G(x,y,s,P('M-5 3L-3-30H5L6 3Z','#997453','#715437')+P('M-29-22C-36-39-22-49-18-51C-18-74 10-78 16-57C39-51 39-30 24-23C16-8-19-10-29-22Z','#8ab383','#3d795e',2)+P('M0-25L-13-46M1-26L14-47','none','#528867',2));
+}
+function panda(x,y,s=1){
+  return G(x,y,s,E(0,9,25,7,'#294e4533')+E(-13,-6,15,15,'#273540')+E(13,-6,13,14,'#273540')+E(0,-13,23,19,'#f8f6ef','#263843')+E(-15,-32,7,8,'#263843')+E(15,-32,7,8,'#263843')+E(0,-24,19,15,'#fffdf6','#263843')+E(-8,-24,5,6,'#263843')+E(8,-24,5,6,'#263843')+E(-8,-24,1.7,1.7,'#fff')+E(8,-24,1.7,1.7,'#fff')+E(0,-19,4,2.5,'#263843'));
+}
+function fishArt(x,y,s=1,fill='#f7a785'){
+  return G(x,y,s,P('M-34 0Q-3-27 28 0Q2 26-34 0L-55 15L-52-14Z',fill,'#805a52',2)+P('M-7-9L1-20L13-8','none','#805a52',2)+E(17,-3,3,3,C.ink));
+}
+function globe(x,y,r){
+  return `<defs><clipPath id="globe-clip"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath></defs>`+E(x,y,r,r,'url(#sphere)','#297991')+
+    `<g clip-path="url(#globe-clip)">${G(x,y,r/100,
+      P('M-91-51Q-63-87-31-73L-16-61L-21-49L-42-46L-38-32L-54-22L-63-3L-71-12L-77-35Z','#78aa75','#43836b')+
+      P('M-56-7Q-45-7-24 7L-21 28L-40 54L-46 73L-57 57L-53 39L-67 17Z','#92b97e','#43836b')+
+      P('M-4-46Q28-76 68-56L95-36L92-19L61-17L56 1L38-4L27-22L14-26L14-11L31 3L19 19L12 43L-4 46L-13 30L-19 8L-13-6L3-11L-6-19L-14-30Z','#78aa75','#43836b')+
+      P('M54 46L61 32L86 27L96 46L82 60L61 57Z','#91b680','#43836b')+
+      E(0,0,47,100,'none','#ffffff60')+E(0,0,100,54,'none','#ffffff60')+P('M-100 0H100M0-100V100','none','#ffffff60',1))}</g>`;
+}
+function flowLine(a,b,color){
+  return arrow('M'+a.join(' ')+'L'+b.join(' '),color);
+}
+function line(data,p,color,width=3,dash=''){
+  return p.clip(spark(linePath(data,p.X,p.Y),color,width,dash));
+}
+function chartDot(p,x,y,color,r=7){
+  return E(p.X(x),p.Y(y),r,r,color,'#fff');
+}
+function draw(n,content){$('svg'+n).innerHTML=content}
+function values(id,value){$('out-'+id).textContent=value}
+function pick(sel,active){
+  for(const b of document.querySelectorAll(sel))b.setAttribute('aria-pressed',String(b.dataset.value===active));
+}
+function setInput(id,val){$(id).value=val}
+
+const state={lineage:'single',medium:'balance',fusion:'peg',application:'virus',tip:'100'};
+const leafGreen='#75ac7b',greenInk='#165748',glass='#789ca6',gold='#d5a75d',purpleInk='#715887';
+const ink=(x,y,s,size=17)=>txt(x,y,s,'middle',C.ink,size,700);
+const stagesAt=(t,count)=>Math.min(count-1,Math.floor(t*count));
+const artNode=(x,y,title,active=false,w=100)=>R(x-w/2,y-20,w,36,active?'#e3f1e7':'#f3f7f4',active?'#578f78':'#d0dfd5',6)+ink(x,y+4,title,16);
+function stepStrip(items,y,active,x=48,step=101,w=91){
+  return items.map((label,i)=>{
+    const a=x+i*step;
+    return (i?flowLine([a-step+w+2,y],[a-3,y],'#6d8992'):'')+artNode(a+w/2,y,label,i===active,w);
+  }).join('');
+}
+function blade(x,y,s=1,angle=0,fill=leafGreen){
+  return G(x,y,s,P('M0 0C-23-4-26-27-18-40Q1-39 11-26Q19-10 0 0Z',fill,'#408268',1.7)+
+    P('M0-1L-14-31M-6-15L3-23M-9-22L-17-22','none','#3e7c62',1.4),angle);
+}
+function roots(s=1){
+  return G(0,0,s,P('M0-3C-6 15 12 28 0 62M-1 13Q-14 19-24 40M2 29Q19 36 23 54M-6 22Q-18 24-20 27M4 44Q-12 50-10 63M12 38l10 2','none','#a17548',2.6));
+}
+function seedling(x,y,s=1,rooted=true,branch=true){
+  return G(x,y,s,(rooted?roots():'')+
+    P('M0 0Q-7-25 2-55Q7-68 5-93','none','#4c8866',4.4)+
+    blade(1,-59,.77,-42)+blade(3,-72,.68,53,'#86b986')+
+    blade(5,-88,.49,4,'#9dc987')+(branch?blade(-2,-37,.76,-44)+blade(0,-48,.64,69,'#91bc83'):''));
+}
+function callusArt(x,y,s=1,amount=1){
+  return G(x,y,s,P('M-59 17Q-70-2-52-21Q-45-42-26-37Q-11-58 7-39Q25-51 38-32Q63-37 65-9Q77 4 59 23Q40 40 12 35Q-3 43-25 34Q-49 38-59 17Z','#d6cf90','#a09a58',2)+
+    many(Math.max(1,Math.round(amount*34)),i=>{
+      const a=i*2.39996,r=Math.sqrt((i+.5)/34);
+      return E(Math.cos(a)*56*r,Math.sin(a)*35*r,7+i%4,6+i%3,['#e1dca5','#c5c780','#d5d48b','#efdfaa'][i%4],'#a8a167');
+    }));
+}
+function carrot(x,y,s=1){
+  return G(x,y,s,P('M-48-64Q0-84 49-64Q47 12 4 93Q-22 73-48-64Z','#ed995d','#a96547',2.7)+
+    P('M-37-35l21 3m-14 15 22 1m-11 20 22-1m-16 23 13 3m-8 17 10 3','none','#bb754e',2.5)+
+    blade(-9,-73,.88,-19)+blade(7,-72,.8,62)+blade(0,-77,.85,20,'#9dc28d')+
+    E(0,-52,42,13,'#ffbe7d','#b2744b')+E(0,-52,26,8,'#ed925f','#b9774b'));
+}
+function tissue(x,y,s=1,single=false){
+  const n=single?1:7;
+  return G(x,y,s,many(n,i=>{
+    const cx=single?0:(i%3)*32-31,cy=single?0:Math.floor(i/3)*30-27;
+    return G(cx,cy,1,P('M-14-11L1-18L15-9L17 7L4 15L-12 11L-16 1Z','#f7d5a2','#b28055',2)+
+      P('M-10-7Q-2-14 10-6V6Q1 12-9 6Z','#fff0cd','none')+E(5,1,4,4,'#bd8871'));
+  }));
+}
+function embryo(x,y,s,stage){
+  const shapes=[
+    'M-21 4C-32-31 19-42 28-12C36 13 12 25 8 40H-5C-7 25-20 19-21 4Z',
+    'M-20-6C-48-29-21-56-1-29C24-57 49-27 25-5C13 8 14 24 4 41H-8C-15 24-12 7-20-6Z',
+    'M-13-6C-30-29-26-53-12-58C-1-60 1-36 2-30C10-62 23-69 29-52C35-33 17-12 13-1C10 15 16 27 3 56C-7 48-10 22-13-6Z'
+  ];
+  return G(x,y,s,P(shapes[stage],'#b7cb7f','#6a975f',2.5)+P('M1-9Q-4 12-1 33','none','#829e66',2)+
+    E(0,24,3,4,'#87a86a'));
+}
+function bottle(x,y,s=1,inside='',open=false){
+  return G(x,y,s,P('M-28-76H28V-56Q43-52 44-39V62Q44 76 31 77H-31Q-44 76-44 62V-39Q-43-52-28-56Z','#e9f4f3',glass,2)+
+    P('M-39 42Q0 33 39 42V62Q38 70 30 71H-30Q-39 70-39 61Z','#cfdf9f','#a2b478',1.5)+
+    P('M-36-32V58M34-31V46','none','#fff',3)+inside+
+    (open?G(40,-86,1,R(-31,-8,62,15,'#c7d6da',glass,3),-24):R(-31,-85,62,15,'#c7d6da',glass,3)));
+}
+const lineageModes={
+  single:{title:'单个细胞可追溯，终点是完整植株',start:'单个已分化细胞',body:'追踪这个胡萝卜根细胞的后代。若它们经历增殖与分化，最终形成完整植株，就能把再生结果归因于该起始细胞。'},
+  tissue:{title:'组织块能再生，起始细胞尚未定位',start:'多个细胞的组织块',body:'组织块再生证明该材料在这些条件下能够形成植株。要把结果归因于某个已分化细胞，还需要记录单细胞来源。'},
+  callus:{title:'有愈伤组织，可以确认细胞增殖',start:'单个已分化细胞',body:'这条路线只观察到细胞团的增殖。要看到分化与完整植株，仍需继续培养并获得相应观察。'}
+};
+function lineageStage(t){
+  const m=state.lineage,stage=Math.min(m==='callus'?1:3,stagesAt(t,4)),f=t*4%1;
+  let art=stepStrip(['起始材料','愈伤组织','体细胞胚','完整植株'],93,stage,48,126,108);
+  art+=E(276,367,211,35,'#638b7323')+E(276,353,210,41,'#dce8d7','#9fb9a8')+
+    E(276,348,200,34,'#f3f1d8','#bdcba1');
+  if(stage===0){
+    art+=carrot(192,264,.91)+tissue(367,290,m==='tissue'?1.15:2.3,m!=='tissue')+
+      call(354,174,365,286,m==='tissue'?'多细胞材料':'追踪一个细胞');
+  }else if(stage===1){
+    art+=callusArt(277,291,1.6+Math.min(1,t*2)*.34)+call(393,179,327,261,'愈伤组织');
+  }else if(stage===2){
+    art+=embryo(145,279,1.18,0)+embryo(281,279,1.18,1)+embryo(422,279,1.18,2)+
+      spark(`M${[145,281,422][Math.min(2,Math.floor(f*3))]-24} 377h48`,C.green,4)+
+      ['球形','心形','鱼雷形'].map((l,i)=>ink([145,281,422][i],421,l)).join('');
+  }else{
+    art+=seedling(270,313,1.55)+call(353,172,291,213,'芽与叶')+call(371,398,296,371,'根系');
+  }
+  const phaseLabels=[lineageModes[m].start,'细胞增殖，形成组织团','胚状结构逐步建立','根和地上部共同形成'];
+  art+=tile(42,495,500,92,phaseLabels[stage],m==='callus'?'当前路线止于增殖':'同一观察序列从左到右推进',C.green);
+  return [art,stage];
+}
+function lineageEvidence(stage){
+  const m=state.lineage,labels=['单个细胞来源可追溯','观察到细胞增殖','观察到分化结构','观察到完整植株'];
+  const visible=[m!=='tissue',stage>=1,stage>=2,stage>=3];
+  let art=R(619,81,530,43,'#edf2ec','#d1dfd3',7)+txt(635,109,'证据项目','start',C.ink,18,750)+txt(1091,109,'当前记录','end',C.ink,18,750);
+  art+=labels.map((label,i)=>{
+    const y=145+i*75,yes=visible[i];
+    return R(619,y,530,57,yes?'#eef7f1':'#f6f7f4','#d3ded6',6)+
+      E(645,y+28,8,8,yes?C.green:'#adb8b2')+txt(663,y+34,label,'start',C.ink,18,700)+
+      txt(1091,y+34,yes?'已观察':i===0?'起点为组织块':'尚未观察','end',yes?greenInk:'#415963',17,700);
+  }).join('');
+  art+=tile(619,461,530,92,stage<3?'证据仍在积累':m==='single'?'支持该细胞表现全能性':'支持该组织材料可以再生','证据来自可追溯起点和可观察终点',C.blue);
+  art+=txt(625,592,'机制依据 · 胡萝卜根单细胞离体形态发生 [2]','start',C.ink,16);
+  return art;
+}
+function view1(t){
+  const [art,stage]=lineageStage(t),m=lineageModes[state.lineage];
+  const result=['已辨认起始材料','已形成愈伤组织','已观察到胚状结构','已形成完整植株'][stage];
+  draw(1,headings('胡萝卜 · 离体再生','记录链 · 起点到终点')+art+lineageEvidence(stage));
+  say(1,'LINEAGE / STAGE 0'+(stage+1),m.title,m.body,result,'判断全能性时，分别核对起点细胞身份与终点是否为完整个体。');
+}
+const media={
+  blank:{label:'无添加',dose:[0,0],counts:[15,4,1,0],body:'无外加调节剂是基线。材料自身仍可能带有内源激素，少量响应有助于判断基线。'},
+  balance:{label:'相对均衡',dose:[1,1],counts:[2,14,2,2],body:'在设定材料与培养条件下，较多培养单位表现为愈伤维持或增殖。'},
+  shoot:{label:'细胞分裂素高',dose:[1,3],counts:[1,3,14,2],body:'细胞分裂素相对较高的情景，更多培养单位以芽为主。'},
+  root:{label:'生长素高',dose:[3,1],counts:[1,3,2,14],body:'生长素相对较高的情景，更多培养单位以根为主。'},
+  double:{label:'等比高总量',dose:[2,2],counts:[5,10,3,2],body:'此组与相对均衡组比例同为 1∶1，总量不同。相同比例也可以出现不同表现。'}
+};
+const responses=['无明显响应','愈伤维持或增殖','芽为主','根为主'];
+const responseColors=['#8b9bad',C.orange,C.green,C.blue];
+function chartAxes(p,xNames){
+  let i=0;
+  return p.svg.replace(/(<text\b[^>]*text-anchor="middle"[^>]*>)\d+(<\/text>)/g,(_,a,b)=>a+esc(xNames[i++]??'')+b);
+}
+function rectBar(p,x,top,base,color,w=50){
+  return R(p.X(x)-w/2,p.Y(top),w,Math.max(0,p.Y(base)-p.Y(top)),color,'none',1);
+}
+function chrysStem(x,y,s=1){
+  return G(x,y,s,P('M-9 22L-4-26L9-28L6 24Z','#82ae6e','#54835e',2)+P('M0-19L-2 16','none','#b5d194',2)+
+    E(1,-25,7,3,'#c9dd9e','#65946c')+P('M2 0Q19-17 26-7Q22 5 3 6Z','#a4c885','#62956e'));
+}
+function pot(x,y,s=1){
+  return G(x,y,s,P('M-30-12H30L22 29H-22Z','#cd9476','#9a6552',2)+E(0,-10,30,7,'#9a7852','#895e44')+
+    seedling(0,-11,.62,false));
+}
+function cultureWorkflow(t){
+  const stage=stagesAt(t,5),labels=['无菌接种','诱导愈伤','诱导生芽','诱导生根','炼苗移栽'];
+  let art=stepStrip(labels,91,stage,40,102,93);
+  const items=[chrysStem(0,23,.77),callusArt(0,36,.45),seedling(0,40,.60,false),seedling(0,31,.54),seedling(0,36,.61)];
+  art+=items.map((item,i)=>O(i===stage?1:.62,bottle(86+i*102,179,.70,item,i===4))).join('');
+  art+=txt(48,265,['先表面消毒，冲洗后无菌接种','茎段形成愈伤组织：脱分化','将愈伤组织转接至诱芽培养基','将芽转接至生根培养基：再分化','逐步开盖炼苗，过渡后移栽'][stage],'start',C.ink,17,750);
+  art+=spark('M42 288H543','#cfdfd6',1.5)+txt(45,323,'独立配方对照 · 同批愈伤组织','start',C.ink,19,750);
+  const m=media[state.medium],index=m.counts.indexOf(Math.max(...m.counts)),g=phase(t,.08,.8);
+  const preview=index===0?callusArt(0,39,.23):index===1?callusArt(0,35,.33+g*.25):
+    index===2?seedling(0,42,.23+.49*g,false):G(0,26,1,callusArt(0,0,.34)+roots(.65*g+.05));
+  art+=bottle(140,462,1.13,preview)+tile(242,377,299,107,m.label,'生长素 '+m.dose[0]+'  /  细胞分裂素 '+m.dose[1],C.green)+
+    txt(258,460,'主要结果 · '+responses[index],'start',C.ink,17,750);
+  art+=txt(240,514,'剂量仅为课堂相对量','start','#3e5660',16)+
+    txt(45,610,'器具与培养基灭菌 · 外植体表面消毒','start',C.ink,17,750);
+  return art;
+}
+function mediumChart(){
+  const p=plot('media-result',690,138,432,324,[0,1,2,3,4,5,6],[0,5,10,15,20],'终点主表型 · 每组 20 个培养单位','','培养单位数（教学模拟）');
+  const selected=Object.keys(media).indexOf(state.medium)+1;
+  let art=chartAxes(p,['','无添加','均衡','偏生芽','偏生根','同比高量',''])+
+    p.clip(O(.2,R(p.X(selected)-33,p.y,66,p.h,C.blue,'none',1)));
+  art+=Object.values(media).map(({counts},i)=>{
+    let sum=0;
+    return counts.map((n,j)=>{
+      const base=sum;sum+=n;
+      const fill=responseColors[j];
+      const marker=n>=3?txt(p.X(i+1),p.Y((base+sum)/2)+5,n,'middle',j===3?'#fff':C.ink,15,750):'';
+      return rectBar(p,i+1,sum,base,fill,45)+marker;
+    }).join('');
+  }).join('');
+  art+=responses.map((l,i)=>R([682,808,979,1069][i],530,14,13,responseColors[i],'none',2)+txt([701,827,998,1088][i],541,l,'start',C.ink,15)).join('');
+  art+=txt(680,575,'当前组按图例顺序计数：'+media[state.medium].counts.join(' / '),'start',C.ink,16,700);
+  return art+rScript(640,611,['ggplot(media, aes(recipe, count, fill = phenotype)) +','geom_col() + theme_gray()']);
+}
+function view2(t){
+  const m=media[state.medium],i=m.counts.indexOf(Math.max(...m.counts));
+  draw(2,headings('菊花流程与独立配方对照','受控比较 · 器官形成')+cultureWorkflow(t)+mediumChart());
+  say(2,'CULTURE / '+m.label,m.label,m.body,responses[i]+' · '+m.counts[i]+' / 20',
+    '右图显示终点模拟。配方响应还取决于材料、绝对浓度、内源激素与培养阶段。');
+}
+const fusionCounts={peg:[36,28,24,12],mock:[84,0,0,16]};
+const parentA='#4ab7c5',parentC='#aa8ac8',wall='#9eb187';
+function plantCell(x,y,s=1,kind='A',withWall=false,both=false){
+  const green=kind==='A',color=green?parentA:parentC;
+  const outer=withWall?'M-68-45Q-61-66-26-68L29-65Q63-60 68-30L66 33Q59 66 26 70L-34 66Q-67 58-69 24Z':
+    'M-64-23Q-53-57-16-63Q21-72 48-46Q75-25 64 14Q61 46 36 58Q3 73-32 53Q-71 32-64-23Z';
+  const organelles=many(10,i=>{
+    const a=i*2.43;
+    return G(Math.cos(a)*(39+i%3*6),Math.sin(a)*(37+i%4*4),1,
+      E(0,0,8,3.7,both?(i%2?parentA:parentC):color,'#477b79')+P('M-4 0H4','none','#fff7',1.2),a*42);
+  });
+  const nuclei=both?E(-21,-10,15,13,'#e2f7fa','#4694a3')+E(21,8,15,13,'#eee5fa','#8a66a6'):
+    E(21,-16,16,13,green?'#dcf5f6':'#ece0f9',green?'#4694a3':'#8a66a6');
+  return G(x,y,s,P(outer,withWall?'#d0dfaa':green?'#e0f4ee':'#f0e8f3',withWall?wall:color,withWall?5:3)+
+    (withWall?P('M-57-32Q-52-54-22-56L24-54Q52-51 55-24L55 25Q47 52 20 55L-27 54Q-53 49-56 25Z','#edf3db','#638874',2):'')+
+    E(-9,9,32,26,'#f9fcf3','#c3d9be')+organelles+nuclei);
+}
+function biparentCell(x,y,s){
+  return G(x,y,s,P('M-66-24Q-51-54-14-60Q28-60 52-36Q68-18 67 11Q60 39 35 51Q4 66-37 47Q-72 30-66-24Z','#e7f0d6',wall,4)+
+    E(0,1,27,20,'#e7e9f4','#9c9ebc')+
+    P('M-14-5l8 7m-9 0l8-8m11 0l9 8m-9 0l9-8','none',purpleInk,2.5)+
+    many(8,i=>E(Math.cos(i*1.9)*46,Math.sin(i*1.9)*36,6,3.5,i%2?parentA:parentC,'#6d8893')));
+}
+function fusionStage(t){
+  const isPeg=state.fusion==='peg',stage=stagesAt(t,5);
+  let art=stepStrip(['去壁','诱导','观察融合','再生壁','培养鉴定'],94,stage,40,103,93);
+  const c=t*5%1;
+  if(stage===0){
+    art+=plantCell(155,278,1.27,'A',c<.52)+plantCell(419,278,1.27,'C',c<.52)+
+      call(47,162,104,225,c<.52?'细胞壁':'保留质膜')+call(385,160,431,227,'渗透保护');
+  }else if(stage===1||!isPeg){
+    const move=isPeg?phase(c,.1,.88)*72:0;
+    art+=plantCell(154+move,279,1,'A')+plantCell(418-move,279,1,'C')+
+      (isPeg?label(246,173,'PEG 诱导'):label(207,172,'无 PEG 对照'));
+  }else if(stage===2){
+    art+=plantCell(282,279,1.55,'A',false,true)+call(381,171,313,291,'双核阶段')+
+      call(42,186,187,267,'质膜已融合');
+  }else if(stage===3){
+    art+=biparentCell(256,279,1.42)+call(389,172,343,242,'再生细胞壁')+
+      label(49,173,'筛查候选');
+  }else{
+    art+=callusArt(133,304,.88)+arrow('M206 306H274',C.green)+seedling(359,305,1.24)+
+      call(384,155,368,213,'再生候选植株');
+  }
+  art+=R(63,397,213,42,'#e5f5f6','#b0dce4',7)+R(301,397,213,42,'#f1e9f7','#d6c6e5',7)+
+    ink(169,425,'亲本 A · 白菜')+ink(407,425,'亲本 C · 甘蓝');
+  const track=['纤维素酶与果胶酶去除细胞壁','膜接近并进入诱导窗口','质膜融合，短暂保有两个核','候选细胞再生壁，可继续分裂','组织培养后验证双亲标记'];
+  const status=!isPeg&&stage>=2?'本模型中未观察到异源融合候选':track[stage];
+  art+=tile(42,486,501,82,status,isPeg?'实际混合物仍需筛选与鉴定':'其他处理条件与加 PEG 组一致',isPeg?C.green:C.blue);
+  return [art,status,stage];
+}
+function fusionEvidence(stage){
+  const selected=state.fusion,counts=fusionCounts[selected],p=plot('fusion-count',682,126,441,139,[0,1,2,3,4,5],[0,25,50,75,100],'100 个判读单位 · 模拟构成');
+  let art=chartAxes(p,['','未融合','同源融合','异源候选','受损',''])+
+    counts.map((n,i)=>rectBar(p,i+1,n,0,[C.cyan,C.orange,C.green,C.blue][i],44)+txt(p.X(i+1),p.Y(n)-7,n,'middle',C.ink,16,750)).join('');
+  art+=txt(635,331,'亲本标记 · PCR 条带判读示意','start',C.ink,19,750)+R(686,365,436,163,'#233945','#4a6472',10);
+  const lanes=[736,846,956,1066],ready=selected==='peg'&&stage===4;
+  art+=lanes.map((x,i)=>R(x-32,382,64,126,'#2f4853','none',4)+R(x-25,386,50,8,'#172b36','none',1)+
+    ((i===0||i===2&&ready)?R(x-23,427,46,8,'#79e8e6','none',2):'')+
+    ((i===1||i===2&&ready)?R(x-23,474,46,8,'#e8c6f7','none',2):'')+
+    ink(x,553,['亲本 A','亲本 C',ready?'候选株':selected==='mock'?'无候选':'待鉴定','空白'][i],16)).join('');
+  art+=txt(676,435,'A','end',C.ink,16,750)+txt(676,482,'C','end',C.ink,16,750)+
+    txt(676,587,'条带支持位点来源，倍性与目标性状另行验证','start',C.ink,16);
+  return art+rScript(640,622,['ggplot(fusion, aes(outcome, count)) + geom_col()']);
+}
+function view3(t){
+  const [art,status,stage]=fusionStage(t),counts=fusionCounts[state.fusion];
+  draw(3,headings('白菜 × 甘蓝 · 体细胞杂交','融合构成与身份筛查')+art+fusionEvidence(stage));
+  say(3,'FUSION / STAGE 0'+(stage+1),status,'膜融合后需筛选异源候选，再诱导其再生。候选植株的双亲特异条带只支持所检位点的来源。',
+    '异源候选 · '+counts[2]+' / 100（模型）','原生质体融合利用膜流动性；后续诱导成苗利用植物细胞的再生潜能。');
+}
+const applications={
+  rapid:{label:'快速繁殖',target:'同一优良材料的大量种苗',stages:['起始芽','分割增殖','反复继代','生根炼苗'],body:'从优良母株取芽或茎段，重复继代扩增后生根、炼苗。批次质量还要关注污染、变异与移栽损失。'},
+  virus:{label:'马铃薯脱毒',target:'经检测的再生苗',stages:['选材取尖','离体培养','再生幼苗','检测病毒'],body:'剪取茎尖分生组织培养。茎尖大小会影响存活与脱毒，得到再生苗后须检测目标病毒。'},
+  haploid:{label:'单倍体育种',target:'选定性状的纯合品系',stages:['花药取材','离体培养','单倍体','诱导加倍'],body:'以 AaBb 为例，培养来自小孢子的单倍体。从 aB 染色体组加倍得到 aaBB，再按性状筛选。'},
+  mutant:{label:'突变体筛选',target:'经复验的稳定候选',stages:['培养或诱变','选择条件','复筛','稳定性验证'],body:'培养期间可产生变异，也可人工诱变。设定筛选压力后对再生植株复筛，并检查性状能否稳定传递。'},
+  taxol:{label:'细胞工厂',target:'紫杉醇等目标代谢产物',stages:['建立细胞系','悬浮增殖','诱导代谢','提取纯化'],body:'红豆杉细胞可在罐内扩增，再诱导代谢，按产物所在位置回收并提纯。药用产物以质量与产量评价。'}
+};
+const virusData=[
+  {size:100,survive:86,infected:31},{size:200,survive:94,infected:38},{size:300,survive:100,infected:75}
+];
+const pvyUndetected=d=>100-d.infected;
+const rapidCount=cycle=>3**cycle;
+const doubled=gamete=>Array.from(gamete,a=>a+a).join('');
+const selectedGamete='aB';
+const mutantCounts=[40,12,5,2];
+function taxolAt(day,induced){return 9*phase(day,0,21)+(induced?30*phase(day,8,24)**1.7:0)}
+function applicationStageAt(key,t){
+  if(key!=='taxol')return stagesAt(t,4);
+  const day=30*t;
+  return day<3?0:day<8?1:day<24?2:3;
+}
+function tipArt(x,y,s,cut){
+  return G(x,y,s,P('M-34 71Q-37 25-28 6Q-15-23 0-27Q14-23 29 7Q37 32 34 71Z','#b9d796','#6b9977',2)+
+    P('M-21 49C-41 31-56 1-57-28Q-31-24-11 5M17 35C43 19 59-4 60-29Q34-28 11 1','none','#629c75',4)+
+    P('M-13 45C-14 19-9-5 0-9Q11-2 12 45Z','#ddedb4','#76a376',1.8)+
+    E(0,-11,25,13,'#d6e998','#6f9e6f')+
+    many(12,i=>E((i*17)%48-24,18+(i*23)%46,2,2,'#83b184'))+
+    (cut===null?'':spark('M-69 '+cut+'H70',C.red,2.2,'7 4')));
+}
+function elisa(x,y,s){
+  return G(x,y,s,R(-75,-47,150,91,'#e6eff3',glass,9)+many(12,i=>{
+    const a=-53+i%4*35,b=-27+Math.floor(i/4)*26;
+    return E(a,b,10,9,i%4===1||i===10?'#eecb73':'#f7faf9',glass)+E(a-2,b-3,2,2,'#fff');
+  }));
+}
+function flowerAnther(x,y,s){
+  return G(x,y,s,P('M-3 73Q-12 27 3-6','none','#64966f',4)+
+    P('M3 4C-50-17-64-45-39-57C-24-62-9-44 3-22C21-50 39-56 51-44C70-20 29 0 3 4Z','#ecd4ef','#ad7cb6',2.3)+
+    E(-12,-22,11,15,'#f0c967','#ac8644')+E(12,-24,12,15,'#f4d877','#ac8644')+
+    many(9,i=>E(40+(i*23)%73,-6+(i*15)%44,3.2,3.2,'#d7ab63')));
+}
+function cellVat(x,y,s,t,phaseId){
+  const strength=phaseId>=2?1:.35;
+  return G(x,y,s,P('M-82-74Q-80-99 0-101Q79-98 81-74V59Q76 89 0 91Q-77 88-82 58Z','#dfedf2',glass,2)+
+    P('M-73-3Q-14-18 26-5T73-5V54Q70 80 0 83Q-70 79-73 54Z','#c7e6db','#79ac9b',2)+
+    R(-29,-121,58,22,'#9db8c4',glass,5)+P('M0-98V53m-36-15h72M80 14h49v45','none',glass,4)+
+    many(28,i=>{
+      const y=-3+((i*23+t*70)%73),x=Math.sin(i*4.7+t*4.4)*(22+i%7*6);
+      return E(x,y,2+i%3,2.7, i%4===0&&strength===1?C.orange:'#609984','#689c8a');
+    }));
+}
+function applicationStage(t){
+  const key=state.application,mode=applications[key],stage=applicationStageAt(key,t);
+  let art=stepStrip(mode.stages,96,stage,42,127,108);
+  art+=R(42,137,502,324,'#edf5ee','#cfdfd4',11);
+  if(key==='rapid'){
+    if(stage===0)art+=seedling(290,320,1.48,false)+call(395,181,315,206,'健康母株');
+    else{
+      const count=[1,2,3,3][stage];
+      art+=many(count,i=>bottle(292+(i-(count-1)/2)*127,293,1,seedling(0,40,.57,stage>=3),stage===3));
+    }
+  }else if(key==='virus'){
+    if(stage===0)art+=tipArt(294,268,1.5,5+(+state.tip-100)*.16)+call(383,166,323,247,'茎尖分生区');
+    else if(stage===1||stage===2)art+=bottle(286,280,1.55,stage===1?tipArt(0,19,.45,null):seedling(0,36,.73),false);
+    else art+=seedling(174,321,1.03)+elisa(384,269,1.2)+arrow('M236 273h49',C.green)+call(374,349,410,295,'DAS-ELISA');
+  }else if(key==='haploid'){
+    if(stage===0)art+=flowerAnther(272,290,1.5)+call(399,184,366,259,'小孢子');
+    else if(stage<3)art+=bottle(286,283,1.45,stage===1?tissue(0,28,.7,true):seedling(0,36,.73));
+    else art+=seedling(286,314,1.25)+artNode(404,213,'aaBB · 2n',true,117)+artNode(159,213,'aB · n',false,102);
+  }else if(key==='mutant'){
+    art+=bottle(125,286,.88,callusArt(0,33,.49))+
+      arrow('M168 282h50',C.green)+many(stage===0?2:3,i=>pot(260+i*90,310,stage>=2&&i===2?.95:.76))+
+      (stage>=2?call(365,157,443,247,'复筛并验后代'):'');
+  }else{
+    art+=cellVat(244,286,1.23,t,stage)+
+      (stage===3?G(432,323,1,P('M-27-45H27V30Q25 44 0 46Q-25 44-27 30Z','#fff3d7',glass,2)+
+        R(-30,-53,60,13,'#b9cbd1',glass,3)+E(0,20,20,9,C.orange)):'')+
+      call(385,164,290,279,['建立细胞系','细胞悬浮增殖','加入诱导物','收集目标产物'][stage]);
+  }
+  art+=tile(42,499,502,96,mode.label,mode.target, key==='taxol'?C.orange:C.green);
+  return art;
+}
+function virusChart(){
+  const p=plot('pvy-evidence',688,140,433,267,[100,200,300],[0,25,50,75,100],'Binella 茎尖长度 · 原始研究与换算','茎尖长度（μm）','百分比（%）');
+  let art=p.svg+scan(p,+state.tip);
+  for(const [read,color] of [[d=>d.survive,C.blue],[pvyUndetected,C.green]]){
+    art+=line(virusData.map(d=>({x:d.size,y:read(d)})),p,color,3)+virusData.map(d=>chartDot(p,d.size,read(d),color,4)).join('');
+  }
+  art+=legend(683,499,'图例',[['茎尖存活率',C.blue,'solid'],['PVY 未检出率',C.green,'solid']]);
+  return art+rScript(640,622,['ggplot(tips, aes(length, percent, colour = endpoint)) + geom_line()']);
+}
+function quickChart(t){
+  const p=plot('propagation',688,140,433,270,[0,1,2,3,4,5,6],[0,20,40,60,80,100],'有效苗数 · 每轮净增殖 3 倍','继代轮次','数量（模型）');
+  let art=chartAxes(p,['','0','1','2','3','4','']);
+  for(let i=0;i<=4;i++){
+    const v=rapidCount(i),chosen=i===Math.min(4,Math.floor(t*5));
+    art+=rectBar(p,i+1,v,0,chosen?C.green:C.cyan,31)+txt(p.X(i+1),p.Y(v)-10,v,'middle',C.ink,17,750);
+  }
+  art+=txt(684,518,'1 株有效起始材料，按固定净增殖倍数演算','start',C.ink,16);
+  return art+rScript(640,622,['ggplot(rounds, aes(cycle, shoots)) + geom_col()']);
+}
+function genotypeEvidence(t){
+  const stage=stagesAt(t,4);
+  let art=tile(621,91,530,79,'亲本 AaBb · 两对基因独立分配','四类小孢子各为 1/4（理想假设）',C.blue);
+  const x=[694,823,952,1081];
+  art+=['AB','Ab','aB','ab'].map((g,i)=>artNode(x[i],242,g,g===selectedGamete&&stage>=1,106)).join('');
+  art+=spark('M952 264V341H896',C.green,3,'6 5')+artNode(886,376,'aB · n',stage>=2,182)+
+    arrow('M886 399V458',C.green)+txt(932,434,'复制同一套染色体','start',C.ink,17)+
+    artNode(886,495,doubled(selectedGamete)+' · 2n',stage===3,182)+
+    txt(627,591,'小孢子来源需确认；倍性和目标性状需检测','start',C.ink,17);
+  return art;
+}
+function mutantChart(t){
+  const p=plot('mutant-screen',688,140,433,272,[0,1,2,3,4,5],[0,10,20,30,40,50],'逐步筛选 · 候选数量','','数量（教学模拟）');
+  return chartAxes(p,['','起始','初筛','复筛','稳定候选',''])+
+    mutantCounts.map((n,i)=>rectBar(p,i+1,n,0,i===stagesAt(t,4)?C.blue:C.cyan,48)+txt(p.X(i+1),p.Y(n)-10,n,'middle',C.ink,17,750)).join('')+
+    txt(677,525,'筛到候选后，再测性状能否稳定传递','start',C.ink,16)+
+    rScript(640,622,['ggplot(screen, aes(step, candidates)) + geom_col()']);
+}
+function taxolChart(t){
+  const p=plot('taxol-model',688,140,433,269,[0,6,12,18,24,30],[0,10,20,30,40,50],'紫杉醇积累 · 诱导模型','培养时间（天）','相对产量（模拟）');
+  let art=p.svg+line([{x:8,y:0},{x:8,y:50}],p,'#889ca4',1.5,'4 4');
+  for(const [induced,color] of [[false,C.blue],[true,C.orange]]){
+    const data=Array.from({length:61},(_,i)=>({x:i/2,y:taxolAt(i/2,induced)}));
+    art+=line(data,p,color,3,induced?'':'6 4')+p.clip(chartDot(p,30*t,taxolAt(30*t,induced),color,5));
+  }
+  return art+scan(p,30*t)+legend(684,497,'图例',[['第 8 天加入诱导物',C.orange,'solid'],['未诱导对照',C.blue,'dash']])+
+    rScript(640,622,['ggplot(taxol, aes(day, signal, colour = treatment)) + geom_line()']);
+}
+function view4(t){
+  const key=state.application,m=applications[key],v=virusData.find(d=>d.size===+state.tip);
+  const plots={rapid:quickChart,virus:virusChart,haploid:genotypeEvidence,mutant:mutantChart,taxol:taxolChart};
+  const stage=applicationStageAt(key,t);
+  const results={
+    rapid:'第 '+Math.min(4,Math.floor(t*5))+' 轮 · '+rapidCount(Math.min(4,Math.floor(t*5)))+' 株（模型）',
+    virus:v.size+' μm · 存活 '+v.survive+'% / PVY 未检出 '+pvyUndetected(v)+'%',
+    haploid:['亲本 AaBb','选 aB 小孢子','单倍体 aB · n','加倍得到 aaBB · 2n'][stage],
+    mutant:mutantCounts[stage]+' 个进入当前阶段（模型）',
+    taxol:'第 '+(30*t).toFixed(1)+' 天 · 诱导组 '+taxolAt(30*t,true).toFixed(1)+' 相对单位'
+  };
+  document.querySelector('[data-group="tip"]').parentElement.hidden=key!=='virus';
+  draw(4,headings('五类目标 · 技术路线','读结果 · 数据或证据')+applicationStage(t)+plots[key](t));
+  const notes={
+    rapid:'人工种子是拓展路线，可包埋体细胞胚。实际继代效率和移栽成活率随条件变化。',
+    virus:'未检出率为 100% 减去原论文的感染率。存活与病毒检测使用各自的分母。',
+    haploid:'染色体加倍可固定原配子的等位基因组合。仍需验证小孢子来源、倍性和性状。',
+    mutant:'图中每一级都是前一级的子集；实际培养变异需在适宜对照下复验。',
+    taxol:'曲线为教学模拟。论文支持诱导可改变积累，具体幅度随细胞系和条件变化。'
+  };
+  say(4,'APPLICATIONS / '+m.stages[stage],m.label,m.body,results[key],notes[key]);
+}
+const views=[view1,view2,view3,view4],durations=[11,13,12,10],initialTimes=[.1,.26,.24,.1];
+function change(index,key,value){state[key]=value;redraw(index)}
+const groups={
+  lineage:value=>change(0,'lineage',value),
+  medium:value=>change(1,'medium',value),
+  fusion:value=>change(2,'fusion',value),
+  application:value=>change(3,'application',value),
+  tip:value=>change(3,'tip',value)
+};
+const inputs={};
+function wireChapter(){}
+
+const clocks=views.map((render,i)=>{
+  const button=document.querySelector('[data-play="'+i+'"]');
+  return BioAtlas.createTimeline({
+    duration:durations[i]??16, initial:initialTimes[i]??0, render,
+    onState({t,playing}){
+      if(!button)return;
+      button.textContent=playing?'Ⅱ 暂停':'▶ 播放过程';
+      button.setAttribute('aria-pressed',String(playing));
+      document.querySelector('[data-time="'+i+'"]').value=t*100;
+      $('time'+i).textContent=Math.round(t*100)+'%';
+    }
+  });
+});
+function redraw(i){clocks[i].seek(clocks[i].state.t)}
+for(const b of document.querySelectorAll('[data-play]')){
+  b.addEventListener('click',()=>{const c=clocks[+b.dataset.play];if(c.state.playing)c.pause();else c.play()});
+}
+for(const b of document.querySelectorAll('[data-reset]'))b.addEventListener('click',()=>clocks[+b.dataset.reset].reset());
+for(const input of document.querySelectorAll('[data-time]'))input.addEventListener('input',()=>clocks[+input.dataset.time].seek(+input.value/100));
+for(const b of document.querySelectorAll('[data-group]')){
+  b.addEventListener('click',()=>{
+    const {group,value}=b.dataset;
+    pick('[data-group="'+group+'"]',value);
+    groups[group](value);
+  });
+}
+for(const input of document.querySelectorAll('[data-input]'))input.addEventListener('input',()=>inputs[input.dataset.input](+input.value));
+$('theme').addEventListener('click',()=>{
+  const bw=document.documentElement.dataset.theme==='gray';
+  document.documentElement.dataset.theme=bw?'bw':'gray';
+  $('theme').textContent=bw?'theme_bw() → gray':'theme_gray() → bw';
+  $('theme').setAttribute('aria-pressed',String(bw));
+});
+$('reviewOpen').addEventListener('click',()=>{BioAtlas.pauseAll();$('review').showModal()});
+for(const link of document.querySelectorAll('nav a'))link.addEventListener('click',()=>BioAtlas.pauseAll());
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(!entry.isIntersecting)clocks[+entry.target.dataset.figure].pause();
+});
+for(const el of document.querySelectorAll('.figure'))observer.observe(el);
+wireChapter();
+globalThis.atlasQA={clocks,state};
+</script></body></html>
