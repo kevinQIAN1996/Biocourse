@@ -35,3 +35,63 @@
 
 /* v5.3 · explicit edition comparison */
 .edition-focus{margin-top:16px;padding:12px 15px;background:#edf3e9;border-left:3px solid #49775a;font-size:15px!important;line-height:1.9;color:#243f32!important}.comparison-scroll{overflow:auto;border:1px solid #b9cdbb;border-radius:10px;background:#fff}.comparison-table{border-collapse:collapse;width:100%;min-width:880px;font-size:15px;line-height:1.8;color:#243f32}.comparison-table th,.comparison-table td{padding:17px 18px;border-bottom:1px solid #d9e2d7;text-align:left;vertical-align:top;min-width:200px}.comparison-table thead th{background:#e5eee2;font-size:15px;color:#183b2e}.comparison-table tbody th{width:23%;background:#f5f8f2}.comparison-table th>a{font-size:16px;color:#174f36;font-weight:750}.comparison-status{display:block;font-size:13px;color:#29543d;margin:8px 0}.comparison-table small{display:block;font-size:13px;color:#3a5746}.comparison-table .selected-version{box-shadow:inset 4px 0 #2c7553}.comparison-table .selected-version th{background:#eaf3e6}.version-comparison .section-head p{color:#3a5343;font-size:15px;line-height:1.8}.version-copy p,.description p,.description li{color:#334d3e;font-size:15px;line-height:1.9}.version-copy .version-title{align-items:start}.version-copy .version-title b{font-size:18px}.update-topic>.version-comparison{padding:0 20px}.comparison-scroll:focus-visible{outline:3px solid #1d7563;outline-offset:3px}@media(max-width:650px){.comparison-table{min-width:900px}.comparison-table th,.comparison-table td{padding:14px}.edition-focus{font-size:15px!important}}
+
+/* The catalog starts with a search and one textbook disclosure. */
+.top .nav .contact-action {
+  display: inline-flex; align-items: center; gap: 5px; min-height: 38px;
+  padding: 6px 10px; border: 1px solid #b7cec1; border-radius: 8px;
+  background: #f0f7f2; color: #205341; font-weight: 700; white-space: nowrap;
+}
+.top .nav .contact-action:hover { background: #dceee3; }
+.catalog-controls { position: static; padding: 0; overflow: clip; }
+.course-toolbar { display: grid; grid-template-columns: minmax(0,1fr) minmax(250px,1fr); align-items: start; }
+.course-picker { min-width: 0; scroll-margin-top: 16px; }
+.course-picker summary {
+  display: flex; align-items: center; gap: 12px; min-height: 64px;
+  padding: 10px 17px; color: #173b31; cursor: pointer; list-style: none;
+}
+.course-picker summary::-webkit-details-marker { display: none; }
+.course-picker summary:hover { background: #edf4ed; }
+.course-picker summary:focus-visible { outline: 2px solid #216e55; outline-offset: -3px; }
+.course-picker[open] summary { background: #eaf3ec; }
+.course-picker summary::after {
+  content: ''; margin-left: auto; width: 9px; height: 9px; flex: none;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.course-picker[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.course-picker summary strong, .course-picker summary small { display: block; }
+.course-picker summary strong { font-size: 15px; }
+.course-picker summary small { margin-top: 3px; color: #435e51; font-size: 12px; }
+.course-picker-icon {
+  display: grid; place-items: center; width: 34px; height: 34px; flex: none;
+  border: 1px solid #b7cec1; border-radius: 8px; color: #205341; background: #fff;
+}
+.course-picker-icon svg { width: 17px; height: 17px; }
+.course-picker[open] { grid-column: 1/-1; display: grid; grid-template-columns: minmax(0,1fr); }
+.course-picker[open] + .catalog-search { grid-column: 1/-1; border-top: 1px solid #dce5dd; border-left: 0; }
+.course-picker-panel { padding: 14px 17px; border-top: 1px solid #dce5dd; }
+.course-picker-fields { display: flex; gap: 12px; }
+.course-picker-fields label { display: grid; flex: 1 1 0; gap: 6px; min-width: 0; color: #294a3d; font-size: 13px; font-weight: 650; }
+.course-picker-fields label[hidden], #curriculumStatus[hidden], #clearFilters[hidden] { display: none; }
+.course-picker-fields select {
+  width: 100%; min-width: 0; min-height: 44px; margin: 0; padding: 6px 10px;
+  background: #fff; border: 1px solid #b8cfc1; border-radius: 7px; color: #193c30; font: inherit; font-size: 15px;
+}
+.course-picker-fields select:focus-visible { outline: 2px solid #216e55; outline-offset: 2px; }
+#curriculumStatus { margin: 8px 0 0; color: #435e51; font-size: 13px; }
+.catalog-search {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 7px 12px;
+  padding: 10px 14px; min-height: 64px; border-left: 1px solid #dce5dd;
+}
+.catalog-search label { flex: 1 1 200px; margin: 0; }
+.catalog-search .search { width: 100%; min-width: 0; min-height: 44px; padding: 8px 10px; font-size: 15px; }
+.catalog-search .result-count { margin: 0; color: #435e51; font-size: 13px; }
+.catalog-search .clear-filters { min-height: 36px; font-size: 13px; }
+#catalogResults { scroll-margin-top: 16px; }
+@media (max-width: 680px) {
+  .course-toolbar { grid-template-columns: minmax(0,1fr); }
+  .catalog-search { border-top: 1px solid #dce5dd; border-left: 0; }
+  .course-picker-fields { display: grid; gap: 10px; }
+  .top .nav .contact-action { min-height: 42px; }
+}
