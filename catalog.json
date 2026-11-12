@@ -2270,8 +2270,62 @@
     "id": "respiration",
     "title": "细胞呼吸",
     "category": "cell",
-    "summary": "从酵母菌实验到呼吸途径，再走向生活应用。",
+    "summary": "有氧呼吸专题追踪碳、氧和 ATP，整节课版本包含酵母菌实验、无氧途径与应用。",
     "versions": [
+      {
+        "id": "aerobic-atlas-v2",
+        "label": "2.0",
+        "edition": "有氧呼吸图谱版",
+        "file": "lessons/必修1_05-03_有氧呼吸_从碳流到质子动力图谱_v2.0.html",
+        "published": "2026-11-12",
+        "platformUpdated": "2026-11-12",
+        "dateNote": "本站首次公开于 2026-11-12。本地制作完成于 2026-11-09。",
+        "summary": "追踪葡萄糖的碳与吸入的氧，比较三种内膜条件下的耗氧和 ATP 合成。",
+        "features": [
+          "可播放和回拖的有氧呼吸三阶段地图",
+          "¹³C 与 ¹⁸O₂ 去向示意",
+          "耦联、撤氧与质子旁路对照",
+          "人工膜重构的明暗对照"
+        ],
+        "approach": "先预测 O₂ 在哪一阶段被消耗，再追踪原子去向。最后比较撤氧与膜漏质子，解释耗氧和 ATP 产量为何可以分开。",
+        "design": "用线粒体剖面定位反应，再把示踪、内膜干预与实验依据对应起来。",
+        "difference": "有氧呼吸专题，新增同位素示踪、膜干预和人工膜重构。无氧呼吸与应用可选整节课版本。",
+        "suitableFor": "适合有氧呼吸课时的过程讲解、读图推理和课后复习。",
+        "comparisonScope": "第5章 · 第3节 · 有氧呼吸专题",
+        "scopeNote": "本课件聚焦有氧呼吸。示踪和干预曲线为课堂模型，人工囊泡图演绎实验逻辑。",
+        "note": "课件中的曲线为教学示意。",
+        "route": "courses/respiration/aerobic-atlas-v2/",
+        "displayTitle": "有氧呼吸 · 从碳流到质子动力",
+        "bytes": 50668,
+        "contentSha256": "3564a2e62c5c10b44ddfc3dbb4ef3a81ce4ede89fcafd6a9fb15a8fc5ea5e8de",
+        "sourceFilename": "必修1_05-03_有氧呼吸_从碳流到质子动力图谱_v2.0.html",
+        "sourceSha256": "3564a2e62c5c10b44ddfc3dbb4ef3a81ce4ede89fcafd6a9fb15a8fc5ea5e8de",
+        "sourceModifiedAt": "2026-11-09T14:36:09.250Z",
+        "preview": {
+          "image": "assets/previews/respiration--aerobic-atlas-v2.webp",
+          "thumbnail": "assets/previews/respiration--aerobic-atlas-v2-640.webp",
+          "width": 1280,
+          "height": 800,
+          "alt": "有氧呼吸图谱 v2.0 的课件实景，展示线粒体剖面与三阶段入口",
+          "scene": "有氧呼吸 · 从碳流到质子动力"
+        },
+        "releaseHistory": [
+          {
+            "date": "2026-11-12",
+            "title": "有氧呼吸图谱版首次上线",
+            "changes": [
+              "增加有氧呼吸三阶段与示踪图",
+              "增加内膜对照和人工膜实验",
+              "提供真实课件封面、版本对比与独立入口"
+            ]
+          }
+        ],
+        "changes": [
+          "增加有氧呼吸三阶段与示踪图",
+          "增加内膜对照和人工膜实验",
+          "提供真实课件封面、版本对比与独立入口"
+        ]
+      },
       {
         "id": "workbuddy",
         "label": "2.0",
@@ -2429,23 +2483,24 @@
       "label": "第5章 · 第3节"
     },
     "preview": {
-      "image": "assets/previews/respiration--workbuddy.webp",
-      "thumbnail": "assets/previews/respiration--workbuddy-640.webp",
+      "image": "assets/previews/respiration--aerobic-atlas-v2.webp",
+      "thumbnail": "assets/previews/respiration--aerobic-atlas-v2-640.webp",
       "width": 1280,
       "height": 800,
-      "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
-      "scene": "参观主车间：有氧呼吸三阶段",
-      "versionId": "workbuddy"
+      "alt": "有氧呼吸图谱 v2.0 的课件实景，展示线粒体剖面与三阶段入口",
+      "scene": "有氧呼吸 · 从碳流到质子动力",
+      "versionId": "aerobic-atlas-v2"
     },
     "inquiry": "葡萄糖中的能量，去了哪里？",
     "activities": [
       "过程追踪",
       "比较解释"
     ],
-    "latestVersionId": "workbuddy",
+    "latestVersionId": "aerobic-atlas-v2",
     "latestPolicy": "默认优先更新版本；教师指定的课堂优先方案保持，历史入口保留。",
-    "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。",
-    "preferredVersionId": "workbuddy"
+    "design": "用线粒体剖面定位反应，再把示踪、内膜干预与实验依据对应起来。",
+    "preferredVersionId": "aerobic-atlas-v2",
+    "recommendationNote": "有氧呼吸课时可选图谱版。讲酵母菌实验、无氧呼吸和应用时，可在版本表中选择整节课版本。"
   },
   {
     "id": "photosynthesis",

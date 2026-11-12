@@ -432,6 +432,24 @@
     "suitableFor": "适合围绕腺嘌呤、核糖、磷酸基团分层辨认组织观察与讨论。"
   },
   {
+    "file": "lessons/必修1_05-03_有氧呼吸_从碳流到质子动力图谱_v2.0.html",
+    "title": "有氧呼吸 · 从碳流到质子动力 有氧呼吸图谱版 2.0",
+    "category": "cell",
+    "preview": {
+      "image": "assets/previews/respiration--aerobic-atlas-v2.webp",
+      "thumbnail": "assets/previews/respiration--aerobic-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "有氧呼吸图谱 v2.0 的课件实景，展示线粒体剖面与三阶段入口",
+      "scene": "有氧呼吸 · 从碳流到质子动力"
+    },
+    "latest": true,
+    "route": "courses/respiration/aerobic-atlas-v2/",
+    "design": "用线粒体剖面定位反应，再把示踪、内膜干预与实验依据对应起来。",
+    "difference": "有氧呼吸专题，新增同位素示踪、膜干预和人工膜重构。无氧呼吸与应用可选整节课版本。",
+    "suitableFor": "适合有氧呼吸课时的过程讲解、读图推理和课后复习。"
+  },
+  {
     "file": "workbuddy/5.3细胞呼吸的原理和应用.html",
     "title": "细胞呼吸 WorkBuddy 版 2.0",
     "category": "cell",
@@ -443,7 +461,7 @@
       "alt": "细胞呼吸 · WorkBuddy 版 v2.0真实课件画面：参观主车间：有氧呼吸三阶段",
       "scene": "参观主车间：有氧呼吸三阶段"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/respiration/workbuddy/",
     "design": "用碳与能量的去向追踪反应，再对照有氧和无氧途径。",
     "difference": "本版侧重：酵母菌实验中 CO₂ 和酒精检测；有氧呼吸三阶段与两类无氧途径。同号版本以方案名称区分，不视为相互替代。",

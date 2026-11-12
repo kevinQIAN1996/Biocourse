@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>有氧呼吸｜从碳流到质子动力 · Cell 风格机制图谱</title>
+<style>:root{color-scheme:light;--paper:#faf8f3;--card:#fffefd;--ink:#1b302a;--muted:#4b635b;--line:#d7ded5;--teal:#226956;--green:#e4efe7;--coral:#b14531;--blue:#156985;--purple:#664c98;--magenta:#a83c72;--amber:#8b5b12;--panel:#ebebeb;--grid:#fff;--strip:#d9d9d9;--panel-edge:#ebebeb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-family:"Noto Serif SC","Songti SC",SimSun,Georgia,serif;line-height:1.18}
+a{color:#1e614e;text-underline-offset:4px}
+button,input{font:inherit}
+button,summary{cursor:pointer}
+button:disabled{cursor:default}
+button{padding:8px 13px;border:1px solid #9eb1a6;border-radius:7px;background:#fff;color:var(--ink);font-weight:650}
+button:hover:not(:disabled){background:#ecf4ec}
+button[aria-pressed=true]{background:#dfeee5;border-color:#3b806b;color:#173f34}
+:focus-visible{outline:3px solid #226956;outline-offset:3px}
+[hidden]{display:none!important}
+.wrap{width:min(1370px,calc(100% - 72px));margin-inline:auto}
+.skip{position:absolute;z-index:5;transform:translateY(-150%);background:#fff;padding:10px}
+.skip:focus{transform:none}
+.mast{border-bottom:1px solid var(--line);background:#fdfcf8}
+.mast-inner{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:66px}
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:800;letter-spacing:.11em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand small{margin-left:9px;color:var(--muted);font-size:12px;letter-spacing:0}
+.emblem{display:grid;place-items:center;width:35px;height:35px;border-radius:9px;background:#deece2;color:#226956}
+.emblem svg{width:26px}
+.mast-actions{display:flex;gap:8px}
+.mast-actions button{font-size:13px;min-height:39px}
+.hero{display:grid;grid-template-columns:1fr minmax(0,1.12fr);align-items:center;gap:clamp(25px,5vw,80px);padding:48px 0 35px}
+.hero h1{font-size:clamp(40px,5vw,78px);font-weight:800;letter-spacing:-.05em}
+.hero h1 span{display:block;color:#326c59;font-size:.65em;margin-top:9px;letter-spacing:-.055em}
+.kicker{font:750 12px/1.55 ui-monospace,Consolas,monospace;letter-spacing:.105em;color:var(--teal)}
+.kicker span{display:inline-block;padding:2px 7px;margin-right:7px;letter-spacing:.02em;background:#e3ece2;border:1px solid #c7d6cb;border-radius:4px;color:#284b3d}
+.hero .kicker{margin-bottom:17px}
+.lead{max-width:36ch;margin-top:19px;color:var(--muted);font-size:clamp(17px,1.5vw,21px)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:13px;margin-top:21px;color:var(--muted);font-size:13px}
+.primary{display:inline-flex;align-items:center;gap:10px;background:#225b4a;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-size:15px;font-weight:750}
+.primary:hover{background:#174636}
+.hero-art{position:relative;overflow:hidden;border:1px solid #c9dbd1;border-radius:15px;background:radial-gradient(ellipse at 70% 29%,#f2f6e9,#e6f1e9 64%,#d6e8de)}
+.hero-art svg{display:block;width:100%;height:auto}
+.art-meta,.art-foot{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:13px 17px;font:750 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.08em;color:#315848}
+.art-meta{border-bottom:1px solid #d0ded3}
+.art-foot{border-top:1px solid #d0ded3}
+.art-foot i{display:inline-block;margin-right:4px;width:7px;height:7px;background:#4d9279;border-radius:50%}
+.jump{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line);padding:6px 0}
+.jump a{padding:8px 10px;color:var(--ink);font-size:14px;text-decoration:none}
+.jump a:hover{background:#e8efe7}
+.jump b{margin-right:4px;color:var(--teal);font-family:ui-monospace,monospace}
+.figure{margin:45px 0;scroll-margin-top:20px}
+.figure-heading .kicker span{margin-left:7px}
+.figure-heading h2,.debrief h2,.references h2{font-size:clamp(27px,3.1vw,43px);margin:7px 0 9px}
+.figure-heading>p:last-child,.debrief p,.references>p{color:var(--muted)}
+.figure-heading sup{font-size:.7em}
+.experiment{margin-top:15px;background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 7px 24px #1938240a}
+.choice-bar{display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap;padding:12px 15px;background:#f3f6f0;border-bottom:1px solid var(--line)}
+.choice-bar>strong{font-size:14px;color:#36574b}
+.choices{display:flex;flex-wrap:wrap;gap:7px}
+.choices button{min-height:38px;font-size:14px}
+.fig-grid{display:grid;grid-template-columns:minmax(0,1.92fr) minmax(275px,1fr)}
+.main-fig,.evidence{min-width:0}
+.main-fig{padding:14px 16px 12px;border-right:1px solid var(--line)}
+.panel-title{display:flex;gap:9px;align-items:center;color:#2f5246;font-size:14px;font-weight:750;margin-bottom:9px}
+.panel-letter{display:inline-grid;place-items:center;width:23px;height:23px;background:#245a4b;color:white;border-radius:5px;font:750 13px ui-monospace,monospace}
+.svg-scroll{overflow-x:auto;border:1px solid #dce4d9;border-radius:8px;background:#f8f9f4}
+.svg-scroll svg{display:block;width:100%;min-width:610px;height:auto}
+.scroll-tip{display:none}
+.main-fig figcaption{font-size:13px;color:#4a6157;margin-top:8px}
+.evidence{display:flex;flex-direction:column;padding:14px 16px;gap:9px}
+.evidence .panel-title{margin:0}
+.result>*+*{margin-top:7px}
+.evidence h3{font-size:20px;line-height:1.35}
+.evidence p{font-size:15px;color:var(--muted)}
+.status-line{border-left:3px solid #5b8d78;padding:8px 10px;background:#edf4ec}
+.ledger{display:grid;gap:6px}
+.fact{padding:7px 9px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;align-items:baseline;border-bottom:1px solid #e1e7e0;font-size:15px}
+.fact b{color:#234f42}
+.fact span{color:#405c51}
+.chem-balance{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chem-balance span{background:#f7e9e1;border:1px solid #e4c6b7;color:#853929;padding:4px 8px;border-radius:5px;font-weight:750}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:11px 16px;background:#f5f7f2;border-top:1px solid var(--line)}
+.controls button{min-height:42px;font-size:14px}
+.controls .play{min-width:86px}
+.controls input{flex:1;min-width:100px;accent-color:#28765e}
+.controls output{min-width:53px;text-align:right;font:700 14px/1.2 ui-monospace,monospace;color:#345e50}
+.controls .control-label{font-size:13px;color:#4b635b}
+.equations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 17px;margin-top:13px;padding:14px 17px;border:1px solid var(--line);border-radius:9px;background:#f4f5ee}
+.equations b{font-size:14px;color:#33594c}
+.equations p{font-size:15px;font-weight:650;overflow-wrap:anywhere}
+.equations p span{color:#20654f}
+.equations .boundary{grid-column:1/-1;font-size:13px;font-weight:400;color:#4b635b}
+.chart{width:100%;height:auto;display:block;max-width:520px;margin-inline:auto}
+.chart .panel-bg{fill:var(--panel);stroke:var(--panel-edge)}
+.chart .plot-grid{stroke:var(--grid)}
+.chart .strip{fill:var(--strip);stroke:var(--panel-edge)}
+body[data-theme=bw]{--panel:#fff;--grid:#d7ded8;--strip:#fff;--panel-edge:#252c28}
+.chart-note{font:11px/1.45 ui-monospace,monospace;color:#41564d;white-space:normal;overflow-wrap:anywhere}
+.debrief{display:grid;grid-template-columns:.65fr 1fr;gap:24px;background:#e8f0e7;border:1px solid #cbdad0;border-radius:12px;padding:24px;margin:45px 0}
+.questions details{padding:8px 0;border-bottom:1px solid #cad9ce}
+.questions summary{font-size:16px;font-weight:750}
+.questions p{margin:8px 0;font-size:15px}
+.references{border-top:1px solid var(--line);padding-top:24px;margin:35px 0}
+.references h2{font-size:29px}
+.references>p{font-size:14px}
+.references ol{margin-top:10px;padding-left:23px;font-size:12px;color:#435b51}
+.references li{padding:3px 0;scroll-margin-top:20px;overflow-wrap:anywhere}
+.references li:target{background:#e6efe4}
+.footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-block:17px;color:var(--muted);font-size:12px}
+dialog{margin:0 0 0 auto;height:100%;max-height:none;width:min(540px,100%);max-width:100%;border:0;border-left:1px solid var(--line);padding:0;background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:#142a24aa}
+.drawer-inner{padding:24px}
+.drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.drawer-head h2{font-size:31px;margin:7px 0 15px}
+.drawer-inner h3{margin:19px 0 5px}
+.drawer-inner p{font-size:15px}
+.scroll-table{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:8px;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#e6eee4}
+@media(max-width:1100px){.fig-grid{grid-template-columns:1fr}.main-fig{border-right:0;border-bottom:1px solid var(--line)}.evidence{padding-top:13px}}
+@media(max-width:740px){.wrap{width:calc(100% - 32px)}.brand small{display:none}.hero{grid-template-columns:1fr;padding-top:30px;gap:24px}.hero-art svg{max-height:230px}.jump{grid-template-columns:1fr 1fr}.figure{margin:34px 0}.main-fig,.evidence,.choice-bar,.controls{padding-inline:10px}.scroll-tip{display:inline}.equations,.debrief{grid-template-columns:1fr}.debrief{padding:16px}.controls .control-label{display:none}.controls input{min-width:76px}.art-meta,.art-foot{padding:8px 12px}.fact{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+<header class="mast"><div class="mast-inner wrap">
+<a class="brand" href="#top"><span class="emblem" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 16c0-8 8-10 14-7s11 2 10 8-9 10-15 7S5 22 5 16Z M9 16c2-5 4 4 6 1s3-6 5-2 4 4 6 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>BIO / ATLAS <small>分子与细胞</small></span></a>
+<div class="mast-actions"><button id="theme" type="button" aria-pressed="false">证据图 · 浅灰</button><button id="notesOpen" type="button" aria-haspopup="dialog">课堂速查</button></div>
+</div></header>
+<main class="wrap" id="main">
+<section class="hero" id="top">
+<div class="hero-copy"><p class="kicker"><span>必修 1</span> 05.03 / 细胞呼吸的原理和应用</p><h1>有氧呼吸<span>从碳流到质子动力</span></h1><p class="lead">跟踪一份葡萄糖和一份氧，看看碳和氧各走哪条路，释放的能量又怎样转移到 ATP。</p>
+<div class="hero-actions"><a class="primary" href="#figure1">开始读图 <span aria-hidden="true">↓</span></a><span>4 幅机制图 · 可暂停与回拖</span></div></div>
+<div class="hero-art"><div class="art-meta"><span>GRAPHICAL ABSTRACT</span><span>01 / 04</span></div><svg id="heroSvg" viewBox="0 0 630 300" role="img" aria-label="线粒体外膜和向基质折入的线粒体内膜示意图"></svg><div class="art-foot"><span><i></i> 线粒体剖面 · 原创示意</span><span>CARBON FLOW / ATP</span></div></div>
+</section>
+<nav class="jump" aria-label="图谱目录"><a href="#figure1"><b>01</b> 三阶段与位置</a><a href="#figure2"><b>02</b> 同位素追踪</a><a href="#figure3"><b>03</b> 内膜与能量耦联</a><a href="#figure4"><b>04</b> 人工膜证据</a></nav>
+<section class="figure" id="figure1" aria-labelledby="heading1">
+<div class="figure-heading"><p class="kicker">FIGURE 01 <span>课堂核心</span></p><h2 id="heading1">先把三段反应放回细胞。</h2><p>先预测哪一段会直接用到 O₂，再沿时间轴核对反应场所和产物。<sup><a href="#ref-1">[1]</a></sup></p></div><div id="lab1"></div>
+</section>
+<section class="figure" id="figure2" aria-labelledby="heading2">
+<div class="figure-heading"><p class="kicker">FIGURE 02 <span>课堂核心</span></p><h2 id="heading2">呼出的碳，吸入的氧。</h2><p>同一个代谢过程，两条独立的示踪路径。<sup><a href="#ref-1">[1]</a> <a href="#ref-3">[3]</a></sup></p></div><div id="lab2"></div>
+<div class="equations"><div><b>教材分阶段总式</b><p>C₆H₁₂O₆ + 6O₂ + 6H₂O <span>→</span> 6CO₂ + 12H₂O + 能量</p></div><div><b>两侧约去 6H₂O 后的净式</b><p>C₆H₁₂O₆ + 6O₂ <span>→</span> 6CO₂ + 6H₂O + 能量</p></div><p class="boundary">总式保留不同阶段参与和生成的水，净式只说明净变化。能量有一部分储存在 ATP 中，也有一部分以热散失。</p></div>
+</section>
+<section class="figure" id="figure3" aria-labelledby="heading3">
+<div class="figure-heading"><p class="kicker">FIGURE 03 <span>课堂核心</span></p><h2 id="heading3">耗氧和合成 ATP，可以分开吗？</h2><p>以供氧且耦联为对照，只撤去氧，或只增加 H⁺ 旁路。<sup><a href="#ref-2">[2]</a> <a href="#ref-3">[3]</a> <a href="#ref-4">[4]</a></sup></p></div><div id="lab3"></div>
+</section>
+<section class="figure" id="figure4" aria-labelledby="heading4">
+<div class="figure-heading"><p class="kicker">FIGURE 04 <span>证据拓展</span></p><h2 id="heading4">把呼吸链拿掉，还能验证耦联吗？</h2><p>读一项 1974 年的膜重构实验，区分实验观察和机制解释。<sup><a href="#ref-5">[5]</a></sup></p></div><div id="lab4"></div>
+</section>
+<section class="debrief" aria-labelledby="end-title"><div><p class="kicker">TEACHING TRANSFER</p><h2 id="end-title">用一条因果链收尾。</h2><p>请学生任选一道，用图中一个具体观察来解释。</p></div>
+<div class="questions">
+<details><summary>为什么糖酵解不直接用 O₂，撤氧仍会影响后续阶段？</summary><p>氧在第三阶段接受电子。持续缺氧会妨碍呼吸链氧化还原型辅酶，进而影响线粒体内的氧化过程。糖酵解本身不直接用氧，可在 NAD⁺ 得到再生时继续进行。</p></details>
+<details><summary>明明还在耗氧，ATP 为什么可能明显减少？</summary><p>耗氧说明电子仍可流向末端受体。质子若从旁路回到基质，内膜两侧的质子动力降低，ATP 合酶得到的驱动力也随之减少。</p></details>
+<details><summary>为什么人工膜实验要比较光照和暗处？</summary><p>在囊泡组成和底物相同的条件下，明暗对照改变的是光驱动质子泵的输入。它为质子动力驱动 ATP 合成提供证据。</p></details>
+</div></section>
+<section class="references" aria-labelledby="ref-title"><p class="kicker">SOURCE NOTES</p><h2 id="ref-title">证据与参考文献</h2><p>结构图为原创示意；同位素和干预为课堂模型。人工囊泡图重构论文的实验逻辑。</p><ol>
+<li id="ref-1" tabindex="-1">人民教育出版社，《普通高中教科书 生物学 必修 1 分子与细胞》，第 5 章第 3 节。核对三阶段及总反应式。<a href="https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/9d522562-b529-446c-9b5b-084812beee6e.pkg/pdf.pdf" target="_blank" rel="noopener noreferrer">电子教材 ↗</a></li>
+<li id="ref-2" tabindex="-1">Mitchell, P. (1961). Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic type of Mechanism. <i>Nature</i> 191, 144–148。化学渗透学说。<a href="https://doi.org/10.1038/191144a0" target="_blank" rel="noopener noreferrer">10.1038/191144a0 ↗</a></li>
+<li id="ref-3" tabindex="-1">Cooper, G. M. (2000). The Mechanism of Oxidative Phosphorylation. <i>The Cell: A Molecular Approach</i>, 2nd ed. 用于内膜与电子传递机制，ATP 产率边界见 [4]。<a href="https://www.ncbi.nlm.nih.gov/books/NBK9885/" target="_blank" rel="noopener noreferrer">NCBI Bookshelf ↗</a></li>
+<li id="ref-4" tabindex="-1">Hinkle, P. C. (2005). P/O ratios of mitochondrial oxidative phosphorylation. <i>BBA</i> 1706, 1–11。单位氧还原所耦联的 ATP 估算有条件。<a href="https://doi.org/10.1016/j.bbabio.2004.09.004" target="_blank" rel="noopener noreferrer">10.1016/j.bbabio.2004.09.004 ↗</a></li>
+<li id="ref-5" tabindex="-1">Racker, E. &amp; Stoeckenius, W. (1974). Reconstitution of purple membrane vesicles catalyzing light-driven proton uptake and adenosine triphosphate formation. <i>JBC</i> 249, 662–663。光驱动膜重构。<a href="https://pubmed.ncbi.nlm.nih.gov/4272126/" target="_blank" rel="noopener noreferrer">PMID 4272126 ↗</a></li>
+</ol></section>
+
+</main>
+<footer class="footer wrap"><span>生物学术机制图谱 / 有氧呼吸专题</span><span>V2.0 · 单文件课堂版</span></footer>
+<dialog id="notes" aria-labelledby="notesTitle"><div class="drawer-inner"><div class="drawer-head"><div><p class="kicker">CLASSROOM NOTES</p><h2 id="notesTitle">课堂速查</h2></div><form method="dialog"><button aria-label="关闭课堂速查">关闭 ×</button></form></div>
+<div class="scroll-table"><table><thead><tr><th>阶段</th><th>场所</th><th>关键判断</th></tr></thead><tbody><tr><td>Ⅰ 糖酵解</td><td>细胞质基质</td><td>2 丙酮酸，净得 2 ATP，无 CO₂，不直接耗 O₂。</td></tr><tr><td>Ⅱ 丙酮酸氧化与循环</td><td>线粒体基质</td><td>按一份葡萄糖完全氧化计，共产生 6 CO₂。</td></tr><tr><td>Ⅲ 氧化磷酸化</td><td>线粒体内膜</td><td>O₂ 还原为水；H⁺ 回流经 ATP 合酶，大部分 ATP 在此形成。</td></tr></tbody></table></div>
+<h3>学生答题句式</h3><p>电子传递释放的能量驱动 H⁺ 跨内膜，形成电化学梯度；H⁺ 经 ATP 合酶顺梯度回流，驱动 ADP 与 Pi 合成 ATP。</p>
+<h3>容易混用的说法</h3><p>教材的 [H] 是还原当量的简写，可联系 NADH 等。膜两侧 H⁺ 梯度里的 H⁺ 是质子。产 ATP 的精确数值随穿梭、组织、耦联程度等改变。</p></div></dialog>
+<script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+'use strict';
+const {phase, clamp, mix, label, callout, createTimeline, escape: esc} = BioAtlas;
+const $ = selector => document.querySelector(selector);
+const color = {ink:'#29483c', carbon:'#b74734', water:'#14708d', e:'#674fa2', h:'#ae4076', atp:'#966315', green:'#337762'};
+const ends = [0, 0.333, 0.666, 1];
+const bounds = {width:820,height:420};
+const smooth = t => t*t*(3-2*t);
+const tone = (name,x,y,title,subtitle) => label({x,y,title,subtitle,bounds,color:color[name] || color.ink,padding:7});
+const note = (x,y,from,title,subtitle) => callout({x,y,from,title,subtitle,bounds,padding:7});
+const round = (x,y,r,fill,extra='') => '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'" '+extra+'/>';
+const text = (x,y,value,options='') => '<text x="'+x+'" y="'+y+'" fill="'+color.ink+'" font-size="16" '+options+'>'+esc(value)+'</text>';
+const path = (d,stroke,width=2,extra='') => '<path d="'+d+'" fill="none" stroke="'+stroke+'" stroke-width="'+width+'" stroke-linecap="round" stroke-linejoin="round" '+extra+'/>';
+const rect = (x,y,w,h,fill,stroke='none',r=7) => '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="'+fill+'" stroke="'+stroke+'"/>';
+const points = pairs => pairs.map((p,i)=>(i?'L':'M')+p[0]+' '+p[1]).join('');
+const rgba = (markup, opacity) => '<g opacity="'+clamp(opacity)+'">'+markup+'</g>';
+
+function arrow(pointsList, ink, width=3, dash=false) {
+  const [x,y] = pointsList.at(-1);
+  const [px,py] = pointsList.at(-2);
+  const angle = Math.atan2(y-py,x-px)*180/Math.PI;
+  return path(points(pointsList),ink,width,dash?'stroke-dasharray="6 7"':'')+
+    '<path d="M-10 -6 0 0 -10 6" fill="none" stroke="'+ink+'" stroke-width="'+width+'" stroke-linecap="round" stroke-linejoin="round" transform="translate('+x+' '+y+') rotate('+angle+')"/>';
+}
+
+function pointOn(coords,t) {
+  const distances = coords.slice(1).map(([x,y],i)=>Math.hypot(x-coords[i][0],y-coords[i][1]));
+  let position = clamp(t)*distances.reduce((sum,n)=>sum+n,0);
+  for(let i=0;i<distances.length;i++){
+    if(position<=distances[i]||i===distances.length-1){
+      const f = position/distances[i];
+      return [mix(coords[i][0],coords[i+1][0],f),mix(coords[i][1],coords[i+1][1],f)];
+    }
+    position-=distances[i];
+  }
+  return coords[0];
+}
+
+function beads(coords,t,ink,n=4,r=4) {
+  return Array.from({length:n},(_,i)=>{
+    const u = t*1.68 - i*0.15;
+    if(u<0||u>1)return '';
+    const [x,y]=pointOn(coords,u);
+    return round(x,y,r,ink,'stroke="#fff" stroke-width="1.3"');
+  }).join('');
+}
+
+function molecule(x,y,coords,ink,scale=1) {
+  const join = coords.map(([a,b],i)=>i?path('M'+coords[i-1].join(' ')+'L'+a+' '+b,ink,3):'').join('');
+  return '<g transform="translate('+x+' '+y+') scale('+scale+')">'+join+
+    coords.map(([a,b])=>round(a,b,8,ink,'stroke="#fff" stroke-width="1.8"')).join('')+'</g>';
+}
+const carbon6 = [[-24,3],[-12,-8],[0,3],[12,-8],[24,3],[36,-8]];
+const carbon3 = [[-13,6],[0,-6],[13,6]];
+const oxy = [[-6,0],[6,0]];
+function waterIcon(x,y,scale=1){
+  return '<g transform="translate('+x+' '+y+') scale('+scale+')">'+path('M-10 8L0 -4 10 8','#688a94',2.4)+round(-10,8,5,'#bed3d9','stroke="#fff" stroke-width="1.2"')+round(10,8,5,'#bed3d9','stroke="#fff" stroke-width="1.2"')+round(0,-4,9,color.water,'stroke="#fff" stroke-width="1.6"')+'</g>';
+}
+function co2Icon(x,y,ink){
+  return '<g transform="translate('+x+' '+y+')">'+path('M-10 0H10','#7e9293',1.7)+round(-10,0,4.3,'#bdd1d6')+round(10,0,4.3,'#bdd1d6')+round(0,0,6.3,ink,'stroke="#fff" stroke-width="1.2"')+'</g>';
+}
+
+function mitochondrion(id) {
+  const outer='M29 146C33 78 114 33 217 43C295 50 314 74 403 61C506 46 592 78 604 136C620 205 562 250 478 257C391 264 354 239 292 244C223 250 184 278 111 258C54 242 23 211 29 146Z';
+  const inner='M48 148C53 96 115 58 183 61C195 62 196 80 187 92L146 142C137 155 154 171 170 158L234 96C247 83 250 70 266 74C302 79 317 89 346 90C361 91 359 106 350 117L309 163C295 181 314 193 331 179L401 109C412 96 415 82 432 81C488 75 540 85 569 109C581 122 588 138 586 156C583 168 567 168 553 161L510 137C495 128 480 145 496 156L542 189C555 198 554 213 540 220C505 238 451 243 419 238C403 235 405 223 415 210L450 164C460 152 444 140 432 152L376 212C368 221 356 223 344 222C312 220 279 224 253 232C235 236 233 221 243 209L272 172C284 155 265 143 251 157L185 223C172 236 167 246 150 245C95 242 62 219 52 190C47 176 46 161 48 148Z';
+  return '<defs><linearGradient id="'+id+'outer" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox"><stop stop-color="#e5eee3"/><stop offset="1" stop-color="#a9c8b6"/></linearGradient>'+
+    '<linearGradient id="'+id+'matrix" x1="0%" x2="100%" y1="0%" y2="100%"><stop stop-color="#f5faee"/><stop offset="1" stop-color="#c9e3d3"/></linearGradient></defs>'+
+    '<path d="'+outer+'" fill="url(#'+id+'outer)" stroke="#2e6a59" stroke-width="4"/>'+
+    '<path d="'+inner+'" fill="url(#'+id+'matrix)" stroke="#4a8976" stroke-width="4" stroke-linejoin="round"/>'+
+    '<path d="M45 149C53 107 84 78 123 68M560 215C530 242 481 248 442 247" fill="none" stroke="#f7fcf1" stroke-width="3.6" opacity=".75" stroke-linecap="round"/>'+
+    Array.from({length:10},(_,i)=>{const x=86+(i*43)%450;return round(x,112+(i*37)%101,1.6,'#729b86','opacity=".32"');}).join('');
+}
+
+$('#heroSvg').innerHTML = '<ellipse cx="320" cy="256" rx="232" ry="19" fill="#709181" opacity=".13"/>'+mitochondrion('hero-')+
+  molecule(86,55,carbon3,color.carbon,.75)+molecule(530,43,oxy,color.water,.8)+
+  round(583,218,4,color.h)+round(589,231,5,color.h)+round(573,240,3,color.h)+round(103,231,4,color.e)+round(91,222,3,color.e)+
+  '<g transform="translate(429 204)">'+rect(0,0,74,31,'#fcf4d9','#b29045',9)+text(37,21,'ATP','text-anchor="middle" font-weight="750"')+'</g>';
+
+function activeStage(t) {
+  const i = t>=ends[2]?2:t>=ends[1]?1:0;
+  return {i,p:phase(t,ends[i],ends[i+1])};
+}
+
+const stageData = [
+  {name:'Ⅰ · 糖酵解',place:'细胞质基质',intro:'一份 6C 葡萄糖分为两份 3C 丙酮酸。',facts:[['丙酮酸','2 × 3C'],['NADH','2'],['ATP','净得 2'],['CO₂ / 直接耗 O₂','均无']]},
+  {name:'Ⅱ · 丙酮酸氧化与循环',place:'线粒体基质',intro:'丙酮酸氧化与柠檬酸循环接力，释放 CO₂ 并转移电子。',facts:[['CO₂','2 + 4'],['NADH / FADH₂','8 / 2'],['ATP 当量','2'],['直接耗 O₂','无']]},
+  {name:'Ⅲ · 氧化磷酸化',place:'线粒体内膜',intro:'O₂ 在末端接受电子，形成水；质子动力驱动大部分 ATP 的生成。',facts:[['直接耗 O₂','有'],['直接产物','H₂O'],['ATP','多数在此形成'],['CO₂','不在此生成']]}
+];
+
+function stagesArt(t) {
+  const {i,p}=activeStage(t);
+  const base='<rect width="820" height="420" fill="#f8faf5"/><path d="M0 331H820" stroke="#d8e6d9"/>'+
+    '<g transform="translate(193 58) scale(1.00)">'+mitochondrion('atlas-')+'</g>';
+  const track1=[[79,204],[142,204],[184,224]];
+  const track2=[[183,224],[244,228],[300,258],[373,255],[408,235]];
+  const track3=[[465,260],[522,257],[571,238],[608,209],[643,184]];
+  let content = base + rgba(arrow(track1,color.carbon),i===0?1:.26)+rgba(arrow(track2,color.carbon),i===1?1:.28)+rgba(arrow(track3,color.e,3,true),i===2?1:.30);
+  if(i===0){
+    const x=mix(76,151,smooth(p));
+    content+=rgba(molecule(x,179,carbon6,color.carbon,.72),1-phase(p,.28,.64));
+    const opacity=phase(p,.26,.56);
+    content+=rgba(molecule(mix(130,179,p),174,carbon3,color.carbon,.7)+molecule(mix(132,183,p),214,carbon3,color.carbon,.7),opacity);
+  }else if(i===1){
+    const [x,y]=pointOn(track2,p);
+    content+=rgba(molecule(x,y-14,carbon3,color.carbon,.72),1-phase(p,.68,.96));
+    content+=path('M391 252C379 278 420 295 440 267C452 244 437 217 410 222',color.carbon,3);
+    const out=[[421,247],[460,193],[498,145],[520,107]];
+    content+=arrow(out,color.carbon,2.5,true)+beads(out,phase(p,.25,1),color.carbon,5,5);
+    content+=rgba(tone('carbon',470,73,'CO₂ 离开基质'),phase(p,.45,.72));
+  }else{
+    const transfer=[[643,183],[673,175],[705,190],[733,224]];
+    content+=arrow(transfer,color.water,3)+beads(track3,p,color.e,5,5);
+    content+=rgba(molecule(677,159,oxy,color.water,.8),1-phase(p,.44,.74));
+    content+=rgba(waterIcon(732,220,.85)+tone('water',710,233,'H₂O'),phase(p,.5,.8));
+    content+=rgba(tone('atp',640,286,'ATP 大量形成'),phase(p,.48,.88));
+  }
+  const stepLabels = [tone('carbon',21,350,'Ⅰ 糖酵解','细胞质基质'),tone('carbon',267,350,'Ⅱ 丙酮酸氧化与循环','线粒体基质'),tone('e',567,350,'Ⅲ 氧化磷酸化','线粒体内膜')];
+  return content+stepLabels.map((item,index)=>rgba(item,index===i?1:.68)).join('')+
+    note(16,24,[102,112],'细胞质基质')+note(235,32,[294,120],'外膜')+
+    note(347,24,[427,154],'内膜与嵴')+note(591,29,[681,126],'膜间隙')+
+    note(735,85,[742,167],'基质');
+}
+
+const stagesEvidence = t => {
+  const {i}=activeStage(t),s=stageData[i];
+  return '<h3>'+s.name+'</h3><p class="status-line">'+s.place+' · '+s.intro+'</p>'+facts(s.facts)+
+    '<p>'+['直接消耗的 ATP 已在净收益中扣除。糖酵解生成的是胞质 NADH。','循环的数值按一份葡萄糖汇总。乙酰基带入的碳未必在第一轮循环中释放。','胞质 NADH 通过穿梭传递还原当量。ATP 精确产量随条件变化。'][i]+'</p>';
+};
+function facts(rows) {
+  return '<div class="ledger">'+rows.map(([key,value])=>'<div class="fact"><span>'+key+'</span><b>'+value+'</b></div>').join('')+'</div>';
+}
+
+function traceArt(t,mode) {
+  const carbon=mode===0;
+  const ink=carbon?color.carbon:color.water;
+  const a=[[98,205],[283,205],[482,205],[692,205]];
+  const regions=[
+    [18,15,248,'细胞质基质','#f7eee8'],[282,15,252,carbon?'细胞质 → 基质':'前两阶段','#eaf3eb'],[550,15,252,carbon?'线粒体基质 · 排出端':'线粒体内膜','#edf2f7']
+  ].map(([x,y,w,title,fill])=>rect(x,y,w,388,fill,'#d4e0d5',9)+tone('ink',x+12,y+13,title)).join('');
+  const icons = carbon ? [
+    molecule(96,155,carbon6,ink,1.1),molecule(351,138,carbon3,ink,1)+molecule(351,171,carbon3,ink,1),
+    Array.from({length:6},(_,i)=>co2Icon(641+(i%3)*48,129+Math.floor(i/3)*36,ink)).join('')
+  ] : [molecule(95,154,oxy,ink,1.25),molecule(384,151,oxy,ink,1.25),waterIcon(699,150,1.15)];
+  const names = carbon ? [['¹³C 葡萄糖','6 个标记碳'],['两份丙酮酸','3C + 3C'],['¹³CO₂','完全氧化终点']]
+    : [['¹⁸O₂','标记氧分子'],['尚未被还原','前两阶段不直接用 O₂'],['H₂¹⁸O','呼吸链直接生成的水']];
+  const i=t>=.82?2:t>=.33?1:0;
+  const guide=carbon?'基质脱羧产生 CO₂':'O₂ 在链末端被还原为水';
+  return regions+arrow(a,ink,3, !carbon)+beads(a,t,ink,6,5)+
+    icons.map((graphic,k)=>rgba(graphic,k<=i?1:.23)).join('')+
+    names.map(([title,sub],k)=>tone(carbon?'carbon':'water',[34,294,565][k],242,title,sub)).join('')+
+    note(296,332,[482,205],guide,carbon?'箭头表示去向，非逐轮标记':'虚线为示踪顺序，非穿膜路线');
+}
+
+function traceEvidence(t,mode) {
+  const carbon=mode===0;
+  const step=t>=.82?2:t>=.33?1:0;
+  if(carbon){
+    const labels=['葡萄糖 · 6 个 ¹³C','丙酮酸 · 3 + 3 个 ¹³C','CO₂ · 共 6 个 ¹³C'];
+    return '<h3>核对六个碳</h3><p class="status-line">'+labels[step]+'</p>'+
+      '<div class="chem-balance"><span>6C</span> → <span>3C + 3C</span> → <span>6 × 1C</span></div>'+
+      facts([['糖酵解释放 CO₂','0'],['丙酮酸氧化计量','2 CO₂'],['循环计量','4 CO₂']])+
+      '<p>图示完全氧化终点。循环实际存在底物混合和标记延迟。</p>';
+  }
+  return '<h3>直接产物是水</h3><p class="status-line">'+['追踪的是氧分子 ¹⁸O₂。','前两阶段不直接消耗 O₂。','终点在内膜，直接形成 H₂¹⁸O。'][step]+'</p>'+
+    facts([['链末端','复合体 IV'],['氧的角色','末端电子受体'],['标记去向','H₂¹⁸O']])+
+    '<p>图只追踪呼吸链的直接产物，略去后续水与 CO₂ 等物质的同位素交换。</p>';
+}
+
+
+const intervention = 0.25;
+const protocols = [
+  {label:'供氧且耦联',head:'供氧且耦联',detail:'电子流维持质子动力，H⁺ 经 ATP 合酶回流。'},
+  {label:'撤去 O₂',head:'撤去氧：链末端受阻',detail:'失去末端电子受体后，电子传递下降，质子动力随后衰减。'},
+  {label:'供氧但膜漏 H⁺',head:'质子旁路：耗氧仍可继续',detail:'H⁺ 沿旁路回到基质。即使呼吸链继续工作，耦联生成 ATP 的能力也会下降。'}
+];
+function model(t,mode){
+  const elapsed = phase(t,intervention,1);
+  if(mode===0)return {oxygen:1,gradient:1,atp:1};
+  if(mode===1)return {
+    oxygen: 1-phase(elapsed,0,.18),
+    gradient: (1-elapsed)**2.15,
+    atp: (1-elapsed)**3.2
+  };
+  return {
+    oxygen: mix(1,1.13,phase(elapsed,0,.5)),
+    gradient: mix(1,.17,smooth(phase(elapsed,0,.7))),
+    atp: mix(1,.09,smooth(phase(elapsed,0,.65)))
+  };
+}
+const complex = (x,y,fill,ink) => '<path d="M'+(x-33)+' '+(y+26)+'q-8-15 3-26l-7-28q-5-18 11-22q15-4 27 8q13-14 24-5q10 8 6 22l-8 22q16 14 7 28q-8 13-31 10q-19 6-32-9Z" fill="'+fill+'" stroke="'+ink+'" stroke-width="2.3"/>';
+function bilayer(x,y,w) {
+  const layer=rect(x,y,w,64,'#e7e3d0','#d4c5a8',8);
+  return layer+Array.from({length:Math.floor(w/14)},(_,i)=>{
+    const q=x+7+i*14;
+    return round(q,y+5,4,'#af9066')+round(q,y+59,4,'#af9066')+
+      path('M'+(q-2)+' '+(y+10)+'l-1 17m4-17 2 17M'+(q-2)+' '+(y+54)+'l-1-17m4 17 2-17','#bcaa85',1.2);
+  }).join('');
+}
+function membraneArt(t,mode){
+  const v=model(t,mode);
+  const leak=mode===2&&t>intervention;
+  const eRoute=[[121,213],[168,180],[309,180],[367,215],[425,179],[501,208]];
+  const fromII=[[244,259],[245,226],[309,180]];
+  const through=[[696,118],[696,170],[696,220],[696,264],[696,295]];
+  let art='<rect width="820" height="420" fill="#f9faf6"/>'+rect(13,12,794,145,'#f5eaf0','#ecd9e2',9)+
+    rect(13,250,794,155,'#eaf3ed','#d8e4da',9)+bilayer(16,174,788);
+  const protonPumps=[121,369,502];
+  art+=protonPumps.map((x,i)=>{
+    const q=[[x-17,280],[x-13,238],[x-13,183],[x-13,133],[x-5,104]];
+    return rgba(arrow(q,color.h,2.4,true)+(v.oxygen>0?beads(q, (t*1.7+i*.13)%1, color.h,4,4):''),v.oxygen*.7+.15);
+  }).join('');
+  art+=Array.from({length:17},(_,i)=>{
+    const q= i/16;
+    return rgba(round(74+i*35,77+(i*19)%50,i%3===0?5.5:4,color.h,'stroke="#fff" stroke-width="1"'),phase(v.gradient,q*.86,q*.86+.17));
+  }).join('');
+  art+=complex(121,211,'#c2d7ef','#456a9b')+complex(244,240,'#ddd7ef','#675895')+
+    complex(369,211,'#c1e1d2','#4d826c')+complex(502,211,'#f2c9bb','#a16a58');
+  art+=rect(683,170,26,90,'#f7e4aa','#936a25',8)+rect(690,232,12,40,'#dbaf54','#8a6528',4)+
+    '<ellipse cx="696" cy="284" rx="33" ry="23" fill="#f4d89c" stroke="#966c25" stroke-width="2.1"/>';
+  art+=rgba(arrow(eRoute,color.e,2.2)+arrow(fromII,color.e,2,true)+(v.oxygen>0?beads(eRoute,(t*1.5)%1,color.e,6,4.3):''),.23+.74*clamp(v.oxygen));
+  art+=rgba(arrow(through,color.h,2.8)+(v.atp>.1?beads(through,(t*1.85)%1,color.h,5,4):''),.12+.88*v.atp);
+  if(leak){
+    const bypass=[[588,123],[589,174],[588,235],[596,289]];
+    art+=rgba(arrow(bypass,color.h,3.4,true)+beads(bypass,(t*2)%1,color.h,5,5),phase(t,intervention,.42));
+    art+=tone('h',548,105,'H⁺ 旁路');
+  }
+  art+=tone('h',26,21,'膜间隙','质子动力由此建立')+
+    tone('ink',22,365,'线粒体基质')+tone('ink',97,207,'Ⅰ')+tone('ink',219,221,'Ⅱ')+
+    tone('ink',350,210,'Ⅲ')+tone('ink',479,209,'Ⅳ')+tone('e',291,143,'Q')+tone('e',405,132,'细胞色素 c')+
+    tone('atp',640,312,'ATP 合酶')+tone('e',29,303,'NADH')+tone('e',192,291,'FADH₂','Ⅱ 不泵 H⁺')+
+    tone('water',425,303,mode===1&&t>=.39?'O₂ 已撤去':'O₂ → H₂O')+
+    tone('atp',614,366, v.atp>.3?'ADP + Pi → ATP':'ATP 合成减弱');
+  return art;
+}
+
+function trendGraph(t,mode){
+  const axes=[
+    {key:'oxygen',title:'耗氧速率',ink:color.water,dash:''},
+    {key:'gradient',title:'质子动力',ink:color.h,dash:'6 4'},
+    {key:'atp',title:'ATP 合成速率',ink:color.atp,dash:'2 3'}
+  ];
+  const left=109,right=433,width=right-left,height=54;
+  const xs = fraction => left+width*fraction;
+  const ys = (top,value) => top+height-(value/1.2)*height;
+  let marks='<svg viewBox="0 0 450 276" class="chart" role="img" aria-label="耗氧、质子动力和氧化磷酸化 ATP 合成速率的三个归一化示意分面">';
+  axes.forEach(({key,title,ink,dash},i)=>{
+    const y=18+i*78;
+    marks+='<rect class="strip" x="'+left+'" y="'+(y-15)+'" width="'+width+'" height="15"/>'+
+      '<rect class="panel-bg" x="'+left+'" y="'+y+'" width="'+width+'" height="'+height+'"/>'+
+      text(103,y+34,title,'text-anchor="end" font-weight="700" style="font-size:14px"')+
+      text(118,y-3,'相对干预前水平','style="font-size:11px"');
+    for(const f of [0,.125,.25,.375,.5,.625,.75,.875,1]){
+      marks+='<line class="plot-grid" x1="'+xs(f)+'" x2="'+xs(f)+'" y1="'+y+'" y2="'+(y+height)+'" stroke-width="'+(f%.25===0?1.5:.75)+'"/>';
+    }
+    for(const value of [0,.25,.5,.75,1]){
+      const v=ys(y,value);
+      marks+='<line class="plot-grid" x1="'+left+'" x2="'+right+'" y1="'+v+'" y2="'+v+'" stroke-width="'+(value%.5===0?1.5:.75)+'"/>';
+    }
+    marks+=path('M'+xs(intervention)+' '+y+'V'+(y+height),'#52655d',1,'stroke-dasharray="3 3"');
+    const samples=Array.from({length:49},(_,k)=>{const f=k/48;return [xs(f),ys(y,model(f,mode)[key])];});
+    marks+=path(points(samples),ink,2.6,'stroke-dasharray="'+dash+'"')+
+      round(xs(t),ys(y,model(t,mode)[key]),4.5,ink,'stroke="#fff" stroke-width="1.5"');
+  });
+  return marks+text(109,252,'开始','style="font-size:12px"')+
+    text(xs(intervention),252,'干预','text-anchor="middle" style="font-size:12px"')+
+    text(433,252,'后期','text-anchor="end" style="font-size:12px"')+
+    text(270,272,'演示进度 · 非实测时间','text-anchor="middle" style="font-size:12px"')+'</svg>';
+}
+function membraneEvidence(t,mode){
+  const v=model(t,mode);
+  const labelText = (value) => value>=.8?'维持':value>=.3?'下降':'很低';
+  const oxygenText=v.oxygen===0?'停止':v.oxygen>1.02?'仍进行':labelText(v.oxygen);
+  return '<h3>'+protocols[mode].head+'</h3><p class="status-line">'+
+    (t<intervention?'干预前 · 各组起点相同。':protocols[mode].detail)+'</p>'+trendGraph(t,mode)+
+    '<p>当前 · 耗氧<strong> '+oxygenText+'</strong> · 质子动力<strong> '+labelText(v.gradient)+'</strong> · 耦联 ATP<strong> '+labelText(v.atp)+'</strong></p>'+
+    '<p>曲线为归一化教学示意，纵向高度不可跨变量比较。ATP 只指氧化磷酸化部分。</p>'+
+    '<code class="chart-note">geom_line() + geom_point() + facet_grid(signal ~ .) + '+(document.body.dataset.theme==='bw'?'theme_bw()':'theme_gray()')+'</code>';
+}
+
+function vesicleArt(t,mode){
+  const on=mode===1;
+  const pump=phase(t,.1,.46)*Number(on);
+  const gradient=phase(t,.27,.69)*Number(on);
+  const synth=phase(t,.55,.94)*Number(on);
+  const pumpRoute=[[271,47],[271,99],[271,126],[271,155],[284,193]];
+  const returnRoute=[[564,207],[561,164],[559,130],[559,102],[572,70]];
+  const dots=Array.from({length:22},(_,i)=>{
+    const x=300+(i*37)%234,y=161+(i*23)%99;
+    return rgba(round(x,y,3.5+(i%3),color.h,'stroke="#fff" stroke-width="1.2"'),phase(gradient,i*.034,i*.034+.2));
+  }).join('');
+  return '<rect width="820" height="420" fill="#fafaf6"/>'+
+    '<defs><radialGradient id="vesicleFill"><stop stop-color="#f9edf4"/><stop offset="1" stop-color="#e7cddf"/></radialGradient></defs>'+
+    '<ellipse cx="414" cy="206" rx="207" ry="115" fill="#d7a9c0" stroke="#9c557b" stroke-width="2.8"/>'+
+    '<ellipse cx="414" cy="206" rx="191" ry="99" fill="url(#vesicleFill)" stroke="#a55d87" stroke-width="2.6"/>'+
+    Array.from({length:42},(_,i)=>{
+      const angle=i*2*Math.PI/42;
+      return round(414+201*Math.cos(angle),206+109*Math.sin(angle),3.1,'#f7e5ed','stroke="#ac6f90" stroke-width="1"');
+    }).join('')+
+    '<path d="M250 86q15-13 29-5l17 17-4 25-8 22q-14 10-28-2l-11-20 2-16Z" fill="#b390ce" stroke="#72509c" stroke-width="2.8"/>'+
+    rect(549,93,23,55,'#f2d186','#9d7335',6)+rect(556,76,9,25,'#e6b654','#996c26',4)+
+    '<ellipse cx="560" cy="68" rx="29" ry="19" fill="#f4dca4" stroke="#996c26" stroke-width="2"/>'+
+    rgba(arrow(pumpRoute,color.h,3)+beads(pumpRoute,pump,color.h,5,4),pump*.85+.13)+dots+
+    rgba(arrow(returnRoute,color.h,3,true)+beads(returnRoute,synth,color.h,4,4),synth*.85+.12)+
+    rgba(path('M181 63l27-10-11 17 29-5M215 28l11 13M175 35l17 10',color.atp,3),on?.92:.2)+
+    note(26,130,[257,118],'光驱动质子泵','细菌视紫红质')+
+    note(631,128,[567,83],'ATP 合酶')+
+    tone('ink',22,26,on?'实验组 · 光照':'对照组 · 暗处')+tone('h',340,217,'囊泡内')+
+    tone('ink',69,330,'囊泡外','外液含 ADP + Pi')+
+    rgba(tone('atp',632,33,'ATP 在外侧生成'),synth)+
+    tone('ink',545,338,'人工重构示意','蛋白取向按功能绘制');
+}
+function vesicleEvidence(t,mode) {
+  const on=mode===1;
+  const phaseLabel=!on?'暗处 · 光泵没有能量输入。':t<.22?'光照 · 光泵开始工作。':t<.55?'H⁺ 在囊泡内积累。':'H⁺ 经 ATP 合酶回流，支持 ATP 合成。';
+  return '<h3>同一囊泡，只改变光</h3><p class="status-line">'+phaseLabel+'</p>'+
+    facts([['两组均具备','泵、ATP 合酶、ADP、Pi'],['光照条件','泵建立质子动力'],['暗处对照','无光驱动的 ATP 合成']])+
+    '<p>这是对膜重构实验逻辑的定性演绎。光驱动装置提供质子动力；线粒体通过呼吸链建立质子动力。</p>'+
+    '<p>想一想：若再加一条质子旁路，光还在，ATP 产量会怎样变？</p>';
+}
+
+
+const labs=[];
+function mount(id, config) {
+  const host=$('#lab'+id);
+  host.className='experiment';
+  const tabs=config.options.map((item,i)=>'<button type="button" data-mode="'+i+'" aria-pressed="'+(i===0)+'">'+esc(item)+'</button>').join('');
+  host.innerHTML=
+    '<div class="choice-bar"><strong>'+esc(config.prompt)+'</strong><div class="choices" role="group" aria-label="'+esc(config.prompt)+'">'+tabs+'</div></div>'+
+    '<div class="fig-grid"><figure class="main-fig"><p class="panel-title"><span class="panel-letter">A</span>'+esc(config.diagram)+'</p>'+
+    '<div class="svg-scroll" tabindex="0" role="region" aria-label="'+esc(config.diagram)+'，窄屏可横向滚动"><svg class="art" viewBox="0 0 820 420" role="img" aria-label="'+esc(config.diagram)+'"></svg></div>'+
+    '<figcaption>'+config.caption+' <span class="scroll-tip">手机可左右滑动看全图。</span></figcaption></figure>'+
+    '<aside class="evidence" aria-label="'+esc(config.evidenceTitle)+'"><p class="panel-title"><span class="panel-letter">B</span>'+esc(config.evidenceTitle)+'</p><div class="result"></div></aside></div>'+
+    '<div class="controls"><button type="button" class="play" aria-label="播放或暂停图 '+id+'">▶ 播放</button><button type="button" class="reset">重置</button>'+
+    '<label class="control-label" for="time'+id+'">演示进度</label><input type="range" id="time'+id+'" aria-label="图 '+id+' 演示进度" min="0" max="1000" value="0">'+
+    '<output for="time'+id+'">0%</output></div>';
+
+  const buttons=[...host.querySelectorAll('[data-mode]')];
+  const svg=host.querySelector('.art');
+  const evidence=host.querySelector('.result');
+  const play=host.querySelector('.play');
+  const range=host.querySelector('input[type=range]');
+  const out=host.querySelector('output');
+  let mode=0, evidenceKey=null;
+  function update(t, force=false){
+    const selected=config.staged?activeStage(t).i:mode;
+    buttons.forEach((button,i)=>{
+      const value=String(i===selected);
+      if(button.getAttribute('aria-pressed')!==value)button.setAttribute('aria-pressed',value);
+    });
+    const nextKey=config.evidenceKey?.(t,mode) ?? t;
+    if(force || nextKey!==evidenceKey){
+      evidence.innerHTML=config.evidence(t,mode);
+      evidenceKey=nextKey;
+    }
+  }
+  const clock=createTimeline({
+    duration:config.duration,
+    render(t){
+      svg.innerHTML=config.art(t,mode);
+      update(t);
+    },
+    onState({t,playing}){
+      const message=playing?'⏸ 暂停':'▶ 播放';
+      if(play.textContent!==message)play.textContent=message;
+      range.value=Math.round(t*1000);
+      out.value=Math.round(t*100)+'%';
+      range.setAttribute('aria-valuetext',out.value);
+    }
+  });
+  buttons.forEach((button,i)=>button.addEventListener('click',()=>{
+    mode=i;
+    clock.seek(config.staged?ends[i]+(i===0?0:.006):0);
+  }));
+  play.addEventListener('click',()=>clock.state.playing?clock.pause():clock.play());
+  host.querySelector('.reset').addEventListener('click',()=>{mode=0;clock.reset();});
+  range.addEventListener('input',()=>clock.seek(Number(range.value)/1000));
+  labs.push({refresh:()=>update(clock.state.t,true)});
+}
+
+mount(1,{
+  prompt:'跳到阶段',options:['Ⅰ 糖酵解','Ⅱ 基质反应','Ⅲ 氧化磷酸化'],staged:true,duration:24,
+  diagram:'真核细胞内的反应地图',evidenceTitle:'阶段产物 · 每一份葡萄糖',
+  caption:'剖面与路径均为拓扑示意，动画进度表示讲解顺序。原料进入细胞以及各种膜转运蛋白从略。',art:stagesArt,evidence:stagesEvidence,evidenceKey:t=>activeStage(t).i
+});
+mount(2,{
+  prompt:'选择示踪原料',options:['¹³C 标记葡萄糖','¹⁸O₂ 标记氧'],duration:15,
+  diagram:'两条示踪路径',evidenceTitle:'原子去向与物质总账',
+  caption:'同位素追踪是课堂示意，标记小球表示去向。碳示踪终点假设这一份葡萄糖完全氧化。',art:traceArt,evidence:traceEvidence,
+  evidenceKey:(t,m)=>m+':'+(t>=.82?2:t>=.33?1:0)
+});
+mount(3,{
+  prompt:'比较内膜工况',options:protocols.map(c=>c.label),duration:18,
+  diagram:'线粒体内膜的电子与质子路线',evidenceTitle:'三个同步读数 · 定性示意',
+  caption:'紫色为电子路线，洋红虚线为泵出或旁路，洋红实线为经 ATP 合酶回流。Ⅰ、Ⅲ、Ⅳ泵 H⁺，Ⅱ不泵。',art:membraneArt,evidence:membraneEvidence,
+  evidenceKey:(t,m)=>m+':'+t
+});
+mount(4,{
+  prompt:'对照光照条件',options:['暗处对照','光照实验组'],duration:14,
+  diagram:'光泵与 ATP 合酶的人工膜重构',evidenceTitle:'实验干预与可支持结论',
+  caption:'泵的方向朝囊泡内，ATP 合酶催化头朝外液。图按所示功能取向绘制，非囊泡尺寸与组分比例。',art:vesicleArt,evidence:vesicleEvidence,
+  evidenceKey:(t,m)=>m+':'+(t>=.55?2:t>=.22?1:0)
+});
+
+$('#theme').addEventListener('click',event=>{
+  const bw=document.body.dataset.theme!=='bw';
+  document.body.dataset.theme=bw?'bw':'gray';
+  event.currentTarget.setAttribute('aria-pressed',String(bw));
+  event.currentTarget.textContent=bw?'证据图 · 黑白':'证据图 · 浅灰';
+  labs[2].refresh();
+});
+const drawer=$('#notes');
+$('#notesOpen').addEventListener('click',()=>{
+  BioAtlas.pauseAll();
+  drawer.showModal();
+});
+drawer.addEventListener('click',event=>{if(event.target===drawer)drawer.close();});
+document.addEventListener('click',event=>{
+  const link=event.target.closest('a[href^="#ref-"]');
+  if(!link)return;
+  requestAnimationFrame(()=>$(link.getAttribute('href'))?.focus({preventScroll:true}));
+});
+
+</script>
+</body></html>
