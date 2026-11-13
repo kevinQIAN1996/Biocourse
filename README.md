@@ -153,3 +153,10 @@ GitHub仓库kevinQIAN1996/Biocourse用于私有源码和版本历史。公开反
 
 - [打开有氧呼吸图谱](courses/respiration/aerobic-atlas-v2/)
 - [比较细胞呼吸的三种方案](updates.html#compare-respiration)
+
+## 2026-11-13 · v5.6 · 稳态与调节全册图谱
+
+选择性必修 1《稳态与调节》18 节 Cell × ggplot2 图谱已上线，原课件内容和链接保留。第 2 章第 1、2 节的新版可独立打开，旧合讲版可继续使用。全站 79 个主题、124 个版本。
+
+- [打开 18 节全册目录](steady-atlas/)
+- [逐节查看区别与设计思路](updates.html#steady-atlas-release)

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="gray">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>特异性免疫 · 一个抗原，两条清除路线</title>
+<style>:root{color-scheme:light;--paper:#faf8f3;--white:#fff;--ink:#142b26;--sub:#374b44;--rule:#d9dfd5;--accent:#006652;--pale:#e9f4ed;--coral:#b63829;--mono:Consolas,"SFMono-Regular",monospace;--sans:Inter,"Microsoft YaHei","PingFang SC",system-ui,sans-serif;--serif:"Source Serif 4","Noto Serif SC","Songti SC",SimSun,Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;font:17px/1.65 var(--sans);color:var(--ink);background:var(--paper)}
+h1,h2,p{margin:0} a{color:var(--accent)} a:hover{text-decoration-thickness:2px}
+button,input,summary{font:inherit}
+button{color:var(--ink);background:white;border:1px solid #aab8ac;border-radius:7px;padding:8px 14px;font-weight:650;cursor:pointer;min-height:42px;line-height:1.3}
+button:hover,button[aria-pressed=true]{background:var(--pale);border-color:var(--accent)}
+:focus-visible{outline:3px solid #276bc1;outline-offset:3px}
+.skip{position:fixed;left:10px;top:-100px;background:#fff;z-index:9;padding:10px}.skip:focus{top:8px}
+.wrap{max-width:1420px;margin-inline:auto;width:calc(100% - clamp(28px,8vw,128px))}
+.mast{background:#fdfcf8;border-bottom:1px solid var(--rule)}
+.top{min-height:67px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.imprint{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:750;line-height:1.13;text-decoration:none}
+.imprint svg{color:var(--accent);background:var(--pale);border-radius:8px}
+.imprint small{display:block;margin-top:5px;font:10px var(--mono);letter-spacing:.06em;color:var(--sub)}
+.tools{display:flex;gap:7px;align-items:center}.tools button{font-size:14px;white-space:nowrap}
+.tools code{font:12px var(--mono);margin-left:3px;color:var(--accent)}
+.intro{padding:34px 0 26px}
+.kicker,.micro{font:750 13px/1.5 var(--sans);color:var(--accent);letter-spacing:.08em}
+.intro-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:32px;align-items:center;margin:12px 0 22px}
+h1{font-family:var(--serif);font-size:clamp(32px,4.2vw,66px);font-weight:790;line-height:1.14;letter-spacing:-.038em;text-wrap:balance}
+.subtitle{margin-top:10px;font-size:clamp(18px,2vw,25px);color:var(--sub);font-weight:550}
+.opener{border-left:3px solid var(--accent);padding:13px 18px;background:var(--pale)}
+.opener p{margin:2px 0 5px;font-size:clamp(17px,2vw,21px);font-weight:750}
+.opener div{font-size:14px;color:var(--sub)}.opener div span{margin:0 .3em;color:var(--accent)}
+.toc{display:flex;flex-wrap:wrap;gap:8px}
+.toc a{padding:6px 11px;border:1px solid var(--rule);background:#fdfcf9;border-radius:5px;font-size:14px;font-weight:650;text-decoration:none}
+.toc a:hover{background:var(--pale)}
+.toc a b{font:750 12px var(--mono);margin-right:6px}
+.figure{background:var(--white);border:1px solid var(--rule);border-radius:13px;margin:0 0 25px;overflow:hidden;box-shadow:0 6px 17px #152e2210}
+.figure-head{padding:18px clamp(13px,2.2vw,27px) 13px;display:flex;gap:13px;align-items:baseline}
+.folio{white-space:nowrap;font:750 13px var(--mono);color:var(--accent)}
+.figure h2{font-size:clamp(23px,2.7vw,32px);line-height:1.28;letter-spacing:-.03em}
+.figure-head .refjump{margin-left:auto;align-self:center;text-decoration:none;font-size:13px}
+.question{padding:0 clamp(13px,2.2vw,27px) 12px;color:var(--sub)}
+.question strong{color:var(--accent);margin-right:.5em}
+.choices{padding:0 clamp(13px,2.2vw,27px) 14px;display:flex;gap:7px;flex-wrap:wrap}
+.choices button{font-size:15px}
+.choices button[aria-pressed=true]{box-shadow:inset 0 -2px var(--accent)}
+.plate{display:grid;grid-template-columns:minmax(0,1.34fr) minmax(0,1fr);margin:0 clamp(9px,1.5vw,19px);border:1px solid var(--rule);border-radius:9px;overflow:hidden}
+.pane{min-width:0;background:#fbfcf9}
+.pane+.pane{border-left:1px solid var(--rule);background:#fff}
+.panetitle{display:flex;justify-content:space-between;align-items:center;gap:9px;padding:9px 13px;background:#f3f5ef;border-bottom:1px solid var(--rule);font-size:14px;font-weight:750}
+.panetitle b{font:800 12px var(--mono);color:var(--accent);margin-right:6px}
+.panetitle .aside{font-size:12px;color:var(--sub);font-weight:500}
+.svgscroll{overflow-x:auto;max-width:100%;scrollbar-color:#879c90 #f0f3ee}
+.scene svg,.chart svg{display:block;width:100%;height:auto}.scene svg{min-width:580px}.chart svg{min-width:474px}
+.model{min-height:61px;color:var(--sub);font-size:14px;line-height:1.52;border-top:1px solid var(--rule);padding:8px 13px 10px}
+.rline{font:11px/1.4 var(--mono);white-space:normal;overflow-wrap:anywhere;color:#344d48;padding:0 13px 9px}
+.control{padding:11px clamp(13px,2.2vw,27px);display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+.control button{font-size:14px;min-height:40px}.control .play{background:var(--accent);border-color:var(--accent);color:white}
+.control .range{display:flex;flex:1;align-items:center;min-width:155px;gap:11px;color:var(--sub);font-size:14px}
+input[type=range]{width:100%;min-width:70px;accent-color:var(--accent);min-height:33px;cursor:pointer}
+output{font:750 13px var(--mono);white-space:nowrap;min-width:4ch;text-align:right}
+.reading{margin:0 clamp(13px,2.2vw,27px) 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.readbox{padding:11px 13px;background:var(--pale);border-radius:7px;font-size:15px;line-height:1.58}
+.readbox:nth-child(2){background:#f9f3e9;color:#382c20}
+.readbox strong{display:block;margin-bottom:2px;font-size:13px;letter-spacing:.045em}
+.fig-extra{margin:0 clamp(13px,2.2vw,27px) 16px;border-top:1px solid var(--rule);font-size:15px;color:var(--sub)}
+.fig-extra summary{cursor:pointer;padding:9px 0;font-weight:700;color:var(--accent)}
+.fig-extra p{margin-bottom:6px}
+.raw{overflow:auto}.raw table{border-collapse:collapse;width:100%;text-align:center}.raw th,.raw td{border:1px solid var(--rule);padding:5px 8px}
+.sources{padding:22px 0 14px;border-top:2px solid var(--rule)}.sources h2,.drawer-head h2{font-size:26px}.sources>p:not(.kicker){font-size:14px;color:var(--sub)}
+.sources ol{font-size:11px;color:#465952;line-height:1.65;padding-left:22px}.sources li:target{background:var(--pale)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--rule);padding:13px 0 25px;color:var(--sub);font-size:13px}
+dialog{margin:0 0 0 auto;width:min(550px,100%);height:100%;max-height:100%;max-width:100%;padding:22px;border:1px solid var(--rule);box-shadow:-8px 0 30px #233a3140;color:var(--ink);background:var(--paper)}
+dialog::backdrop{background:#13282266}.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}#notes article{padding:12px;border:1px solid var(--rule);background:white;margin:9px 0;border-radius:7px;font-size:16px}#notes h3{margin:0 0 5px}
+.hint{display:none}
+@media(max-width:1120px){.plate{grid-template-columns:minmax(0,1fr)}.pane+.pane{border-left:0;border-top:1px solid var(--rule)}.scene svg,.chart svg{max-width:760px;margin-inline:auto}.hint{display:inline}}
+@media(max-width:650px){.top{min-height:59px;gap:5px}.imprint small{display:none}.tools button{font-size:12px;padding-inline:7px}.intro{padding-top:25px}.intro-grid{grid-template-columns:1fr;gap:13px;margin-bottom:15px}.figure-head{align-items:flex-start;flex-wrap:wrap;gap:4px 10px}.figure h2{width:100%;order:3}.figure-head .refjump{margin-left:0}.reading{grid-template-columns:1fr}.control .range{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#figure1">跳到互动图</a>
+<header class="mast">
+  <div class="wrap top"><a class="imprint" href="../00_全册课件入口.html"><svg width="33" height="33" viewBox="0 0 36 36" aria-hidden="true"><path d="M9 5c0 14 18 12 18 26M27 5c0 14-18 12-18 26M12 9h12m-9 5h6m-6 8h6m-9 5h12" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg><span>稳态与调节<small>INTERACTIVE BIOLOGY ATLAS</small></span></a>
+  <div class="tools"><button type="button" id="theme" aria-pressed="false">图表主题 <code>gray</code></button><button type="button" id="review">课堂速查</button></div></div>
+</header>
+<main class="wrap">
+  <section class="intro" aria-labelledby="title">
+    <p class="kicker" id="volume"></p>
+    <div class="intro-grid"><div><h1 id="title"></h1><p class="subtitle" id="subtitle"></p></div><div class="opener"><span class="micro">入课先预测</span><p id="hook"></p><div>选条件 <span>→</span> 看变化 <span>→</span> 用证据解释</div></div></div>
+    <nav class="toc" id="toc" aria-label="本节图谱"></nav>
+  </section>
+  <div id="figures"></div>
+  <section class="sources" id="sources" aria-labelledby="source-title"><p class="kicker">SOURCE NOTES</p><h2 id="source-title">参考资料与模型说明</h2><p>左图是原创机制示意；右图数值和证据口径见各图图注。以下资料用于核对教材范围与机制。</p><ol id="citations"></ol></section>
+</main>
+<footer class="wrap foot"><a href="../00_全册课件入口.html">← 返回全册目录</a><span>单文件课堂版 · 可离线打开</span><a href="#title">回到顶部 ↑</a></footer>
+<dialog id="drawer" aria-labelledby="drawer-title"><div class="drawer-head"><div><p class="kicker">TEACHER NOTES</p><h2 id="drawer-title">课堂速查</h2></div><form method="dialog"><button>关闭</button></form></div><div id="notes"></div></dialog>
+<script>(function (root) {
+  'use strict';
+  const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const clamp = value => Math.max(0, Math.min(1, value));
+  const mix = (a, b, t) => a + (b - a) * clamp(t);
+  const phase = (t, a, b) => a === b ? Number(t >= b) : clamp((t - a) / (b - a));
+  const font = 'Arial,"Microsoft YaHei",sans-serif';
+  let context;
+  function width(text, size, weight) {
+    context ||= document.createElement('canvas').getContext('2d');
+    context.font = weight + ' ' + size + 'px ' + font;
+    return context.measureText(String(text)).width;
+  }
+  function labelBox(options) {
+    const lines = options.lines || [options.title, options.subtitle].filter(value => value !== undefined && value !== '');
+    if (!lines.length) throw new Error('A label needs text');
+    const spec = lines.map((line, i) => typeof line === 'object' ? {size: i ? 17 : 18, weight: i ? 400 : 650, ...line} : {text: line, size: i ? 17 : 18, weight: i ? 400 : 650});
+    const pad = options.padding ?? 9, gap = 5, refSize = 17;
+    const contentWidth = Math.max(...spec.map(line => width(line.text, line.size, line.weight)));
+    const referenceWidth = options.ref == null ? 0 : width('[' + options.ref + ']', refSize, 650) + 13;
+    const w = Math.ceil(contentWidth + referenceWidth + pad * 2);
+    const h = Math.ceil(spec.reduce((sum, line) => sum + line.size + gap, 0) - gap + pad * 2);
+    let x = options.x ?? 0, y = options.y ?? 0;
+    if (options.bounds) {
+      const margin = options.bounds.margin ?? 8;
+      if (w > options.bounds.width - margin * 2 || h > options.bounds.height - margin * 2) throw new Error('Label is too large; split lines or revise the layout');
+      x = Math.max(margin, Math.min(options.bounds.width - w - margin, x));
+      y = Math.max(margin, Math.min(options.bounds.height - h - margin, y));
+    }
+    return {x, y, width: w, height: h, lines: spec, padding: pad, referenceWidth, refSize};
+  }
+  function label(options) {
+    const b = labelBox(options), ink = options.color || '#24392d', background = options.background || '#ffffff';
+    let svg = '<g class="atlas-label"><rect x="' + b.x + '" y="' + b.y + '" width="' + b.width + '" height="' + b.height + '" rx="4" fill="' + escape(background) + '"/>';
+    let baseline = b.y + b.padding;
+    for (const line of b.lines) {
+      baseline += line.size;
+      svg += '<text x="' + (b.x + b.padding) + '" y="' + baseline + '" font-family="' + escape(font) + '" font-size="' + line.size + '" font-weight="' + line.weight + '" fill="' + escape(ink) + '">' + escape(line.text) + '</text>';
+      baseline += 5;
+    }
+    if (options.ref != null) {
+      const rx = b.x + b.width - b.padding - b.referenceWidth + 10, ry = b.y + b.padding + b.lines[0].size;
+      svg += '<a href="#ref-' + escape(options.ref) + '" aria-label="参考文献' + escape(options.ref) + '"><text x="' + rx + '" y="' + ry + '" font-family="' + escape(font) + '" font-size="17" font-weight="650" fill="#27685d">[' + escape(options.ref) + ']</text></a>';
+    }
+    return svg + '</g>';
+  }
+  function callout(options) {
+    const b = labelBox(options), [px, py] = options.from;
+    const left = px < b.x + b.width / 2, edge = left ? b.x : b.x + b.width;
+    const ey = Math.max(b.y + 10, Math.min(b.y + b.height - 10, py));
+    const elbow = edge + (left ? -15 : 15);
+    return '<g class="atlas-callout"><circle cx="' + px + '" cy="' + py + '" r="2.6" fill="#9d8059"/><path d="M' + px + ' ' + py + 'L' + elbow + ' ' + ey + 'H' + edge + '" fill="none" stroke="#849583" stroke-width="1.2"/>' + label(options) + '</g>';
+  }
+  const timelines = new Set();
+  function createTimeline({duration = 18, initial = 0, render, onState = () => {}}) {
+    if (!Number.isFinite(duration) || duration <= 0 || typeof render !== 'function') throw new Error('A positive duration and render function are required');
+    let t = clamp(initial), playing = false, frameId = null, last = null, disposed = false;
+    const emit = () => {render(t); onState({t, playing, duration})};
+    function pause() {
+      playing = false; last = null;
+      if (frameId !== null) cancelAnimationFrame(frameId);
+      frameId = null; onState({t, playing, duration});
+    }
+    function tick(now) {
+      if (!playing || disposed) return;
+      const elapsed = last === null ? 0 : Math.min(0.1, (now - last) / 1000); last = now;
+      t = clamp(t + elapsed / duration);
+      if (t >= 1) {playing = false; frameId = null; last = null}
+      emit();
+      if (playing) frameId = requestAnimationFrame(tick);
+    }
+    const api = {
+      play() {
+        if (disposed || playing) return;
+        for (const other of timelines) if (other !== api) other.pause();
+        if (t >= 1) t = 0;
+        playing = true; last = null; emit(); frameId = requestAnimationFrame(tick);
+      },
+      pause,
+      seek(value) {
+        if (!Number.isFinite(value)) throw new Error('Timeline position must be finite');
+        pause(); t = clamp(value); emit();
+      },
+      reset() {api.seek(0)},
+      get state() {return {t, playing, duration}},
+      destroy() {pause(); disposed = true; timelines.delete(api)}
+    };
+    timelines.add(api); emit(); return api;
+  }
+  document.addEventListener('visibilitychange', () => {if (document.hidden) for (const clock of timelines) clock.pause()});
+  root.BioAtlas = Object.freeze({escape, clamp, mix, phase, labelBox, label, callout, createTimeline, pauseAll() {for (const clock of timelines) clock.pause()}});
+})(globalThis);
+
+const LESSON = {"id":"04-02","title":"特异性免疫","sub":"一个抗原，两条清除路线","hook":"抗体能处理中间藏在靶细胞里的目标吗？","tag":"体液与细胞免疫","chapter":4,"section":2,"chapterTitle":"免疫调节","version":"3.0","stem":"选择性必修1_04-02_特异性免疫_Cell图谱_v3.0","sources":[["人民教育出版社 · 选择性必修1《稳态与调节》","第4章第2节，确定教材范围","https://r3-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/ec6ab12c-0b06-43a5-bf62-ee90b619f607.pkg/pdf.pdf"],["OpenStax · B 淋巴细胞与抗体","B 淋巴细胞与抗体","https://openstax.org/books/anatomy-and-physiology-2e/pages/21-4-the-adaptive-immune-response-b-lymphocytes-and-antibodies"],["OpenStax · T Lymphocytes and Their Functional Types","辅助性和细胞毒性 T 细胞的作用","https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types"]],"figures":[{"id":"01","title":"B 细胞靠什么从识别进入分化？","ask":"在典型 T 依赖反应中，只有识别抗原是否足够？","layout":"reflex","nodes":[["antigen","胞外抗原"],["phago","抗原呈递细胞"],["lymphocyte","辅助性 T 细胞"],["lymphocyte","B 细胞"],["plasma","浆细胞"]],"edges":[[0,1],[1,2],[0,3],[2,3],[3,4]],"plot":"bar","y":"模型过程是否出现","axis":["识别抗原","获得T细胞帮助","浆细胞输出"],"bound":"针对教材典型 T 依赖模型，部分抗原能引起不同类型的 B 细胞应答。","take":"B 细胞可直接识别相应抗原；辅助性 T 细胞的接触信号与细胞因子促进 B 细胞增殖分化。","cases":[{"name":"信号齐备","raw":"1,1,1","series":[{"name":"","y":[1,1,1]}],"flow":[[{"edge":0,"block":false},{"edge":2,"block":false}],[{"edge":1,"block":false}],[{"edge":3,"block":false}],[{"edge":4,"block":false}]],"see":"两条路径汇合，B 细胞增殖分化为浆细胞与记忆 B 细胞。","infer":"浆细胞分泌抗体；记忆 B 细胞为再次应答保留反应潜力。"},{"name":"缺少 T 细胞帮助","raw":"1,0,0","series":[{"name":"","y":[1,0,0]}],"flow":[[{"edge":0,"block":false},{"edge":2,"block":false}],[{"edge":1,"block":false}],[{"edge":3,"block":true}]],"see":"B 细胞仍可接触抗原，但模型里的完整后续输出受阻。","infer":"识别和有效活化是不同环节。"}]},{"id":"02","title":"胞外抗原与受感染细胞，处理对象一样吗？","ask":"抗体中和与杀伤靶细胞，为什么需要两类效应器？","layout":"branch","nodes":[["antigen","胞外抗原"],["plasma","浆细胞与抗体"],["target","受感染靶细胞"],["lymphocyte","细胞毒性 T 细胞"]],"edges":[[1,0],[3,2],[2,0]],"plot":"bar","y":"机制是否对当前对象适用","axis":["抗体结合","细胞毒性T清除靶细胞"],"bound":"模型使用抽象抗原；不涉及病原传播或复制。","take":"细胞毒性 T 细胞识别有相应抗原信息的靶细胞并促其凋亡；抗体主要在细胞外作用。","cases":[{"name":"追踪游离抗原","raw":"1,0","series":[{"name":"","y":[1,0]}],"flow":[[{"edge":0,"block":false}]],"see":"抗体靠特异性结合中和或标记胞外抗原。","infer":"抗体不会追进完整细胞去结合其内部抗原。"},{"name":"追踪受感染细胞","raw":"0,1","series":[{"name":"","y":[0,1]}],"flow":[[{"edge":1,"block":false}],[{"edge":2,"block":false}]],"see":"细胞毒性 T 细胞接触靶细胞，靶细胞发生凋亡；图示把胞外抗原交给其他机制处理。","infer":"杀伤靶细胞不等于直接杀死胞内目标，两条路线可协同。"}]},{"id":"03","title":"第二次遇到同一抗原，为什么起得更快？","ask":"若换成不同抗原，还能沿用原来的记忆吗？","layout":"wide","nodes":[["antigen","抗原再暴露"],["lymphocyte","记忆 B 细胞"],["plasma","浆细胞"],["antibody","抗体"]],"edges":[[0,1],[1,2],[2,3]],"plot":"line","y":"针对本次抗原的抗体（相对量）","axis":["暴露","较早","上升","峰段","后期"],"bound":"曲线为比较模型，起始残余抗体和量级取决于个体及时间。","take":"同一抗原的再次暴露常见更快、更强的特异性应答；新抗原不继承旧特异性的记忆。","cases":[{"name":"同一抗原再次出现","raw":"0.08,0.42,0.91,1.0,0.72","series":[{"name":"","y":[0.08,0.42,0.91,1,0.72]}],"flow":[[{"edge":0,"block":false}],[{"edge":1,"block":false}],[{"edge":2,"block":false}]],"see":"原记忆细胞可快速分化，浆细胞输出增加。","infer":"记忆 B 细胞要分化为浆细胞后才大量输出抗体。"},{"name":"换成不交叉反应的新抗原","raw":"0,0.04,0.24,0.43,0.27","series":[{"name":"","y":[0,0.04,0.24,0.43,0.27]}],"flow":[[{"edge":0,"block":false}],[{"edge":1,"block":false}],[{"edge":2,"block":false}]],"see":"旧记忆识别不匹配；画面改为新抗原激活有相应特异性的初始 B 细胞，初次应答较慢建立。","infer":"有过一次免疫反应，不代表对任何新抗原都能二次应答。"}]}]};
+const W=640,H=346, palette=['#3c5488','#b74131','#007968','#76519b','#9a542f'];
+const tones={blue:['#e6f2fc','#205f91','#80b5d3'],green:['#e3f1e3','#326f53','#83b49a'],red:['#f8e7de','#a84336','#de9f8f'],purple:['#eee8f7','#6a4f93','#b69bcc'],gold:['#f9efdb','#926025','#d6ad64']};
+const tone={vessel:'red',rbc:'red',heart:'red',brain:'purple',brainstem:'purple',cord:'purple',synapse:'purple',neuron:'purple',dendrite:'purple',axon:'blue',nerve:'blue',terminal:'blue',electrode:'blue',solute:'blue',interstitial:'blue',lymph:'green',renal:'red',bladder:'blue',gut:'gold',pancreas:'gold',thyroid:'red',hepatic:'red',lung:'red',gland:'gold',islet:'purple',skin:'gold',muscle:'red',plant:'green',shoot:'green',root:'gold',seed:'gold',callus:'green',leaf:'green',fruit:'red',flower:'purple',cold:'blue',light:'gold',thymus:'purple',marrow:'red',node:'green',lymphocyte:'blue',mast:'red',plasma:'purple',phago:'green',antigen:'red',antibody:'blue',target:'red',shield:'green',barrier:'gold',stim:'gold',drop:'blue',fat:'gold'};
+const path=(d,fill='none',stroke='none',sw=1,attrs='')=>'<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+sw+'" stroke-linecap="round" stroke-linejoin="round" '+attrs+'/>';
+const ell=(cx,cy,rx,ry,fill,stroke='none',sw=1)=>'<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="'+ry+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+sw+'"/>';
+const circ=(x,y,r,f,s='none',sw=1)=>ell(x,y,r,r,f,s,sw);
+const rect=(x,y,w,h,fill,stroke='none',r=5)=>'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="'+fill+'" stroke="'+stroke+'"/>';
+const range=n=>Array.from({length:n},(_,i)=>i);
+const lin=(a,b,t)=>a+(b-a)*t;
+const clamp=n=>Math.max(0,Math.min(1,n));
+const fmt=n=>String(Math.round(n*100)/100).replace('-', '−');
+const speck=(n,x,y,rx,ry,color,r=2)=>range(n).map(i=>circ(x+rx*Math.cos(i*2.4)*Math.sqrt((i+.4)/n),y+ry*Math.sin(i*2.4)*Math.sqrt((i+.4)/n),r+(i%3)*.25,color)).join('');
+const commonCell='M-41 0C-44-22-23-36 4-34C29-35 44-21 44 0C47 21 26 35 2 36C-23 36-44 22-41 0Z';
+const rbc='M-17 0C-18-12 15-12 17-1C19 11-14 13-17 0Z';
+const brain='M-39 6C-49-3-42-15-34-19C-32-31-18-37-8-33C2-40 16-36 23-30C36-29 45-20 43-8C49 2 43 16 32 20C22 30 8 27-2 21C-13 25-23 24-29 15C-36 15-40 11-39 6Z';
+function glyph(k,amt,opt={}){
+  const [f,s,m]=tones[tone[k]||'green']; const q=clamp(amt), b=opt.block, col=opt.color||s;
+  const mot=opt.motion||0, wig=Math.sin(12*mot)*q;
+  const P=(d,F=f,S=s,w=2)=>path(d,F,S,w);
+  const L=(d,S=s,w=2)=>path(d,'none',S,w);
+  const E=(x,y,rx,ry,F=f,S=s,w=2)=>ell(x,y,rx,ry,F,S,w);
+  const rr=(a,x,y)=>'<g transform="translate('+x+' '+y+')">'+a+'</g>';
+  switch(k){
+    case 'brain': case 'brainstem':return P(brain)+L('M-33-13q10-8 17 4m-5-19q12 4 10 15m5-13q12 0 13 11m8-13q13 4 10 15m-49 4q11-5 14 8m4-13q-3 15 9 15m-34 1q13 0 18 10m23-18q11 1 13 10m-8 0q8-2 12 5',m,2.6)+P('M4 18q13-6 22-4c10 6 9 16-2 17l-6-1 3 12-9 2-3-15Z',k==='brainstem'&&q>.15?m:'#e9d9d2',s,1.5);
+    case 'cord':return E(0,0,40,30,'#fbf0e8',s)+P('M0 3C-6-6-13-14-19-18Q-24-21-19-10L-11 1Q-19 5-24 14Q-22 23-12 20L0 12 12 20Q22 23 24 14Q19 5 11 1L19-10Q24-21 19-18C13-14 6-6 0 3Z',m,s,1)+circ(0,4,3,'#fff',s);
+    case 'neuron':case 'dendrite':return L('M-20 2L-39-18m13 15-17 2m16 9-19 11m12-27-7-15m15 36-8 15m7-42 8-13m3 15 16-15m-2 16 17-9',s,2.8)+P('M-28 0-10-13-7-27 3-14 16-14 21-1 40 4 21 9 12 18-1 15-11 27-16 13Z')+E(1,1,9,10,m,s,1)+circ(2,0,3,s);
+    case 'axon': case 'nerve':return L('M-45 0C-15-8 20 10 44 0',s,4)+[-32,-11,11,32].map((x,i)=>'<g transform="rotate('+(i%2?6:-5)+' '+x+' 0)">'+rect(x-9,-10,18,20,i%2?m:f,s,7)+'</g>').join('')+L('M-43 5C-14-3 18 14 43 4',m,1.2);
+    case 'terminal': case 'synapse':return P('M-43-9H-20C-14-9-11-25 6-27 23-30 36-14 34 1 33 22 14 32-3 24-15 20-15 9-23 8H-43Z')+speck(9,7,-1,21,20,m,3)+L('M43-32q-13 32 0 64',s,3)+[-14,1,16].map((y,i)=>circ(34+2*i,y,2.3+(q>.1?.7:0),col)).join('');
+    case 'vessel': case 'lymph':{
+      const cells=range(5).map(i=>P('M'+(-43+i*18)+' -19q9-7 17 0l-1 6h-15Z',m,s,0.8)+P('M'+(-43+i*18)+' 19q9 7 17 0l-1-6h-15Z',m,s,0.8)).join('');
+      const cargo=k==='lymph'?L('M-9-13L4 0-9 13M14-13L27 0 14 13',s,1.7)+speck(5,-4,0,32,8,m):[-26,0,27].map((x,i)=>rr(P(rbc,m,s,1)+E(0,0,8,3,f,m,1),x+i%2*wig*2,i%2?-3:4)).join('');
+      return rect(-44,-20,88,40,f,s,14)+cells+cargo;
+    }
+    case 'rbc':return '<g transform="scale(1.9)">'+P(rbc,m,s,1.4)+E(0,0,9,3.5,f,m,1)+'</g>';
+    case 'interstitial':return P('M-43 9Q-24-29 9-22T44 15Q31 34-2 28T-43 9Z','#e4f4f7','#78a9ba',1.5)+speck(13,0,1,37,23,'#5796b2');
+    case 'cell':case 'target':case 'lymphocyte':case 'plasma':case 'mast':case 'phago':{
+      const body=k==='phago'?'M-42 1Q-55-12-39-14L-42-25Q-30-24-26-19-21-32-10-32L-3-40Q9-47 12-31 26-40 31-30L33-19Q54-23 49-11L41-1Q58 8 43 16L35 17Q42 35 27 33L16 26Q0 44-11 33L-19 28Q-39 43-39 28L-33 20Q-52 16-42 1Z':commonCell;
+      const shrink=k==='cell'&&opt.shrink?1-q*.2:1;
+      const nx=k==='plasma'?-20:k==='lymphocyte'?0:-9, nr=k==='lymphocyte'?24:k==='plasma'?13:16;
+      let inner=E(nx,1,nr,nr*.94,m,s,1.5)+speck(6,nx,1,nr*.75,nr*.7,s,1.4);
+      if(k==='plasma')inner+=range(6).map(i=>L('M-4 '+(-19+i*7)+'q13-8 28-1q10 4 13-2',m,3)+speck(5,16,-22+i*7,20,2,s,1)).join('');
+      if(k==='mast')inner+=speck(20,13,1,25,27,'#ba5045',2.6)+[-22,0,21].map(x=>rr(L('M0 0v-9l-5-5m5 5 5-5',s,2),x,-30)).join('');
+      if(k==='target')inner+=speck(8,18,0,21,22,s,2.3)+(q>.15?L('M32-22l-8 14 11 8-10 14 3 10',s,3):'');
+      if(k==='phago')inner+=E(22,4,13,10,'#fff',s,1.5)+speck(4,22,4,8,6,m,2.7);
+      if(k==='lymphocyte')inner+=[-26,0,25].map(x=>rr(L('M0 2v-9l-5-4m5 4 5-4',s,1.7),x,x?-27:-34)).join('');
+      return '<g transform="scale('+shrink+')">'+P(body)+inner+'</g>';
+    }
+    case 'membrane':case 'barrier':case 'skin':return range(7).map(i=>{
+      const x=-40+i*13,y=Math.cos(i)*3;
+      return P('M'+x+' '+(-21+y)+'q7-7 12 0v34q-5 9-12 2Z',i%2?f:m,s,1)+ell(x+6,y-1,2.8,5,s);
+    }).join('')+L('M-46 23q27 6 90-1',s,1.8);
+    case 'channel':return P('M-34-27Q-17-36-7-25L-10-10-5 4-11 25Q-25 37-35 21L-29 1Z')+P('M34-27Q17-36 7-25L10-10 5 4 11 25Q25 37 35 21L29 1Z')+L('M0-24v'+(b?19:48),m,4)+(b?L('M-7 2h14',s,4):circ(0,-19+38*q,4,m,s));
+    case 'antibody':return [-23,0,24].map((x,i)=>rr('<g transform="rotate('+[-23,0,22][i]+')">'+L('M0 16V-3L-12-19M0-3l12-16',s,4.5)+L('M-12-19l-4-5m28 5 4-5',m,4)+'</g>',x,i%2?-6:6)).join('');
+    case 'antigen':return '<g transform="rotate('+q*20+')">'+P('M-30-12-16-28 11-31 31-14 34 9 16 28-8 32-29 17Z')+P('M-30-12-6-12 11-31 16-2 34 9 9 13 16 28-8 32-9 10-29 17-6-12Z',m,s,1)+range(8).map(i=>'<g transform="rotate('+i*45+')">'+L('M0-29v-8',s,2)+circ(0,-38,3.1,s)+'</g>').join('')+'</g>';
+    case 'heart':return '<g transform="scale('+(1+.11*wig)+')">'+P('M-32-8C-31-31-12-34-1-19 9-34 35-31 39-10 45 10 14 35 0 42-18 31-39 11-32-8Z')+L('M-11-25v-11m12 16 9-16h12M-26 7H-14L-8-4-1 16 7 1H26',s,2.5)+'</g>';
+    case 'bladder':return P('M-13 32v13h23V31q30-11 29-36c-1-27-73-34-78-2-3 18 9 31 26 39Z')+P('M-31 '+(-5+q*20)+'q29 6 62 0-4 27-31 27-24-1-31-27Z',m,'none')+L('M-15 32h29m-24 8h20M-37-8l-8-15M37-8l8-15',s,2);
+    case 'lung':return P('M-6-17Q-19-28-32-3T-33 30Q-12 40-7 19ZM6-17Q20-28 32-3T33 30Q12 40 7 19Z')+L('M0-39v23m0 0-22 18m22-18 22 18m-22-1-4 13m25-13 6 13',s,3);
+    case 'gut':return P('M-11-35q-12 19-1 25 7 7 14-10 9-17 27-5 13 10 9 26-2 19-26 20-12 0-18 11-11 14-27 7 13-8 14-22-13-6-10-26 1-14 8-27Z')+L('M-15 12q21 12 35-1M2-18q18-9 25 3',m,3);
+    case 'renal':return P('M13-37Q-8-45-28-25-47-6-34 19-22 41-1 34 16 30 14 12 11 5 5 1q-2-6 7-8 16-6 14-18-1-7-13-12Z')+L('M35-9H20L6 1m29 6H17L6 1m13 1q-6 19 5 41M-26-22l11 10m-15 2 13 6m-10 18 13-7',s,2.8);
+    case 'thyroid':return '<g transform="scale('+(1+(opt.goitre?.29*q:0))+')">'+rect(-8,-34,16,63,'#ecf1f4','#6f8791',4)+L('M-8-20H8M-8-8H8M-8 4H8M-8 16H8',m,1)+P('M-6-2C-16-28-33-36-37-17-42 4-32 32-16 29-10 27-7 18 0 12 7 18 10 27 16 29 32 32 42 4 37-17 33-36 16-28 6-2Z')+speck(10,0,0,34,20,m)+'</g>';
+    case 'hepatic':return P('M-43-5Q-41-32-14-36-2-36 15-24L43-19 41-4 9 17-4 25-28 28-39 19Z')+L('M6-29Q-3-4-12 21M-6-6l-18-6M-3 2l22-6',s,2.5)+speck(12,-16,-2,17,20,m);
+    case 'pancreas':return P('M-45 6q7-22 28-24l19 4 21-8 22 2-8 12-18 4-6 11-22 2-15 11q-19 6-21-14Z')+L('M-39 12-22 3 2-4 26-10 39-15',s,2.8)+speck(11,-4,-1,37,10,m);
+    case 'gland':case 'islet':case 'thymus':case 'node':case 'marrow':case 'fat':{
+      const shape=k==='node'?'M-34-20Q-5-43 25-25 43-12 27 2 19 8 33 18 22 35-9 30-40 23-34-20Z':k==='thymus'?'M0-26C-34-45-46-6-23 25-12 43-2 27 0 18 3 27 16 41 25 22 46-8 32-45 0-26Z':k==='marrow'?'M-28-29Q-45-34-42-13l9 9-2 11q-16 12-8 24 9 10 21-2l8-5h29l7 5q12 12 21 2 8-12-8-24L33-4l9-9q3-21-14-16L13-20h-26Z':commonCell;
+      return P(shape)+range(k==='fat'?7:12).map(i=>{const x=(i%4)*17-25,y=Math.floor(i/4)*16-15+(i%2)*3;return E(x,y,k==='fat'?9:7,7,i%3?m:'#fff',s,.8)}).join('')+L('M-43 8Q-18-1 4 8T43 3',s,1.7);
+    }
+    case 'muscle':return range(5).map(i=>{const y=-23+i*10,shrink=1-.13*q+.028*wig;return '<g transform="scale('+shrink+' 1)">'+P('M-46 '+y+'q13-7 45-6t47 6q-13 8-47 6t-45-6Z',i%2?m:f,s,.9)+L('M-18 '+y+'h37',s,.8)+'</g>'}).join('');
+    case 'hand':return '<g transform="rotate('+wig*12+')">'+P('M-16 39C-17 24-28 12-36 4q-6-9 0-13 6-3 16 10L-22-25q0-11 8-8l7 26-1-32q4-9 10-4l6 33 4-27q5-7 10-1l1 31 5-13q9-5 9 5l-5 32q-3 10-15 19v5Z')+L('M-16 16q14 8 34-1m-28-9q10 4 10 14',m,2)+'</g>';
+    case 'seed':return P('M-37 6Q-27-29-1-26 33-27 36-6 37 18 7 26-22 28-37 6Z')+P('M-15 12Q-8-8 12-9 26-5 25 3 15 10 0 14Z',m,s,1.5)+(q>.2?L('M8 13Q6 23 '+(6-21*q)+' '+(23+16*q),'#487c45',3):'');
+    case 'shoot':case 'plant':case 'root':case 'flower':case 'leaf':{
+      const bend=opt.bend||0, height=19+21*q, x=bend*q*29;
+      const stem=L('M0 30Q0 1 '+x+' '+(-height),s,k==='shoot'?6:4);
+      const leaf=P('M0 0Q8-22 28-18 27 0 0 0Z',m,s,1.5)+L('M0 0l23-14',s,1);
+      const root=range(opt.roots??5).map((i)=>L('M0 12Q'+(i-2)*7+' 21 '+(i-2)*12+' '+(24+(i%3)*6+8*q),s,i%3===0?2.7:1.6)).join('');
+      if(k==='root')return P('M-2-38Q3-26 0 12',m,s,4)+root;
+      if(k==='leaf')return P('M-36 23Q-38-27 40-32 47 14-36 23Z',m,s,2)+L('M-42 27 30-23M-15 8l-1-18m14 10 20 4m-5-16 2-11',s,2)+E(5,-4,8,14,f,s,1.4)+E(5,-4,4*(1-.85*q),10,'#26463a');
+      if(k==='flower')return stem+range(5).map(i=>'<g transform="translate('+x+' '+(-height+5)+') rotate('+i*72+')">'+E(0,-10,7,12,m,s,1.5)+'</g>').join('')+circ(x,-height+5,5,'#f2bf54',s,1);
+      return stem+(k==='plant'?rr(leaf,1,3)+'<g transform="translate(0 9) scale(-1 1)">'+leaf+'</g>'+root:'')+rr(leaf,x,-height+9);
+    }
+    case 'fruit':return P('M0-24Q-15-39-29-24-47-8-34 17-21 41 0 33 23 40 35 18 49-4 30-23 17-37 0-24Z',q>.15?'#eda78a':'#e6e8bc',s,2)+L('M0-24q-5-12 4-19m-5 19q9-20 26-16-7 15-25 16',q>.15?'#396449':s,2.8);
+    case 'callus':return P('M-38 8q-8-15 6-23 1-16 20-15 14-13 25-1 20-4 22 15 17 12 8 25-6 22-28 18-16 15-30 1-19 4-23-20Z')+speck(20,0,0,35,24,m,3);
+    case 'beaker':return P('M-31-34H31l-7 61q0 7-9 7h-30q-9 0-9-7Z','#ffffff',s,2)+P('M-26-8q26 6 52 0l-3 34q0 4-7 4h-32q-7 0-7-4Z',opt.color||m,'none')+L('M14-14h11m-10 11h8m-9 11h8m-9 10h8',s,1.6);
+    case 'drop':return P('M0-37C-3-22-28-4-27 13-24 37 23 39 27 13 28-4 3-22 0-37Z',m,s,2)+L('M-16 4q-6 14 6 20','#fff',2.5);
+    case 'strip':return P('M-42-18h84v36h-84Z','#fbfbf5',s,2)+rect(-33,-11,19,22,m,s,2)+rect(0,-8,7,16,q>.15?col:'#d8e3df','none',1)+rect(18,-8,7,16,q>.15?col:'#d8e3df','none',1);
+    case 'electrode':return L('M-33-27h32v28',s,3)+P('M-7-2H7L0 19Z',m,s,1.4)+L('M-29 25q16-8 29 0t29 0',m,2)+E(-33,-27,5,5,m,s,1);
+    case 'light':return E(-17,0,15,15,m,s,2)+range(6).map(i=>L('M4 '+(-22+i*9)+'l35 '+(-12+5*i),opt.color||s,2.4)).join('');
+    case 'cold':return range(6).map(i=>'<g transform="rotate('+i*60+')">'+L('M0 0v-34m0 12-8-7m8 7 8-7',s,2.5)+'</g>').join('');
+    case 'gravity':return L('M-16-28v55m0 0-10-13m10 13 10-13M12-28v55m0 0-10-13m10 13 10-13',s,4);
+    case 'stim':return P('M7-39-23 4H-3L-12 39 25-10H4Z',m,s,2.2);
+    case 'shield':return P('M0-38C15-29 25-28 38-28 36 3 30 22 0 38-30 22-36 3-38-28-25-28-15-29 0-38Z')+L('M-14 0-4 10 15-12',s,4);
+    case 'solute':return speck(14+Math.round(7*q),0,0,39,32,m,4)+E(-7,-5,8,8,f,s,1.5)+E(13,5,7,7,f,s,1.5);
+    case 'organ':return P('M-40-8C-41-26-14-37 0-22 21-32 39-17 38 3 39 26 14 38 0 28-24 41-42 20-40-8Z')+L('M-26-9Q0-3 4 27M0-3Q10-19 26-8M-5 4l-17 10m26 3 17-6',s,3);
+    default:throw new Error('Unknown structure '+k);
+  }
+}
+
+const $=s=>document.querySelector(s), esc=BioAtlas.escape;
+const chapters=['#006652','#364d85','#76501b','#72538b','#386641'];
+document.documentElement.style.setProperty('--accent',chapters[LESSON.chapter-1]);
+$('#title').textContent=LESSON.title;
+$('#subtitle').textContent=LESSON.sub;
+$('#volume').textContent='选择性必修 1 · 稳态与调节 / 第 '+LESSON.chapter+' 章 · 第 '+LESSON.section+' 节 / v'+LESSON.version;
+$('#hook').textContent=LESSON.hook;
+$('#toc').innerHTML=LESSON.figures.map((f,i)=>'<a href="#figure'+(i+1)+'"><b>FIG '+f.id+'</b>'+esc(f.title)+'</a>').join('');
+$('#citations').innerHTML=LESSON.sources.map(([s,w,u],i)=>'<li id="ref-'+(i+1)+'"><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(s)+' ↗</a> · '+esc(w)+'</li>').join('');
+$('#notes').innerHTML=LESSON.figures.map((f,i)=>'<article><h3>'+esc(f.title)+'</h3><p>'+esc(f.take)+'</p><a href="#figure'+(i+1)+'">返回图 '+(i+1)+'</a></article>').join('');
+$('#review').onclick=()=>$('#drawer').showModal();
+$('#notes').addEventListener('click',e=>{if(e.target.closest('a'))$('#drawer').close()});
+const chartTheme=$('#theme');
+chartTheme.onclick=()=>{
+  const bw=document.documentElement.dataset.theme!=='bw';
+  document.documentElement.dataset.theme=bw?'bw':'gray'; chartTheme.setAttribute('aria-pressed',bw);
+  chartTheme.querySelector('code').textContent=bw?'bw':'gray';
+  panels.forEach(x=>x.refresh());
+};
+function txt(x,y,s,size=16,color='#223b33',extra=''){
+  return '<text x="'+x+'" y="'+y+'" font-family="Microsoft YaHei, Arial, sans-serif" font-size="'+size+'" fill="'+color+'" '+extra+'>'+esc(s)+'</text>';
+}
+function badge(x,y,s,size=15,color='#18382d',bg='#ffffff'){
+  const options={x,y,title:s,lines:[{text:s,size,weight:690}],padding:6,color,background:bg,bounds:{width:W,height:H,margin:8}};
+  return BioAtlas.label(options).replace('<rect ','<rect stroke="#c6d5c9" stroke-width="1" ');
+}
+function place(f){
+  const n=f.nodes.length;
+  if(f.layout==='exchange')return [[131,103],[324,166],[524,143],[322,251]];
+  if(f.layout==='reflex')return [[85,155],[204,155],[321,125],[421,223],[550,142]];
+  if(f.layout==='loop')return n===3?[[110,130],[323,130],[529,130]]:[[104,129],[314,90],[527,131],[315,243]];
+  if(f.layout==='branch')return n===3?[[115,155],[489,96],[490,234]]:n===4?[[91,161],[322,89],[528,103],[481,239]]:[[84,151],[263,147],[498,85],[500,177],[500,265]];
+  return Array.from({length:n},(_,i)=>[88+i*464/(n-1),155]);
+}
+function bezier(aa,bb,offset=0) {
+  const dx=bb[0]-aa[0],dy=bb[1]-aa[1],d=Math.hypot(dx,dy)||1;
+  const cut=Math.min(48,d*.34), ux=dx/d,uy=dy/d;
+  const a=[aa[0]+ux*cut,aa[1]+uy*cut],b=[bb[0]-ux*cut,bb[1]-uy*cut];
+  const c=[(a[0]+b[0])/2-uy*offset,(a[1]+b[1])/2+ux*offset];
+  return {a,b,c,d:'M'+a.join(' ')+'Q'+c.join(' ')+' '+b.join(' '),point:t=>[(1-t)**2*a[0]+2*(1-t)*t*c[0]+t*t*b[0],(1-t)**2*a[1]+2*(1-t)*t*c[1]+t*t*b[1]]};
+}
+function labState(f,c,t){
+  const steps=c.flow.length, end=clamp(t)*steps, step=Math.min(steps-1,Math.floor(end));
+  const progress=t>=1?1:end-step;
+  return {step,progress,done:t>=1,active:new Map(c.flow.flatMap((g,i)=>i<=step?g.map(v=>[v.edge,{...v,i}]):[]))};
+}
+function valueAt(series,t){
+  const p=clamp(t)*(series.length-1), i=Math.floor(p);
+  return lin(series[i],series[Math.min(i+1,series.length-1)],p-i);
+}
+function mechanismPlate(f,c,ci,t,id){
+  const end=badge(18,314,'分镜 '+Math.round(t*100)+'%',14)+txt(621,333,'原创机制示意',13,'#405a50','text-anchor="end"');
+  const head=badge(18,13,String(ci+1).padStart(2,'0')+' / '+c.name,14,'#24463d','#eff5ed');
+  const wrap=(art,labels)=>'<svg viewBox="0 0 640 346" role="img" aria-label="'+esc(f.title+'；'+c.name)+'">'+rect(0,0,640,346,'#fbfcf9','none',0)+art+labels+head+end+'</svg>';
+  const translated=(x,y,s,a)=>'<g transform="translate('+x+' '+y+') scale('+s+')">'+a+'</g>';
+  const arrow=(x,y,xx,yy,color,progress)=>{
+    const ang=Math.atan2(yy-y,xx-x), nx=Math.cos(ang), ny=Math.sin(ang);
+    return path('M'+x+' '+y+'L'+xx+' '+yy,'none',color,1.8)+path('M'+xx+' '+yy+'l'+(-7*nx+4*ny)+' '+(-7*ny-4*nx)+'m'+(7*nx-4*ny)+' '+(7*ny+4*nx)+'l'+(-7*nx-4*ny)+' '+(-7*ny+4*nx),'none',color,1.8)+
+      (progress===null?'':circ(lin(x,xx,progress),lin(y,yy,progress),4.4,color,'white',1.15));
+  };
+  const stream=(x,y,xx,yy,color,delay=0)=>{
+    const u=Math.max(0,t-delay), rate=clamp(u*1.5);
+    return arrow(x,y,xx,yy,color,u?((rate*2.3)%1):null);
+  };
+  if(id==='01-01-01'){
+    const excess=clamp((valueAt(c.series[0].y,t)-1)/1.05), floor=236+40*excess;
+    let a=rect(30,89,580,69,'#f9e8e2','#c98d80',13)+rect(30,155,580,floor-155,'#e5f3f6','#bed7df',0)+rect(30,floor,580,34,'#e0f1e2','#8ebda4',12);
+    for(let i=0;i<12;i++)a+=rect(32+i*48,143,42,13,'#e5a999','#ad5949',5)+ell(51+i*48,148,6,2,'#ab6557');
+    for(let i=0;i<7;i++){
+      const x=52+((i*83+110*t)%542);
+      a+=translated(x,118,.82,path(rbc,'#e88b7c','#a43d32',1.7)+ell(0,0,7.5,3,'#f6beb0'))+circ(53+((i*82+55*t)%538),132,3.5,'#3c5488');
+    }
+    a+=translated(339,195+12*excess,.73,glyph('cell',t))+translated(435,195+12*excess,.71,glyph('cell',t));
+    a+=stream(123,126,123,199,'#197b9e')+stream(175,133,175,210,'#197b9e',.12)+stream(269,177,304,192,'#197b9e',.25);
+    a+=stream(489,208,489,floor+10,ci?'#71968a':'#147758',.35);
+    a+=path('M483 '+(floor+4)+'l8 12 9-12m22 0 8 12 9-12','none','#4d9676',2.5);
+    if(ci){
+      a+=path('M554 '+(floor+7)+'l18 19m0-19-18 19','none','#ba4331',4)+speck(Math.round(excess*45),300,194+excess*14,245,26+excess*12,'#539db4');
+    }else{
+      a+=stream(534,floor+17,594,floor+17,'#137a59',.62);
+    }
+    return wrap(a,badge(38,55,'血浆 · 血管腔',15)+badge(40,165,'组织液',15)+badge(353,207+12*excess,'组织细胞',15)+badge(37,floor+3,'毛细淋巴管',15)+badge(489,54,'红细胞留在管内',14));
+  }
+  if(id==='02-03-01'){
+    const volt=valueAt(c.series[0].y,t), na=clamp(1-Math.abs(t-.385)/.225), k=clamp(1-Math.abs(t-.665)/.23), outside=ci===1?9:14;
+    let a=rect(30,55,580,115,'#e8f3f8','none',9)+rect(30,187,580,119,'#f5eee4','none',9);
+    for(let i=0;i<32;i++){
+      const x=36+i*18;
+      a+=path('M'+(x-2)+' 163v10m4-10v10m-4 10v-9m4 9v-9','none','#8baba9',1.05)+circ(x,161,3.1,'#9cbcb9')+circ(x,186,3.1,'#9cbcb9');
+    }
+    a+=speck(outside,104,125,59,32,'#459abe',3.8)+speck(5,105,257,54,21,'#459abe',3.3);
+    a+=speck(ci===2?8:4,529,125,61,24,'#ae7861',3.9)+speck(15,529,259,61,29,'#ae7861',4.1);
+    a+=translated(223,175,.63,glyph('channel',na,{block:na<.15,color:'#287898'}))+translated(337,175,.63,glyph('channel',k,{block:k<.17,color:'#b46349'}));
+    a+=translated(446,175,.68,path('M-26-18q8-16 23-10l9 9 14-4q19 18 4 29l-12 2-6 22q-15 13-25-1l-5-15-7-11Z','#e8daf2','#74559c',2.3)+path('M-15-3q20-16 30 1-5 8-20 12','none','#74559c',2.3));
+    if(na>.15)a+=arrow(223,111,223,229,'#207597',(t*5)%1);
+    if(k>.15)a+=arrow(337,230,337,111,'#a34b34',(t*5)%1);
+    if(t>.82)a+=arrow(437,218,437,130,'#207597',((t-.82)*6)%1)+arrow(462,130,462,218,'#a34b34',((t-.82)*6)%1);
+    return wrap(a,badge(43,61,'外液 · Na⁺ 较多',15)+badge(43,276,'内液 · K⁺ 较多',15)+badge(179,73,'Na⁺ 通道',15)+badge(307,73,'K⁺ 通道',15)+badge(406,205,'Na⁺/K⁺ 泵',15)+badge(230,276,'膜内相对膜外  '+fmt(volt)+' mV',15));
+  }
+  if(id==='05-01-01'){
+    const bend=ci===1?0:clamp((t-.22)/.78), growth=clamp(t), apexX=432-67*bend, apexY=135-28*growth;
+    const stem=(x,y,xx,yy,col,w)=>path('M'+x+' '+y+'C'+x+' 189 '+(xx+20)+' 164 '+xx+' '+yy,'none',col,w);
+    let a=rect(30,54,580,249,'#f3f7ed','#d4e0d1',12)+path('M84 265h486','none','#9caa90',2.1);
+    a+=translated(90,129,.83,glyph('light',0,{color:'#bd8135'}));
+    for(let i=0;i<4;i++)a+=arrow(136,112+i*13,237,112+i*13,'#b3833c',null);
+    a+=path('M254 265Q252 205 256 139','none','#759969',14)+path('M256 140q2-13 9-19','none','#537c53',6);
+    if(ci===1)a+=path('M245 152v-32q9-15 21-12 9 2 10 13v31','#495355','#202b31',2);
+    if(ci===2)a+=rect(243,166,25,62,'#4d5855','#26312e',5);
+    a+=stem(432,265,apexX,apexY,'#698e5e',19)+stem(432,265,apexX,apexY,'#a9c9a1',10);
+    for(let i=0;i<5;i++){
+      const y=177+i*15, xx=432-55*bend*(1-i/6)**2;
+      a+=path('M'+(xx-5)+' '+y+'l12 '+(bend*5-2),'none','#537d52',1.45);
+    }
+    a+=path('M'+apexX+' '+apexY+'q-3-13 9-16','none','#456d46',6);
+    if(bend>.18)a+=arrow(490,205,490,158,'#1c7460',growth)+arrow(352,200,352,178,'#927548',growth);
+    return wrap(a,badge(44,70,'单侧光',15)+badge(211,67,'起始处理',15)+badge(392,68,'生长后',15)+badge(216,273,ci===1?'遮尖端':ci===2?'只遮下方':'尖端见光',15)+badge(383,273,bend>.18?'朝光源弯曲':'观察伸长',15));
+  }
+  return null;
+}
+function backgroundArt(f,i,t,c,pts){
+  const id=LESSON.id+'-'+f.id;
+  const paper='#f7faf4',rule='#dbe5dc';
+  let art=rect(17,52,606,252,paper,rule,12);
+  art+=range(9).map(i=>path('M25 '+(63+i*26)+'H615','none','#edf1e9',1)).join('');
+  if(id==='02-03-02')art+=path('M166 177C210 202 387 125 557 177','none','#b7d3e8',9);
+  if(id==='02-04-01')art+=path('M255 71C313 124 277 178 394 225M275 71C330 126 306 180 418 221','none','#c8b6e0',4);
+  if(id==='04-03-01'){
+    art+=path('M349 198H604M349 212H604','none','#efcfc7',4);
+    if(i===1)art+=speck(Math.max(1,Math.round(28*t)),482,191,104,28,'#bc5b44',2.6);
+  }
+  if(id==='05-01-02')art+=path('M283 218q82 11 160 0','none','#d5e3cf',2);
+  if(id==='05-04-03')art+=range(6).map(j=>circ(196+(i?t*33:0)+(j%3)*6,96+(i?j%2*5:j*3),2.5,'#b18d44')).join('');
+  return art;
+}
+function makeScene(f,c,ci,t){
+  const phase=labState(f,c,t), pts=place(f), id=LESSON.id+'-'+f.id, mid='arr-'+f.id;
+  const special=mechanismPlate(f,c,ci,t,id);
+  if(special)return special;
+  const first=phase.progress, currently=c.flow[phase.step];
+  const modeCaption='0'+(ci+1)+'  /  '+c.name;
+  let back=backgroundArt(f,ci,t,c,pts), wires='', objs='', label='', movers='';
+  f.edges.forEach((edge,j)=>{
+    const [a,b]=edge;
+    const backwards=f.edges.some(([m,n])=>m===b&&n===a);
+    const offset=f.layout==='loop'&&b<a?-(61+(a-b)*19):backwards?-21:Math.abs(a-b)>1&&f.layout==='wide'?-66:0;
+    const feedback=id==='03-02-02'&&j>=2;
+    const curve=feedback?{b:[pts[b][0]+35,pts[b][1]+27],c:[pts[b][0]+45,235],
+      d:'M'+(pts[a][0]-19)+' '+(pts[a][1]+34)+' C'+(pts[a][0]-44)+' '+(j===2?260:223)+' '+(pts[b][0]+45)+' '+(j===2?260:223)+' '+(pts[b][0]+35)+' '+(pts[b][1]+27)}:bezier(pts[a],pts[b],offset);
+    const v=phase.active.get(j);
+    const active=v&&v.i===phase.step, p=active?first:v?1:0, blocked=v?.block;
+    const inhibitory=feedback||(id==='02-01-03'&&blocked);
+    if(feedback){
+      const strength=ci===1?1:ci===2?3.2:2;
+      const color=ci===1?'#98645c':'#a84134', [xx,yy]=curve.b;
+      const a=Math.atan2(yy-curve.c[1],xx-curve.c[0]), sx=Math.sin(a)*6, sy=Math.cos(a)*6;
+      wires+=path(curve.d,'none',color,strength,ci===1?'stroke-dasharray="5 4"':'')+path('M'+(xx-sx)+' '+(yy+sy)+'L'+(xx+sx)+' '+(yy-sy),'none',color,2.5);
+      return;
+    }
+    const ink=blocked?'#b23e30':active?'#007967':v?'#577f77':'#9aacaa';
+    wires+=path(curve.d,'none',ink,active?2.75:1.55,(blocked||!v?'stroke-dasharray="5 5" ':'')+(!blocked?'marker-end="url(#'+mid+(v?'a':'b')+')"':''));
+    if(id==='03-02-02'){const [x,y]=curve.point(.5);movers+=circ(x,y-17,10,'#e9f5ed','#91b6a4')+txt(x,y-13,'+',15,'#006652','text-anchor="middle" font-weight="700"')}
+    if(active&&!blocked){
+      for(let k=0;k<4;k++){
+        const pp=p*1.25-k*.12;
+        if(pp>=0&&pp<=1){const [x,y]=curve.point(pp);movers+=circ(x,y,k?3.0:5.2,k?'#4dbbd5':'#007967','#fff',1.3)}
+      }
+    }
+    if(blocked){
+      const [x,y]=curve.point(.55);
+      movers+=circ(x,y,10,'#fff2e9','#c65a47',1.5)+path(inhibitory?'M'+(x-4)+' '+y+'h8':'M'+(x-3)+' '+(y-3)+'l6 6m0-6-6 6','none','#a63225',2);
+      if(active&&first<.72){const [xx,yy]=curve.point(Math.min(.49,first*.85));movers+=circ(xx,yy,4.2,'#ba5742','#fff',1)}
+    }
+  });
+  f.nodes.forEach(([k,n],i)=>{
+    if(id==='04-02-03'&&ci===1&&i===1)n='初始 B 细胞';
+    const [x,y]=pts[i];
+    const hit=currently.find(e=>f.edges[e.edge][1]===i), blocked=hit?.block;
+    const was=[...phase.active.values()].some(e=>e.i<phase.step&&f.edges[e.edge][1]===i&&!e.block);
+    let amount=hit&&!blocked?clamp(first*1.55):was?.7:0;
+    const aux={
+      block:blocked,motion:t,shrink:id==='01-01-03'&&ci===1,
+      goitre:id==='03-02-02'&&ci===1,
+      bend:id==='05-01-01'?(i===3&&ci!==1?1:0):id==='05-01-02'&&ci===1&&i===3?-1:id==='05-04-03'&&ci===1&&i===3?-1:0
+    };
+    if(aux.shrink&&k==='cell')amount=t;
+    if(aux.goitre&&k==='thyroid')amount=t;
+    if(id==='02-04-02'&&k==='bladder'&&i===4)amount=ci===2?0:clamp((t-.5)*2);
+    if(id==='05-03-02'&&k==='root')aux.roots=Math.floor(t*Math.max(...c.series[0].y));
+    if(id==='05-04-01'&&k==='light')aux.color=ci===1?'#762f8f':'#c3453e';
+    if(id==='05-04-03'&&i===2&&ci===1){aux.roots=4;amount=t}
+    if(id==='01-02-02'&&k==='beaker'){const delta=valueAt(c.series[i-1].y,t)-7;aux.color=delta<-.6?'#e79a7d':delta>.6?'#85a8dd':'#b6ce93'}
+    const highlight=hit&&!blocked&&first>.30;
+    const scale=f.layout==='branch'&&f.nodes.length===5&&i>=2?.82:.91;
+    objs+='<g transform="translate('+x+' '+y+')">'+(highlight?ell(0,0,49,44,'#e2f1df','#a4c1a8',1):'')+'<g transform="scale('+scale+')">'+glyph(k,amount,aux)+'</g></g>';
+    const opt={title:n,lines:[{text:n,size:15,weight:680}],padding:6};
+    const box=BioAtlas.labelBox(opt);
+    const labelY=f.layout==='branch'&&f.nodes.length===5&&i>=2?y+30:y+43;
+    label+=badge(x-box.width/2,labelY,n);
+  });
+  const defs='<defs>'+['a','b'].map((s,i)=>'<marker id="'+mid+s+'" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">'+path('M0 0L10 5L0 10Z',i?'#9aacaa':'#007967')+'</marker>').join('')+'</defs>';
+  const stage='步骤 '+(phase.step+1)+' / '+c.flow.length+(phase.done?' · 已到观察终点':'');
+  const sceneFoot=id==='03-02-02'?badge(305,313,'− 抑制 · 图示大小不等于分泌量',14):txt(619,333,'原创机制示意',13,'#405a50','text-anchor="end"');
+  return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(f.title+'；'+c.name)+'">'+defs+rect(0,0,W,H,'#fbfcf9','none',0)+
+    back+wires+objs+movers+label+badge(19,13,modeCaption,14,'#24463d','#eff5ed')+
+    badge(19,313,stage,14)+sceneFoot+'</svg>';
+}
+function drawChart(f,c,ci,t){
+  const bw=document.documentElement.dataset.theme==='bw', width=500,height=346, x0=56,x1=472,y0=67,y1=242;
+  const bar=f.plot==='bar', profile=f.plot==='profile',n=f.axis.length;
+  const combined=f.cases.flatMap(z=>z.series.flatMap(s=>s.y.flatMap((v,i)=>s.sd?[v-s.sd[i],v+s.sd[i]]:[v])));
+  const lo=Math.min(...combined,bar?0:Infinity),hi=Math.max(...combined,bar?0:-Infinity);
+  const rawRange=(hi-lo)||1;
+  const rough=rawRange/4,power=10**Math.floor(Math.log10(rough)),nice=[1,2,2.5,5,10].find(q=>q>=rough/power)*power;
+  const actionPotential=LESSON.id==='02-03'&&f.id==='01',step=actionPotential?20:nice;
+  const min=bar&&lo>=0?0:Math.floor((lo-.035*rawRange)/step)*step, max=Math.ceil((hi+.06*rawRange)/step)*step;
+  const x=i=>bar?x0+(x1-x0)*(i+.5)/n:x0+15+(x1-x0-30)*i/Math.max(n-1,1);
+  const y=v=>y1-(y1-y0)*(v-min)/(max-min);
+  const axis='#3d4b45', bg=bw?'#ffffff':'#ebebeb',grid=bw?'#dddddd':'#ffffff',minor=bw?'#eeeeee':'#ffffff';
+  let svg=rect(0,0,width,height,'white','none',0);
+  svg+=rect(x0,y0,x1-x0,y1-y0,bg,bw?'#424242':'none',0)+rect(x0,36,x1-x0,27,'#d9d9d9',bw?'#424242':'none',0);
+  svg+=txt((x0+x1)/2,55,f.y,15,'#242b28','text-anchor="middle" font-weight="700"');
+  for(let j=0;j<=Math.round((max-min)/step)*2;j++){
+    const v=min+j*step/2, yy=y(v);svg+=path('M'+x0+' '+yy+'H'+x1,'none',j%2?minor:grid,j%2?.75:1.5);
+    if(j%2===0)svg+=txt(x0-7,yy+4,fmt(v),13,axis,'text-anchor="end"');
+  }
+  f.axis.forEach((a,i)=>{
+    svg+=path('M'+x(i)+' '+y0+'V'+y1,'none',grid,1.4);
+    if(i<n-1)svg+=path('M'+((x(i)+x(i+1))/2)+' '+y0+'V'+y1,'none',minor,.75);
+    if(a.length>5&&n>=4){const cut=Math.ceil(a.length/2);svg+=txt(x(i),y1+17,a.slice(0,cut),13,axis,'text-anchor="middle"')+txt(x(i),y1+31,a.slice(cut),13,axis,'text-anchor="middle"')}
+    else svg+=txt(x(i),y1+22,a,n===5?13:14,axis,'text-anchor="middle"');
+  });
+  if(min<0&&max>0)svg+=path('M'+x0+' '+y(0)+'H'+x1,'none','#89968b',1.1);
+  const base=ci===0&&f.cases.length>1?f.cases[1]:f.cases[0];
+  const series=(s,j,reference=false)=>{
+    const col=reference?'#5b635e':palette[j%palette.length];
+    const values=s.y.map((v,i)=>[x(i),y(v)]);
+    if(bar){
+      const spacing=(x1-x0)/n, w=Math.min(54,spacing*.48), zero=y(0);
+      return s.y.map((v,i)=>{
+        const h=Math.abs(y(v)-zero);
+        return (v===0?path('M'+(x(i)-w/2)+' '+zero+'h'+w,'none',col,1.25):rect(x(i)-w/2,Math.min(y(v),zero),w,h,col,'none',0))+(s.sd?path('M'+(x(i)-9)+' '+y(v+s.sd[i])+'h18m-9 0V'+y(v-s.sd[i])+'m-9 0h18','none','#222e27',1.7):'')+
+          txt(x(i),v>=0?Math.max(y0+12,y(v+(s.sd?.[i]||0))-7):Math.min(y1-6,y(v)+15),fmt(v),13,axis,'text-anchor="middle" font-weight="700"');
+      }).join('');
+    }
+    const shape=values.map(([xx,yy],i)=>(i?'L':'M')+xx+' '+yy).join('');
+    const xp=lin(x(0),x(n-1),t),yp=y(valueAt(s.y,t));
+    const dash=reference?'stroke-dasharray="5 5"':j%2?'stroke-dasharray="8 4"':'';
+    return path(shape,'none',col,reference?1.5:2.6,dash)+(!reference?values.map(([xx,yy],i)=>j%2?rect(xx-3.3,yy-3.3,6.6,6.6,col,'white',0):circ(xx,yy,3.8,col,'white',1)).join('')+circ(xp,yp,6.2,col,'white',2):'');
+  };
+  if(!bar){
+    const xp=lin(x(0),x(n-1),t);svg+=path('M'+xp+' '+y0+'V'+y1,'none','#687e74',1,'stroke-dasharray="3 4"');
+    if(c.series.length===1&&base!==c&&base.series.length===1)svg+=series(base.series[0],0,true);
+  }
+  svg+=c.series.map((s,j)=>series(s,j)).join('');
+  const named=c.series.length>1?c.series.map((s,j)=>[s.name,palette[j],j%2]):[['当前条件',palette[0],false],...(!bar&&base!==c&&base.series.length===1?[['虚线：'+base.name,'#5b635e',true]]:[])];
+  let legX=x0;
+  for(const [name,col,dashed] of named){svg+=rect(legX,287,20,18,bg,bw?'#999':'none',1)+path('M'+(legX+2)+' 296h16','none',col,2.7,dashed?'stroke-dasharray="4 2"':'')+txt(legX+25,301,name,13,axis);legX+=Math.max(95,name.length*14+38)}
+  const foot=bar?'分类或处理条件':profile?'处理档位（非连续计时）':LESSON.id==='01-02'&&f.id==='02'?'累计滴数':'观察节点（非等距）';
+  svg+=txt((x0+x1)/2,282,foot,13,axis,'text-anchor="middle"');
+  const pos=t*(n-1), left=Math.floor(pos), right=Math.min(n-1,left+1);
+  const atNode=Math.abs(pos-left)<.00001;
+  const isDrops=LESSON.id==='01-02'&&f.id==='02';
+  const where=isDrops?fmt(lin(Number(f.axis[0]),Number(f.axis[n-1]),t))+' 滴':atNode?f.axis[left]:f.axis[left]+' → '+f.axis[right];
+  const info=bar?(c.series[0].replicates?'展开下方可查看每株原始记录':'同图各条件共用纵轴'):where+' · '+c.series.map(s=>(s.name?s.name+' ':'')+fmt(valueAt(s.y,t))).join('  /  ');
+  svg+=txt(x0,327,info,14,'#283e36','font-weight="700"');
+  return '<svg viewBox="0 0 '+width+' '+height+'" role="img" aria-label="'+esc(f.y+'；'+c.name)+'">'+svg+'</svg>';
+}
+function rows(f,c){
+  const s=c.series[0];
+  return '<table><thead><tr><th scope="col">处理</th>'+f.axis.map(a=>'<th scope="col">'+esc(a)+'</th>').join('')+'</tr></thead><tbody>'+
+  (s.replicates?range(s.replicates[0].length).map(i=>'<tr><th scope="row">插条 '+(i+1)+'</th>'+s.replicates.map(g=>'<td>'+fmt(g[i])+'</td>').join('')+'</tr>').join(''):'')+
+  c.series.map(s=>'<tr><th scope="row">'+esc(s.name||'模型读数')+'</th>'+s.y.map((v,i)=>'<td>'+fmt(v)+(s.sd?' ± '+fmt(s.sd[i]):'')+'</td>').join('')+'</tr>').join('')+
+  '</tbody></table>';
+}
+const panels=LESSON.figures.map((f,index)=>{
+  const k=index+1, el=document.createElement('section');
+  el.className='figure';el.id='figure'+k;el.setAttribute('aria-labelledby','head-'+k);
+  el.innerHTML='<div class="figure-head"><span class="folio">FIGURE '+f.id+'</span><h2 id="head-'+k+'">'+esc(f.title)+'</h2><a class="refjump" href="#ref-1" aria-label="跳到教材来源">[1]</a></div><p class="question"><strong>先预测</strong>'+esc(f.ask)+'</p>'+
+    '<div class="choices" role="group" aria-label="比较条件">'+f.cases.map((c,i)=>'<button type="button" data-case="'+i+'" aria-pressed="'+(i===0)+'">'+esc(c.name)+'</button>').join('')+'</div>'+
+    '<div class="plate"><div class="pane"><div class="panetitle"><span><b>A</b>机制图</span><span class="aside hint">大图可横向查看</span></div><div class="svgscroll scene" tabindex="0" aria-label="机制示意图"></div></div>'+
+    '<div class="pane"><div class="panetitle"><span><b>B</b>证据图</span><span class="aside">课堂模型 / 定性记录</span></div><div class="svgscroll chart" tabindex="0" aria-label="统计证据图"></div><p class="model">'+esc(f.bound)+' <a href="#ref-2">[资料]</a></p><p class="rline"></p></div></div>'+
+    '<div class="control"><button class="play" type="button">播放过程</button><button class="reset" type="button">复位</button><label class="range"><span>分镜进度</span><input type="range" min="0" max="1000" value="0" aria-label="分镜进度"><output>0%</output></label></div>'+
+    '<div class="reading"><div class="readbox"><strong>当前观察</strong><span class="obs"></span></div><div class="readbox"><strong>用证据解释</strong><span class="claim"></span></div></div>'+
+    '<details class="fig-extra"><summary>读数记录与本图小结</summary><p>'+esc(f.take)+'</p><div class="raw"></div></details>';
+  $('#figures').append(el);
+  const local=s=>el.querySelector(s), slider=local('input'), output=local('output'), play=local('.play');
+  let ci=0,lastBand=-1;
+  const clock=BioAtlas.createTimeline({duration:10,render(t){
+    const c=f.cases[ci];
+    local('.scene').innerHTML=makeScene(f,c,ci,t);local('.chart').innerHTML=drawChart(f,c,ci,t);
+    const band=t===0?0:t<.68?1:2;
+    if(lastBand!==band){
+      local('.obs').textContent=band===0?'选中「'+c.name+'」。先预测，再播放或拖动。':c.see;
+      local('.claim').textContent=band<2?'比较两图的路径、读数和对照，再解释原因。':c.infer;
+      lastBand=band;
+    }
+  },onState({t,playing}){
+    slider.value=Math.round(t*1000);slider.setAttribute('aria-valuetext',Math.round(t*100)+'%');
+    output.textContent=Math.round(t*100)+'%';play.textContent=playing?'暂停':t===1?'重看过程':'播放过程';
+    play.setAttribute('aria-pressed',String(playing));
+  }});
+  function updateChoice(){local('.raw').innerHTML=rows(f,f.cases[ci]);local('.rline').textContent='ggplot(aes(x, y)) + '+(f.plot==='bar'?'geom_col()'+(f.cases[ci].series[0].sd?' + geom_errorbar()':''):'geom_line() + geom_point()')+' + facet_wrap(~ 指标) + theme_'+document.documentElement.dataset.theme+'()'}
+  updateChoice();
+  el.querySelectorAll('[data-case]').forEach(btn=>btn.onclick=()=>{
+    ci=Number(btn.dataset.case);el.querySelectorAll('[data-case]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+    lastBand=-1;clock.reset();updateChoice();
+  });
+  slider.oninput=()=>clock.seek(Number(slider.value)/1000);
+  play.onclick=()=>clock.state.playing?clock.pause():clock.play();
+  local('.reset').onclick=()=>clock.reset();
+  return {refresh(){local('.chart').innerHTML=drawChart(f,f.cases[ci],ci,clock.state.t);updateChoice()}};
+});
+</script>
+</body>
+</html>

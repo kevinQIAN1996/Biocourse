@@ -972,6 +972,24 @@
     "suitableFor": "适合围绕变异在前、选择在后的种群模拟组织观察与讨论。"
   },
   {
+    "file": "lessons/选择性必修1_01-01_细胞生活的环境_Cell图谱_v2.0.html",
+    "title": "细胞生活的环境 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/extracellular--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/extracellular--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "细胞生活的环境 · Cell 图谱 v2.0 课件实景：隔着血管壁，谁能换位置？",
+      "scene": "隔着血管壁，谁能换位置？"
+    },
+    "latest": true,
+    "route": "courses/extracellular/cell-atlas-v2/",
+    "design": "从血管壁的交换切面走到内环境成分分类，再用外液条件变化检验水流方向。",
+    "difference": "补充可并列观察的通路阻断与渗透情境；旧版保留粒子微循环、跨膜路线和多种水肿案例。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_01-01_细胞生活的环境_微循环活体流体剧场_v1.0.html",
     "title": "细胞生活的环境 微循环活体剧场版 1.0",
     "category": "physiology",
@@ -983,11 +1001,29 @@
       "alt": "细胞生活的环境 · 微循环活体剧场版 v1.0真实课件画面",
       "scene": "追踪血浆、组织液与淋巴液的物质交换，比较水肿病因与跨膜路线。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/extracellular/microcirculation-v1/",
     "design": "用持续流动的细胞与分子粒子连接解剖位置、液体交换和病理变化，减少凭静态箭头背诵。",
     "difference": "本站当前独立方案，重点包括：微循环与淋巴回流动态模型及多种水肿情境；氧气跨膜计数与细胞专属内环境定位。",
     "suitableFor": "适合围绕微循环与淋巴回流动态模型及多种水肿情境组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_01-02_内环境的稳态_Cell图谱_v2.0.html",
+    "title": "内环境的稳态 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/homeostasis--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/homeostasis--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "内环境的稳态 · Cell 图谱 v2.0 课件实景：同样加酸，谁的 pH 变化小？",
+      "scene": "同样加酸，谁的 pH 变化小？"
+    },
+    "latest": true,
+    "route": "courses/homeostasis/cell-atlas-v2/",
+    "design": "把稳态拆成扰动、响应与恢复，再用同量加酸和器官交换图检查这个解释。",
+    "difference": "新图谱把反馈、缓冲和物质交换分为三组证据；ICU 版仍适合连贯展示器官联动。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_01-02_内环境的稳态_ICU生命稳态总控中心_v1.0.html",
@@ -1001,11 +1037,47 @@
       "alt": "内环境的稳态 · ICU生命稳态版 v1.0真实课件画面",
       "scene": "联动器官交换、酸碱缓冲与逐滴实验，观察动态平衡和调节限度。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/homeostasis/icu-v1/",
     "design": "将ICU遥测屏与实验操作台并置，让器官、分子和滴定数据在一次操作中同步响应。",
     "difference": "本站当前独立方案，重点包括：呼吸、消化、泌尿、循环粒子联动及病理冲击；血浆酸碱缓冲反应过程与清除路径。",
     "suitableFor": "适合围绕呼吸、消化、泌尿、循环粒子联动及病理冲击组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-01_神经调节的结构基础_Cell图谱_v2.0.html",
+    "title": "神经调节的结构基础 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-structure--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/neural-structure--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经调节的结构基础 · Cell 图谱 v2.0 课件实景：神经元怎样分工？",
+      "scene": "神经元怎样分工？"
+    },
+    "latest": true,
+    "route": "courses/neural-structure/cell-atlas-v2/",
+    "design": "先在中枢和外周之间划定边界，再对照神经元分工与自主神经的靶器官响应。",
+    "difference": "新增结构基础独立课时，突出组织层级和自主神经；原 NEURALINK 版仍可整合讲授两节。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-02_神经调节的基本方式_Cell图谱_v2.0.html",
+    "title": "神经调节的基本方式 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-reflex--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/neural-reflex--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经调节的基本方式 · Cell 图谱 v2.0 课件实景：直接刺激传出神经算反射吗？",
+      "scene": "直接刺激传出神经算反射吗？"
+    },
+    "latest": true,
+    "route": "courses/neural-reflex/cell-atlas-v2/",
+    "design": "以同一反射通路做刺激和阻断对照，再让铃声和食物的配对次数成为推理线索。",
+    "difference": "由解剖专题转为反射条件对照；旧解剖图谱保留精细结构和膝跳、缩手双模式，另保留综合版。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_02-01-02_神经调节的结构基础与基本方式_NEURALINK神经电生理模拟舱_v1.0.html",
@@ -1019,7 +1091,7 @@
       "alt": "神经调节的结构基础与基本方式 · NEURALINK综合模拟版 v1.0真实课件画面",
       "scene": "比较自主神经调控、损伤反射弧和条件反射学习的动态过程。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/neural-reflex/neuralink-v1/",
     "design": "用暗场脉冲串联器官响应、反射弧损伤和学习试次，适合第1—2节整合演示。",
     "difference": "本版侧重：反射弧刺激与阻断及真假反射判断；交感与副交感的器官响应比较。同号版本以方案名称区分，不视为相互替代。",
@@ -1044,6 +1116,24 @@
     "suitableFor": "适合围绕H形灰质、T形感觉神经元与运动终板放大探针组织观察与讨论。"
   },
   {
+    "file": "lessons/选择性必修1_02-03_神经冲动的产生和传导_Cell图谱_v2.0.html",
+    "title": "神经冲动的产生和传导 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-impulse--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/neural-impulse--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经冲动的产生和传导 · Cell 图谱 v2.0 课件实景：哪些离子让膜电位翻转？",
+      "scene": "哪些离子让膜电位翻转？"
+    },
+    "latest": true,
+    "route": "courses/neural-impulse/cell-atlas-v2/",
+    "design": "从膜电位的离子基础出发，依次比较双电极读数与跨突触的单向传递。",
+    "difference": "新版把同一条件下的机制图与读数放在一起，旧版保留示波器、检流计和药理专题演示。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_02-03_神经冲动的产生和传导_神经电生理与突触药理高精工作站_v1.0.html",
     "title": "神经冲动的产生和传导 神经电生理高可读版 1.0",
     "category": "physiology",
@@ -1055,11 +1145,29 @@
       "alt": "神经冲动的产生和传导 · 神经电生理高可读版 v1.0真实课件画面",
       "scene": "联动离子通道、动作电位、检流计和突触靶点，在分步操作中解释神经信号。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/neural-impulse/electrophysiology-v1/",
     "design": "把离子流、记录位置与电位曲线同步展示，让学生先区分测量对象，再用刺激与靶点对照检验解释。",
     "difference": "本站当前独立方案，重点包括：四阶段膜电位与细胞外Na⁺/K⁺条件对照；单纤维与跨突触检流计实验、延搁和单向传递。",
     "suitableFor": "适合围绕四阶段膜电位与细胞外Na⁺/K⁺条件对照组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-04_神经系统的分级调节_Cell图谱_v2.0.html",
+    "title": "神经系统的分级调节 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neural-hierarchy--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/neural-hierarchy--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "神经系统的分级调节 · Cell 图谱 v2.0 课件实景：排尿反射和尿意可以分离吗？",
+      "scene": "排尿反射和尿意可以分离吗？"
+    },
+    "latest": true,
+    "route": "courses/neural-hierarchy/cell-atlas-v2/",
+    "design": "先比较皮层代表区，再把相同刺激放入不同排尿回路，以损伤结果判断调节层级。",
+    "difference": "改为以皮层映射、感觉与反射分离、中枢分工为主线；旧版保留更细的泌尿器官演示。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_02-04_神经系统的分级调节_临床神经分级调控与泌尿动力学仿真工作站_v1.0.html",
@@ -1073,11 +1181,29 @@
       "alt": "神经系统的分级调节 · 分级调控与泌尿动力学版 v1.0真实课件画面",
       "scene": "比较运动皮层代表区与排尿分级回路，分别判断尿意、意识控制和局部反射。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/neural-hierarchy/hierarchical-control-v1/",
     "design": "用可暂停的神经脉冲连接解剖位置和器官响应，把感觉、随意控制与有效排空拆成独立判据。",
     "difference": "本站当前独立方案，重点包括：五个运动代表区、肢体交叉与头面部双侧联系对照；五种排尿工况、逼尿肌与两类括约肌的动态模型。",
     "suitableFor": "适合围绕五个运动代表区、肢体交叉与头面部双侧联系对照组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_02-05_人脑的高级功能_Cell图谱_v2.0.html",
+    "title": "人脑的高级功能 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/higher-brain--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/higher-brain--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "人脑的高级功能 · Cell 图谱 v2.0 课件实景：病人的哪一项能力受损？",
+      "scene": "病人的哪一项能力受损？"
+    },
+    "latest": true,
+    "route": "courses/higher-brain/cell-atlas-v2/",
+    "design": "用能力测试定位受损功能，再用重复、干扰与记忆结果辨析不同阶段。",
+    "difference": "以行为证据串起言语、记忆与情绪，旧版保留详尽的局灶定位及突触药理互动。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_02-05_人脑的高级功能_人脑高级认知与临床神经药理工作站_v1.0.html",
@@ -1091,11 +1217,29 @@
       "alt": "人脑的高级功能 · 高级认知与5-HT靶点版 v1.0真实课件画面",
       "scene": "对照言语区与初级感觉皮层，操作记忆阀门、海马损伤条件与5-HT药理靶点。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/higher-brain/cognition-v1/",
     "design": "把基础感觉、语言加工、即时保持、长期巩固和药理机制逐层拆开，用对照揭示每个模型能解释什么。",
     "difference": "本站当前独立方案，重点包括：W/S/V/H与三类初级皮层对照、四项行为测试；四级记忆、长期突触重塑与复述/干扰条件实验。",
     "suitableFor": "适合围绕W/S/V/H与三类初级皮层对照、四项行为测试组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_03-01_激素与内分泌系统_Cell图谱_v3.0.html",
+    "title": "激素与内分泌系统 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/endocrine-system--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/endocrine-system--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "激素与内分泌系统 · Cell 图谱 v2.0 课件实景：盐酸能直接让胰腺分泌吗？",
+      "scene": "盐酸能直接让胰腺分泌吗？"
+    },
+    "latest": true,
+    "route": "courses/endocrine-system/cell-atlas-v2/",
+    "design": "先按促胰液素的对照实验排除直接作用，再追踪胰腺双出口和激素的三类位置。",
+    "difference": "新版围绕历史实验的对照证据及合成、释放、靶点区分；旧版保留更详细的历史和化学本质测试。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_03-01_激素与内分泌系统_诺贝尔内分泌传奇与分子矩阵工作站_v2.0.html",
@@ -1109,7 +1253,7 @@
       "alt": "激素与内分泌系统 · 内分泌传奇·ICU动态版 v2.0真实课件画面",
       "scene": "用促胰液素和胰岛素实验建立激素概念，比较化学本质、给药边界与腺体定位。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/endocrine-system/legend-v2/",
     "design": "把肠道—血液—胰腺连接为可比较的实验路径，再用分子性质解释受体与给药条件。",
     "difference": "采用ICU参考的过程剧场，联动实验操作、分泌过程与结果读数，将长解释按需展开。",
@@ -1134,6 +1278,24 @@
     "suitableFor": "适合专题资料查阅和多环节探索。"
   },
   {
+    "file": "lessons/选择性必修1_03-02_激素调节的过程_Cell图谱_v3.0.html",
+    "title": "激素调节的过程 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/hormone-regulation--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/hormone-regulation--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "激素调节的过程 · Cell 图谱 v2.0 课件实景：缺碘时，为什么 TSH 可能升高？",
+      "scene": "缺碘时，为什么 TSH 可能升高？"
+    },
+    "latest": true,
+    "route": "courses/hormone-regulation/cell-atlas-v2/",
+    "design": "把血糖来源与去路画成可切换通路，再用缺碘和靶点差异检验激素调节的解释。",
+    "difference": "新增统一的条件比较和相对读数；旧版保留 GLUT4 上膜细节、临床工况与连续动画。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_03-02_激素调节的过程_人体内分泌动态调节中枢_v2.0.html",
     "title": "激素调节的过程 内分泌调节·ICU动态版 2.0",
     "category": "physiology",
@@ -1145,7 +1307,7 @@
       "alt": "激素调节的过程 · 内分泌调节·ICU动态版 v2.0真实课件画面",
       "scene": "联动血糖、GLUT-4 与肾脏反馈，再用甲状腺三级轴比较干预后的动态变化。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/hormone-regulation/regulation-v2/",
     "design": "将器官平衡与分子放大镜同步，区分来源、受体响应、反馈时延和模型边界。",
     "difference": "重构为ICU式联动过程，以血糖和反馈为中心统一动画、曲线与少量条件干预。",
@@ -1170,6 +1332,24 @@
     "suitableFor": "适合专题探索或课后复习查阅。"
   },
   {
+    "file": "lessons/选择性必修1_03-03_体液调节与神经调节的关系_Cell图谱_v2.0.html",
+    "title": "体液调节与神经调节的关系 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/neuro-humoral--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/neuro-humoral--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "体液调节与神经调节的关系 · Cell 图谱 v2.0 课件实景：缺水后，尿量为何可能下降？",
+      "scene": "缺水后，尿量为何可能下降？"
+    },
+    "latest": true,
+    "route": "courses/neuro-humoral/cell-atlas-v2/",
+    "design": "把同一扰动下的神经响应和体液响应并排，分别在低温和缺水情境下验证。",
+    "difference": "聚焦信号抵达方式、体温和水盐三个可比较问题；保留旧 ICU 双轨协同演示。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_03-03_体液调节与神经调节的关系_ICU双轨协同调控中心_v1.0.html",
     "title": "体液调节与神经调节的关系 ICU双轨协同版 1.0",
     "category": "physiology",
@@ -1181,11 +1361,29 @@
       "alt": "体液调节与神经调节的关系 · ICU双轨协同版 v1.0真实课件画面",
       "scene": "用体温调节与水盐平衡两条器官回路，观察神经信号和体液信使如何共同维持稳态。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/neuro-humoral/icu-coordination-v1/",
     "design": "保留大幅动态主舞台，以少量干预串联器官响应和变量变化，把长解释与练习折叠。",
     "difference": "本站当前独立方案，重点包括：体温调节、水盐平衡与ADH回路的同步动画；少量条件干预、变量曲线与暂停单步。",
     "suitableFor": "适合围绕体温调节、水盐平衡与ADH回路的同步动画组织观察与讨论。"
+  },
+  {
+    "file": "lessons/选择性必修1_04-01_免疫系统的组成和功能_Cell图谱_v3.0.html",
+    "title": "免疫系统的组成和功能 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immune-system--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/immune-system--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫系统的组成和功能 · Cell 图谱 v2.0 课件实景：细胞在哪里成熟，在哪里遇到抗原？",
+      "scene": "细胞在哪里成熟，在哪里遇到抗原？"
+    },
+    "latest": true,
+    "route": "courses/immune-system/cell-atlas-v2/",
+    "design": "沿病原进入后的防线逐层定位，把免疫细胞成熟场所与相遇场所分开，再判断免疫三大功能。",
+    "difference": "新版用三张图串起防线、细胞位置与免疫功能；旧解剖版保留更丰富的器官剖面。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_04-01_免疫系统的组成和功能_免疫组织动态图谱_v2.0.html",
@@ -1199,7 +1397,7 @@
       "alt": "免疫系统的组成和功能 · 一道伤口·组织图谱版 v2.0真实课件画面",
       "scene": "沿一道皮肤伤口，依次观察免疫器官、表皮与真皮、淋巴结及两细胞接触面，建立组成与功能的联系。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/immune-system/anatomical-atlas-v2/",
     "design": "用同一个问题串起宏观器官、组织切面与分子接触面。暂停关键帧后先让学生判断，再揭示依据。",
     "difference": "以皮肤伤口串联人体器官、组织切面、淋巴结和细胞接触面，补充解剖图及关键帧。",
@@ -1224,6 +1422,24 @@
     "suitableFor": "适合完整主题探索与分站观察。"
   },
   {
+    "file": "lessons/选择性必修1_04-02_特异性免疫_Cell图谱_v3.0.html",
+    "title": "特异性免疫 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/specific-immunity--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/specific-immunity--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "特异性免疫 · Cell 图谱 v2.0 课件实景：胞外抗原与受感染细胞，处理对象一样吗？",
+      "scene": "胞外抗原与受感染细胞，处理对象一样吗？"
+    },
+    "latest": true,
+    "route": "courses/specific-immunity/cell-atlas-v2/",
+    "design": "先检查 B 细胞获得了哪些信号，再按抗原位置分流，最后用二次应答的曲线解释免疫记忆。",
+    "difference": "新版侧重两路清除对象和记忆曲线的同屏对照，旧版仍可按分镜连续讲解。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_04-02_特异性免疫_双窗实验_v2.0.html",
     "title": "特异性免疫 膜的两边·双窗探究版 2.0",
     "category": "physiology",
@@ -1235,7 +1451,7 @@
       "alt": "特异性免疫 · 膜的两边·双窗探究版 v2.0真实课件画面",
       "scene": "用两个同步视窗比较细胞外病毒与藏入细胞的病毒，让学生据观察修订解释。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/specific-immunity/dual-window-v2/",
     "design": "围绕“病毒所在位置”设置对照，让学生先作判断，再观察抗体和细胞效应的作用边界。",
     "difference": "从单线分镜转为同步对照；增加预测、观察记录和证据解释，流程细节改为按需追溯。",
@@ -1260,6 +1476,24 @@
     "suitableFor": "适合第一次整体讲授或课后按流程回看。"
   },
   {
+    "file": "lessons/选择性必修1_04-03_免疫失调_Cell图谱_v3.0.html",
+    "title": "免疫失调 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immune-disorders--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/immune-disorders--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫失调 · Cell 图谱 v2.0 课件实景：初次接触为何可以没有明显症状？",
+      "scene": "初次接触为何可以没有明显症状？"
+    },
+    "latest": true,
+    "route": "courses/immune-disorders/cell-atlas-v2/",
+    "design": "从过敏的致敏顺序、自身免疫的识别对象和免疫缺陷的防线能力，分别找到失调原因。",
+    "difference": "新版以三组可比较的机制与现象为线索，保留旧版的展厅叙事和独立案例。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_04-03_免疫失调_防线的三个偏差_v2.0.html",
     "title": "免疫失调 三个偏差·课堂推理版 2.0",
     "category": "physiology",
@@ -1271,7 +1505,7 @@
       "alt": "免疫失调 · 三个偏差·课堂推理版 v2.0真实课件画面",
       "scene": "以“作用对象发生了什么偏差”为主线，分步解释过敏、自身免疫和免疫缺陷。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/immune-disorders/three-errors-v2/",
     "design": "把图像、观察和解释拆开，让学生先指出变化，再完成有依据的因果表达。",
     "difference": "相较暗场展厅版，改为高对比课堂舞台；增加证据/推断说明、边界开关与可选病例。",
@@ -1296,6 +1530,24 @@
     "suitableFor": "适合自主探索、导入和课后回看，投影前可检查教室亮度。"
   },
   {
+    "file": "lessons/选择性必修1_04-04_免疫学的应用_Cell图谱_v3.0.html",
+    "title": "免疫学的应用 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/immunity-applications--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/immunity-applications--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "免疫学的应用 · Cell 图谱 v2.0 课件实景：主动免疫与被动免疫，哪种来得快？",
+      "scene": "主动免疫与被动免疫，哪种来得快？"
+    },
+    "latest": true,
+    "route": "courses/immunity-applications/cell-atlas-v2/",
+    "design": "分别用起效时间、供受者相容性和检测信号判断疫苗、移植与检测问题。",
+    "difference": "新版强化三类证据能支持什么判断；旧版保留原有学术图谱和免疫工具演示。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_04-04_免疫学的应用_机制图谱_学术图版_v2.0.html",
     "title": "免疫学的应用 机制图谱·学术图版 2.0",
     "category": "physiology",
@@ -1307,7 +1559,7 @@
       "alt": "免疫学的应用 · 机制图谱·学术图版 v2.0真实课件画面",
       "scene": "用学术机制图组织预防、检测、移植和治疗，连接结构识别与干预结果。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/immunity-applications/academic-atlas-v2/",
     "design": "采用期刊图谱的信息组织方式，把参与者、识别位置与干预方向放进同一幅可回看的图中。",
     "difference": "主要改进图形语言、空间组织和机制标注；保留v1的应用主线及可选练习。",
@@ -1332,6 +1584,24 @@
     "suitableFor": "适合按案例展开的新课讲授与小组判断。"
   },
   {
+    "file": "lessons/选择性必修1_05-01_植物生长素_Cell图谱_v2.0.html",
+    "title": "植物生长素 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/auxin--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/auxin--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物生长素 · Cell 图谱 v2.0 课件实景：看见光的是尖端，还是伸长区？",
+      "scene": "看见光的是尖端，还是伸长区？"
+    },
+    "latest": true,
+    "route": "courses/auxin/cell-atlas-v2/",
+    "design": "用遮光、去尖端等处理区分感光和伸长部位，再用根、茎剂量反应验证条件差异。",
+    "difference": "新版把经典实验和剂量曲线纳入同一读图流程，保留旧版的证据图谱。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_05-01_植物生长素_从实验到机制_v1.0.html",
     "title": "植物生长素 实验到机制·图谱版 1.0",
     "category": "physiology",
@@ -1343,11 +1613,29 @@
       "alt": "植物生长素 · 实验到机制·图谱版 v1.0真实课件画面",
       "scene": "沿感光、信号转运、生理效应和实验对照，建立生长素的证据链。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/auxin/evidence-atlas-v1/",
     "design": "先用对照排除解释，再把观察结果连接到生长素来源、运输与效应。",
     "difference": "本站当前独立小节版本，区别于其他植物激素的多激素互作图谱。",
     "suitableFor": "适合科学史实验分析、曲线读图和实验题复习。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-02_其他植物激素_Cell图谱_v2.0.html",
+    "title": "其他植物激素 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/other-plant-hormones--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/other-plant-hormones--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "其他植物激素 · Cell 图谱 v2.0 课件实景：GA 与 ABA 怎样影响萌发方向？",
+      "scene": "GA 与 ABA 怎样影响萌发方向？"
+    },
+    "latest": true,
+    "route": "courses/other-plant-hormones/cell-atlas-v2/",
+    "design": "把 GA 与 ABA 的萌发作用放在同一图上，再换到生根、成芽和果实成熟比较作用条件。",
+    "difference": "新版分离不同发育任务和变量，旧图谱保留原有植物激素互作的专题讲法。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_05-02_其他植物激素_植物激素互作图谱_v1.0.html",
@@ -1361,11 +1649,29 @@
       "alt": "其他植物激素 · 植物激素·互作图谱版 v1.0真实课件画面",
       "scene": "从赤霉素研究到发育阶段和激素比例，观察多种植物激素共同调控。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/other-plant-hormones/interaction-atlas-v1/",
     "design": "把激素关系放在具体器官、时期和过程中解释，避免把一种激素背成单一功能。",
     "difference": "聚焦天然激素互作；不等同于下一节外源调节剂的处理和生根实验。",
     "suitableFor": "适合机制关系精讲与多激素综合判断。"
+  },
+  {
+    "file": "lessons/选择性必修1_05-03_植物生长调节剂的应用_Cell图谱_v3.0.html",
+    "title": "植物生长调节剂的应用 Cell × ggplot2 图谱版 3.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/plant-regulators--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/plant-regulators--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "植物生长调节剂的应用 · Cell 图谱 v2.0 课件实景：剂量多一点，效果一定好吗？",
+      "scene": "剂量多一点，效果一定好吗？"
+    },
+    "latest": true,
+    "route": "courses/plant-regulators/cell-atlas-v2/",
+    "design": "先选生产目标和评价指标，再比较有无对照的实验，最后用剂量曲线判断适宜范围。",
+    "difference": "新版补齐目标、对照、剂量三步证据链，保留旧版完整生根操作思路。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
   },
   {
     "file": "lessons/选择性必修1_05-03_植物生长调节剂的应用_从分子到生根实验_v2.0.html",
@@ -1379,7 +1685,7 @@
       "alt": "植物生长调节剂的应用 · 分子到生根·证据修订版 v2.0真实课件画面",
       "scene": "强化生根实验的条件控制、原始记录与稀释判别，避免跨方法套用数据。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/plant-regulators/rooting-atlas-v2/",
     "design": "用一致的数据口径约束图像、均值和解释，让学生判断结论成立需要哪些条件。",
     "difference": "在v1图谱基础上修正数据口径：沾蘸或暴晒不沿用浸泡结果；补充过度稀释可能使两候选液都下降的反例。",
@@ -1404,6 +1710,24 @@
     "suitableFor": "适合查看初始方案与修订对照；课堂默认建议v2。"
   },
   {
+    "file": "lessons/选择性必修1_05-04_环境因素参与调节植物的生命活动_Cell图谱_v2.0.html",
+    "title": "环境因素参与调节植物的生命活动 Cell × ggplot2 图谱版 2.0",
+    "category": "physiology",
+    "preview": {
+      "image": "assets/previews/plant-environment--cell-atlas-v2.webp",
+      "thumbnail": "assets/previews/plant-environment--cell-atlas-v2-640.webp",
+      "width": 1280,
+      "height": 800,
+      "alt": "环境因素参与调节植物的生命活动 · Cell 图谱 v2.0 课件实景：末次照光能否翻转萌发响应？",
+      "scene": "末次照光能否翻转萌发响应？"
+    },
+    "latest": true,
+    "route": "courses/plant-environment/cell-atlas-v2/",
+    "design": "用末次照光、累计低温和横放方向三个扰动，对照植物读取不同环境信息的结果。",
+    "difference": "新版统一比较时间、剂量与方向，旧版仍可作为原环境信号图谱独立打开。",
+    "suitableFor": "适合单节课堂投屏、预测与解释，以及课后分图复习。"
+  },
+  {
     "file": "lessons/选择性必修1_05-04_环境因素参与调节植物的生命活动_植物的环境信号图谱_v1.0.html",
     "title": "环境因素参与调节植物的生命活动 植物环境·信号图谱版 1.0",
     "category": "physiology",
@@ -1415,7 +1739,7 @@
       "alt": "环境因素参与调节植物的生命活动 · 植物环境·信号图谱版 v1.0真实课件画面",
       "scene": "用光信号、连续黑夜、低温记忆与重力感知解释植物如何读取环境。"
     },
-    "latest": true,
+    "latest": false,
     "route": "courses/plant-environment/signal-atlas-v1/",
     "design": "按环境信息、感知位置、信号传递和生长结果展开，把知识结论与分子拓展分开。",
     "difference": "聚焦外界信号参与调节，连接前两节激素机制而不重复激素名单。",
